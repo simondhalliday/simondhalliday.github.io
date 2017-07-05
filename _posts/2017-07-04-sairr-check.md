@@ -5,9 +5,6 @@ subtitle: Some basic fact-checking
 tags: [R, South Africa, inequality, race]
 ---
 
-Intro
------
-
 I saw the report by SAIRR (2017) and used by a friend in a Facebook discussion (you can get the report [here](http://sa-monitor.com/wp-content/uploads/2017/02/IRR-Auditing-racial-transformation-2017-01.pdf)). I didn't believe the numbers he cited from the report, so I wanted to download the data and check them. The main data are from Africa (2016). I use packages by Wickham (2017) and Bray et al. (2016) for ease in this doc. Note, this isn't meant to be a comprehensive fact check, just me not sure about numbers a friend was citing.
 
 Data
