@@ -10,14 +10,14 @@ Simon Halliday
 
 
 
-##Intro
+## Intro
 I saw the report by @sairr17 and used by a friend in a Facebook discussion (you can get the report [here](http://sa-monitor.com/wp-content/uploads/2017/02/IRR-Auditing-racial-transformation-2017-01.pdf)). 
 I didn't believe the numbers he cited from the report, so I wanted to download the data and check them. The main data are from @ghs2015. 
 I use packages by @tidyverse2017 and @oilabs2016 for ease in this doc. 
 Note, this isn't meant to be a comprehensive fact check, just me not sure about numbers a friend was citing. 
 
 
-##Data
+## Data
 The data can be obtained here: [microdata.worldbank.org/index.php/catalog/2773/related_materials](http://microdata.worldbank.org/index.php/catalog/2773/related_materials). 
 
 Import the data csv of the GHS 2015:
@@ -26,7 +26,7 @@ Import the data csv of the GHS 2015:
 ghs15 <- read_csv("../data/ghs_2015_person_v1.1_20160608.csv")
 ```
 
-##Wrangling 
+## Wrangling 
 Wrangle the data and select the sample of 20 and older. 
 Generate a variable that checks the proportion of people of each race that has Matric or higher. 
 Also try to find out their error with another variable. 
@@ -50,7 +50,7 @@ educ20 <-
                                         "White")))
 ```
 
-##Summary Stats
+## Summary Stats
 Generate summary data frame. 
 Note: I haven't used the sampling weights here because I haven't had the time to research them, they shouldn't change the estimates too much just yet. 
 
@@ -71,7 +71,7 @@ Coloured                                     0.347
 Indian/Asian                                 0.667
 White                                        0.802
 
-##Other tallies
+## Other tallies
 Screwing around with some other tallies to check my work above. 
 
 ```r
@@ -120,7 +120,7 @@ mosaic::tally(~matricmore | race, data = educ20, format = "percent")
 ```
 
 
-##Housing 
+## Housing 
 For housing I need to read in the household data.
 
 
@@ -181,7 +181,7 @@ mosaic::tally(~Q58Val | head_popgrp, data = ghs15hh, format = "percent")
 ##     99  0.8010908  0.9367681  0.5882353  0.6172840
 ```
 
-##Wrangling HH data 
+## Wrangling HH data 
 I need to generate new variables to create the proportions of the different home values by race. 
 
 ```r
@@ -219,7 +219,7 @@ hhval <-
 ```
 
 
-##Plotting the hh values
+## Plotting the hh values
 I now plot the wrangled data in `ggplot()`:
 
 ```r
@@ -290,7 +290,7 @@ dev.off()
 ```
 
 
-##Household stacked bar
+## Household stacked bar
 Alana requested some analysis indicating the extent to which different values corresponded (or failed to correspond) to the population proportions of the country as a whole. 
 I thought a stacked bar chart would convey some of the intuitions of that as one could observe the extent to which there are deviations from the proportions of each ethnicity in the country. 
 
@@ -323,8 +323,8 @@ ggsave(file = "hhplot_value_stacked_ethncity.png", width = 8, height = 6, units 
 ```
 
 
-##License
+## License
 <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
 
 
-##References
+## References
