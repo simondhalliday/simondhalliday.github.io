@@ -90,7 +90,7 @@ disqus: "simondhalliday-com"
 #google_analytics: ""
 
 # Google Tag Manager ID
-#gtm: ""
+gtm: "UA-102112356-1"
 
 # Facebook App ID
 # fb_app_id: ""
