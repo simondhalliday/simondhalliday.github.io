@@ -24,8 +24,9 @@ description: Website and blog for Simon Halliday
 # List of links in the navigation bar
 navbar-links:
   About Me: "aboutme"
+  Research: "research"
   Resources:
-    - Competition, Coordination and Conflict: "http://simondhalliday.github.io/bfh-textbook"
+    - Competition, Coordination and Conflict: "/bfh-textbook"
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     - Learn markdown: "http://www.markdowntutorial.com/"
     - GitHub Pages: "https://pages.github.com/"
