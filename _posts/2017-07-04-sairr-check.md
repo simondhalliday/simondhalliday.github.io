@@ -9,7 +9,8 @@ tags: [R, South Africa, inequality, race]
 
 ## Intro
 I saw the report by @sairr17 and used by a friend in a Facebook discussion (you can get the report [here](http://sa-monitor.com/wp-content/uploads/2017/02/IRR-Auditing-racial-transformation-2017-01.pdf)). 
-I didn't believe the numbers he cited from the report, so I wanted to download the data and check them. The main data are from @ghs2015. 
+I didn't believe the numbers he cited from the report, so I wanted to download the data and check them. 
+The main data are from @ghs2015. 
 I use packages by @tidyverse2017 and @oilabs2016 for ease in this doc. 
 Note, this isn't meant to be a comprehensive fact check, just me not sure about numbers a friend was citing. 
 
@@ -235,7 +236,7 @@ hhplot <-
 hhplot
 ```
 
-![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/sairr-check_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![]({{site_url}}/img/blog_images/sairr-check_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 I need to export the file to jpeg to post to FB. 
 
@@ -272,7 +273,7 @@ hhplot2 <-
 hhplot2
 ```
 
-![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/sairr-check_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![]({{site_url}}/img/blog_images/sairr-check_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
 
 ```r
@@ -311,7 +312,7 @@ hplot <-
 hplot
 ```
 
-![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/sairr-check_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
+![]({{site_url}}/img/blog_images/sairr-check_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
 
 
