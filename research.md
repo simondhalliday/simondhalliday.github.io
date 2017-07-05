@@ -15,7 +15,7 @@ subtitle: Ongoing and published
 - "Don't Take What Isn't Yours: Giving, Taking and Punishment:" The paper is based on experiments I did at the University of Cape Town. An early version of the paper is in the Economic Research South Africa working paper series as \href{http://ideas.repec.org/p/rza/wpaper/211.html}{Working Paper 211}. \textit{Editing for submission}. People punish taking more than they do non-generosity. 
 
 ## Books
-- *Microeonomics: Competition, Conflict and Coordination* with Samuel Bowles and Duncan Foley. See the website for the book here: [simondhalliday.com/bfh-textbook](simondhalliday.com/bfh-textbook).
+- *Microeonomics: Competition, Conflict and Coordination* with Samuel Bowles and Duncan Foley. See the website for the book here: [simondhalliday.com/bfh-textbook](http://simondhalliday.com/bfh-textbook).
 
 ## Chapters 
 - "Global Public Goods" published in [Running the Economy](http://www.amazon.co.uk/Running-Economy-Open-University-Team/dp/1780079540), Santos et al (eds). Open University Press. My chapter covers game theory, global commons, and collective action.
