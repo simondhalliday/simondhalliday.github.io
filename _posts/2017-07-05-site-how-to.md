@@ -5,7 +5,7 @@ subtitle: Even when you're a dilettante
 tags: [R, RStudio, github, RMarkdown, jekyll]
 ---
 
-I needed to re-do my website. But, I'm not particularly good at understanding html, github, and related issue. Nonethleess, even a dilettante like me was able to set up a jekyll-enabled site to replace my old site and add a blog. So, what outcomes did I want and how did I achieve them?
+I needed to re-do my website. But, I'm not particularly good at understanding html, github, and related issue. Nonetheless, even a dilettante like me was able to set up a jekyll-enabled site to replace my old site and add a blog. So, what outcomes did I want and how did I achieve them?
 
 What outcomes did I want
 ------------------------
