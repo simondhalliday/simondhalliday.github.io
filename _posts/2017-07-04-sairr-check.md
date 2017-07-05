@@ -4,9 +4,6 @@ title: SAIRR Check
 subtitle: Some basic fact-checking
 tags: [R, South Africa, inequality, race]
 ---
-# SAIRR Check
-Simon Halliday  
-2017/06/27  
 
 
 
@@ -238,7 +235,7 @@ hhplot <-
 hhplot
 ```
 
-![]({{site_url}}/img/blog_images/sairr-check_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/sairr-check_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 I need to export the file to jpeg to post to FB. 
 
@@ -275,7 +272,7 @@ hhplot2 <-
 hhplot2
 ```
 
-![]({{site_url}}/img/blog_images/sairr-check_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/sairr-check_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
 
 ```r
@@ -314,7 +311,7 @@ hplot <-
 hplot
 ```
 
-![]({{site_url}}/img/blog_images/sairr-check_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
+![]({{site_url}}/img/blog_images/{{site_url}}/img/blog_images/sairr-check_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
 
 
