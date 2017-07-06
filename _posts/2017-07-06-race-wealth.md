@@ -5,7 +5,7 @@ subtitle: Plotting data from the Survey of Income and Program Participation (201
 tags: [inequality, race, USA, wealth, survey data, tidyverse, readxl, forcats, ggplot2]
 ---
 
-I've been interested in race and inequality (or "group inequality") for some time (see the [Background](##Background) section. The recent publication of the 2013 [Survey of Income and Participation](https://www.census.gov/sipp/) presents a window into what wealth inequality looks like in the USA. What can we do with the survey data?
+I've been interested in race and inequality (or "group inequality") for some time (see the [Background](#background) section. The recent publication of the 2013 [Survey of Income and Participation](https://www.census.gov/sipp/) presents a window into what wealth inequality looks like in the USA. What can we do with the survey data?
 
 -   We can construct a bar chart showing net wealth by race
 -   We can construct a stacked bar chart showing different wealth levels and the composition of those wealth levels by race group
@@ -77,7 +77,7 @@ WIneq <-
   theme_bw() + #Remove default gray background
   scale_y_continuous(name = "Median Net Wealth", breaks = seq(0, 140000, 15000)) + 
   theme(axis.text.x = element_text(angle = 30, hjust = 1), #Change x-axis label orientation
-        text = element_text(size = 18), #Change other text size
+        text = element_text(size = 14), #Change other text size
         panel.grid.minor = element_blank()) + #Remove some gridlines for legibility
   labs(title = "Median Wealth by Race Group in the US, 2013", 
        subtitle = "Source: Survey of Income and Program Participation, 2014 Panel")
@@ -158,8 +158,8 @@ WIneqBand <-
   ylab("Percentage") + 
   xlab("Race") + 
   theme_bw() + 
-  theme(axis.text.x = element_text(angle = 35, hjust = 1), 
-        text = element_text(size = 18)) + 
+  theme(axis.text.x = element_text(angle = 25, hjust = 1), 
+        text = element_text(size = 14)) + 
   labs(title = "Wealth Composition by Race Group in the US, 2013", 
        subtitle = "Source: Survey of Income and Program Participation, 2014 Panel")
 WIneqBand
