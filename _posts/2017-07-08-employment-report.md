@@ -22,7 +22,7 @@ OK. Enough blathering. Onto the code!
 Scraping
 --------
 
-As we would expect, Hadley Wickham has a package that helps us to scrape html, called `rvest` ("ha...rvest", get it?) (<span class="citeproc-not-found" data-reference-id="rvest17">**???**</span>). In that package is a very useful function called `read_html()`. To make things clearer when I call the function, I simply specify an object called `url` that I defined as the CPS page with the table I want from the Bureau of Labor Statistics site. I also define what the html "nodes" are when I create another object. So you know, I used this [how-to](http://bradleyboehmke.github.io/2015/12/scraping-html-tables.html) by Bradley Boehmke to get the basics, the rest was trial-and-error and StackOverflow.
+As we would expect, Hadley Wickham has a package that helps us to scrape html, called `rvest` ("ha...rvest", get it?) (Wickham 2016). In that package is a very useful function called `read_html()`. To make things clearer when I call the function, I simply specify an object called `url` that I defined as the CPS page with the table I want from the Bureau of Labor Statistics site. I also define what the html "nodes" are when I create another object. So you know, I used this [how-to](http://bradleyboehmke.github.io/2015/12/scraping-html-tables.html) by Bradley Boehmke to get the basics, the rest was trial-and-error and StackOverflow.
 
 ``` r
 url <- "https://www.bls.gov/web/empsit/cpseea04.htm"
@@ -260,3 +260,5 @@ References
 ----------
 
 Dowle, Matt, and Arun Srinivasan. 2017. *Data.table: Extension of ‘Data.frame‘*. <https://CRAN.R-project.org/package=data.table>.
+
+Wickham, Hadley. 2016. *Rvest: Easily Harvest (Scrape) Web Pages*. <https://CRAN.R-project.org/package=rvest>.
