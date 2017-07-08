@@ -10,7 +10,7 @@ The jobs report came out yesterday (7 July 2017) and I wanted to check out what 
 Why do it?
 ----------
 
-Before we do anything else, let's articulate why it's useful to write reproducible code to scrape a website (especially when there aren't easily-downloadable .csv files to downlaod and read into R).
+Before we do anything else, let's articulate why it's useful to write reproducible code to scrape a website (especially when there aren't easily-downloadable .csv files to download and read into R).
 
 -   The BLS releases these reports every month, therefore I can lightly tweak the code and get a similar figure next month
 -   Other people can see what I did and look at other outcomes they're more interested in
