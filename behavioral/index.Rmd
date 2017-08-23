@@ -1,7 +1,6 @@
 ---
-output: 
-  html_document:
-    css: ../stylesheets/styles.css
+output: html_document
+    #css: ../stylesheets/styles.css
 ---
 
 # Behavioral Economics (ECO254, Fall 2017)
@@ -16,7 +15,7 @@ output:
 
 
 
-## Week 1 
+## Week 1: Introduction 
 
 ### Thursday 7 September
 
@@ -28,7 +27,6 @@ output:
 ![Wordcloud for Behavioral Economics Ideas Exercise](word_cloud.png)
 -->
 
-**Homework**
 Read
 
 - Behavioral Economics for Kids [here](https://moodle.smith.edu/mod/resource/view.php?id=233702)
@@ -36,10 +34,12 @@ Read
     - Why read this? I want to convince you, first, that economics itself is useful for informing policy decisions and, second, that behavioral economics is at least as useful too in informing policy-makers on how to construct policy too. But, we mustn't throw out the baby with the bathwater: "economics" and "behavioral economics" must be used appropriately. 
 
 Recommended
+
 - The Behavioral Economics Guide 2016, available [here](https://moodle.smith.edu/mod/resource/view.php?id=233703). 
 > The BE Guide is useful for you to get a broad sense of what we do in Behavioral Econ and what kinds of ideas you might want to research in your team project. 
 
 Cases
+
 - George Loewenstein, "[Economics Behaving Badly](http://www.nytimes.com/2010/07/15/opinion/15loewenstein.html)", *New York Times*, July 14 2010. 
 - Richard Thaler, 2015, "[Unless You Are Spock, Irrelevant Things Matter in Economic Behavior](http://www.nytimes.com/2015/05/10/upshot/unless-you-are-spock-irrelevant-things-matter-in-economic-behavior.html?referrer=)," *New York Times*, 8 May 2015.
 
@@ -146,7 +146,7 @@ Each person presenting on a given topic should add their notes/definitions in ea
 - Chapter 10: 
 - Chapter 11: 
 
-## Week 2
+## Week 2: Heuristics & Biases
 
 ### Tuesday 9 September
 
@@ -220,18 +220,18 @@ Recommended
 
 ## Week 4: Risk
 
-### Tuesday 29 September
+### Tuesday 26 September
 
 Read
 
 - Cartwright Chapter 3, Section 3.6 onwards
-- George Loewenstein et al, 2001., "Risk as Feelings," Psychological Bulletin, Vol 127 (2): 267-286. (15 pages)
+- George Loewenstein et al, 2001., "[Risk as Feelings](https://moodle.smith.edu/mod/resource/view.php?id=233740)," Psychological Bulletin, Vol 127 (2): 267-286. (15 pages)
 
 Other Notes 
 
 - Check here for the notes on Bayes' Rule and understanding expected utility changes: [simondhalliday.github.io/eco254/fall_2015/activities/bayes_rule/bayes_rule](http://simondhalliday.github.io/eco254/fall_2015/activities/bayes_rule/bayes_rule)
 
-### Thursday 1 October
+### Thursday 28 October
 
 - We're doing Experiment 2 today. 
 - Go to VEconLab here: [http://veconlab.econ.virginia.edu/login.htm](http://veconlab.econ.virginia.edu/login.htm)
@@ -244,22 +244,21 @@ Other Notes
 - I strongly recommend that you read Chapters 4 and 7 of the Charles Plott book as it covers the relevant content for these (and does some of it better than the Cartwright book in my mind)
 
 ## Week 5: Time
-### Tuesday 6 October
+### Tuesday 3 October
 
 Reading
 
 - Cartwright Chapter 4: Time Preferences up to Section 4.4.
-- Dan Ariely and Klaus Wertenbroch, 2002, "Procrastination, Deadlines, and Performance: Self-Control by Pre-Commitment," *Psychological Science*, Vol. 13 (3): 219-224. (6 pages)
-- Richard H. Thaler  and Cass R. Sunstein, "Libertarian Paternalism," *The American Economic Review: Papers and Proceedings*, Vol. 93, (2): 175-179. (5 pages) 
+- Dan Ariely and Klaus Wertenbroch, 2002, "[Procrastination, Deadlines, and Performance: Self-Control by Pre-Commitment](https://moodle.smith.edu/mod/resource/view.php?id=233739)," *Psychological Science*, Vol. 13 (3): 219-224. (6 pages)
+- Richard H. Thaler  and Cass R. Sunstein, "[Libertarian Paternalism](https://moodle.smith.edu/mod/resource/view.php?id=233719)," *The American Economic Review: Papers and Proceedings*, Vol. 93, (2): 175-179. (5 pages) 
 
 
 Cases 
+
 - Cass Sunstein, "Why Ebola Is Scarier Than It Should Be," Bloomberg, 2014. 
 
 
-
-
-### Thursday 8 October
+### Thursday 5 October
 We'll be doing an R lab today (followed by a quiz online for hand-in the following week).
 
 <!--
@@ -273,50 +272,55 @@ Notes
   - Slides on using ggplot: [https://moodle.smith.edu/mod/resource/view.php?id=43768](https://moodle.smith.edu/mod/resource/view.php?id=43768)
 
 
-## Week 6 
+## Week 6: Learning & Information
 ### Thursday 12 October
 
 Read
 
-- Cartwright, Chapter 5 up to the end of Section 5.4
+- Cartwright, Chapter 5 up to the end of Section 5.4 (feel free to exclude Section 5.3.4. if you're struggling to understand it as it may employ game theory you have not done)
+- 
 
 Cases:
-- Katrin Bennhold, "Britain’s Ministry of Nudges," New York Times, 2013. 
+
+- Katrin Bennhold, "Britain's Ministry of Nudges," New York Times, 2013. 
 - "The limits of nudging,"  The Economist, 2015.
+
+Other 
+
 - I hope to show you something new in R very briefly
 
 
-## Week 7 
+## Week 7: Learning & Information
 
-### Tuesday 20 October
+
+### Tuesday 17 October
 We will do the following: 
 
-- continue with Time (Ch. 4)  chapter
-- spend time working on the class exercise to generate graphs for risk averse, risk-loving and risk-neutral actors
+Reading
 
-Reading: 
+- Sundali and Croson, 2006, "[Biases in casino betting: The hot hand and the gambler’s fallacy](https://moodle.smith.edu/mod/resource/view.php?id=233746)," *Judgment and Decision Making*, Vol 1 (1), 1-12 (11 pages)
 
-###Thursday 22 October
+
+###Thursday 19 October
 We will talk about the following topics in R today: 
 
 - Wide vs. Narrow data: [https://moodle.smith.edu/mod/resource/view.php?id=46463](https://moodle.smith.edu/mod/resource/view.php?id=46463)
 - Joins: [https://moodle.smith.edu/mod/resource/view.php?id=46462](https://moodle.smith.edu/mod/resource/view.php?id=46462) 
 - `group_by` and `summarise` see here: [http://dtkaplan.github.io/DCF-2014/CourseNotes/BasicDataCommands/DraftNarrative.html](http://dtkaplan.github.io/DCF-2014/CourseNotes/BasicDataCommands/DraftNarrative.html)
 and here: [https://moodle.smith.edu/mod/resource/view.php?id=46744](https://moodle.smith.edu/mod/resource/view.php?id=46744)
-- We will spend time on the team projects (we didn't have time for this on Tues) 
+
+Team Projects
 
 - I want you to emphasize the following steps: 
     - making sure you have *data* to work with (to bring to later Thursday sessions) 
     - deciding on the literature with which your project fits to produce a *literature review*
     - (much later) thinking about the ways in which you can alter/improve on the existing experiments/surveys to improve our overall knowledge
 
-Notice, that once we have covered this content, we will have moved up to about Ch. 11 in *Data Computing*. I recommend that you read Chs. 9 through 11 if you want to keep up. 
-
 
 ### ggplot Exercise
 We are going to do an exercise where we use ggplot to try to reproduce at least one graphic from a published paper. The paper is: 
 
-- Sutter, Matthias. 2009. "Individual Behavior and Group Membership: Comment." American Economic Review, 99(5): 2247-57.
+- Sutter, Matthias. 2009. "[Individual Behavior and Group Membership: Comment](https://moodle.smith.edu/mod/resource/view.php?id=233834)" American Economic Review, 99(5): 2247-57.
 - download the paper from Moodle here: [https://moodle.smith.edu/mod/resource/view.php?id=46730](https://moodle.smith.edu/mod/resource/view.php?id=46730)
 - see the paper's page at the AER here: [https://www.aeaweb.org/articles.php?doi=10.1257/aer.99.5.2247&fnd=s](https://www.aeaweb.org/articles.php?doi=10.1257/aer.99.5.2247&fnd=s)
 - download the data on Moodle here: [https://moodle.smith.edu/mod/folder/view.php?id=46728](https://moodle.smith.edu/mod/folder/view.php?id=46728)
@@ -337,20 +341,18 @@ Also, check out these links for behavioral econ in the press:
 - Cass Sunstein reviews Akerlof and Shiller's *Phishing for Phools*: [http://www.nybooks.com/articles/archives/2015/oct/22/why-free-markets-make-fools-us/](http://www.nybooks.com/articles/archives/2015/oct/22/why-free-markets-make-fools-us/)
 
 
-## Week 8 
+## Week 8: Group Interactions
 
  
-### Tuesday 27 October
+### Tuesday 24 October
 
-Reading: 
-- Daniel Kahneman, Jack Knetsch, and Richard Thaler, "Fairness as a Constraint on Profit Seeking: Entitlements in the Market," American Economic Review, 1986. (13 pages)
-- Alexander Cappelen et al, "The Pluralism of Fairness Ideals: An Experimental Approach," American Economic Review, 2007. (9 pages)
+Read
 
-Cases: 
-- Kusum Ailawadi and Paul Farris, "How Companies Can Get Smart About Raising Prices," Wall Street Journal, 2013. See also: Four Barrel.
-- "[The rise of the sharing economy](http://www.economist.com/news/leaders/21573104-internet-everything-hire-rise-sharing-economy)," Economist, 2013.
+- Cartwright, Chapter 6 up to 6.5 but **excluding** 6.2.2 and 6.2.5 (the math is tough). 
+- Gary Charness and Matthias Sutter, 2012, "[Groups make better self-interested decisions](https://moodle.smith.edu/mod/resource/view.php?id=233863)," *Journal of Economic Perspectives*, 26 (3): 157-176 (18 pages)
 
-### Thursday 29 October
+
+### Thursday 26 October
 
 - You can look at all the steps we'll take with the Sutter data here: 
 [http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis_2](http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis_2)
@@ -379,12 +381,34 @@ Cases:
     - you'll need to use or "|" because you'll want to *keep* those observations in "teamtreat" or "individual"
 - once you've filtered out the treatments you don't need, you can construct the ggplot code
 
-## Week 9 
-### Tuesday 3 November
+## Week 9: Fairness and Social Preferences
+
+### Tuesday 31 October 
+
+
+Reading 
+
+- Daniel Kahneman, Jack Knetsch, and Richard Thaler, 1986, "[Fairness as a Constraint on Profit Seeking: Entitlements in the Market](https://moodle.smith.edu/mod/resource/view.php?id=233839)," *American Economic Review*, Vol. 76 (4): 728-741, (13 pages).
+- Alexander Cappelen et al, 2007, "[The Pluralism of Fairness Ideals: An Experimental Approach](https://moodle.smith.edu/mod/resource/view.php?id=233841)," *American Economic Review*, Vol. 97 (3) 818-827, (9 pages).
+
+Cases
+
+- Kusum Ailawadi and Paul Farris, "How Companies Can Get Smart About Raising Prices," Wall Street Journal, 2013. See also: Four Barrel.
+- "[The rise of the sharing economy](http://www.economist.com/news/leaders/21573104-internet-everything-hire-rise-sharing-economy)," Economist, 2013.
+
+Recommended
+
+- Stefano DellaVigna, 2009, "[Psychology and Economics: Evidence from the Field](https://moodle.smith.edu/mod/resource/view.php?id=233705)," Journal of Economic Literature,  47 (2): 315–372. 
+
+Revision 
+
+- BFH Chapter 2
 
 ### Thursday 5 November
 
-##Week 10: 
+## Week 10: Fairness & Social Preferences
+
+See readings for week 9. 
 
 ### Tuesday 10 November
 
@@ -399,39 +423,89 @@ Download the description of the data here:
 - [https://moodle.smith.edu/mod/resource/view.php?id=51529](https://moodle.smith.edu/mod/resource/view.php?id=51529)
 - And the data itself as a .txt file here: [https://moodle.smith.edu/mod/resource/view.php?id=51530](https://moodle.smith.edu/mod/resource/view.php?id=51530)
 
-## Week 11: Happiness and Values
+## Week 11: Fairness & Social Preferences
+See readings for Week 9. 
 
-### Tuesday 17 November
+
+### Tuesday 14 November
 - We need to complete the Marseille exercise we didn't get the chance to finish previously. 
 
+### Thursday 16 November 
+- Lab and stuff. 
 
-## Week 12: Policy and Manipulation
-### Tuesday 24 November: 
+## Week 12: Happiness and Utility
+### Tuesday 21 November: 
 
-Reading: 
-- Cartwright Chapter 11. 
-- Chetty, Raj, 2015, "Behavioral Economics and Public Policy: A Pragmatic Perspective," *American Economic Review: Papers & Proceedings*, Vol. 105 (5): 1-33.
-- Tanjim Hossain and John List, "The Behavioralist Visits the Factory: Increasing Productivity Using Simple Framing Manipulations," NBER Working Paper, 2009. (21 pages)
+Reading 
 
+- Cartwright, Chapter 10, up to the end of section 10.4. 
+- Daniel Kahneman and Alan Krueger, "Developments in the Measurement of Subjective Well-Being," Journal of Economic Perspectives, 2006, Vol. 20 (1) 3-24, (20 pages).
+
+
+Watch
+
+- Daniel Kahneman, "[The riddle of experience vs. memory](http://www.ted.com/talks/daniel_kahneman_the_riddle_of_experience_vs_memory.html)," TED, 2010. (Video, 20 minutes)
+
+Homework
 
 - We are going to to do an exercise with the World Values survey here: 
 [http://simondhalliday.github.io/eco254/fall_2015/activities/wvs/wvs](http://simondhalliday.github.io/eco254/fall_2015/activities/wvs/wvs)
-- And we'll talk about Chapter 10. 
 
 
-## Week 13: Project Work
-### Thursday 3 December
 
-- Project work; bring laptops and team spirit. 
+11/22 to 11/26 Thanksgiving
 
+
+## Week 13
+
+### Tuesday 28 November 
+
+### Thursday 30 November 
+
+Reading
+
+- Cartwright Chapter 11. 
+- Chetty, Raj, 2015, "[Behavioral Economics and Public Policy: A Pragmatic Perspective](https://moodle.smith.edu/mod/resource/view.php?id=233704)," *American Economic Review: Papers & Proceedings*, 105 (5): 1-33, (30 pages)
+- Bhargava and Loewenstein, 2015, "[Behavioral Economics and Public Policy 102: Beyond Nudging](https://moodle.smith.edu/mod/resource/view.php?id=233862)", *American Economic Review: Papers & Proceedings*, 105 (5): 396–401
+
+Cases 
+
+- Blah
+- Blah
+
+
+
+
+## Week 14
 ### Tuesday 1 December
+
+Read 
+
+- Tanjim Hossain and John List, 2012, "The Behavioralist Visits the Factory: Increasing Productivity Using Simple Framing Manipulations," *Management Science* 58 (12): 2151 - 2167 (X pages)
+
+
+### Thursday 3 December
 
 - Bring your laptops. It's team project time!
 - We'll also do the final experiment (other things equal)
 
-
-## Week 14
-### Tuesday 8 December: 
-
 - Go here: [https://shalliday.shinyapps.io/sutter_shiny](https://shalliday.shinyapps.io/sutter_shiny)
 - Import the data from your midterm and see whether you can create an interactive version of Figure 4 using the template provided. 
+
+## Week 15: Final Presentations
+
+### Tuesday 8 December 
+
+- Group 1
+- Group 2
+- Group 3
+
+
+### Thursday 10 December 
+
+- Group 4
+- Group 5
+- Group 6
+
+
+
