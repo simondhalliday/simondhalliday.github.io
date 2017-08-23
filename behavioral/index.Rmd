@@ -5,13 +5,13 @@ output:
 ---
 
 # Behavioral Economics (ECO254, Fall 2017)
-Professor: Simon Halliday
-Time: Tues & Thurs 3 to 4:50pm
-Venue: Seelye 110
 
+- Professor: Simon Halliday, PhD. 
+- Time: Tues & Thurs 3 to 4:50pm
+- Venue: Seelye 110
 - Email/hangouts: [shalliday+eco254@smith.edu](shalliday+eco254@smith.edu) Why is this my email address? Check [here](https://support.google.com/mail/answer/12096?hl=en)
-- [Syllabus](fall_2015/Admin/Syllabus/syllabus.html)
-- [Project Guidelines](http://simondhalliday.github.io/eco254/fall_2015/team_project/team_guidelines)
+- [Syllabus](syllabus.html)
+- [Project Guidelines](team_guidelines)
 
 
 
@@ -20,9 +20,8 @@ Venue: Seelye 110
 
 ### Thursday 7 September
 
-- First class. An introduction to Behavioral Economics.  
-- What is BE about? 
-- What is Economics about? 
+- What is *Economics* about? How does it inform policy?
+- What is *Behavioral* Economics about? How might *it* inform policy?
 - The results of in-class question about behavioral economics will appear here 
 
 <!--
@@ -30,13 +29,20 @@ Venue: Seelye 110
 -->
 
 **Homework**
-Read the following
+Read
 
-- Behavioral Economics for Kids [here]()
-- Alm, James, 2017, "Presidential Address: Is economics useful for public policy", *Southern Economic Journal*, 83 (4), 835–854
-  - Why read this? I want to convince you, first, that economics itself is useful for informing policy decisions and, second, that behavioral economics is at least as useful too in informing policy-makers on how to construct policy too. But, we mustn't throw out the baby with the bathwater: "economics" and "behavioral economics" must be used appropriately. 
-- George Loewenstein, "", *The New York Times*, 2013 (?), ...
-- Recommended: The Behavioral Economics Guide 2016, available [here](). (NOTE: This is really useful for you to get a broad sense of what we do in Behavioral Econ and what kinds of ideas you might want to research in your team project). 
+- Behavioral Economics for Kids [here](https://moodle.smith.edu/mod/resource/view.php?id=233702)
+- Alm, James, 2017, "[Presidential Address: Is economics useful for public policy](https://moodle.smith.edu/mod/resource/view.php?id=233701)", *Southern Economic Journal*, 83 (4), 835–854 (16 pages)
+    - Why read this? I want to convince you, first, that economics itself is useful for informing policy decisions and, second, that behavioral economics is at least as useful too in informing policy-makers on how to construct policy too. But, we mustn't throw out the baby with the bathwater: "economics" and "behavioral economics" must be used appropriately. 
+
+Recommended
+- The Behavioral Economics Guide 2016, available [here](https://moodle.smith.edu/mod/resource/view.php?id=233703). 
+> The BE Guide is useful for you to get a broad sense of what we do in Behavioral Econ and what kinds of ideas you might want to research in your team project. 
+
+Cases
+- George Loewenstein, "[Economics Behaving Badly](http://www.nytimes.com/2010/07/15/opinion/15loewenstein.html)", *New York Times*, July 14 2010. 
+- Richard Thaler, 2015, "[Unless You Are Spock, Irrelevant Things Matter in Economic Behavior](http://www.nytimes.com/2015/05/10/upshot/unless-you-are-spock-irrelevant-things-matter-in-economic-behavior.html?referrer=)," *New York Times*, 8 May 2015.
+
 
 ### Thursday 10 September
 Today we shall do an experiment and (if there's time) begin to talk about using R. 
@@ -44,22 +50,23 @@ Today we shall do an experiment and (if there's time) begin to talk about using 
 - Go to VEconLab here: [http://veconlab.econ.virginia.edu/login.htm](http://veconlab.econ.virginia.edu/login.htm)
 - I will give you details on this page that you can use to log in. 
 
-Read this
+Read
 
 - Vernon Smith, 1997, "Economics in the Laboratory," *Journal of Economic Perspectives*, Vol 8 (1): 113-131. 
 
-Cases
+Revision
 
-- Richard Thaler, 2015, "Unless You Are Spock, Irrelevant Things Matter in Economic Behavior," *New York Times*, DATE.
+- BFH, Chapter 1. 
 
 Experiment Reports
 
-- Guidelines for the reports are available here: [simondhalliday.github.io/eco254/fall_2015/Admin/exp_reports](https://simondhalliday.github.io/eco254/fall_2015/Admin/exp_reports)
-- The graph from the experiment is here: [drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing](https://drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing)
+- Guidelines for the reports are available here: [exp_reports](exp_reports)
+<!--
+The graph from the experiment is here: [drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing](https://drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing)
 - The data are available in a google spreadsheet here: [docs.google.com/spreadsheets/d/10xzCd49nOEMDbxmegCfBaFZLz1uYE0ry7zGMBljEUcg/edit?usp=sharing](https://docs.google.com/spreadsheets/d/10xzCd49nOEMDbxmegCfBaFZLz1uYE0ry7zGMBljEUcg/edit?usp=sharing)
 - The data currently have a 'filter' in the first row and they are filtered on the individual ID codes (1 through 28). You can find your ID code and use the ID code to check what behavior you adopted, i.e. your bid or ask. Your cumulative earnings are also recorded. 
 - Screenshots of the instructions are available in a zipped file here: [drive.google.com/file/d/0B17bVUW1HMv-Vk9PUjZ3WUhlS0U/view?usp=sharing](https://drive.google.com/file/d/0B17bVUW1HMv-Vk9PUjZ3WUhlS0U/view?usp=sharing).
-
+-->
 - [Research Reports with R Markdown Prezi](http://prezi.com/8pwudebf9jof/reproducible-20/)
 - [Markdown Demo File (.html)](markdown-demo.html)
 - [Markdown Demo File (.Rmd)](markdown-demo.Rmd)
@@ -144,15 +151,22 @@ Each person presenting on a given topic should add their notes/definitions in ea
 ### Tuesday 9 September
 
 Reading
-- Chapter 2: To the end of 2.5. 
-- Rabin, Matthew, 2002, "A Perspective on Psychology and Economics", *European Economic Review*, 46 (4-5): 657-685. Download here: 
+
+- Cartwright Chapter 2: To the end of section 2.5. 
+- Rabin, Matthew, 2002, "A Perspective on Psychology and Economics", *European Economic Review*, 46 (4-5): 657-685.  
 > This Rabin paper is a lovely and not too technical introduction to many of the important ideas in behavioral economics. Some of the ideas will only become clear later in the course, but don't worry we shall get there later. 
 
-Recommended: 
+Revision
+
+- BFH Chapter 3: Doing the best you can
+
+Recommended
+
 - Rabin, Matthew, 1998, "Psychology and Economics," *Journal of Economic Literature*, Vol 36 (1): 11-46. 
 > This is a much more technical approach than the Rabin paper above, but potentially useful depending on what you plan to do for your project. 
 
-Case Studies: 
+Cases
+
 - Michael Moss, "[The Extraordinary Science of Addictive Junk Food](http://www.nytimes.com/2013/02/24/magazine/the-extraordinary-science-of-junk-food.html?_r=1)," *New York Times*, 2013.
 - Steven Levy, "[Nest’s Plan to Stop Brownouts Before They Start](http://www.wired.com/business/2013/04/nest-energy-services/)", *Wired*, 2013. See also: [MyEnergy.com](http://www.myenergy.com).
 - Larcom et al (15 September 2015), 'The Benefits of Forced Experimentation', is available here: [www.voxeu.org/article/benefits-forced-experimentation](http://www.voxeu.org/article/benefits-forced-experimentation)
@@ -184,23 +198,38 @@ Prof Horton also has some videos about starting out with  R:
 ## Week 3: Risk
 ### Tuesday 19 September
 
-Reading:
-- Chapter 3: Risk, Read up to Section 3.5  
+Reading
+
+- Cartwright, Chapter 3: Risk, Read up to Section 3.5  
 - Tversky and Kahneman, 1981, "The Framing of Decisions and the Psychology of Choice," *Science*, Vol 211, January, 453-458. 
+
+Revision
+
+- BFH Chapter 4: A Risky and Unequal World. 
+
+Recommended
+
+- A paper...
 
 ### Thursday 21 September
 
 - Go here: [/lab1](/lab1)
-- If you need to check the cheat sheets, then there are links lower down the page. 
+- Access the cheat sheets from RStudio Help -> Cheatsheets -> [Select the Cheatsheet you want]
 - R command structure: [https://moodle.smith.edu/mod/resource/view.php?id=39615](https://moodle.smith.edu/mod/resource/view.php?id=39615)
 - Data verbs: [https://moodle.smith.edu/mod/resource/view.php?id=39616](https://moodle.smith.edu/mod/resource/view.php?id=39616)
 
-## Week 4
+## Week 4: Risk
 
 ### Tuesday 29 September
 
-- Be sure to complete the first R quiz here: [https://moodle.smith.edu/mod/quiz/view.php?id=39737](https://moodle.smith.edu/mod/quiz/view.php?id=39737)
-- We will start on Chapter 3 in class. Please make sure you're signed up for topics to discuss in class. 
+Read
+
+- Cartwright Chapter 3, Section 3.6 onwards
+- George Loewenstein et al, 2001., "Risk as Feelings," Psychological Bulletin, Vol 127 (2): 267-286. (15 pages)
+
+Other Notes 
+
+- Check here for the notes on Bayes' Rule and understanding expected utility changes: [simondhalliday.github.io/eco254/fall_2015/activities/bayes_rule/bayes_rule](http://simondhalliday.github.io/eco254/fall_2015/activities/bayes_rule/bayes_rule)
 
 ### Thursday 1 October
 
@@ -211,49 +240,49 @@ Reading:
 - The graphic from the experiment is here: [https://moodle.smith.edu/mod/resource/view.php?id=42294](https://moodle.smith.edu/mod/resource/view.php?id=42294)
 - Here is data from the set of lotteries you chose: [https://moodle.smith.edu/mod/resource/view.php?id=42295](https://moodle.smith.edu/mod/resource/view.php?id=42295)
 - Here is the data from the short second experiment: [https://moodle.smith.edu/mod/resource/view.php?id=42296](https://moodle.smith.edu/mod/resource/view.php?id=42296)
+
 - I strongly recommend that you read Chapters 4 and 7 of the Charles Plott book as it covers the relevant content for these (and does some of it better than the Cartwright book in my mind)
 
-## Week 5
+## Week 5: Time
 ### Tuesday 6 October
-Reading: 
-- Chapter 3 (Risk)
-- George Loewenstein et al, 2001., "Risk as Feelings," Psychological Bulletin, (15 pages)
 
-Cases: 
-- Cass Sunstein, "Why Ebola Is Scarier Than It Should Be," Bloomberg, 2014. See also: How Deadly is Ebola? (Links to an external site.)Links to an external site.
+Reading
 
-Other Notes: 
+- Cartwright Chapter 4: Time Preferences up to Section 4.4.
+- Dan Ariely and Klaus Wertenbroch, 2002, "Procrastination, Deadlines, and Performance: Self-Control by Pre-Commitment," *Psychological Science*, Vol. 13 (3): 219-224. (6 pages)
+- Richard H. Thaler  and Cass R. Sunstein, "Libertarian Paternalism," *The American Economic Review: Papers and Proceedings*, Vol. 93, (2): 175-179. (5 pages) 
 
-- Check here for the notes on Bayes' Rule and understanding expected utility changes: [simondhalliday.github.io/eco254/fall_2015/activities/bayes_rule/bayes_rule](http://simondhalliday.github.io/eco254/fall_2015/activities/bayes_rule/bayes_rule)
+
+Cases 
+- Cass Sunstein, "Why Ebola Is Scarier Than It Should Be," Bloomberg, 2014. 
+
+
 
 
 ### Thursday 8 October
 We'll be doing an R lab today (followed by a quiz online for hand-in the following week).
 
+<!--
 - Don't forgot to hand in your exercises due today! Hand in on Moodle. 
 - Here's the lab: [http://simondhalliday.github.io/eco254/fall_2015/Labs/Lab2/Lab2](http://simondhalliday.github.io/eco254/fall_2015/Labs/Lab2/Lab2)
+-->
 
-Notes:
+Notes
 
-  + Slides on glyph-ready data: [https://moodle.smith.edu/mod/resource/view.php?id=43766](https://moodle.smith.edu/mod/resource/view.php?id=43766)
-  + Slides on using ggplot: [https://moodle.smith.edu/mod/resource/view.php?id=43768](https://moodle.smith.edu/mod/resource/view.php?id=43768)
+  - Slides on glyph-ready data: [https://moodle.smith.edu/mod/resource/view.php?id=43766](https://moodle.smith.edu/mod/resource/view.php?id=43766)
+  - Slides on using ggplot: [https://moodle.smith.edu/mod/resource/view.php?id=43768](https://moodle.smith.edu/mod/resource/view.php?id=43768)
 
 
 ## Week 6 
-### Thursday 15 October
+### Thursday 12 October
 
-Reading: 
+Read
 
-- Time Preferences (Ch. 4, sections: )
-- Dan Ariely and Klaus Wertenbroch, 2001, "Procrastination, Deadlines, and Performance: Self-Control by Pre-Commitment," INSEAD Working Paper. (12 pages)
-- Richard H. Thaler  and Cass R. Sunstein, "Libertarian Paternalism," *The American Economic Review: Papers and Proceedings*, Vol. 93, (2): 175-179. (5 pages) 
+- Cartwright, Chapter 5 up to the end of Section 5.4
 
 Cases:
 - Katrin Bennhold, "Britain’s Ministry of Nudges," New York Times, 2013. 
 - "The limits of nudging,"  The Economist, 2015.
-
-- We will briefly polish one idea from Risk
-- We will read a short article
 - I hope to show you something new in R very briefly
 
 
