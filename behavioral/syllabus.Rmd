@@ -1,0 +1,298 @@
+---
+title: "ECO254 - Behavioral Economics - Syllabus"
+author: 'Instructor: Simon Halliday'
+date: "Smith College, Fall 2017"
+output:
+  pdf_document: default
+  html_document:
+    css: ../stylesheets/styles.css
+---
+
+```{r, echo = FALSE}
+  #word_document
+  #pdf_document: 
+  #documentclass: article
+  #latex_engine: pdflatex
+  #rmarkdown::tufte_handout
+```
+
+
+**This syllabus is preliminary and subject to change.**
+
+##Contact & Admin Details
+
+- email/hangouts: [shalliday@smith.edu](shalliday@smith.edu)
+- twitter: @simondhalliday
+- skype: sihalliday
+- office: Pierce Hall 1.07
+- office hours: T W 
+- class schedule: T Th 3-4:50 pm
+- Venues: Seelye 110
+
+##Pre-requisites
+ECO254 requires you to have completed ECO250 and ECO220/MTH220. You need to have completed the courses for at least some of the following reasons: 
+
+- We build substantially on consumer theory from ECO250. We will look at various forms of utility functions and experiments that evaluate self-interest. We will also examine human rationality. 
+- We build on choice under uncertainty from ECO250. We  evaluate whether expected utility theory is the best or only description of individual choices with risk and compare it with prospect theory. 
+- We will employ the knowledge you obtained from ECO220/MTH220 about means, standard deviation, correlation, probability distributions and regression analysis with one or more variables in order to understand results from economic experiments. 
+- We will employ the practical skills you developed from ECO220/MTH220 in using a statistical software package like R (or Stata) to produce graphical and statistical output that is relevant to the questions we evaluate. 
+
+As calculus is a pre-requisite for ECO250, I shall assume that you are comfortable with calculus and algebra. 
+
+Game theory (with Prof Miller or while abroad) is a recommended course to have taken, but not a pre-requisite. 
+
+**You need to have access to a laptop/notebook for this course. We will use them every Thursday either for experiments or data analysis in R. If you need access to one, let me know and we shall do our best to organize one with ETS.**
+
+##Learning Goals
+I separate learning goals into goals with different verbs: *know*, *understand*,  *comprehend*, *analyze*, *synthesize*, *do*, etc. 
+
+- *Know* the virtues and limitations of the rational actor model and its application to choice theory and the behavioral sciences. 
+- *Understand* the role of economics as a discipline in the behavioral sciences 
+- *Ask* meaningful questions with important potential answers
+- *Analyze* data from experiments and surveys to answer questions relevant to the behavioral sciences
+- *Synthesize* different ideas, theories and empirics within the behavioral sciences
+- *Design* well conceived experiments and surveys to *answer* important questions
+- *Find* ways to *wrangle* data and play around with *computing* to derive useful insights
+- *Recognize* the benefits of *teaching yourself* to do new things. 
+
+##Course Surveys
+Please make sure you complete these surveys by the end of the first week of term. 
+
+- Your individual background and preferences: [goo.gl/forms/M9DaKh366j](https://goo.gl/forms/M9DaKh366j)
+- Questions about your thinking and preferences: [goo.gl/forms/MKPML7aMny](https://goo.gl/forms/MKPML7aMny)
+- Moodle statistical knowledge survey: [moodle.smith.edu/mod/questionnaire/view.php?id=17318](https://moodle.smith.edu/mod/questionnaire/view.php?id=17318)
+
+## Method of Instruction
+The course is a lecture-based course with labs and a substantial amount of student participation and teamwork. Students are expected to prepare the chapter readings for each session and to be able to answer questions about the readings to produce a high quality discussion. Each student is expected to contribute to the discussion. If you do not contribute, I shall encourage you to do so. If you contribute substantially more than anyone else, then I may ask you rather to encourage the engagement of others. We will also employ peer evaluation, though the professor will award grades.
+
+## Texts
+Copies of the required texts are (or will be) available in the Smith Bookstore and are (or will be) on reserve at Neilson Library. The supplementary texts will have copies on reserve at Neilson Library (don't buy them unless you really, really want to).
+
+Required texts: 
+
+ - Edward Cartwright, 2011, [*Behavioral Economics*](http://www.routledge.com/books/details/9780415737616/), 2nd Edition, Routledge Advanced Texts in Economics and Finance, Taylor and Francis.  
+The companion website for the book is  [here](http://www.routledgetextbooks.com/textbooks/9780415737647/default.php). At the book's website you'll see quizzes, flashcards, and worked examples. 
+
+Recommended: 
+I would strongly recommend that you buy & read this book in the first two weeks of the course. I only found out it was available after book orders were due, which is why it's not prescribed, but I would prescribe it otherwise.  
+
+- Michelle Baddeley, 2017, *Behavioural Economics: A Very Short Introduction*, Oxford University Press, Oxford, UK.
+
+Supplementary:
+We use three supplementary texts in the course. They are all available free of charge online. 
+
+1. Bowles, Foley and Halliday (forthcoming) is a text in intermediate microeconomics that you can use to revise. 
+2. Plott (2007) is for understanding the basics of different experimental designs. 
+3. Grolemund and Wickham (2016) is to supplement the work you do in basic data science toward replicating and producing your own statistical results. 
+
+- Bowles, Foley and Halliday, *Microeconomics: Competition, Conflict and Coordination* is a forthcoming textbook in intermediate microeconomics. You can access the pdf of the draft of the book on Moodle. I will refer to it mostly to remind you of ideas you should remember from intermediate microeconomics. 
+- Charles Plott, 2007, [*Markets, Games and Strategic Behavior*](http://www.amazon.com/Markets-Games-Strategic-Behavior-Charles/dp/0321419316/ref=sr_1_1?ie=UTF8&qid=1435175629&sr=8-1&keywords=markets+games+strategic), Pearson. Note, a draft .pdf of this book is available [various](http://harbaugh.uoregon.edu/Readings/expbooknsf.pdf) [places](http://faculty.cbpp.uaa.alaska.edu/jmurphy/courses/econ333/protected/readings/expbooknsf.pdf) online and I will refer to the draft version most of the time. 
+- Grolemund and Wickham, 2016, *R for Data Science*, available free of charge online at [r4ds.had.co.nz](http://r4ds.had.co.nz/).
+
+If you'd like a hard copy book, then get one of these two: 
+- Baumer, Horton and Kaplan, 2017, *Modern Data Science with R*, Chapman and Hall. See companion site here: [mdsr-book.github.io/](http://mdsr-book.github.io/)
+- Kaplan, Danny, 2015, *Data Computing: An Introduction to Wrangling and Visualization with R*, Project MOSAIC. 
+
+## Datacamp 
+We shall use DataCamp for this course for you to do exercises and learn the basics of R. 
+We shall occasionally do exercises together during Thursday classes, or I will expect you to do Datacamp exercises or in-class exercises for homework. 
+
+Be sure to do the following: 
+
+1. If you do not have one, create a LinkedIn account with your Smith email address (be sure to use your smith.edu email address). 
+2. Create an account at [Datacamp.com](https://datacamp.com) connected to your LinkedIn account. 
+3. I will add you to the course on [Datacamp.com](https://datacamp.com) and you will be able to complete exercises there. 
+
+##Course Schedule
+Below is a tentative and preliminary course schedule. It is subject to change depending on what happens during the semester. 
+
+| Date  | Week | Topic   | Reading  | Lab/Experiment | Assignment | 
+|---|---|---|---|---|---|
+| 9/7 | Week 1 | Intro  |  BE Ch. 1 |  - | - |
+| 9/12-14  |  Week 2 | Heuristics |  BE Ch. 2 |  Experiment |   |
+| 9/19-21  |  Week 3 | Risk |  BE Ch. 3 |  Lab 2  | ER1 |
+| 9/26-28  |  Week 4 | Risk |  BE Ch. 3 | Experiment   | - |
+| 10/3-10/5 | Week 5 | Time |  BE Ch. 4 | Lab 3   | ER2 |
+| 10/7-10/10 | - | Fall Break | - | - | - |
+| 10/12 | Week 6 | Learning & Info |  BE Ch. 5 | Lab 4   | - | 
+| 10/17-10/19  | Week 7 | Learning & Info |  BE Ch. 5 | Experiment   |  - |
+| 10/24-10/26  |  Week 8 | Group Interactions |  BE Ch. 6 | Lab 5   | ER3 (T); Prop Pres (Th) |
+| 10/31  |  Week 9 | Social Preferences |  BE Ch. 7 | Lab 5   | Prop Pres (T) |
+| 11/02  | -| Otelia Cromwell Day |   -  |  -  |  -  |
+| 11/7-9  | Week 10 | Social Preferences |   BE Ch. 7  |  Lab 6   |  Midterm |
+| 11/14-16 | Week 11 | Social Preferences |   BE Ch. 7 |  Experiment   | -  |
+| 11/21 | Week 12 | Happiness & Utility  |  BE Ch. 10 |  Lab 8   | ER4 |
+| 11/22-11/26 | - | Thanksgiving Break | - | - | - |
+| 11/28-30  | Week 13 | Policy  |  BE Ch. 11 |  Lab 9  | - |
+| 11/1-3  | Week 14 | Policy |  BE Ch. 11 | - | - |
+| 12/8-10  | Week 15 | Final Presentations |  |  - | - |
+| 12/15-18  |  - | Study Period | -  |  -  |  -  |
+| 12/21  |  - | Project Due Date | -  |  -  |  -  |
+
+##Assessment
+The following table summarizes the different aspects of the course's assessment. 
+
+| Assessment  | Percentage   | Cumulative  | 
+|---|---|---|
+| Class Participation | 10% | 10% |
+| In-class presentations | 10% | 20% |
+| Take-home Midterm | 25% | 45% |
+| Proposal Presentation | 5% | 50% |
+| Team Project | 25% | 75% |
+| Final Presentation | 5% | 80% | 
+| Experiment Reports | 10% | 90% | 
+| Lab exercises | 10% | 100% |
+
+-  *Class Participation*: Class participation will be based on your participation in class, in your group, on Piazza, in the experiments, etc.
+-  *In-class presentations*: During the semester, you will give very brief presentations on topics in the chapters (in pairs or triples). You will be expected to read the original paper, give a brief written summary (to me and posted online for the class as a google doc to which you provide a link) and talk very briefly about the idea in class. There will be sign-up sheets online. 
+- *Proposal Presentation*: You and fellow team members will take a theory from the textbook and present it to the class. You will provide the initial thinking about the data for the experiment you would like to replicate and some ideas you're thinking of pursuing for your own design based on the replication. 
+- *Take-home midterm*: You will have one week to complete a take-home midterm exam. The mid-term will involve data analysis, theory from the textbook, and interpretation of experimental results from a published paper. 
+- *Team Project*: In teams of 4-5 you will consider a question in behavioral economics that you can use an experiment to answer. You will devise an experimental design, compose  instructions, and explain the statistical methods you would use to analyze the data. You will review the relevant literature and explain the theory that pertains to your question. **Be sure to sign up for a meeting time with Professor Halliday before fall break**. I shall provide a list of meet-up times on doodle. You will also each answer a survey on your team at the end of the semester. 
+- *Final presentation*: You and your team members will produce a powerpoint presentation and present your experimental design in class. 
+- *Experiment reports (ER)*: You will write two experimental lab reports during the semester based on experiments you participate in during the semester. You pick when to hand them in after each experiment. We will do 4 experiments, you will be expected to hand in the report online by the next class. They are indicated in the provisional schedule by ER1 through ER4. 
+- *Lab Exercises*: These are graded Complete/Incomplete. If you complete it, you get the point. If not, then not. 
+
+##In-class Experiments
+We will use [VEconLab](http://veconlab.econ.virginia.edu/admin.htm) to run in-class experiments, typically during the Thursday class-times. I'm also investigating two alternative platforms: [MobLab](https://www.moblab.com) and [economics-games](https://economics-games.com).
+
+##Moodle & Website
+In general, I will use my site, simondhalliday.github.io/eco254 for content for ECO254. We also have a moodle site where the lecture capture software will automatically send lecture recordings and I will put copies of files that we use in the course. 
+
+##Guideline Questions to Think About Your Team Research Project
+ 
+Each member of the class will participate in a team to research a project. In doing so, you will need to think about a research experiment you would like to do (assume you had the funds and other resources to do so). It would be useful for you to write down answers to the following questions, and then iterate by revising your answers as you think about each question, discuss it with your team members, your other colleagues and the instructor. Send me your write up at any stage you wish, and feel free to come and talk to me about it.
+
+1. What is the question you would like to have answered after the experiment? (Your answer should be a single sentence with a question mark at the end.)
+2. What do you know already about the possible answers to the question you have stated above?
+3. What are the various possible ways of finding an answer to the question you have stated above?  Include both experimental and other methods you can think of.
+4. What are the advantages and disadvantages of using an experiment to find an answer?
+5. How important is this question to YOU? What are the chances that the answer you get from the experiment will surprise you or others?  What are the chances that it will change someone’s mind?
+6. How would you conduct the experiment?  (Write down a design and develop instructions.)
+7. Is your experimental design the *simplest possible design* to help answer the question you have stated?
+8. What are the possible outcomes of the experiment? Do the possible outcomes include at least one outcome that will *answer* the question you stated above? What is the chance that you will observe this outcome?
+
+At any stage of your thinking, feel free to go back and revise your earlier answers if you wish to.
+
+## Team Formation
+I will put you into teams. I will take your answers to the course survey about your backgrounds -- your majors, the courses you've taken, etc -- to design teams with diverse backgrounds and capabilities. As this is an upper-level course, all of you should have taken the pre-reqs, but the extra courses you've taken will help to improve the diversity of perspectives in your teams. I would recommend that you assign each person in your team a role and either hold roles constant for the semester or occasionally rotate roles to expose people to different tasks. 
+
+## Integrity in Empirical Research for your Team 
+When you set up a project, you will need to follow the TIER protocol. 
+The draft protocol for R is available here: [simondhalliday.github.io/eco254/fall_2015/TIER/tier_protocol_r](https://simondhalliday.github.io/eco254/fall_2015/TIER/tier_protocol_r). 
+Read it carefully and be sure that you know how to follow the protocol. Set up your project in a Google drive or Dropbox folder that follows the steps in the protocol. 
+
+## Team Project Deadlines
+You have four deadlines that I have imposed on your Team Research Project. 
+
+- initial meeting with me 
+- team proposal presentation 
+- initial literature review submission
+- confirm data import & initial replication exercise
+- team final presentation 
+- final submission of project 
+
+I would suggest that you consider imposing deadlines within your team which you write up as a contract which all your team members agree to and sign. Provide me with a scan/photo of the agreement and submit parts of the project as the semester proceeds. You can amend the contract if everyone votes and agrees (send me a copy of the amendment). If you don't vote to amend, then someone may fail to meet their contractual obligations. This happens all the time in teams, so please also be forgiving, but also let me know if this happens repeatedly and a group member does not do their agreed tasks. 
+
+##Team member evaluations
+At the middle and end of the semester, you will evaluate each of your fellow team members in the following way. You will receive exactly these instructions on Moodle. For the mid-semester assessment, you will receive the feedback comments from others. For the final assessment, only I will read the comments. 
+
+"Evaluate the contributions of each person in your group except yourself, by distributing 100 points among them (that is, when you are done, the total points assigned to everyone should sum up to 100). You must provide comments for each person. These comments -- but not who provided them -- will be passed onto your teammates. Your score should reflect your judgment of such things as:
+
+- Preparation (did they come to class prepared?), 
+- Contribution (did they contribute productively to group discussion and work?), 
+- Respect for others (did they encourage everyone to contribute and listen respectfully to different opinions?), and
+- Flexibility (were they flexible when disagreements occurred?). 
+
+It is important that you differentiate between people who truly worked hard for the good of the group and those you perceived not to be working as hard on group tasks 
+
+(NOTE: If you give everyone pretty much the same score when it is not truly deserved, you will be hurting those who did the most and helping those who did the least)."
+
+You can access the evaluation forms here: 
+
+- Mid-semester team member evaluation: [http://goo.gl/forms/MrWOFxpcfP](http://goo.gl/forms/MrWOFxpcfP)
+- Final team member evaluation: [http://goo.gl/forms/pLGGQTM66G](http://goo.gl/forms/pLGGQTM66G)
+
+##Stats Prep & Extra Credit for Spinelli Center Workshops
+In the first week of ECO254, you will need to complete a knowledge survey on Moodle. Your answers on the knowlege survey will provide me and Dr. McCune some insight into what you would want to have revised by the Spinelli Center. Please access the knowledge survey through [Moodle](https://moodle.smith.edu/mod/questionnaire/view.php?id=17318). 
+
+Ms. Maria Delfin-Auza is the statistics consultant at the Spinelli Center. She has a BA in Economics and a BA in Math & Stats. She is currently completing two MA degrees (one in public policy & another in resource economics). She can coach you on the use of Excel and R. Maria will run the workshops at the Spinelli Center. 
+
+The Spinelli Center will give me a list of the people who attend the revision workshops and I will give you extra credit if you do attend the workshops. 
+
+## Revising and Learning Statistics
+There are many resources online for learning or revising statistics. 
+
+- For introductory statistics, [Open Intro Statistics](https://www.openintro.org/stat/?stat_book=os) is a free online textbook paired with R (and `mosaic`) that you can use to revise relevant statistical knowledge and applications.  
+
+- For the use of statistics in experiments, [A First Course in Design and Analysis of Experiments](http://users.stat.umn.edu/~gary/Book.html) is a textbook originally published in 2000 that has gone out of print, but the pdf of which has reverted to the author (Gary Oehlert) and which he has made available free of charge online under a creative commons license. 
+
+## Excel, Stata and R
+
+During the course we will use R to do statistical analysis and produce graphics. R is rated among the top ten most useful programming languages and is growing in use. See for example, this blogpost:  [www.r-bloggers.com/r-6-in-ieee-2015-top-programming-languages-rising-3-places/](http://www.r-bloggers.com/r-6-in-ieee-2015-top-programming-languages-rising-3-places/) 
+
+We need to do statistical analysis in the course, so you will learn about tidy data, the grammar of graphics and the basics of statistical analysis building on the theoretical knowledge you should have from ECO220 or MTH220. If you prefer to use Stata you are welcome to, but R is becoming more commonplace and there is more support for its use at Smith. Also, R and RStudio are *free* so you can access R using RStudio on your own computer. In contrast, Stata is costly and either the college or you yourself will have to pay for R. 
+
+We will use Microsoft Excel as a spreadsheet package for this course. You should also be able to use Google Docs as an alternative. I do not recommend MacOS Numbers: it is strictly inferior to both these alternatives. MS Excel is used in a variety of business, banking and accounting settings and I strongly advise you to improve your knowledge of the software. The main use of Excel will be to prepare data for use in R by exporting the data to a csv file. So you know, the following constitutes a non-exhaustive list of the functions I expect you ought to know how to use in Excel for the workplace, but which I shan't go into myself in this course. `corr, cov, sum, count, if, sumif, countif, concatenate, stddev, index, match, vlookup`. (Maria will go through many of these in the Excel Workshop.)
+
+For Help with Excel, Stata or R, I suggest you go to the following links: 
+
+* __Excel, Stata and R__ Princeton's [Data and Statistical Services](http://dss.princeton.edu/training/): They cover topics related to Stata and R and have very helpful annotated screenshots to help you undersand what's going on. They have a helpful comparison document for Stata and R in case you happen to know the one package better than the other. 
+* __R only__ [The Five College Guide to R and R Studio](http://www3.amherst.edu/~nhorton/FiveCollegeR.pdf): Covers the basics of what you want to be able to do in R-studio and R using the mosaic package. Prof. Horton also has a variety of very helpful videos on his webpage at Amherst for [getting started with R](https://www.amherst.edu/people/facstaff/nhorton) (scroll about half-way down the page). He uses the lovely `mosaic` package to make R more accessible. 
+* __Stata and R__ UCLA's Statistics [help pages](http://www.ats.ucla.edu/stat/): they have comprehensive help  [R](http://www.ats.ucla.edu/stat/r/), and for [Stata](http://www.ats.ucla.edu/stat/stata/). I use them regularly as reminders and tutorials.
+* __Stata only__ German Rodriguez's online [Stata tutorial](http://data.princeton.edu/stata/) at Princeton. 
+* __Stata only__ Stata.com's long list of [resources for learning Stata](http://www.stata.com/links/resources-for-learning-stata/). 
+
+__Important__ Make sure you can save an Excel file as a comma separated value (.csv) file so that you can import it easily into either Stata (using the command `insheet`) or R (using the commands `read.csv` or `read.table`). To get help in Stata you can type in `help` followed by the command's name e.g. `help insheet`. To get help in R you can type in `?` followed by the command's name, e.g. `?read.csv`. 
+
+__TIP__ If you want to import Stata data (a .dta file)  into R, you should use the `haven` package. 
+
+##Style Guides
+When doing statistical work, it is imperative that you adopt a good style when presenting your work. I recommend that you use a style guide. 
+
+**For R Scripts**: 
+
+*Hadley Wickham has a brief and useful [style guide](http://adv-r.had.co.nz/Style.html "adv-r.had.co.nz/Style.html"). 
+*Google has a very comprehensive style guide for its employees who use R, [Google's R Style Guide](https://google-styleguide.googlecode.com/svn/trunk/Rguide.xml) 
+
+
+## Reproducibility and Integrity in Research
+In ECO254, we shall do our best to follow the norms of the Teaching Integrity in Empirical Research ([TIER](http://www.haverford.edu/TIER/)) 
+project in conjunction with the Open Science Framework ([OSF](https://osf.io)). 
+
+## Quantitative Literacy/Quantitative Reasoning
+“Economics is an empirically oriented discipline. The focus is on explaining and testing our understanding of economic phenomena. Hence, students need an appreciation for an ability to deal with empirical matters.” Siegfried et al 1991, p.216
+
+“The foundation in empirical methods depends on (1) knowing something about the measurement of economic variables (methods of data collection, reliability, etc.); (2) being able to organize, work with, and manipulate data for purposes of comparison; (3) the capacity to test hypotheses with empirical data; and (4) knowing how to interpret the results of various statistical procedures. The quantitative methods course should be reoriented from its almost singular statistical focus to emphasize this wider range of quantitative methods employed by economics.”(ibid. p.216)
+
+I will do my best to help you become more quantitatively literate and to help you to become better applied social scientists in your study of behavioral economics. 
+
+##Stats Tutors
+Sunday through Thursday nights 7-9pm in Burton 301 there are statistics tutors who are there to help students in MTH/SDS220. But, they can also help you out with using R. You can find out more on the Spinelli Center Website: [www.smith.edu/qlc/tutoring.html#S2](http://www.smith.edu/qlc/tutoring.html#S2). 
+
+##Additional Links and Resources
+
+- Rebecca Morton and Kenneth Williams. [From Nature to the Lab: The Methodology of Experimental Political Science and the Study of Causality](http://faculty.som.yale.edu/shyamsunder/ExperimentalEconomics/Nature_to_Lab_manuscript.pdf). Working manuscript.
+- More links
+
+
+##Piazza, Questions & Email
+In ECO254 we will use Piazza. Piazza is a website that allows participants to post questions (with their names or anonymously). You can respond to questions other people ask and they can respond to questions you ask. I can also endorse, comment on and add feedback to questions. I strongly encourage you to assist each other online (and preferably to do so with your names) so that I can see if and when you understand or do not understand an idea. Using Piazza also helps to ensure that I do not receive many emails asking the same question (which has happened in the past). If you email me about something already covered on Piazza, I will direct you to Piazza. I will add you all to the Piazza course after which you will receive an email alert and need to create a log-in for Piazza. Many of you probably already have such a log-in (I hope you remember your passwords). 
+
+All of which said, please feel free to email me. Typically, if an email is *not* about course content (which should almost always go on Piazza), then the email will be about something that is particularly relevant to you personally, e.g. you are traveling and will miss class, you need an extension for an assignment, you have a physical or mental health issue that needs to be resolved, etc. I shall always do my best to accommodate you. That said, I receive many, many emails. I try to ensure I get back to you within 24 hours (during the business week) or by Monday (if you emailed over the weekend). Occasionally, I may miss an email because of reading it on my phone and forgetting to mark it as unread to respond to it later. I apologize in advance if this happens. 
+
+##Some notes on my goals and my learning
+
+- It is the second time I am teaching ECO254. 
+- I love the ideas in behavioral economics. I love to talk about them, think about the out loud, and to debate their relevance.
+- I am doing my best to provide a fantastic course.
+- I want you to leave the course with some mastery of behavioral economics and a practical skill in the use of R. 
+- I am learning how best to provide such a course and how best to encourage student learning.
+- I have only recently begun to use R, but I think it is a good and powerful language. I continue to learn how best to use it. 
+- So I am learning too. Please be forgiving because I am trying to learn enough to satisfy all of you, whereas you need to learn enough to satisfy one of me. 
+
+## Acknowledgments
+In developing this syllabus, I have drawn on resources from variety of people: Jennifer Imazeki, John Spraggon, Shyam Sunder, Daniel Kaplan, Richard Ball, Steve Weber, Galen Panger, and others who I probably don't realize I pilfered from. Thanks to all of you.  
+
+
+
+

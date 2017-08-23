@@ -1,0 +1,117 @@
+---
+title: "Team Project Guidelines"
+author: "Simon Halliday"
+date: "Fall 2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##Structure of your project
+The project should contain the following important elements: 
+
+1. Introduction (1/2 page to 1 1/2 pages) 
+    - mention the paper & its main results
+    - discuss the success & failures of your reproduction 
+    - highlight some of the literature you introduce 
+    - propose your new *question* and the experimental/survey design you will
+    use to answer the question. 
+2. Summary of the your main paper (1 1/2 to 3 pages)
+    - explain the main arguments of the paper
+    - explain the main methods (experiment/survey, etc)
+    - discuss the paper's conclusions
+3. Reproduction of the results from your paper (however many pages it takes). 
+    - Do this in the order the results appear in the paper and structure them 
+    in the same way that the paper does. Your results do not have to be as 
+    *pretty* as those in the original paper; I mainly want you to emphasize 
+    substance not presentation (if you have time at the end to think 
+    about presentation, great, but don't worry too much about this). 
+    - If your results *differ* relative to your paper's results, then think
+    about *why* you might find differences (did you specify something 
+    differently in a regression, is your sample size different to what they
+    report, etc)
+4. Literature review of papers relating to your new design (2-3 pages)
+    - review some of the main literature that motivates your new design
+    - highlight the *gap* in the literature that your design will exploit
+5. Experiment/Survey Design (however many pages it requires; though some will go in an appendix, e.g. experimental instructions)
+    - A description of the experiment/survey design you would use to answer
+your question (specified in the intro) 
+    - A discussion of the statistical and graphical analysis that you would use 
+    to examine the data and assess the results 
+    - Explain the main predictions that you would make with the relevant theory
+    (re: your lit review) and what you might do to test the theory.
+6. Conclusion (1 to 2 pages)
+    - What did you find and how much were you able to confirm/fail to confirm? 
+    - What would your design add to the literature, add to our understanding, or change/improve existing theory if we had the results?
+    - What future paths of research would you recommend? 
+
+##Ideas
+If you're in a particular group, I would recommend that *before* you look in journals you open a scratch document where people can brainstorm ideas that they're interested in. 
+
+## Journals
+For your projects, you should look mainly at journal articles. There are a variety of really good journals that deal with topics in experimental and behavioral economics. Some of the journals are "general interest" journals where they will have the occasional paper on behavioral economics, others are more focused on topics related to behavioral economics. 
+
+Before doing anything else, I recommend that you use google scholar: [scholar.google.com](http://scholar.google.com) to do searches for academic papers that involve the topic you are interested in. Use relevant keywords. 
+
+###General Interest Journals or journals that occasionally include experiments
+
+- American Economic Review 
+- AEJ: Microeconomics 
+- Journal of Economic Literature
+- Journal of Economic Perspectives
+- Southern Economic Journal 
+- Economics Letters
+- Economic Inquiry
+- Journal of the European Economic Association 
+- Journal of Public Economics
+
+###Field Journals (specific to behavioral economics, experimental economics and game theory)
+
+- Experimental Economics
+- Games and Economic Behavior
+- Journal of Economic Psychology
+- Journal of Economic Behavior and Organization
+- Journal of Behavioral and Experimental Economics (formerly the Journal of Socio-Economics)
+- Journal of the Economic Science Association 
+- Review of Behavioral Economics
+- Journal of Risk and Uncertainty
+- Behavioral and Brain Sciences
+
+###General Science Journals that Include Behavioral/Experimental Economics
+- Science
+- Nature
+- PNAS
+- PLOS One
+
+###Organizations involved with Beahvioral and Experimental Economics
+
+- ESA: The Economic Science Association
+- IAREP: International Association for Research in Economic Psychology
+- ICABEEP: The International Confederation for the Advancement of Behavioral Economics and Economic Psychology
+- SABE: The Society for the Advancement of Behavioral Economics
+- IFREE: International Foundation for Research in Experimental Economics [http://ifreeweb.org](http://ifreeweb.org)
+
+
+
+### A non-exhaustive list of fantastic female behavioral & experimental economists
+
+- Elinor Ostrom (common property, social preferences)
+- Elizabeth Hoffman (Endowment Effect & Social Preferences) - she's also a Smith Alum
+- Elizabeth Rutstrom (Risk)
+- Muriel Niederle (Gender & Prefs)
+- Lise Vesterlund (Fairness & gender)
+- Catherine Eckel (generosity, risk, gender)
+- Alison Booth (mostly labor, but some behavioral on competition & risk preferences)
+- Rachel Kranton (identity, networks, institutions)
+- Marianne Bertrand (generally applied econ, but some behavioral)
+- Ulrike Malmendier (social preferences, micro theory, lots)
+- Oriana Bandiera (social preferences, cooperation, firm behavior)
+- Rachel Croson (social prefences, cooperation, gender)
+- Rosemarie Nagel (beliefs, trust, bargaining)
+- Marie-Claire Villeval (social norms, deceit, self-control, teams)
+- Abigail Barr (cooperation, 'lab in the field', social preferences)
+- Lata Gangadharan (cooperation, social prefs, gender)
+- Iris Bohnet (trust, incentives, betrayal)
+
