@@ -11,6 +11,7 @@ output: html_document
 - Email/hangouts: [shalliday+eco254@smith.edu](shalliday+eco254@smith.edu) Why is this my email address? Check [here](https://support.google.com/mail/answer/12096?hl=en)
 - [Syllabus](syllabus.html)
 - [Project Guidelines](team_guidelines)
+- [FAQ](FAQ)
 
 
 
@@ -42,6 +43,15 @@ Cases
 
 - George Loewenstein, "[Economics Behaving Badly](http://www.nytimes.com/2010/07/15/opinion/15loewenstein.html)", *New York Times*, July 14 2010. 
 - Richard Thaler, 2015, "[Unless You Are Spock, Irrelevant Things Matter in Economic Behavior](http://www.nytimes.com/2015/05/10/upshot/unless-you-are-spock-irrelevant-things-matter-in-economic-behavior.html?referrer=)," *New York Times*, 8 May 2015.
+
+Transparency and Integrity in Research
+
+- [New Truths that only one can see](http://www.nytimes.com/2014/01/21/science/new-truths-that-only-one-can-see.html),
+    *New York Times*,  George Johnson, 20 January 2014. 
+- [How reliable are psychology studies?](http://www.theatlantic.com/health/archive/2015/08/psychology-studies-reliability-reproducability-nosek/402466/), Ed Yong, *The Atlantic*, 27 August 2015.
+- [Unreliable Research: trouble at the lab](http://www.economist.com/news/briefing/21588057-scientists-think-science-self-correcting-alarming-degree-it-not-trouble), 
+    *The Economist*, 17 October 2013.
+- [Austerity's Spreadsheet Error](http://thecolbertreport.cc.com/videos/dcyvro/austerity-s-spreadsheet-error) (Colbert Report Video)
 
 
 ### Thursday 10 September
@@ -90,25 +100,6 @@ Complete these surveys:
 - Questions about your thinking and preferences: [goo.gl/forms/MKPML7aMny](https://goo.gl/forms/MKPML7aMny)
 - Moodle statistical knowledge survey: [moodle.smith.edu/mod/questionnaire/view.php?id=17318](https://moodle.smith.edu/mod/questionnaire/view.php?id=17318)
 
-- Short Reading (if an article is blocked in your browser, search for the title using
-Google).
-    - [Economics Behaving Badly](http://www.nytimes.com/2010/07/15/opinion/15loewenstein.html), Loewenstein and Ubel, *New York Times*, 14 July 2010.  
-    - [New Truths that only one can see](http://www.nytimes.com/2014/01/21/science/new-truths-that-only-one-can-see.html),
-    *New York Times*,  George Johnson, 20 January 2014. 
-    - [How reliable are psychology studies?](http://www.theatlantic.com/health/archive/2015/08/psychology-studies-reliability-reproducability-nosek/402466/), Ed Yong, *The Atlantic*, 27 August 2015.
-    - [Unreliable Research: trouble at the lab](http://www.economist.com/news/briefing/21588057-scientists-think-science-self-correcting-alarming-degree-it-not-trouble), 
-    *The Economist*, 17 October 2013.
-    - [Austerity's Spreadsheet Error](http://thecolbertreport.cc.com/videos/dcyvro/austerity-s-spreadsheet-error) (Colbert Report Video)
-
-###R Cheat Sheets
-- `ggplot2` and data visualization cheat sheet: [www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf](https://www.rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf)
-- data wrangling with `dplyr` cheat sheet: [www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf](https://www.rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf)
-- "minimal R" for basic stats in R (with `mosaic`, by Randy Pruim - we use pages 3-4 mostly): [cran.r-project.org/web/packages/mosaic/vignettes/MinimalR.pdf](https://cran.r-project.org/web/packages/mosaic/vignettes/MinimalR.pdf)
-- R Markdown cheat sheet: [www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf](https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf)
-- R markdown reference guide (more comprehensive & assumes more knowledge of, e.g. html): [www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf](https://www.rstudio.com/wp-content/uploads/2015/03/rmarkdown-reference.pdf)
-
-### Suggestions for your research project
-Go to the following page: [simondhalliday.github.io/eco254/fall_2015/team_project/team_guidelines](http://simondhalliday.github.io/eco254/fall_2015/team_project/team_guidelines)
 
 
 ### Topic Presentation Sign-ups:
@@ -122,7 +113,7 @@ Go to the following page: [simondhalliday.github.io/eco254/fall_2015/team_projec
 - Chapter 10: [docs.google.com/spreadsheets/d/1RICCHlaLvAyizkmopurDIov-8hxrApuTMYRqcViWM8Y/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1RICCHlaLvAyizkmopurDIov-8hxrApuTMYRqcViWM8Y/edit?usp=sharing)
 - Chapter 11: [docs.google.com/spreadsheets/d/1eX6sUfrrvuI4btyEbUuyy-qx-UmC0qAGWhK0WklIvaA/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1eX6sUfrrvuI4btyEbUuyy-qx-UmC0qAGWhK0WklIvaA/edit?usp=sharing)
 
-###Chapter shared notes
+### Chapter shared notes
 Each person presenting on a given topic should add their notes/definitions in each shared chapter note section. Other people may add to these notes. 
 
 - Chapter 2: [docs.google.com/document/d/1mOkEsD59_JuuevBZfO4kfCDtdAepEz-a3HOjo2xz--s/edit?usp=sharing](https://docs.google.com/document/d/1mOkEsD59_JuuevBZfO4kfCDtdAepEz-a3HOjo2xz--s/edit?usp=sharing)
@@ -294,11 +285,13 @@ Other
 
 
 ### Tuesday 17 October
-We will do the following: 
+
 
 Reading
 
 - Sundali and Croson, 2006, "[Biases in casino betting: The hot hand and the gambler’s fallacy](https://moodle.smith.edu/mod/resource/view.php?id=233746)," *Judgment and Decision Making*, Vol 1 (1), 1-12 (11 pages)
+- Gary Charness and Matthias Sutter, 2012, "[Groups make better self-interested decisions](https://moodle.smith.edu/mod/resource/view.php?id=233863)," *Journal of Economic Perspectives*, 26 (3): 157-176 (18 pages)
+
 
 
 ###Thursday 19 October
@@ -341,15 +334,28 @@ Also, check out these links for behavioral econ in the press:
 - Cass Sunstein reviews Akerlof and Shiller's *Phishing for Phools*: [http://www.nybooks.com/articles/archives/2015/oct/22/why-free-markets-make-fools-us/](http://www.nybooks.com/articles/archives/2015/oct/22/why-free-markets-make-fools-us/)
 
 
-## Week 8: Group Interactions
+## Week 8: Fairness and Social Preferences 
 
  
 ### Tuesday 24 October
 
-Read
+Reading 
 
-- Cartwright, Chapter 6 up to 6.5 but **excluding** 6.2.2 and 6.2.5 (the math is tough). 
-- Gary Charness and Matthias Sutter, 2012, "[Groups make better self-interested decisions](https://moodle.smith.edu/mod/resource/view.php?id=233863)," *Journal of Economic Perspectives*, 26 (3): 157-176 (18 pages)
+- Daniel Kahneman, Jack Knetsch, and Richard Thaler, 1986, "[Fairness as a Constraint on Profit Seeking: Entitlements in the Market](https://moodle.smith.edu/mod/resource/view.php?id=233839)," *American Economic Review*, Vol. 76 (4): 728-741, (13 pages).
+- Alexander Cappelen et al, 2007, "[The Pluralism of Fairness Ideals: An Experimental Approach](https://moodle.smith.edu/mod/resource/view.php?id=233841)," *American Economic Review*, Vol. 97 (3) 818-827, (9 pages).
+
+Cases
+
+- Kusum Ailawadi and Paul Farris, "How Companies Can Get Smart About Raising Prices," Wall Street Journal, 2013. See also: Four Barrel.
+- "[The rise of the sharing economy](http://www.economist.com/news/leaders/21573104-internet-everything-hire-rise-sharing-economy)," Economist, 2013.
+
+Recommended
+
+- Stefano DellaVigna, 2009, "[Psychology and Economics: Evidence from the Field](https://moodle.smith.edu/mod/resource/view.php?id=233705)," Journal of Economic Literature,  47 (2): 315–372. 
+
+Revision 
+
+- BFH Chapter 2
 
 
 ### Thursday 26 October
@@ -384,31 +390,14 @@ Read
 ## Week 9: Fairness and Social Preferences
 
 ### Tuesday 31 October 
+See readings for Week 8. 
 
-
-Reading 
-
-- Daniel Kahneman, Jack Knetsch, and Richard Thaler, 1986, "[Fairness as a Constraint on Profit Seeking: Entitlements in the Market](https://moodle.smith.edu/mod/resource/view.php?id=233839)," *American Economic Review*, Vol. 76 (4): 728-741, (13 pages).
-- Alexander Cappelen et al, 2007, "[The Pluralism of Fairness Ideals: An Experimental Approach](https://moodle.smith.edu/mod/resource/view.php?id=233841)," *American Economic Review*, Vol. 97 (3) 818-827, (9 pages).
-
-Cases
-
-- Kusum Ailawadi and Paul Farris, "How Companies Can Get Smart About Raising Prices," Wall Street Journal, 2013. See also: Four Barrel.
-- "[The rise of the sharing economy](http://www.economist.com/news/leaders/21573104-internet-everything-hire-rise-sharing-economy)," Economist, 2013.
-
-Recommended
-
-- Stefano DellaVigna, 2009, "[Psychology and Economics: Evidence from the Field](https://moodle.smith.edu/mod/resource/view.php?id=233705)," Journal of Economic Literature,  47 (2): 315–372. 
-
-Revision 
-
-- BFH Chapter 2
 
 ### Thursday 5 November
 
 ## Week 10: Fairness & Social Preferences
 
-See readings for week 9. 
+See readings for Week 8. 
 
 ### Tuesday 10 November
 
@@ -423,8 +412,15 @@ Download the description of the data here:
 - [https://moodle.smith.edu/mod/resource/view.php?id=51529](https://moodle.smith.edu/mod/resource/view.php?id=51529)
 - And the data itself as a .txt file here: [https://moodle.smith.edu/mod/resource/view.php?id=51530](https://moodle.smith.edu/mod/resource/view.php?id=51530)
 
-## Week 11: Fairness & Social Preferences
-See readings for Week 9. 
+## Week 11: Gender and Preferences
+
+We consider the evidence for *average* differences using gender as a category. We consider whether statistically significant differences on average imply *substantive* differences in practice or policy. 
+
+Reading 
+
+- Rachel Croson and Uri Gneezy, 2009, "[Gender Differences in Preferences](https://moodle.smith.edu/mod/resource/view.php?id=233976)," *Journal of Economic Literature*, 47 (2): 1–27  (22 pages)
+- Julie A. Nelson, 2016, "[Not-So-Strong Evidence for Gender Differences in Risk
+Taking](https://moodle.smith.edu/mod/resource/view.php?id=233978)", *Feminist Economics*, 22 (2): 114-142. (26 pages)
 
 
 ### Tuesday 14 November
@@ -439,8 +435,8 @@ See readings for Week 9.
 Reading 
 
 - Cartwright, Chapter 10, up to the end of section 10.4. 
-- Daniel Kahneman and Alan Krueger, "Developments in the Measurement of Subjective Well-Being," Journal of Economic Perspectives, 2006, Vol. 20 (1) 3-24, (20 pages).
-
+- Daniel Kahneman and Alan Krueger, "[Developments in the Measurement of Subjective Well-Being](https://moodle.smith.edu/mod/resource/view.php?id=233860)," Journal of Economic Perspectives, 2006, Vol. 20 (1) 3-24, (20 pages).
+- Betsey Stevenson and Justin Wolfers, 2013. "[Subjective Well-Being and Income: Is There Any Evidence of Satiation?](https://moodle.smith.edu/mod/resource/view.php?id=233969)," American Economic Review, American Economic Association, vol. 103(3), pages 598-604, May (5 pages)
 
 Watch
 
@@ -452,8 +448,8 @@ Homework
 [http://simondhalliday.github.io/eco254/fall_2015/activities/wvs/wvs](http://simondhalliday.github.io/eco254/fall_2015/activities/wvs/wvs)
 
 
-
-11/22 to 11/26 Thanksgiving
+### Thanksgiving break
+Have a splendid time while you're away for 11/22 to 11/26. 
 
 
 ## Week 13
