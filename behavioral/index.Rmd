@@ -3,17 +3,18 @@ output: html_document
     #css: ../stylesheets/styles.css
 ---
 
-# Behavioral Economics (ECO254, Fall 2017)
+# Behavioral Economics Schedule
 
 - Professor: Simon Halliday, PhD. 
 - Time: Tues & Thurs 3 to 4:50pm
 - Venue: Seelye 110
+- Semester: Fall 2017
+- Course code: ECO254
 - Email/hangouts: [shalliday+eco254@smith.edu](shalliday+eco254@smith.edu) Why is this my email address? Check [here](https://support.google.com/mail/answer/12096?hl=en)
 - [Syllabus](syllabus.html)
 - [Project Guidelines](team_guidelines)
 - [FAQ](FAQ)
-
-
+- Sign up for topics, share notes, and look at questions [here](topics_notes_questions). 
 
 
 ## Week 1: Introduction 
@@ -37,7 +38,7 @@ Read
 Recommended
 
 - The Behavioral Economics Guide 2016, available [here](https://moodle.smith.edu/mod/resource/view.php?id=233703). 
-> The BE Guide is useful for you to get a broad sense of what we do in Behavioral Econ and what kinds of ideas you might want to research in your team project. 
+    - The BE Guide is useful for you to get a broad sense of what we do in Behavioral Economics and what kinds of ideas you might want to research in your team project. 
 
 Cases
 
@@ -53,8 +54,46 @@ Transparency and Integrity in Research
     *The Economist*, 17 October 2013.
 - [Austerity's Spreadsheet Error](http://thecolbertreport.cc.com/videos/dcyvro/austerity-s-spreadsheet-error) (Colbert Report Video)
 
+*Homework*
 
-### Thursday 10 September
+Complete these surveys: 
+
+- Your individual background and preferences: [goo.gl/forms/M9DaKh366j](https://goo.gl/forms/M9DaKh366j)
+- Questions about your thinking and preferences: [goo.gl/forms/MKPML7aMny](https://goo.gl/forms/MKPML7aMny)
+- Moodle statistical knowledge survey: [moodle.smith.edu/mod/questionnaire/view.php?id=17318](https://moodle.smith.edu/mod/questionnaire/view.php?id=17318)
+
+
+## Week 2: Heuristics & Biases
+
+### Tuesday 9 September
+
+Reading
+
+- Cartwright Chapter 2: To the end of section 2.5. 
+- Rabin, Matthew, 2002, "[A Perspective on Psychology and Economics](https://moodle.smith.edu/mod/resource/view.php?id=233700)", *European Economic Review*, 46 (4-5): 657-685.  
+     - This Rabin paper is a lovely and not too technical introduction to many of the important ideas in behavioral economics. Some of the ideas will only become clear later in the course, but don't worry we shall get there later. 
+
+Revision
+
+- BFH Chapter 3: Doing the best you can
+
+Recommended
+
+- Rabin, Matthew, 1998, "[Psychology and Economics](https://moodle.smith.edu/mod/resource/view.php?id=233721)," *Journal of Economic Literature*, Vol 36 (1): 11-46. 
+    - This is a much more technical approach than the Rabin paper above, but potentially useful depending on what you plan to do for your project. 
+
+Cases
+
+- Michael Moss, "[The Extraordinary Science of Addictive Junk Food](http://www.nytimes.com/2013/02/24/magazine/the-extraordinary-science-of-junk-food.html?_r=1)," *New York Times*, 2013.
+- Steven Levy, "[Nest’s Plan to Stop Brownouts Before They Start](http://www.wired.com/business/2013/04/nest-energy-services/)", *Wired*, 2013. See also: [MyEnergy.com](http://www.myenergy.com).
+- Larcom et al (15 September 2015), 'The Benefits of Forced Experimentation', is available here: [www.voxeu.org/article/benefits-forced-experimentation](http://www.voxeu.org/article/benefits-forced-experimentation)
+
+- Here's a link to the workbook from class on the happiness scale: [simondhalliday.github.io/eco254/fall_2015/activities/happy_students](http://simondhalliday.github.io/eco254/fall_2015/activities/happy_students)
+- The reading guide is available here: [docs.google.com/document/d/12SU6upZrKDtUwyNaWOATo3LIzRjT3yODHkUlag5Hgu0/edit](https://docs.google.com/document/d/12SU6upZrKDtUwyNaWOATo3LIzRjT3yODHkUlag5Hgu0/edit)
+
+
+### Thursday 12 September
+
 Today we shall do an experiment and (if there's time) begin to talk about using R. 
 
 - Go to VEconLab here: [http://veconlab.econ.virginia.edu/login.htm](http://veconlab.econ.virginia.edu/login.htm)
@@ -62,7 +101,7 @@ Today we shall do an experiment and (if there's time) begin to talk about using 
 
 Read
 
-- Vernon Smith, 1997, "Economics in the Laboratory," *Journal of Economic Perspectives*, Vol 8 (1): 113-131. 
+- Vernon Smith, 1997, "[Economics in the Laboratory](https://moodle.smith.edu/mod/resource/view.php?id=233707)," *Journal of Economic Perspectives*, Vol 8 (1): 113-131 (17 pages). 
 
 Revision
 
@@ -70,7 +109,7 @@ Revision
 
 Experiment Reports
 
-- Guidelines for the reports are available here: [exp_reports](exp_reports)
+- Guidelines for the reports are available here: [Experiment Report Guidelines](exp_reports)
 <!--
 The graph from the experiment is here: [drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing](https://drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing)
 - The data are available in a google spreadsheet here: [docs.google.com/spreadsheets/d/10xzCd49nOEMDbxmegCfBaFZLz1uYE0ry7zGMBljEUcg/edit?usp=sharing](https://docs.google.com/spreadsheets/d/10xzCd49nOEMDbxmegCfBaFZLz1uYE0ry7zGMBljEUcg/edit?usp=sharing)
@@ -91,82 +130,9 @@ The graph from the experiment is here: [drive.google.com/file/d/0B17bVUW1HMv-cUh
 Once you're comfortable with that, do the following. On your laptop, follow these steps to install R and the latest version of RStudio. Make sure to install R first!
 
 1. Download and install R here: [cran.rstudio.com/](https://cran.rstudio.com/)
-2. Download and install LaTeX here: []()
+2. Download and install LaTeX here: [www.latex-project.org/get/](https://www.latex-project.org/get/)
 3. Download and install R Studio here: [www.rstudio.com/products/rstudio/download/](https://www.rstudio.com/products/rstudio/download/)
 
-Complete these surveys: 
-
-- Your individual background and preferences: [goo.gl/forms/M9DaKh366j](https://goo.gl/forms/M9DaKh366j)
-- Questions about your thinking and preferences: [goo.gl/forms/MKPML7aMny](https://goo.gl/forms/MKPML7aMny)
-- Moodle statistical knowledge survey: [moodle.smith.edu/mod/questionnaire/view.php?id=17318](https://moodle.smith.edu/mod/questionnaire/view.php?id=17318)
-
-
-
-### Topic Presentation Sign-ups:
-
-- Chapter 2: [docs.google.com/spreadsheets/d/1EkJAaEIILjh__vaD5rZpRPgUOn_bYXPoU24v8kks5TE/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1EkJAaEIILjh__vaD5rZpRPgUOn_bYXPoU24v8kks5TE/edit?usp=sharing).
-- Chapter 3: [docs.google.com/spreadsheets/d/1Vd6Q--wh-Cuwpa0dZOY0DlxIp-hoDyUiXFWInNX4kfE/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1Vd6Q--wh-Cuwpa0dZOY0DlxIp-hoDyUiXFWInNX4kfE/edit?usp=sharing)
-- Chapter 4: [docs.google.com/spreadsheets/d/1fg424AeOBNTP-mTB0Ldf8u6YGcQhGwluI6x4q8MnkCA/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1fg424AeOBNTP-mTB0Ldf8u6YGcQhGwluI6x4q8MnkCA/edit?usp=sharing)
-- Chapter 5: [docs.google.com/spreadsheets/d/1FiIqjgV7PcmNJIh0-oRoOxLf5g_y0DTXnvS-jwj2Mr0/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1FiIqjgV7PcmNJIh0-oRoOxLf5g_y0DTXnvS-jwj2Mr0/edit?usp=sharing)
-- Chapter 6: [docs.google.com/spreadsheets/d/14fd-eZ84u526MVMlWknqkD7Ev8CjPQRbzw3t_17TYkA/edit?usp=sharing](https://docs.google.com/spreadsheets/d/14fd-eZ84u526MVMlWknqkD7Ev8CjPQRbzw3t_17TYkA/edit?usp=sharing)
-- Chapter 7: [docs.google.com/spreadsheets/d/15CUugzKfJzTdPokWKUNMO1pO98sb2TnMWhh19I--UBA/edit?usp=sharing](https://docs.google.com/spreadsheets/d/15CUugzKfJzTdPokWKUNMO1pO98sb2TnMWhh19I--UBA/edit?usp=sharing)
-- Chapter 10: [docs.google.com/spreadsheets/d/1RICCHlaLvAyizkmopurDIov-8hxrApuTMYRqcViWM8Y/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1RICCHlaLvAyizkmopurDIov-8hxrApuTMYRqcViWM8Y/edit?usp=sharing)
-- Chapter 11: [docs.google.com/spreadsheets/d/1eX6sUfrrvuI4btyEbUuyy-qx-UmC0qAGWhK0WklIvaA/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1eX6sUfrrvuI4btyEbUuyy-qx-UmC0qAGWhK0WklIvaA/edit?usp=sharing)
-
-### Chapter shared notes
-Each person presenting on a given topic should add their notes/definitions in each shared chapter note section. Other people may add to these notes. 
-
-- Chapter 2: [docs.google.com/document/d/1mOkEsD59_JuuevBZfO4kfCDtdAepEz-a3HOjo2xz--s/edit?usp=sharing](https://docs.google.com/document/d/1mOkEsD59_JuuevBZfO4kfCDtdAepEz-a3HOjo2xz--s/edit?usp=sharing)
-- Chapter 3: [docs.google.com/document/d/1gysWaBqK3j8f2KvIj8B1kkk3VDp3172L4zO1vXNb1Es/edit?usp=sharing](https://docs.google.com/document/d/1gysWaBqK3j8f2KvIj8B1kkk3VDp3172L4zO1vXNb1Es/edit?usp=sharing)
-- Chapter 4: [docs.google.com/document/d/1ck6LHxiOVMzmQMLagcj6tFyNTVVr_vUmibf6JdAjcqw/edit?usp=sharing](https://docs.google.com/document/d/1ck6LHxiOVMzmQMLagcj6tFyNTVVr_vUmibf6JdAjcqw/edit?usp=sharing)
-- Chapter 5: [docs.google.com/document/d/1pdYt-uC6g80N0wMuuWPa3krqM_GqKLzDuN7n-_Lbaos/edit?usp=sharing](https://docs.google.com/document/d/1pdYt-uC6g80N0wMuuWPa3krqM_GqKLzDuN7n-_Lbaos/edit?usp=sharing)
-- Chapter 6: [docs.google.com/document/d/15hWodfWxqaaRjwtMjMeHA5yKWohttswOvj1gY3Lqkc0/edit?usp=sharing](docs.google.com/document/d/15hWodfWxqaaRjwtMjMeHA5yKWohttswOvj1gY3Lqkc0/edit?usp=sharing)
-- Chapter 7: [docs.google.com/document/d/1uBgu2o55ZlOZR2E7CiCj9XX2VdEcUH3krMmLJ3jl38Y/edit?usp=sharing](https://docs.google.com/document/d/1uBgu2o55ZlOZR2E7CiCj9XX2VdEcUH3krMmLJ3jl38Y/edit?usp=sharing)
-- Chapter 10: [docs.google.com/document/d/1ev6fNTCR3iVq8szAjE-GggGAXwTabD0da4_NoCwFHco/edit?usp=sharing](https://docs.google.com/document/d/1ev6fNTCR3iVq8szAjE-GggGAXwTabD0da4_NoCwFHco/edit?usp=sharing)  
-- Chapter 11: [docs.google.com/document/d/1v73QYA8-CtsIvTCQC3PrRO73G165bijfFSsi3qtek6A/edit?usp=sharing](https://docs.google.com/document/d/1v73QYA8-CtsIvTCQC3PrRO73G165bijfFSsi3qtek6A/edit?usp=sharing)
-
-
-###Chapter Questions and Definitions
-
-- Chapter 2: [docs.google.com/document/d/1237o0s9GHzibZsZLTEKUY1_pQmOhVycnj8yOwCRQFis/edit?usp=sharing](https://docs.google.com/document/d/1237o0s9GHzibZsZLTEKUY1_pQmOhVycnj8yOwCRQFis/edit?usp=sharing)
-- Chapter 3: 
-- Chapter 4: 
-- Chapter 5: 
-- Chapter 6: 
-- Chapter 7: 
-- Chapter 10: 
-- Chapter 11: 
-
-## Week 2: Heuristics & Biases
-
-### Tuesday 9 September
-
-Reading
-
-- Cartwright Chapter 2: To the end of section 2.5. 
-- Rabin, Matthew, 2002, "A Perspective on Psychology and Economics", *European Economic Review*, 46 (4-5): 657-685.  
-> This Rabin paper is a lovely and not too technical introduction to many of the important ideas in behavioral economics. Some of the ideas will only become clear later in the course, but don't worry we shall get there later. 
-
-Revision
-
-- BFH Chapter 3: Doing the best you can
-
-Recommended
-
-- Rabin, Matthew, 1998, "Psychology and Economics," *Journal of Economic Literature*, Vol 36 (1): 11-46. 
-> This is a much more technical approach than the Rabin paper above, but potentially useful depending on what you plan to do for your project. 
-
-Cases
-
-- Michael Moss, "[The Extraordinary Science of Addictive Junk Food](http://www.nytimes.com/2013/02/24/magazine/the-extraordinary-science-of-junk-food.html?_r=1)," *New York Times*, 2013.
-- Steven Levy, "[Nest’s Plan to Stop Brownouts Before They Start](http://www.wired.com/business/2013/04/nest-energy-services/)", *Wired*, 2013. See also: [MyEnergy.com](http://www.myenergy.com).
-- Larcom et al (15 September 2015), 'The Benefits of Forced Experimentation', is available here: [www.voxeu.org/article/benefits-forced-experimentation](http://www.voxeu.org/article/benefits-forced-experimentation)
-
-- Here's a link to the workbook from class on the happiness scale: [simondhalliday.github.io/eco254/fall_2015/activities/happy_students](http://simondhalliday.github.io/eco254/fall_2015/activities/happy_students)
-- The reading guide is available here: [docs.google.com/document/d/12SU6upZrKDtUwyNaWOATo3LIzRjT3yODHkUlag5Hgu0/edit](https://docs.google.com/document/d/12SU6upZrKDtUwyNaWOATo3LIzRjT3yODHkUlag5Hgu0/edit)
-
-
-### Thursday 12 September
 
 We will use these documents as guides, for some of them you will need to log in to Moodle: 
 
@@ -175,7 +141,7 @@ We will use these documents as guides, for some of them you will need to log in 
 - Check your name off here: [https://docs.google.com/spreadsheets/d/1DB60SzS9VBA1IsUr2AiPWJyt0f3C6RyLbcSstSWvCWw/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1DB60SzS9VBA1IsUr2AiPWJyt0f3C6RyLbcSstSWvCWw/edit?usp=sharing)
 
 
-Watch these videos by Nick Horton (Amherst) as an introduction to R markdown: 
+Watch these videos by Nick Horton (Amherst College) as an introduction to R markdown: 
 
 - Video 1: [www.youtube.com/watch?v=w4hLT7WyjnM&feature=youtu.be](https://www.youtube.com/watch?v=w4hLT7WyjnM&feature=youtu.be)
 - Video 2: [www.youtube.com/watch?v=MdxNFiXm1qE&feature=youtu.be](https://www.youtube.com/watch?v=MdxNFiXm1qE&feature=youtu.be)
@@ -192,7 +158,7 @@ Prof Horton also has some videos about starting out with  R:
 Reading
 
 - Cartwright, Chapter 3: Risk, Read up to Section 3.5  
-- Tversky and Kahneman, 1981, "The Framing of Decisions and the Psychology of Choice," *Science*, Vol 211, January, 453-458. 
+- Tversky and Kahneman, 1981, "[The Framing of Decisions and the Psychology of Choice](https://moodle.smith.edu/mod/resource/view.php?id=233720)," *Science*, Vol 211, January, 453-458 (6 pages). 
 
 Revision
 
@@ -200,7 +166,7 @@ Revision
 
 Recommended
 
-- A paper...
+- A paper TBC
 
 ### Thursday 21 September
 
@@ -220,18 +186,18 @@ Read
 
 Other Notes 
 
-- Check here for the notes on Bayes' Rule and understanding expected utility changes: [simondhalliday.github.io/eco254/fall_2015/activities/bayes_rule/bayes_rule](http://simondhalliday.github.io/eco254/fall_2015/activities/bayes_rule/bayes_rule)
+- Check here for the notes on Bayes' Rule and understanding expected utility changes: [bayes_rule](bayes_rule). 
 
-### Thursday 28 October
+### Thursday 28 September
 
 - We're doing Experiment 2 today. 
 - Go to VEconLab here: [http://veconlab.econ.virginia.edu/login.htm](http://veconlab.econ.virginia.edu/login.htm)
 - I will give you details on this page that you can use to log in.
-- Check out the set of exercises for Chapters 1 to 4 of *Data Computing* here: [simondhalliday.github.io/eco254/fall_2015/exercises/exercises1-4](https://simondhalliday.github.io/eco254/fall_2015/exercises/exercises1-4) The exercises will be due online on Moodle on 8 October. 
+<!--- Check out the set of exercises for Chapters 1 to 4 of *Data Computing* here: [simondhalliday.github.io/eco254/fall_2015/exercises/exercises1-4](https://simondhalliday.github.io/eco254/fall_2015/exercises/exercises1-4) The exercises will be due online on Moodle on 8 October. 
 - The graphic from the experiment is here: [https://moodle.smith.edu/mod/resource/view.php?id=42294](https://moodle.smith.edu/mod/resource/view.php?id=42294)
 - Here is data from the set of lotteries you chose: [https://moodle.smith.edu/mod/resource/view.php?id=42295](https://moodle.smith.edu/mod/resource/view.php?id=42295)
 - Here is the data from the short second experiment: [https://moodle.smith.edu/mod/resource/view.php?id=42296](https://moodle.smith.edu/mod/resource/view.php?id=42296)
-
+-->
 - I strongly recommend that you read Chapters 4 and 7 of the Charles Plott book as it covers the relevant content for these (and does some of it better than the Cartwright book in my mind)
 
 ## Week 5: Time
@@ -250,7 +216,7 @@ Cases
 
 
 ### Thursday 5 October
-We'll be doing an R lab today (followed by a quiz online for hand-in the following week).
+We'll be doing an R lab today (followed by a quiz online for hand-in next week).
 
 <!--
 - Don't forgot to hand in your exercises due today! Hand in on Moodle. 
@@ -259,8 +225,8 @@ We'll be doing an R lab today (followed by a quiz online for hand-in the followi
 
 Notes
 
-  - Slides on glyph-ready data: [https://moodle.smith.edu/mod/resource/view.php?id=43766](https://moodle.smith.edu/mod/resource/view.php?id=43766)
-  - Slides on using ggplot: [https://moodle.smith.edu/mod/resource/view.php?id=43768](https://moodle.smith.edu/mod/resource/view.php?id=43768)
+  - Slides on glyph-ready data: [https://moodle.smith.edu/mod/resource/view.php?id=233888](https://moodle.smith.edu/mod/resource/view.php?id=233888)
+  - Slides on using ggplot: [https://moodle.smith.edu/mod/resource/view.php?id=233890](https://moodle.smith.edu/mod/resource/view.php?id=233890)
 
 
 ## Week 6: Learning & Information
@@ -269,17 +235,18 @@ Notes
 Read
 
 - Cartwright, Chapter 5 up to the end of Section 5.4 (feel free to exclude Section 5.3.4. if you're struggling to understand it as it may employ game theory you have not done)
-- 
+- Also read section 6.4 from Chapter 6 (we are excluding the rest of Chapter 6)
 
-Cases:
+Cases
 
 - Katrin Bennhold, "Britain's Ministry of Nudges," New York Times, 2013. 
 - "The limits of nudging,"  The Economist, 2015.
 
-Other 
+
+<!-- Other 
 
 - I hope to show you something new in R very briefly
-
+-->
 
 ## Week 7: Learning & Information
 
@@ -289,7 +256,7 @@ Other
 
 Reading
 
-- Sundali and Croson, 2006, "[Biases in casino betting: The hot hand and the gambler’s fallacy](https://moodle.smith.edu/mod/resource/view.php?id=233746)," *Judgment and Decision Making*, Vol 1 (1), 1-12 (11 pages)
+- Sundali and Croson, 2006, "[Biases in casino betting: The hot hand and the gambler’s fallacy](https://moodle.smith.edu/mod/resource/view.php?id=233746)," *Judgment and Decision Making*, Vol 1 (1): 1-12 (11 pages)
 - Gary Charness and Matthias Sutter, 2012, "[Groups make better self-interested decisions](https://moodle.smith.edu/mod/resource/view.php?id=233863)," *Journal of Economic Perspectives*, 26 (3): 157-176 (18 pages)
 
 
@@ -297,10 +264,10 @@ Reading
 ###Thursday 19 October
 We will talk about the following topics in R today: 
 
-- Wide vs. Narrow data: [https://moodle.smith.edu/mod/resource/view.php?id=46463](https://moodle.smith.edu/mod/resource/view.php?id=46463)
-- Joins: [https://moodle.smith.edu/mod/resource/view.php?id=46462](https://moodle.smith.edu/mod/resource/view.php?id=46462) 
+- Wide vs. Narrow data: [https://moodle.smith.edu/mod/resource/view.php?id=233892](https://moodle.smith.edu/mod/resource/view.php?id=233892)
+- Joins: [https://moodle.smith.edu/mod/resource/view.php?id=233891](https://moodle.smith.edu/mod/resource/view.php?id=233891) 
 - `group_by` and `summarise` see here: [http://dtkaplan.github.io/DCF-2014/CourseNotes/BasicDataCommands/DraftNarrative.html](http://dtkaplan.github.io/DCF-2014/CourseNotes/BasicDataCommands/DraftNarrative.html)
-and here: [https://moodle.smith.edu/mod/resource/view.php?id=46744](https://moodle.smith.edu/mod/resource/view.php?id=46744)
+and here: [https://moodle.smith.edu/mod/resource/view.php?id=233893](https://moodle.smith.edu/mod/resource/view.php?id=233893)
 
 Team Projects
 
@@ -335,12 +302,13 @@ Also, check out these links for behavioral econ in the press:
 
 
 ## Week 8: Fairness and Social Preferences 
-
+Do people only worry about their own consumption or their own money, or are they concerned (in prosocial or antisocial ways) about what others get? If they do care, what do their preferences look like? Are they altruistic? Are the reciprocal? What experiments do we use to check this and how can we understand the breadth of these preferences? 
  
 ### Tuesday 24 October
 
 Reading 
 
+- Cartwright, Chapter 7 up to Section 7.4. 
 - Daniel Kahneman, Jack Knetsch, and Richard Thaler, 1986, "[Fairness as a Constraint on Profit Seeking: Entitlements in the Market](https://moodle.smith.edu/mod/resource/view.php?id=233839)," *American Economic Review*, Vol. 76 (4): 728-741, (13 pages).
 - Alexander Cappelen et al, 2007, "[The Pluralism of Fairness Ideals: An Experimental Approach](https://moodle.smith.edu/mod/resource/view.php?id=233841)," *American Economic Review*, Vol. 97 (3) 818-827, (9 pages).
 
@@ -360,23 +328,24 @@ Revision
 
 ### Thursday 26 October
 
+- We shall work with the data from Sutter, 2009. 
+<!--
 - You can look at all the steps we'll take with the Sutter data here: 
 [http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis_2](http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis_2)
  - We will look at the Wilcoxon test on Thursday as well as the a first attempt at a multiple regression model (my notes may change between now and then)
- - We shall complete Chapter 5 (leaving out signalling games)
- - Remember, I announced that we'll exclude Ch. 6 and skip to Ch. 7
+-->
  
 ### Experiment 3
  
- - If we have time, we'll do Experiment 3 (or I'll leave the rest of Ch. 5 for next week). 
- - Go to VEconLab here: http://veconlab.econ.virginia.edu/login.htm
- 
+- Go to VEconLab here: http://veconlab.econ.virginia.edu/login.htm
 
+<!--
 - Be sure to have gone through the ggplot exercise that we started on last week Thursday. 
 - You can see my 'readme.txt' file here: [http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/readme.txt](http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/readme.txt)
 - You can see a step-by-step completion of the first part of the exercise in R here: [http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis](http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis)
 - Once we've completed this exercise, I'll get started on Ch. 5 of Cartwright. 
 - Then we'll spend a bit of time on group-work too. 
+--> 
 
 `ggplot` exercise continued: 
 
@@ -390,32 +359,29 @@ Revision
 ## Week 9: Fairness and Social Preferences
 
 ### Tuesday 31 October 
-See readings for Week 8. 
-
+See readings for Week 8. We focus on Kahneman et al and Cappelen et al today. 
 
 ### Thursday 5 November
 
 ## Week 10: Fairness & Social Preferences
 
-See readings for Week 8. 
+See readings for Week 8. We will do an exercise in R looking at social preferences. 
 
 ### Tuesday 10 November
 
 
 ### Thursday 12 November
-Go here for the initial Marseille guide:
 
-- [http://simondhalliday.github.io/eco254/fall_2015/activities/marseille/marseille](http://simondhalliday.github.io/eco254/fall_2015/activities/marseille/marseille)
 
-Download the description of the data here: 
-
-- [https://moodle.smith.edu/mod/resource/view.php?id=51529](https://moodle.smith.edu/mod/resource/view.php?id=51529)
+- Go here for the initial Marseille exercise guide: [marseille](marseille)
+- Download the description of the data here [https://moodle.smith.edu/mod/resource/view.php?id=51529](https://moodle.smith.edu/mod/resource/view.php?id=51529)
 - And the data itself as a .txt file here: [https://moodle.smith.edu/mod/resource/view.php?id=51530](https://moodle.smith.edu/mod/resource/view.php?id=51530)
 
 ## Week 11: Gender and Preferences
 
 We consider the evidence for *average* differences using gender as a category. We consider whether statistically significant differences on average imply *substantive* differences in practice or policy. 
 
+### Tuesday 14 November
 Reading 
 
 - Rachel Croson and Uri Gneezy, 2009, "[Gender Differences in Preferences](https://moodle.smith.edu/mod/resource/view.php?id=233976)," *Journal of Economic Literature*, 47 (2): 1–27  (22 pages)
@@ -423,11 +389,10 @@ Reading
 Taking](https://moodle.smith.edu/mod/resource/view.php?id=233978)", *Feminist Economics*, 22 (2): 114-142. (26 pages)
 
 
-### Tuesday 14 November
-- We need to complete the Marseille exercise we didn't get the chance to finish previously. 
 
 ### Thursday 16 November 
-- Lab and stuff. 
+
+Project work & wrap up Gender. 
 
 ## Week 12: Happiness and Utility
 ### Tuesday 21 November: 
