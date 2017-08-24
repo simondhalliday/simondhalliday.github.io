@@ -2,10 +2,8 @@
 title: "ECO254 - Behavioral Economics - Syllabus"
 author: 'Instructor: Simon Halliday'
 date: "Smith College, Fall 2017"
-output:
-  pdf_document: default
-  html_document:
-    css: ../stylesheets/styles.css
+output: html_document
+#  pdf_document: default
 ---
 
 ```{r, echo = FALSE}
@@ -21,13 +19,13 @@ output:
 
 ##Contact & Admin Details
 
-- email/hangouts: [shalliday@smith.edu](shalliday@smith.edu)
-- twitter: @simondhalliday
-- skype: sihalliday
-- office: Pierce Hall 1.07
-- office hours: T W 
-- class schedule: T Th 3-4:50 pm
-- Venues: Seelye 110
+- Email/hangouts: [shalliday+eco254@smith.edu](shalliday+eco254@smith.edu)
+- Twitter: @simondhalliday
+- Skype: sihalliday
+- Office: Pierce Hall 1.07
+- Office hours: T W 
+- Class schedule: T Th 3-4:50 pm
+- Venue: Seelye 110
 
 ##Pre-requisites
 ECO254 requires you to have completed ECO250 and ECO220/MTH220. You need to have completed the courses for at least some of the following reasons: 
@@ -68,18 +66,20 @@ The course is a lecture-based course with labs and a substantial amount of stude
 ## Texts
 Copies of the required texts are (or will be) available in the Smith Bookstore and are (or will be) on reserve at Neilson Library. The supplementary texts will have copies on reserve at Neilson Library (don't buy them unless you really, really want to).
 
-Required texts: 
+**Required text **
 
  - Edward Cartwright, 2011, [*Behavioral Economics*](http://www.routledge.com/books/details/9780415737616/), 2nd Edition, Routledge Advanced Texts in Economics and Finance, Taylor and Francis.  
 The companion website for the book is  [here](http://www.routledgetextbooks.com/textbooks/9780415737647/default.php). At the book's website you'll see quizzes, flashcards, and worked examples. 
 
-Recommended: 
+**Recommended**
+
 I would strongly recommend that you buy & read this book in the first two weeks of the course. I only found out it was available after book orders were due, which is why it's not prescribed, but I would prescribe it otherwise.  
 
 - Michelle Baddeley, 2017, *Behavioural Economics: A Very Short Introduction*, Oxford University Press, Oxford, UK.
 
-Supplementary:
-We use three supplementary texts in the course. They are all available free of charge online. 
+**Supplementary**
+
+We use three supplementary texts in the course. They are all available free of charge online through Moodle. 
 
 1. Bowles, Foley and Halliday (forthcoming) is a text in intermediate microeconomics that you can use to revise. 
 2. Plott (2007) is for understanding the basics of different experimental designs. 
@@ -115,12 +115,12 @@ Below is a tentative and preliminary course schedule. It is subject to change de
 | 10/3-10/5 | Week 5 | Time |  BE Ch. 4 | Lab 3   | ER2 |
 | 10/7-10/10 | - | Fall Break | - | - | - |
 | 10/12 | Week 6 | Learning & Info |  BE Ch. 5 | Lab 4   | - | 
-| 10/17-10/19  | Week 7 | Learning & Info |  BE Ch. 5 | Experiment   |  - |
-| 10/24-10/26  |  Week 8 | Group Interactions |  BE Ch. 6 | Lab 5   | ER3 (T); Prop Pres (Th) |
+| 10/17-10/19  | Week 7 | Learning & Info |  BE Ch. 5 & S. 6.4 | Experiment   |  - |
+| 10/24-10/26  |  Week 8 | Social Preferences|  BE Ch. 7 | Lab 5   | ER3 (T); Prop Pres (Th) |
 | 10/31  |  Week 9 | Social Preferences |  BE Ch. 7 | Lab 5   | Prop Pres (T) |
 | 11/02  | -| Otelia Cromwell Day |   -  |  -  |  -  |
 | 11/7-9  | Week 10 | Social Preferences |   BE Ch. 7  |  Lab 6   |  Midterm |
-| 11/14-16 | Week 11 | Social Preferences |   BE Ch. 7 |  Experiment   | -  |
+| 11/14-16 | Week 11 | Gender |   Readings |  Experiment   | -  |
 | 11/21 | Week 12 | Happiness & Utility  |  BE Ch. 10 |  Lab 8   | ER4 |
 | 11/22-11/26 | - | Thanksgiving Break | - | - | - |
 | 11/28-30  | Week 13 | Policy  |  BE Ch. 11 |  Lab 9  | - |
@@ -272,7 +272,6 @@ Sunday through Thursday nights 7-9pm in Burton 301 there are statistics tutors w
 ##Additional Links and Resources
 
 - Rebecca Morton and Kenneth Williams. [From Nature to the Lab: The Methodology of Experimental Political Science and the Study of Causality](http://faculty.som.yale.edu/shyamsunder/ExperimentalEconomics/Nature_to_Lab_manuscript.pdf). Working manuscript.
-- More links
 
 
 ##Piazza, Questions & Email
@@ -280,15 +279,16 @@ In ECO254 we will use Piazza. Piazza is a website that allows participants to po
 
 All of which said, please feel free to email me. Typically, if an email is *not* about course content (which should almost always go on Piazza), then the email will be about something that is particularly relevant to you personally, e.g. you are traveling and will miss class, you need an extension for an assignment, you have a physical or mental health issue that needs to be resolved, etc. I shall always do my best to accommodate you. That said, I receive many, many emails. I try to ensure I get back to you within 24 hours (during the business week) or by Monday (if you emailed over the weekend). Occasionally, I may miss an email because of reading it on my phone and forgetting to mark it as unread to respond to it later. I apologize in advance if this happens. 
 
-##Some notes on my goals and my learning
+##Some notes on our goals and our learning
 
 - It is the second time I am teaching ECO254. 
-- I love the ideas in behavioral economics. I love to talk about them, think about the out loud, and to debate their relevance.
+- I love the ideas in behavioral economics. I love to talk about them, think about them out loud, and to debate their relevance.
+- As I will have many half-formed thoughts and draft ideas, forgive me if I get something wrong. I will do the same with you. Feel free to preface any such statement you make with "I have a half-formed thought," or "I have a draft idea." Encourage others who are willing to put their ideas out there and offer generous feedback. 
 - I am doing my best to provide a fantastic course.
 - I want you to leave the course with some mastery of behavioral economics and a practical skill in the use of R. 
 - I am learning how best to provide such a course and how best to encourage student learning.
 - I have only recently begun to use R, but I think it is a good and powerful language. I continue to learn how best to use it. 
-- So I am learning too. Please be forgiving because I am trying to learn enough to satisfy all of you, whereas you need to learn enough to satisfy one of me. 
+- So I am learning too. Please be forgiving because I am trying to learn enough to satisfy *all* of you, whereas you need to learn enough to satisfy *one* of me. 
 
 ## Acknowledgments
 In developing this syllabus, I have drawn on resources from variety of people: Jennifer Imazeki, John Spraggon, Shyam Sunder, Daniel Kaplan, Richard Ball, Steve Weber, Galen Panger, and others who I probably don't realize I pilfered from. Thanks to all of you.  
