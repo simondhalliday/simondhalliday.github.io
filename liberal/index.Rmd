@@ -39,9 +39,10 @@ output: html_document
 
 ## What are my expectations of you? 
 
-- presence
-- communication 
-- 
+- *presence*: come to the meetings
+- *communication*: be sure to let me know of anything that's going on with courses where you're struggling, your health if that is impeding you, your personal life if I need to direct you to relevant resources
+- *do the work*: make sure you do the work necessary to be a good advisee, come prepared and make sure you know what *kinds* of courses you'd like to take, if not the specific courses you think will work for you
+- *a spark*: your interest is the spark, our job as professors is to help that spark become a flame, think about what sparks you and let me know so I can help nurture the flame
 
 ### Communicate with me
 
