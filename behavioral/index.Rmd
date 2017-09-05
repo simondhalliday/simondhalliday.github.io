@@ -5,7 +5,7 @@ output: html_document
 
 # Behavioral Economics Schedule
 
-- Professor: Simon Halliday, PhD. 
+- Instructor: Simon Halliday, PhD. 
 - Time: Tues & Thurs 3 to 4:50pm
 - Venue: Seelye 110
 - Semester: Fall 2017
