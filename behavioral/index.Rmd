@@ -65,7 +65,7 @@ Complete these surveys:
 
 ## Week 2: Heuristics & Biases
 
-### Tuesday 9 September
+### Tuesday 12 September
 
 Reading
 
@@ -92,7 +92,7 @@ Cases
 - The reading guide is available here: [docs.google.com/document/d/12SU6upZrKDtUwyNaWOATo3LIzRjT3yODHkUlag5Hgu0/edit](https://docs.google.com/document/d/12SU6upZrKDtUwyNaWOATo3LIzRjT3yODHkUlag5Hgu0/edit)
 
 
-### Thursday 12 September
+### Thursday 14 September
 
 Today we shall do an experiment and (if there's time) begin to talk about using R. 
 
@@ -230,6 +230,9 @@ Notes
 
 
 ## Week 6: Learning & Information
+
+### Tuesday 10 October - Fall Break
+
 ### Thursday 12 October
 
 Read
@@ -261,7 +264,7 @@ Reading
 
 
 
-###Thursday 19 October
+### Thursday 19 October
 We will talk about the following topics in R today: 
 
 - Wide vs. Narrow data: [https://moodle.smith.edu/mod/resource/view.php?id=233892](https://moodle.smith.edu/mod/resource/view.php?id=233892)
@@ -361,16 +364,16 @@ Revision
 ### Tuesday 31 October 
 See readings for Week 8. We focus on Kahneman et al and Cappelen et al today. 
 
-### Thursday 5 November
+### Thursday 2 November
 
 ## Week 10: Fairness & Social Preferences
 
 See readings for Week 8. We will do an exercise in R looking at social preferences. 
 
-### Tuesday 10 November
+### Tuesday 7 November
 
 
-### Thursday 12 November
+### Thursday 9 November
 
 
 - Go here for the initial Marseille exercise guide: [marseille](marseille)
@@ -395,7 +398,8 @@ Taking](https://moodle.smith.edu/mod/resource/view.php?id=233978)", *Feminist Ec
 Project work & wrap up Gender. 
 
 ## Week 12: Happiness and Utility
-### Tuesday 21 November: 
+
+### Tuesday 21 November
 
 Reading 
 
@@ -417,7 +421,7 @@ Homework
 Have a splendid time while you're away for 11/22 to 11/26. 
 
 
-## Week 13
+## Week 13: Policy and Manipulation
 
 ### Tuesday 28 November 
 
@@ -431,21 +435,21 @@ Reading
 
 Cases 
 
-- Blah
-- Blah
+- TBC
+- TBC
 
 
 
 
 ## Week 14
-### Tuesday 1 December
+### Tuesday 5 December
 
 Read 
 
 - Tanjim Hossain and John List, 2012, "The Behavioralist Visits the Factory: Increasing Productivity Using Simple Framing Manipulations," *Management Science* 58 (12): 2151 - 2167 (X pages)
 
 
-### Thursday 3 December
+### Thursday 7 December
 
 - Bring your laptops. It's team project time!
 - We'll also do the final experiment (other things equal)
@@ -455,14 +459,14 @@ Read
 
 ## Week 15: Final Presentations
 
-### Tuesday 8 December 
+### Tuesday 12 December 
 
 - Group 1
 - Group 2
 - Group 3
 
 
-### Thursday 10 December 
+### Thursday 14 December 
 
 - Group 4
 - Group 5
