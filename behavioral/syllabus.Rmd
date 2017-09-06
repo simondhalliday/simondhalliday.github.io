@@ -2,8 +2,9 @@
 title: "ECO254 - Behavioral Economics - Syllabus"
 author: 'Instructor: Simon Halliday'
 date: "Smith College, Fall 2017"
-output: html_document
-#  pdf_document: default
+output:
+  #pdf_document: default
+  html_document: default
 ---
 
 ```{r, echo = FALSE}
@@ -122,10 +123,10 @@ Below is a tentative and preliminary course schedule. It is subject to change de
 | 11/7-9  | Week 10 | Social Preferences |   BE Ch. 7  |  Lab 6   |  Midterm |
 | 11/14-16 | Week 11 | Gender |   Readings |  Experiment   | -  |
 | 11/21 | Week 12 | Happiness & Utility  |  BE Ch. 10 |  Lab 8   | ER4 |
-| 11/22-11/26 | - | Thanksgiving Break | - | - | - |
+| 11/22-26 | - | Thanksgiving Break | - | - | - |
 | 11/28-30  | Week 13 | Policy  |  BE Ch. 11 |  Lab 9  | - |
-| 11/1-3  | Week 14 | Policy |  BE Ch. 11 | - | - |
-| 12/8-10  | Week 15 | Final Presentations |  |  - | - |
+| 11/5-7 | Week 14 | Policy |  BE Ch. 11 | - | - |
+| 12/12-14  | Week 15 | Final Presentations |  |  - | - |
 | 12/15-18  |  - | Study Period | -  |  -  |  -  |
 | 12/21  |  - | Project Due Date | -  |  -  |  -  |
 
@@ -156,7 +157,7 @@ The following table summarizes the different aspects of the course's assessment.
 We will use [VEconLab](http://veconlab.econ.virginia.edu/admin.htm) to run in-class experiments, typically during the Thursday class-times. I'm also investigating two alternative platforms: [MobLab](https://www.moblab.com) and [economics-games](https://economics-games.com).
 
 ##Moodle & Website
-In general, I will use my site, simondhalliday.github.io/eco254 for content for ECO254. We also have a moodle site where the lecture capture software will automatically send lecture recordings and I will put copies of files that we use in the course. 
+In general, I will use my site, simondhalliday.com/behavioral for content for ECO254. We also have a moodle site where I will put copies of files that we use in the course. 
 
 ##Guideline Questions to Think About Your Team Research Project
  
@@ -212,12 +213,11 @@ You can access the evaluation forms here:
 - Mid-semester team member evaluation: [http://goo.gl/forms/MrWOFxpcfP](http://goo.gl/forms/MrWOFxpcfP)
 - Final team member evaluation: [http://goo.gl/forms/pLGGQTM66G](http://goo.gl/forms/pLGGQTM66G)
 
-##Stats Prep & Extra Credit for Spinelli Center Workshops
-In the first week of ECO254, you will need to complete a knowledge survey on Moodle. Your answers on the knowlege survey will provide me and Dr. McCune some insight into what you would want to have revised by the Spinelli Center. Please access the knowledge survey through [Moodle](https://moodle.smith.edu/mod/questionnaire/view.php?id=17318). 
+##Stats Prep & Spinelli Center
+In the first week of ECO254, you will need to complete a knowledge survey on Moodle.  Please access the knowledge survey through [Moodle](https://moodle.smith.edu/mod/questionnaire/view.php?id=17318). 
 
-Ms. Maria Delfin-Auza is the statistics consultant at the Spinelli Center. She has a BA in Economics and a BA in Math & Stats. She is currently completing two MA degrees (one in public policy & another in resource economics). She can coach you on the use of Excel and R. Maria will run the workshops at the Spinelli Center. 
+Ms. Maria Delfin-Auza is the statistics consultant at the Spinelli Center. She has a BA in Economics and a BA in Math & Stats.  She can coach you on the use of Excel and R. 
 
-The Spinelli Center will give me a list of the people who attend the revision workshops and I will give you extra credit if you do attend the workshops. 
 
 ## Revising and Learning Statistics
 There are many resources online for learning or revising statistics. 
