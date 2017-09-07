@@ -113,22 +113,22 @@ Below is a tentative and preliminary course schedule. It is subject to change de
 | Date  | Week | Topic   | Reading  | Lab/Experiment | Assignment | 
 |---|---|---|---|---|---|
 | 9/7 | Week 1 | Intro  |  BE Ch. 1 |  - | - |
-| 9/12-14  |  Week 2 | Heuristics |  BE Ch. 2 |  Experiment |   |
-| 9/19-21  |  Week 3 | Risk |  BE Ch. 3 |  Lab 2  | ER1 |
+| 9/12-14  |  Week 2 | Heuristics |  BE Ch. 2 |  Experiment & Lab 0 |   |
+| 9/19-21  |  Week 3 | Risk |  BE Ch. 3 |  Lab 1  | ER1 |
 | 9/26-28  |  Week 4 | Risk |  BE Ch. 3 | Experiment   | - |
-| 10/3-10/5 | Week 5 | Time |  BE Ch. 4 | Lab 3   | ER2 |
+| 10/3-10/5 | Week 5 | Time |  BE Ch. 4 | Lab 2   | ER2 |
 | 10/7-10/10 | - | Fall Break | - | - | - |
-| 10/12 | Week 6 | Learning & Info |  BE Ch. 5 | Lab 4   | - | 
-| 10/17-10/19  | Week 7 | Learning & Info |  BE Ch. 5 & S. 6.4 | Experiment   |  - |
-| 10/24-10/26  |  Week 8 | Social Preferences|  BE Ch. 7 | Lab 5   | ER3 (T); Prop Pres (Th) |
+| 10/12 | Week 6 | Learning & Info |  BE Ch. 5 | Lab 3   | - | 
+| 10/17-10/19  | Week 7 | Learning & Info |  BE Ch. 5 & S. 6.4 | Experiment/Lab   |  - |
+| 10/24-10/26  |  Week 8 | Social Preferences|  BE Ch. 7 | Lab 4   | ER3 (T); Prop Pres (Th) |
 | 10/31  |  Week 9 | Social Preferences |  BE Ch. 7 | Lab 5   | Prop Pres (T) |
 | 11/02  | -| Otelia Cromwell Day |   -  |  -  |  -  |
 | 11/7-9  | Week 10 | Social Preferences |   BE Ch. 7  |  Lab 6   |  Midterm |
-| 11/14-16 | Week 11 | Gender |   Readings |  Experiment   | -  |
-| 11/21 | Week 12 | Happiness & Utility  |  BE Ch. 10 |  Lab 8   | ER4 |
+| 11/14-16 | Week 11 | Gender |   Readings |  Experiment/Lab   | -  |
+| 11/21 | Week 12 | Happiness & Utility  |  BE Ch. 10 |  Lab 7   | ER4 |
 | 11/22-26 | - | Thanksgiving Break | - | - | - |
-| 11/28-30  | Week 13 | Policy  |  BE Ch. 11 |  Lab 9  | - |
-| 11/5-7 | Week 14 | Policy |  BE Ch. 11 | - | - |
+| 11/28-30  | Week 13 | Policy  |  BE Ch. 11 |  Lab 8  | - |
+| 11/5-7 | Week 14 | Policy |  BE Ch. 11 | Lab 9 | - |
 | 12/12-14  | Week 15 | Final Presentations |  |  - | - |
 | 12/15-18  |  - | Study Period | -  |  -  |  -  |
 | 12/21  |  - | Project Due Date | -  |  -  |  -  |
@@ -181,12 +181,12 @@ At any stage of your thinking, feel free to go back and revise your earlier answ
 I will put you into teams. I will take your answers to the course survey about your backgrounds -- your majors, the courses you've taken, etc -- to design teams with diverse backgrounds and capabilities. As this is an upper-level course, all of you should have taken the pre-reqs, but the extra courses you've taken will help to improve the diversity of perspectives in your teams. I would recommend that you assign each person in your team a role and either hold roles constant for the semester or occasionally rotate roles to expose people to different tasks. 
 
 ## Integrity in Empirical Research for your Team 
-When you set up a project, you will need to follow the TIER protocol. 
+When you set up a project, you will need to follow the [TIER protocol](http://www.projecttier.org/tier-protocol/specifications/). 
 The draft protocol for R is available here: [tier_protocol_r](tier_protocol_r). 
-Read it carefully and be sure that you know how to follow the protocol. Set up your project in a Google drive or Dropbox folder that follows the steps in the protocol. 
+Read it carefully and be sure that you know how to follow the protocol. Set up your project in a Google drive or Dropbox folder that follows the steps in the protocol. I shall also upload a folder on Moodle that provides a (somewhat updated) folder structure that we've agreed on since writing this initial draft. Also check the updated version online at the [Project Tier Site](http://www.projecttier.org/tier-protocol/specifications/). 
 
 ## Team Project Deadlines
-You have four deadlines that I have imposed on your Team Research Project. 
+You have a few deadlines that I have imposed on your Team Research Project. 
 
 - initial meeting with me 
 - team proposal presentation 
@@ -197,7 +197,7 @@ You have four deadlines that I have imposed on your Team Research Project.
 
 I would suggest that you consider imposing deadlines within your team which you write up as a contract which all your team members agree to and sign. Provide me with a scan/photo of the agreement and submit parts of the project as the semester proceeds. You can amend the contract if everyone votes and agrees (send me a copy of the amendment). If you don't vote to amend, then someone may fail to meet their contractual obligations. This happens all the time in teams, so please also be forgiving, but also let me know if this happens repeatedly and a group member does not do their agreed tasks. 
 
-##Team member evaluations
+## Team member evaluations
 At the middle and end of the semester, you will evaluate each of your fellow team members in the following way. You will receive exactly these instructions on Moodle. For the mid-semester assessment, you will receive the feedback comments from others. For the final assessment, only I will read the comments. 
 
 "Evaluate the contributions of each person in your group except yourself, by distributing 100 points among them (that is, when you are done, the total points assigned to everyone should sum up to 100). You must provide comments for each person. These comments -- but not who provided them -- will be passed onto your teammates. Your score should reflect your judgment of such things as:
@@ -216,10 +216,10 @@ You can access the evaluation forms here:
 - Mid-semester team member evaluation: [http://goo.gl/forms/MrWOFxpcfP](http://goo.gl/forms/MrWOFxpcfP)
 - Final team member evaluation: [http://goo.gl/forms/pLGGQTM66G](http://goo.gl/forms/pLGGQTM66G)
 
-##Stats Prep & Spinelli Center
+## Stats Prep & Spinelli Center
 In the first week of ECO254, you will need to complete a knowledge survey on Moodle.  Please access the knowledge survey through [Moodle](https://moodle.smith.edu/mod/questionnaire/view.php?id=17318). 
 
-Ms. Maria Delfin-Auza is the statistics consultant at the Spinelli Center. She has a BA in Economics and a BA in Math & Stats.  She can coach you on the use of Excel and R. 
+Ms. Maria Delfin-Auza is the statistics consultant at the Spinelli Center. She has a BA in Economics and a BA in Math & Stats.  She can coach you on the use of Excel, Stata and R. 
 
 
 ## Revising and Learning Statistics
