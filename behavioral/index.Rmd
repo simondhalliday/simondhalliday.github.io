@@ -446,7 +446,7 @@ Cases
 
 Read 
 
-- Tanjim Hossain and John List, 2012, "The Behavioralist Visits the Factory: Increasing Productivity Using Simple Framing Manipulations," *Management Science* 58 (12): 2151 - 2167 (X pages)
+- Tanjim Hossain and John List, 2012, "[The Behavioralist Visits the Factory: Increasing Productivity Using Simple Framing Manipulations](https://moodle.smith.edu/mod/resource/view.php?id=243595)," *Management Science* 58 (12): 2151 - 2167 (X pages). Note: We will use the [NBER version](https://moodle.smith.edu/mod/resource/view.php?id=243595) of this paper because the Management Science version isn't available to us yet through our online resources. 
 
 
 ### Thursday 7 December

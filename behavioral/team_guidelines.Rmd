@@ -55,7 +55,7 @@ For your projects, you should look mainly at journal articles. There are a varie
 
 Before doing anything else, I recommend that you use google scholar: [scholar.google.com](http://scholar.google.com) to do searches for academic papers that involve the topic you are interested in. Use relevant keywords. 
 
-###General Interest Journals or journals that occasionally include experiments
+### General Interest Journals or journals that occasionally include experiments
 
 - American Economic Review 
 - AEJ: Microeconomics 
@@ -67,7 +67,7 @@ Before doing anything else, I recommend that you use google scholar: [scholar.go
 - Journal of the European Economic Association 
 - Journal of Public Economics
 
-###Field Journals (specific to behavioral economics, experimental economics and game theory)
+### Field Journals (specific to behavioral economics, experimental economics and game theory)
 
 - Experimental Economics
 - Games and Economic Behavior
@@ -79,13 +79,13 @@ Before doing anything else, I recommend that you use google scholar: [scholar.go
 - Journal of Risk and Uncertainty
 - Behavioral and Brain Sciences
 
-###General Science Journals that Include Behavioral/Experimental Economics
+### General Science Journals that Include Behavioral/Experimental Economics
 - Science
 - Nature
 - PNAS
 - PLOS One
 
-###Organizations involved with Beahvioral and Experimental Economics
+### Organizations involved with Behavioral and Experimental Economics
 
 - ESA: The Economic Science Association
 - IAREP: International Association for Research in Economic Psychology
@@ -114,4 +114,5 @@ Before doing anything else, I recommend that you use google scholar: [scholar.go
 - Abigail Barr (cooperation, 'lab in the field', social preferences)
 - Lata Gangadharan (cooperation, social prefs, gender)
 - Iris Bohnet (trust, incentives, betrayal)
+- Betsey Stevenson () 
 

@@ -24,11 +24,11 @@ output:
 - Twitter: @simondhalliday
 - Skype: sihalliday
 - Office: Pierce Hall 1.07
-- Office hours: T W 
-- Class schedule: T Th 3-4:50 pm
+- Office hours: Weds 3-4pm; Th 1-3pm 
+- Class schedule: T & Th 3-4:50 pm
 - Venue: Seelye 110
 
-##Pre-requisites
+##Pre-requisites for Behavioral Economics
 ECO254 requires you to have completed ECO250 and ECO220/MTH220. You need to have completed the courses for at least some of the following reasons: 
 
 - We build substantially on consumer theory from ECO250. We will look at various forms of utility functions and experiments that evaluate self-interest. We will also examine human rationality. 
@@ -62,7 +62,7 @@ Please make sure you complete these surveys by the end of the first week of term
 - Moodle statistical knowledge survey: [moodle.smith.edu/mod/questionnaire/view.php?id=17318](https://moodle.smith.edu/mod/questionnaire/view.php?id=17318)
 
 ## Method of Instruction
-The course is a lecture-based course with labs and a substantial amount of student participation and teamwork. Students are expected to prepare the chapter readings for each session and to be able to answer questions about the readings to produce a high quality discussion. Each student is expected to contribute to the discussion. If you do not contribute, I shall encourage you to do so. If you contribute substantially more than anyone else, then I may ask you rather to encourage the engagement of others. We will also employ peer evaluation, though the professor will award grades.
+The course is a lecture-based course with "labs" and a substantial amount of student participation and teamwork. Students are expected to prepare the chapter readings for each session and to be able to answer questions about the readings to produce a high quality discussion. Each student is expected to contribute to the discussion. If you do not contribute, I shall encourage you to do so. If you contribute substantially more than anyone else, then I may ask you rather to encourage the engagement of others. We will also employ peer evaluation, though the professor will award grades.
 
 ## Texts
 Copies of the required texts are (or will be) available in the Smith Bookstore and are (or will be) on reserve at Neilson Library. The supplementary texts will have copies on reserve at Neilson Library (don't buy them unless you really, really want to).
@@ -76,7 +76,7 @@ The companion website for the book is  [here](http://www.routledgetextbooks.com/
 
 I would strongly recommend that you buy & read this book in the first two weeks of the course. I only found out it was available after book orders were due, which is why it's not prescribed, but I would prescribe it otherwise.  
 
-- Michelle Baddeley, 2017, *Behavioural Economics: A Very Short Introduction*, Oxford University Press, Oxford, UK.
+- Michelle Baddeley, 2017, *<a target="_blank" href="https://www.amazon.com/gp/product/019875499X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=019875499X&linkCode=as2&tag=amanuensis-20&linkId=37bef609f273ca2705dedec05a738be4">Behavioural Economics: A Very Short Introduction (Very Short Introductions)</a><img src="//ir-na.amazon-adsystem.com/e/ir?t=amanuensis-20&l=am2&o=1&a=019875499X" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />*, Oxford University Press, Oxford, UK.
 
 **Supplementary**
 
@@ -86,7 +86,7 @@ We use three supplementary texts in the course. They are all available free of c
 2. Plott (2007) is for understanding the basics of different experimental designs. 
 3. Grolemund and Wickham (2016) is to supplement the work you do in basic data science toward replicating and producing your own statistical results. 
 
-- Bowles, Foley and Halliday, *Microeconomics: Competition, Conflict and Coordination* is a forthcoming textbook in intermediate microeconomics. You can access the pdf of the draft of the book on Moodle. I will refer to it mostly to remind you of ideas you should remember from intermediate microeconomics. 
+- Bowles, Foley and Halliday, *[Microeconomics: Competition, Conflict and Coordination](https://moodle.smith.edu/mod/resource/view.php?id=245672)* is a forthcoming textbook in intermediate microeconomics. You can access the pdf of the draft of the book on Moodle. I will refer to it mostly to remind you of ideas you should remember from intermediate microeconomics. 
 - Charles Plott, 2007, [*Markets, Games and Strategic Behavior*](http://www.amazon.com/Markets-Games-Strategic-Behavior-Charles/dp/0321419316/ref=sr_1_1?ie=UTF8&qid=1435175629&sr=8-1&keywords=markets+games+strategic), Pearson. Note, a draft .pdf of this book is available [various](http://harbaugh.uoregon.edu/Readings/expbooknsf.pdf) [places](http://faculty.cbpp.uaa.alaska.edu/jmurphy/courses/econ333/protected/readings/expbooknsf.pdf) online and I will refer to the draft version most of the time. 
 - Grolemund and Wickham, 2016, *R for Data Science*, available free of charge online at [r4ds.had.co.nz](http://r4ds.had.co.nz/).
 
@@ -100,11 +100,13 @@ We shall occasionally do exercises together during Thursday classes, or I will e
 
 Be sure to do the following: 
 
-1. If you do not have one, create a LinkedIn account with your Smith email address (be sure to use your smith.edu email address). 
+1. If you do not have one, create a LinkedIn account with your Smith (or Five-college) email address (please be sure to use your .edu email address - you can add other ones later). 
 2. Create an account at [Datacamp.com](https://datacamp.com) connected to your LinkedIn account. 
-3. I will add you to the course on [Datacamp.com](https://datacamp.com) and you will be able to complete exercises there. 
+3. I will add you to the course on [Datacamp.com](https://datacamp.com) and you will be able to complete exercises that synchronize with your LinkedIn account. 
 
-##Course Schedule
+*Note*: This is the first time I shall use DataCamp for a course I am teaching. If there are issues getting started with it, I apologize, but such niggles occur when trying to innovate. 
+
+## Course Schedule
 Below is a tentative and preliminary course schedule. It is subject to change depending on what happens during the semester. 
 
 | Date  | Week | Topic   | Reading  | Lab/Experiment | Assignment | 
@@ -153,13 +155,13 @@ The following table summarizes the different aspects of the course's assessment.
 - *Experiment reports (ER)*: You will write two experimental lab reports during the semester based on experiments you participate in during the semester. You pick when to hand them in after each experiment. We will do 4 experiments, you will be expected to hand in the report online by the next class. They are indicated in the provisional schedule by ER1 through ER4. 
 - *Lab Exercises*: These are graded Complete/Incomplete. If you complete it, you get the point. If not, then not. 
 
-##In-class Experiments
+## In-class Experiments
 We will use [VEconLab](http://veconlab.econ.virginia.edu/admin.htm) to run in-class experiments, typically during the Thursday class-times. I'm also investigating two alternative platforms: [MobLab](https://www.moblab.com) and [economics-games](https://economics-games.com).
 
-##Moodle & Website
-In general, I will use my site, simondhalliday.com/behavioral for content for ECO254. We also have a moodle site where I will put copies of files that we use in the course. 
+## Moodle & Website
+In general, I will use my site, simondhalliday.com/behavioral for content for ECO254. We also have a moodle site where I will put copies of files that we use in the course and where you will need to upload your assignments. I'll explain why I use my website as a resource.  
 
-##Guideline Questions to Think About Your Team Research Project
+## Guideline Questions to Think About Your Team Research Project
  
 Each member of the class will participate in a team to research a project. In doing so, you will need to think about a research experiment you would like to do (assume you had the funds and other resources to do so). It would be useful for you to write down answers to the following questions, and then iterate by revising your answers as you think about each question, discuss it with your team members, your other colleagues and the instructor. Send me your write up at any stage you wish, and feel free to come and talk to me about it.
 
@@ -179,7 +181,7 @@ I will put you into teams. I will take your answers to the course survey about y
 
 ## Integrity in Empirical Research for your Team 
 When you set up a project, you will need to follow the TIER protocol. 
-The draft protocol for R is available here: [simondhalliday.github.io/eco254/fall_2015/TIER/tier_protocol_r](https://simondhalliday.github.io/eco254/fall_2015/TIER/tier_protocol_r). 
+The draft protocol for R is available here: [tier_protocol_r](ttier_protocol_r). 
 Read it carefully and be sure that you know how to follow the protocol. Set up your project in a Google drive or Dropbox folder that follows the steps in the protocol. 
 
 ## Team Project Deadlines
