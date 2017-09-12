@@ -60,7 +60,7 @@ Complete these surveys:
 
 - Your individual background and preferences: [goo.gl/forms/M9DaKh366j](https://goo.gl/forms/M9DaKh366j)
 - Questions about your thinking and preferences: [goo.gl/forms/MKPML7aMny](https://goo.gl/forms/MKPML7aMny)
-- Moodle statistical knowledge survey: [moodle.smith.edu/mod/questionnaire/view.php?id=17318](https://moodle.smith.edu/mod/questionnaire/view.php?id=17318)
+- Moodle statistical knowledge survey: [https://moodle.smith.edu/mod/questionnaire/view.php?id=233865](https://moodle.smith.edu/mod/questionnaire/view.php?id=233865)
 
 
 ## Week 2: Heuristics & Biases
