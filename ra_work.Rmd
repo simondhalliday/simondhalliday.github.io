@@ -1,0 +1,112 @@
+---
+title: "RA Work"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Working as a research assistant (RA) means having to learn a variety of skills in a short time, leveraging what you know to become a productive team member, enabling your team to become more productive by finding ways to make the team do more and better research. 
+Being an RA also involves providing good, kind feedback to your team members and to your professor. 
+
+Research in economics involves a lot of the following: 
+
+- developing a research question 
+- designing experiments & choosing research methods
+- writing 
+- data analysis
+    * data management 
+    * data visualization 
+    * econometrics and statistical inference
+- reading & being sure to stop reading when decreasing returns hit
+- presenting research & getting feedback
+- editing, editing, editing
+- submitting papers 
+- getting rejected
+- re-submitting papers
+- celebrating when a paper, book, or chapter is accepted 
+
+In working with me, you'll need to create logins to a variety of websites and make sure that you create a way to represent yourself well online. 
+
+## Create Accounts
+
+- Get a [LinkedIn](https://linkedin.com) account. Use a professional photograph for your account picture. Upload the relevant details.  Use your smith.edu email address. Add another email address once you've done that. 
+- Get an account at [Datacamp.com](https://datacamp.com) through your Smith College email address and link it to your LinkedIn account (this way, as you complete courses, they will turn up as certifications on your LinkedIn account). You may already have gotten an invite from me. 
+- Create an account at [ShareLatex.com](https://www.sharelatex.com/) with your Smith email address. I will invite you to projects I am working on in ShareLatex. 
+- Create an account at [github.com](https://github.com) using your smith.edu email address. Be sure to use a professional-sounding ID for github, preferably "firstnamelastname" or something similar using initials. You will be able to use your github account later when you apply for jobs and people can see what work you've been involved in. 
+- Get a [Skype](https://skype.com) account. Though it's somewhat lame relative to some other communication software, there's a lock-in effect where people use it for job interviews and more. Be sure to use a professional ID again if you can. 
+- Get an account as a student at [core-econ.org](http://www.core-econ.org/). *The Economy* is a great free textbook resource we'll use to introduce or revise economic content. 
+
+##Download
+
+- Download [Slack](https://slack.com/) on your devices. We'll use it to communicate as a team and it's better than email for team communication. I will send you invites to an 'Economics STRIDE/RA' Slack channel. 
+- Download and install R: [https://www.r-project.org](https://www.r-project.org) (which version you download will depend on your operating system - it's almost always easier on a Mac, sometimes tougher on a Windows machine)
+- Install LaTeX for Mac/Windows: [https://www.latex-project.org/get/](https://www.latex-project.org/get/) (I'll explain what it is later and why we'll use it)
+- Download and install [RStudio](https://www.rstudio.com/)
+- Download and install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) (choose whichever suits your operating system)
+- Accept the invite and create a login for ShareLatex.com (I'll be sending you an invite shortly)
+
+## Preliminaries 
+
+- Do the "Introduction to R" course on datacamp.com. Once you've done that, let me know and I'll outline the rest of the syllabus that I'll have you cover. 
+- Do the "trygit" course on codeschool: https://www.codeschool.com/learn/git to learn the basics of git (we'll mostly use git and github through R Studio, but it's still useful for you to get a sense of what git is and why it's useful).
+
+
+# Reading 
+As you get started on working with me, I'll have you read several books and articles.
+At first, the [reading](#writing-and-research-books) will cover ideas for undertaking research, writing, editing papers, and more. 
+I shall also recommend books in economics that I hope are tailored to your interests, some of which I mention [below](#economics-books). 
+
+## Preliminaries
+Before reading anything I say below, read or watch the following: 
+
+- Chris Blattman at Vox ["10 things not enough kids know before going to college"](https://www.vox.com/2015/1/7/7500705/college-advice). 
+- Adam Ozimek at Forbes ["Advice For A Career In Economics"](https://www.forbes.com/sites/modeledbehavior/2014/10/18/advice-for-a-career-in-economics/#54b9b5d0494b) 
+- U. Houston ["Advice to Start a Successful Career with an Economics Major"](http://www.uh.edu/class/economics/undergraduate/internship/general-advice/)
+- Watch this short video: ["Nobel laureates given advice to young economists"](https://www.youtube.com/watch?v=k9X0ogs0Ihc). 
+- The American Economic Association's video on ["A career in Economics... it's much more than you think"](https://vimeo.com/135871291)
+
+## First few books: 
+
+- Booth, Colomb, Williams, Bizup and Fitzgerald, 2016, [*The Craft of Research*](https://www.amazon.com/gp/product/022623973X?ie=UTF8&tag=amanuensis-20&camp=1789&linkCode=xm2&creativeASIN=022623973X), 4th edition, U. Chicago Press. **I know the third edition better than the fourth edition, but apparently it is improved and updated (and really helpful!)**. 
+- Schwabish, Jonathan, 2017, [Better Presentations]("http://amzn.to/2urG3JL"), Columbia University Press. **An excellent book to learn how to present well, which you'll have to do often during at Smith if you expect to do well.** (Want more? Look at Tim Harford's post ["Books that will help you give a superb talk"](http://timharford.com/2017/05/books-that-will-help-you-give-a-superb-talk/))
+
+- If you haven't taken economics: Dasgupta, Partha, 2007, [*Economics, A Very Short Introduction*](http://amzn.to/2wZCNGE), Oxford University Press. 
+- If you've taken introductory economics, but no behavioral economics: Baddeley, Michelle, 2017, [*Behavioural Economics: A Very Short Introduction*](http://amzn.to/2y9GDeg), Oxford University Press. 
+
+
+## Writing and Research Books/Articles
+
+- Orwell, George, 1946, 'Politics and the English Language': [http://www.orwell.ru/library/essays/politics/english/e_polit/](http://www.orwell.ru/library/essays/politics/english/e_polit/) (accessed 12 July 2017)
+- Lamott, Anne, 1995, [*Bird by Bird*](https://www.amazon.com/gp/product/0385480016?ie=UTF8&tag=amanuensis-20&camp=1789&linkCode=xm2&creativeASIN=0385480016), Anchor. **An overall excellent book, well worth your time**. 
+- Zinsser, Howard, 2016, [*On Writing Well: 30th Anniversary Edition*](https://www.amazon.com/gp/product/0060891548?ie=UTF8&tag=amanuensis-20&camp=1789&linkCode=xm2&creativeASIN=0060891548), Harper Perennial. **I love this book, as well as Zinsser's book on writing memoirs.**
+- Williams, Joseph M., 1995,[*Style: Toward Clarity and Grace*](https://www.amazon.com/gp/product/0226899152?ie=UTF8&tag=amanuensis-20&camp=1789&linkCode=xm2&creativeASIN=0226899152), **NOTE: I especially recommend this edition; I'm not as convinced by some of the later editions**. 
+- Kehrwald Cook, Claire, 2006, [*Line by Line: How to edit your own writing*](https://www.amazon.com/gp/product/0395393914?ie=UTF8&tag=amanuensis-20&camp=1789&linkCode=xm2&creativeASIN=0395393914), Houghton Mifflin Co. **Not as fun as the others, but full of useful instructions** 
+- McCloskey, Deirdre, 1999, [*Economical Writing*](https://www.amazon.com/gp/product/1577660633?ie=UTF8&tag=amanuensis-20&camp=1789&linkCode=xm2&creativeASIN=1577660633), 2nd ed, Waveland Press. 
+
+
+## Economics books
+
+Note, I haven't had the chance to create links to all of these yet. 
+
+## Starting out...
+
+- Roberts, Russ, 2002, [*The Invisible Heart*](http://amzn.to/2x5n48p), The MIT Press
+- Goodwin and Burr, 2012, [*Economix: How our economy works and doesn't, in words and pictures*](http://amzn.to/2xBPhoK), Abrams ComicArts. 
+
+## Economics non-fiction
+- Banerjee, Abhijit and Esther Duflo, 2012, *Poor Economics*. (Innovations in economic development with an emphasis on randomized controlled trials) 
+- Lewis, Michael, 2011, [*The Big Short*](https://www.amazon.com/gp/product/0393338827/ref=as_li_tl?ie=UTF8&tag=amanuensis-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0393338827&linkId=6b06bc3d6009869eaa7c4ca391b9df23), WW Norton and Co. 
+- Beinhocker, Eric, 2007, *The Origins of Wealth*, 
+- Seabright, Paul, 2013, *The Company of Strangers*, 
+- Milton Friedman, 1960, *Capitalism and Freedom* 
+- Putterman, Louis, 2012, [*The Good, The Bad, and the Economy*](https://www.amazon.com/gp/product/193829601X?ie=UTF8&tag=amanuensis-20&camp=1789&linkCode=xm2&creativeASIN=193829601X), Langdon Street Press.
+
+## Behavioral Economics
+
+- Dan Ariely, *Predictably Irrational*, one of the first books to popularize behavioral economics. The one problem I have with it is he presume the reader knows what "rationality" is and never adequately defines the thing he's arguing us humans don't adhere to. 
+- Daniel Kahneman, *Thinking Fast and Slow*, Kahneman's commentary on the dual-processing system of our minds and how each has benefits and costs and influences how many humans respond in different contexts. 
+- Richard Thaler, *Misbehaving*, *This is Thaler's memoir as an introduction to work he's done in behavioral economics. Fun, especially as an audiobook, although occasionally a bit too overgeneral*
+- Richard Thaler & Cass Sunstein, *Nudge*. One of the "original" behavioral economics books, with an emphasis on public policy and libertarian paternalism. 
+- Lewis, Michael, 2017, [*The Undoing Project*](https://www.amazon.com/gp/product/0393254593/ref=as_li_tl?ie=UTF8&tag=amanuensis-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0393254593&linkId=d4fe77e5756723e42c16f58af2f3fdcc), WW Norton and Co. *A biography of the relationship between Kahneman and Tversky and the work they created.*
