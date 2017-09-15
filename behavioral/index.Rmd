@@ -116,6 +116,32 @@ The graph from the experiment is here: [drive.google.com/file/d/0B17bVUW1HMv-cUh
 - The data currently have a 'filter' in the first row and they are filtered on the individual ID codes (1 through 28). You can find your ID code and use the ID code to check what behavior you adopted, i.e. your bid or ask. Your cumulative earnings are also recorded. 
 - Screenshots of the instructions are available in a zipped file here: [drive.google.com/file/d/0B17bVUW1HMv-Vk9PUjZ3WUhlS0U/view?usp=sharing](https://drive.google.com/file/d/0B17bVUW1HMv-Vk9PUjZ3WUhlS0U/view?usp=sharing).
 -->
+
+
+## Week 3: Risk
+### Tuesday 19 September
+
+Reading
+
+- Cartwright, Chapter 3: Risk, Read up to Section 3.5  
+- Tversky and Kahneman, 1981, "[The Framing of Decisions and the Psychology of Choice](https://moodle.smith.edu/mod/resource/view.php?id=233720)," *Science*, Vol 211, January, 453-458 (6 pages). 
+
+Revision
+
+- BFH Chapter 4: A Risky and Unequal World. 
+
+Recommended
+
+- A paper TBC
+
+### Thursday 21 September
+
+- Go here: [/lab1](/lab1)
+- Access the cheat sheets from RStudio Help -> Cheatsheets -> [Select the Cheatsheet you want]
+- R command structure: [https://moodle.smith.edu/mod/resource/view.php?id=39615](https://moodle.smith.edu/mod/resource/view.php?id=39615)
+- Data verbs: [https://moodle.smith.edu/mod/resource/view.php?id=39616](https://moodle.smith.edu/mod/resource/view.php?id=39616)
+
+
 - [Research Reports with R Markdown Prezi](http://prezi.com/8pwudebf9jof/reproducible-20/)
 - [Markdown Demo File (.html)](markdown-demo.html)
 - [Markdown Demo File (.Rmd)](markdown-demo.Rmd)
@@ -151,30 +177,6 @@ Prof Horton also has some videos about starting out with  R:
 - Video 1: [www.youtube.com/channel/UC5fHtS-LUBTBWI9_h7eCcRQ](https://www.youtube.com/channel/UC5fHtS-LUBTBWI9_h7eCcRQ)
 - Video 2: [www.youtube.com/watch?v=3Y_i3PxIKfg](https://www.youtube.com/watch?v=3Y_i3PxIKfg)
 
-
-## Week 3: Risk
-### Tuesday 19 September
-
-Reading
-
-- Cartwright, Chapter 3: Risk, Read up to Section 3.5  
-- Tversky and Kahneman, 1981, "[The Framing of Decisions and the Psychology of Choice](https://moodle.smith.edu/mod/resource/view.php?id=233720)," *Science*, Vol 211, January, 453-458 (6 pages). 
-
-Revision
-
-- BFH Chapter 4: A Risky and Unequal World. 
-
-Recommended
-
-- A paper TBC
-
-### Thursday 21 September
-
-- Go here: [/lab1](/lab1)
-- Access the cheat sheets from RStudio Help -> Cheatsheets -> [Select the Cheatsheet you want]
-- R command structure: [https://moodle.smith.edu/mod/resource/view.php?id=39615](https://moodle.smith.edu/mod/resource/view.php?id=39615)
-- Data verbs: [https://moodle.smith.edu/mod/resource/view.php?id=39616](https://moodle.smith.edu/mod/resource/view.php?id=39616)
-
 ## Week 4: Risk
 
 ### Tuesday 26 September
@@ -198,7 +200,7 @@ Other Notes
 - Here is data from the set of lotteries you chose: [https://moodle.smith.edu/mod/resource/view.php?id=42295](https://moodle.smith.edu/mod/resource/view.php?id=42295)
 - Here is the data from the short second experiment: [https://moodle.smith.edu/mod/resource/view.php?id=42296](https://moodle.smith.edu/mod/resource/view.php?id=42296)
 -->
-- I strongly recommend that you read Chapters 4 and 7 of the Charles Plott book as it covers the relevant content for these (and does some of it better than the Cartwright book in my mind)
+- I strongly recommend that you read Chapters 4 and 7 of the Charles Holt book as it covers the relevant content for these (and does some of it better than the Cartwright book in my mind)
 
 ## Week 5: Time
 ### Tuesday 3 October

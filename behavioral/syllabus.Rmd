@@ -3,7 +3,7 @@ title: "ECO254 - Behavioral Economics - Syllabus"
 author: 'Instructor: Simon Halliday'
 date: "Smith College, Fall 2017"
 output:
-  #pdf_document: default
+  pdf_document: default
   html_document: default
 ---
 
