@@ -6,7 +6,7 @@ output:
   pdf_document: default
 ---
 
-![A panorama, I'm invisible](more/panorama.jpg)
+![A panorama, I'm invisible](../more/panorama.jpg)
 
 * * * 
 ##Education
@@ -27,8 +27,8 @@ output:
 - **2016** Took on more apprentices than I ought to have
 - **2017** Learned the magic of R interactivity, abandoned my quest to become an archwizard
 
-
-$ \theta - 1 = \theta - 1 = \theta -1 $
+Random equationy things...
+$$ \theta - 1 = \theta - 1 = \theta -1 $$
 
 
 
