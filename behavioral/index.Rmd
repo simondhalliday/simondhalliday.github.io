@@ -16,108 +16,6 @@ output: html_document
 - [FAQ](FAQ)
 - Sign up for topics, share notes, and look at questions [here](topics_notes_questions). 
 
-
-## Week 1: Introduction 
-
-### Thursday 7 September
-
-- What is *Economics* about? How does it inform policy?
-- What is *Behavioral* Economics about? How might *it* inform policy?
-- The results of in-class question about behavioral economics will appear here 
-
-<!--
-![Wordcloud for Behavioral Economics Ideas Exercise](word_cloud.png)
--->
-
-Read
-
-- Behavioral Economics for Kids [here](https://moodle.smith.edu/mod/resource/view.php?id=233702)
-- Alm, James, 2017, "[Presidential Address: Is economics useful for public policy](https://moodle.smith.edu/mod/resource/view.php?id=233701)", *Southern Economic Journal*, 83 (4), 835–854 (16 pages)
-    - Why read this? I want to convince you, first, that economics itself is useful for informing policy decisions and, second, that behavioral economics is at least as useful too in informing policy-makers on how to construct policy too. But, we mustn't throw out the baby with the bathwater: "economics" and "behavioral economics" must be used appropriately. 
-
-Recommended
-
-- The Behavioral Economics Guide 2016, available [here](https://moodle.smith.edu/mod/resource/view.php?id=233703). 
-    - The BE Guide is useful for you to get a broad sense of what we do in Behavioral Economics and what kinds of ideas you might want to research in your team project. 
-
-Cases
-
-- George Loewenstein, "[Economics Behaving Badly](http://www.nytimes.com/2010/07/15/opinion/15loewenstein.html)", *New York Times*, July 14 2010. 
-- Richard Thaler, 2015, "[Unless You Are Spock, Irrelevant Things Matter in Economic Behavior](http://www.nytimes.com/2015/05/10/upshot/unless-you-are-spock-irrelevant-things-matter-in-economic-behavior.html?referrer=)," *New York Times*, 8 May 2015.
-
-Transparency and Integrity in Research
-
-- [New Truths that only one can see](http://www.nytimes.com/2014/01/21/science/new-truths-that-only-one-can-see.html),
-    *New York Times*,  George Johnson, 20 January 2014. 
-- [How reliable are psychology studies?](http://www.theatlantic.com/health/archive/2015/08/psychology-studies-reliability-reproducability-nosek/402466/), Ed Yong, *The Atlantic*, 27 August 2015.
-- [Unreliable Research: trouble at the lab](http://www.economist.com/news/briefing/21588057-scientists-think-science-self-correcting-alarming-degree-it-not-trouble), 
-    *The Economist*, 17 October 2013.
-- [Austerity's Spreadsheet Error](http://thecolbertreport.cc.com/videos/dcyvro/austerity-s-spreadsheet-error) (Colbert Report Video)
-
-*Homework*
-
-Complete these surveys: 
-
-- Your individual background and preferences: [goo.gl/forms/M9DaKh366j](https://goo.gl/forms/M9DaKh366j)
-- Questions about your thinking and preferences: [goo.gl/forms/MKPML7aMny](https://goo.gl/forms/MKPML7aMny)
-- Moodle statistical knowledge survey: [https://moodle.smith.edu/mod/questionnaire/view.php?id=233865](https://moodle.smith.edu/mod/questionnaire/view.php?id=233865)
-
-
-## Week 2: Heuristics & Biases
-
-### Tuesday 12 September
-
-Reading
-
-- Cartwright Chapter 2: To the end of section 2.5. 
-- Rabin, Matthew, 2002, "[A Perspective on Psychology and Economics](https://moodle.smith.edu/mod/resource/view.php?id=233700)", *European Economic Review*, 46 (4-5): 657-685.  
-     - This Rabin paper is a lovely and not too technical introduction to many of the important ideas in behavioral economics. Some of the ideas will only become clear later in the course, but don't worry we shall get there later. 
-
-Revision
-
-- BFH Chapter 3: Doing the best you can
-
-Recommended
-
-- Rabin, Matthew, 1998, "[Psychology and Economics](https://moodle.smith.edu/mod/resource/view.php?id=233721)," *Journal of Economic Literature*, Vol 36 (1): 11-46. 
-    - This is a much more technical approach than the Rabin paper above, but potentially useful depending on what you plan to do for your project. 
-
-Cases
-
-- Michael Moss, "[The Extraordinary Science of Addictive Junk Food](http://www.nytimes.com/2013/02/24/magazine/the-extraordinary-science-of-junk-food.html?_r=1)," *New York Times*, 2013.
-- Steven Levy, "[Nest’s Plan to Stop Brownouts Before They Start](http://www.wired.com/business/2013/04/nest-energy-services/)", *Wired*, 2013. See also: [MyEnergy.com](http://www.myenergy.com).
-- Larcom et al (15 September 2015), 'The Benefits of Forced Experimentation', is available here: [www.voxeu.org/article/benefits-forced-experimentation](http://www.voxeu.org/article/benefits-forced-experimentation)
-
-- Here's a link to the workbook from class on the happiness scale: [simondhalliday.github.io/eco254/fall_2015/activities/happy_students](http://simondhalliday.github.io/eco254/fall_2015/activities/happy_students)
-- The reading guide is available here: [docs.google.com/document/d/12SU6upZrKDtUwyNaWOATo3LIzRjT3yODHkUlag5Hgu0/edit](https://docs.google.com/document/d/12SU6upZrKDtUwyNaWOATo3LIzRjT3yODHkUlag5Hgu0/edit)
-
-
-### Thursday 14 September
-
-Today we shall do an experiment and (if there's time) begin to talk about using R. 
-
-- Go to VEconLab here: [http://veconlab.econ.virginia.edu/login.htm](http://veconlab.econ.virginia.edu/login.htm)
-- I will give you details on this page that you can use to log in. 
-
-Read
-
-- Vernon Smith, 1997, "[Economics in the Laboratory](https://moodle.smith.edu/mod/resource/view.php?id=233707)," *Journal of Economic Perspectives*, Vol 8 (1): 113-131 (17 pages). 
-
-Revision
-
-- BFH, Chapter 1. 
-
-Experiment Reports
-
-- Guidelines for the reports are available here: [Experiment Report Guidelines](exp_reports)
-<!--
-The graph from the experiment is here: [drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing](https://drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing)
-- The data are available in a google spreadsheet here: [docs.google.com/spreadsheets/d/10xzCd49nOEMDbxmegCfBaFZLz1uYE0ry7zGMBljEUcg/edit?usp=sharing](https://docs.google.com/spreadsheets/d/10xzCd49nOEMDbxmegCfBaFZLz1uYE0ry7zGMBljEUcg/edit?usp=sharing)
-- The data currently have a 'filter' in the first row and they are filtered on the individual ID codes (1 through 28). You can find your ID code and use the ID code to check what behavior you adopted, i.e. your bid or ask. Your cumulative earnings are also recorded. 
-- Screenshots of the instructions are available in a zipped file here: [drive.google.com/file/d/0B17bVUW1HMv-Vk9PUjZ3WUhlS0U/view?usp=sharing](https://drive.google.com/file/d/0B17bVUW1HMv-Vk9PUjZ3WUhlS0U/view?usp=sharing).
--->
-
-
 ## Week 3: Risk
 ### Tuesday 19 September
 
@@ -134,24 +32,22 @@ Recommended
 
 - A paper TBC
 
+
+
 ### Thursday 21 September
 
 - Go here: [/Lab1](/Lab1.html)
 - Access the cheat sheets from RStudio Help -> Cheatsheets -> [Select the Cheatsheet you want]
-- Data verbs: [https://moodle.smith.edu/mod/resource/view.php?id=233884](https://moodle.smith.edu/mod/resource/view.php?id=233884)
-- R command structure: [https://moodle.smith.edu/mod/resource/view.php?id=233883](https://moodle.smith.edu/mod/resource/view.php?id=233883)
-- [Research Reports with R Markdown Prezi](http://prezi.com/8pwudebf9jof/reproducible-20/)
-- [Markdown Demo File (.html)](markdown-demo.html)
-- [Markdown Demo File (.Rmd)](markdown-demo.Rmd)
 
 
 
-*Homework*
-
-1. Go to rstudio.smith.edu/xxxx and log on to ensure that you have access to the RStudio server.  
+1. Go to [rstudio.smith.edu](rstudio.smith.edu ) and log on to ensure that you have access to the RStudio server.  
 2. One you have done that, start a new R Notebook file clicking on File -> New -> R Notebook. 
 
-Once you're comfortable with that, do the following. On your laptop, follow these steps to install R and the latest version of RStudio. Make sure to install R first!
+*Homework*
+Once you're comfortable with the server, do the following. 
+On your laptop, follow these steps to install R and the latest version of RStudio. 
+Make sure to install R and LaTeX first!
 
 1. Download and install R here: [cran.rstudio.com/](https://cran.rstudio.com/)
 2. Download and install LaTeX here: [www.latex-project.org/get/](https://www.latex-project.org/get/)
@@ -165,7 +61,7 @@ We will use these documents as guides, for some of them you will need to log in 
 - Check your name off here: [https://docs.google.com/spreadsheets/d/1DB60SzS9VBA1IsUr2AiPWJyt0f3C6RyLbcSstSWvCWw/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1DB60SzS9VBA1IsUr2AiPWJyt0f3C6RyLbcSstSWvCWw/edit?usp=sharing)
 
 
-Watch these videos by Nick Horton (Amherst College) as an introduction to R markdown: 
+Watch these videos by Nick Horton (Amherst College) as an introduction to R markdown if you want more revision: 
 
 - Video 1: [www.youtube.com/watch?v=w4hLT7WyjnM&feature=youtu.be](https://www.youtube.com/watch?v=w4hLT7WyjnM&feature=youtu.be)
 - Video 2: [www.youtube.com/watch?v=MdxNFiXm1qE&feature=youtu.be](https://www.youtube.com/watch?v=MdxNFiXm1qE&feature=youtu.be)
@@ -472,5 +368,105 @@ Read
 - Group 5
 - Group 6
 
+
+## Week 1: Introduction 
+
+### Thursday 7 September
+
+- What is *Economics* about? How does it inform policy?
+- What is *Behavioral* Economics about? How might *it* inform policy?
+- The results of in-class question about behavioral economics will appear here 
+
+<!--
+![Wordcloud for Behavioral Economics Ideas Exercise](word_cloud.png)
+-->
+
+Read
+
+- Behavioral Economics for Kids [here](https://moodle.smith.edu/mod/resource/view.php?id=233702)
+- Alm, James, 2017, "[Presidential Address: Is economics useful for public policy](https://moodle.smith.edu/mod/resource/view.php?id=233701)", *Southern Economic Journal*, 83 (4), 835–854 (16 pages)
+    - Why read this? I want to convince you, first, that economics itself is useful for informing policy decisions and, second, that behavioral economics is at least as useful too in informing policy-makers on how to construct policy too. But, we mustn't throw out the baby with the bathwater: "economics" and "behavioral economics" must be used appropriately. 
+
+Recommended
+
+- The Behavioral Economics Guide 2016, available [here](https://moodle.smith.edu/mod/resource/view.php?id=233703). 
+    - The BE Guide is useful for you to get a broad sense of what we do in Behavioral Economics and what kinds of ideas you might want to research in your team project. 
+
+Cases
+
+- George Loewenstein, "[Economics Behaving Badly](http://www.nytimes.com/2010/07/15/opinion/15loewenstein.html)", *New York Times*, July 14 2010. 
+- Richard Thaler, 2015, "[Unless You Are Spock, Irrelevant Things Matter in Economic Behavior](http://www.nytimes.com/2015/05/10/upshot/unless-you-are-spock-irrelevant-things-matter-in-economic-behavior.html?referrer=)," *New York Times*, 8 May 2015.
+
+Transparency and Integrity in Research
+
+- [New Truths that only one can see](http://www.nytimes.com/2014/01/21/science/new-truths-that-only-one-can-see.html),
+    *New York Times*,  George Johnson, 20 January 2014. 
+- [How reliable are psychology studies?](http://www.theatlantic.com/health/archive/2015/08/psychology-studies-reliability-reproducability-nosek/402466/), Ed Yong, *The Atlantic*, 27 August 2015.
+- [Unreliable Research: trouble at the lab](http://www.economist.com/news/briefing/21588057-scientists-think-science-self-correcting-alarming-degree-it-not-trouble), 
+    *The Economist*, 17 October 2013.
+- [Austerity's Spreadsheet Error](http://thecolbertreport.cc.com/videos/dcyvro/austerity-s-spreadsheet-error) (Colbert Report Video)
+
+*Homework*
+
+Complete these surveys: 
+
+- Your individual background and preferences: [goo.gl/forms/M9DaKh366j](https://goo.gl/forms/M9DaKh366j)
+- Questions about your thinking and preferences: [goo.gl/forms/MKPML7aMny](https://goo.gl/forms/MKPML7aMny)
+- Moodle statistical knowledge survey: [https://moodle.smith.edu/mod/questionnaire/view.php?id=233865](https://moodle.smith.edu/mod/questionnaire/view.php?id=233865)
+
+
+## Week 2: Heuristics & Biases
+
+### Tuesday 12 September
+
+Reading
+
+- Cartwright Chapter 2: To the end of section 2.5. 
+- Rabin, Matthew, 2002, "[A Perspective on Psychology and Economics](https://moodle.smith.edu/mod/resource/view.php?id=233700)", *European Economic Review*, 46 (4-5): 657-685.  
+     - This Rabin paper is a lovely and not too technical introduction to many of the important ideas in behavioral economics. Some of the ideas will only become clear later in the course, but don't worry we shall get there later. 
+
+Revision
+
+- BFH Chapter 3: Doing the best you can
+
+Recommended
+
+- Rabin, Matthew, 1998, "[Psychology and Economics](https://moodle.smith.edu/mod/resource/view.php?id=233721)," *Journal of Economic Literature*, Vol 36 (1): 11-46. 
+    - This is a much more technical approach than the Rabin paper above, but potentially useful depending on what you plan to do for your project. 
+
+Cases
+
+- Michael Moss, "[The Extraordinary Science of Addictive Junk Food](http://www.nytimes.com/2013/02/24/magazine/the-extraordinary-science-of-junk-food.html?_r=1)," *New York Times*, 2013.
+- Steven Levy, "[Nest’s Plan to Stop Brownouts Before They Start](http://www.wired.com/business/2013/04/nest-energy-services/)", *Wired*, 2013. See also: [MyEnergy.com](http://www.myenergy.com).
+- Larcom et al (15 September 2015), 'The Benefits of Forced Experimentation', is available here: [www.voxeu.org/article/benefits-forced-experimentation](http://www.voxeu.org/article/benefits-forced-experimentation)
+
+- Here's a link to the workbook from class on the happiness scale: [simondhalliday.github.io/eco254/fall_2015/activities/happy_students](http://simondhalliday.github.io/eco254/fall_2015/activities/happy_students)
+- The reading guide is available here: [docs.google.com/document/d/12SU6upZrKDtUwyNaWOATo3LIzRjT3yODHkUlag5Hgu0/edit](https://docs.google.com/document/d/12SU6upZrKDtUwyNaWOATo3LIzRjT3yODHkUlag5Hgu0/edit)
+
+
+### Thursday 14 September
+
+Today we shall do an experiment and (if there's time) begin to talk about using R. 
+
+- Go to VEconLab here: [http://veconlab.econ.virginia.edu/login.htm](http://veconlab.econ.virginia.edu/login.htm)
+- I will give you details on this page that you can use to log in. 
+
+Read
+
+- Vernon Smith, 1997, "[Economics in the Laboratory](https://moodle.smith.edu/mod/resource/view.php?id=233707)," *Journal of Economic Perspectives*, Vol 8 (1): 113-131 (17 pages). 
+
+Revision
+
+- BFH, Chapter 1. 
+
+Experiment Reports
+
+- Guidelines for the reports are available here: [Experiment Report Guidelines](exp_reports)
+<!--
+The graph from the experiment is here: [drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing](https://drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing)
+- The data are available in a google spreadsheet here: [docs.google.com/spreadsheets/d/10xzCd49nOEMDbxmegCfBaFZLz1uYE0ry7zGMBljEUcg/edit?usp=sharing](https://docs.google.com/spreadsheets/d/10xzCd49nOEMDbxmegCfBaFZLz1uYE0ry7zGMBljEUcg/edit?usp=sharing)
+- The data currently have a 'filter' in the first row and they are filtered on the individual ID codes (1 through 28). You can find your ID code and use the ID code to check what behavior you adopted, i.e. your bid or ask. Your cumulative earnings are also recorded. 
+- Screenshots of the instructions are available in a zipped file here: [drive.google.com/file/d/0B17bVUW1HMv-Vk9PUjZ3WUhlS0U/view?usp=sharing](https://drive.google.com/file/d/0B17bVUW1HMv-Vk9PUjZ3WUhlS0U/view?usp=sharing).
+-->
 
 
