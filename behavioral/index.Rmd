@@ -36,7 +36,7 @@ Recommended
 
 ### Thursday 21 September
 
-- Go here: [/Lab1](/Lab1.html)
+- Go here: [Lab1](behavioral/Lab1.html)
 - Access the cheat sheets from RStudio Help -> Cheatsheets -> [Select the Cheatsheet you want]
 
 
