@@ -1,0 +1,68 @@
+### Text
+
+Text can decorated with **bold** or *italics*.  It is also possible to 
+
+- create [links](http://rmarkdown.rstudio.com/) 
+- include mathematics like $e=mc^2$ or 
+$$y = \beta_0 + \beta_1 x_1 + \beta_2 x_2$$
+- embed images 
+
+Be sure to put a space after the - when you are creating bullets and a space after # when 
+creating section headers, but **not** between $ and the mathematical formulas.
+
+### Graphics
+
+If the code of an R chunk produces a plot, this plot can be displayed in the resulting file.
+
+```{r}
+source("http://www.openintro.org/stat/data/arbuthnot.R")
+plot(arbuthnot$girls)
+```
+
+### R output
+Other forms of R output are also displayed as they are produced.
+
+```{r}
+head(arbuthnot$girls)
+```
+
+You can also use "chunk options" to modify how your R chunks work.  We can hide the code:
+
+```{r, echo = FALSE}
+summary(arbuthnot$girls)
+```
+
+Or we can hide the output:
+
+```{r, eval=FALSE}
+summary(arbuthnot$girls)
+```
+
+### In-text Code
+
+In a similar vein, you can refer to R code in a paragraph by setting it off with single
+ticks, say if we wanted to mentioned that we had used the `summary()` function.  You can
+also put R output directly into text, as in: the mean number of births was 
+`r mean(arbuthnot$girls)`.
+
+### Destination formats
+
+This file can be knit to HTML, PDF, or Word.  In RStudio, just select the desired 
+output file type and click on `Knit HTML`, `Knit PDF`, or `Knit Word`.  Use the 
+dropdown menu next to that to change the desired file type.
+
+
+
+### Stress Test
+Please do not run the following code until the very end of class.
+
+```{r eval=FALSE, echo=FALSE}
+set.seed(485)
+m <- matrix(rnorm(4e6), ncol = 2000)
+system.time(m_inv <- solve(m))
+```
+
+###Note
+This was gleefully pilfered from Andrew P. Bray (with his permission)
+
+

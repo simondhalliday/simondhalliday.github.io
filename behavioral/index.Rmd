@@ -136,12 +136,10 @@ Recommended
 
 ### Thursday 21 September
 
-- Go here: [/lab1](/lab1)
+- Go here: [/Lab1](/Lab1.html)
 - Access the cheat sheets from RStudio Help -> Cheatsheets -> [Select the Cheatsheet you want]
-- R command structure: [https://moodle.smith.edu/mod/resource/view.php?id=39615](https://moodle.smith.edu/mod/resource/view.php?id=39615)
-- Data verbs: [https://moodle.smith.edu/mod/resource/view.php?id=39616](https://moodle.smith.edu/mod/resource/view.php?id=39616)
-
-
+- Data verbs: [https://moodle.smith.edu/mod/resource/view.php?id=233884](https://moodle.smith.edu/mod/resource/view.php?id=233884)
+- R command structure: [https://moodle.smith.edu/mod/resource/view.php?id=233883](https://moodle.smith.edu/mod/resource/view.php?id=233883)
 - [Research Reports with R Markdown Prezi](http://prezi.com/8pwudebf9jof/reproducible-20/)
 - [Markdown Demo File (.html)](markdown-demo.html)
 - [Markdown Demo File (.Rmd)](markdown-demo.Rmd)
