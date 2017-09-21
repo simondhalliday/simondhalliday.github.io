@@ -1,0 +1,57 @@
+---
+title: "Simon Halliday, Former Aspirant Archwizard"
+output:
+  html_document: default
+  html_notebook: default
+  pdf_document: default
+---
+
+![A panorama, I'm invisible](more/panorama.jpg)
+
+* * * 
+##Education
+
+- **2011-2014 ** Brakebills academy
+- **2006-2010 ** Spent too long on my undergraduate degree at Nameless U. Why? See below. 
+
+* * * 
+
+>"You shall not pass!" Gandalf The Grey, MAM1000
+
+* * * 
+
+
+##Experience
+
+- **2015** Slew a dragon with a vorpal sword, it went snicker snack
+- **2016** Took on more apprentices than I ought to have
+- **2017** Learned the magic of R interactivity, abandoned my quest to become an archwizard
+
+
+$ \theta - 1 = \theta - 1 = \theta -1 $
+
+
+
+```{r}
+sqrt(10)  #This is a comment
+10 * 10 #So is this one 
+10^2
+10^(-1)
+```
+
+These are random math things with the number 1. 
+
+* * *
+And here's the original content of the file that I didn't delete...
+
+This is an [R Markdown](http://rmarkdown.rstudio.com) Notebook. When you execute code within the notebook, the results appear beneath the code. 
+
+Try executing this chunk by clicking the *Run* button within the chunk or by placing your cursor inside it and pressing *Cmd+Shift+Enter*. 
+
+```{r}
+plot(cars)
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Cmd+Shift+K* to preview the HTML file).
