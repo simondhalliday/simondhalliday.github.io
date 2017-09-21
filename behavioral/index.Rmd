@@ -36,13 +36,15 @@ Recommended
 
 ### Thursday 21 September
 
+1. Go to [https://rstudio.smith.edu](https://rstudio.smith.edu) and log on to ensure that you have access to the RStudio server.  
+2. One you have done that, start a new R Notebook file clicking on File -> New -> R Notebook. 
+
 - Go here: [Lab1](Lab1.html)
 - Access the cheat sheets from RStudio Help -> Cheatsheets -> [Select the Cheatsheet you want]
 
 
 
-1. Go to [rstudio.smith.edu](rstudio.smith.edu ) and log on to ensure that you have access to the RStudio server.  
-2. One you have done that, start a new R Notebook file clicking on File -> New -> R Notebook. 
+
 
 *Homework*
 Once you're comfortable with the server, do the following. 
@@ -77,8 +79,10 @@ Prof Horton also has some videos about starting out with  R:
 
 Read
 
-- Cartwright Chapter 3, Section 3.6 onwards
+- Cartwright Chapter 3, Section 3.6 (don't read further than 3.6)
 - George Loewenstein et al, 2001., "[Risk as Feelings](https://moodle.smith.edu/mod/resource/view.php?id=233740)," Psychological Bulletin, Vol 127 (2): 267-286. (15 pages)
+- Make sure you've also read the Kahneman & Tversky paper from last week. 
+- We shall spend time finishing up to the end of 3.5, briefly discuss 3.6, then switch to the two papers. 
 
 Other Notes 
 
