@@ -16,62 +16,6 @@ output: html_document
 - [FAQ](FAQ)
 - Sign up for topics, share notes, and look at questions [here](topics_notes_questions). 
 
-## Week 3: Risk
-### Tuesday 19 September
-
-Reading
-
-- Cartwright, Chapter 3: Risk, Read up to Section 3.5  
-- Tversky and Kahneman, 1981, "[The Framing of Decisions and the Psychology of Choice](https://moodle.smith.edu/mod/resource/view.php?id=233720)," *Science*, Vol 211, January, 453-458 (6 pages). 
-
-Revision
-
-- BFH Chapter 4: A Risky and Unequal World. 
-
-Recommended
-
-- A paper TBC
-
-
-
-### Thursday 21 September
-
-1. Go to [https://rstudio.smith.edu](https://rstudio.smith.edu) and log on to ensure that you have access to the RStudio server.  
-2. One you have done that, start a new R Notebook file clicking on File -> New -> R Notebook. 
-
-- Go here: [Lab1](Lab1.html)
-- Access the cheat sheets from RStudio Help -> Cheatsheets -> [Select the Cheatsheet you want]
-
-
-
-
-
-*Homework*
-Once you're comfortable with the server, do the following. 
-On your laptop, follow these steps to install R and the latest version of RStudio. 
-Make sure to install R and LaTeX first!
-
-1. Download and install R here: [cran.rstudio.com/](https://cran.rstudio.com/)
-2. Download and install LaTeX here: [www.latex-project.org/get/](https://www.latex-project.org/get/)
-3. Download and install R Studio here: [www.rstudio.com/products/rstudio/download/](https://www.rstudio.com/products/rstudio/download/)
-
-
-We will use these documents as guides, for some of them you will need to log in to Moodle: 
-
-- Installation Guide: [https://moodle.smith.edu/mod/resource/view.php?id=37210](https://moodle.smith.edu/mod/resource/view.php?id=37210)
-- Tidy Data: [tidy_data](tidy_data)
-- Check your name off here: [https://docs.google.com/spreadsheets/d/1DB60SzS9VBA1IsUr2AiPWJyt0f3C6RyLbcSstSWvCWw/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1DB60SzS9VBA1IsUr2AiPWJyt0f3C6RyLbcSstSWvCWw/edit?usp=sharing)
-
-
-Watch these videos by Nick Horton (Amherst College) as an introduction to R markdown if you want more revision: 
-
-- Video 1: [www.youtube.com/watch?v=w4hLT7WyjnM&feature=youtu.be](https://www.youtube.com/watch?v=w4hLT7WyjnM&feature=youtu.be)
-- Video 2: [www.youtube.com/watch?v=MdxNFiXm1qE&feature=youtu.be](https://www.youtube.com/watch?v=MdxNFiXm1qE&feature=youtu.be)
-
-Prof Horton also has some videos about starting out with  R: 
-
-- Video 1: [www.youtube.com/channel/UC5fHtS-LUBTBWI9_h7eCcRQ](https://www.youtube.com/channel/UC5fHtS-LUBTBWI9_h7eCcRQ)
-- Video 2: [www.youtube.com/watch?v=3Y_i3PxIKfg](https://www.youtube.com/watch?v=3Y_i3PxIKfg)
 
 ## Week 4: Risk
 
@@ -90,15 +34,10 @@ Other Notes
 
 ### Thursday 28 September
 
-- We're doing Experiment 2 today. 
-- Go to VEconLab here: [http://veconlab.econ.virginia.edu/login.htm](http://veconlab.econ.virginia.edu/login.htm)
-- I will give you details on this page that you can use to log in.
-<!--- Check out the set of exercises for Chapters 1 to 4 of *Data Computing* here: [simondhalliday.github.io/eco254/fall_2015/exercises/exercises1-4](https://simondhalliday.github.io/eco254/fall_2015/exercises/exercises1-4) The exercises will be due online on Moodle on 8 October. 
-- The graphic from the experiment is here: [https://moodle.smith.edu/mod/resource/view.php?id=42294](https://moodle.smith.edu/mod/resource/view.php?id=42294)
-- Here is data from the set of lotteries you chose: [https://moodle.smith.edu/mod/resource/view.php?id=42295](https://moodle.smith.edu/mod/resource/view.php?id=42295)
-- Here is the data from the short second experiment: [https://moodle.smith.edu/mod/resource/view.php?id=42296](https://moodle.smith.edu/mod/resource/view.php?id=42296)
--->
-- I strongly recommend that you read Chapters 4 and 7 of the Charles Holt book as it covers the relevant content for these (and does some of it better than the Cartwright book in my mind)
+- We're doing Lab 2 today. 
+- Go here to see it: [Lab2](Lab2.html)
+- Remember to log on to RStudio using the RStudio server: [https://rstudio.smith.edu](https://rstudio.smith.edu) 
+- Sit in your teams and work through the lab together. I'll come around and answers questions and occasionally highlight specific points. 
 
 ## Week 5: Time
 ### Tuesday 3 October
@@ -116,7 +55,15 @@ Cases
 
 
 ### Thursday 5 October
-We'll be doing an R lab today (followed by a quiz online for hand-in next week).
+- Go to VEconLab here: [http://veconlab.econ.virginia.edu/login.htm](http://veconlab.econ.virginia.edu/login.htm)
+- I will give you details on this page that you can use to log in.
+<!--- Check out the set of exercises for Chapters 1 to 4 of *Data Computing* here: [simondhalliday.github.io/eco254/fall_2015/exercises/exercises1-4](https://simondhalliday.github.io/eco254/fall_2015/exercises/exercises1-4) The exercises will be due online on Moodle on 8 October. 
+- The graphic from the experiment is here: [https://moodle.smith.edu/mod/resource/view.php?id=42294](https://moodle.smith.edu/mod/resource/view.php?id=42294)
+- Here is data from the set of lotteries you chose: [https://moodle.smith.edu/mod/resource/view.php?id=42295](https://moodle.smith.edu/mod/resource/view.php?id=42295)
+- Here is the data from the short second experiment: [https://moodle.smith.edu/mod/resource/view.php?id=42296](https://moodle.smith.edu/mod/resource/view.php?id=42296)
+-->
+- I strongly recommend that you read Chapters 4 and 7 of the Charles Holt book as it covers the relevant content for these (and does some of it better than the Cartwright book in my mind)
+
 
 <!--
 - Don't forgot to hand in your exercises due today! Hand in on Moodle. 
@@ -474,3 +421,59 @@ The graph from the experiment is here: [drive.google.com/file/d/0B17bVUW1HMv-cUh
 -->
 
 
+## Week 3: Risk
+### Tuesday 19 September
+
+Reading
+
+- Cartwright, Chapter 3: Risk, Read up to Section 3.5  
+- Tversky and Kahneman, 1981, "[The Framing of Decisions and the Psychology of Choice](https://moodle.smith.edu/mod/resource/view.php?id=233720)," *Science*, Vol 211, January, 453-458 (6 pages). 
+
+Revision
+
+- BFH Chapter 4: A Risky and Unequal World. 
+
+Recommended
+
+- A paper TBC
+
+
+
+### Thursday 21 September
+
+1. Go to [https://rstudio.smith.edu](https://rstudio.smith.edu) and log on to ensure that you have access to the RStudio server.  
+2. One you have done that, start a new R Notebook file clicking on File -> New -> R Notebook. 
+
+- Go here: [Lab1](Lab1.html)
+- Access the cheat sheets from RStudio Help -> Cheatsheets -> [Select the Cheatsheet you want]
+
+
+
+
+
+*Homework*
+Once you're comfortable with the server, do the following. 
+On your laptop, follow these steps to install R and the latest version of RStudio. 
+Make sure to install R and LaTeX first!
+
+1. Download and install R here: [cran.rstudio.com/](https://cran.rstudio.com/)
+2. Download and install LaTeX here: [www.latex-project.org/get/](https://www.latex-project.org/get/)
+3. Download and install R Studio here: [www.rstudio.com/products/rstudio/download/](https://www.rstudio.com/products/rstudio/download/)
+
+
+We will use these documents as guides, for some of them you will need to log in to Moodle: 
+
+- Installation Guide: [https://moodle.smith.edu/mod/resource/view.php?id=37210](https://moodle.smith.edu/mod/resource/view.php?id=37210)
+- Tidy Data: [tidy_data](tidy_data)
+- Check your name off here: [https://docs.google.com/spreadsheets/d/1DB60SzS9VBA1IsUr2AiPWJyt0f3C6RyLbcSstSWvCWw/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1DB60SzS9VBA1IsUr2AiPWJyt0f3C6RyLbcSstSWvCWw/edit?usp=sharing)
+
+
+Watch these videos by Nick Horton (Amherst College) as an introduction to R markdown if you want more revision: 
+
+- Video 1: [www.youtube.com/watch?v=w4hLT7WyjnM&feature=youtu.be](https://www.youtube.com/watch?v=w4hLT7WyjnM&feature=youtu.be)
+- Video 2: [www.youtube.com/watch?v=MdxNFiXm1qE&feature=youtu.be](https://www.youtube.com/watch?v=MdxNFiXm1qE&feature=youtu.be)
+
+Prof Horton also has some videos about starting out with  R: 
+
+- Video 1: [www.youtube.com/channel/UC5fHtS-LUBTBWI9_h7eCcRQ](https://www.youtube.com/channel/UC5fHtS-LUBTBWI9_h7eCcRQ)
+- Video 2: [www.youtube.com/watch?v=3Y_i3PxIKfg](https://www.youtube.com/watch?v=3Y_i3PxIKfg)
