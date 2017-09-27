@@ -1,0 +1,65 @@
+---
+title: "Project Teams"
+author: "Simon Halliday"
+date: "2017-September -27"
+output: html_document
+---
+
+The following are the teams that I have allocated from the information you provided. I did my best to allocate people to topics in which I think they're interested from what was reported. The teams are arbitrarily numbered. 
+
+## Team 1: Heuristics & Biases
+
+- Eva Putnam 
+- Vivian Wang 
+- Kimberly Zhang 
+- Danielle Osborne 
+
+## Team 2: Risk 
+
+- Emily Zhou
+- Dami Km
+- Lu Liu
+- Kinyaa Luka
+
+## Team 3: Time 
+
+- Julia Ing
+- Mariyam Indhar
+- Yinuo Zhang 
+- Lillian Walsh
+
+## Team 4: Social Preferences
+
+- Lauren Santo
+- Lydia Ivanovic
+- Sophia Liu
+- Taré Suriel 
+
+## Team 5: Groups & Information 
+
+- Richelle Ju
+- Katherine Lim 
+- Oumayma Khoulou
+- Tiphanie Chow 
+
+## Team 6: Risk Again
+
+- Chris Coyle 
+- Nirman Dave
+- Maria DeVilleneuve
+- Kelly Annese
+
+## Team 7:  Groups & Info Again
+
+- Gray Li
+- Raeesa Alam
+- Hannah Kwon
+- Gaone Moetse
+
+## Team 8: Learning again
+
+- Rita Zhou
+- Sneha Verma 
+- Molly Dalzell
+- Xiruo Zheng 
+

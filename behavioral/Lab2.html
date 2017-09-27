@@ -149,9 +149,6 @@ $(document).ready(function () {
 </div>
 
 
-<p>Before you start, be sure to load these packages, you could also use the command <code>require()</code>:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(mosaic)
-<span class="kw">library</span>(tidyverse)</code></pre></div>
 <div id="learning-outcomes" class="section level2">
 <h2>Learning Outcomes</h2>
 <p>At the end of today’s lab you should be able to do the following:</p>
@@ -163,14 +160,18 @@ $(document).ready(function () {
 <li><p>Select out one or more variables from all of the variables in a data frame.</p></li>
 </ul>
 </div>
-<div id="reference-point" class="section level2">
-<h2>Reference point</h2>
-<p>Next week, I’ll talk to you about participation levels. To get a sense of what you can do with data, take a look at this graph at FRED: <a href="https://research.stlouisfed.org/fred2/graph/?id=LNS11300001,LNS11300002,#">research.stlouisfed.org/fred2/graph/?id=LNS11300001,LNS11300002,#</a></p>
+<div id="preliminaries" class="section level2">
+<h2>Preliminaries</h2>
+<p>Before you start, open up a new R Notebook: using the menus go to: File -&gt; New File -&gt; R Notebook.</p>
+<p>At the top of the notebook, create a code chunk (CMD + OPTION + I on MacOS or CTRL + ALT + I on Windows) and load these packages (you could also use the command <code>require()</code>):</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(mosaic)
+<span class="kw">library</span>(tidyverse)</code></pre></div>
+<p>Remember that you have to tell R Markdown what packages you plan to use in order to use them in the file. We are going to use functions from the <code>mosaic</code> and <code>tidyverse</code> packages and so we have to tell our R Markdown file to use them.</p>
 </div>
 <div id="loading-data" class="section level2">
 <h2>Loading Data</h2>
-<p>We now want to start to work with some data. We shall first download a dataset that I have already accessed from the Federal Reserve Bank of St. Louis using the FRED database. You can access the <code>.csv</code> (comma separated value) file here: <a href="https://drive.google.com/file/d/0B17bVUW1HMv-SGNheF9haXJ0bVk/view?usp=sharing" class="uri">https://drive.google.com/file/d/0B17bVUW1HMv-SGNheF9haXJ0bVk/view?usp=sharing</a>. The file is called <code>labor_force_levels.csv</code>.</p>
-<p>Download the file and save it in a logical place. I would recommend that you save it in your Behavioral Economics folder under a folder called Lab2 and then create a backup of the file in that folder too. Open the file if you want to see what a csv looks like in Excel or Google Sheets. Do not save any changes you make to it.</p>
+<p>We now want to start to work with some data. We shall first download a dataset that I have already accessed from the Federal Reserve Bank of St. Louis using the FRED database. You can access the <code>.csv</code> (comma separated value) file of the data here: <a href="https://drive.google.com/file/d/0B17bVUW1HMv-SGNheF9haXJ0bVk/view?usp=sharing" class="uri">https://drive.google.com/file/d/0B17bVUW1HMv-SGNheF9haXJ0bVk/view?usp=sharing</a>. The file is called <code>labor_force_levels.csv</code>.</p>
+<p>Download the file and save it in a logical place. I would recommend that you save it in your Behavioral Economics folder under a folder called Lab2 or ‘more’ and then create a backup of the file in that folder too (name it ‘NAMEOFFILE_backup’. Open the file if you want to see what a csv looks like in Excel or Google Sheets. Do not save any changes you make to it.</p>
 <p>Now, we are going to open the file in R using RStudio. Use the command below, but be sure to change the filepath to the one where you have put the <code>labor_force_levels.csv</code> file. Note, that in the filepath below I put two periods <code>..</code> at the start to tell R to look ‘back’ (to one level up in the folder structure). I then told it to use the folder called ‘more’. Inside the folder called ‘more’ there is a file called <code>labor_force_levels.csv</code> which is what I want it to open.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">ParticipationLevels &lt;-<span class="st"> </span><span class="kw">read_csv</span>(<span class="st">&quot;../more/labor_force_levels.csv&quot;</span>)</code></pre></div>
 <pre><code>## Parsed with column specification:
