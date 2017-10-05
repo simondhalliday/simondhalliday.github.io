@@ -17,28 +17,6 @@ output: html_document
 - Sign up for topics, share notes, and look at questions [here](topics_notes_questions). 
 
 
-## Week 4: Risk
-
-### Tuesday 26 September
-
-Read
-
-- Cartwright Chapter 3, Section 3.6 (don't read further than 3.6)
-- George Loewenstein et al, 2001., "[Risk as Feelings](https://moodle.smith.edu/mod/resource/view.php?id=233740)," Psychological Bulletin, Vol 127 (2): 267-286. (15 pages)
-- Make sure you've also read the Kahneman & Tversky paper from last week. 
-- We shall spend time finishing up to the end of 3.5, briefly discuss 3.6, then switch to the two papers. 
-
-Other Notes 
-
-- Check here for the notes on Bayes' Rule and understanding expected utility changes: [bayes_rule](bayes_rule). 
-
-### Thursday 28 September
-
-- We're doing Lab 2 today. 
-- Go here to see it: [Lab2](Lab2.html)
-- Remember to log on to RStudio using the RStudio server: [https://rstudio.smith.edu](https://rstudio.smith.edu) 
-- Sit in your teams and work through the lab together. I'll come around and answers questions and occasionally highlight specific points. 
-
 ## Week 5: Time
 ### Tuesday 3 October
 
@@ -70,8 +48,10 @@ Cases
 - Here's the lab: [http://simondhalliday.github.io/eco254/fall_2015/Labs/Lab2/Lab2](http://simondhalliday.github.io/eco254/fall_2015/Labs/Lab2/Lab2)
 -->
 
-Notes
+Notes & Lab: 
 
+- If we have time, we'll get started on [Lab3](Lab3.html)
+- You can see some slides on Moodle. 
   - Slides on glyph-ready data: [https://moodle.smith.edu/mod/resource/view.php?id=233888](https://moodle.smith.edu/mod/resource/view.php?id=233888)
   - Slides on using ggplot: [https://moodle.smith.edu/mod/resource/view.php?id=233890](https://moodle.smith.edu/mod/resource/view.php?id=233890)
 
@@ -477,3 +457,25 @@ Prof Horton also has some videos about starting out with  R:
 
 - Video 1: [www.youtube.com/channel/UC5fHtS-LUBTBWI9_h7eCcRQ](https://www.youtube.com/channel/UC5fHtS-LUBTBWI9_h7eCcRQ)
 - Video 2: [www.youtube.com/watch?v=3Y_i3PxIKfg](https://www.youtube.com/watch?v=3Y_i3PxIKfg)
+
+## Week 4: Risk
+
+### Tuesday 26 September
+
+Read
+
+- Cartwright Chapter 3, Section 3.6 (don't read further than 3.6)
+- George Loewenstein et al, 2001., "[Risk as Feelings](https://moodle.smith.edu/mod/resource/view.php?id=233740)," Psychological Bulletin, Vol 127 (2): 267-286. (15 pages)
+- Make sure you've also read the Kahneman & Tversky paper from last week. 
+- We shall spend time finishing up to the end of 3.5, briefly discuss 3.6, then switch to the two papers. 
+
+Other Notes 
+
+- Check here for the notes on Bayes' Rule and understanding expected utility changes: [bayes_rule](bayes_rule). 
+
+### Thursday 28 September
+
+- We're doing Lab 2 today. 
+- Go here to see it: [Lab2](Lab2.html)
+- Remember to log on to RStudio using the RStudio server: [https://rstudio.smith.edu](https://rstudio.smith.edu) 
+- Sit in your teams and work through the lab together. I'll come around and answers questions and occasionally highlight specific points. 
