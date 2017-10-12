@@ -15,7 +15,7 @@ output: html_document
 - [Project Guidelines](team_guidelines)
 - [FAQ](FAQ)
 - Sign up for topics, share notes, and look at questions [here](topics_notes_questions). 
-- Experiment report [guidelines](exp_report)
+- Experiment report [guidelines](exp_reports)
 
 
 

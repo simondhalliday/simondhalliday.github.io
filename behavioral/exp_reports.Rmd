@@ -1,0 +1,26 @@
+---
+title: "Experiment Report Guidelines"
+author: "Simon Halliday"
+date: "Fall 2017"
+output: html_document
+---
+
+Here are some pointers on writing your experimental reports. 
+
+## Length
+
+- about 2 typed pages, i.e. about 500 words
+
+## Contents
+
+- *describe* what you thought about the experiment 
+- *discuss* why you made the choices you did after completing the instructions, during the actual rounds of the experiments and then after the experiment was completed and you have had some time to think about it
+- *reflect* on the results of the experiment (the aggregated results from the experiment)
+- *consider* whether the standard behavior the experiments looks rational or consistent with the prediction you anticipate you would see in the model
+- *explain* whether you think the model is missing something if it fails to match the behavior in the experiment  
+- *think* critically about your own behavior and decide whether you think you could have done better had you altered your strategy
+- *recruit* evidence in your explanation (see the spreadsheets and graphics from the experiment on Moodle)
+- *construct* and argument through your report based on whether you think the model(s) succeed or fail to explain your behavior or the behavior of the class in aggregate
+
+Keeping track of your experience and understanding will help us to discuss why the results from experimental sessions differ from what we might predict from theory. 
+
