@@ -103,7 +103,12 @@ knitr::include_graphics("../more/stlawrence.png")
 - Knittel & Metaxoglou (forthcoming, JEM) - a methodology for econometric work
 - Baumer et al (2013) - Stats & R Markdown 
 
-
+## Gaps? 
+- Where is the "one-stop-shop" for reproducible empirical research? 
+- So, gap of what package suite to teach to maximize efficiency.
+- Pace G & S ('14) hard to scale the capabilities they expect
+- Second gap: how to teach high-level skills without expecting initial high level capabilities? Or, to teach high-level skills with minimum cost? 
+- Third gap? What workflows to teach to students? What set of practices?
 
 ## Replicability & Reproducibility
 
