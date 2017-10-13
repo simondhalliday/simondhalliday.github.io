@@ -1,6 +1,6 @@
 ---
 title: "Efficient Empiricism"
-author: "Dvorak, Halliday, O'Hara and Swoboda"
+author: "Dvorak, Halliday (that's me), O'Hara and Swoboda"
 date: "AIRLEAP, 13 October 2017"
 output: ioslides_presentation
 #runtime: shiny
@@ -50,7 +50,7 @@ Credit to people from whom we pilfer some content (and recognize their contribut
 - Randy Prium -- [website](https://www.calvin.edu/~rpruim/)
 - Project Tier -- [website](https://www.project-tier.org)
 
-## What will we talk about? 
+## What we talk about? 
 
 We highlight 5 types of efficiency in empirical courses
 
@@ -72,26 +72,26 @@ We highlight 5 types of efficiency in empirical courses
 ## Case Studies
 
 <div class="col2">
-```{r, out.width = "150px"}
+
+```{r, out.width = "150px", fig.align = "center"}
 knitr::include_graphics("../more/smith.png")
 ```
 
-```{r, out.width = "150px"}
+```{r, out.width = "150px", fig.align = "center"}
 knitr::include_graphics("../more/hamilton.png")
 ```
 
-```{r, out.width = "150px"}
+```{r, out.width = "150px", fig.align = "center"}
 knitr::include_graphics("../more/carleton.png")
 ```
 
-```{r, out.width = "200px"}
+```{r, out.width = "200px", fig.align = "center"}
 knitr::include_graphics("../more/union.png")
 ```
 
-```{r, out.width = "200px", fig.cap = "St. Lawrence U."}
+```{r, out.width = "200px", fig.cap = "St. Lawrence U.", fig.align = "center"}
 knitr::include_graphics("../more/stlawrence.png")
 ```
-
 </div>
 
 ## Literature? 
