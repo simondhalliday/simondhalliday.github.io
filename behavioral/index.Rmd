@@ -19,35 +19,6 @@ output: html_document
 
 
 
-## Week 6: Time concluded
-
-### Tuesday 10 October - Fall Break
-
-### Thursday 12 October
-
-Read
-- Dan Ariely and Klaus Wertenbroch, 2002, "[Procrastination, Deadlines, and Performance: Self-Control by Pre-Commitment](https://moodle.smith.edu/mod/resource/view.php?id=233739)," *Psychological Science*, Vol. 13 (3): 219-224. (6 pages)
-- Richard H. Thaler  and Cass R. Sunstein, "[Libertarian Paternalism](https://moodle.smith.edu/mod/resource/view.php?id=233719)," *The American Economic Review: Papers and Proceedings*, Vol. 93, (2): 175-179. (5 pages) 
-
-
-Notes & Lab: 
-
-- If we have time, we'll get started on [Lab3](Lab3.html)
-- You can see some slides on Moodle. 
-  - Slides on glyph-ready data: [https://moodle.smith.edu/mod/resource/view.php?id=233888](https://moodle.smith.edu/mod/resource/view.php?id=233888)
-  - Slides on using ggplot: [https://moodle.smith.edu/mod/resource/view.php?id=233890](https://moodle.smith.edu/mod/resource/view.php?id=233890)
-
-Cases
-
-- Katrin Bennhold, "Britain's Ministry of Nudges," New York Times, 2013. 
-- "The limits of nudging,"  The Economist, 2015.
-
-
-<!-- Other 
-
-- I hope to show you something new in R very briefly
--->
-
 ## Week 7: Learning & Information
 
 
@@ -59,26 +30,14 @@ Reading
 
 - Cartwright, Chapter 5 up to the end of Section 5.4 (feel free to exclude Section 5.3.4. if you're struggling to understand it as it may employ game theory you have not done)
 - Also read section 6.4 from Chapter 6 (we are excluding the rest of Chapter 6)
-
-- Sundali and Croson, 2006, "[Biases in casino betting: The hot hand and the gambler’s fallacy](https://moodle.smith.edu/mod/resource/view.php?id=233746)," *Judgment and Decision Making*, Vol 1 (1): 1-12 (11 pages)
 - Gary Charness and Matthias Sutter, 2012, "[Groups make better self-interested decisions](https://moodle.smith.edu/mod/resource/view.php?id=233863)," *Journal of Economic Perspectives*, 26 (3): 157-176 (18 pages)
-
-
 
 ### Thursday 19 October
 We will talk about the following topics in R today: 
-
 - Wide vs. Narrow data: [https://moodle.smith.edu/mod/resource/view.php?id=233892](https://moodle.smith.edu/mod/resource/view.php?id=233892)
 - Joins: [https://moodle.smith.edu/mod/resource/view.php?id=233891](https://moodle.smith.edu/mod/resource/view.php?id=233891) 
 - `group_by` and `summarise` see here: [http://dtkaplan.github.io/DCF-2014/CourseNotes/BasicDataCommands/DraftNarrative.html](http://dtkaplan.github.io/DCF-2014/CourseNotes/BasicDataCommands/DraftNarrative.html)
 and here: [https://moodle.smith.edu/mod/resource/view.php?id=233893](https://moodle.smith.edu/mod/resource/view.php?id=233893)
-
-Team Projects
-
-- I want you to emphasize the following steps: 
-    - making sure you have *data* to work with (to bring to later Thursday sessions) 
-    - deciding on the literature with which your project fits to produce a *literature review*
-    - (much later) thinking about the ways in which you can alter/improve on the existing experiments/surveys to improve our overall knowledge
 
 
 ### ggplot Exercise
@@ -90,16 +49,21 @@ We are going to do an exercise where we use ggplot to try to reproduce at least 
 - download the data on Moodle here: [https://moodle.smith.edu/mod/folder/view.php?id=46728](https://moodle.smith.edu/mod/folder/view.php?id=46728)
 - see the online appendix for the paper here: [https://www.aeaweb.org/aer/data/feb2013/20101542_app.pdf](https://www.aeaweb.org/aer/data/feb2013/20101542_app.pdf)
 
-Working with the data: 
+Working with the data
 
+- We will follow what to do at [Lab4](Lab4)
 - You will notice that the data is *not* glyph-ready and it also isn't that *tidy*. 
 - Ideally, we would work with the spreadsheet as is and import it into R. We're not going to do that, but will create different spreadsheets with different data and *then* import them into R. 
-- Check out the Tier protocol for suggestions. 
-- Put the original data in an 'original data' folder. 
-- Then create a folder with 'Working data' 
-- We will use the data in working data and document what we do in a readme.txt file. 
+- Check out the TIER protocol for suggestions. 
 
-Also, check out these links for behavioral econ in the press: 
+Team Projects
+
+- I want you to emphasize the following steps: 
+    - making sure you have *data* to work with (to bring to later class sessions) 
+    - deciding on the literature with which your project fits to produce a *literature review*
+    - (later) thinking about the ways in which you can alter/improve on the existing experiments/surveys to improve our overall knowledge
+
+Cases
 
 - People don't want equality, they want fairness: [http://www.theatlantic.com/science/archive/2015/10/people-dont-actually-want-equality/411784/](http://www.theatlantic.com/science/archive/2015/10/people-dont-actually-want-equality/411784/)
 - Cass Sunstein reviews Akerlof and Shiller's *Phishing for Phools*: [http://www.nybooks.com/articles/archives/2015/oct/22/why-free-markets-make-fools-us/](http://www.nybooks.com/articles/archives/2015/oct/22/why-free-markets-make-fools-us/)
@@ -109,6 +73,9 @@ Also, check out these links for behavioral econ in the press:
 Do people only worry about their own consumption or their own money, or are they concerned (in prosocial or antisocial ways) about what others get? If they do care, what do their preferences look like? Are they altruistic? Are the reciprocal? What experiments do we use to check this and how can we understand the breadth of these preferences? 
  
 ### Tuesday 24 October
+
+Catch-up on groups & on learning articles: 
+- Sundali and Croson, 2006, "[Biases in casino betting: The hot hand and the gambler’s fallacy](https://moodle.smith.edu/mod/resource/view.php?id=233746)," *Judgment and Decision Making*, Vol 1 (1): 1-12 (11 pages)
 
 Reading 
 
@@ -481,3 +448,42 @@ Cases
 - Don't forgot to hand in your exercises due today! Hand in on Moodle. 
 - Here's the lab: [http://simondhalliday.github.io/eco254/fall_2015/Labs/Lab2/Lab2](http://simondhalliday.github.io/eco254/fall_2015/Labs/Lab2/Lab2)
 -->
+
+
+
+## Week 6: Time concluded
+
+### Tuesday 10 October - Fall Break
+
+### Thursday 12 October
+
+Read
+- Dan Ariely and Klaus Wertenbroch, 2002, "[Procrastination, Deadlines, and Performance: Self-Control by Pre-Commitment](https://moodle.smith.edu/mod/resource/view.php?id=233739)," *Psychological Science*, Vol. 13 (3): 219-224. (6 pages)
+- Richard H. Thaler  and Cass R. Sunstein, "[Libertarian Paternalism](https://moodle.smith.edu/mod/resource/view.php?id=233719)," *The American Economic Review: Papers and Proceedings*, Vol. 93, (2): 175-179. (5 pages) 
+
+
+Notes & Lab: 
+
+- If we have time, we'll get started on [Lab3](Lab3.html)
+- You can see some slides on Moodle. 
+  - Slides on glyph-ready data: [https://moodle.smith.edu/mod/resource/view.php?id=233888](https://moodle.smith.edu/mod/resource/view.php?id=233888)
+  - Slides on using ggplot: [https://moodle.smith.edu/mod/resource/view.php?id=233890](https://moodle.smith.edu/mod/resource/view.php?id=233890)
+
+Cases
+
+- Katrin Bennhold, "Britain's Ministry of Nudges," New York Times, 2013. 
+- "The limits of nudging,"  The Economist, 2015.
+
+
+<!-- Other 
+
+- I hope to show you something new in R very briefly
+
+- Put the original data in an 'original data' folder. 
+- Then create a folder with 'Working data' 
+- We will use the data in working data and document what we do in a readme.txt file. 
+
+-->
+
+
+
