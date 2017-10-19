@@ -33,12 +33,6 @@ Reading
 - Gary Charness and Matthias Sutter, 2012, "[Groups make better self-interested decisions](https://moodle.smith.edu/mod/resource/view.php?id=233863)," *Journal of Economic Perspectives*, 26 (3): 157-176 (18 pages)
 
 ### Thursday 19 October
-We will talk about the following topics in R today: 
-- Wide vs. Narrow data: [https://moodle.smith.edu/mod/resource/view.php?id=233892](https://moodle.smith.edu/mod/resource/view.php?id=233892)
-- Joins: [https://moodle.smith.edu/mod/resource/view.php?id=233891](https://moodle.smith.edu/mod/resource/view.php?id=233891) 
-- `group_by` and `summarise` see here: [http://dtkaplan.github.io/DCF-2014/CourseNotes/BasicDataCommands/DraftNarrative.html](http://dtkaplan.github.io/DCF-2014/CourseNotes/BasicDataCommands/DraftNarrative.html)
-and here: [https://moodle.smith.edu/mod/resource/view.php?id=233893](https://moodle.smith.edu/mod/resource/view.php?id=233893)
-
 
 ### ggplot Exercise
 We are going to do an exercise where we use ggplot to try to reproduce at least one graphic from a published paper. The paper is: 
@@ -62,6 +56,14 @@ Team Projects
     - making sure you have *data* to work with (to bring to later class sessions) 
     - deciding on the literature with which your project fits to produce a *literature review*
     - (later) thinking about the ways in which you can alter/improve on the existing experiments/surveys to improve our overall knowledge
+
+
+### Related to the topics in R today 
+
+- Wide vs. Narrow data: [https://moodle.smith.edu/mod/resource/view.php?id=233892](https://moodle.smith.edu/mod/resource/view.php?id=233892)
+- Joins: [https://moodle.smith.edu/mod/resource/view.php?id=233891](https://moodle.smith.edu/mod/resource/view.php?id=233891) 
+- `group_by` and `summarise` see here: [http://dtkaplan.github.io/DCF-2014/CourseNotes/BasicDataCommands/DraftNarrative.html](http://dtkaplan.github.io/DCF-2014/CourseNotes/BasicDataCommands/DraftNarrative.html)
+and here: [https://moodle.smith.edu/mod/resource/view.php?id=233893](https://moodle.smith.edu/mod/resource/view.php?id=233893)
 
 Cases
 
@@ -99,7 +101,7 @@ Revision
 
 ### Thursday 26 October
 
-- We shall work with the data from Sutter, 2009. 
+- We shall do an experiment, then continue lab work (from Lab 4)
 <!--
 - You can look at all the steps we'll take with the Sutter data here: 
 [http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis_2](http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis_2)
@@ -118,7 +120,7 @@ Revision
 - Then we'll spend a bit of time on group-work too. 
 --> 
 
-`ggplot` exercise continued: 
+`ggplot` exercise continued (depending on where we get to): 
 
 - you're first going to need to make the data narrow using a key-value pair
 - you'll then need to filter out data that you don't need for the first graph in the paper (i.e. you only want "teamtreat" and "individuals")
