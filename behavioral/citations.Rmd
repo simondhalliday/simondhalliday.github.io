@@ -28,6 +28,11 @@ Here are a couple of examples.
 
 - In-text citation: "In [Lab 4](Lab4) we reproduced @sutter09."
 - Citations in parenthesis: "We also used the package Stargazer [@stargazer]." 
+Here are some more examples: 
+- The @tidyverse
+- Niderle's article [@niederle17]
+
+
 These will automatically then populate the paper at the *end* of the R Markdown exported file. So I have a section `## References` as my last section and it'll auto-populate with those references I've cited in my bibliography file. 
 
 ## Other stuff
@@ -36,4 +41,7 @@ You ought to cite the R Packages that you use.
 To find the citation for an R package call on `citation("packagename")` and it will output the citation in the console. 
 You should copy/paste the output into your bibliography file and add a tag to it. 
 
+
 ## References
+
+

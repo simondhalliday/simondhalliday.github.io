@@ -31,6 +31,7 @@ abstract:
 bibliography: bibliography.bib
 output: rticles::elsevier_article
 ---
+
 ```{r setup, include=FALSE}
 ## This chunk just sets it so that code will not show up on slides
 #knitr::opts_chunk$set(echo = FALSE)
@@ -69,6 +70,9 @@ library(plm)
 
 
 # 6. Conclusion 
+
+
+
 
 
 # References
