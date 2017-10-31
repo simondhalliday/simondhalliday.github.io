@@ -19,6 +19,7 @@ Here is the main reference you should use to understand citations at R Studio: [
 
 R Markdown uses a source file with the extension `.bib` (for bibtex in \LaTeX). 
 You need to name that file in the header of your R Markdown document (i.e. at the top in between the dashed lines): for examples, this file has the lines `bibliography: bibliography.bib` in the header. 
+You can download the bibliography file for this document here: [bibliography.bib](bibliography.bib). 
 
 Each reference will have a "tag" using an at symbol `@`, for example, for the reference to Sutter below I use the tag `@sutter09`. 
 In most instances, you can grab the bibliographic information from the website for the article (I'll show you how with the AEA journals). 
