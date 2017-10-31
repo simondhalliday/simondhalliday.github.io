@@ -1,0 +1,36 @@
+---
+title: "Citations"
+author: "Simon Halliday"
+date: "10/31/2017"
+output:
+  html_document:
+    df_print: paged
+bibliography: bibliography.bib
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(stargazer)
+```
+
+## Citations in R Markdown 
+
+Here is the main reference you should use to understand citations at R Studio: ["Bibliographies and Citations"](http://rmarkdown.rstudio.com/authoring_bibliographies_and_citations.html).
+
+R Markdown uses a source file with the extension `.bib` (for bibtex in \LaTeX). 
+Each reference will have a "tag" using an at symbol `@`, for example, for the reference to Sutter below I use the tag `@sutter09`. 
+In most instances, you can grab the bibliographic information from the website for the article (I'll show you how with the AEA journals). 
+
+Here are a couple of examples. 
+
+- In-text citation: "In [Lab 4](Lab4) we reproduced @sutter09."
+- Citations in parenthesis: "We also used the package Stargazer [@stargazer]." 
+These will automatically then populate the paper at the *end* of the R Markdown exported file. So I have a section `## References` as my last section and it'll auto-populate with those references I've cited in my bibliography file. 
+
+## Other stuff
+
+You ought to cite the R Packages that you use. 
+To find the citation for an R package call on `citation("packagename")` and it will output the citation in the console. 
+You should copy/paste the output into your bibliography file and add a tag to it. 
+
+## References
