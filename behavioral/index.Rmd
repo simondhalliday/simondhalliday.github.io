@@ -18,30 +18,19 @@ output: html_document
 - Experiment report [guidelines](exp_reports)
 
 
-
-## Week 9: Fairness and Social Preferences
-
-### Tuesday 31 October 
-See readings for Week 8. We focus on Kahneman et al and Cappelen et al today. 
-We will also look at how to do citations in R Markdown at the [citations](citations) page.
-
-And you can download the project template file [here](https://moodle.smith.edu/mod/resource/view.php?id=261455). You will need to download and use the `rticles()` package. 
-
-### Thursday 2 November
-
 ## Week 10: Fairness & Social Preferences
 
-See readings for Week 8. We will do an exercise in R looking at social preferences. 
 
 ### Tuesday 7 November
 
+- Conclude discussion of Social preferences with inequality aversion, intentions, and reciprocity. 
 
 ### Thursday 9 November
 
+- Discuss Cappelen et al. 
+- See slides [here](social_prefs_addendum.html)
+- Time for the midterm in class
 
-- Go here for the initial Marseille exercise guide: [marseille](marseille)
-- Download the description of the data here [https://moodle.smith.edu/mod/resource/view.php?id=51529](https://moodle.smith.edu/mod/resource/view.php?id=51529)
-- And the data itself as a .txt file here: [https://moodle.smith.edu/mod/resource/view.php?id=51530](https://moodle.smith.edu/mod/resource/view.php?id=51530)
 
 ## Week 11: Gender and Preferences
 
@@ -54,6 +43,10 @@ Reading
 - Julie A. Nelson, 2016, "[Not-So-Strong Evidence for Gender Differences in Risk
 Taking](https://moodle.smith.edu/mod/resource/view.php?id=233978)", *Feminist Economics*, 22 (2): 114-142. (26 pages)
 
+
+- Go here for the initial Marseille exercise guide: [marseille](marseille)
+- Download the description of the data here [https://moodle.smith.edu/mod/resource/view.php?id=51529](https://moodle.smith.edu/mod/resource/view.php?id=51529)
+- And the data itself as a .txt file here: [https://moodle.smith.edu/mod/resource/view.php?id=51530](https://moodle.smith.edu/mod/resource/view.php?id=51530)
 
 
 ### Thursday 16 November 
@@ -491,4 +484,12 @@ Revision
 - once you've filtered out the treatments you don't need, you can construct the ggplot code
 
 
+### Tuesday 31 October 
+See readings for Week 8. We focus on Kahneman et al and Cappelen et al today. 
+We will also look at how to do citations in R Markdown at the [citations](citations) page.
 
+And you can download the project template file [here](https://moodle.smith.edu/mod/resource/view.php?id=261455). You will need to download and use the `rticles()` package. 
+
+### Thursday 2 November
+
+## Week 9: Fairness and Social Preferences
