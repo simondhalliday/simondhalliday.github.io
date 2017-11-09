@@ -25,7 +25,7 @@ output: html_document
 See readings for Week 8. We focus on Kahneman et al and Cappelen et al today. 
 We will also look at how to do citations in R Markdown at the [citations](citations) page.
 
-And you can download the project template file [here](project_template.Rmd). You will need to download and use the `rticles()` package. 
+And you can download the project template file [here](https://moodle.smith.edu/mod/resource/view.php?id=261455). You will need to download and use the `rticles()` package. 
 
 ### Thursday 2 November
 

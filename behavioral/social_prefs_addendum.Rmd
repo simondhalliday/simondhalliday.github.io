@@ -1,0 +1,88 @@
+---
+title: "Social preferences addendum"
+author: "Simon Halliday (with thanks to P. Jakiela"
+date: "2017-November -9"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## What constitutes a fair allocation? 
+
+- Equality-efficiency tradeoffs => spectrum of views on fairness
+- Ignore issues of:
+    - entitlement 
+    - desert
+    - equity 
+- Theories of reciprocity parameterize fairness/kindness in terms of a material payoff (in the feasible distribution; think DG/UG)
+
+## Konow (JEL, 2003) (not online)
+
+Survey evidence that people reject these simplistic ideals in favor of: 
+ 
+ - equity 
+ - attribution 
+ - proportionality
+ - desert 
+
+## Konow continued
+
+- People should *be* held accountable for their choices, effort 
+- People should *not be* accountable for factors beyond their control
+- Not clear exactly how *ability differences* fit in to prior theories of social preferences
+
+## Cappelen et al (AER, 2007) 
+People are heterogeneous in their ideas of fairness 
+
+- Egalitarianism
+- Libertarianism
+- Intermediate ideals: 
+    - equity theory, accountability principle, etc. 
+
+## What’s fairness?
+- "Fairness" means you are accountable for factors under your control 
+- Differences in income stemming from (some subset of) 
+    - effort, 
+     - individual choices, 
+     - innate ability, etc...
+     - are "fair"
+- But, inequality resulting from factors beyond agents’ control is not fair 
+- So, what factors are beyond agents’ control?
+
+## Cappelen (2007)
+Modified dictator games preceded by team production phase
+
+- Agent $i$ assigned return to investment, $a_i$
+- Choose investment level, $q_i$
+- Total income $X(a, q) = a_iq_i + a_jq_j$ is divided between $i$ and $j$
+- Both $i$ and $j$ propose an allocation; one is chosen at random
+
+## Why is this interesting? 
+
+Implied fair allocation to other subject:
+
+-  Egalitarianism $\Rightarrow m_i(a, q) = X(a, q)/2$
+-  Libertarianism $\Rightarrow  m_i(a, q) = a_i q_i$
+- "Liberal egalitarianism" $\Rightarrow m_i(a, q) = \frac{q_i}{q_i +q_j} \cdot X(a, q)$
+
+
+## Summary Statistics 
+```{r fig:sumstat, echo = FALSE, fig.cap = "\\label{fig:sumstat} Table 1. from Cappelen et al (2007: 223).", fig.width = 6, fig.height = 3}
+knitr::include_graphics("../more/captab1.png") 
+```
+
+## Model Estimates
+```{r fig:estimates, echo = FALSE, fig.cap = "\\label{fig:estimates} Table 2. from Cappelen et al (2007: 223).", fig.width = 4, fig.height = 2}
+knitr::include_graphics("../more/captab2.png") 
+```
+
+## Conclusions? 
+
+- Really NB to think about heterogeneity 
+- Pretty complicated methods to detect & isolate 
+- Important policy implications (we get to later)
+    - e.g. 1: crowding out
+    - e.g. 2: assuming everyone self-interested? 
