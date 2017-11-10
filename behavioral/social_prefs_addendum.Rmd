@@ -68,6 +68,30 @@ Implied fair allocation to other subject:
 -  Libertarianism $\Rightarrow  m_i(a, q) = a_i q_i$
 - "Liberal egalitarianism" $\Rightarrow m_i(a, q) = \frac{q_i}{q_i +q_j} \cdot X(a, q)$
 
+## Details? 
+
+- Each participant was randomly assigned a low or a high rate of return. 
+    - Low $\Rightarrow 2x$ investment
+    - High $\Rightarrow 4x$ investment
+- Each participant got 300 NOK 
+- Could invest 0, 100, 200 NOK in one of two choices
+
+## Four outcomes 
+
+1. both plays have same RoR & same investment
+    - so fairness ideals then imply the same fair distribution (equal shares). 
+
+2. same RoR but differed in their investment level
+    - liberal egalitarian = libertarian fairness
+    - strict egalitarianism would differ.
+    
+3. same Investment, but different RoR
+    - Only libertarians considered an unequal distribution fair in this class of situations. 
+
+4. different Investment & different RoR
+    - if low RoR player invested more than high RoR, egalitarianism and libertarianism imply the same fair distribution.
+    - Otherwise, the fairness ideals generally differ
+
 
 ## Summary Statistics 
 ```{r fig:sumstat, echo = FALSE, fig.cap = "\\label{fig:sumstat} Table 1. from Cappelen et al (2007: 223).", fig.width = 6, fig.height = 3}
