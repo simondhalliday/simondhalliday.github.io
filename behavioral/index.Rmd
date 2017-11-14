@@ -18,19 +18,6 @@ output: html_document
 - Experiment report [guidelines](exp_reports)
 
 
-## Week 10: Fairness & Social Preferences
-
-
-### Tuesday 7 November
-
-- Conclude discussion of Social preferences with inequality aversion, intentions, and reciprocity. 
-
-### Thursday 9 November
-
-- Discuss Cappelen et al. 
-- See slides [here](social_prefs_addendum.html)
-- Time for the midterm in class
-
 
 ## Week 11: Gender and Preferences
 
@@ -42,16 +29,18 @@ Reading
 - Rachel Croson and Uri Gneezy, 2009, "[Gender Differences in Preferences](https://moodle.smith.edu/mod/resource/view.php?id=233976)," *Journal of Economic Literature*, 47 (2): 1–27  (22 pages)
 - Julie A. Nelson, 2016, "[Not-So-Strong Evidence for Gender Differences in Risk
 Taking](https://moodle.smith.edu/mod/resource/view.php?id=233978)", *Feminist Economics*, 22 (2): 114-142. (26 pages)
+- Slides for Croson & Gneezy are [here](https://moodle.smith.edu/mod/resource/view.php?id=264612)
 
+
+### Thursday 16 November 
+
+Project work, wrap up Gender & some R 
 
 - Go here for the initial Marseille exercise guide: [marseille](marseille)
 - Download the description of the data here [https://moodle.smith.edu/mod/resource/view.php?id=51529](https://moodle.smith.edu/mod/resource/view.php?id=51529)
 - And the data itself as a .txt file here: [https://moodle.smith.edu/mod/resource/view.php?id=51530](https://moodle.smith.edu/mod/resource/view.php?id=51530)
 
 
-### Thursday 16 November 
-
-Project work & wrap up Gender. 
 
 ## Week 12: Happiness and Utility
 
@@ -493,3 +482,17 @@ And you can download the project template file [here](https://moodle.smith.edu/m
 ### Thursday 2 November
 
 ## Week 9: Fairness and Social Preferences
+
+## Week 10: Fairness & Social Preferences
+
+
+### Tuesday 7 November
+
+- Conclude discussion of Social preferences with inequality aversion, intentions, and reciprocity. 
+
+### Thursday 9 November
+
+- Discuss Cappelen et al. 
+- See slides [here](social_prefs_addendum.html)
+- Time for the midterm in class
+
