@@ -5,8 +5,8 @@ output:
     css: ../stylesheets/lab.css
     highlight: pygments
     theme: cerulean
-  pdf_document: default
-  bibliography: ../more/fish_bib.bib
+bibliography: ../more/fish_bib.bib
+biblio-style: chicago 
 ---
 
 ## Introduction
@@ -58,21 +58,38 @@ Mars <-
 head(Mars)
 ```
 
-DO NOT run the code below yourselves (the sample size is huge and I don't know how powerful your laptops are), just look at the plot. What does it suggest?  
-```{r AllFishPlot}
-Mars %>% 
-  ggplot(aes(x = weight, y = price)) + 
-  geom_point() + 
-  stat_smooth(method = "lm", formula = y ~ x, size = 1) +
-  ylim(0, 100)
-```
-
+- DO NOT run the code below yourselves. 
+- The sample size is huge and we don't want to overload the server. 
+- Just look at the plot. What does it suggest?  
 - What does the line correspond to? 
 - What kind of pattern are you able to see? 
 
+```{r AllFishPlotLin, warning = FALSE, message = FALSE}
+Mars %>% 
+  ggplot(aes(x = weight, y = price)) + 
+  geom_point() + 
+  stat_smooth(method = "lm", formula = y ~ x,  size = 1) +
+  ylim(0, 100)
+```
+
+
+Note, we don't need a *linear* downward-sloping function...
+
+- (Again DO NOT RUN THIS CODE)
+
+```{r AllFishPlotNonlin, warning = FALSE, message = FALSE}
+Mars %>% 
+  ggplot(aes(x = weight, y = price)) + 
+  geom_point() + 
+  stat_smooth(method = "auto", size = 1) +
+  ylim(0, 100)
+```
+
+
+
 ## A basic linear regression
 Notice that you can run a linear regression with the whole sample of fish: 
-```{r}
+```{r linear-model1, warning = FALSE, message = FALSE}
 m1 <- lm(price ~ weight, data = Mars)
 summary(m1)
 ```
@@ -87,14 +104,14 @@ Consult the Marseille Data Description document to check what the different kind
 I have generated  the following graph for one of the kinds of fish (Merlan) by filtering and then graphing the data. 
 
 Filtering for Merlan:
-```{r MarlanData}
+```{r MarlanData, warning = FALSE, message = FALSE}
 MarsFish44 <- 
   Mars %>%
   filter(fish == 44)
 ```
 
 Graphing the Merlan data:
-```{r MerlanPlot}
+```{r MerlanPlot, warning = FALSE, message = FALSE}
 MarsFish44 %>% 
   ggplot(aes(x = weight, y = price)) + 
   geom_point() + 
@@ -103,7 +120,7 @@ MarsFish44 %>%
 ```
 
 We can also run a linear regression just with the filtered Merlan data. 
-```{r MerlanRegressions}
+```{r MerlanRegressions, warning = FALSE, message = FALSE}
 OLSMerlan <- lm(price ~ weight, data = MarsFish44)
 summary(OLSMerlan)
 ```
@@ -120,11 +137,11 @@ Do the following:
 # Multiple regression with dummy variables
 We want to include dummy variables for the different kinds of fish in our regressions. So we need to check whether the fish variable is numeric or a factor. We could `head()` the data and see, but we can also get a "TRUE" or "FALSE" report using the `is.numeric()` or `is.factor()` functions. 
 ```{r}
-is.numeric(Mars$fish)
-is.factor(Mars$fish)
+is.numeric(Mars$fish) #This must be true because I made it numeric
+is.factor(Mars$fish) #This must be false unless you change it
 ```
 
-As you can see, we need to change `fish` into a *factor* variable. 
+As you can see, we need to change `fish` into a *factor* variable because we want to use the factors as dummy variables. 
 
 - How would you do this? 
 - Do the variables have the labels you'd like them to have? (i.e. the names of the fish)
@@ -139,7 +156,7 @@ I would recommend you call the second object `FishLabels` because it corresponds
 
 You will then use the function `factor()` inside the function `mutate()` (which you already know). 
 
-You would then do something like the following (note this won't work because I don't have actual values:)
+You would then do something like the following (note this won't work because I don't have actual values attributed to these objects yet).
 ```{r, eval = FALSE}
 MarsFactorFish <- 
   Mars %>% 
@@ -180,3 +197,5 @@ summary(m3)
 - What does the model say? (that is, interpret the *equation* of the regressionl line)
 - What is an *interaction term*?
 - What do the coefficients on each of the variables mean now?
+
+## References
