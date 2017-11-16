@@ -28,15 +28,32 @@ library(tidyverse)
 Import the data as follows. 
 Notice that this is *different* to how we've historically imported data. This is because the data are in a .txt file and so we can't use `read.csv()`. Instead, we use `read_table()` from the `readr` package in the `tidyverse`. 
 ```{r import Marseille}
-Marseille <- read_table("../more/MARS.txt", col_names = FALSE)
+MarseilleBase <- read_table("../more/MARS.txt", col_names = FALSE)
 ```
 
 Look at the .txt file. Why do you think we had to specify the option `col_names = FALSE`? 
 
-Head the data to look at it (it has an issue in one column I haven't been able to resolve yet, but it's fine for our needs - can you find the issue?):
+`head()` the data to look at it. It has an issue in one column (find the issue)
 ```{r check Marseille}
+head(MarseilleBase)
+```
+
+As you can see, we need to solve this problem. We can do this using the `separate()` function in `dplyr`, which is part of the `tidyverse`.
+```{r}
+Marseille <- 
+  MarseilleBase %>% 
+  separate(X3, c("X3a", "X3b"), sep = 14)
 head(Marseille)
 ```
+
+What did I do above? 
+
+- Create a new data frame called `Marseille`
+- Using the data frame `MarseilleBase`
+- I use `separate` on the variable `X3`
+- I ask `separate` to create two new variables: `X3a` and `X3b`
+- Because the txt file consistently has columns of 14 characters, I ask `separate` to separate the variables at the 14th character
+- I can now work with this and rename my variables sensibly. 
 
 We need to rename the variables to ones that are consistent with what we need to understand: 
 ```{r wrangling1}
@@ -44,7 +61,8 @@ Marseille <-
   Marseille %>%
   rename(sellerb = X1, 
          lot = X2, 
-         nbuyer = X3, 
+         nbuyer = X3a,
+         seller = X3b,
          date = X4, 
          buyerc = X5, 
          fish = X6, 

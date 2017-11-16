@@ -158,7 +158,7 @@ $(document).ready(function () {
 </ul>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(tidyverse)</code></pre></div>
 <p>Import the data as follows. Notice that this is <em>different</em> to how we’ve historically imported data. This is because the data are in a .txt file and so we can’t use <code>read.csv()</code>. Instead, we use <code>read_table()</code> from the <code>readr</code> package in the <code>tidyverse</code>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Marseille &lt;-<span class="st"> </span><span class="kw">read_table</span>(<span class="st">&quot;../more/MARS.txt&quot;</span>, <span class="dt">col_names =</span> <span class="ot">FALSE</span>)</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">MarseilleBase &lt;-<span class="st"> </span><span class="kw">read_table</span>(<span class="st">&quot;../more/MARS.txt&quot;</span>, <span class="dt">col_names =</span> <span class="ot">FALSE</span>)</code></pre></div>
 <pre><code>## Parsed with column specification:
 ## cols(
 ##   X1 = col_character(),
@@ -171,8 +171,8 @@ $(document).ready(function () {
 ##   X8 = col_integer()
 ## )</code></pre>
 <p>Look at the .txt file. Why do you think we had to specify the option <code>col_names = FALSE</code>?</p>
-<p>Head the data to look at it (it has an issue in one column I haven’t been able to resolve yet, but it’s fine for our needs - can you find the issue?):</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(Marseille)</code></pre></div>
+<p><code>head()</code> the data to look at it. It has an issue in one column (find the issue)</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">head</span>(MarseilleBase)</code></pre></div>
 <pre><code>## # A tibble: 6 x 8
 ##      X1    X2                 X3     X4    X5    X6    X7    X8
 ##   &lt;chr&gt; &lt;int&gt;              &lt;chr&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt;
@@ -182,12 +182,36 @@ $(document).ready(function () {
 ## 4   002 18081 GENTY PERTUIS 1002 880105 10080   214   150  6500
 ## 5   002 18085 MONTLAUR      1002 880102 10090   077   205  3600
 ## 6   002 18088 MONTLAUR      1002 880102 10090   044    60  1800</code></pre>
+<p>As you can see, we need to solve this problem. We can do this using the <code>separate()</code> function in <code>dplyr</code>, which is part of the <code>tidyverse</code>.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Marseille &lt;-<span class="st"> </span>
+<span class="st">  </span>MarseilleBase <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">separate</span>(X3, <span class="kw">c</span>(<span class="st">&quot;X3a&quot;</span>, <span class="st">&quot;X3b&quot;</span>), <span class="dt">sep =</span> <span class="dv">14</span>)
+<span class="kw">head</span>(Marseille)</code></pre></div>
+<pre><code>## # A tibble: 6 x 9
+##      X1    X2            X3a   X3b     X4    X5    X6    X7    X8
+##   &lt;chr&gt; &lt;int&gt;          &lt;chr&gt; &lt;chr&gt;  &lt;int&gt; &lt;chr&gt; &lt;chr&gt; &lt;int&gt; &lt;int&gt;
+## 1   002 18064 ESCALE BASTIA   1002 880105 05415   077   110  4000
+## 2   002 18070 ESCALE BASTIA   1002 880105 05415   044   120  2200
+## 3   002 18078 PSS DE L'OPERA  1002 880104 05505   214    90  6500
+## 4   002 18081 GENTY PERTUIS   1002 880105 10080   214   150  6500
+## 5   002 18085 MONTLAUR        1002 880102 10090   077   205  3600
+## 6   002 18088 MONTLAUR        1002 880102 10090   044    60  1800</code></pre>
+<p>What did I do above?</p>
+<ul>
+<li>Create a new data frame called <code>Marseille</code></li>
+<li>Using the data frame <code>MarseilleBase</code></li>
+<li>I use <code>separate</code> on the variable <code>X3</code></li>
+<li>I ask <code>separate</code> to create two new variables: <code>X3a</code> and <code>X3b</code></li>
+<li>Because the txt file consistently has columns of 14 characters, I ask <code>separate</code> to separate the variables at the 14th character</li>
+<li>I can now work with this and rename my variables sensibly.</li>
+</ul>
 <p>We need to rename the variables to ones that are consistent with what we need to understand:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Marseille &lt;-<span class="st"> </span>
 <span class="st">  </span>Marseille <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">rename</span>(<span class="dt">sellerb =</span> X1, 
          <span class="dt">lot =</span> X2, 
-         <span class="dt">nbuyer =</span> X3, 
+         <span class="dt">nbuyer =</span> X3a,
+         <span class="dt">seller =</span> X3b,
          <span class="dt">date =</span> X4, 
          <span class="dt">buyerc =</span> X5, 
          <span class="dt">fish =</span> X6, 
@@ -199,16 +223,16 @@ Mars &lt;-<span class="st"> </span>
          <span class="dt">price =</span> tempb<span class="op">/</span><span class="dv">100</span>, 
          <span class="dt">fish =</span> <span class="kw">parse_number</span>(fish))
 <span class="kw">head</span>(Mars)</code></pre></div>
-<pre><code>## # A tibble: 6 x 10
-##   sellerb   lot             nbuyer   date buyerc  fish tempa tempb weight
-##     &lt;chr&gt; &lt;int&gt;              &lt;chr&gt;  &lt;int&gt;  &lt;chr&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt;  &lt;dbl&gt;
-## 1     002 18064 ESCALE BASTIA 1002 880105  05415    77   110  4000   11.0
-## 2     002 18070 ESCALE BASTIA 1002 880105  05415    44   120  2200   12.0
-## 3     002 18078 PSS DE L'OPERA1002 880104  05505   214    90  6500    9.0
-## 4     002 18081 GENTY PERTUIS 1002 880105  10080   214   150  6500   15.0
-## 5     002 18085 MONTLAUR      1002 880102  10090    77   205  3600   20.5
-## 6     002 18088 MONTLAUR      1002 880102  10090    44    60  1800    6.0
-## # ... with 1 more variables: price &lt;dbl&gt;</code></pre>
+<pre><code>## # A tibble: 6 x 11
+##   sellerb   lot         nbuyer seller   date buyerc  fish tempa tempb
+##     &lt;chr&gt; &lt;int&gt;          &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt;  &lt;chr&gt; &lt;dbl&gt; &lt;int&gt; &lt;int&gt;
+## 1     002 18064 ESCALE BASTIA    1002 880105  05415    77   110  4000
+## 2     002 18070 ESCALE BASTIA    1002 880105  05415    44   120  2200
+## 3     002 18078 PSS DE L'OPERA   1002 880104  05505   214    90  6500
+## 4     002 18081 GENTY PERTUIS    1002 880105  10080   214   150  6500
+## 5     002 18085 MONTLAUR         1002 880102  10090    77   205  3600
+## 6     002 18088 MONTLAUR         1002 880102  10090    44    60  1800
+## # ... with 2 more variables: weight &lt;dbl&gt;, price &lt;dbl&gt;</code></pre>
 <ul>
 <li>DO NOT run the code below yourselves.</li>
 <li>The sample size is huge and we don’t want to overload the server.</li>
@@ -335,15 +359,15 @@ Mars &lt;-<span class="st"> </span>
                                    <span class="dt">levels =</span> FishLevels, 
                                    <span class="dt">labels =</span> FishLabels))</code></pre></div>
 <p>You should get something like the following when you head your data:</p>
-<pre><code>## # A tibble: 6 x 10
-##   sellerb   lot             nbuyer   date buyerc      fish tempa tempb
-##     &lt;chr&gt; &lt;int&gt;              &lt;chr&gt;  &lt;int&gt;  &lt;chr&gt;    &lt;fctr&gt; &lt;int&gt; &lt;int&gt;
-## 1     002 18064 ESCALE BASTIA 1002 880105  05415 Cabillaud   110  4000
-## 2     002 18070 ESCALE BASTIA 1002 880105  05415    Merlan   120  2200
-## 3     002 18078 PSS DE L'OPERA1002 880104  05505      Sole    90  6500
-## 4     002 18081 GENTY PERTUIS 1002 880105  10080      Sole   150  6500
-## 5     002 18085 MONTLAUR      1002 880102  10090 Cabillaud   205  3600
-## 6     002 18088 MONTLAUR      1002 880102  10090    Merlan    60  1800
+<pre><code>## # A tibble: 6 x 11
+##   sellerb   lot         nbuyer seller   date buyerc      fish tempa tempb
+##     &lt;chr&gt; &lt;int&gt;          &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt;  &lt;chr&gt;    &lt;fctr&gt; &lt;int&gt; &lt;int&gt;
+## 1     002 18064 ESCALE BASTIA    1002 880105  05415 Cabillaud   110  4000
+## 2     002 18070 ESCALE BASTIA    1002 880105  05415    Merlan   120  2200
+## 3     002 18078 PSS DE L'OPERA   1002 880104  05505      Sole    90  6500
+## 4     002 18081 GENTY PERTUIS    1002 880105  10080      Sole   150  6500
+## 5     002 18085 MONTLAUR         1002 880102  10090 Cabillaud   205  3600
+## 6     002 18088 MONTLAUR         1002 880102  10090    Merlan    60  1800
 ## # ... with 2 more variables: weight &lt;dbl&gt;, price &lt;dbl&gt;</code></pre>
 </div>
 <div id="fish-factors-in-the-multiple-regression" class="section level2">
