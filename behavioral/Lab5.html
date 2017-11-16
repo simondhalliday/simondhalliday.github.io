@@ -202,10 +202,9 @@ $(document).ready(function () {
 <li>Using the data frame <code>MarseilleBase</code></li>
 <li>I use <code>separate</code> on the variable <code>X3</code></li>
 <li>I ask <code>separate</code> to create two new variables: <code>X3a</code> and <code>X3b</code></li>
-<li>Because the txt file consistently has columns of 14 characters, I ask <code>separate</code> to separate the variables at the 14th character</li>
-<li>I can now work with this and rename my variables sensibly.</li>
+<li>Because the txt file has the names of the buyers limited to 14 characters, I ask <code>separate</code> to separate the variables at the 14th character</li>
+<li>I can now work with this data frame and rename my variables sensibly.</li>
 </ul>
-<p>We need to rename the variables to ones that are consistent with what we need to understand:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">Marseille &lt;-<span class="st"> </span>
 <span class="st">  </span>Marseille <span class="op">%&gt;%</span>
 <span class="st">  </span><span class="kw">rename</span>(<span class="dt">sellerb =</span> X1, 
