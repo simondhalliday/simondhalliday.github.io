@@ -1,0 +1,182 @@
+---
+title: "Lab 5: Dummies, Interactions and Demand for Fish"
+output:
+  html_document:
+    css: ../stylesheets/lab.css
+    highlight: pygments
+    theme: cerulean
+  pdf_document: default
+  bibliography: ../more/fish_bib.bib
+---
+
+## Introduction
+
+In economics, there is a strong history trying to understand market behavior. 
+Properly identifying a market demand function is hard, but various authors have studied fish markets as examples of markets where a relatively homogeneous good (fish) with a short lifespan (its quality deteriorates if not bought promptly) is sold in competitive regional markets, such as the fish markets at Saumaty in Marseille, France or MERITAN in Ancona, Italy. 
+Alan Kirman has been involved in a lot of this work in the past few decades trying to understand the complex interactions that produce market demand functions from not particularly consisten individual demand functions. 
+@hardle95 was one of his first papers to study the Marseille fish market, which he returned to for his book [@kirman2010]. He has also done a variety of work with co-authors on fish markets, such as that on the Ancona fish market [@gallegati12]. 
+Prof Kirman has kindly provided me with the data from his Marseille studies and so we have the opportunity to look at this rather marvellous data set. 
+
+- Go here on Moodle to download the data: [moodle.smith.edu/mod/resource/view.php?id=233898](https://moodle.smith.edu/mod/resource/view.php?id=233898)
+- The codebook to understand what the data means is available on Moodle here: [moodle.smith.edu/mod/resource/view.php?id=233897](https://moodle.smith.edu/mod/resource/view.php?id=233897)  
+
+```{r requirements, message = FALSE, warning = FALSE}
+library(tidyverse)
+```
+
+
+Import the data as follows. 
+Notice that this is *different* to how we've historically imported data. This is because the data are in a .txt file and so we can't use `read.csv()`. Instead, we use `read_table()` from the `readr` package in the `tidyverse`. 
+```{r import Marseille}
+Marseille <- read_table("../more/MARS.txt", col_names = FALSE)
+```
+
+Look at the .txt file. Why do you think we had to specify the option `col_names = FALSE`? 
+
+Head the data to look at it (it has an issue in one column I haven't been able to resolve yet, but it's fine for our needs - can you find the issue?):
+```{r check Marseille}
+head(Marseille)
+```
+
+We need to rename the variables to ones that are consistent with what we need to understand: 
+```{r wrangling1}
+Marseille <- 
+  Marseille %>%
+  rename(sellerb = X1, 
+         lot = X2, 
+         nbuyer = X3, 
+         date = X4, 
+         buyerc = X5, 
+         fish = X6, 
+         tempa = X7, 
+         tempb = X8) 
+Mars <- 
+  Marseille %>%
+  mutate(weight = tempa/10, 
+         price = tempb/100, 
+         fish = parse_number(fish))
+head(Mars)
+```
+
+DO NOT run the code below yourselves (the sample size is huge and I don't know how powerful your laptops are), just look at the plot. What does it suggest?  
+```{r AllFishPlot}
+Mars %>% 
+  ggplot(aes(x = weight, y = price)) + 
+  geom_point() + 
+  stat_smooth(method = "lm", formula = y ~ x, size = 1) +
+  ylim(0, 100)
+```
+
+- What does the line correspond to? 
+- What kind of pattern are you able to see? 
+
+## A basic linear regression
+Notice that you can run a linear regression with the whole sample of fish: 
+```{r}
+m1 <- lm(price ~ weight, data = Mars)
+summary(m1)
+```
+
+- What is the sign on the coefficient for weight? 
+- What is weight's significance? 
+- What does the relationship mean in terms of economic theory? 
+
+## Filtering the Fish
+Consult the Marseille Data Description document to check what the different kinds of fish are. 
+
+I have generated  the following graph for one of the kinds of fish (Merlan) by filtering and then graphing the data. 
+
+Filtering for Merlan:
+```{r MarlanData}
+MarsFish44 <- 
+  Mars %>%
+  filter(fish == 44)
+```
+
+Graphing the Merlan data:
+```{r MerlanPlot}
+MarsFish44 %>% 
+  ggplot(aes(x = weight, y = price)) + 
+  geom_point() + 
+  stat_smooth(method = "lm", formula = y ~ x, size = 1) +
+  ylim(0, 100)
+```
+
+We can also run a linear regression just with the filtered Merlan data. 
+```{r MerlanRegressions}
+OLSMerlan <- lm(price ~ weight, data = MarsFish44)
+summary(OLSMerlan)
+```
+
+Do the following: 
+
+- Choose a fish in which you are interested and construct a data frame that contains only that kind of fish.
+- Construct a plot for that fish's quantity-price observations
+- Run a linear regression model of that fish's price-quantity relationship
+- Summarize the regression output. 
+- Submit your html of this later. 
+
+
+# Multiple regression with dummy variables
+We want to include dummy variables for the different kinds of fish in our regressions. So we need to check whether the fish variable is numeric or a factor. We could `head()` the data and see, but we can also get a "TRUE" or "FALSE" report using the `is.numeric()` or `is.factor()` functions. 
+```{r}
+is.numeric(Mars$fish)
+is.factor(Mars$fish)
+```
+
+As you can see, we need to change `fish` into a *factor* variable. 
+
+- How would you do this? 
+- Do the variables have the labels you'd like them to have? (i.e. the names of the fish)
+- Is there a way to remedy this? 
+
+### Some ideas for factors
+We need to take the information from the Marseille Data Details document and create two sets of columns using the following idea: `ObjectName <- c(content1, content2, ..., contentn)`. 
+
+I would recommend you call the one object (with the numbers) `FishLevels` because it corresponds to the *levels* of your factor variable. 
+
+I would recommend you call the second object `FishLabels` because it corresponds to the *labels* of the fish that you want. 
+
+You will then use the function `factor()` inside the function `mutate()` (which you already know). 
+
+You would then do something like the following (note this won't work because I don't have actual values:)
+```{r, eval = FALSE}
+MarsFactorFish <- 
+  Mars %>% 
+  mutate(fishvariablename = factor(fishvariablename, 
+                                   levels = FishLevels, 
+                                   labels = FishLabels))
+```
+
+
+You should get something like the following when you head your data: 
+```{r re_factor, echo = FALSE}
+FishLabels <- c("Merlan", "Carrelet", "Cabillaud", "Loup/Bar", " Raie Ange", "Raie (Entiere)", "Sole", "Turbot", "Cabillaud (Tranches)", "Sole (Filet)", "Annarrhyque (Filets)", "Loup (Filets)")
+FishLevels <- c(44, 62, 77, 122, 204, 205, 214, 244, 285, 289, 314, 315)
+Mars <- 
+  Mars %>%
+  mutate(fish = factor(fish, 
+                       levels = FishLevels, 
+                       labels = FishLabels))
+head(Mars)
+```
+
+## Fish Factors in the Multiple Regression
+Now, include the fish variables as factors in our regression 
+```{r model_dummies}
+m2 <- lm(price ~ weight + fish, data = Mars)
+summary(m2)
+```
+
+- What do the different coefficients on the categorical (dummy) variables mean? 
+- Can you provide new output for the fish regressions using stargazer? 
+
+
+```{r model_interaction}
+m3 <- lm(price ~ weight + fish + weight*fish, data = Mars)
+summary(m3)
+```
+
+- What does the model say? (that is, interpret the *equation* of the regressionl line)
+- What is an *interaction term*?
+- What do the coefficients on each of the variables mean now?
