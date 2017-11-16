@@ -37,7 +37,7 @@ Taking](https://moodle.smith.edu/mod/resource/view.php?id=233978)", *Feminist Ec
 Wrap up Gender, some R, and project work
 
 - Nelson (2016) slides [here](nelson)
-- Go here for the initial Marseille exercise guide: [Lab5](Lab5)
+- Go here for the [Lab5](Lab5)
 - Go here on Moodle to download the data: [moodle.smith.edu/mod/resource/view.php?id=233898](https://moodle.smith.edu/mod/resource/view.php?id=233898)
 - The codebook or data description to understand what the data means is available on Moodle here: [moodle.smith.edu/mod/resource/view.php?id=233897](https://moodle.smith.edu/mod/resource/view.php?id=233897) 
 
