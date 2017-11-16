@@ -184,7 +184,7 @@ MarsFactorFish <-
 
 
 You should get something like the following when you head your data: 
-```{r re_factor, echo = FALSE}
+```{r re_factor, echo = TRUE}
 FishLabels <- c("Merlan", "Carrelet", "Cabillaud", "Loup/Bar", " Raie Ange", "Raie (Entiere)", "Sole", "Turbot", "Cabillaud (Tranches)", "Sole (Filet)", "Annarrhyque (Filets)", "Loup (Filets)")
 FishLevels <- c(44, 62, 77, 122, 204, 205, 214, 244, 285, 289, 314, 315)
 Mars <- 

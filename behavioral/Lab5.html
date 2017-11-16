@@ -358,6 +358,14 @@ Mars &lt;-<span class="st"> </span>
                                    <span class="dt">levels =</span> FishLevels, 
                                    <span class="dt">labels =</span> FishLabels))</code></pre></div>
 <p>You should get something like the following when you head your data:</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">FishLabels &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="st">&quot;Merlan&quot;</span>, <span class="st">&quot;Carrelet&quot;</span>, <span class="st">&quot;Cabillaud&quot;</span>, <span class="st">&quot;Loup/Bar&quot;</span>, <span class="st">&quot; Raie Ange&quot;</span>, <span class="st">&quot;Raie (Entiere)&quot;</span>, <span class="st">&quot;Sole&quot;</span>, <span class="st">&quot;Turbot&quot;</span>, <span class="st">&quot;Cabillaud (Tranches)&quot;</span>, <span class="st">&quot;Sole (Filet)&quot;</span>, <span class="st">&quot;Annarrhyque (Filets)&quot;</span>, <span class="st">&quot;Loup (Filets)&quot;</span>)
+FishLevels &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">44</span>, <span class="dv">62</span>, <span class="dv">77</span>, <span class="dv">122</span>, <span class="dv">204</span>, <span class="dv">205</span>, <span class="dv">214</span>, <span class="dv">244</span>, <span class="dv">285</span>, <span class="dv">289</span>, <span class="dv">314</span>, <span class="dv">315</span>)
+Mars &lt;-<span class="st"> </span>
+<span class="st">  </span>Mars <span class="op">%&gt;%</span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">fish =</span> <span class="kw">factor</span>(fish, 
+                       <span class="dt">levels =</span> FishLevels, 
+                       <span class="dt">labels =</span> FishLabels))
+<span class="kw">head</span>(Mars)</code></pre></div>
 <pre><code>## # A tibble: 6 x 11
 ##   sellerb   lot         nbuyer seller   date buyerc      fish tempa tempb
 ##     &lt;chr&gt; &lt;int&gt;          &lt;chr&gt;  &lt;chr&gt;  &lt;int&gt;  &lt;chr&gt;    &lt;fctr&gt; &lt;int&gt; &lt;int&gt;
