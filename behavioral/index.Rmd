@@ -34,12 +34,12 @@ Taking](https://moodle.smith.edu/mod/resource/view.php?id=233978)", *Feminist Ec
 
 ### Thursday 16 November 
 
-Project work, wrap up Gender & some R 
+Wrap up Gender, some R, and project work
 
-- Go here for the initial Marseille exercise guide: [marseille](marseille)
-- Download the description of the data here [https://moodle.smith.edu/mod/resource/view.php?id=51529](https://moodle.smith.edu/mod/resource/view.php?id=51529)
-- And the data itself as a .txt file here: [https://moodle.smith.edu/mod/resource/view.php?id=51530](https://moodle.smith.edu/mod/resource/view.php?id=51530)
-
+- Nelson (2016) slides [here](nelson)
+- Go here for the initial Marseille exercise guide: [Lab5](Lab5)
+- Go here on Moodle to download the data: [moodle.smith.edu/mod/resource/view.php?id=233898](https://moodle.smith.edu/mod/resource/view.php?id=233898)
+- The codebook or data description to understand what the data means is available on Moodle here: [moodle.smith.edu/mod/resource/view.php?id=233897](https://moodle.smith.edu/mod/resource/view.php?id=233897) 
 
 
 ## Week 12: Happiness and Utility

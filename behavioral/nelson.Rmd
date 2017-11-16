@@ -1,0 +1,81 @@
+---
+title: "Nelson (2016): Evidence for Risk-Taking"
+author: "Simon Halliday"
+date: "2017-November -16"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+#knitr::opts_chunk$set(fig.width = 6, fig.height = 4) 
+```
+
+## Published evidence on differences
+
+- Croson & Gneezy (2009) argued for several differences in preferences across genders, but caveats: 
+    - women were more variable than men and
+    - women more responsive to cues/design than men
+- Gneezy & List (2012) says there's even more evidence for gender differences in risk-taking 
+- Nelson (2016) says these risk-taking differences are basically *negligible* and don't pay sufficient attention to *distribution*
+
+
+## What does "difference" mean? 
+
+    
+```{r, fig.align = "center"}
+knitr::include_graphics("../more/xychromosome1.png")
+```
+
+    
+## GDI: Individual
+- GDI: Gender difference at the individual level
+    - *categorical* difference between men & women
+    - X/Y chromosomal differences by sex (biological difference)
+    - what about social/cultural differences? hair length/clothing? 
+
+## GDI: Individual?
+```{r, echo = FALSE, fig.height = 3, fig.width = 3, fig.align = "center"}
+knitr::include_graphics("../more/lobotomy.jpg")
+```
+
+## GDA Aggregate?
+- GDA: Gender difference at the aggregate level 
+    - difference at aggregate, group, or distributional level, 
+    - such as a difference between men’s and women’s average x values 
+- Explanation?
+    - smaller cross-group difference ($\bar{X_M} - \bar{X_F}$), 
+    - the larger the variability or spread within each group $Var(M)$ and $Var(F)$
+    - $\Rightarrow$ more overlap 
+    - less the GDA $\rightarrow$ GDI
+    
+## GDA Aggregate?    
+```{r, fig.align = "center", fig.height = 6, fig.width = 4}
+knitr::include_graphics("../more/nelsonfigure.png")
+```    
+    
+## Ways to assess? Cohen's d: 
+
+$$d = \frac{\bar{X_m} - \bar{X_f}}{\sigma_{pooled}} $$
+
+- $\bar{X_m}$ Male average 
+- $\bar{X_f}$ Female average 
+- $\sigma_{pooled}$ pooled standard deviation (within-group variation)
+- Also use "Common Language Effect Size (CLEF)": 
+    - probability  a randomly chosen man would score higher than a randomly chosen woman
+
+## Interpretation
+
+```{r}
+knitr::include_graphics("../more/nelsontable1.png")
+```
+
+## Results? 
+
+Nelson looks at the original data in Gneezy & List (2012): 
+ 
+- majority of differences found have confidence interval (CI) including $d = 0$
+- few have CI including $d = 2$ 
+- none have CI including $d = 3$
+- take-home messages? 
+    - be careful when talking about difference
+    - present distribution figures
