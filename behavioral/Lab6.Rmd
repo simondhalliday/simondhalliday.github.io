@@ -171,6 +171,7 @@ W6Happy %>%
   labs(title = "Self-reported happiness", 
        subtitle = "Source: World Values Survey, Wave 6, 2010-14")
 ```
+
 Are the results of this for *all* countries credible?
 
 I don't believe the outcome for Egypt (EG), I'm going to filter that country out for argument's sake and re-do the figure. You can check the other country codes [here](http://www.nationsonline.org/oneworld/country_code_list.htm).
@@ -187,6 +188,7 @@ W6Happy %>%
   labs(title = "Self-reported happiness", 
        subtitle = "Source: World Values Survey, Wave 6, 2010-14")
 ```
+
 This looks much more worthwhile and the trend is relevant without the outlier of Egypt. Even so, some of the answers beggar belief. For example, I don't really believe the results for Iraq (IQ). 
 
 1. Change the wave of the survey and see what looks different about the results over time. 
