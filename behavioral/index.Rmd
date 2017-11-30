@@ -17,73 +17,16 @@ output: html_document
 - Sign up for topics, share notes, and look at questions [here](topics_notes_questions). 
 - Experiment report [guidelines](exp_reports)
 
-
-
-## Week 11: Gender and Preferences
-
-We consider the evidence for *average* differences using gender as a category. We consider whether statistically significant differences on average imply *substantive* differences in practice or policy. 
-
-### Tuesday 14 November
-Reading 
-
-- Rachel Croson and Uri Gneezy, 2009, "[Gender Differences in Preferences](https://moodle.smith.edu/mod/resource/view.php?id=233976)," *Journal of Economic Literature*, 47 (2): 1–27  (22 pages)
-- Julie A. Nelson, 2016, "[Not-So-Strong Evidence for Gender Differences in Risk
-Taking](https://moodle.smith.edu/mod/resource/view.php?id=233978)", *Feminist Economics*, 22 (2): 114-142. (26 pages)
-- Slides for Croson & Gneezy are [here](https://moodle.smith.edu/mod/resource/view.php?id=264612)
-
-
-### Thursday 16 November 
-
-Wrap up Gender, some R, and project work
-
-- Nelson (2016) slides [here](nelson)
-- Go here for the [Lab5](Lab5)
-- Go here on Moodle to download the data: [moodle.smith.edu/mod/resource/view.php?id=233898](https://moodle.smith.edu/mod/resource/view.php?id=233898)
-- The codebook or data description to understand what the data means is available on Moodle here: [moodle.smith.edu/mod/resource/view.php?id=233897](https://moodle.smith.edu/mod/resource/view.php?id=233897) 
-
-
-## Week 12: Happiness and Utility
-
-### Tuesday 21 November
-
-Reading 
-
-- Cartwright, Chapter 10, up to the end of section 10.4. 
-- Daniel Kahneman and Alan Krueger, "[Developments in the Measurement of Subjective Well-Being](https://moodle.smith.edu/mod/resource/view.php?id=233860)," Journal of Economic Perspectives, 2006, Vol. 20 (1) 3-24, (20 pages).
-- Betsey Stevenson and Justin Wolfers, 2013. "[Subjective Well-Being and Income: Is There Any Evidence of Satiation?](https://moodle.smith.edu/mod/resource/view.php?id=233969)," American Economic Review, American Economic Association, vol. 103(3), pages 598-604, May (5 pages)
-
-Watch
-
-- Daniel Kahneman, "[The riddle of experience vs. memory](http://www.ted.com/talks/daniel_kahneman_the_riddle_of_experience_vs_memory.html)," TED, 2010. (Video, 20 minutes)
-
-Homework
-
-- We are going to to do an exercise with the World Values survey here: 
-[http://simondhalliday.github.io/eco254/fall_2015/activities/wvs/wvs](http://simondhalliday.github.io/eco254/fall_2015/activities/wvs/wvs)
-
-
-### Thanksgiving break
-Have a splendid time while you're away for 11/22 to 11/26. 
-
-
 ## Week 13: Policy and Manipulation
 
 ### Tuesday 28 November 
-
-### Thursday 30 November 
-
-Reading
-
 - Cartwright Chapter 11. 
 - Chetty, Raj, 2015, "[Behavioral Economics and Public Policy: A Pragmatic Perspective](https://moodle.smith.edu/mod/resource/view.php?id=233704)," *American Economic Review: Papers & Proceedings*, 105 (5): 1-33, (30 pages)
 - Bhargava and Loewenstein, 2015, "[Behavioral Economics and Public Policy 102: Beyond Nudging](https://moodle.smith.edu/mod/resource/view.php?id=233862)", *American Economic Review: Papers & Proceedings*, 105 (5): 396–401
 
-Cases 
+### Thursday 30 November 
 
-- TBC
-- TBC
-
-
+- We are going to to do an exercise with the World Values survey here for [Lab6](Lab6)
 
 
 ## Week 14
@@ -495,4 +438,50 @@ And you can download the project template file [here](https://moodle.smith.edu/m
 - Discuss Cappelen et al. 
 - See slides [here](social_prefs_addendum.html)
 - Time for the midterm in class
+
+
+
+## Week 11: Gender and Preferences
+
+We consider the evidence for *average* differences using gender as a category. We consider whether statistically significant differences on average imply *substantive* differences in practice or policy. 
+
+### Tuesday 14 November
+Reading 
+
+- Rachel Croson and Uri Gneezy, 2009, "[Gender Differences in Preferences](https://moodle.smith.edu/mod/resource/view.php?id=233976)," *Journal of Economic Literature*, 47 (2): 1–27  (22 pages)
+- Julie A. Nelson, 2016, "[Not-So-Strong Evidence for Gender Differences in Risk
+Taking](https://moodle.smith.edu/mod/resource/view.php?id=233978)", *Feminist Economics*, 22 (2): 114-142. (26 pages)
+- Slides for Croson & Gneezy are [here](https://moodle.smith.edu/mod/resource/view.php?id=264612)
+
+
+### Thursday 16 November 
+
+Wrap up Gender, some R, and project work
+
+- Nelson (2016) slides [here](nelson)
+- Go here for the [Lab5](Lab5)
+- Go here on Moodle to download the data: [moodle.smith.edu/mod/resource/view.php?id=233898](https://moodle.smith.edu/mod/resource/view.php?id=233898)
+- The codebook or data description to understand what the data means is available on Moodle here: [moodle.smith.edu/mod/resource/view.php?id=233897](https://moodle.smith.edu/mod/resource/view.php?id=233897) 
+
+
+## Week 12: Happiness and Utility
+
+### Tuesday 21 November
+
+Reading 
+
+- Cartwright, Chapter 10, up to the end of section 10.4. 
+- Daniel Kahneman and Alan Krueger, "[Developments in the Measurement of Subjective Well-Being](https://moodle.smith.edu/mod/resource/view.php?id=233860)," Journal of Economic Perspectives, 2006, Vol. 20 (1) 3-24, (20 pages).
+- Betsey Stevenson and Justin Wolfers, 2013. "[Subjective Well-Being and Income: Is There Any Evidence of Satiation?](https://moodle.smith.edu/mod/resource/view.php?id=233969)," American Economic Review, American Economic Association, vol. 103(3), pages 598-604, May (5 pages)
+
+Watch
+
+- Daniel Kahneman, "[The riddle of experience vs. memory](http://www.ted.com/talks/daniel_kahneman_the_riddle_of_experience_vs_memory.html)," TED, 2010. (Video, 20 minutes)
+
+Homework
+
+
+
+### Thanksgiving break
+Have a splendid time while you're away for 11/22 to 11/26. 
 
