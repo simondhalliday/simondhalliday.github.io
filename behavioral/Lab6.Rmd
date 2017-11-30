@@ -1,0 +1,196 @@
+---
+title: "Lab 6: Happiness in the World Values Survey"
+author: "Simon Halliday"
+date: "ECO254, Fall 2017"
+output:
+  html_document:
+    css: ../stylesheets/lab.css
+    highlight: pygments
+    theme: cerulean
+#bibliography: ../more/fish_bib.bib
+#biblio-style: chicago 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load required packages
+```{r requirements, message = FALSE}
+library(tidyverse)
+library(mosaic)
+```
+
+
+## The WVS Data
+First, go to the World Value Survey site to see what we'll be working with. Don't download anything: [http://www.worldvaluessurvey.org/WVSContents.jsp](http://www.worldvaluessurvey.org/WVSContents.jsp).
+
+The World Value survey data is a BIG file. We have it accessible to us in a shared folder we can get through the R Studio Server. Alternatively, if you want to use RStudio on your laptop, you can download it from Moodle here:[https://moodle.smith.edu/mod/resource/view.php?id=233901](https://moodle.smith.edu/mod/resource/view.php?id=233901). 
+If you download it from Moodle, you will then need to *unzip* the file in the folder you plan to use. 
+
+Once you have done that, you will notice that it is a kind of file that we haven't used before, an .rdata file. These are data files specific to R. We haven't ever had to load an .rdata file before, so let's do that using the function `load()`. 
+
+The file's name is "WVS_Longitudinal_1981_2014_R_v2015_04_18.Rdata" make sure you use the right file path to the data. 
+
+```{r, echo = FALSE}
+load("../more/WVS_Longitudinal_1981_2014_R_v2015_04_18.Rdata")
+```
+
+```{r, eval = FALSE}
+load("/Users/openshare/WVS_Longitudinal_1981_2014_R_v2015_04_18.rdata")
+```
+
+
+Running this command will take some time because the file is BIG! (really, it may take up to 5 minutes or so).
+
+Now, to make it easier to work with, rename the data object:
+```{r}
+WVS <- WVS_Longitudinal_1981_2014_R_v2015_04_18
+```
+
+
+What can we do to look at this data? 
+
+- **Don't** just doubleclick on it to view it. 
+- **Don't** type `View()`
+
+We can consider some other ideas
+- `head()` the data
+```{r head, eval = FALSE}
+head(WVS)
+```
+What happens? 
+
+- What about finding out the structure of it with `str()`?
+```{r structure, eval = FALSE}
+str(WVS)
+```
+
+What I would suggest you do is the following: 
+
+- Take a look at the questionnaire (download from Moodle): [https://moodle.smith.edu/mod/resource/view.php?id=2339022](https://moodle.smith.edu/mod/resource/view.php?id=233902)
+- Look at the variable Codebook (download from Moodle): [https://moodle.smith.edu/mod/resource/view.php?id=233903](https://moodle.smith.edu/mod/resource/view.php?id=233903)
+- Find a variable in which you're interested (really, anything)
+
+## What to do after looking at the codebook & questionnaire
+See if you can do the following as an exercise:
+
+- What I would suggest you do is think about whether you could `select()` a variable (or two) in which you're interested. 
+- Can you then think about how you need to `mutate()` that variable to do some data analysis with it? (what are its values, are all of them useful?)
+- Can you do a `favstats()` to get a sense of what it looks like? (remember to load the DataComputing package to do this.) What do you get if you can do that command? What would you want to look at otherwise?
+- Could you do a `ggplot()` to do some kind of scatter plot/bar chart of the variable in which you're interested? What would be a useful way to visualize the data? 
+
+## Case Study in Cleaning Data: Happiness 
+For example, here's one variable, A008, for the question: 
+"Taking all things together, would you say you are (fill in the value)
+
+-. Very happy
+-. Rather happy
+-. Not very happy
+-. Not at all happy"
+I looked in the codebook, and it's listed as variable `A008`. So I look for it and select it, then head the data. 
+
+```{r wvshappy}
+WVSfeelhappy <- 
+  WVS %>%
+  select(A008)
+head(WVSfeelhappy)
+```
+
+I can then run `favstats()` on the variable
+```{r favstats}
+favstats(~A008, data = WVSfeelhappy)
+```
+
+That doesn't tell me much, because I need to edit the variable because it has values I can't interpret like -5. I need to filter the data too. You could theoretically do that with your variable.   
+
+Notice, though, that I've lost all the *country* data. So I really need to `select()` another variable too before I only select A008. I want to have the variables for the country (S009A) and for the Wave of the Survey (S002). Working with a smaller data table is always much faster, so it's easier just to select those three variables for now. 
+
+```{r select_again}
+WVSfeelhappy <- 
+  WVS %>%
+  select(S009A, S002, A008)
+```
+
+Now `head()` the data table and `favstats()` the variable A008. Again. Another tool I'd recommend to diagnose issues with data is just a straight plot of the data. We can plot the frequencies of the different reported values by using `geom_bar()` in `ggplot()`:
+
+```{r}
+WVSfeelhappy %>% 
+  ggplot(aes(x = factor(A008))) + #I tell it to treat A008 as a factor here
+  geom_bar()
+```
+Notice we have values of -5 through -1 that aren't too useful to us. We want to recode these as missing values by telling R they are NA. 
+
+We can do that by using `mutate()` in combination with the function `ifelse()` which is a logical string that says to test if something is true, then take a value if this is true, and another value if it is false. 
+
+So `ifelse(test, yes, no)`. 
+```{r mutate_happy}
+WVSfeelhappy <- 
+  WVSfeelhappy %>%
+  mutate(happy = ifelse(A008 %in% c(-5, -4, -2, -1), NA, A008))
+```
+
+Now we're going to ggplot again, but we don't want a ggplot of the missing (NA) values for now, so we filter them out. 
+```{r ggplot2}
+WVSfeelhappy %>% 
+  filter(happy != is.na(happy)) %>%
+  ggplot(aes(x = happy)) + 
+  geom_bar()
+```
+
+Now that we have good values of the variable we want, we can now start to have fun with the data. 
+
+## Graphing mean happiness by country
+For example, we can find the mean reported happiness grouping by country and the wave of the survey. Notice, though, that if someone doesn't report a value, for the moment we're going to tell R to ignore that missing value when computing the mean value of happiness. To do this, we tell R to add the option `na.rm = TRUE` to the call to the function `mean()`. This *removes* the missing values from the computation of the mean. 
+
+```{r summary_happiness}
+WaveCountryAves <- 
+  WVSfeelhappy %>% 
+  group_by(S009A, S002) %>%
+  summarise(meanhappy = mean(happy, na.rm = TRUE))
+head(WaveCountryAves)
+```
+
+Now, let's select the most recent wave of the survey, wave 6:
+```{r}
+W6Happy <- 
+  WaveCountryAves %>%
+  filter(S002 == 6)
+```
+
+And now we can plot the mean reported happiness for each country within the specific wave. Also, to make the figure inteligible I've *reordered* the x-axis by the mean value of mean reported happiness. If you're interested, you can remove that part of the code to see what would happen instead. I've also added some additional details. I've asked `ggplot()` to switch the x-axis so that each label is at 90 degree to the axis and the size of the font is 9 points. I've also added a title and subtitle. 
+
+```{r}
+W6Happy %>% 
+  ggplot(aes(x = reorder(S009A, meanhappy), y = meanhappy)) + 
+  geom_point() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1), 
+        text = element_text(size = 9)) + 
+  xlab("Country") + 
+  ylab("Mean Reported Happiness Value") + 
+  labs(title = "Self-reported happiness", 
+       subtitle = "Source: World Values Survey, Wave 6, 2010-14")
+```
+Are the results of this for *all* countries credible?
+
+I don't believe the outcome for Egypt (EG), I'm going to filter that country out for argument's sake and re-do the figure. You can check the other country codes [here](http://www.nationsonline.org/oneworld/country_code_list.htm).
+
+```{r}
+W6Happy %>% 
+  filter(S009A != "EG") %>%
+  ggplot(aes(x = reorder(S009A, meanhappy), y = meanhappy)) + 
+  geom_point() + 
+  theme(axis.text.x = element_text(angle = 90, hjust = 1), 
+        text = element_text(size = 9)) + 
+  xlab("Country") + 
+  ylab("Mean Reported Happiness Value") + 
+  labs(title = "Self-reported happiness", 
+       subtitle = "Source: World Values Survey, Wave 6, 2010-14")
+```
+This looks much more worthwhile and the trend is relevant without the outlier of Egypt. Even so, some of the answers beggar belief. For example, I don't really believe the results for Iraq (IQ). 
+
+1. Change the wave of the survey and see what looks different about the results over time. 
+2. Alternatively, considering creating faceted graphs by wave (this would give you 6 figures). 
+
+
+
