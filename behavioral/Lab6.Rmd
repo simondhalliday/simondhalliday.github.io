@@ -84,10 +84,10 @@ See if you can do the following as an exercise:
 For example, here's one variable, A008, for the question: 
 "Taking all things together, would you say you are (fill in the value)
 
--. Very happy
--. Rather happy
--. Not very happy
--. Not at all happy"
+- Very happy
+- Rather happy
+- Not very happy
+- Not at all happy"
 I looked in the codebook, and it's listed as variable `A008`. So I look for it and select it, then head the data. 
 
 ```{r wvshappy}
@@ -172,9 +172,7 @@ W6Happy %>%
        subtitle = "Source: World Values Survey, Wave 6, 2010-14")
 ```
 
-Are the results of this for *all* countries credible?
-
-I don't believe the outcome for Egypt (EG), I'm going to filter that country out for argument's sake and re-do the figure. You can check the other country codes [here](http://www.nationsonline.org/oneworld/country_code_list.htm).
+Are the results of this for *all* countries credible? The values for Egypt (EG) are messing with our interpretation, so I'm going to filter Egypt, so I'm going to filter that country out for argument's sake and re-do the figure. You can check the other country codes [here](http://www.nationsonline.org/oneworld/country_code_list.htm).
 
 ```{r}
 W6Happy %>% 
@@ -189,7 +187,7 @@ W6Happy %>%
        subtitle = "Source: World Values Survey, Wave 6, 2010-14")
 ```
 
-This looks much more worthwhile and the trend is relevant without the outlier of Egypt. Even so, some of the answers beggar belief. For example, I don't really believe the results for Iraq (IQ). 
+This looks much more worthwhile and the trend is relevant without the outlier of Egypt. Even so, some of the answers beggar belief. For example, the results for Iraq (IQ) are really saddening. Remember that the *higher* the score, the *less* happy people are. 
 
 1. Change the wave of the survey and see what looks different about the results over time. 
 2. Alternatively, considering creating faceted graphs by wave (this would give you 6 figures). 
