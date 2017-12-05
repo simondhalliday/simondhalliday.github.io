@@ -1,0 +1,124 @@
+---
+title: "The Behavioralist Visits the Factory"
+subtitle: "Hossain and List (2009/12)"
+author: "Simon Halliday"
+date: "Fall 2017"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Story so far? 
+
+*How* a decision is presented affects people's actions 
+
+- endowment effect
+- status quo bias 
+- WTP $\neq$ WTA
+- loss aversion 
+
+Lots of evidence from the laboratory, less from the "field".
+
+Also, less evidence (though some) from "economically relevant" decisions. 
+
+## What do haters say? 
+
+These phenomena are explained by...
+
+- bad experimental design 
+- people who don't or haven't had time to learn
+
+## Enter Hossain & List
+
+- Data from a natural field experiment at Wanlida Group. 
+- Wanlida $\Rightarrow$ top 100 electronics manufacturers
+
+```{r, fig.align = "center"}
+knitr::include_graphics("../more/wanlida.jpg")
+```
+
+## Treatments
+
+- "Reward/Gain": "positive frame" -- if the week's average per-hour production *reaches* a threshold, a *bonus* is paid at the end of the pay period. Weekly bonus = RMB 80.
+- "Punishment/Loss": "negative frame" -- employees *provisionally given* the bonus *before* the week begins, if the week's average per-hour production *fails to reach* a threshold, the *bonus* is taken away at the end of the pay period. Weekly bonus = RMB 80.
+- "Gift": just a control (also company wanted it): one-time four-week bonus of RMB 320
+
+## Main Results 
+
+1. Bonuses (of either type) increase productivity for groups and individuals. 
+2. Punishment/Loss frame outperforms the gain frame for groups and individuals (less robust) $\Rightarrow$ an $\uparrow$ of 1% of production (this is economically significant) at low marginal cost
+3. Effects are stronger for groups than individuals. 
+4. Effects persist for whole period of study (long-term).
+
+## Implications and Significance
+
+1. Incentives are powerful & behavioral econ has a role in the workplace. 
+2. Results complement industrial psch & expand toolset of practitioners. 
+3. Social structure & institutions affect/constrain how people act in the workplace. 
+
+## Institutional Detail 
+
+- Teams of workers (14 people) engaged in relatively flexible production 
+- Individual inspectors (of products) involved in incentive schemes too
+- Can compare pre- and post-experiment: 
+    - *productivity* in terms of output (DVD chips)
+    - *quality* of productivity with error rate
+- 4 weeks in a treatment; 1 week after a treatment ended
+
+
+## Additional desing issues
+
+- all payments made to all teams at the same time
+    - improves credibility
+    - limits time preference concerns
+- compare *within* and *between* observations
+    - same observation exposed to multiple treatments 
+- workers didn't know about experiment
+- management wanted targets achieved in 60-80% of cases (morale)
+    - targets calibrated with pre-experiment data 
+- minimized information transmission between groups
+
+## Overall productivity 
+```{r, fig.align = "center"}
+knitr::include_graphics("../more/list_ind_prod.png")
+```
+
+## Defect rate
+```{r, fig.align = "center"}
+knitr::include_graphics("../more/list_defect_rate.png")
+```
+
+
+## Group effects over time
+```{r, fig.align = "center"}
+knitr::include_graphics("../more/list_groups.png")
+```
+
+    
+## Individual effect over time
+```{r, fig.align = "center"}
+knitr::include_graphics("../more/list_individuals.png")
+```
+
+
+## Discussion & Conclusion 
+
+- Find strong treatment effects among teams of workers 
+- Stronger effect for teams than individuals means how groups are formed is important: "collective esteem" in a group; "group polarization"; 
+    - people are worried about letting team members down
+    - workers in loss frame may be extra careful not to cost the team the bonus
+    - large groups more likely to contain a very loss averse person
+    
+## Profitability
+
+- Where incentives *profitable* for the firm? Yes!
+    - Quality rate remained constant
+    - Cost of incentives: RMB 64,960; 
+    - To hire more workers for same output would have cost about RMB 69,900
+- What about permanently adopting the bonuses/penalties? 
+    - long-run effects of incentives 
+    - no 'trend' in the effects; remain constant throughout study
+
+Take home messsage: Behavioral econ can play a big role in improving productivity and profitability within firms. 
