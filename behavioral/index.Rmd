@@ -17,16 +17,7 @@ output: html_document
 - Sign up for topics, share notes, and look at questions [here](topics_notes_questions). 
 - Experiment report [guidelines](exp_reports)
 
-## Week 13: Policy and Manipulation
 
-### Tuesday 28 November 
-- Cartwright Chapter 11. 
-- Chetty, Raj, 2015, "[Behavioral Economics and Public Policy: A Pragmatic Perspective](https://moodle.smith.edu/mod/resource/view.php?id=233704)," *American Economic Review: Papers & Proceedings*, 105 (5): 1-33, (30 pages)
-- Bhargava and Loewenstein, 2015, "[Behavioral Economics and Public Policy 102: Beyond Nudging](https://moodle.smith.edu/mod/resource/view.php?id=233862)", *American Economic Review: Papers & Proceedings*, 105 (5): 396–401
-
-### Thursday 30 November 
-
-- We are going to to do an exercise with the World Values survey here for [Lab6](Lab6)
 
 
 ## Week 14
@@ -35,7 +26,7 @@ output: html_document
 Read 
 
 - Tanjim Hossain and John List, 2012, "[The Behavioralist Visits the Factory: Increasing Productivity Using Simple Framing Manipulations](https://moodle.smith.edu/mod/resource/view.php?id=243595)," *Management Science* 58 (12): 2151 - 2167 (X pages). Note: We will use the [NBER version](https://moodle.smith.edu/mod/resource/view.php?id=243595) of this paper because the Management Science version isn't available to us yet through our online resources. 
-
+- Slide are [here](factory.html)
 
 ### Thursday 7 December
 
@@ -485,3 +476,13 @@ Homework
 ### Thanksgiving break
 Have a splendid time while you're away for 11/22 to 11/26. 
 
+## Week 13: Policy and Manipulation
+
+### Tuesday 28 November 
+- Cartwright Chapter 11. 
+- Chetty, Raj, 2015, "[Behavioral Economics and Public Policy: A Pragmatic Perspective](https://moodle.smith.edu/mod/resource/view.php?id=233704)," *American Economic Review: Papers & Proceedings*, 105 (5): 1-33, (30 pages)
+- Bhargava and Loewenstein, 2015, "[Behavioral Economics and Public Policy 102: Beyond Nudging](https://moodle.smith.edu/mod/resource/view.php?id=233862)", *American Economic Review: Papers & Proceedings*, 105 (5): 396–401
+
+### Thursday 30 November 
+
+- We are going to to do an exercise with the World Values survey here for [Lab6](Lab6)
