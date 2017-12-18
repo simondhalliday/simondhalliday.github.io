@@ -24,13 +24,13 @@ library(tidyverse)
 ## Context
 Evidence in experimental and behavioral economics suggests the following: 
 
-- people have a *preference* for honesty (or against guilty or lying)
+- people have a *preference* for honesty (or against guilt or lying)
     - see Gneezy (2005), Gneezy et al (2013), Dreber & Johannssen (2010), Kartik (2009), and many others
 - people have a utility function with standard properties
     - they have *social preferences* because they *dislike* lying 
     - lying imposes a utility cost 
-    - extensive margin: a cost to lying at all
-    - intensive margin: a cost in *size* of lie 
+    - **extensive margin**: cost to lying *at all*
+    - **intensive margin**: cost in *size* of lie 
 
 ## Lying in the real world?
 But there's lots of evidence of people lying for profit
@@ -39,6 +39,9 @@ But there's lots of evidence of people lying for profit
 - financial advisers who are *not* fiduciaries
 - medical professionals who benefit from prescribing certain drugs
 - lawyers displaying prosecutorial dishonesty
+- current political climate?
+    - do politicians who lie crowd out those who are unwilling (or are *as* unwilling) to do so?
+    - what does this do to the market for politicans? 
 
 ## Motivating questions & gaps in literature
 
@@ -56,7 +59,7 @@ Fischbacher and Föllmi-Heushi (JEEA, 2013)
 
 - a dice-throwing game to measure *aggregate* deception. 
 - subjects roll a 6-sided die and report what they rolled
-- Roll of 6 $\Rightarrow$ CHF 0, 
+- Roll of 6 $\Rightarrow$ CHF 0 
 - Roll of $1 \rightarrow 5 \Rightarrow$ equivalent CHF
 - with large $n$, should be a uniform distribution  $U \sim [0, 5]$ 
 
@@ -95,7 +98,7 @@ FFH %>%
   annotate("text", label = "disguise", x = 5, y = 0.36, size = 5, colour = "red") + 
   geom_segment(aes(x = 5, xend = 5, y = 0.34, yend = 0.28), arrow = arrow(length = unit(0.25, "cm"), type = "closed"), col = "red") +
   theme_bw()
-  #ggplotly()
+  ggplotly()
 ```
 
 
@@ -103,24 +106,30 @@ FFH %>%
 
 -  also did a ‘high-stakes’ treatment 
     - subjects were paid CHF3 per pip reported up to CHF15
-- choices all one-shot and the majority of the analysis is between subjects. 
+- choices all one-shot and the majority of the analysis is between subjects 
 - Because the experiment was run after other experiments (as a 10-minute add-on), some subjects participated more than once. 
 - Subjects who participated more than once were more likely to report a higher number the second time. 
+    - do we 'learn to lie'?
 
 ## Extension: D & K (2017)
 
 Dannenberg and Khachatryan (2017, working paper) 
 
- - replicate FFH + competition + group decisoins
- - one-shot competitive choice either with one other participant, as a member of a team of three against another team of three, or as a single or team of three against a single or team of three (2 by 2 treatment design). 
-The authors provide evidence suggesting that subjects who compete one-on-one are no more dishonest than subjects who do not compete when making their choices. 
-On the contrary, teams of three against teams of three are more likely to report higher numbers (are more dishonest). 
+ - replicate FFH + competition + group decisions
+ - one-shot competitive choice
+    - either with one other participant, or 
+    - as a member of a team of three against another team of three, or
+    - as a single or team of three against a single or team of three (2 by 2 treatment design). 
+ - subjects who compete one-on-one are *no more dishonest* than subjects who do not compete when making their choices (between subjects)
+ - teams of three against teams of three are more likely to report higher numbers (are more dishonest) 
+ - consistent with Charness & Sutter (2013) on groups making "more self-interested" decisions 
 
 
 ## Gaps left by FFH, D & K?
 
 - Subjects in a "competitive" treatment have no choice about competing
 - Group vs. individual not that interesting to us 
+- D & K have no opportunity to "learn to lie"
 - If a subject cannot choose *not* to compete, is it really a *choice to compete*? 
 - What is the role of an outside offer/opportunity cost? 
 - What about the margins of: 
