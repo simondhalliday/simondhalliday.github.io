@@ -1,0 +1,196 @@
+---
+title: "Honesty at the Margin"
+subtitle: "Experiments on the Dynamics of Deception"
+author: "Simon Halliday, Jonathan Lafky and Alistair Wilson"
+date: "12/17/2017"
+output: ioslides_presentation
+---
+
+```{r setup, include = FALSE,  message = FALSE, warning = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(mosaic)
+library(plotly)
+library(haven)
+library(tidyverse)
+```
+
+
+## Context with my work & work by co-authors
+
+- Paper on principal-agent relationships & benefits of abstaining from control accepted at J. Economic Behavior and Organization. 
+- Related to this idea of P-A relationships, is a paper I have with a Jonathan Lafky on rating systems (being revised after rejection)
+- Jonathan has a related paper with Alistair on incentives for information transmission 
+
+## Context
+Evidence in experimental and behavioral economics suggests the following: 
+
+- people have a *preference* for honesty (or against guilty or lying)
+    - see Gneezy (2005), Gneezy et al (2013), Dreber & Johannssen (2010), Kartik (2009), and many others
+- people have a utility function with standard properties
+    - they have *social preferences* because they *dislike* lying 
+    - lying imposes a utility cost 
+    - extensive margin: a cost to lying at all
+    - intensive margin: a cost in *size* of lie 
+
+## Lying in the real world?
+But there's lots of evidence of people lying for profit
+
+- people lied about MBS and CDOs prior to the financial crisis
+- financial advisers who are *not* fiduciaries
+- medical professionals who benefit from prescribing certain drugs
+- lawyers displaying prosecutorial dishonesty
+
+## Motivating questions & gaps in literature
+
+- If lies are preference-based, how vulnerable are the preferences to institutional setting? 
+    - Do the preferences override the setting, or are the preferences context-dependent? 
+- How do people respond to the opportunity to lie when competing with others? 
+- Can competition encourage/discourage full deception rather than merely 'disguised' lies (Fischbacher and Föllmi-Heusi, 2013)? 
+- How does the size of outside offers affect choices to compete & lie? 
+- Do people select into honest settings knowing others will lie? 
+- Do people adapt to deception and lie more? (Garrett et al, 2016)
+
+## Design Context
+
+Fischbacher and Föllmi-Heushi (JEEA, 2013) 
+
+- a dice-throwing game to measure *aggregate* deception. 
+- subjects roll a 6-sided die and report what they rolled
+- Roll of 6 $\Rightarrow$ CHF 0, 
+- Roll of $1 \rightarrow 5 \Rightarrow$ equivalent CHF
+- with large $n$, should be a uniform distribution  $U \sim [0, 5]$ 
+
+## For example...
+```{r theoretical_distribution}
+# function to generate dice throws
+n <- sample(x = 0:5, size = 80, replace = TRUE)
+df <- data.frame(n)
+ggplot(df, aes(x = factor(n))) +
+  geom_bar(aes(y = (..count..)/sum(..count..))) + 
+  xlab("Dice Roll") + 
+  ylab("Frequency") + 
+  geom_hline(yintercept = 1/6) + 
+  scale_x_discrete(labels = c("0", "1", "2", "3", "4", "5")) +
+  theme_bw()
+  ggplotly()
+```
+
+
+## FFH's Results
+```{r ffh_results}
+FFH <- read_stata("more/ffh2013/LiesInDisguiseRepeated.dta")
+FFH %>% 
+  filter(!is.na(Participation1)) %>% 
+  ggplot(aes(x = factor(Participation1))) + 
+  geom_bar(aes(y = (..count..)/sum(..count..))) + 
+  xlab("Dice Roll") + 
+  ylab("Frequency") + 
+  geom_hline(yintercept = 1/6) + 
+  annotate("text", label = "theoretical ", x = 2, y = 0.25, size = 5) +
+  annotate("text", label = "distribution", x = 2, y = 0.22, size = 5) +
+  geom_segment(aes(x = 2, xend = 2, y = 0.21, yend = 0.17), arrow =
+                 arrow(length = unit(0.25, "cm"), type = "closed")) +
+  scale_x_discrete(labels = c("0", "1", "2", "3", "4", "5")) +
+  annotate("text", label = "lies in ", x = 5, y = 0.38, size = 5, colour = "red") +
+  annotate("text", label = "disguise", x = 5, y = 0.36, size = 5, colour = "red") + 
+  geom_segment(aes(x = 5, xend = 5, y = 0.34, yend = 0.28), arrow = arrow(length = unit(0.25, "cm"), type = "closed"), col = "red") +
+  theme_bw()
+  #ggplotly()
+```
+
+
+## FFH Continued 
+
+-  also did a ‘high-stakes’ treatment 
+    - subjects were paid CHF3 per pip reported up to CHF15
+- choices all one-shot and the majority of the analysis is between subjects. 
+- Because the experiment was run after other experiments (as a 10-minute add-on), some subjects participated more than once. 
+- Subjects who participated more than once were more likely to report a higher number the second time. 
+
+## Extension: D & K (2017)
+
+Dannenberg and Khachatryan (2017, working paper) 
+
+ - replicate FFH + competition + group decisoins
+ - one-shot competitive choice either with one other participant, as a member of a team of three against another team of three, or as a single or team of three against a single or team of three (2 by 2 treatment design). 
+The authors provide evidence suggesting that subjects who compete one-on-one are no more dishonest than subjects who do not compete when making their choices. 
+On the contrary, teams of three against teams of three are more likely to report higher numbers (are more dishonest). 
+
+
+## Gaps left by FFH, D & K?
+
+- Subjects in a "competitive" treatment have no choice about competing
+- Group vs. individual not that interesting to us 
+- If a subject cannot choose *not* to compete, is it really a *choice to compete*? 
+- What is the role of an outside offer/opportunity cost? 
+- What about the margins of: 
+    - choosing to compete and
+    - reports of those who compete conditional on having chosen to compete? 
+
+## Our design (HLW)
+
+T1: Baseline Treatment (Decision problem)
+
+- Choice of two options, A or B. 
+-  If A is chosen, subject reports a 10-sided die roll, which is compared to three random numbers generated by a bingo cage (automated). 
+    - If the report matches any selected number, they receive $20.
+    - Otherwise payment is $0.00.
+- If B is chosen, the subject reports a 10-sided die roll. 
+    - Roll compared with a publicly rolled 10-side die. 
+    - If higher, player obtains $20; 50-50 chance on a tie. 
+
+## Our design (HLW, contd.)
+
+T2: Treament "Automated High Roll" (Decision problem)
+
+- Same as T1, except zero probability of winning if report is 0 through 8
+- 50-50 chance of prize if reporting 9.
+- Why? Upper-bound limit on those who want the 50-50 lottery if they are guaranteed to lie. 
+
+## Our design (HLW, contd.)
+T3: Competition (Strategic)
+
+- Each session has four (?) groups of 6 (?) subjects
+- Choice of two options, A or B. 
+-  If A is chosen, subject reports a 10-sided die roll, which is compared to three random numbers generated by a bingo cage (automated). 
+    - If the report matches any selected number, they receive $20.
+    - Otherwise payment is \$0.00.
+- If B is chosen, the subject reports a 10-sided die roll. 
+    - Roll compared with a another player's reported 10-side die roll. 
+    - If higher, player obtains \$20; 50-50 chance on a tie. 
+
+
+## Our design (HLW, contd.)
+Additional details 
+
+- Subject repeats their choice 24/25 times. 
+- We observe the margin of choosing Options A or B (extensive)
+- On choosing B, we measure the distribution of reports (intensive because repeated within subject)
+- Contrast with theoretical distribution and across treatments
+
+## Potential behaviors (randomized n = 100 rolls)
+```{r hlw_distribution}
+# function to generate dice throws
+d10 <- sample(x = 0:9, size = 100, replace = TRUE)
+hlw <- data.frame(d10)
+ggplot(hlw, aes(x = factor(d10))) +
+  geom_bar(aes(y = (..count..)/sum(..count..))) + 
+  xlab("Dice Roll") + 
+  ylab("Frequency") + 
+  geom_hline(yintercept = 1/10) + 
+  scale_x_discrete(labels = seq(0, 9, 1)) +
+  theme_bw()
+  ggplotly()
+```
+
+
+## Conclusions and contributions?
+
+- Measure margins not previously measured
+- Choices are repeated, so no concern that subjects don't know what they're doing (others so far are one-shot). 
+- Task is relatively short with a high expected payoff for the short task (incentive compatible)
+- We're still decided on how many of the 24/25 choices to pay (2 or 3?)
+- Extensions
+    - experiment to examine demand and supply of deception
+    - what happens if hiring decisions are based on report? $\uparrow$ or  $\downarrow$ deception? 
+    
