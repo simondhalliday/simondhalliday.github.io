@@ -13,9 +13,16 @@ output: html_document
 - Email/hangouts: [shalliday+eco220@smith.edu](shalliday+eco220@smith.edu) Why is this my email address? Check [here](https://support.google.com/mail/answer/12096?hl=en)
 - [Syllabus](syllabus.html)
 
+## Week 2 
+### Tuesday 
+- Continue slides from Week 1 (see below)
+- Sign up for Piazza here if you didn't get the email link [piazza.com/smith/spring2018/eco220](piazza.com/smith/spring2018/eco220)
+
+
 ## Week 1
 ### Thursday 25 January
 
 - Slides are here: [https://docs.google.com/presentation/d/10wSxD7MqVtsjQgbSad3Hn2ZdIIfD7r0Bb640UlNgAFc/edit?usp=sharing](https://docs.google.com/presentation/d/10wSxD7MqVtsjQgbSad3Hn2ZdIIfD7r0Bb640UlNgAFc/edit?usp=sharing). 
 - The survey is here: [https://goo.gl/forms/PrHySNu5iuSbpxJv1](https://goo.gl/forms/PrHySNu5iuSbpxJv1)
+- The photo album (collaborative) is here: [https://photos.app.goo.gl/OlEbqw6kSdp5jpzx1](https://photos.app.goo.gl/OlEbqw6kSdp5jpzx1)
 
