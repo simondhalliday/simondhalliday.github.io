@@ -3,7 +3,7 @@ output: html_document
     #css: ../stylesheets/styles.css
 ---
 
-# Behavioral Economics Schedule
+# Introductory Statistics and Econometrics Schedule
 
 - Instructor: Simon Halliday, PhD. 
 - Time: Tues & Thurs 9 to 10:20pm
