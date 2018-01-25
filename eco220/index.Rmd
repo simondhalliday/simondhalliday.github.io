@@ -15,6 +15,7 @@ output: html_document
 
 ## Week 1
 ### Thursday 25 January
-Slides are here: [https://docs.google.com/presentation/d/10wSxD7MqVtsjQgbSad3Hn2ZdIIfD7r0Bb640UlNgAFc/edit?usp=sharing](https://docs.google.com/presentation/d/10wSxD7MqVtsjQgbSad3Hn2ZdIIfD7r0Bb640UlNgAFc/edit?usp=sharing). 
 
+- Slides are here: [https://docs.google.com/presentation/d/10wSxD7MqVtsjQgbSad3Hn2ZdIIfD7r0Bb640UlNgAFc/edit?usp=sharing](https://docs.google.com/presentation/d/10wSxD7MqVtsjQgbSad3Hn2ZdIIfD7r0Bb640UlNgAFc/edit?usp=sharing). 
+- The survey is here: [https://goo.gl/forms/PrHySNu5iuSbpxJv1](https://goo.gl/forms/PrHySNu5iuSbpxJv1)
 
