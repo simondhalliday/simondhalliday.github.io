@@ -1,0 +1,20 @@
+---
+output: html_document
+    #css: ../stylesheets/styles.css
+---
+
+# Behavioral Economics Schedule
+
+- Instructor: Simon Halliday, PhD. 
+- Time: Tues & Thurs 9 to 10:20pm
+- Venue: Seelye 308
+- Semester: Spring 2018
+- Course code: ECO220
+- Email/hangouts: [shalliday+eco220@smith.edu](shalliday+eco220@smith.edu) Why is this my email address? Check [here](https://support.google.com/mail/answer/12096?hl=en)
+- [Syllabus](syllabus.html)
+
+## Week 1
+### Thursday 25 January
+Slides are here: [https://docs.google.com/presentation/d/10wSxD7MqVtsjQgbSad3Hn2ZdIIfD7r0Bb640UlNgAFc/edit?usp=sharing](https://docs.google.com/presentation/d/10wSxD7MqVtsjQgbSad3Hn2ZdIIfD7r0Bb640UlNgAFc/edit?usp=sharing). 
+
+

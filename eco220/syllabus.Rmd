@@ -1,0 +1,207 @@
+---
+title: "ECO220 - Introductory Statistics and Econometrics"
+author: 'Instructor: Simon Halliday'
+date: "Smith College, Spring 2018"
+output: pdf_document
+---
+
+\begin{center}
+**This syllabus is preliminary and subject to change.**
+\end{center}
+
+##Contact & Admin Details
+
+- Email/hangouts: [shalliday+eco220@smith.edu](shalliday+eco220@smith.edu)
+- Twitter: @simondhalliday
+- Skype: sihalliday
+- Office: Pierce Hall 1.07
+- Office hours: T & Th 2-3:30pm 
+- Lectures: T & Th 9-10:20 pm, Seelye 308
+- Labs: L1: 11-12:10; L2: 1:10-2:30; L3: 2:40-4pm; All Seelye 212
+
+## Course Description
+Economics 220 is an introductory course in statistics for economists. Statistics is a mathematical tool for analyzing data. This course covers descriptive statistics, probability, basic inferential statistics (estimation and hypothesis testing) and regression analysis (econometrics). 
+
+The goal of the course is to help you learn how to use statistical methods to describe data and to test theories about relationships among variables and to make you an informed user of other people’s statistical analysis and evidence. The course emphasizes economic applications and interpretation and policy implications of statistical results.
+
+The course is divided into lectures and labs. The lectures present the basic theory and methods of statistics, while the labs provide more opportunity for discussion of concepts and problems and practice in computer-based statistical analysis of (primarily) economic data.
+
+It is important that you read the chapter assignments before attending the lectures on the assigned chapters. Even if you don't always have time to read the entire assignment carefully, you should at least skim through the material before class to become familiar with the terms and concepts that will be discussed. This will make the lectures more meaningful and easier to follow. 
+
+For students who are interested in learning more about econometrics, I recommend taking Eco 240 Econometrics as a follow up to this class.
+
+
+## Prerequisites 
+In order to take this class, you must have previously taken either ECO150 (Introductory Microeconomics) or ECO153 (Introductory Macroeconomics). 
+
+*Important*: Students will not be given credit for both ECO 220 and any of the following courses: MTH 190/PSY 190, GOV 190, MTH 241, MTH 245, or SOC 201.
+
+I shall assume that you are comfortable with basic calculus and algebra. If you are not, then you should make sure to go to the review sessions at the Spinelli QLC. Why do you need these? 
+
+- *Algebra* helps you to think about the ways functions work, finding solutions by substitution, understanding the rules of logs and exponents, and making sure you understand basic graphs
+- *Calculus* allows you to take a further step and understand slopes and rates of change, calculus is therefore especially important when you want to understand whether and to what extent variables affect or correlate with each other.
+
+## Learning Goals
+
+I separate learning goals into goals with different verbs: *know*, *understand*,  *comprehend*, *analyze*, *synthesize*, *do*, etc. 
+
+- *Know* the virtues and limitations of statistics and its uses in economics. 
+- *Understand* the role of statistics in understanding economic models and economic theory. 
+- *Ask* meaningful statistical questions with important potential answers.
+- *Analyze* data from experiments and surveys to answer questions relevant to economics and the behavioral sciences.
+- *Find* ways to *wrangle* data and play around with *computing* to derive useful insights using Stata and MS Excel/Google Sheets.
+- *Recognize* the benefits of *teaching yourself* to do new things. 
+
+## Method of Instruction
+
+The course is a lecture-based course with "labs" and a substantial amount of student participation and teamwork. Students are expected to prepare the chapter readings for each session and to be able to answer questions about the readings to produce a high quality discussion. Each student is expected to contribute to the discussion. If you do not contribute, I shall encourage you to do so. If you contribute substantially more than anyone else, then I may ask you rather to encourage the engagement of others. 
+
+## Textbook
+
+The following textbook is required for the course: Essential Statistics, Regression, and Econometrics, 1st Edition; Gary Smith; 2011; Academic Press; ISBN: 9780123822215. There is a copy of the textbook on reserve at the Neilson Library.
+
+## Course Schedule
+Below is a **tentative** and **preliminary** course schedule. It is subject to change depending on what happens during the semester (snow, random days off and such). 
+
+\newpage
+
+| Date  | Week | Topic | Reading | Notes | Assignment |
+|---|---|---|---|---|---|
+|-|-| **I. Descriptive & Summary Stats** |-|-|-|
+| 1/25 | Week 1 | Intro, Data & Visualization  |  Ch. 1 |  - | - |
+| 1/30-2/1 |  Week 2 | Visualization; Summary Stats | Chs. 2, 3 | ex 3.4, 3.5 | - |
+|-|-| **II. Probability & Distributions** |-|-|-|
+| 2/6-8  |  Week 3 | Probability rules | Ch. 4 |  -  | PS 1 due Tues  |
+| 2/13-5  |  Week 4 | Normal distribution |  Ch. 4 | -  | - |
+| - | - | **III. Sampling** |  - | -  | - |
+| 2/20-22 | Week 5 | Sampling and Bias |  Ch. 5 | -   | PS2 Due |
+| 2/21 |Week 5  | Rally Day | -  | Labs  Cancelled | - |
+| 2/27-3/1 | Week 6 | Exam & TBC |  - | - | - |
+| - | -| **IV. Estimation**  | - | - | - |
+| 3/6-8 | Week 7 | Sampling distributions |  Ch. 6 | -  | - | 
+| 3/10-18 | - | Spring Break |  - | -   | - | 
+| 3/20-22  | Week 8 | Hypothesis testing; CIs; p-values |  Ch. 7 |  -  |  PS 3 Due |
+| 3/27-29  |  Week 9 | TII errors; group means,  pitfalls |   Ch. 7 | Check handout | - |
+| 4/3-5  |  Week 10 | Revision & Exam |  - |   | PS 4 Due Tues; Exam (Thurs) |
+| -  | - | **V. Regression Analysis** | -  |  -  |  -  |
+| 4/10-12  | Week 11 |  Simple regression | Ch. 8  | -   |  -  |
+| 4/17-19  | Week 12 | Multiple regression | Ch. 10  |  -   |  PS. 5 Due |
+| 4/24-26 | Week 13 | Multiple regression |   Ch. 11 |    | -  |
+| 5/1-3 | Week 14 | Regression pitfalls  | Ch. 9 |  -  | Report Due Fri online |
+| 5/4-7 | - | Reading Period | -  |  -  |  -  |
+| 5/8-11 | - | Exam Period | -  |  -  |  -  |
+
+
+## Assessment
+The distribution of points for assignments for the semester and the tentative due dates are given below. **The dates are subject to change.** 
+
+| Assessment  | Percentage   | Cumulative  | Date |
+|---|---|---|---|
+| Class Participation | 10% | 10% | Ongoing |
+| Problem Sets | 20% | 30% | Various |
+| Labs | 10% | 40% | Various |  
+| Midterm 1 | 15% | 55% | T 27 Feb |
+| Midterm 2 | 15% | 70% | Th 5 Apr |
+| Report | 5% | 75% | 4 May |
+| Final exam | 25% | 100% | 8-11 May (exam period) |
+ 
+**Note**: There will be no make-up exams for either of the two in-class exams.
+
+
+-  *Class Participation*: Class participation will be based on your participation in class, on Piazza, in study groups, office hours, etc.
+- *Problem Sets*: There will be roughly 5 problem sets in the course. These are due at the beginning of class on the date indicated (unless otherwise noted on the problem set). Barring truly exceptional circumstances, late problem sets will not receive credit. Illness or missed classes do not count as exceptional circumstances. I will drop your lowest problem set score.  
+- *Labs:* There will be roughly 8 graded lab assignments in the course. Lab assignments will be due at the beginning of the next lab. Barring truly exceptional circumstances, late lab assignment will not receive credit. Note that in general, illness or missed classes do not count as exceptional circumstances. I will drop your lowest lab assignment score. 
+- *Midterms*: We will have two in-class midterm exams. They will cover particular topics prior to those midterms. 
+- *Final*:  The final exam is cumulative and is self-scheduled during exam period. 
+- *Report*: You will statistically analyze a dataset that I provide you and give a report on the data with an economics-based policy recommendation. 
+
+## Group work on problem sets and labs
+Working in groups on the problem sets and lab assignments is encouraged, but each student must prepare and submit her own answers. Copying your answers directly from another student or allowing a classmate to copy your answers are violations of the Honor Code. If you have any concerns about what constitutes independent work, please discuss them with me prior to the due date of the assignment.
+
+
+# Course Policies 
+
+## Moodle & Website
+In general, I will use my site, simondhalliday.com/eco220 for content for ECO220 and updating schedules. We also have a moodle site where I will put copies of files that we use in the course and where you will need to upload your assignments if we ask for electronic submission. I'll explain why I use my website as a resource.  
+
+## Initial assessment 
+You need to complete the statistical knowledge assessment as soon as possible. It is not for grades, but it helps us to understand what the knowledge base for you is and where we can direct our efforts to ensure that we leave you with the best knowledge of statistics and econometrics at the end of the course. 
+
+
+## Academic Accomodations
+If you have a disability and need accommodations in this course, please contact the Office of Disability Services in College Hall or at ods@smith.edu as soon as possible to ensure we can implement accommodations in a timely manner.
+
+## Academic Honesty
+As in any other course at Smith, you are required to adhere to the provisions of the Honor Code. I take academic honesty very seriously and will report any suspected violations of the Honor Code to the Honor Board. The two in-class exams in the course will be unproctored. The use of any unauthorized material or any discussion or copying of answers is strictly forbidden. You will be permitted a 3" by 5" index card for notes in the midterms and final exam. 
+
+## Integrity in Empirical Research for your Report 
+When you set up a report, you will need to follow the [TIER protocol](http://www.projecttier.org/tier-protocol/specifications/). 
+I shall ensure that you learn about the protocol during the semester in labs. 
+Read it carefully and be sure that you know how to follow the protocol. Set up your project in a Google drive or Dropbox folder that follows the steps in the protocol. I shall also upload a folder on Moodle that provides a (somewhat updated) folder structure that we've agreed on since writing this initial draft. Also check the updated version online at the [Project Tier Site](http://www.projecttier.org/tier-protocol/specifications/). 
+
+
+
+## Stats Consultant at the Spinelli Center
+Ms. Maria Delfin-Auza is the statistics consultant at the Spinelli Center. She has a BA in Economics and a BA in Math & Stats.  She can coach you on the use of Excel, Stata and R if the other tutors are not available. 
+
+
+## Additional Resources for Learning & Revising Statistics
+There are many resources online for learning or revising statistics. 
+
+- For introductory statistics, [Open Intro Statistics](https://www.openintro.org/stat/?stat_book=os) is a free online textbook paired with R (and `mosaic`) that you can use to revise relevant statistical knowledge and applications.  
+
+- For the use of statistics in experiments, [A First Course in Design and Analysis of Experiments](http://users.stat.umn.edu/~gary/Book.html) is a textbook originally published in 2000 that has gone out of print, but the pdf of which has reverted to the author (Gary Oehlert) and which he has made available free of charge online under a creative commons license. 
+
+## Excel/Google Sheets and Stata
+
+During the course we will use Stata to do statistical analysis and produce graphics. 
+Stata is on the college computers and you can get access to it in a variety of labs on campus. We will use Microsoft Excel or Google Sheets as a spreadsheet package for this course. Spreadsheets are used in a variety of business, banking and accounting settings and I strongly advise you to improve your knowledge of the software. The main use of Excel/G Sheets will be to prepare data for use in Stata by exporting the data to a `.csv` file. 
+
+The following constitutes a non-exhaustive list of the functions I expect you ought to know how to use in Excel for the workplace, but which I shan't go into myself in this course in too great detail: `corr, cov, sum, mean, median, count, if, sumif, countif, concatenate, stddev, index, match, vlookup`.
+
+For Help with Excel, Stata or R (another statistical programming language I recommend), I suggest you go to the following links: 
+
+* __Excel, Stata and R__ Princeton's [Data and Statistical Services](http://dss.princeton.edu/training/): They cover topics related to Stata and R and have very helpful annotated screenshots to help you undersand what's going on. They have a helpful comparison document for Stata and R in case you happen to know the one package better than the other. 
+* __R only__ [The Five College Guide to R and R Studio](http://www3.amherst.edu/~nhorton/FiveCollegeR.pdf): Covers the basics of what you want to be able to do in R-studio and R using the mosaic package. Prof. Horton also has a variety of very helpful videos on his webpage at Amherst for [getting started with R](https://www.amherst.edu/people/facstaff/nhorton) (scroll about half-way down the page). He uses the lovely `mosaic` package to make R more accessible. 
+* __Stata and R__ UCLA's Statistics [help pages](http://www.ats.ucla.edu/stat/): they have comprehensive help  [R](http://www.ats.ucla.edu/stat/r/), and for [Stata](http://www.ats.ucla.edu/stat/stata/). I use them regularly as reminders and tutorials.
+* __Stata only__ German Rodriguez's online [Stata tutorial](http://data.princeton.edu/stata/) at Princeton. 
+* __Stata only__ Stata.com's long list of [resources for learning Stata](http://www.stata.com/links/resources-for-learning-stata/). 
+
+__Important__ Make sure you can save an Excel file as a comma separated value (.csv) file so that you can import it easily into either Stata (using the command `insheet`).
+
+To get help in Stata you can type in `help` followed by the command's name e.g. `help insheet`. 
+
+## Quantitative Literacy/Quantitative Reasoning
+“Economics is an empirically oriented discipline. The focus is on explaining and testing our understanding of economic phenomena. Hence, students need an appreciation for an ability to deal with empirical matters.” Siegfried et al 1991, p.216
+
+“The foundation in empirical methods depends on (1) knowing something about the measurement of economic variables (methods of data collection, reliability, etc.); (2) being able to organize, work with, and manipulate data for purposes of comparison; (3) the capacity to test hypotheses with empirical data; and (4) knowing how to interpret the results of various statistical procedures. The quantitative methods course should be reoriented from its almost singular statistical focus to emphasize this wider range of quantitative methods employed by economics.”(ibid. p.216)
+
+I will do my best to help you become more quantitatively literate and to help you to become better applied social scientists in your study of behavioral economics. 
+
+## ECO220 Master Tutor
+The Economics Master Tutor for ECO220 is Richelle Ju. Her email is: [rju50@smith.edu](rju@smith.edu). 
+She will be holding drop-in hours in Spinelli Center (days/time TBD: details will be posted at http://www.smith.edu/qlc/tutoring.html). 
+You may also contact her directly (or the Spinelli Center) to make an individual appointment.
+You can find out more on the Spinelli Center Website: [www.smith.edu/qlc/tutoring.html](www.smith.edu/qlc/tutoring.html). 
+
+
+## Piazza, Questions & Email
+In ECO220 we will use Piazza. Piazza is a website that allows participants to post questions (with their names or anonymously). You can respond to questions other people ask and they can respond to questions you ask. I can also endorse, comment on and add feedback to questions. I strongly encourage you to assist each other online (and preferably to do so with your names) so that I can see if and when you understand or do not understand an idea *as this will aid in improving your participation grade*. Using Piazza also helps to ensure that I do not receive many emails asking the same question (which has happened in the past). If you email me about something already covered on Piazza, I will direct you to Piazza. I will add you all to the Piazza course after which you will receive an email alert and need to create a log-in for Piazza. Many of you probably already have such a log-in (I hope you remember your passwords). 
+
+All of which said, please feel free to email me. Typically, if an email is *not* about course content (which should almost always go on Piazza), then the email will be about something that is particularly relevant to you personally, e.g. you are traveling and will miss class, you need an extension for an assignment, you have a physical or mental health issue that needs to be resolved, etc. I shall always do my best to accommodate you. That said, I receive many, many emails. I try to ensure I get back to you within 24 hours (during the business week) or by Monday (if you emailed over the weekend). Occasionally, I may miss an email because of reading it on my phone and forgetting to mark it as unread to respond to it later. I apologize in advance if this happens. 
+
+## Faculty Partner 
+I am part of a program at Smith engaging students as partners in teaching and learning. This semester, Emily Olmos-Govea is my student partner. She will attend ECO220 classes and provide me with feedback on how she thinks the class is going, how I can improve my teaching, and what I can do to facilitate your learning. Her presence will have no effect on your grades and she is here to provide thoughtful, considered commentary to me as a student partner trying to create and facilitate an excellent Smith experience. She will introduce herself in class and you should feel free to chat to her if you have any questions about the program in which she is participating or if you'd like to provide anonymous comments on how the course is going to a fellow student who can channel the feedback to me in a caring and compassionate manner. 
+
+## Some notes on our goals and our learning
+
+- It is the first time I am teaching ECO220. 
+- I love statistics and its relationship to economics. 
+- As I will have many half-formed thoughts and draft ideas, forgive me if I get something wrong. I will do the same with you. Feel free to preface any such statement you make with "I have a half-formed thought," or "I have a draft idea." Encourage others who are willing to put their ideas out there and offer generous feedback. 
+- I am doing my best to provide a fantastic course.
+- I want you to leave the course with some mastery of statistics and econometrics and a practical skill in the use of Stata. 
+- I am learning how best to provide such a course and how best to encourage student learning.
+- So I am learning too. Please be forgiving because I am trying to learn enough to satisfy *all* of you, whereas you need to learn enough to satisfy *one* of me. 
+
+## Acknowledgments
+In developing this syllabus, I have drawn on resources from variety of people: Vis Taraz, Mariyana Zapryanova, Jennifer Imazeki, Emily Marshall, and others who I probably don't realize I pilfered from. Thanks to all of you.  
