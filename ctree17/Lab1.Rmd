@@ -1,0 +1,137 @@
+---
+title: "Lab 1: Introduction to R and RStudio"
+output:
+  html_document:
+    css: ./stylesheets/lab.css
+    highlight: pygments
+    theme: cerulean
+  pdf_document: default
+---
+
+Before you start, be sure to load the packages you need. I always do this in an initial 'set up' code chunk at the top of a page. You could also use the function `library()` instead of the function `require()`:
+```{r requirements, message = FALSE, warning = FALSE}
+require(mosaic)
+require(tidyverse)
+```
+
+##Learning Outcomes
+
+At the end of today's lab you should be able to do the following: 
+
+- Demonstrate knowledge of how to interact with R using RStudio
+
+- Identify and employ the basic tools of R Markdown to understand R Notebooks
+
+
+##Basics
+The goal of this lab is to introduce you to R and RStudio. 
+Let us clarify which is which:
+
+- R is the name of the programming language itself, and
+
+- RStudio is a convenient interface allowing you to use R easily.
+
+I encourage you to explore beyond what the labs dictate. 
+A willingness to experiment will make you a much better programmer. 
+Before we get to that stage, however, you need to build some basic fluency in R. 
+Today we begin with the fundamental building blocks of R and RStudio: the interface, R markdown, and basic commands.
+
+![Figure 1: R interface](more/rInterface2015.png)
+
+The panel in the upper right contains your *workspace* as well as a history of the commands that you've previously entered. 
+Any plots that you generate will show up in the panel in the lower right corner.
+
+The panel on the left is where the magic happens.  
+It's called the *console*. 
+Every time you launch RStudio, it will have the same text at the top of the 
+console telling you the version of R that you're running.  
+Below that information is the *prompt*.  
+As its name suggests, this prompt is really a request, a 
+request for a *command*. 
+Initially, interacting with R is all about typing commands
+and interpreting the output. 
+These commands and their syntax have evolved over
+decades (literally) and now provide what many users feel is a fairly natural way
+to access data and organize, describe, and invoke statistical computations.
+
+To get you started, try the following commands at the R prompt (i.e. right after `>` on the console).  
+
+- `556 + 232`
+- `72/4` = $72 \div 4 = \frac{72}{4}$
+- `sqrt(144)` = $\sqrt{144}$
+- `log(10)` = $log_e 10 \neq log_{10}10$
+
+You can either type the command in manually or copy and paste it from this document. 
+So, as you can see, R is a good calculator. 
+Later, we shall also see that R can be used to graph functions and create a variety of interesting graphics. 
+
+##Reference point
+Later, I'll talk to you about participation levels. To get a sense of what you can do with data and interactivity in R and R Markdown with HTML, take a look at this graph at FRED: 
+[research.stlouisfed.org/fred2/graph/?id=LNS11300001,LNS11300002,#](https://research.stlouisfed.org/fred2/graph/?id=LNS11300001,LNS11300002,#) 
+
+##R can make a dygraph like FRED
+Here you can see a lovely `dygraph` that can be generated using htmlwidgets (go to
+[www.htmlwidgets.org](http://www.htmlwidgets.org/) to see a variety of other advanced options for what you can do when you become and R Champion). You saw this graph in my presentation, but I wanted also to show you that it can be produced in an html documen that would be online.  
+
+```{r dygraph, message = FALSE, echo = FALSE, warning = FALSE}
+library(xts)
+library(dygraphs)
+Participation <- read.csv("/Users/shalliday/Google Drive/website_backup/eco254/fall_2015/Labs/Lab2/more/labor_force_participation.csv")
+Partdate <- as.Date(Participation$date)
+MaleP <- xts(Participation$male, Partdate)
+FemaleP <- xts(Participation$female, Partdate)
+LFPR <- cbind(MaleP, FemaleP)
+colnames(LFPR) <- c("Male", "Female")
+dygraph(LFPR, main = "Labor Participation Rate Over Time") %>%
+       dySeries("Male", label="Male")%>%
+       dySeries("Female", label="Female")%>%
+       dyAxis("x", label="Date")%>%
+       dyAxis("y", label="Labor Force Participation")%>%
+       dyHighlight(highlightSeriesOpts = list(strokeWidth = 3), 
+                   highlightCircleSize = 4)%>%
+       dyRangeSelector()
+```
+
+##R Markdown and R Notebooks
+This document is based on an R Notebook or R Markdown document. 
+R notebooks are meant to be like Lab Notebooks in the sciences where you ``do (data) science'' by: 
+
+- use code chunks to perform an activity
+- see the output of the code chunk, and 
+- comment on the code and its ouptut in prose between the code chunks. 
+
+R Notebooks are interactive documents. 
+The notebooks can check the code while you write it, suggesting corrections where errors appear and displaying output when you run a code chunk. 
+We shall see this in action several times during the workshop. 
+
+
+* * * 
+Practice what you've learned by creating a brief CV of your **fictional alter ego** in an R Markdown document. 
+
+
+First, open an R Markdown document: 
+
+* Go to File -> New File -> R Notebook 
+* The file will be pre-populated with some content. Ignore it for the moment. 
+* You will only lightly edit the top of the page between the `---` lines (you'll only change the title)
+* You'll mostly edit after that in the body of the document
+
+Using the R Markdown quick reference (In R Studio navigate to Help -> Cheatsheets -> R Markdown Reference Guide), figure out how to ensure the following:
+
+- The title of the file (and the document itself) should be your name
+- You should include headings for (at least) education or employment
+- Each of the sections should include a bulleted list of jobs/degrees
+- Highlight the year in **bold**
+- Include an image of yourself (either a local file or url).
+- Add a horizontal rule
+- Add a block quote
+- Having done this, go to the top of the page where it says 'Preview' on the arrow next to preview click on the arrow and select 'Knit to HTML.' It will then produce an html document you can compare with other people. 
+
+I'll come around and check what people have done. 
+
+See an example here: [simonhalliday](./simonhalliday.html). 
+
+* * * 
+
+[Back to Simon's R for Econ Workshop page](./index.html). 
+
