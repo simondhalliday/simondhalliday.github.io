@@ -1,0 +1,21 @@
+---
+output: html_document
+    #css: ../stylesheets/styles.css
+---
+
+# Laptop Time! 
+### Pedagogically-informed teaching with technology
+
+- Smith College Teaching Arts Luncheon
+- Presenters: Randi Garcia and Simon Halliday
+- Carroll Room, 2018.01.26, Lunch
+
+## Resources 
+
+- The slides from our talk are available [here](https://docs.google.com/presentation/d/1MmFVzXKbxTIVeq3wGpP7EOH5r99dxpN1n2I10lqDO_M/edit?usp=sharing)
+- We recommend getting to know [PollEverywhere](https://polleverywhere.com)
+- Randi uses Qualtrics in here classroom a lot, you can log in to Qualtrics at Smith (using your Smith sign-in) here: [smithcollege.qualtrics.com](https://smithcollege.qualtrics.com)
+- Simon uses Google Forms and Google quizzes, which you can use through Google documents at [docs.google.com/forms](https://docs.google.com/forms)
+- Learn more about 'jigsaw teaching' here: [http://www.teachhub.com/jigsaw-method-teaching-strategy](http://www.teachhub.com/jigsaw-method-teaching-strategy)
+- The NY Times piece we mentioned about knowledge of Korea is available here: [https://www.nytimes.com/interactive/2017/05/14/upshot/if-americans-can-find-north-korea-on-a-map-theyre-more-likely-to-prefer-diplomacy.html](https://www.nytimes.com/interactive/2017/05/14/upshot/if-americans-can-find-north-korea-on-a-map-theyre-more-likely-to-prefer-diplomacy.html)
+- Simon recommends the book, *Make it Stick* by Brown et al, feel free to purchase it via Amazon here: [http://amzn.to/2DDAxVX](http://amzn.to/2DDAxVX) 
