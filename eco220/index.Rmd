@@ -17,7 +17,8 @@ output: html_document
 ### Tuesday 
 - Continue slides from Week 1 (see below)
 - Sign up for Piazza here if you didn't get the email link [piazza.com/smith/spring2018/eco220](piazza.com/smith/spring2018/eco220)
-
+- See the data for the Hamburger problem in class here: [goo.gl/ji3vAv](https://goo.gl/ji3vAv). 
+- See the data from your heights here: [https://goo.gl/HAo7TZ](https://goo.gl/HAo7TZ)
 
 ## Week 1
 ### Thursday 25 January
