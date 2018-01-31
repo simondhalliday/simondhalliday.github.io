@@ -23,7 +23,7 @@ output: html_document
 - The ENHRUM data spreadsheet for PS 1 is available here: [goo.gl/pA4K2Z](https://goo.gl/pA4K2Z)
 
 ### Wednesday 
-- Lab 0 is available here: [goo.gl/T6jRNz](https://goo.gl/T6jRNz)
+- Lab 0 is available here: [goo.gl/cAyQrL](https://goo.gl/cAyQrL)
 - Lab 0's data is available here: [goo.gl/TmQ4Hj](https://goo.gl/TmQ4Hj)
 
 ## Week 1
