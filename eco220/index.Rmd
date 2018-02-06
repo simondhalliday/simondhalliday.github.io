@@ -13,6 +13,11 @@ output: html_document
 - Email/hangouts: [shalliday+eco220@smith.edu](shalliday+eco220@smith.edu) Why is this my email address? Check [here](https://support.google.com/mail/answer/12096?hl=en)
 - [Syllabus](syllabus.html)
 
+## Week 3 
+Tuesday 
+- Slides are here: [https://docs.google.com/presentation/d/1pqH_tju3pt-af25NQwN6y407CHtg3_qOt_eO4ZSSQAY/edit?usp=sharing](https://docs.google.com/presentation/d/1pqH_tju3pt-af25NQwN6y407CHtg3_qOt_eO4ZSSQAY/edit?usp=sharing)
+- Life expectancy & income data are here: [https://docs.google.com/spreadsheets/d/1LYZG9ccsQV4l2SMUmGfDNsnwlNOCg5YlP6BVd2t3iYI/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1LYZG9ccsQV4l2SMUmGfDNsnwlNOCg5YlP6BVd2t3iYI/edit?usp=sharing)
+
 ## Week 2 
 ### Tuesday 
 - Continue slides from Week 1 (see below)
