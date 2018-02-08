@@ -14,9 +14,21 @@ output: html_document
 - [Syllabus](syllabus.html)
 
 ## Week 3 
-Tuesday 
+### Tuesday 
+
 - Slides are here: [https://docs.google.com/presentation/d/1pqH_tju3pt-af25NQwN6y407CHtg3_qOt_eO4ZSSQAY/edit?usp=sharing](https://docs.google.com/presentation/d/1pqH_tju3pt-af25NQwN6y407CHtg3_qOt_eO4ZSSQAY/edit?usp=sharing)
 - Life expectancy & income data are here: [https://docs.google.com/spreadsheets/d/1LYZG9ccsQV4l2SMUmGfDNsnwlNOCg5YlP6BVd2t3iYI/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1LYZG9ccsQV4l2SMUmGfDNsnwlNOCg5YlP6BVd2t3iYI/edit?usp=sharing)
+
+###Weds 
+Classes Cancelled - Snow Day
+
+### Thursday 
+
+- Slides are here: [https://docs.google.com/presentation/d/1_XR6K0BROWGqcRwwihrCV9r2WUh2gprFX8xu415Hi3M/edit?usp=sharing](https://docs.google.com/presentation/d/1_XR6K0BROWGqcRwwihrCV9r2WUh2gprFX8xu415Hi3M/edit?usp=sharing)
+- First spreadsheet for Dice Exercise: [https://docs.google.com/spreadsheets/d/1ev61-U_rjIugyiqY9C_VAYik46HMldN5GIaGPXC0PWg/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1ev61-U_rjIugyiqY9C_VAYik46HMldN5GIaGPXC0PWg/edit?usp=sharing)
+- Second Spreadsheet for Dice exercise [https://docs.google.com/spreadsheets/d/1xAu4wi3yg15NtdSUb398a4an9Y0JvR-SDyMl6VM-FNc/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1xAu4wi3yg15NtdSUb398a4an9Y0JvR-SDyMl6VM-FNc/edit?usp=sharing)
+- Third Spreadsheet for Dice simulation: [https://docs.google.com/spreadsheets/d/1FXNQvveHgeaAgZsw4tcc_zLR7Am5MvxEAe2u9fzMXNo/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1FXNQvveHgeaAgZsw4tcc_zLR7Am5MvxEAe2u9fzMXNo/edit?usp=sharing)
+
 
 ## Week 2 
 ### Tuesday 
