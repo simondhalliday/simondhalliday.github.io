@@ -13,6 +13,14 @@ output: html_document
 - Email/hangouts: [shalliday+eco220@smith.edu](shalliday+eco220@smith.edu) Why is this my email address? Check [here](https://support.google.com/mail/answer/12096?hl=en)
 - [Syllabus](syllabus.html)
 
+
+## Week 4 
+### Tuesday
+
+- Continuing the slides from last week. 
+- Also, continuing the two-dice roll spreadsheet below. 
+- Here's the probability handout: [https://moodle.smith.edu/mod/resource/view.php?id=302422](https://moodle.smith.edu/mod/resource/view.php?id=302422).
+
 ## Week 3 
 ### Tuesday 
 
