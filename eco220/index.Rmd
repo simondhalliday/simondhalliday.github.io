@@ -21,6 +21,11 @@ output: html_document
 - Also, continuing the two-dice roll spreadsheet below. 
 - Here's the probability handout: [https://moodle.smith.edu/mod/resource/view.php?id=302422](https://moodle.smith.edu/mod/resource/view.php?id=302422).
 
+### Wednesday
+
+- Download lab 1 here: [moodle.smith.edu/mod/resource/view.php?id=302768](https://moodle.smith.edu/mod/resource/view.php?id=302768)
+- Download the data for lab 1 here [moodle.smith.edu/mod/resource/view.php?id=302731](https://moodle.smith.edu/mod/resource/view.php?id=302731)
+
 ## Week 3 
 ### Tuesday 
 
