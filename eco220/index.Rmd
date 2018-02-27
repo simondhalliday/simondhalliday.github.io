@@ -20,6 +20,7 @@ output: html_document
 - Finish Chapter 4 [https://docs.google.com/presentation/d/1pqH_tju3pt-af25NQwN6y407CHtg3_qOt_eO4ZSSQAY/edit?usp=sharing](https://docs.google.com/presentation/d/1pqH_tju3pt-af25NQwN6y407CHtg3_qOt_eO4ZSSQAY/edit?usp=sharing)
 - Some revision questions 
 - Refer to the Z-statistic table here: [https://moodle.smith.edu/mod/resource/view.php?id=305484](https://moodle.smith.edu/mod/resource/view.php?id=305484)
+- Notebook from in-class examples is here: [https://moodle.smith.edu/mod/resource/view.php?id=305557](https://moodle.smith.edu/mod/resource/view.php?id=305557)
 
 ## Week 5 
 We continued the probability slides from the previous week. 
