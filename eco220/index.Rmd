@@ -14,6 +14,18 @@ output: html_document
 - [Syllabus](syllabus.html)
 
 
+## Week 6
+## Tuesday 02/27
+
+- Finish Chapter 4 [https://docs.google.com/presentation/d/1pqH_tju3pt-af25NQwN6y407CHtg3_qOt_eO4ZSSQAY/edit?usp=sharing](https://docs.google.com/presentation/d/1pqH_tju3pt-af25NQwN6y407CHtg3_qOt_eO4ZSSQAY/edit?usp=sharing)
+- Some revision questions 
+- Refer to the Z-statistic table here: [https://moodle.smith.edu/mod/resource/view.php?id=305484](https://moodle.smith.edu/mod/resource/view.php?id=305484)
+
+## Week 5 
+We continued the probability slides from the previous week. 
+
+Wednesday's classes were cancelled because of Rally Day. 
+
 ## Week 4 
 ### Tuesday
 
