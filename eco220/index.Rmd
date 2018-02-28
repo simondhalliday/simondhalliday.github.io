@@ -22,6 +22,11 @@ output: html_document
 - Refer to the Z-statistic table here: [https://moodle.smith.edu/mod/resource/view.php?id=305484](https://moodle.smith.edu/mod/resource/view.php?id=305484)
 - Notebook from in-class examples is here: [https://moodle.smith.edu/mod/resource/view.php?id=305557](https://moodle.smith.edu/mod/resource/view.php?id=305557)
 
+### Wednesday 
+
+- The formula sheet for Midterm 1 is available here: [https://moodle.smith.edu/mod/resource/view.php?id=305865](https://moodle.smith.edu/mod/resource/view.php?id=305865)
+- Lab 2 is available here in [docx](https://moodle.smith.edu/mod/resource/view.php?id=305863) and [pdf](https://moodle.smith.edu/mod/resource/view.php?id=305864).
+
 ## Week 5 
 We continued the probability slides from the previous week. 
 
