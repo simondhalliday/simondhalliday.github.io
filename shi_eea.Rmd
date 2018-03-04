@@ -16,6 +16,16 @@ knitr::opts_chunk$set(echo = FALSE)
 - Consumer has preferences over A and B and over ranking by Expert
 - Expert may have conflict of interest with the consumer about which product to Rank 1st among two products
 - Consider a choice between a constant outside offer ($v_A = 120$) & a random distribution with $ v_B \in [0, 40, 360]$ with probabilities $[\frac{1}{2}, \frac{1}{4}, \frac{1}{4}]$. 
+- Also change prices in treatments and asymmetry of values (?)
+
+## Motivation
+
+- Information asymmetry between ranking systems/experts and consumers 
+- Do Experts have an incentive to deceive consumers? 
+- Conflict of interest between them? 
+- But, if so, what happens in a repeated game? 
+- So this is a game that's quasi-one-shot and reputation has no relevance. 
+- I like the idea, but I'm not sure online rankings (e.g. US News) are the best motivation for this 
 
 ## Payoffs
 I was confused about the probabilities
@@ -39,9 +49,10 @@ I was trying to figure these out quickly (apologies for errors):
 - I wasn't sure about your payment rule. Is the *average* meant to deal with these potential negatives? 
 - Your quiz doesn't check that the subjects understand these and I strongly recommend that you consider a quiz that confirms they understand how they'll be paid. 
 
-## Literature recommendations 
-
+## More Literature recommendations 
+- It looks like you're working with Ernest Lai, so you're all set on that front 
+- Yan Chen, various
 - Malmendier & Schmidt, 2017
 - Lafky, 2014   
 - Lafky & Wilson, 2015, WP
-- Halliday & Lafky, 2017, WP 
+- Halliday & Lafky, 2017, WP  (more tenuous, shamless self-plug)
