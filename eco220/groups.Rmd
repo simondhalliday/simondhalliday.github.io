@@ -1,0 +1,68 @@
+---
+title: "Student Groups"
+author: "Simon Halliday"
+date: "3/5/2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r requirements, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(readxl)
+library(stargazer)
+```
+
+```{r read_spreadsheet}
+students <- read_xlsx("student_names.xlsx")
+groupsize <- 4
+```
+
+```{r random_df}
+randnums <- data.frame(sample(1:nrow(students), nrow(students), replace=F), 
+                       sample(1:nrow(students), nrow(students), replace=F))
+names(randnums) <- c("randnum1", "randnum2")
+students2 <- bind_cols(students, randnums)
+students2 <- 
+  students2 %>% 
+  mutate(group9am = ntile(randnum1, nrow(students)/groupsize), 
+         group940am = ntile(randnum2, nrow(students)/groupsize))
+StudentGroup <- 
+  students2 %>% 
+  select(-randnum1, - randnum2)
+```
+
+## 9am Groups
+```{r 9amgroup}
+StudentGroup9am <-
+  StudentGroup %>%
+  select(Student, group9am) %>% 
+  arrange(group9am)
+```
+
+```{r stargazer9am, results = "asis"}
+stargazer(StudentGroup9am, type = "html", summary = FALSE, rownames = F)
+```
+
+## 9:40am Groups
+```{r}
+StudentGroup940am <-
+  StudentGroup %>%
+  select(Student, group940am) %>% 
+  arrange(group940am)
+```
+
+```{r, results = "asis"}
+stargazer(StudentGroup940am, type = "html", summary = FALSE, rownames = F)
+```
+
+
+Presuming you don't want to randomize every time you knit this R Markdown Document, you can write the student groups to a csv to use again later: 
+
+```{r}
+write_csv(StudentGroup, "student_groups.csv")
+```
+
+
