@@ -13,6 +13,20 @@ output: html_document
 - Email/hangouts: [shalliday+eco220@smith.edu](shalliday+eco220@smith.edu) Why is this my email address? Check [here](https://support.google.com/mail/answer/12096?hl=en)
 - [Syllabus](syllabus.html)
 
+## Week 7
+### Tuesday 6 March
+
+- Slides available here: [goo.gl/vUXfzq](https://goo.gl/vUXfzq)
+- Groups available here: [groups](/groups.html)
+
+### Weds 7 March 
+
+- Lab 3 TBC here. 
+
+### Thurs 8 March 
+
+- Hand in Exam Reflection
+- Continue with Sampling or begin Estimation
 
 ## Week 6
 ## Tuesday 02/27
