@@ -21,7 +21,7 @@ output: html_document
 
 ### Weds 7 March 
 
-- Over the next two labs we will complete the Alcohol Exercise [docx](https://moodle.smith.edu/mod/resource/view.php?id=307510) [pdf](https://moodle.smith.edu/mod/resource/view.php?id=307511)
+- Over the next two labs we will complete the Alcohol Exercise [docx](https://moodle.smith.edu/mod/resource/view.php?id=307727) [pdf](https://moodle.smith.edu/mod/resource/view.php?id=307728)
 - You will hand in initial exploratory answers for Lab 3 using the Lab 3 Template [docx](https://moodle.smith.edu/mod/resource/view.php?id=307512), [pdf](https://moodle.smith.edu/mod/resource/view.php?id=307513)
 - Here is a zipped file of the folder structure you will need to complete this exercise (to save you time): [folder-structure](https://moodle.smith.edu/mod/resource/view.php?id=307514). 
 - You will create a sign in (with your Smith email address) and download the data set from the ICPSR site: [https://www.icpsr.umich.edu/icpsrweb/](https://www.icpsr.umich.edu/icpsrweb/). You can sign in with Google+ credentials (e.g. your Smith email), Facebook and others. 
