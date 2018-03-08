@@ -29,7 +29,8 @@ output: html_document
 ### Thurs 8 March 
 
 - Hand in Exam Reflection
-- Continue with Sampling or begin Estimation
+- Continue with Sampling or begin Estimation 
+- See estimation slides here: [https://goo.gl/ak3wGZ](https://goo.gl/ak3wGZ). 
 
 ## Week 6
 ## Tuesday 02/27
