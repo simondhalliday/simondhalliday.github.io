@@ -4,7 +4,7 @@ subtitle: Ongoing and published
 layout: page
 ---
 
-## Published 
+## Peer Reviewed Publications 
 
 - "[The hidden benefits of abstaining from control](https://www.sciencedirect.com/science/article/pii/S0167268117303682)", *Journal of Economic Behavior and Organization*, Vol. 147, March, 2018. Joint with Gabriel Burdin (Leeds University and IZA) and Fabio Landini (University of Parma & ICRIOS – Bocconi University, Italy). We propose an extension of Falk and Kosfeld's (AER, 2006) experimental design to illuminate the role of autonomy in explaining how individuals react to control in a principal-agent relationship. We add a third party who exerts control over the agent and find that control-aversion ceases to exist. A draft of the paper is available as [IZA discussion paper 9251](http://ftp.iza.org/dp9251.pdf). 
 
@@ -19,16 +19,20 @@ layout: page
 - "Punishment through Ratings: An experimental study of bias in evaluations:" With Jonathan Lafky (Carleton College). Our study examines how evaluations of objective ability can be influenced by generous or selfish behavior on the part of the person being evaluated. We allow subjects in a laboratory setting to rate (costly or free) a seller of a good and send the rating to a potential buyer. We find that seller quality is not significant and the main driver of rating behavior is the side payment sellers can make to raters. *Under submission.*
 
 ## Working Papers 
-- "Honesty at the Margin:  Experiments on the Dynamics of Deception" joint with Jonathan Lafky and Alistair Wilson. Our paper examines the evolution of dishonesty over time. In particular, we focus on the following question: In market activities where dishonesty is rewarded, does others’ dishonesty crowd out honest participants, or instead do initially honest types evolve to become more dishonest? Our paper responds to a large experimental literature rooted in the Fischbacher and Föllmi-Heusi (2013) framework, which has shown a robust preference for honest dealings. However, this research is focused on static settings, examining short-run behavior. Our project instead uses the same die-rolling paradigm to examine questions about long-run behavior. In an environment with both an extensive-margin decision on whether to engage, and an intensive-margin decision over whether to act dishonestly, our project measures which margin is most important for selection, and whether preferences for honesty are robust to long-run forces. 
+- "Honesty at the Margin:  Experiments on the Dynamics of Deception" joint with Jonathan Lafky and Alistair Wilson. Slides for a recent presentation here: [Honesty at the Margin Slides](http://simondhalliday.com/honesty_margin.html#1). 
+Our paper examines the evolution of dishonesty over time. In particular, we focus on the following question: In market activities where dishonesty is rewarded, does others’ dishonesty crowd out honest participants, or instead do initially honest types evolve to become more dishonest? Our paper responds to a large experimental literature rooted in the Fischbacher and Föllmi-Heusi (2013) framework, which has shown a robust preference for honest dealings. However, this research is focused on static settings, examining short-run behavior. Our project instead uses the same die-rolling paradigm to examine questions about long-run behavior. In an environment with both an extensive-margin decision on whether to engage, and an intensive-margin decision over whether to act dishonestly, our project measures which margin is most important for selection, and whether preferences for honesty are robust to long-run forces. 
 - "Don't Take What Isn't Yours: Giving, Taking and Punishment:" The paper is based on experiments I did at the University of Cape Town. An early version of the paper is in the Economic Research South Africa working paper series as [Working Paper 211](http://ideas.repec.org/p/rza/wpaper/211.html). *Editing for submission*. People punish taking more than they do non-generosity. 
 
 ## Books
-- *Microeonomics: Competition, Conflict and Coordination* with Samuel Bowles and Duncan Foley. See the website for the book here: [simondhalliday.com/bfh-textbook](http://simondhalliday.com/bfh-textbook). We are in discussions with interested publishers. 
+- *Microeonomics: Competition, Conflict and Coordination* with Samuel Bowles and Duncan Foley. See the website for the book here: [simondhalliday.com/bfh-textbook](http://simondhalliday.com/bfh-textbook). We are in discussions with interested publishers. The preliminary date of publication for the book is summer 2019. 
 
 ## Chapters 
 - "Global Public Goods" published in [Running the Economy](http://www.amazon.co.uk/Running-Economy-Open-University-Team/dp/1780079540), Santos et al (eds). Open University Press. My chapter covers game theory, global commons, and collective action.
 
+## Policy 
+- *Report to the Department of Land Affairs, South Africa*: With Malcolm Keswell, Susan Godlonton, and Tim Brophy. The report summarized our work and preliminary results from the Quality of Life Survey.
+
 ## Work in Progress
-- "Efficient Empiricism: R Markdown in Economics Education:" A joint project with Tomas Dvorak (Union), Michael O'Hara (Hamilton) and Aaron Swoboda (Carleton College).  We have designed a project where we either have taught or will teach with R Markdown in Economics Courses and the paper will report on its use at difference campuses. Each of us were TIER fellow: Dvorak and O'Hara were 2015-16 fellows and Swoboda was a 2016-17 fellow (see [here](http://www.projecttier.org/about/people/#fellows)).
+- "Efficient Empiricism: R Markdown in Economics Education:" A joint project with Tomas Dvorak (Union), Michael O'Hara (Hamilton) and Aaron Swoboda (Carleton College). We have designed a project where we either have taught or will teach with R Markdown in Economics Courses and the paper will report on its use at difference campuses. Each of us were TIER fellow: Dvorak and O'Hara were 2015-16 fellows and Swoboda was a 2016-17 fellow (see [here](http://www.projecttier.org/about/people/#fellows)).
 
 
