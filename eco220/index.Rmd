@@ -13,6 +13,21 @@ output: html_document
 - Email/hangouts: [shalliday+eco220@smith.edu](shalliday+eco220@smith.edu) Why is this my email address? Check [here](https://support.google.com/mail/answer/12096?hl=en)
 - [Syllabus](syllabus.html)
 
+## Week 8 
+### Tuesday 20 March
+
+- Continue with the estimation slides available here: [https://docs.google.com/presentation/d/1mBscwBm32jffJ-4EosbcS3ofV2dz9vBNaI0tKVftn94/edit?usp=sharing](https://docs.google.com/presentation/d/1mBscwBm32jffJ-4EosbcS3ofV2dz9vBNaI0tKVftn94/edit?usp=sharing)
+
+### Wednesday 21 March
+
+- Continue with the alcohol exercise from 7 March (look below)
+- Hand in Lab 3 on Moodle
+
+### Thursday 22 March
+
+- Finish estimation and t-tests
+
+
 ## Week 7
 ### Tuesday 6 March
 
@@ -30,7 +45,7 @@ output: html_document
 
 - Hand in Exam Reflection
 - Continue with Sampling or begin Estimation 
-- See estimation slides here: [https://goo.gl/ak3wGZ](https://goo.gl/ak3wGZ). 
+- See estimation slides here: [https://docs.google.com/presentation/d/1mBscwBm32jffJ-4EosbcS3ofV2dz9vBNaI0tKVftn94/edit?usp=sharing](https://docs.google.com/presentation/d/1mBscwBm32jffJ-4EosbcS3ofV2dz9vBNaI0tKVftn94/edit?usp=sharing). (the short url broke for reasons I don't understand)
 
 ## Week 6
 ## Tuesday 02/27
