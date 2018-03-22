@@ -25,7 +25,8 @@ output: html_document
 
 ### Thursday 22 March
 
-- Finish estimation and t-tests
+- Finish estimation and t-distribution
+- Download the t-distribution here: [https://moodle.smith.edu/mod/resource/view.php?id=309895](https://moodle.smith.edu/mod/resource/view.php?id=309895)
 
 
 ## Week 7
