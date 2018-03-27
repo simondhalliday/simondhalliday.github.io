@@ -13,6 +13,21 @@ output: html_document
 - Email/hangouts: [shalliday+eco220@smith.edu](shalliday+eco220@smith.edu) Why is this my email address? Check [here](https://support.google.com/mail/answer/12096?hl=en)
 - [Syllabus](syllabus.html)
 
+## Week 9 
+### Tuesday 27 March 
+
+- Slides for Hypothesis Testing available here: [https://docs.google.com/presentation/d/1wuYeWVnTPxNkxmeVliZGMXfcEYmi7d-I_VXccyeGHnk/edit#slide=id.g35e2dc0897_0_96](https://docs.google.com/presentation/d/1wuYeWVnTPxNkxmeVliZGMXfcEYmi7d-I_VXccyeGHnk/edit#slide=id.g35e2dc0897_0_96)
+- Spreadsheet on immigrant mothers: [https://docs.google.com/spreadsheets/d/1pBjjJ0YTlRGlTwC8HqWrZIDukTIlm7XPfhMU839t7TE/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1pBjjJ0YTlRGlTwC8HqWrZIDukTIlm7XPfhMU839t7TE/edit?usp=sharing)
+- Spreadsheet on poker players and t-tests/Z-scores: [https://docs.google.com/spreadsheets/d/11MYii7B5aMrL9iPWmVNGtCzgOn3foT_pgvu-AlzGRis/edit?usp=sharing](https://docs.google.com/spreadsheets/d/11MYii7B5aMrL9iPWmVNGtCzgOn3foT_pgvu-AlzGRis/edit?usp=sharing)
+
+### Weds 28 March 
+
+- Move to complete Alcohol Exercise
+
+### Thurs 29 March
+
+- Continue with Hypothesis Testing Slides
+- Discuss data options
 ## Week 8 
 ### Tuesday 20 March
 
