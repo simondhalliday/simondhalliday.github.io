@@ -13,6 +13,23 @@ output: html_document
 - Email/hangouts: [shalliday+eco220@smith.edu](shalliday+eco220@smith.edu) Why is this my email address? Check [here](https://support.google.com/mail/answer/12096?hl=en)
 - [Syllabus](syllabus.html)
 
+## Week 10
+### Tuesday 3 April 
+
+- Review & Type I and Type II errors
+
+## Wednesday 4 April 
+
+- Time for some question about alcohol exercise
+- Time for questions re: midterm 
+- Start on lab 6: [pdf](https://moodle.smith.edu/mod/resource/view.php?id=312499) and [docx](https://moodle.smith.edu/mod/resource/view.php?id=312498)
+- Data available here: [Card and Krueger](https://moodle.smith.edu/mod/resource/view.php?id=312495)
+
+## Thursday 5 April 
+
+- Midterm 2
+
+
 ## Week 9 
 ### Tuesday 27 March 
 
