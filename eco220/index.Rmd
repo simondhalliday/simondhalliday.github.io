@@ -13,6 +13,23 @@ output: html_document
 - Email/hangouts: [shalliday+eco220@smith.edu](shalliday+eco220@smith.edu) Why is this my email address? Check [here](https://support.google.com/mail/answer/12096?hl=en)
 - [Syllabus](syllabus.html)
 
+## Week 11
+
+## Tuesday 10 April
+
+- Simple Regression
+- Simple Regression slides here: [https://docs.google.com/presentation/d/1Xix9NtSp6Qwh5FKq09cdpA92xH3U1t1Ue2QHzEDklU4/edit?usp=sharing](https://docs.google.com/presentation/d/1Xix9NtSp6Qwh5FKq09cdpA92xH3U1t1Ue2QHzEDklU4/edit?usp=sharing)
+
+## Wednesday 11 April 
+
+- Time on Card & Krueger
+- Time for you to start work on chosen data
+- Please complete survey if you have not done so: [ https://smithcollege.qualtrics.com/jfe/form/SV_1HoOpTSw0tnOSvb]( https://smithcollege.qualtrics.com/jfe/form/SV_1HoOpTSw0tnOSvb)
+
+## Thursday 
+
+- Continue with Simple Regression
+
 ## Week 10
 ### Tuesday 3 April 
 
