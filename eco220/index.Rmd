@@ -23,8 +23,7 @@ output: html_document
 ## Wednesday 11 April 
 
 - Time on Card & Krueger
-- Time for you to start work on chosen data
-- Please complete survey if you have not done so: [ https://smithcollege.qualtrics.com/jfe/form/SV_1HoOpTSw0tnOSvb]( https://smithcollege.qualtrics.com/jfe/form/SV_1HoOpTSw0tnOSvb)
+- Time for you to start work on chosen data - see here for data assignment: [http://simondhalliday.com/eco220/reportdata.html](http://simondhalliday.com/eco220/reportdata.html)
 
 ## Thursday 
 
