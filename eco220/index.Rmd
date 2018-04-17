@@ -13,6 +13,26 @@ output: html_document
 - Email/hangouts: [shalliday+eco220@smith.edu](shalliday+eco220@smith.edu) Why is this my email address? Check [here](https://support.google.com/mail/answer/12096?hl=en)
 - [Syllabus](syllabus.html)
 
+## Week 12
+
+## Tuesday 17 April
+
+- Continue with simple regression
+- Discussion of midterms, overall grades and report
+- Start on multiple regression (if we get the chance)
+- Multiple regression slides here: [https://docs.google.com/presentation/d/1GnvBJHYbZr317mYOwIFucqLseWCx0xs7pPbZQUOS1CY/edit?usp=sharing](https://docs.google.com/presentation/d/1GnvBJHYbZr317mYOwIFucqLseWCx0xs7pPbZQUOS1CY/edit?usp=sharing)
+
+## Wednesday 18 April 
+
+- Make sure you have a list of variables you wish to start analyzing. 
+- Use the `keep` command in Stata to cut down your variables to those you want and start to investigate those variables. 
+- Think about using `twoway` to make `bar` and `scatter` plots of your data. - Some intuitions about `regress` in STATA
+
+
+## Thursday 19 April
+
+- Continue with Muliple Regression
+
 ## Week 11
 
 ## Tuesday 10 April
