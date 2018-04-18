@@ -26,8 +26,9 @@ output: html_document
 
 - Make sure you have a list of variables you wish to start analyzing. 
 - Use the `keep` command in Stata to cut down your variables to those you want and start to investigate those variables. 
-- Think about using `twoway` to make `bar` and `scatter` plots of your data. - Some intuitions about `regress` in STATA
-
+- Think about using `twoway` to make `bar` and `scatter` plots of your data.
+- Some intuitions about `regress` in STATA
+- Get an idea of the structure of your report with the [report guidelines](report_guidelines.html). 
 
 ## Thursday 19 April
 
