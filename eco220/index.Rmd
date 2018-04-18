@@ -27,7 +27,12 @@ output: html_document
 - Make sure you have a list of variables you wish to start analyzing. 
 - Use the `keep` command in Stata to cut down your variables to those you want and start to investigate those variables. 
 - Think about using `twoway` to make `bar` and `scatter` plots of your data.
+    - See here: [https://stats.idre.ucla.edu/stata/modules/graph8/twoway-scatter-combine/](https://stats.idre.ucla.edu/stata/modules/graph8/twoway-scatter-combine/)
 - Some intuitions about `regress` in STATA
+    - Annotated regression output: [https://stats.idre.ucla.edu/stata/output/regression-analysis-2/](https://stats.idre.ucla.edu/stata/output/regression-analysis-2/)
+    - See here: [https://stats.idre.ucla.edu/stata/faq/how-can-i-use-estout-to-make-regression-tables-that-look-like-those-in-journal-articles/](https://stats.idre.ucla.edu/stata/faq/how-can-i-use-estout-to-make-regression-tables-that-look-like-those-in-journal-articles/)
+    - And here for tables that export to .rtf which you can paste into Google Docs or MSWord: [https://www.ssc.wisc.edu/sscc/pubs/stata_tables.htm](https://www.ssc.wisc.edu/sscc/pubs/stata_tables.htm)
+    - And here for comprehensive discussions of `esttab`: [http://repec.sowi.unibe.ch/stata/estout/esttab.html](http://repec.sowi.unibe.ch/stata/estout/esttab.html)
 - Get an idea of the structure of your report with the [report guidelines](report_guidelines.html). 
 
 ## Thursday 19 April
