@@ -1,0 +1,75 @@
+---
+title: "Report Guidelines"
+subtitle: "Help for you to complete your final report"
+author: "Simon Halliday"
+date: "`r Sys.Date()`"
+output: tint::tintHtml
+bibliography: skeleton.bib
+link-citations: yes
+---
+
+```{r setup, include=FALSE}
+library(tint)
+# invalidate cache when the package version changes
+knitr::opts_chunk$set(tidy = FALSE, cache.extra = packageVersion('tint'))
+options(htmltools.dir.version = FALSE)
+```
+
+## Basics and Structure 
+
+Your report is meant to be pretty short in terms of all the *text*: at most 5 pages (1.5 space, Font size 11). After the text you will have an appendix with your figures, your summary statistics, and any regression output you have in your report.  
+
+Your report should have a basic structure as follows: 
+
+- *Introduction* (One or two paragraphs): Can you identify a problem you're interested in? What variables do you hope to look at to help you think about this problem? What research question(s) might the survey questions you look at help you to address? Explain the basics of what you find in your report with your variables.
+- *Data Description and summary statistics* (two to three paragraphs): Clearly describe the data set you are working with (one paragraph), including the year the data was collected, the size of the sample, etc. (Cite the data properly in a reference list at the end of the paper too!) Describe the variables clearly – don't just use the variable name in the data set often something like `v44` or `w4_hhincome`. In a summary statistics table, be clear what the variables are, what their mean values are, standard deviations, sample size, etc are. Try to do your best to have dropped observations with missing data for your variables so that you have a consistent sample size. 
+- *Results* (as many paragraphs as required for your questions): Clearly explain the figures and results of the comparisons that you do (confidence intervals, t-tests, regressions). Be sure to label your figures clearly. If you wish to get a bit ambitious, consider exploring the command [`esttab`](http://repec.sowi.unibe.ch/stata/estout/esttab.html) to make your summary statistics tables and regression output look pretty (only consider this if you find you have the time, else copy/paste in the output from your log file in an appendix).
+- *Discussion* (One or two short paragraphs): Your *Results* section should simply describe results in a factual and disinterested manner (that is, report them as impartially as possible). In a paragraph or two in your discussion section try to consider whether you can *interpret* these results in a particular way. Think about the figures you got in the Alcohol Exercise where you found that the proportions of people in alcohol-free housing and standard housing were the same. This leads us to a conundrum: why don't they differ? This was why you explored other figures to try to understand what was going on. 
+- *Conclusion* (One or two short paragraphs): What is (are) the take home message(s) from your figures and analysis? How did you confront any ideas that you proposed in your introduction? What are future ways you could explore this data to better illustrate or more closesly investigate the problem you're considering? 
+```{r fig-margin, fig.margin = TRUE, fig.cap = "Fig 1: Miles per gallon (MPG) vs horsepower, colored by transmission.", fig.width=3.5, fig.height=3.5, cache=TRUE, echo = FALSE, message = FALSE, warning = FALSE}
+library(ggplot2)
+mtcars2 <- mtcars
+mtcars2$am <- factor(
+  mtcars$am, labels = c('automatic', 'manual')
+)
+ggplot(mtcars2, aes(hp, mpg, color = am)) +
+  geom_point() + geom_smooth() +
+  theme(legend.position = 'bottom')
+```
+
+- *Appendix*: In your appendix you should include any figures you produce, any summary statistic tables you produce, and the output of any regressions you compile. This will extend the length of your paper substantially, but you don't count this towards the page count for your text. Be sure to given your Figures captions and numbers, e.g. Fig. 1: Caption so your explanation can be clear in the text. An example is shown alongside. 
+
+
+## Your Report is a First Draft 
+You should consider that your report is going to be the **first draft** of an idea you have that you would like to continue to explore later were you to have more time. In your report you  demonstrate that you can achieve certain outcomes: 
+
+- can you *manage data* by creating new variables, dropping variables, etc.
+- can you use these variables to produce *figures*, *summary statistics*, *hypothesis tests*, and *regressions* and can you *describe* these?
+- can you *interpret* the output of your figures, summary statistics, hypothesis tests and regressions? That is, can you give them meaning and think about them in a way that employs economics? 
+- For example, if you look at different Lorenz Curves and Gini Coefficients in the US over time (and you *describe* them in a particular way), does this mean inequality is increasing or decreasing? For which groups of people? Why is this **important**?
+
+You're demonstrating  *competencies* you have towards thinking honing the abilities you'll need for projects, reading papers, and writing reports in later courses, such as an upper level elective or senior seminar. 
+
+## Citation in Economics 
+In economics, we typically use the Chicago style for citations, which is a form of the (Author, Date, page number) format. If you would like a full explanation of how this works, see this [citation guide](https://www.reed.edu/economics/resources/econ_citationguide.pdf) from Reed College's Economics Department which is equivalent to what we do at Smith. 
+
+For example, it is important that you cite the different data sets you use and, when you cite an academic paper in your report, that you refer to it in your reference list. For example, if I were to use the National Income Dynamics Study (NIDS) data, then I would have to cite it for each wave of the data, for example @nidsw1 for Wave 1 of the NIDS data. The full citation is shown alongside this paragraph as an example of what you would include in your reference list. Remember that the full citation for your data is likely on the original website for the data. 
+
+## Transparency and Integrity in Research
+Ensure that you follow the guidelines in the "Alcohol Exercise" for maintaining your folders and keeping .do files for the analysis of your data. Remember that you want the following: 
+
+- *Original-Data*: this contains the original data that you will process with your processing.do. Typically, you will only keep a small subset of these variables for your analysis.dta.
+- *Analysis-Data*: this will contain the analysis.dta that you will use when you produce your figures and do your summary statistics, regressions, hypothesis testing, etc. 
+- *Command-Files*: this folder contains your .do files to process your data (processing.do), to analyze your data (analysis.do) and any additional .do files you need to include for your report (for example, in the alcohol exercise you generated a data appendix, that is beyond the scope of the report for now). 
+- *Graphs* or *Figures*: this folder contains any figures or graphs you generate for your final report. You will likely save the figures as `filename.gph` files then `graph export` with .pdf or .png to import into your final document in the appendix. 
+
+## Results and Statistical Significance 
+
+When working with students previously, I have seen many students become sad when they do not find a statistically significant result from a regression that they want to investigate or a comparison across variables that they propose. Do not be disappointed by this when you are doing your first project analyzing data. It takes time to come up with interesting research questions and to think of difficult problems to solve. I want you to practice the *process* of research, and if you come up with a statistically significant result in your regressions or hypothesis tests, that's great! But you don't need to do that to get a good grade. You will be graded for engaging with the research process, describing your data and results, including a discussion, concluding, etc. 
+
+## What do I submit? 
+
+- You will submit a zip file of your project folder on Moodle with the **PDF** of your final report in the main project folder. 
+- If you work on the CPS data, you need to included your original data file that you download in your submission in your Original-Data folder (as I do not have the particular data that you will download).
+- If you work on WERS or NIDS data, then I have the original data and I can use the data I have in my Original-Data folder so you should *not* include it in your final zipped file submission. 
+- Your zipped file will therefore contain your processing.do and your analysis.do file. It should also contain the analysis.dta file that you would have produced from your processing.do. 
