@@ -39,7 +39,7 @@ output: html_document
 
 - Continue with Muliple Regression
 - Multiple Regression Worksheet: [https://moodle.smith.edu/mod/resource/view.php?id=316066](https://moodle.smith.edu/mod/resource/view.php?id=316066)
-- Do file for the worksheet using the [`nids.dta`](https://moodle.smith.edu/pluginfile.php/513237/mod_folder/content/0/nids.dta?forcedownload=1) file on Moodle: [https://moodle.smith.edu/mod/resource/view.php?id=316065](https://moodle.smith.edu/mod/resource/view.php?id=316065)
+- Do file for the worksheet using the [`nids.dta`](https://moodle.smith.edu/pluginfile.php/513237/mod_folder/content/0/nids.dta?forcedownload=1) file on Moodle: [https://moodle.smith.edu/mod/resource/view.php?id=316070](https://moodle.smith.edu/mod/resource/view.php?id=316070)
 
 ## Week 11
 
