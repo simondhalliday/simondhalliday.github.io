@@ -1,0 +1,170 @@
+---
+title: "Banking - Unbanked and Underbanked"
+author: "Simon Halliday"
+date: "2018-April -27"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(mosaic)
+library(tmap)
+library(tmaptools)
+library(tigris)
+library(srvyr)
+```
+
+# Introduction
+Inspired by a buddy of mine's article at The Hill (see [here](http://thehill.com/opinion/finance/385033-the-poor-need-bank-accounts-and-usps-has-the-answer)), I wanted to look at the banking data from the FDIC in a "data map" (or "chlorpleth" as they're called in the dataviz biz). 
+
+```{r}
+fdic15 <- read_csv("data/fdic/hhmultiyear/hh_multiyear_analys.csv")
+```
+
+```{r}
+names(fdic)
+```
+
+```{r}
+mosaic::tally(~hryear4, data = fdic)
+```
+
+```{r}
+fdic15 <- 
+  fdic %>%
+  filter(hryear4 == 2015)
+```
+
+```{r}
+head(fdic15)
+```
+
+```{r}
+mosaic::tally(~gestfips, data = fdic15)
+```
+
+```{r}
+fdic15test <- fdic15 %>%
+filter(gestfips == 1)
+
+```
+
+
+```{r}
+fdictestmutate <- 
+  fdic15test %>% 
+  mutate(state = recode(gestfips, `1` = "AL"))
+```
+
+
+```{r}
+fdic15 <- 
+  fdic15 %>% 
+  mutate(state = recode(gestfips, `1` = "AL", `2` = "AK", `4` = "AZ", 
+                        `5` = "AR",
+                        `6` = "CA", `8` = "CO", `9` = "CT", `10` = "DE", 
+                        `11` = "DC", `12` = "FL", `13` = "GA", `15` = "HI", 
+                        `16` = "ID", `17` = "IL", `18` = "IN", `19` = "IA", 
+                        `20` = "KS", `21` = "KY", `22` = "LA", `23` = "ME", 
+                        `24` = "MD", `25` = "MA", `26` = "MI", `27` = "MN", 
+                        `28` = "MS", `29` = "MO", `30` = "MT", `31` = "NE",
+                        `32` = "NV", `33` = "NH", `34` = "NJ", `35` = "NM",
+                        `36` = "NY", `37` = "NC", `38` = "ND", `39` = "OH", 
+                        `40` = "OK", `41` = "OR", `42` = "PA", `44` = "RI", 
+                        `45` = "SC", `46` = "SD", `47` = "TN", `48` = "TX", 
+                        `49` = "UT", `50` = "VT", `51` = "VA", `53` = "WA", 
+                        `54` = "WV", `55` = "WI", `56` = "WY"))
+```
+
+```{r household_limit}
+fdic15hh <- 
+  fdic15 %>% 
+  filter(perrp == 1)
+```
+
+
+```{r survey_design}
+fdic15hh_weighted <- 
+  fdic15 %>% 
+  as_survey_design(ids = perrp, weights = hhsupwgt)
+```
+
+
+```{r}
+fdic15hh_weighted <- 
+  fdic15hh_weighted %>% 
+  mutate(unbanked = ifelse(hbankstatv2 == 1, 1, 0),
+         underbanked = ifelse(hbankstatv2 == 1, 3, 0),
+         unbankedh = ifelse(hunbnk == 1, 1, 0))
+```
+
+```{r}
+fdic15sryvsum <- 
+  fdic15hh_weighted %>% 
+  group_by(state) %>% 
+  summarise(unbankave = survey_mean(unbanked), 
+            underbankave = survey_mean(underbanked), 
+            unbankaveh = survey_mean(unbankedh)) %>%
+  filter(state != "DC") %>% 
+  rename(abb = state)
+```
+
+
+```{r, eval = false}
+fdic15sum <- 
+  fdic15 %>% 
+  group_by(state) %>% 
+  summarise(unbankave = mean(unbanked), 
+            underbankave = mean(underbanked), 
+            unbankaveh = mean(unbankedh)) %>%
+  filter(state != "DC") %>% 
+  rename(abb = state)
+```
+
+```{r}
+us_geo <- states(class = "sf")
+```
+
+```{r}
+st_crosswalk <- tibble(State = state.name) %>%
+   bind_cols(tibble(abb = state.abb))
+fdic15join <- left_join(fdic15sryvsum, st_crosswalk, by = "abb")
+```
+
+```{r}
+bankedmap <- append_data(us_geo, fdic15join, key.shp = "NAME", key.data = "State")
+under_coverage()
+```
+
+```{r}
+contig_48 <- subset(bankedmap, !(NAME %in% c("Alaska", "Hawaii", "Puerto Rico", "United States Virgin Islands", "Commonwealth of the Northern Mariana Islands", "Guam", "American Samoa", "District of Columbia" )))
+```
+
+```{r}
+tm_shape(contig_48, projection = 2163) +
+  tm_borders(lwd = 1, col = "black", alpha = .5) +
+  tm_polygons("unbankaveh", id = "NAME", 
+              title = c("Proportion Unbanked Households"), 
+              border.col = "gray50", border.alpha = .5) + 
+  tm_layout(title = "2015 Unbanked Population By State, percent",
+  title.position = c("center", "top"),
+  legend.position = c("left", "bottom"), frame = FALSE,
+  inner.margins = c(0.1, 0.1, 0.05, 0.05))
+```
+
+
+```{r}
+jpeg(file = "unbanked_map_usa.jpg", width = 640, height = 480, units = "px")
+tm_shape(contig_48) +
+  tm_polygons("unbankaveh", id = "NAME", 
+              title = c("Proportion Unbanked Households")) + 
+  tm_borders(lwd = 1, col = "black", alpha = .5)
+
+dev.off()
+```
+
+
