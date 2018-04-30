@@ -19,7 +19,7 @@ library(srvyr)
 ```
 
 # Introduction
-Inspired by a buddy of mine's article at The Hill (see [here](http://thehill.com/opinion/finance/385033-the-poor-need-bank-accounts-and-usps-has-the-answer)), I wanted to look at the banking data from the FDIC in a "data map" (or "chlorpleth" as they're called in the dataviz biz). 
+Inspired by a buddy of mine's article at The Hill (see [here](http://thehill.com/opinion/finance/385033-the-poor-need-bank-accounts-and-usps-has-the-answer)), I wanted to look at the banking data from the FDIC in a "data map" (or "chorpleth" as they're called in the dataviz biz). 
 
 ```{r}
 fdic15 <- read_csv("data/fdic/hhmultiyear/hh_multiyear_analys.csv")
@@ -149,22 +149,55 @@ tm_shape(contig_48, projection = 2163) +
   tm_borders(lwd = 1, col = "black", alpha = .5) +
   tm_polygons("unbankaveh", id = "NAME", 
               title = c("Proportion Unbanked Households"), 
-              border.col = "gray50", border.alpha = .5) + 
+              border.col = "gray50", border.alpha = .5, 
+              palette = "-Spectral", n = 8, auto.palette.mapping = FALSE) + 
+  tm_credits(paste0("Data @ Current Population Survey, FDIC Supplement; ",
+  "Shape @ United States Census Bureau"),
+  position = c("right", "bottom")) +
   tm_layout(title = "2015 Unbanked Population By State, percent",
   title.position = c("center", "top"),
   legend.position = c("left", "bottom"), frame = FALSE,
   inner.margins = c(0.1, 0.1, 0.05, 0.05))
+
 ```
 
 
 ```{r}
 jpeg(file = "unbanked_map_usa.jpg", width = 640, height = 480, units = "px")
-tm_shape(contig_48) +
+tm_shape(contig_48, projection = 2163) +
+  tm_borders(lwd = 1, col = "black", alpha = .5) +
   tm_polygons("unbankaveh", id = "NAME", 
-              title = c("Proportion Unbanked Households")) + 
-  tm_borders(lwd = 1, col = "black", alpha = .5)
-
+              title = c("% of Unbanked Households"), 
+              border.col = "gray50", border.alpha = .5, 
+              palette = "-Spectral", n = 8, auto.palette.mapping = FALSE) + 
+  tm_credits(paste0("Data @ Current Population Survey, FDIC Supplement; ",
+  "Shape @ United States Census Bureau"),
+  position = c("right", "bottom")) +
+  tm_layout(title = "2015 Unbanked Population By State, percent",
+  title.position = c("center", "top"),
+  legend.position = c("left", "bottom"), frame = FALSE,
+  inner.margins = c(0.1, 0.1, 0.05, 0.05))
 dev.off()
+```
+
+
+```{r}
+jpeg(file = "underbanked_map_usa.jpg", width = 640, height = 480, units = "px")
+tm_shape(contig_48, projection = 2163) +
+  tm_borders(lwd = 1, col = "black", alpha = .5) +
+  tm_polygons("underbankave", id = "NAME", 
+              title = c("% of Underbanked Households"), 
+              border.col = "gray50", border.alpha = .5, 
+              palette = "-Spectral", n = 8, auto.palette.mapping = FALSE) + 
+  tm_credits(paste0("Data @ Current Population Survey, FDIC Supplement; ",
+  "Shape @ United States Census Bureau"),
+  position = c("right", "bottom")) +
+  tm_layout(title = "2015 Underbanked Population By State, percent",
+  title.position = c("center", "top"),
+  legend.position = c("left", "bottom"), frame = FALSE,
+  inner.margins = c(0.1, 0.1, 0.05, 0.05))
+dev.off()
+
 ```
 
 
