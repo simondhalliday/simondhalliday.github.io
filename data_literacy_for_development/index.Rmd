@@ -1,0 +1,32 @@
+---
+output: html_document
+    #css: ../stylesheets/styles.css
+---
+
+# Data Literacy for Economic Development
+On this page you will find resources and links based on my article for the Journal of Economic Education: 
+
+- Citation: [INSERT CITATION HERE]. 
+- Author: Simon Halliday, PhD. 
+- Contact: [shalliday@smith.edu](shalliday@smith.edu)
+
+## Class Context and Syllabus
+- Syllabus for my class Economic Development (ECO211) in the Economics Department at Smith College  [pdf]() [docx]() 
+
+## Example Economy Exercises 
+- Printout for students with example economies [pdf]() and [docx]()
+- Income instructions for Students [pdf]() and [docx]()
+- Poverty instructions for Students [pdf]() and [docx]()
+- Inequality instructions for Students [pdf]() and [docx]()
+- Solutions for instructors for example economies [xlsx]() and [sheets]()
+- Guidelines for instructors for the exercises [pdf]() and [docx]()
+
+## Excel Real-World Data Exercise
+- Note: I cannot provide the data on a public site, a potential user can request the NIDS and upon that request I can share data and/or do files. The data are publicly available, but the user should preferably access the data herself at the DataFirst Research Unit. 
+- Stata .do file for converting South African National Income Dynamics Study (NIDS) to workable spreadsheet [do](). 
+- Solutions for instructors for data [xlsx]() and [sheets]()
+
+## Project
+- Guidelines for students for the project [pdf]() [docx]()
+
+
