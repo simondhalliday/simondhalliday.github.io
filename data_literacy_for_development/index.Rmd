@@ -21,23 +21,34 @@ On this page you will find resources and links based on my article for the Journ
 - Guidelines for instructors for the exercises [pdf](https://drive.google.com/open?id=1k8A9JSOEyPAb1Fnh7Uq8vb2VZK0hI4FJ) and [docx](https://drive.google.com/open?id=1y_0389KxNGOd_7_Dj4cZ5YX5VQp9vA8E)
 - Solutions for instructors for example economies [xlsx](https://drive.google.com/open?id=0B9jjwkjdUJU7Y1N5aFVLeG51eHc)
 
-
-## Excel Real-World Data Exercise
+## Excel Real-World Data Exercise Sample Documents
 
 - Note: I cannot provide the data on a public site, a potential user can request the NIDS and upon that request I can share data and/or do files. The data are publicly available, but the user should preferably access the data herself at the DataFirst Research Unit. 
 - Sample sheet mirroring the data with 10 household-rows [xls](https://drive.google.com/file/d/18nSoDTf9iwS2PlLdqwXK_asz64QQahWT/view?usp=sharing) 
 - Accompanying description in [docx](https://drive.google.com/open?id=1zSQqzoeawRKjDEOjdR5wMfj9dV0eXfE1) and [pdf](https://drive.google.com/open?id=15pg1xAvCBTFIV2JthVd4zL1z-yEgsLLq). 
 - Solutions for instructors for sample data data [xlsx](https://drive.google.com/file/d/1GgA9RkJHhWJaK1n5BG4UvmlKphmX1yIX/view?usp=sharing)
+- Additional sample economy with nested IF() statement as exercise [xls](https://drive.google.com/open?id=0B9jjwkjdUJU7b1BtaUxNUElzREk)
 
 # Stata Files for Generating Spreadsheets
 - Stata .do files for converting South African National Income Dynamics Study (NIDS) to workable spreadsheet: 
     - Working with 2008 NIDS: [nids_data_setup.do](https://github.com/simondhalliday/simondhalliday.github.io/blob/master/data_literacy_for_development/nids_data_setup.do)  
     - Working with 2014 NIDS: [nids2014.do](https://github.com/simondhalliday/simondhalliday.github.io/blob/master/data_literacy_for_development/nids2014.do)
 
+## Additional Documents 
 
-## Project
+- Example spreadsheet to teach students about **if statements** (the basics) [xls](https://drive.google.com/open?id=1s6dE0Pl5l7Y5nz8YRTmXHan1ooztuvQC)
+- Example spreadsheet for FGT($\alpha$) and understanding the poverty Head Count Ratio, Poverty Gap, etc: [xls](https://drive.google.com/open?id=1VQvYmfEnq52PsFtBerYJ_g9aymg9pc_U).
+- Example spreadsheet to teach students about **matching** and **indexing**, [xls](https://drive.google.com/open?id=1pOGwwQkQusmczmxRDWf-8yIFbEcK-9p8)
+- Example spreadsheet to teach the **human development index** and using math in Excel: [xls](https://drive.google.com/open?id=1MG-ME2VJF22UFdviBYJ7Nl-8uYGPQQmm)
 
-- Guidelines for students for the project [pdf]() [docx]()
+
+## Problem Sets with Solutions and Examples 
+
+- Problem Set 1: [PS1](https://drive.google.com/open?id=0B9jjwkjdUJU7UWpCa3FscXZUeDA), [PS1 Data xls](https://drive.google.com/open?id=0B9jjwkjdUJU7NjhyTm5qZFNZRUk), [PS 1 Data Solutions xls](https://drive.google.com/open?id=0B9jjwkjdUJU7dDYwbnBpaTVFRnM) 
+- Problem Set 2: [PS2](https://drive.google.com/open?id=0B9jjwkjdUJU7RGdtbDEwb050WEk), [PS 2 Data Solutions xls](https://drive.google.com/open?id=0B9jjwkjdUJU7WUxJVlEta3ZVYzQ)  -- note, PS2 did not have a data exercise *per se*, I simply encourage students to attempt it in Excel and I showed them my solution afterwards and distributed the solutions document to them. 
+- Problem Set 3: [PS3](https://drive.google.com/open?id=0B9jjwkjdUJU7czRLVEFuMWVOSHc), [PS3 Data xls](https://drive.google.com/open?id=0B9jjwkjdUJU7cV9uYVpQSnFSQU0), [PS 3 Data Solutions xls](https://drive.google.com/open?id=0B9jjwkjdUJU7MDBUeVNQbF9tcUk) 
+
+
 
 ## R Code for figures in the paper 
 I coded all of the figures in the paper in R. I provide links to the R code for the figures. This is intended for instructors or interested advanced students and should not be viewed as part of the exercise itself. 
