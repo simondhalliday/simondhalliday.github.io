@@ -6,27 +6,42 @@ output: html_document
 # Data Literacy for Economic Development
 On this page you will find resources and links based on my article for the Journal of Economic Education: 
 
-- Citation: [INSERT CITATION HERE]. 
+- Citation: [INSERT CITATION HERE UPON RECEIVING IT]. 
 - Author: Simon Halliday, PhD. 
 - Contact: [shalliday@smith.edu](shalliday@smith.edu)
 
 ## Class Context and Syllabus
-- Syllabus for my class Economic Development (ECO211) in the Economics Department at Smith College  [pdf]() [docx]() 
+- Syllabus for my class Economic Development (ECO211) in the Economics Department at Smith College  [pdf](https://drive.google.com/open?id=19LTRxGW6fYIELHWc9tzKhKDsAuzO0y9F). 
 
 ## Example Economy Exercises 
-- Printout for students with example economies [pdf]() and [docx]()
-- Income instructions for Students [pdf]() and [docx]()
-- Poverty instructions for Students [pdf]() and [docx]()
-- Inequality instructions for Students [pdf]() and [docx]()
-- Solutions for instructors for example economies [xlsx]() and [sheets]()
-- Guidelines for instructors for the exercises [pdf]() and [docx]()
+
+- Printout for students with example economies [pdf](https://drive.google.com/open?id=1uRtUrlHkp2UcWuUI7bgvSzrHAbT2UF1u) and [docx](https://drive.google.com/open?id=0B9jjwkjdUJU7T1JWYzNnOXkyZVk)
+- Income and poverty instructions for Students [pdf](https://drive.google.com/open?id=12INhXjbdCvHrW5K9F89UPsJcGTmcJb9-) and [docx](https://drive.google.com/open?id=12sSyru5o1h3drgvlImr6-vrr_9y4pV4Z)
+- Inequality instructions for Students [pdf](https://drive.google.com/open?id=1kW-qVRmDicvrBRyfdJnwnAJNXvRQE-W4) and [docx](https://drive.google.com/open?id=1MXDfV6_5uzh-eu247PcR5f2FV7Xo8KUS)
+- Guidelines for instructors for the exercises [pdf](https://drive.google.com/open?id=1k8A9JSOEyPAb1Fnh7Uq8vb2VZK0hI4FJ) and [docx](https://drive.google.com/open?id=1y_0389KxNGOd_7_Dj4cZ5YX5VQp9vA8E)
+- Solutions for instructors for example economies [xlsx](https://drive.google.com/open?id=0B9jjwkjdUJU7Y1N5aFVLeG51eHc)
+
 
 ## Excel Real-World Data Exercise
+
 - Note: I cannot provide the data on a public site, a potential user can request the NIDS and upon that request I can share data and/or do files. The data are publicly available, but the user should preferably access the data herself at the DataFirst Research Unit. 
-- Stata .do file for converting South African National Income Dynamics Study (NIDS) to workable spreadsheet [do](). 
-- Solutions for instructors for data [xlsx]() and [sheets]()
+- Sample sheet mirroring the data with 10 household-rows [xls](https://drive.google.com/file/d/18nSoDTf9iwS2PlLdqwXK_asz64QQahWT/view?usp=sharing) 
+- Accompanying description in [docx](https://drive.google.com/open?id=1zSQqzoeawRKjDEOjdR5wMfj9dV0eXfE1) and [pdf](https://drive.google.com/open?id=15pg1xAvCBTFIV2JthVd4zL1z-yEgsLLq). 
+- Solutions for instructors for sample data data [xlsx](https://drive.google.com/file/d/1GgA9RkJHhWJaK1n5BG4UvmlKphmX1yIX/view?usp=sharing)
+
+# Stata Files for Generating Spreadsheets
+- Stata .do files for converting South African National Income Dynamics Study (NIDS) to workable spreadsheet: 
+    - Working with 2008 NIDS: [nids_data_setup.do](https://github.com/simondhalliday/simondhalliday.github.io/blob/master/data_literacy_for_development/nids_data_setup.do)  
+    - Working with 2014 NIDS: [nids2014.do](https://github.com/simondhalliday/simondhalliday.github.io/blob/master/data_literacy_for_development/nids2014.do)
+
 
 ## Project
+
 - Guidelines for students for the project [pdf]() [docx]()
 
+## R Code for figures in the paper 
+I coded all of the figures in the paper in R. I provide links to the R code for the figures. This is intended for instructors or interested advanced students and should not be viewed as part of the exercise itself. 
 
+- Figure 1: "The Lorenz Curve for Economy J is shown by the solid black line. The line of perfect equality is shown by the dashed line." [Code](https://github.com/simondhalliday/simondhalliday.github.io/blob/master/data_literacy_for_development/lorenz_employment_numeric.R) 
+- Figure 2: "Bar chart to calculate Gini for Economy D. Data are from Table 3" [Code](https://github.com/simondhalliday/simondhalliday.github.io/blob/master/data_literacy_for_development/lorenz_barchart_economyD.R)
+- Figure 3: "Lorenz curves for artificial countries. Data are from Table 3." [Code](https://github.com/simondhalliday/simondhalliday.github.io/blob/master/data_literacy_for_development/halliday_inequality_lorenz_set.R)
