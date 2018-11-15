@@ -1,12 +1,11 @@
 #Graph Designer: Simon Halliday
-#Title: Coordination, Conflict and Competition: A Text in Microeconomics
 
 library(ineq)
 library(tidyverse)
 library(readxl)
 
 #Edited the margins to cater for the larger LHS labels
-df <- read_xlsx("risk/dev_data.xlsx")
+df <- read_xlsx("dev_data.xlsx")
 
 income <- 
   df %>% 
@@ -25,7 +24,7 @@ plot1 <-
   ggtitle("Lorenz Curves for 10 Artificial Economies") +
   theme_bw()
 
-pdf(file = "risk/halliday_inequality_comparison.pdf", width = 6, height = 4)
+pdf(file = "fig3.pdf", width = 6, height = 4)
 plot1
 dev.off()
 

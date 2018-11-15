@@ -33,4 +33,5 @@ LorenzDFNar %>%
   scale_colour_grey(start = 0.7, end = 0.4, aesthetics = "colour") + 
   scale_fill_grey(start = 0.7, end = 0.4, aesthetics = "fill") +
   theme_classic()
-ggsave(file = "lorenz_bar.png", width = 6, height = 4, units = c("in"), dpi = 300)
+ggsave(file = "fig2.png", width = 6, height = 4, units = c("in"), dpi = 300)
+ggsave(file = "fig2.pdf", device = "pdf", width = 6, height = 4)

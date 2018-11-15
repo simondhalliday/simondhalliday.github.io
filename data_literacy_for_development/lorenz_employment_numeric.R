@@ -1,10 +1,8 @@
-#Graph Designer: Simon Halliday & Riley Boeth '17
-#Authors: Bowles, Foley and Halliday
-#Title: Coordination, Conflict and Competition: A Text in Microeconomics
+#Graph Designer: Simon Halliday
 
 library(shape)
 library(pBrackets)
-pdf(file = "capitalism/lorenz_employment_numeric.pdf", width = 10, height = 8)
+pdf(file = "fig3.pdf", width = 10, height = 8)
 
 #Set parameters for graphics
 axislabelsize <- 1.5
