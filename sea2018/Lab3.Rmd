@@ -1,0 +1,339 @@
+---
+title: "Lab 3: Plotting Data"
+output:
+  html_document:
+    css: ./stylesheets/lab.css
+    highlight: pygments
+    theme: cerulean
+  pdf_document: default
+---
+
+##Learning Outcomes
+
+- Put into practice your knowledge of cases and variables
+
+- Import basic publicly available data into R with date variables
+
+- Plot time series data as a line graph
+
+- Shape and change your data so to make it fit for purpose...
+
+- ... allowing you to superimpose time series line graphs
+
+- Envisioning the skill to develop dynamic graphs like the Federal Reserve uses
+
+
+##Loading the packages
+Call on the following packages, using the `install.packages("")` command if necessary. 
+```{r requirements, message = FALSE, warning = FALSE}
+require(mosaic)
+require(dplyr)
+require(tidyr)
+require(ggthemes)
+require(haven)
+require(readxl)
+```
+
+```{r requirements2, include = FALSE, message = FALSE, warning = FALSE}
+require(dygraphs)
+require(xts)
+
+```
+
+
+##Levels of Labor Force Participation
+The Federal Reserve Bank, St. Louis has an economic research branch called
+"FRED". You can visit the website here: 
+[research.stlouisfed.org](https://research.stlouisfed.org). FRED makes a
+variety of fantastic data available to the public. In Lab 1, we saw a table
+that had information about the total number of men and women employed in the
+United States. 
+
+```{r part_levels, echo  = FALSE}
+ParticipationLevels <- read.csv("more/labor_force_levels.csv") 
+ParticipationLevels <- 
+  ParticipationLevels %>%
+  mutate(date = as.Date(date))
+ParticipationLevels %>%
+head(10)
+```
+
+As we saw earlier, many economists want to understand the behavioral
+responses of people to incentives, for example, what happens to labor supply
+when people are offered the opportunity to work, such as with women in the
+second half of the twentieth century. You can see the FRED graph of labor force
+participation rate at the following link:
+[research.stlouisfed.org/fred2/graph/?id=LNS11300001,LNS11300002,#](https://research.stlouisfed.org/fred2/graph/?id=LNS11300001,LNS11300002,#) 
+(accessed on 2015.07.15.) The FRED graph is interactive, which is more advanced
+than we need right now. We simply want to look at the data for the moment and
+get a sense of its structure. 
+
+#Importing Data
+The first thing you need to do is read in the data. To read in comma separated
+value (csv) data, we need to use one of two commands (which we employed previously): 
+
+- `read.csv()`
+
+- `readr::read_csv()`
+
+In the parentheses we can call the url online where the file is or specify the
+filepath where the file is. the `readr` command is very useful for big csv
+files. 
+
+First, download the file: 
+
+- Download the Excel file `labor_force_participation.xls` from the following url:[https://drive.google.com/file/d/0B9jjwkjdUJU7R2hXVGtvTEZmLVU/view?usp=sharing](https://drive.google.com/file/d/0B9jjwkjdUJU7R2hXVGtvTEZmLVU/view?usp=sharing) 
+
+Then, you should go through one of the following processes: 
+
+You can import the Excel file directly using `read_excel()` from the package `readxl`
+
+```{r}
+Participationxl <- read_excel("more/labor_force_participation.xls")
+```
+
+Or, open the file in MS Excel and save the file as a .csv file. 
+
+- Import the data by assigning a name to the object, e.g. `Participation <- read.csv(YOUR FILE PATH HERE)` (notice how, because we are creating a data
+table, we have started it with an uppercase letter).
+
+Here's an example of how you might read in the .csv file:
+```{r import}
+Participation <- read.csv("more/labor_force_participation.csv")
+```
+
+
+
+##Getting R to see Dates
+Remember that R needs to be told a variable is a date. We shall solve it using the function `mutate` as we did previously (if you imported the .csv; `read_excel()` should have converted it directly to a date):
+```{r mutate_date}
+Participation <- 
+  Participation %>%
+  mutate(date = as.Date(date))
+```
+We shall use the data to create a variety of graphs using the command `ggplot`.
+At the end of the lab, you'll see that you can also create a graph that look
+startlingly similar to the one created by the Federal Reserve Bank. That'll be
+more than what you need to learn for now, but it's important to see to
+understand the power of R. 
+
+##Generating a Line Graph
+Let's use these data to create two graphs, one for each of men and women. 
+You can use many commands to generate graphs in R, but we shall use the
+`ggplot` command. If you want to search for help, you need to look for
+"ggplot2" because an old version of `ggplot` existed. Remember to look for
+help simply put a question mark `?` in front of a command's name, e.g. 
+`?ggplot2`.
+
+To generate a graph in `ggplot` you first need to tell R what data you want to
+use. We shall do this by putting the data on a line _before_ we call on the
+ggplot command and we shall follow the name of the data with the following
+symbol: `%>%`. The `%>%` symbol is called a __pipe__ in programming, statistics
+or econometrics. You should read the pipe as saying "Then" or "And then". 
+
+Next we will add in the call to `ggplot` and tell it that the x-axis maps to a
+date and that the y-axis maps to a measure of the female participation rate. 
+
+You will get an error if you try to knit this in a chunk without the option `eval = FALSE` in the curly brackets after a comma after `{r}`, e.g. `{r, eval = FALSE}`. By including this command you are telling RMarkdown *not* to evaluate the command as an actual command, but simply to print it. We're doing it here to add things together step by step. 
+
+```{r data_ggplot, eval = FALSE}
+Participationxl %>% 
+  ggplot(aes(x = date, y = female))
+```
+
+For your reference, the code above would be the equivalent of doing the following: 
+```{r ggplot no pipe, eval = FALSE}
+ggplot(Participationxl, aes(x = date, y = female))
+```
+
+The commands above won't do anything yet because we haven't yet told `ggplot` 
+what kind of plot we want. We want a line plot. To make a plot we have to 
+specify a kind of `geom` for `ggplot`. A 
+`geom` is a type of object that talks to R and says "Make Me A Line Plot" 
+or "Make Me A Scatter Plot" or "Make Me a Density Plot". We shall use
+`geom_line()` as a line graph is the one we want. Check the notes on using
+`ggplot` if you want to be sure of this. 
+
+Now, `ggplot` also needs you to end each line with a `+` sign. Think back 
+to the 6-year-old from Lab 1 who was telling you about the `%>%` symbol: 
+she might say 'and' a lot. We have to treat ggplot like a
+6-year-old who says 'and' a lot. So it doesn't just want to be told what the
+x-axis and y-axis are, it also needs to be told "and I want a line plot".
+
+```{r first ggplot}
+Participationxl %>% #Put in data data and then...
+  ggplot(aes(x = date, y = female)) + #ggplot x and y AND
+  geom_line() #I want a line plot
+```
+
+I have created the graph for women below again, but with a label for the 
+y-axis and a different background. 
+```{r participation_female}
+#Female Participation Rate Graph
+Participation %>%
+  ggplot(aes(x = date, y = female)) +
+  geom_line() +
+  ylab("Female Labor Force Partipation Rate") + #This is a label for the y-axis
+  theme_bw() #this is a "theme" for the ggplot from the ggthemes package
+```
+
+-   Now it's your turn. Use the commands you've learned so far to create a graph for the labor force participation rate of men. Your graph should look like the one below. 
+
+-   You only need to change two parts of the code. 
+
+```{r participation_male, echo  = FALSE}
+#Male Participation Rate Graph
+Participation %>%
+ggplot(aes(x = date, y = male)) +
+  geom_line() +
+ ylab("Male Labor Force Partipation Rate") +
+   theme_bw()
+```
+
+- Is it easy to compare the two graphs? What makes it easier or harder? 
+
+## Tidying our Data
+
+As it stands, with the data as it exists in the way we get it from the Federal
+Reserve, we can create the graphs for male and female participation rate
+independently, but we have to stop there. We can't superimpose the male and
+female graphs on each other or create facets of them in one command (more on
+faceting later). Why is that? 
+
+As we learned previously, to construct useful visualizations and to conduct
+worthwhile models, our data ought to be __tidy__. 
+Recall that  __tidy data__ typically has unique __variables__ in each column
+and unique __cases__ in each row. So let's take a moment to think about the
+data that we have.  
+
+* * *
+
+-   What is measured in each column in the existing data? 
+
+-   Does each column measure a *unique* variable? 
+
+-   What variables ought we to have in its own columns? Why? 
+
+
+To super-impose the two graphs, we shall change the "shape" of the data or
+`gather` it. `gather` is a very useful command in the `dplyr` package that
+allows us to change the cases and variables we're interested in analyzing. 
+
+When you use `gather` you need to be aware of several things:
+
+- gather wants a __key-value__ pair. 
+
+- the __key__ is a variable that you name which tells you what you're doing to
+the data; our key is __sex__ as we're interested in males and females. 
+
+- the __value__ is the labor force participation rate that we call __rate__ to
+corresponds to the labor force participation rate. 
+
+- we then tell gather to gather up the male and female variables we had
+previously and stack them up on top of each other making the data __longer__
+than it was before. 
+
+Let's run the code now: 
+```{r participation_data_change}
+Participation2 <-
+ Participation %>% 
+ gather(sex, rate, male, female)
+```
+
+Run `head()` on the data to check it out. 
+
+##Superimposing Lines and Faceting Graphs
+
+With our new data we shall superimpose the male and female participation rates on the same graph and give each its own color. 
+```{r participation_both}
+Participation2 %>%
+  ggplot(aes(x = date, y = rate, color = sex)) +
+  geom_line(size = 0.8) +
+  ylim(0, NA) +
+  ylab("Labor Force Participation Rate") +
+  xlab("Date") +
+  theme_bw()
+```
+
+Notice that this graph includes zero (0) on the y-axis, whereas our previous
+graphs did not. 
+
+* * *
+
+-   What changes when we add zero to the graph? 
+
+-   Why do you think zero is important to include in the graph?  
+
+You have now created a *static* version of the graph from FRED. Well done!
+
+##Faceting
+
+Another way of presenting graphs is to present them in _facets_ that are
+side-by-side or above each other. `ggplot` allows you to do this easily with
+the option `facet_grid()`. In the ggplot below, we add the option
+`facet_grid(.~sex)` to have R _facet_ the ggplots on the `sex` variable 
+we created with `gather`. 
+
+```{r faceting participation_facet}
+ Participation2 %>%
+   ggplot(aes(x = date, y = rate)) +
+   geom_line(size = 0.8) +
+   facet_grid(. ~sex) +
+   ylim(0, 100) +
+ ylab("Labor Force Participation Rate") +
+ xlab("Date") +
+ theme_bw()
+```
+
+##R can make a dygraph like FRED
+We'll leave it at that for now, but here you can see a lovely `dygraph` that
+can be generated using htmlwidgets (go to
+[www.htmlwidgets.org](http://www.htmlwidgets.org/) to see a variety of other
+advanced options for what you can do when you become and R Champion). 
+
+```{r dygraph, echo = FALSE}
+Partdate <- as.Date(Participation$date)
+MaleP <- xts(Participation$male, Partdate)
+FemaleP <- xts(Participation$female, Partdate)
+LFPR <- cbind(MaleP, FemaleP)
+colnames(LFPR) <- c("Male", "Female")
+dygraph(LFPR, main = "Labor Participation Rate Over Time") %>%
+       dySeries("Male", label="Male")%>%
+       dySeries("Female", label="Female")%>%
+       dyAxis("x", label="Date")%>%
+       dyAxis("y", label="Labor Force Participation")%>%
+       dyHighlight(highlightSeriesOpts = list(strokeWidth = 3), 
+                   highlightCircleSize = 4)%>%
+       dyRangeSelector()
+       #dyOptions(drawGrid = input$showgrid, 
+                 #colors = RColorBrewer::brewer.pal(5, "Set2"))
+```
+
+  
+## Spreading your data  
+`spread` and `gather` are __complementary__ commands: they go in opposite directions.
+Earlier, we took our data and `gather`ed it so that we had a male and a female rate of
+labor force participation for each year. If, for some odd reason, you wanted to go back
+to the original shape of the data, you can use the command `spread`, which spreads the
+data back to what it looked like previously. 
+
+Here is an example: 
+```{r spread}
+ParticipationSpread <- #assign the name  
+Participation2 %>% #Tell it to put in the data we used for the graphs
+  spread(sex, rate) #spread on the key `sex` with the value `rate`
+head(ParticipationSpread) #Check that the data looks like we want it to
+```
+
+
+##Next steps
+The data that we've looked at above is just on example of a situation in which
+we can visualize data. There are many sources of data out there that you will 
+want to use in your data analysis. In the next part of today's lab you will 
+take a look at importing data from GapMinder.org to draw graphs looking at HIV.
+In it you will learn about using `filter` and `select` in more complicated ways
+than previously. We don't merely have to stipulate what specific variables we 
+want, we can stipulate variables that meet a certain condition, such as 
+starting with a certain letter or word. 
+
+

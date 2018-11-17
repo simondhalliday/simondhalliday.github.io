@@ -1,0 +1,139 @@
+---
+title: "Gendered Effects of ACUPCC on Admissions"
+author: "Captain Michael O'Hara"
+output:
+  html_document: default
+  html_notebook: default
+---
+
+Here is some code to do some data tidying and exploratory visualization on a more complex dataset. The data used are from Hart, O'Hara, and Sirianni (2017)
+"The Effect of Sustainability Commitments on College Admissions: Evidence from the Presidents’ Climate Commitment"
+A brilliant paper that is currently being drooled over by referees at *JEEM*. 
+
+The basic idea of the paper is to examine whether signing a sustainability commitment (ACUPCC) has a measurable impact on college admissions outcomes, measured by the number of applications and the 75th percentile SAT scores of the incoming class. (Preview: to our surprise, it actually does!)
+
+As a side project, I wanted to look at whether there might be a different effect on admissions variables by gender. The data does have several admissions variables broken up by gender, including:
+
+- Number of applications (app)
+- Number of students admitted (adm)
+- Number of students who enrolled (enr)
+
+
+
+
+First, we will clear the memory and load in the tidyverse package, and read in our data. 
+```{r message = FALSE, warning = FALSE}
+rm(list = ls())
+library(tidyverse)
+  ###   tidyverse will load in all the packages we will need to tidy 
+  ###   and plot our data
+
+###   load in data
+quant.dat <- read_csv("http://simondhalliday.github.io/ctree17/data/quantity.csv")
+```
+
+Now, we need to do some data manipulation to get the data into a form that Hadley calls "tidy data". We will do this using a tool called the "pipe" (%>%) to connect a string of operations that are all being performed on the same dataframe. This is part of the tidyverse package. 
+
+First let's simplify the data into just the variables we are interested in. 
+
+```{r}
+###  Simplify data
+
+vars <- c("unitid", "year", 
+           "mapp", "wapp",   ##  apps by gender
+           "madm", "wadm",    ## number admitted by gender
+           "menr", "wenr",    ## enrollment by gender
+          "public", "treat", 
+           "tgroup", "rsalt", "rinc", "rtufe", "diplomas")
+
+quant.dat1 <- quant.dat %>%  
+       ##  cut data down to the variables we name, and rename a few
+          select(one_of(vars)) %>%
+          rename(signACUPCC = treat, signatory = tgroup) %>% 
+       ##  filter out some missing values
+          filter(!is.na(rsalt))  
+ 
+```
+
+Now, since we want to be able to separate our data by gender, we need a variable that signifies gender on its own. In the data, each variable (such as app) is split into two variables, one for male and one for female. We want to *gather* these into a single variable and then make gender a separate variable. We can do this using the `gather` and `spread` functions in the tidyverse package. We will also use the `separate` function to split the gender indicator (m or w) from the variable being measured. 
+
+```{r}
+###  Data tidying
+
+quant.dat2 <- quant.dat1 %>%  
+       ## Now, we will gather all the variables that are gendered into two variables:
+       ## the key, which tells which variable we are measuring
+       ## and the value, which gives the actual measurement
+          gather(key, value, mapp, wapp, madm, wadm, menr, wenr, na.rm = TRUE)  %>%
+          arrange(unitid, year) %>%
+       ## Now, we will break off the gender part from the variable part
+          separate(key, into = c("gender", "var"), sep = 1) %>%
+      ##  The, we will spread the variable part back into separate variables
+          spread(var, value) %>%
+          arrange(unitid, year)
+ 
+```
+Now, let's just clean up and rename some variables. 
+```{r}
+###   Now, we will aggregate the data into 6 obeservations for each year
+###   which are the average applications for schools divided 
+###   by gender, type of school, and whether or not they signed ACUPCC
+quant.dat2 <- quant.dat2 %>%
+      filter(!is.na(app)) %>%
+      filter(!is.na(adm)) %>%
+      filter(!is.na(enr)) %>%
+      mutate(public = ifelse(public == 1, "public", "private")) %>%
+      mutate(signatory = ifelse(signatory == 1, "signatory", "nonsignatory"))
+
+```
+
+We now have a tidy dataset hat we can use to do various kinds of analysis. 
+
+Suppose we want to do some visualization in the same vein as the previous ones that separated public and private schools. But we also want to separate observations by gender as well. First, we will need to aggregate our data into 6 obeservations for each year which are the averages of each variable for schools divided by gender, type of school, and whether or not they signed ACUPCC. `group_by()` delineates boundaries of aggregation used by the `summarise()` function. In this case, we want an average for each type of school, signatory status, and gender, so we set these boundaries using `group_by()`.
+
+```{r}
+###   Now, we will aggregate the data into 6 obeservations for each year
+###   which are the average applications for schools divided 
+###   by gender, type of school, and whether or not they signed ACUPCC
+quant_sum <- quant.dat2 %>%
+      group_by(year, signatory, public, gender) %>%  ## note the difference here
+      summarise(apps = mean(app), admitted = mean(adm), enrolled = mean(enr))
+
+```
+
+```{r}
+###   Now we can make a set of graphs showing the time trend of applications
+###   by gender for each category of school
+###   Savvy?
+  
+ggplot(quant_sum, aes(x = year, y = apps, group = gender, color = gender)) + 
+   geom_point() + 
+   geom_line() +
+  facet_wrap(~ public + signatory) + ggtitle("Applications by Gender") + labs(x="Year", y="Avg Applications")  
+```
+
+```{r}
+###  We can do the same thing for students admitted
+
+ggplot(quant_sum, aes(x = year, y = admitted, group = gender, color = gender)) + 
+   geom_point() + 
+   geom_line() +
+  facet_wrap(~ public + signatory) + ggtitle("Admitted by Gender") + labs(x="Year", y="Admitted")
+```
+
+```{r}
+###  As well as for students who actually enrolled  
+ggplot(quant_sum, aes(x = year, y = enrolled, group = gender, color = gender)) + 
+   geom_point() + 
+   geom_line() +
+  facet_wrap(~ public + signatory) + ggtitle("Enrolled by Gender") + labs(x="Year", y="Enrolled")
+```
+
+
+
+
+
+
+
+
+
