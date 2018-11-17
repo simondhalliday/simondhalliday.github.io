@@ -85,6 +85,7 @@ Python and Jupyter Notebooks
 
   >+ also free
   >+ not geared to statistical programming
+  >+ no real educational server edition
 
 
 ## How we have used R Markdown
