@@ -1,25 +1,17 @@
 ---
 title: "Efficient Empiricism"
-author: "Halliday, O'Hara and Swoboda"
+author: "Dvorak, Halliday, O'Hara and Swoboda"
 date: "SEA, 19 November 2018"
-output: ioslides_presentation
-#runtime: shiny
-self_contained: no
-mathjax: local
+output:
+  xaringan::moon_reader:
+      css: [default, metropolis-fonts , "me.css"]
+      #yolo: true
+      nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      self_contained: no
 ---
-
-<style>
-  .col2 {
-    columns: 2 200px;         /* number of columns and width in pixels*/
-    -webkit-columns: 2 200px; /* chrome, safari */
-    -moz-columns: 2 200px;    /* firefox */
-  }
-  .col3 {
-    columns: 3 100px;
-    -webkit-columns: 3 100px;
-    -moz-columns: 3 100px;
-  }
-</style>
 
 
 ```{r setup, include = FALSE}
@@ -39,57 +31,118 @@ library(stargazer)
 
 
 ## What will I talk about? 
->- How we have used R Markdown in our undergraduate courses  
+.large[
+- How we have used R Markdown in our undergraduate courses  
 
->- Reproducibility with R Markdown
+- Reproducibility with R Markdown
 
->- And some things that we think are just cool in Rmd. 
+- And some things that we think are just cool in Rmd. 
 
->- BIG Thank you to Project TIER and the Alfred P. Sloan Foundation
+- BIG Thank you to Project TIER and the Alfred P. Sloan Foundation
 
->- Currently R & R for J. Econ Ed... (fingers crossed)
+- Currently R & R for J. Econ Ed... (fingers crossed)
+]
 
+---
+
+## Lit & Gap
+
+.huge[
+Research about teaching empirics, data, basics of reproducibility
+
+ - Capstone: McGoldrick (2008)
+ - Reproducible Protocol: Ball & Madeiros (2012)
+ - Data Literacy: Halliday (forthcoming)
+ - Too advanced for UGs: Gentzkow & Shapiro (2014)
+ - For professionals: Knittel and Metaxoglou (2018) 
+ 
+Need one-stop-shop for *undergrads*.
+]
+
+---
+
+# Our contribution
+
+.huge[
+- Teach *undergrads* reproducible research tools
+- Cheaply 
+- Efficiently & effectively
+- High demand for skills
+- Solution: R & RMarkdown
+]
+
+---
+
+class: center
+
+# What is R Markdown?
+
+.huge[single document] 
+
+
+
+.huge[for code,] 
+
+
+
+.huge[output of code,] 
+
+
+
+.huge[and prose]
+
+
+
+---
 ## Benefits of R Markdown 
->- One-stop solution
+.large[- One-stop solution
 
->- Work is reproducible 
+- Work is *reproducible*
 
->- Calibrated for collaboration
+- Calibrated for collaboration
 
->- Free (p = 0) 
+- Free (p = 0) 
 
->- Broad & used in industry & research
+- Broad & used in industry & research
+]
+---
 
-
-## Costs and alternatives? 
-
+# Costs and alternatives? 
+.large[
 Learning Curve for R and R Studio: 
 
-  >+ Packages facilitate learning: 
-  >+ `tidyverse`, `mosaic`, `stargazer`
-  >+ error detection 
-  >+ autocomplete
-  >+ online educational courses
-  >+ plays well with Python (reticulated Python), SQL, JSON and others
+- Packages facilitate learning: 
+
+  - new packages: `tidyverse`, `mosaic`, `stargazer`
+  
+- error detection 
+- autocomplete
+- online educational courses
+- plays well with Python (`reticulated Python`), SQL, JSON,
+]
+
+---
 
 ## Costs and alternatives? 
+.large[
 Stata and `dyndoc` (Stata 15)?
 
-  >+ Way to clunky; 
-  >+ different code for different formats (word, pdf, html)
-  >+ doesn't produce output in the file (.do)
-  >+ Conclusion: not a reasonable alternative
-  >+ Not yet a "Stata Markdown"
+  - Too clunky (hard for students) 
+  - different code for different formats (word, pdf, html)
+  - doesn't produce output in the file (.do)
+  - Conclusion: not a reasonable alternative
+  - Not yet a "Stata Markdown"
 
 Python and Jupyter Notebooks 
 
-  >+ also free
-  >+ not geared to statistical programming
-  >+ no real educational server edition
-
+  - also free
+  - not geared to statistical programming
+  - no real educational server edition
+]
+---
 
 ## How we have used R Markdown
-
+.large[
 - Introductory econometrics
 - Environmental Economics 
 - Behavioral Economics
@@ -99,24 +152,40 @@ Python and Jupyter Notebooks
 
 - Our Class sizes? 10-35 
     + Elsewhere: 80-120 (Duke, UCLA, Smith SDS/CS)
+]
+---
 
 ## R Markdown & Reproducibility 
-
-- What happens in a traditional research report? 
-- Are traditional research reports easily reproducible? 
+.pull-left[
+.large[
+- What are traditional research reports? 
+- Are they easily reproducible? 
 - What gives us *soup to nuts* reproducibility? 
-  - Answer: R Markdown or Scripted LaTeX + STATA (StatTag?)
-- Works within the TIER framework too
+  - Easy Answer: R Markdown 
+  - Hard answer: Scripted LaTeX + STATA
+- Works with TIER Protocol
+]
+]
 
+.pull-right[
+```{r}
+knitr::include_graphics("https://studyprayserve.files.wordpress.com/2017/09/perplexed.jpg")
+```
+
+
+]
+
+---
 
 ## Traditional Reports
 
-
-<div class="col2">
+.pull-left[
 ```{r, out.width = "400px", fig.cap = "Courtesy of Bray, 2016"}
 knitr::include_graphics("more/tradreport.png")
 ```
-
+]
+.pull-right[
+.large[
 The Good 
 
 - familiar format, e.g. Word 
@@ -132,8 +201,8 @@ The Bad
 The Ugly? 
 
 - Word/GDocs = Ugly?
-
-</div>
+]
+]
 
 <!---
 
@@ -163,24 +232,25 @@ The ugly?
 </div>
 --->
 
-## Raw Markdown
+---
+
+# Raw Markdown
 
 ```{r, out.width = "800px", fig.cap = "Raw Markdown"}
 knitr::include_graphics("more/raw_markdown.JPG")
 ```
 
-## Knitted Markdown
+---
+
+# Knitted Markdown
 
 ```{r, out.width = "800px", fig.cap = "Knitted Markdown"}
 knitr::include_graphics("more/knitted_markdown.JPG")
 ```
 
+---
 
-
-
-
-
-##Text Formatting
+# Text Formatting
 
     
     # Header 1
@@ -198,33 +268,44 @@ knitr::include_graphics("more/knitted_markdown.JPG")
       - a sub-point
     - Back to the original level
     
+---
 
-## Document Types
+# Document Types
 
+.large[
 R Markdown can produce a variety of document types (other than the default `html` page):
 
-*   `pdf_document` makes a PDF with LaTeX (`.pdf`)
+- `pdf_document` makes a PDF with LaTeX (`.pdf`)
   
-*   `word_document` for Microsoft Word documents (`.docx`).
+- `word_document` for Microsoft Word documents (`.docx`).
   
-*   `odt_document` for OpenDocument Text documents (`.odt`).
+-`odt_document` for OpenDocument Text documents (`.odt`).
   
-*   `rtf_document` for Rich Text Format documents (`.rtf`) 
+- `rtf_document` for Rich Text Format documents (`.rtf`) 
   
 And others. 
+]
+---
 
-## Presentation Types
-
-R Markdown can also be re-purposed to produce a presentation file (as with this presentation):
+# Presentation Types
+.huge[
+R Markdown can also produce a presentation (as with this presentation):
 
 *   `io_slides` opens in your browser and interactive (`.html`)
   
 *   `slidy` another browser based presentation format (`.html`)
   
 *   `beamer` makes a PDF with LaTeX (`.pdf`)
-  
+]  
 
-## Data work
+---
+
+background-size: 100%
+background-image: url(https://media.giphy.com/media/94iS62lx8CRQA/giphy.gif)
+
+---
+# Data work
+.huge[
 Think about data analysis as falling into three loose categories: 
 
 - management & wrangling
@@ -232,24 +313,11 @@ Think about data analysis as falling into three loose categories:
 - modeling & inference
 
 All of this occurs in the code "chunk"
+]
+---
 
-## Code chunks
 
-- **Create a chunk**: Hit CMD + OPTION + I (MacOS) and CTL + ALT + I (Win)
-
-- **Open a chunk**: Or type out three backticks ``` folowed by {r} 
-
-- **Close a chunk**: And then three more back ticks ``` on another line. 
-
-- **Options**: Within the {r} you can specify options, like {eval = FALSE} if you don't want it to evaluate the code
-
-- **Labels**: Label the chunk, e.g. {r cars} labels the chunk "cars" in your ToC
-
-## Code Chunk: Example 
-<pre class="markdown"><code>&#96;&#96;&#96;{r cars, echo = TRUE}
-summary(cars)
-&#96;&#96;&#96;
-</code></pre>
+# Code Chunk: Example 
 
 The option `echo = TRUE` means that the code gets included in the rendered html. 
 
@@ -258,10 +326,28 @@ summary(cars)
 ```
 
 
+---
 
-## Slide with Plot (Reproduction of Sutter, 2009)
+# Code chunks
 
-```{r Sutter Data, echo = FALSE}
+.large[
+- *Create a chunk*: Hit CMD + OPTION + I (MacOS) and CTL + ALT + I (Win)
+
+- *Open a chunk*: Or type out three backticks ` folowed by {r} 
+
+- *Close a chunk*: And then three more back ticks ` on another line. 
+
+- *Options*: Within the {r} you can specify options, like {eval = FALSE} if you don't want it to evaluate the code
+
+- *Labels*: Label the chunk, e.g. {r cars} labels the chunk "cars" in your ToC
+]
+
+---
+
+
+# Slide with Plot (Reproduction of Sutter, 2009)
+
+```{r Sutter-Data, echo = FALSE}
 SutExp <- read.csv("data/sutterexperiment.csv")
 SutExp <- 
   SutExp %>% 
@@ -269,21 +355,21 @@ SutExp <-
 
 ```
 
-```{r summary data, echo = FALSE}
+```{r summary-data, echo = FALSE}
 groupAves <- 
   SutExp %>% 
   group_by(treatment) %>%
   summarise(r1 = mean(r1), r2 = mean(r2), r3 = mean(r3), r4 = mean(r4), r5 = mean(r5), r6 = mean(r6), r7 = mean(r7), r8 = mean(r8), r9 = mean(r9))
 ```
 
-```{r narrow data}
+```{r narrow-data}
 narrowAve <- 
   groupAves %>%
   gather(round, average, r1:r9)
 ```
 
-
-```{r plot1}
+.center[
+```{r plot1, fig.height=4.5, fig.width=12, fig.retina=2, fig.align='center', message=FALSE, warning=FALSE}
 Plot1 <- 
   narrowAve %>%
   filter(treatment == "individual" | treatment == "teamtreat" ) %>%
@@ -304,12 +390,14 @@ Plot1 %>%
                          breaks = c("individual", "teamtreat"),
                          labels = c("Indidividuals", "Teams"))
 ```
+]
 
-- I excluded the displaying of code for the above
+.center[I excluded the display of code ]
 
-## Dynamic Graphs 
+---
+# Dynamic Graphs 
 
-```{r dygraph, message = FALSE, echo = FALSE}
+```{r dygraph, fig.height=4.5, fig.width=10, fig.retina=2, fig.align='center', message=FALSE, warning=FALSE, echo = FALSE}
 Participation <- read.csv("data/labor_force_participation.csv")
 Partdate <- as.Date(Participation$date)
 MaleP <- xts(Participation$male, Partdate)
@@ -328,9 +416,9 @@ dygraph(LFPR, main = "Labor Participation Rate Over Time") %>%
                  #colors = RColorBrewer::brewer.pal(5, "Set2"))
 ```
 
-- Same as FRED dynamic graphs (student think this is very cool)
-
-## Plotly Graphs
+.center[Same as FRED dynamic graphs (students think this is very cool!)]
+---
+# Plotly Graphs
 
 ```{r ancona, echo = FALSE}
 AnconaBase <- read.csv("Data/ancona.csv")
@@ -356,7 +444,7 @@ AnconaAve <-
             quantity = round(sum(quantity), 2))
 ```
 
-```{r plotly Ancona}
+```{r plotly_Ancona, fig.height=4.5, fig.width=10, fig.retina=2, fig.align='center', message=FALSE, warning=FALSE}
 AnconaPlot <- 
   AnconaAve %>% 
   ggplot(aes(x = price, y = quantity)) +
@@ -368,16 +456,16 @@ AnconaPlot <-
   theme_bw()
 ggplotly(AnconaPlot)
 ```
-
-## Alter and check some data
+---
+# Alter and check  data
 ```{r create uniqid}
 SutExpUniq <- 
   SutExp %>% 
   mutate(uniqid = paste(session, treatment, subject, sep = "_"))
 head(SutExpUniq)
 ```
-
-## Statistical Tests
+---
+# Statistical Tests
 
 ```{r}
 SutNarrow <- 
@@ -390,21 +478,30 @@ Plot1data <-
 wilcox.test(value ~ treatment, data = Plot1data)
 ```
 
-
-## Regression output 
+---
+# Regression output 
 
 ```{r}
 m1 <- lm(value ~ treatment, data = SutNarrow)
 summary(m1)
 ```
+---
 
-## Or a Panel Regression
+# Or a Panel Regression
 ```{r}
 m3 <- plm(value ~ treatment, data = SutNarrow, index = c("uniqid"), model = "random", effect = "time")
 summary(m3)
 ```
+---
 
-## Even Fancy Regression Output 
+# Table of data
+```{r}
+knitr::kable(head(iris), format = 'html')
+```
+
+---
+
+# Fancy Output 
 ```{r, results = "asis"}
 stargazer(m1, type = "html", 
           no.space = TRUE,
@@ -413,113 +510,85 @@ stargazer(m1, type = "html",
 ```
 
 
-## How we have used R Markdown: Michael
 
-Michael O'Hara: 
-
-Senior thesis seminar with 9 students
-
-* Very little background
-* All stages in R Markdown
-    + Data manipulation, visualization, analysis
-    + Presentations 
-    + Final paper
-
-## How we have used R Markdown: Michael
-
-Advantages: 
-
-* To students
-    + One environment for everything
-    
-* To me
-    + Full reproducibility of all 9 papers (one award)
-    + Much easier to reproduce in one document
-    + Very professional appearance (with template)
-
-Cost
-
-* Somewhat higher startup cost in teaching them R and R Studio
-
-## How we have used R Markdown: Aaron
-
-* Create slides in an Econometrics course
-* Final project in senior research seminar 
-* Create custom progress reports for students
-* Interactive shiny apps for micro students
-
-## How we have used R Markdown: Simon
-
-* Behavioral Economics (upper-level; 20-35 students)
-* Slides, notes and assignments & labs
-* Students do a reproducible research project
-* Reproduce the results of a published paper 
-* Propose a new experimental design to test a new hypothesis
-
-##How we have used R Markdown: Tomas
-
-- Business Analytics
-
-## Math? 
-How about Bayes' Rule? 
+---
+# Math? 
+.large[How about Bayes' Rule?]
 
 $$Pr(\mbox{Outcome} | \mbox{signal}) = \frac{\theta p}{\theta p - (1 - \theta)(1 - p)}$$
-
+.large[
 R Markdown uses $\LaTeX$ for math and it immediately gets displayed in R Studio.  
 
 - That is, $\LaTeX$ without the challenges of learning the packages, tables, etc that makes learning $\LaTeX$ so hard.
 - In-line equations are bracketed by single dollar signs `$`. 
 - Off-set equations are bracketed by double dollar signs `$$`. 
-
-## What else? 
-R Markdown and R Studio together have excellent capabilities. 
+]
+---
+# What else? 
+.large[
+R Markdown and R Studio together:
 
 - R Studio can show you the output of the commands *within* the R Markdown file ("lab notebook")
 - R Studio has *error-detection* and *debugging* assistance for your code (unlike, e.g. STATA or aspects of Excel)
-- R Studio server can be hosted online and your students work with logins there
+- Tab-completion of code!!!
+- R Studio server hosted online and curate student experience
+]
 
-## Lessons from experience
+---
 
-- Students will only learn commands through graded assignments 
-- Students can struggle with basic computing (working directory, file paths); but autocomplete helps
-  +  ``drag-and-dropitis''; initial inequality in baselines can be tough
+# Lessons from experience
+
+.large[
+- Students struggle with basic computing (working directory, file paths); but tab-completion helps
+
+  -  drag-and-dropitis
+  - inequality in baselines
 
 - Students have to adjust to get Basics Right
 
-  + Difference between a script (.R file - like a .do file) and a markdown document/notebook (.Rmd) (medium adjustment)
-  + Difference between the .Rmd and the exported file: pdf, html, etc (quick adjustment)
+  - Difference between a script (.R file - like a .do file) and a markdown document/notebook (.Rmd)
+  - Difference between the .Rmd and the exported file: pdf, html, etc
+
+- Students learn commands through graded assignments 
+]
+
+
+--- 
+
+
+# Lessons from experience
 
 - Students like (or are used to) WYSIWYG, which Rmd is not
 
- + Students are accustomed to MS Word & G docs which are WYSIWYG, but Rmd is not. 
+ - Students are accustomed to MS Word & G docs which are WYSIWYG, but Rmd is not. 
 - Installing packages
 
-  + analogy: install apps (packages) to do different things on your phone (RStudio & R)
-  + Chrome extensions
+  - analogy: install apps (packages) to do different things on your phone (RStudio & R)
+  - Chrome extensions
 
 - Server = REALLY GREAT!
 
-## Suggestions
 
-- Use templates of Rmarkdown files
-  + easy for students to "fill in blanks"
+---
+
+
+# Suggestions
+
+.large[
+- Use templates!
+  - easy for students to "fill in blanks"
 - Templates for projects & bibliography 
 - Examples of math 
 - Examples of tables 
 - Use lab exercises liberally (please borrow ours!)
+]
 
 
-## R Link Love? 
-New to R? 
-
-- Check out the Computation and Visualization Consortium's week-long [workshop](https://www.macalester.edu/hhmi/curricularinnovation/cvc/) over the summer (dates June 12-16, Macalaster College - Kaplan, Prium & Horton)
-- Consider subscribing to classes at [Datacamp.com](www.datacamp.com) (take the intro free of charge)
-- Grolemund & Wickham, 2016, *R for Data Science*, [r4ds](r4ds.had.co.nz)
-- Baumer, Horton & Kaplan, forthcoming, [*Modern Data Science with R*](https://www.crcpress.com/Modern-Data-Science-with-R/Baumer-Kaplan-Horton/p/book/9781498724487). 
-- Florian Ederer "Introductory Econometrics with R" (2016)
+--- 
 
 
-## Acknowledgments 
+# Acknowledgments 
+
 We took inspiration from many people along the way. We thank them and ask their forgiveness.
 
 - Andrew Bray -- [Reproducibility 2.0](https://prezi.com/rtmytpb6iwsw/reproducible-20/)
@@ -531,3 +600,63 @@ We took inspiration from many people along the way. We thank them and ask their 
 - Ben Baumer -- [website](http://www.science.smith.edu/~bbaumer/w/)
 - Cosma Shalizi -- [R Markdown for Class Reports](http://www.stat.cmu.edu/~cshalizi/rmarkdown/)
 - Randy Prium -- [website](https://www.calvin.edu/~rpruim/)
+
+
+---
+
+# R Link Love? 
+New to R? 
+
+- Check out the Computation and Visualization Consortium's week-long [workshop](https://www.macalester.edu/hhmi/curricularinnovation/cvc/) over the summer (dates June 12-16, Macalaster College - Kaplan, Prium & Horton)
+- Consider subscribing to classes at [Datacamp.com](www.datacamp.com) (take the intro free of charge)
+- Grolemund & Wickham, 2016, R for Data Science, [r4ds](r4ds.had.co.nz)
+- Baumer, Horton & Kaplan, forthcoming, [Modern Data Science with R](https://www.crcpress.com/Modern-Data-Science-with-R/Baumer-Kaplan-Horton/p/book/9781498724487). 
+- Florian Heiss "Introductory Econometrics with R" (2016)
+
+
+---
+# How we have used R Markdown: Michael
+
+Senior thesis seminar with 9 students
+
+* Very little background
+* All stages in R Markdown
+    + Data manipulation, visualization, analysis
+    + Presentations 
+    + Final paper
+---
+
+## How we've used R Markdown: Michael
+
+Advantages: 
+
+- To students
+    - One environment for everything
+    
+- To me
+    - Full reproducibility of all 9 papers (one award)
+    - Reproduce in one (!) document
+    - Professional appearance (with template)
+
+Cost
+
+* Somewhat higher startup cost in teaching R and R Studio
+
+---
+
+# How we have used R Markdown: Aaron
+
+* Create slides in an Econometrics course
+* Final project in senior research seminar 
+* Create custom progress reports for students
+* Interactive shiny apps for micro students
+
+---
+
+# How we have used R Markdown: Simon
+
+* Behavioral Economics (upper-level; 20-35 students)
+* Slides, notes and assignments & labs
+* Students do a reproducible research project
+* Reproduce the results of a published paper 
+* Propose a new experimental design to test a new hypothesis
