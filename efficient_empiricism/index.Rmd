@@ -1,0 +1,91 @@
+
+---
+output: html_document
+    #css: ../stylesheets/styles.css
+---
+
+# Efficient Empiricism: Online Appendix
+On this appendix page you will find resources and links based on my article for the Journal of Economic Education: 
+
+- Citation: [INSERT CITATION HERE UPON RECEIVING IT]. 
+- Authors: Tomas Dvorak (Union College), Simon Halliday (Smith College), Michael O'Hara (St. Lawrence Univeristy) and Aaron Swoboba (Carleton College)
+- Contact: [shalliday@smith.edu](shalliday@smith.edu)
+
+## A. Class Syllabi
+  - Econometrics: Instructor: Michael O'Hara, Syllabus: [](syllabus)  (TBC
+  - Behavioral Economics: Instructor: Simon Halliday, [syllabus/course outline](http://simondhalliday.com/behavioral)
+  - Business Analytics: Instructor: Tomas Dvorak, [syllabus]()  (TBC
+  - Environmental Economics (Elective): Instructor: Aaron Swoboda: [syllabus]()  (TBC
+  - Topics in Environmental Economics (Seminar): Instructor: Michael O'Hara: [Syllabus](https://github.com/michaeleohara/Econ510_Sp2017_Hamilton/blob/master/Econ510syllabus_Sp2017.pdf)
+
+## B. Examples of Labs and Exercises 
+
+### Econometrics (O'Hara)
+
+
+### Econometrics (Swoboda)
+
+
+### Behavioral Economics (Halliday)
+  - [Lab 1](http://simondhalliday.com/behavioral/Lab1.html)
+  - [Lab 2](http://simondhalliday.com/behavioral/Lab2.html)
+  - [Lab 3](http://simondhalliday.com/behavioral/Lab3.html)
+  - [Lab 4](http://simondhalliday.com/behavioral/Lab4)
+  - [Lab 5](http://simondhalliday.com/behavioral/Lab5)
+
+### Business Analytics (Dvorak)
+  - All of Tomas Dvorak's Labs are avilable in his: [Business Analytics Site](https://muse.union.edu/dvorakt/business-analytics/)
+
+### Topics in Environmental Economics (O'Hara) 
+- [Homework 1](https://github.com/michaeleohara/Econ510_Sp2017_Hamilton/tree/master/Hmk1)
+- [Homework 2](https://github.com/michaeleohara/Econ510_Sp2017_Hamilton/tree/master/Hmk2)
+- [Homework 3](https://github.com/michaeleohara/Econ510_Sp2017_Hamilton/tree/master/Hmk3)
+
+###
+
+## C. Examples of Reproducible Research Projects 
+
+- Dvorak: 
+- Halliday: Students from Behavioral Economics: TO BE COMPLETED
+- Swoboda: 
+- O'Hara: 
+
+
+## E. Resources for Learning R and R Markdown 
+
+- Consider subscribing to classes at [Datacamp.com](www.datacamp.com) (take the intro free of charge)
+- Grolemund & Wickham, 2016, R for Data Science, [r4ds](r4ds.had.co.nz)
+- Baumer, Horton & Kaplan, forthcoming, [Modern Data Science with R](https://www.crcpress.com/Modern-Data-Science-with-R/Baumer-Kaplan-Horton/p/book/9781498724487). 
+- Florian Heiss "Introductory Econometrics with R" (2016)
+
+
+
+## F. Additional Resources Created by the Instructors: 
+
+### Swoboda: 
+
+  - Taxes and externalities [shiny](https://aswoboda.shinyapps.io/InteractiveTaxGraph/)
+  - Hypothesis testing [shiny](https://aswoboda.shinyapps.io/BasketSimulator/)
+  - Variance [shiny](https://aswoboda.shinyapps.io/VarianceOfBetaHat/VarianceDemo.Rmd)
+
+### Dvorak:
+
+  - [Computer Exercise 1](http://rpubs.com/dvorakt/216157): An introduction to R, R Studio, and R Markdown
+  - [Computer Exercise 2](http://rpubs.com/dvorakt/216160) - Computer Exercise 2: Loading in data, computing descriptive statistics and estimating regressions
+  - [Computer Exercise 3](http://rpubs.com/dvorakt/219848) -  Multiple regression and omitted variable bias.
+  - A variety of Tomas's other R-related documents are available on his rpubs site: [rpubs.com/dvorakt](http://rpubs.com/dvorakt). 
+
+### O'Hara:
+
+  - Additional activity on data manipulation [html](gender_code.html) and [Rmd](gender_code.Rmd)
+
+## G. Other instructors's Resources: 
+
+- Nick Horton, Amherst College -- [Getting Started with R and R Studio](https://www.amherst.edu/people/facstaff/nhorton/node/567498)
+- Danny Kaplan, Macalester College --  [DataComputing](http://data-computing.org/author/dtkaplan/)
+- Jenny Bryan, UBC: [Data wrangling, exploration, and analysis with R](http://stat545.com/)
+- Ben Baumer, Smith College: [Introduction to Probability and Statistics](http://www.math.smith.edu/~bbaumer/sds220-f16/syllabus.html)
+- Cosma Shalizi, CMU: [Using R Markdown for Class Reports](http://www.stat.cmu.edu/~cshalizi/rmarkdown/)
+- Mine Cetinkaya-Rundel, Duke: [Intro to Data Science](http://www2.stat.duke.edu/courses/Spring18/Sta199/)
+
+
