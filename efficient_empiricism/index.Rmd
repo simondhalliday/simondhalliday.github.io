@@ -130,5 +130,25 @@ Tanaka, Tomomi, Colin F. Camerer, and Quang Nguyen. 2010. “Risk and Time Prefe
 Voors, Maarten J, Eleonora EM Nillesen, Philip Verwimp, Erwin H Bulte, Robert Lensink, and Daan P Van Soest. 2012. “Violent Conflict and Behavior: A Field Experiment in Burundi.” The American Economic Review 102 (2). American Economic Association: 941–64.
 
 
+## I. Student Comments from Course Feedback 
+We have selected all comments that referred to R and R Studio. Other comments were often content specific, e.g. commenting on papers, the textbook, etc, so they were excluded. 
 
+2015-16: In Response to the question: "What features of this course made the most valuable contributions to your learning?"
+
+- "The use of R!!! And groupwork"
+- "Great introduction of the R and patient + helpful support from the instructor"
+- "I really liked the in class experiments and the emphasis on R."
+- "I think the 4 experiments and subsequent experimental reports were one of the most helpful features of the course. This gave us an idea of some of the actual tests performed in behavioral economics, rather than just showing us the results of all these experiments. Also, the experience with R-studio is valuable not just to this course, but is also a valuable experience to have in the future."
+- "Was introduced to a basic form of computer programming; R studio""
+- "I think using R was extremely helpful."
+- "Thinking about econ from a different perspective, and learning R.
+- "We learnt R, and final project is fun"
+
+2017-18: In Response to the question: "What features of this course made the most valuable contributions to your learning?"
+
+- "Learning R, experiment reports, labs, group work, availability for office hours"
+- "Learning more about R and [course topic anonymized]"
+- "I like the textbook and the fact that we used R. Datacamp turned out to be useful eventually. Lectures were interesting. Appreciated the amount of support that was available outside of class (extended office hours at critical times, piazza)."
+- "Group project- I enjoyed working with my group a lot!R - it was difficult for me but I think it was worthwhile in helping us interact and interpret dataexternal article readings - first time really reading these for an econ class, i felt like my ability and confidence to read them have increased since the beginning of the course"
+- "I appreciated the instructions on using Rstudio"
 
