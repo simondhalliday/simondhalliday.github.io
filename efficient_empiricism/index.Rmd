@@ -130,6 +130,9 @@ Tanaka, Tomomi, Colin F. Camerer, and Quang Nguyen. 2010. “Risk and Time Prefe
 Voors, Maarten J, Eleonora EM Nillesen, Philip Verwimp, Erwin H Bulte, Robert Lensink, and Daan P Van Soest. 2012. “Violent Conflict and Behavior: A Field Experiment in Burundi.” The American Economic Review 102 (2). American Economic Association: 941–64.
 
 
+### Comments on reproducibility
+Students were able fully to reproduce the following papers: Voors et al. (2012), Kube, Maréchal, and Puppe (2012), and Sautmann (2013). In the case of Godlonton and Thornton (2013), though students were able to access the Malawi Longitudinal Study of Families and Health (MLSFH), they could not obtain the paired proprietary data and were unable to reproduce all of the analysis as a result, but they were able to reproduce some of the results from the paper (partial reproducibility). In the case of Guryan and Kearney (2008), the instructor had incorrectly assessed how hard the paper would be to reproduce in the time available, and so changed course mid-way and asked the students to do a partial reproduction with some new work based on the data (they produced some original data visualizations to explain the research question and its corollary results). In the second iteration of the course, students were able fully or partially to reproduce Malmendier and Schmidt (2017), Tanaka, Camerer, and Nguyen (2010), Sutter et al. (2013), Hargreaves Heap and Zizzo (2009), Jensen and Petersen (2017), Ariely, Bracha, and Meier (2009), and Giné, Karlan, and Zinman (2010).
+
 ## I. Student Comments from Course Feedback 
 We have selected all comments that referred to R and R Studio. Other comments were often content specific, e.g. commenting on papers, the textbook, etc, so they were excluded. 
 
