@@ -12,21 +12,22 @@ On this appendix page you will find resources and links based on my article for 
 - Contact: [shalliday@smith.edu](shalliday@smith.edu)
 
 ## A. Class Syllabi
-  - Econometrics: Instructor: Michael O'Hara, Syllabus: [](syllabus)  (TBC
+  - Econometrics: Instructor: Michael O'Hara, Syllabus: [syllabus](https://www.dropbox.com/s/37c4q4v6uhcf1zf/Econ342syllabus_F2018.pdf?dl=0)  (TBC
   - Behavioral Economics: Instructor: Simon Halliday, [syllabus/course outline](http://simondhalliday.com/behavioral)
-  - Business Analytics: Instructor: Tomas Dvorak, [syllabus]()  (TBC
-  - Environmental Economics (Elective): Instructor: Aaron Swoboda: [syllabus]()  (TBC
-  - Topics in Environmental Economics (Seminar): Instructor: Michael O'Hara: [Syllabus](https://github.com/michaeleohara/Econ510_Sp2017_Hamilton/blob/master/Econ510syllabus_Sp2017.pdf)
+  - Business Analytics: Instructor: Tomas Dvorak, [syllabus]()
+  - Environmental Economics (Elective): Instructor: Aaron Swoboda: [syllabus]() 
+  - Topics in Environmental Economics (Seminar): Instructor: Michael O'Hara: [Syllabus](https://github.com/michaeleohara/Econ510_Sp2017_Hamilton/blob/master/Econ510syllabus_Sp2017.pdf) and updated here: [syllabus](https://www.dropbox.com/s/kjxlmtiwl3xpdhk/Econ510syllabus_Sp2017.pdf?dl=0).
 
 ## B. Examples of Labs and Exercises 
 
 ### Econometrics (O'Hara)
 
-
-### Econometrics (Swoboda)
-
+- Reproduction Exercise [pdf](https://www.dropbox.com/s/g2mwght14dwpkmp/reproduction_exerciseF2018.pdf?dl=0)
+- Project description [pdf](https://www.dropbox.com/s/krjj0totwmbenna/project_instructions_F2018.pdf?dl=0)
 
 ### Behavioral Economics (Halliday)
+These exercises spanned macroeconomic data such as labor force participation rates from FRED, micro data from particular markets such as the Saumaty fish market in Marseille, survey data, such as the World Values Survey, and laboratory data, such as the data from decision experiments over risky choices and public goods games with individuals or teams. 
+
   - [Lab 1](http://simondhalliday.com/behavioral/Lab1.html)
   - [Lab 2](http://simondhalliday.com/behavioral/Lab2.html)
   - [Lab 3](http://simondhalliday.com/behavioral/Lab3.html)
@@ -34,30 +35,39 @@ On this appendix page you will find resources and links based on my article for 
   - [Lab 5](http://simondhalliday.com/behavioral/Lab5)
 
 ### Business Analytics (Dvorak)
-  - All of Tomas Dvorak's Labs are avilable in his: [Business Analytics Site](https://muse.union.edu/dvorakt/business-analytics/)
+
+- All of Tomas Dvorak's Labs are avilable in his: [Business Analytics Site](https://muse.union.edu/dvorakt/business-analytics/)
 
 ### Topics in Environmental Economics (O'Hara) 
+
 - [Homework 1](https://github.com/michaeleohara/Econ510_Sp2017_Hamilton/tree/master/Hmk1)
 - [Homework 2](https://github.com/michaeleohara/Econ510_Sp2017_Hamilton/tree/master/Hmk2)
 - [Homework 3](https://github.com/michaeleohara/Econ510_Sp2017_Hamilton/tree/master/Hmk3)
+- Project description: [pdf](https://www.dropbox.com/s/trxuu538j0nhg0y/instructions_Sp17.pdf?dl=0)
 
-###
+### Econometrics (Swoboda)
+[To be completed - instructor is facilitating study abroad and will provide details in January]
+
 
 ## C. Examples of Reproducible Research Projects 
 
-- Dvorak: 
-- Halliday: Students from Behavioral Economics: TO BE COMPLETED
-- Swoboda: 
-- O'Hara: 
+These links will be provided upon acceptance. 
 
+- Dvorak: 
+- Halliday: 
+- O'Hara: 
+- Swoboda: 
 
 ## D. Packages Recommended for Teaching R and R Markdown
+In recent years, the learning curve for instructors and students has been flattened by the release of R Studio and a variety of packages that facilitate teaching and learning R. We recommend the following packages. 
 
 - The `tidyverse` is a collection of packages written by developers affiliated with R Studio (Wickham 2017) that provides a variety of functions for data manipulation that are as easy, if not easier, to use than functions Stata-users typically use. Demonstrating the use of these functions to students, alongside the all-in-one visualization function , provides the basic infrastructure for teaching R in a way that does not require the steep learning curve that previously existed.
 
 - `mosaic` is another useful package developed to teach statistics to undergraduates (Pruim, Kaplan, and Horton 2017). It provides a variety of functions that Stata-users would be accustomed to using, for example, tally is roughly equivalent to tab in Stata. It also incorporates some drop-down menu choices for creating graphics to teach the basics of plotting data and shows the commands that generate the graphical output. 
 
 - `stargazer` is a package that helps to produce publication quality tables in R Markdown. It offers a friendly way to produce tables of summary statistics and regression results similar to Stata’s outreg, but with the added advantage that the integrated structure of Markdown inserts these tables directly into the text with no cutting or pasting necessary.
+
+- `remedy` is a package that facilitates the learning (and production) of R Markdown by integrating drop-down and point-and-click menus to bold, highlight, or otherwise edit text. A brief introduction is available here: [https://www-r--bloggers-com.cdn.ampproject.org/v/s/www.r-bloggers.com/remedy-is-now-on-cran/](https://www-r--bloggers-com.cdn.ampproject.org/v/s/www.r-bloggers.com/remedy-is-now-on-cran/)
 
 
 ## E. Resources for Learning R and R Markdown 
@@ -66,8 +76,6 @@ On this appendix page you will find resources and links based on my article for 
 - Grolemund & Wickham, 2016, R for Data Science, [r4ds](r4ds.had.co.nz)
 - Baumer, Horton & Kaplan, forthcoming, [Modern Data Science with R](https://www.crcpress.com/Modern-Data-Science-with-R/Baumer-Kaplan-Horton/p/book/9781498724487). 
 - Florian Heiss "Introductory Econometrics with R" (2016)
-
-
 
 ## F. Additional Resources Created by the Instructors: 
 
@@ -130,7 +138,9 @@ Tanaka, Tomomi, Colin F. Camerer, and Quang Nguyen. 2010. “Risk and Time Prefe
 Voors, Maarten J, Eleonora EM Nillesen, Philip Verwimp, Erwin H Bulte, Robert Lensink, and Daan P Van Soest. 2012. “Violent Conflict and Behavior: A Field Experiment in Burundi.” The American Economic Review 102 (2). American Economic Association: 941–64.
 
 
-### Comments on reproducibility
+### Lessons and comments on reproducibility
+The instructor gleaned the following lessons. First, though data are readily available in most circumstances, in many cases some of the data may not be available for reproduction. Second, even when data are available, the paper may be too hard for students to reproduce in the available time unless the instructor has substantial amounts of time to facilitate the students’ work and provide substantial assistance. Lastly, and most reassuringly, many students are motivated by the quest to confirm or overturn existing research results as they become deeply engaged with the research process and committed to understanding whether and how to verify the results. The projects were improved by the students’ ability to use the free-of-charge resources of R Markdown and R Studio (and using online resources when trying to understand a given statistical problem). Students spent time over fall break and Thanksgiving break collaborating on their projects, which the instructor has not been able to have students do previously because of the licensing constraints over other packages, demonstrating how free and open resources are useful in the context of statistics and behavioral economics instruction.
+
 Students were able fully to reproduce the following papers: Voors et al. (2012), Kube, Maréchal, and Puppe (2012), and Sautmann (2013). In the case of Godlonton and Thornton (2013), though students were able to access the Malawi Longitudinal Study of Families and Health (MLSFH), they could not obtain the paired proprietary data and were unable to reproduce all of the analysis as a result, but they were able to reproduce some of the results from the paper (partial reproducibility). In the case of Guryan and Kearney (2008), the instructor had incorrectly assessed how hard the paper would be to reproduce in the time available, and so changed course mid-way and asked the students to do a partial reproduction with some new work based on the data (they produced some original data visualizations to explain the research question and its corollary results). In the second iteration of the course, students were able fully or partially to reproduce Malmendier and Schmidt (2017), Tanaka, Camerer, and Nguyen (2010), Sutter et al. (2013), Hargreaves Heap and Zizzo (2009), Jensen and Petersen (2017), Ariely, Bracha, and Meier (2009), and Giné, Karlan, and Zinman (2010).
 
 ## I. Student Comments from Course Feedback 
@@ -155,3 +165,24 @@ We have selected all comments that referred to R and R Studio. Other comments we
 - "Group project- I enjoyed working with my group a lot!R - it was difficult for me but I think it was worthwhile in helping us interact and interpret dataexternal article readings - first time really reading these for an econ class, i felt like my ability and confidence to read them have increased since the beginning of the course"
 - "I appreciated the instructions on using Rstudio"
 
+
+### J. Program Capabilities
+
+| Program Capability                                          | R and R Markdown                                                                                                      | Stata                                                                                                                              |
+|-------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| Notebook ability: produce output in document as you proceed | Yes, R Markdown as a Lab Notebook                                                                                     | No                                                                                                                                 |
+|                                                             |                                                                                                                       |                                                                                                                                    |
+| Produces multiple export formats                      | Yes, all using R Markdown with markdown syntax                                                                 | do files with different syntaxes, format-specific syntax in, e.g. dyndoc. Limited format types. |
+|                                                             |                                                                                                                       |                                                                                                                                    |
+| Move between code and prose easily                          | Yes, code is in “code chunks” and can use R or other types of code, e.g. Python; prose is in between the code chunks. | No. Output produced then cut and paste into documents or used with scripted LaTeX            |
+|                                                             |                                                                                                                       |                                                                                                                                    |
+| Connecting different functions to each other         | Yes, tidyverse package uses the magrittr pipe                                                                         | No                                                                                                                                 |
+|                                                             |                                                                                                                       |                                                                                                                                    |
+| Point and click figures                                     | Yes, in the mosaic package (code produced); else code in `ggplot` package                                          | Yes, built in; else code for `twoway`                                                                                                |
+|                                                             |                                                                                                                       |                                                                                                                                    |
+| Point and click importing of data                           | Yes, in RStudio (using the tidyverse) and shows code                                                                  | Yes, similarly and built in; shows code                                                                                            |
+|                                                             |                                                                                                                       |                                                                                                                                    |
+| Server/Cloud Edition (to ease teaching/collaboration)       | Yes, R Studio Server (free to educational institutions) and R Studio Cloud                                            | No, not as yet.                                                                                                                    |
+
+## K. Other Comments: R as an inter-disciplinary Tool
+There are a variety of benefits for using language and documents, like R and R Markdown, that many departments outside of economics use. At the institutions where the authors teach there are a variety of support structures to assist students in learning statistics and statistical programming software. For example, at one institution there are tutors in the quantitative learning center who all have experience with R Markdown and who can act as tutors for statistical and econometric concepts. Furthermore, the statistics department has additional resources: a statistics fellows program where the fellows have drop-in hours available both to faculty and to students.  Though institutions may not have such infrastructure in place at first, as it develops over time it provides excellent opportunities for students to hone their skills and to work as peer tutors.
