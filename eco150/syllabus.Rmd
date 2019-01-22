@@ -1,0 +1,238 @@
+---
+title: "Introduction to Microeconomics"
+subtitle: "ECO150, Smith College"
+author: "Simon D. Halliday, PhD"
+date: "Spring 2019"
+output: tint::tintPdf
+bibliography: skeleton.bib
+link-citations: yes
+---
+
+```{r setup, include=FALSE}
+library(tint)
+library(tidyverse)
+library(gapminder)
+# invalidate cache when the package version changes
+knitr::opts_chunk$set(tidy = FALSE, cache.extra = packageVersion('tint'))
+options(htmltools.dir.version = FALSE)
+```
+
+
+
+| Instructor: Simon Halliday | Office: Wright Hall 234 |
+|---|---|
+| Email: [shalliday@smith.edu](mailto:shalliday@smith.edu) | Office Hours: Tues TBD & Weds: 2-3:30pm |
+| Twitter: [\@simondhalliday](https://twitter.com/simondhalliday) | Schedule: T Th, 1-2:20pm |
+| Skype: sihalliday | Class Venue: Seelye 208 | 
+
+
+`r margin_note(" \"Most of the people in the world are poor, so if we knew the economics of being 
+poor, we would know much of the economics that really matters.\" T. W. Schultz, 1980 [1979], Nobel Address: The Economics of Being Poor, p. 639")`
+
+**This course syllabus is preliminary and subject to change.**
+
+# Course Description
+Introduction to Microeconomics provides you an introduction to how economists think about the ways people make decisions in their everyday lives: from choosing how to spend their time, how best to manage a firm, or what policy to implement to best serve a country's economy. 
+`r margin_note(" \"Economics is the study of mankind in the ordinary business of life \" Alfred Marshall")`
+Alfred Marshall and Lionel Robbins quoted alongdside in the margin articulated different views of what economics is (as have many people before and since). 
+So which view is right? Ordinary business of life? Scarcity and alternatives? Perhaps both? We explore these persepctive and a variety of others in the course. 
+`r margin_note(" \"Economics is the science which studies human behavior as a relationship between given ends and scarce means that have alternative uses. \" Lionel Robbins")`
+
+People respond to prices (incentives), they respond to what’s on offer elsewhere (opportunity cost), they respond to the kinds of laws or social norms that establish who owns what (property rights), who gets what and why (income distribution), and what government does about both of these things (government intervention). 
+We'll show how markets do remarkable things, like getting people to cooperate even though they mightn't have intended to. 
+But we'll also show that when people use markets to allocate goods or when goods aren't priced properly on a market, people and firms produce too much of certain goods, e.g. pollution or traffic, or sometimes people or firms produce too little of other goods, e.g. education or vaccines. 
+We'll show that markets sometimes fail. 
+But governments fail too, so we’ll look at both markets and governments with a critical eye. 
+We start the course with a discussion of how Economics and Capitalism relate to each other which will be an over-arching theme of the course: what was the capitalist revolution? 
+What have been the consequence of capitalism for human productivity and flourishing? 
+
+
+```{r fig-life-exp, fig.margin=TRUE, fig.width=4, fig.height=4, cache=TRUE, echo=FALSE, fig.cap = "What might flourishing look like? Life Expectancy and Income"}
+p <- ggplot(data = gapminder,
+            mapping = aes(x = gdpPercap,
+                          y=lifeExp))
+p + geom_point(alpha = 0.3) +
+    geom_smooth(method = "gam") +
+    scale_x_log10(labels = scales::dollar) +
+    labs(x = "GDP Per Capita", y = "Life Expectancy in Years",
+         title = "Economic Growth and Life Expectancy",
+         subtitle = "Data points are country-years",
+         caption = "Source: Gapminder.")
+```
+
+ECO150 supplements the content of Introductory Macroeconomics (ECO153), which takes the topics covered in microeconomics as a baseline and then moves up to examine the economy as a whole. 
+Though this is true, we will also talk about the ways in which macroeconomics and microeconomics overlap in this course: what people in government choose to do when making policy for a country, what the leader of the federal reserve says and does, all of these will affect what happens at the microeconomic level. 
+
+#Required Texts & Online Service
+## Core Textbook: *The Economy*
+We will use the following textbook:
+
+```{r corebook, fig.margin = TRUE, fig.cap = "Our Textbook", fig.width=3.5, fig.height=3.5, cache=TRUE, echo = FALSE}
+knitr::include_graphics("The-Economy.jpg")
+```
+
+- *The Economy*, by the CORE team. You can purchase a hardcopy of the book on [amazon.com](https://amzn.to/2AT4OAn) (published by Oxford University Press), or you can get the e-book free of charge in a variety of different ways. 
+- First of all, I'd recommend you go to the book's website: [www.core-econ.org/](https://www.core-econ.org/) and register as a student reader as you'll get access to the e-book as well as additional resources. 
+- Second, *The Economy* is available free as an app for off-line reading for [Android](https://play.google.com/store/apps/details?id=com.fireandlion.core.theeconomy) and [Windows](https://www.microsoft.com/store/apps/9NZPF7DHS3FD) devices, while for iOS users it is available in the [Apple iBooks store](https://itunes.apple.com/us/book/id1429511849). In addition, The Economy is also available as a free [epub file](https://www.core-econ.org/wp-content/uploads/2019/01/the-economy_201812051136.epub).
+
+# Course Assessment, Method of Instruction & Participation
+The course assessment is broken down in the following way and I'll comment on each component below. 
+
+| Assessment  | Percentage   | Cumulative  | 
+|---|---|---|
+| Class Participation | 10% | 10% |
+| Online Quizzes | 20% | 30% |
+| Problem Sets| 20% | 50% |
+| First Midterm | 15% | 65% |
+| Second Midterm | 15% | 80% |
+| Final Exam | 20% | 100% | 
+
+This is a lecture-based course. You are nevertheless expected to prepare for lectures by reading the relevant chapters in the textbook and therefore to be able to answer questions on topics that come up in the chapters. You should be able to respond both in person and anonymously through [PollEverywhere](https://www.polleverywhere.com/).  
+
+## Participation
+```{r polleverywhere, fig.margin = TRUE, fig.width=3.5, fig.height=3.5, cache=TRUE, echo = FALSE}
+knitr::include_graphics("polleverywhere.png")
+```
+
+Though the class is based on lectures, you will also engage in ‘Think-Pair-Share’ (TPS) activities where you will try to answer a question by yourself, then pair up with someone close by, then decide on an answer to the original question jointly after you’ve discussed it. Your TPS answers will contribute to your Participation Grade for the course. You will respond either with [PollEverywhere](https://www.polleverywhere.com/) or with written answers that you hand in for the participation grade. 
+
+You will also be involved in in-class activities or experiments where you make an attempt to do your best in the experiment. Your participation in the experiments will count towards your Participation Grade for the class. 
+
+Also counting towards your Participation Grade, we will write Economics-based Haiku. Inspired by Prof. Steve Ziliak and his use of Haiku in teaching economics, we will think about concentrating our core ideas into a precise and concise poem. I will ask you to submit two Haiku during the course: one before spring break and one after spring break.  If you want to read more about Haiku Economics, look here: 
+
+- [http://www.poetryfoundation.org/poetrymagazine/article/240970](http://www.poetryfoundation.org/poetrymagazine/article/240970)
+- [http://www.roosevelt.edu/News_and_Events/News_Articles/2012/20120127-Poetry.aspx](http://www.roosevelt.edu/News_and_Events/News_Articles/2012/20120127-Poetry.aspx)
+
+# Exams
+The first and second midterm exams are not cumulative exams; they will only cover the specific work for their exams. For midterm 1, you will need to have covered units 1 to 4 of *The Economy*. For midterm 2, you will need to have covered units 5 to 8. For the Final Exam, you will need to have covered all the units we have covered in *The Economy*. 
+
+
+# Course Schedule 
+**This Course Schedule is Preliminary and Subject to Change** 
+(Snow days, sudden travel, wanting more time, etc all affect what we do). 
+
+| Date  | Week | Topic   | Reading  | PS/Exam | Quiz | 
+|---|---|---|---|---|---|
+| 1/24 | Week 1 | Capitalist Revolution (CR)  |  Unit 1 |  - | Quiz 1 |
+| 1/29-31  |  Week 2 | CR & Tech, Pop & Growth |  Units 1 & 2 |  PS0 | Quiz 2  |
+| 2/5-7  |  Week 3 | Scarcity, Work & Choice (SWC) |  Unit 3 |  -  | Quiz 3 |
+| 2/12-14  |  Week 4 | SWC & Social Interaction |  Units 3 & 4 | PS 1 due 2/11 | Quiz 4 |
+| 2/19-21 | Week 5 | Social Interaction |  Unit 4 | PS 2 due 2/22 | - |
+| 2/26-28 | Week 6 |  Property & Power |  Unit 5 | Evening Exam 2/27   | Quiz 5| 
+| 3/5-7  | Week 7 | The Firm | Unit 6  | -  |  Quiz 6 |
+| 3/9-17 | - | *Spring Break* | - | - | - |
+| 3/19-21  |  Week 8 | The Firm & Its Customers |  Unit 7 | PS3 due 3/26  | Quiz 7 |
+| 3/26-28  |  Week 9 | Supply & Demand |   Unit 8  | -   | Quiz 8  |
+| 4/2-4  | Week 10 | The Labor Market |   Unit 9 | -  | Quiz 9  |
+| 4/9-11 | Week 11 | Markets, Eff. & Pub Pol  |   Unit  | Evening Exam  4/10 (TBD)| Quiz 10 |
+| 4/16-18 | Week 12 | Capstone Presentations  |  TBD | PS4 due 4/18  | - |
+| 4/23-25  | Week 13 | Capstone Presentations  |  TBD | - | - |
+| 4/30 | Week 14 | Why Capitalism? |  TBD | - | - |
+| 5/7-10  |  - | Exam Period | -  |  -  |  -  |
+
+## What's happening in the last few weeks of the semester?
+I've put a note for "Capstone Presentations" in the last few weeks of the semester. Why is that? We cover a variety of topics in the course, but how we end the course will be up to you. Our textbook, *The Economy*, has a variety of important and capstone topics that we can cover in the last few weeks. Do you want to understand more about innovation and networked economies (Unit 21) or do you want to think about economics and the environment (Unit 20), or perhaps the role of inequality (Unit 19)? We will have a survey of the class to put you in different topics corresponding to different units.  
+
+# Moodle Quizzes
+The due dates for each quiz will be available on the Moodle site. You will have graded quizzes for each unit (1 through 9 and 12). I will drop the lowest score from your quizzes, therefore giving you a grade out of 9 quizzes. If you are struggling with time and only manage to do 9 of them, then all 9 will count. Even if you do not complete a quiz, you are still responsible for learning the content covered in that quiz. 
+
+# Problem Sets 
+We shall have 4 graded problem sets for the course overall. The first problem set, Problem Set 0, is an ungraded problem set for you to get a sense of what we will do with Excel/Google Sheets in some of the exercises. Problems Sets 1 through 4 will incorporate questions using the spreadsheets and content from classes and the textbook. Your final presentation plus a report that you write will count as your final problem set (without a number). You will be given the overall grade for your problem sets and presentation as the best grade of 4 (of the 4 problem sets plus the presentation = 5). 
+
+
+```{r invisibleheart, fig.margin = TRUE, fig.width=2.5, fig.height=2.5, cache=TRUE, echo = FALSE}
+knitr::include_graphics("invisible_heart.jpg")
+```
+
+
+# Extra Credit
+I offer a variety of extra credit oppotunities for this class. 
+
+## One Tweak a Week 
+I have created the opportunity for you to create a journal that you update each week with a set of tasks over the semester with opportunities to reflect on what you do. The *One Tweak a Week* journal will offer you the opportunity to learn some basic financial literacy and learn about how to gain financial independence. Take a look at the financial education opportunities offered by the [Conway Center](https://www.smith.edu/academics/conway-center/about) if this interests you. 
+
+
+## Book Report: Additional Readings
+I would like to recommend the following graphic novel and novel:
+
+- Goodwin, Michael, 2012, [Economix](https://amzn.to/2DrCmr0), Abrams ComicArts, NY, (abbreviation: E’x)
+- Roberts, Russ, 2002, [The Invisible Heart: An Economic Romance](https://amzn.to/2S19WMK), The MIT Press, Cambridge, MA, ISBN: 978-0262681353 (abbreviation: IH)
+```{r economix, fig.margin = TRUE, fig.width=2.5, fig.height=2.5, cache=TRUE, echo = FALSE}
+knitr::include_graphics("economix.jpg")
+```
+
+You can write a book report for either of these (or another book if you check with me) for extra credit for the class. 
+
+## Rock-o-nomix
+Inspired by Dr. Dirk Mateer (U. Arizona) and Kim Holder (U. West Georgia), the rock-o-nomix project involves students dividing into groups, writing new economics-relevant lyrics to a song, and making a music video with the new lyrics as a group. 
+
+After the add/drop period, I will provide details for the rock-o-nomix project on Moodle. If you do wish to produce a video, then you will need to let me know the people in your group and the name of your group. If we have sufficient interest, then we may enter our videos into a competition with those from instructors at other universities and colleges (I am currently trying to coordinate this, but it is a bit up in the air, so no promises right now).
+
+You can see a sample of Prof. Holder’s Principles of Macroeconomics class’s videos here: [https://www.youtube.com/watch?v=bVJmsOLHrtk](https://www.youtube.com/watch?v=bVJmsOLHrtk).
+As this is a class in Introductory Microeconomics, I expect that your content will differ, but these videos can serve to inspire you and get you think about how you would compete with Prof. Holder’s students. 
+
+
+# Email & Communication Policy
+You should only email me about things that pertain to you personally. For issues that pertain to class content, quizzes, "doing economics" problems, and more, you should post to Piazza. Other students may also have your questions and so many of you will benefit when you post to Piazza. 
+
+When you email me about personal issues, I shall do my best to respond to email within 24 (business) hours, i.e. within one day during the week and by the end of Monday after a weekend. If your email requires more than a few sentences to respond, I’ll suggest you come to see me during office hours. 
+
+Note: I will not respond to emails where I have already answered the question in this course syllabus or in an announcement on Moodle or Piazza. So, if I have not responded to your email within 24 hours, check the syllabus, Moodle or Piazza 
+
+# Quantitative and Written Skills
+I assume that you have good quality writing and mathematical skills. In particular, you should have the skills required to analyze graphs and perform basic algebra and the use of powers (exponents). You will also be required to do writing tasks during the semester and you should ensure that you can articulate an economic argument, write clearly, and manage citations. Smith also have a variety of resoruces you can take advantage of if you want to improve your learning in these areas, incuding the Spinelli Center and the Jacobson Center. 
+
+## The Spinelli Center
+The Spinelli Center for Quantitative Learning at Smith College offers review workshops on many of the skills required for this course. I would strongly recommend that you attend the workshop on "The Basics of Lines."  
+
+In case you were worried, I do not assume you can do calculus and we will not use calculus in this course. Calculus is reserved for higher-level courses in economics. 
+
+The course has a master tutor at the Spinelli Center, NAME  and NAME can be contacted at [NAME@smith.edu](mailto:name@smith.edu). The master tutor will hold drop-in hours at the Spinelli Center and the times will be announced on Moodle. You may contact the tutor directly for an individual appointment. 
+
+## The Jacobson Center
+Though you will not be writing much in this course for your problem sets, you may be asked to write a short essay in exams. To do so, you will need to understand the basics of writing a short essay. The Jacobson Center provides a host of workshops to improve the ways in which you study, read and write. I would strongly recommend that you go to the workshops if you think your study methods, reading or writing could be improved. 
+
+# Moodle & Piazza
+We have a Moodle site for the course that should be available through your Smith login. The course syllabus, slides, problem sets, quizzes, and other resources will be available on Moodle.
+
+The class also has a Piazza page that will be the course's forum for asking questions -- you can all contribute to get to course participation points. 
+
+*Please sign up for Piazza here:* [piazza.com/smith/spring2019/ec150](piazza.com/smith/spring2019/ec150)
+
+I plan to use the Piazza page to post links, send messages and provide other content. You can also post questions and answer each other's questions on Piazza.
+I want you to be able to communicate with each other about content in the course and to collaborate when you struggle. 
+You can learn a lot by asking questions, helping to answer other people's questions, and thinking out loud about different ideas you have. I'll also respond as and when I am able to when you post a question. 
+
+Also, when you post, you're providing a public service, a resource that others can use which is a helpful and community-minded thing to do. 
+
+
+# Tardiness and Conduct in Class
+Please do not arrive late. I shall do my best always to arrive early enough to answer questions before we begin the class (and I'll also play music). If you must arrive late, then please do your best not to make a fuss when you do arrive. 
+
+You are permitted to use laptops and tablets in class. I expect you to use them to take notes or for other class-related functions, e.g. PollEverywhere. Please refrain from using them for activites unrelated to class.  
+
+# Grading Policies and Accommodations
+## Smith Honor Code and Plagiarism 
+When you submit an assignment for grading, you confirm that your submission is consistent with Smith’s honor code and that you have not plagiarized. You can consult the honor code [here](https://www.smith.edu/sao/handbook/socialconduct/honorcode.php). 
+
+Please also consult Smith College's plagiarism resource [here](http://libguides.smith.edu/plagiarism-academic-integrity). When you submit an assignment or complete a quiz, you are confirming that you understand the definition of plagiarism, that you have not plagiarized and that the work is your own (or your group’s own). 
+
+## Disability and Mental Health
+Please inform me if you have any impediment that, through my lack of knowledge or my inaction, may disable you. I include physical, learning and mental health disabilities in this categorization of impediments. I include this comment in my syllabus because some students at Smith may not realize the options available to them. In the literature, this is especially true of students with mental health issues. Please consult Smith College’s policies on [disability](http://www.smith.edu/ods/) and [mental health](http://www.smith.edu/wellness/mentalhealth.php). 
+
+## Illness and Family Emergencies
+If you are ill and must miss an exam or if you have a family emergency, please email me. Let me know as soon as possible when these things happen so I can coordinate with your class dean and ensure that your progress towards completing the course doesn't get impeded. I want to offer you the opportunity to flourish. 
+
+## The Wurtele Center for Work and Life
+The Wurtele Center runs workshops and helps students to learn a variety of skills. For example, if you think that you need to improve the way in which you participate in class or you want to improve your interaction with professors for potential research collaboration, then the Wurtele Center is a really fantastic resource and you should take advantage. 
+
+
+## Final recommendation for those who have gotten this deep into the syllabus...
+
+For the discussion in the final week about ‘Why capitalism?’ I would recommend, but not require, the following book: Spufford, 2012, Francis, [Red Plenty](https://amzn.to/2S4rmbi), Greywolf Press, ISBN, 978-1555976040
+
+```{r redplenty, fig.margin = TRUE, fig.width=2.5, fig.height=2.5, cache=TRUE, echo = FALSE}
+knitr::include_graphics("red_plenty.jpg")
+```
+
+

@@ -1,0 +1,175 @@
+---
+title: "Journal: One Tweak a Week"
+subtitle: "Understanding Your Financial Journey: An Extra Credit Opportunity"
+author: "Simon Halliday"
+date: "Spring 2019"
+output: tint::tintPdf
+bibliography: skeleton.bib
+link-citations: yes
+---
+
+```{r setup, include=FALSE}
+library(tint)
+# invalidate cache when the package version changes
+knitr::opts_chunk$set(tidy = FALSE, cache.extra = packageVersion('tint'))
+options(htmltools.dir.version = FALSE)
+```
+
+# What is 'one tweak a week'? 
+One tweak a week is the opportunity for you to maintain a weekly journal of a set of tasks. 
+I am asking you to do this in introductory microeconomics because I encounter graduating students who do not know some basic financial literacy (and its relationship to economics). 
+I hope that with this set of tasks or tweaks that you can get some of the basics right and that I can help you ensure you're on the path to financial independence. 
+
+```{marginfigure}
+
+*Origin of One Tweak A Week:* I have taken this term from Paula Pant's related idea from her podcast and website [Afford Anything](http://affordanything.com/). Pant's one big idea is that "You can afford anything, but you can't afford everything!" (what economic idea does she capture with this phrase?) For 2019, she recommended that listeners consider \"One Tweak a Week\" on the path to financial independence and provided a [list of tweaks](http://affordanything.com/2019) for the first half of 2019. I re-purposed this to a set of tasks I thought would be reasonable in an introductory economics course. I strongly encourage you to listen to Pant's podcast and to see what she has to say about financial independence. If you don't listen to her podcast, then consider listening to interviews with her on the [Mad Fientist Podcast](https://www.madfientist.com/afford-anything-interview/) and the [ChooseFI podcast](https://www.choosefi.com/105-you-can-afford-anything-but-not-everything-paula-pant/). Pant has a fascinating story as the child of South Asian (Nepali) immigrants who did not follow the path that her parents wanted her to, but who has carved out a niche for herself in a unique and satisfying way (satisfying even to concerned immigrant parents)."
+```
+
+
+**Legal Notice: I am not a financial advisor. I am an economics professor with an economics PhD. The advice here is to spark your thinking and to help you to take charge of your financial future, not me acting as a legal fiduciary or financial advisor**. 
+
+# 12 Tweaks 
+1. Reflect on Happiness and Purpose. 
+2. Confirm that you understand compound interest. 
+3. Track your spending and/or net worth. 
+4. Have a throw away day. 
+5. Check your credit report. 
+6. Sell something. Post to Craigslist, FB market, or Smiht's online market, etc and sell something. 
+7. Reflect on Growth and Limitations. 
+8. Research salaries of jobs
+9. Find a good savings account & increase your savings by 1%. 
+10. Create a catch phrase
+11. Make a list of annual expenses
+12. Donate to a cause
+
+
+## 1. Happiness & Purpose
+
+- Make a list of 10 things that make you happy on a weekly basis. What are those things? 
+- Research suggests that people are motivated when they have: Autonomy, Purpose and Mastery. Watch Dan Pink's [Ted Talk](https://www.ted.com/talks/dan_pink_on_motivation?language=en) about this idea. What motivates you and why? 
+- Write a brief reflection when thinking about what brings you happiness and what motivates you. 
+
+
+## 2. Understanding Compound Interest 
+
+- Read this article about [teaching compound interest to kids](https://www.thesimpledollar.com/teaching-children-about-compound-interest/). Why this article rather than someting more serious? It's fun to think about how you'd teach this to someone who is young and still learning about money. 
+- Go to the US Government's [compount interest tool](https://www.investor.gov/additional-resources/free-financial-planning-tools/compound-interest-calculator). 
+- Put in a reasonable amount of money that you could start with in a savings account, e.g. $50. 
+- Consider an amount of money you could save monthly, e.g. if you think you could save $25 per month, put that amount into the monthly amount box. 
+- Consider an interest rate. At the moment, most standard savings accounts currently given an interest rate of around 0.2 to 0.4% per year. A [high-yield savings acccount](https://www.nerdwallet.com/blog/banking/best-savings-rates/) can give around 2 to 2.2% and is not volatile (it doesn't change much). An index fund of the total stock market tends to have an average of around 10% per year (but stocks are volatile -- they change a lot -- so some years you could get 20% and some years 10%, 5%, 0% or -10% -- what matters is the average though).
+- Contrast the different situations: the low-yield savings (0.2%), the high-yield savings (2%), and the index fund investing (look up Vanguard's [VTSAX](https://investor.vanguard.com/mutual-funds/profile/VTSAX), Fidelity's [FSKAX](https://fundresearch.fidelity.com/mutual-funds/summary/315911693), or just google "low cost index funds").
+- What happens with the different interest rates? What happens if you change your monthly contributions? Think through what this means for you and your assets (savings) and liabilities (debt). 
+
+## 3. Track your spending and/or net worth
+
+- Download [Personal Capital](https://www.personalcapital.com) and link your bank accounts and loans (if you joint it, you can click this [link](https://share.personalcapital.com/x/v4PIrT) to get \$20 and I'll donate \$20 to a charity).Personal Capital will help you track your net worth over time. 
+- Use the [Mint](https://www.mint.com/) app and consider your spending patterns over the week. 
+- Download your spending from your bank account, import it into a spreasheet and think about what you spend your money on. Get a sense of what amounts fall into differenet categories and see if you can turn it into a chart to see what you spend your money on. 
+- Write a short reflection on your use of these tools (don't worry about telling me about specific amounts of money, I'm interested instead in your noticing patterns or reflecting on what you do)
+
+
+
+## 4. Check your credit report 
+If you have a US social security number (or tax identification number), then you will have a credit report. 
+Your credit report is *not* your credit score (though that is also important). 
+Your credit report is a set of information compiled about you by one of the credit ratings agencies: [Experian](https://www.experian.com/), [Equifax](https://www.equifax.com/personal/), and [Transunion](https://www.transunion.com/). 
+For each agency, you are entitled to access an annual credit report from that agency. 
+Therefore, you can get a report once every four months (one from each agency). 
+Look up your credit report from one of the agencies and see what they have to say about you. 
+You are unlikely to have much information in there just yet, but the point here is to get a sense of what the report looks like for you and your future. 
+Take command of your data! 
+Know what information potential employers will look up about you (yes, prospective employers will try to find out your credit score and other relevant information about you). 
+Know where you stand. 
+Reflect on it. 
+If you can't access a report yet or there's no information about you just yet, don't worry. 
+Make a point to put a note in your calendar about your report and see if you can check one in four months. 
+Or a year. 
+Keep up the practice: it's good to know where you stand (and to make sure nothing fraudulent is happening on your accounts). 
+
+## 5. Have a Throw Away Day
+This may be hard to do at college rather than when you're at home, but the sentiment remains. 
+
+- What do you have with you at college that you could reasonably throw away?
+- What do you have that isn't serving you in the same way any longer? 
+- Do you have clothing you don't wear on a regular basis? 
+- What about a book you've read but now have set aside? 
+- Is there antyhing that's worth more than $5 that you could reasonably sell? 
+
+Consider the items you have. Reflect briefly on their value to you and what it means to you to throw something away or consider whether you can sell something that has served you. 
+
+##6. Sell something or give it away
+Consider some of the items you considered throwing away last week. Is there anything you could sell? Take a picture of it and post it online and try to sell it. Go through the process of meeting with someone and exchanging the good for money. What happened? How did it work? Write a brief reflection on the process of selling the good. 
+
+If for some reason you don't like selling an item, feel free to offer something for free to your neighbors. Northampton has a [Buy Nothing Group](https://buynothingproject.org/find-a-group/comment-page-1/) that is governed by generosity, appreciation and gift exchange (you can find the group on Facebook). If you'd prefer to do that, then go through that process and reflect on it instead. 
+
+##7. Growth & Limitations
+Now that we're at the half-way mark, I'd like you to reflect on growth and what limits you. 
+
+- Watch this video about the work of Carol Dweck on [Growth Mindsets](https://www.youtube.com/watch?v=Yl9TVbAal5s). 
+- Look at the idea of [limiting beleifs](http://changingminds.org/explanations/belief/limiting_beliefs.htm). 
+
+Write a short reflectiong where you think about your mindset. Do you feel like you have a fixed mindset about anything? About an aspect of your learning? Can you identify any limiting beliefs you might have? What are they and how do they limit you? Perhaps last week's activity showed you something where you have a limiting belief -- "I don't sell things" or "I don't give things away." What is the source of that limiting belief? Reflect and comment. 
+
+## 8. Research salaries
+Use the following three resources to research salaries of jobs that you've considered: 
+
+1. [Glasdoor.com](https://www.glassdoor.com/index.htm)
+2. [Salary.com](https://www.salary.com/)
+3. [The Bureau of Labor Statistics](https://www.bls.gov/)
+
+Consider 3 to 5 jobs you are interested in. What are the salaries people receive in those jobs? Notice that you will not get such a salary when you start out, but it's good to get a sense of what the annual salary is of jobs you are interested in in the future so you can plan for your future. Write a brief reflection commenting on what you've thought about doing, how it's remunerated and what that made you think. 
+
+## 9. Find a savings account & increase your savings by 1%
+Most of you already have a savings account, but you may not have a high-yield savings account, an IRA, or a related savings vehicle. 
+See if you can find an account that has a higher interest yield than the one you currently have. 
+Open that account and put a small amount of money in it. 
+For example, I keep my "Emergency Funds" in a high-yield savings account with Barclays that has a 2.2% APY ([annual percentage yield](https://www.investopedia.com/terms/a/apy.asp)). 
+I have a Roth IRA with Vanguard's VTSAX that has variable interest rates, but which will likely yield high rates over the long-run. 
+I don't have any debt apart from my mortgage. 
+
+Once you've considered your savings accounts, consider whether you can put money into the account and increase the amounts you put in by 1% of your monthly paycheck (from jobs that you do, side hustles, whatever). 
+Or, if you have a student loan, can you work out a way to increase your payments to your student loan by 1% (that is, if your student loan has a high rate of interest, if it's a low-interest loan, don't worry about paying it down you might consider other savings vehicles instead). 
+
+
+
+## 10. Create a catch phrase {#catchphrase}
+Taken straight from Paula Pant: "Develop a catch phrase that you’ll ask yourself whenever you’re about to spend money." For example, you can ask yourself: 
+
+- "Would I rather have [X], or would I rather put this money towards a plane ticket to Bali?"
+- “Would I rather spend [X], or would I rather be [Y number of days/weeks] closer to [financial independence/paying off my student debt]?”
+
+What are the *tradeoffs* that make your catch phrase vivid to you? 
+Perhaps it's how much closer you'll be to a trip you want to take after graduation or the amount of time you'll take to pay off student loans or another goal that you have. 
+Envision that financial goal. 
+Write it out. 
+Consider how you trade it off against purchases you make and consider why those purchases are valuable to you.
+Write a brief reflection capturing these ideas for this week. 
+ 
+## 11. Make a list of annual expenses
+Using Excel or Google Sheets (and perhaps helped by the Mint account you opened earlier) make a list of your annual expenses. These can include the following: 
+
+1. Birthday/holiday gifts 
+2. Travel expenses 
+3. Insurance costs (e.g. my car insurance is an annual expense)
+4. Seasonal expenses (e.g. snow tires, if you need them)
+5. Annual subscriptions (e.g. I use services like Amazon Prime, DropBox and Overleaf that charge me annually). 
+
+How much do these cost each year? 
+Divide the number by 12 and get a sense of what they would cost as "monthly subscriptions." 
+How do they contrast with other costs you pay each month? 
+How much are they worth given the tradeoff you highlight with your [catchphrase](#catchphrase)? 
+Briefly reflect and comment on this. 
+
+## 12. Donate to a cause 
+It's coming to the end of the semester. 
+Find a cause that you support and donate to that cause. 
+I strongly encourage you to think about the marginal benefit of your dollars here. 
+What is the largest effect your giving can have? 
+Consider looking up causes like those supported by [givewell.org](https://www.givewell.org/) which has evidence-based discussions of the causes it suggests you give to. 
+For example, combatting Malaria, Worms/Bilharzia (schistomsomiasis), and similar illnessess in Sub-Saharan Africa has large effects for each dollar spent (more lives saved/affected per dollar). 
+Or maybe you want your money to go directly to a person, in which case, consider [givedirectly.org](https://www.givedirectly.org/). 
+Reflect on the charity you choose. 
+A life well lived is a life involving appreciation and generosity of the world around you. 
+Acknowledge the tradeoffs of giving away your money. 
+Notice the benefits that giving money away provides to others. 
+
