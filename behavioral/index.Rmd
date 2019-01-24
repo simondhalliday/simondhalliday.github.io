@@ -6,12 +6,12 @@ output: html_document
 # Behavioral Economics Schedule
 
 - Instructor: Simon Halliday, PhD. 
-- Time: Tues & Thurs 3 to 4:50pm
-- Venue: Seelye 110
-- Semester: Fall 2017
+- Time: Tues & Thurs 10:30 to 11:50pm
+- Venue: Seelye 211
+- Semester: Spring 2019
 - Course code: ECO254
 - Email/hangouts: [shalliday+eco254@smith.edu](shalliday+eco254@smith.edu) Why is this my email address? Check [here](https://support.google.com/mail/answer/12096?hl=en)
-- [Syllabus](syllabus.html)
+- [Syllabus](syllabus_2019.pdf)
 - [Project Guidelines](team_guidelines)
 - [FAQ](FAQ)
 - Sign up for topics, share notes, and look at questions [here](topics_notes_questions). 
@@ -20,41 +20,10 @@ output: html_document
 
 
 
-## Week 14
-### Tuesday 5 December
-
-Read 
-
-- Tanjim Hossain and John List, 2012, "[The Behavioralist Visits the Factory: Increasing Productivity Using Simple Framing Manipulations](https://moodle.smith.edu/mod/resource/view.php?id=243595)," *Management Science* 58 (12): 2151 - 2167 (X pages). Note: We will use the [NBER version](https://moodle.smith.edu/mod/resource/view.php?id=243595) of this paper because the Management Science version isn't available to us yet through our online resources. 
-- Slide are [here](factory.html)
-
-### Thursday 7 December
-
-- Bring your laptops. It's team project time!
-- We'll also do the final experiment (other things equal)
-
-- Go here: [https://shalliday.shinyapps.io/sutter_shiny](https://shalliday.shinyapps.io/sutter_shiny)
-- Import the data from your midterm and see whether you can create an interactive version of Figure 4 using the template provided. 
-
-## Week 15: Final Presentations
-
-### Tuesday 12 December 
-
-- Group 1
-- Group 2
-- Group 3
-
-
-### Thursday 14 December 
-
-- Group 4
-- Group 5
-- Group 6
-
 
 ## Week 1: Introduction 
 
-### Thursday 7 September
+### Thursday 24 January 
 
 - What is *Economics* about? How does it inform policy?
 - What is *Behavioral* Economics about? How might *it* inform policy?
@@ -98,6 +67,7 @@ Complete these surveys:
 - Moodle statistical knowledge survey: [https://moodle.smith.edu/mod/questionnaire/view.php?id=233865](https://moodle.smith.edu/mod/questionnaire/view.php?id=233865)
 
 
+<!---
 ## Week 2: Heuristics & Biases
 
 ### Tuesday 12 September
@@ -152,7 +122,7 @@ The graph from the experiment is here: [drive.google.com/file/d/0B17bVUW1HMv-cUh
 - Screenshots of the instructions are available in a zipped file here: [drive.google.com/file/d/0B17bVUW1HMv-Vk9PUjZ3WUhlS0U/view?usp=sharing](https://drive.google.com/file/d/0B17bVUW1HMv-Vk9PUjZ3WUhlS0U/view?usp=sharing).
 -->
 
-
+<!---
 ## Week 3: Risk
 ### Tuesday 19 September
 
@@ -251,9 +221,9 @@ Cases
 - The graphic from the experiment is here: [https://moodle.smith.edu/mod/resource/view.php?id=42294](https://moodle.smith.edu/mod/resource/view.php?id=42294)
 - Here is data from the set of lotteries you chose: [https://moodle.smith.edu/mod/resource/view.php?id=42295](https://moodle.smith.edu/mod/resource/view.php?id=42295)
 - Here is the data from the short second experiment: [https://moodle.smith.edu/mod/resource/view.php?id=42296](https://moodle.smith.edu/mod/resource/view.php?id=42296)
--->
-- I strongly recommend that you read Chapters 4 and 7 of the Charles Holt book as it covers the relevant content for these (and does some of it better than the Cartwright book in my mind)
 
+- I strongly recommend that you read Chapters 4 and 7 of the Charles Holt book as it covers the relevant content for these (and does some of it better than the Cartwright book in my mind)
+-->
 
 <!--
 - Don't forgot to hand in your exercises due today! Hand in on Moodle. 
@@ -261,7 +231,7 @@ Cases
 -->
 
 
-
+<!--
 ## Week 6: Time concluded
 
 ### Tuesday 10 October - Fall Break
@@ -296,6 +266,7 @@ Cases
 
 -->
 
+<!--
 ## Week 7: Learning & Information
 
 
@@ -385,6 +356,7 @@ Revision
  - We will look at the Wilcoxon test on Thursday as well as the a first attempt at a multiple regression model (my notes may change between now and then)
 -->
  
+<!-- 
 ### Experiment 3
  
 - Go to VEconLab here: http://veconlab.econ.virginia.edu/login.htm
@@ -396,7 +368,7 @@ Revision
 - Once we've completed this exercise, I'll get started on Ch. 5 of Cartwright. 
 - Then we'll spend a bit of time on group-work too. 
 --> 
-
+<!--
 `ggplot` exercise continued (depending on where we get to): 
 
 - you're first going to need to make the data narrow using a key-value pair
@@ -486,3 +458,37 @@ Have a splendid time while you're away for 11/22 to 11/26.
 ### Thursday 30 November 
 
 - We are going to to do an exercise with the World Values survey here for [Lab6](Lab6)
+
+
+## Week 14
+### Tuesday 5 December
+
+Read 
+
+- Tanjim Hossain and John List, 2012, "[The Behavioralist Visits the Factory: Increasing Productivity Using Simple Framing Manipulations](https://moodle.smith.edu/mod/resource/view.php?id=243595)," *Management Science* 58 (12): 2151 - 2167 (X pages). Note: We will use the [NBER version](https://moodle.smith.edu/mod/resource/view.php?id=243595) of this paper because the Management Science version isn't available to us yet through our online resources. 
+- Slide are [here](factory.html)
+
+### Thursday 7 December
+
+- Bring your laptops. It's team project time!
+- We'll also do the final experiment (other things equal)
+
+- Go here: [https://shalliday.shinyapps.io/sutter_shiny](https://shalliday.shinyapps.io/sutter_shiny)
+- Import the data from your midterm and see whether you can create an interactive version of Figure 4 using the template provided. 
+
+## Week 15: Final Presentations
+
+### Tuesday 12 December 
+
+- Group 1
+- Group 2
+- Group 3
+
+
+### Thursday 14 December 
+
+- Group 4
+- Group 5
+- Group 6
+
+--->
