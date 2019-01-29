@@ -67,10 +67,15 @@ Complete these surveys:
 - Moodle statistical knowledge survey: [https://moodle.smith.edu/mod/questionnaire/view.php?id=233865](https://moodle.smith.edu/mod/questionnaire/view.php?id=233865)
 
 
-<!---
+Music Videos from Today: 
+- [https://www.youtube.com/watch?v=Z0mfBt3mhtc](https://www.youtube.com/watch?v=Z0mfBt3mhtc)
+- [https://www.youtube.com/watch?v=a01QQZyl-_I](https://www.youtube.com/watch?v=a01QQZyl-_I)
+
+
+
 ## Week 2: Heuristics & Biases
 
-### Tuesday 12 September
+### Tuesday 29 January
 
 Reading
 
@@ -93,6 +98,7 @@ Cases
 - Steven Levy, "[Nest’s Plan to Stop Brownouts Before They Start](http://www.wired.com/business/2013/04/nest-energy-services/)", *Wired*, 2013. See also: [MyEnergy.com](http://www.myenergy.com).
 - Larcom et al (15 September 2015), 'The Benefits of Forced Experimentation', is available here: [www.voxeu.org/article/benefits-forced-experimentation](http://www.voxeu.org/article/benefits-forced-experimentation)
 
+<!---
 - Here's a link to the workbook from class on the happiness scale: [simondhalliday.github.io/eco254/fall_2015/activities/happy_students](http://simondhalliday.github.io/eco254/fall_2015/activities/happy_students)
 - The reading guide is available here: [docs.google.com/document/d/12SU6upZrKDtUwyNaWOATo3LIzRjT3yODHkUlag5Hgu0/edit](https://docs.google.com/document/d/12SU6upZrKDtUwyNaWOATo3LIzRjT3yODHkUlag5Hgu0/edit)
 
