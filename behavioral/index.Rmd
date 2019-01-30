@@ -98,17 +98,25 @@ Cases
 - Steven Levy, "[Nest’s Plan to Stop Brownouts Before They Start](http://www.wired.com/business/2013/04/nest-energy-services/)", *Wired*, 2013. See also: [MyEnergy.com](http://www.myenergy.com).
 - Larcom et al (15 September 2015), 'The Benefits of Forced Experimentation', is available here: [www.voxeu.org/article/benefits-forced-experimentation](http://www.voxeu.org/article/benefits-forced-experimentation)
 
-<!---
-- Here's a link to the workbook from class on the happiness scale: [simondhalliday.github.io/eco254/fall_2015/activities/happy_students](http://simondhalliday.github.io/eco254/fall_2015/activities/happy_students)
 - The reading guide is available here: [docs.google.com/document/d/12SU6upZrKDtUwyNaWOATo3LIzRjT3yODHkUlag5Hgu0/edit](https://docs.google.com/document/d/12SU6upZrKDtUwyNaWOATo3LIzRjT3yODHkUlag5Hgu0/edit)
 
 
-### Thursday 14 September
 
-Today we shall do an experiment and (if there's time) begin to talk about using R. 
+
+### Thursday 31 January
+Today we shall do 
+
+1. Go to [https://rstudio.smith.edu](https://rstudio.smith.edu) and log on to ensure that you have access to the RStudio server.  
+2. One you have done that, start a new R Notebook file clicking on File -> New -> R Notebook. 
+
+- Go here: [Lab1](Lab1.html)
+- Access the cheat sheets from RStudio Help -> Cheatsheets -> [Select the Cheatsheet you want]
+
+If we have time, we'll do this set of decisions in an experiment: 
 
 - Go to VEconLab here: [http://veconlab.econ.virginia.edu/login.htm](http://veconlab.econ.virginia.edu/login.htm)
 - I will give you details on this page that you can use to log in. 
+
 
 Read
 
@@ -116,11 +124,13 @@ Read
 
 Revision
 
-- BFH, Chapter 1. 
+- BH, Chapter 1. 
 
-Experiment Reports
 
-- Guidelines for the reports are available here: [Experiment Report Guidelines](exp_reports)
+
+<!---
+- Here's a link to the workbook from class on the happiness scale: [simondhalliday.github.io/eco254/fall_2015/activities/happy_students](http://simondhalliday.github.io/eco254/fall_2015/activities/happy_students)
+--->
 <!--
 The graph from the experiment is here: [drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing](https://drive.google.com/file/d/0B17bVUW1HMv-cUhfNkItNjlfU00/view?usp=sharing)
 - The data are available in a google spreadsheet here: [docs.google.com/spreadsheets/d/10xzCd49nOEMDbxmegCfBaFZLz1uYE0ry7zGMBljEUcg/edit?usp=sharing](https://docs.google.com/spreadsheets/d/10xzCd49nOEMDbxmegCfBaFZLz1uYE0ry7zGMBljEUcg/edit?usp=sharing)
@@ -146,16 +156,15 @@ Recommended
 - A paper TBC
 
 
-
 ### Thursday 21 September
 
-1. Go to [https://rstudio.smith.edu](https://rstudio.smith.edu) and log on to ensure that you have access to the RStudio server.  
-2. One you have done that, start a new R Notebook file clicking on File -> New -> R Notebook. 
-
-- Go here: [Lab1](Lab1.html)
-- Access the cheat sheets from RStudio Help -> Cheatsheets -> [Select the Cheatsheet you want]
 
 
+
+
+Experiment Reports
+
+- Guidelines for the reports are available here: [Experiment Report Guidelines](exp_reports)
 
 
 
