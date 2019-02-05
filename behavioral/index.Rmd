@@ -138,9 +138,9 @@ The graph from the experiment is here: [drive.google.com/file/d/0B17bVUW1HMv-cUh
 - Screenshots of the instructions are available in a zipped file here: [drive.google.com/file/d/0B17bVUW1HMv-Vk9PUjZ3WUhlS0U/view?usp=sharing](https://drive.google.com/file/d/0B17bVUW1HMv-Vk9PUjZ3WUhlS0U/view?usp=sharing).
 -->
 
-<!---
+
 ## Week 3: Risk
-### Tuesday 19 September
+### Tuesday 5 February
 
 Reading
 
@@ -149,24 +149,10 @@ Reading
 
 Revision
 
-- BFH Chapter 4: A Risky and Unequal World. 
-
-Recommended
-
-- A paper TBC
+- BFH Chapter 13: A Risky and Unequal World. 
 
 
-### Thursday 21 September
-
-
-
-
-
-Experiment Reports
-
-- Guidelines for the reports are available here: [Experiment Report Guidelines](exp_reports)
-
-
+### Thursday 7 February
 
 *Homework*
 Once you're comfortable with the server, do the following. 
@@ -197,7 +183,7 @@ Prof Horton also has some videos about starting out with  R:
 
 ## Week 4: Risk
 
-### Tuesday 26 September
+### Tuesday 12 February
 
 Read
 
@@ -210,13 +196,14 @@ Other Notes
 
 - Check here for the notes on Bayes' Rule and understanding expected utility changes: [bayes_rule](bayes_rule). 
 
-### Thursday 28 September
+### Thursday 14 February
 
 - We're doing Lab 2 today. 
 - Go here to see it: [Lab2](Lab2.html)
 - Remember to log on to RStudio using the RStudio server: [https://rstudio.smith.edu](https://rstudio.smith.edu) 
-- Sit in your teams and work through the lab together. I'll come around and answers questions and occasionally highlight specific points. 
 
+
+<!---
 ## Week 5: Time
 ### Tuesday 3 October
 
