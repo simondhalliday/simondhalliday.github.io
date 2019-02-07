@@ -154,6 +154,11 @@ Revision
 
 ### Thursday 7 February
 
+- We're doing Lab 2 today. 
+- Go here to see it: [Lab2](Lab2.html)
+- Remember to log on to RStudio using the RStudio server: [https://rstudio.smith.edu](https://rstudio.smith.edu) 
+
+
 *Homework*
 Once you're comfortable with the server, do the following. 
 On your laptop, follow these steps to install R and the latest version of RStudio. 
@@ -198,10 +203,7 @@ Other Notes
 
 ### Thursday 14 February
 
-- We're doing Lab 2 today. 
-- Go here to see it: [Lab2](Lab2.html)
-- Remember to log on to RStudio using the RStudio server: [https://rstudio.smith.edu](https://rstudio.smith.edu) 
-
+- TBD
 
 <!---
 ## Week 5: Time
