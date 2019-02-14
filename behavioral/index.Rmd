@@ -203,7 +203,7 @@ Other Notes
 
 ### Thursday 14 February
 
-- TBD
+- We shall work on in [Lab 3](Lab3.html) today after checking in about Lab 2. 
 
 <!---
 ## Week 5: Time
