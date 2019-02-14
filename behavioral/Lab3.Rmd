@@ -8,7 +8,7 @@ output:
   pdf_document: default
 ---
 
-##Learning Outcomes
+## Learning Outcomes
 
 - Put into practice your knowledge of cases and variables
 
@@ -25,12 +25,11 @@ output:
 - Envisioning the skill to develop dynamic graphs like the Federal Reserve uses
 
 
-##Loading the packages
+## Loading the packages
 Call on the following packages, using the `install.packages("")` command if necessary to install the packages. Remember to open a code chunk and put these in the code chunk. 
 ```{r requirements, message = FALSE, warning=FALSE}
 library(mosaic)
 library(tidyverse)
-library(ggthemes)
 ```
 
 
@@ -88,7 +87,19 @@ Here's an example of how you might read in the .csv file:
 Participation <- read.csv("../more/labor_force_participation.csv")
 ```
 
-OR... you can read the `readxl` package (install it using `install.packages("readxl")`)
+
+Alternatively, we can use 
+```{r}
+Participation <- read_csv("../more/labor_force_participation.csv", 
+                          col_types = cols(date = col_date(format = "%Y/%m/%d"), 
+                                           male = col_double(),
+                                           female = col_double()), 
+                          col_names = TRUE
+                          )
+```
+
+
+OR... you can read the data in with the `readxl()` command from the `tidyverse`. Note: you may need to install `readxl` (install it using `install.packages("readxl")`)
 
 ```{r}
 library(readxl)
