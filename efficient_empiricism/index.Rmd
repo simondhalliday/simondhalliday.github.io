@@ -13,12 +13,11 @@ On this appendix page you will find resources and links based on my article for 
 
 ## A. Class Syllabi
   - Econometrics: Instructor: Michael O'Hara, Syllabus: [syllabus](https://www.dropbox.com/s/37c4q4v6uhcf1zf/Econ342syllabus_F2018.pdf?dl=0)  (TBC) 
-  - Basic Econometric: Instructor: Aaron Swoboda,[syllabus](https://docs.google.com/document/d/1LmFiWNWvSj93r_o3z5tlOrtvgnAM10Mtcy-eRCaaiZ0/edit)
+  - Basic Econometrics: Instructor: Aaron Swoboda,[syllabus](https://docs.google.com/document/d/1LmFiWNWvSj93r_o3z5tlOrtvgnAM10Mtcy-eRCaaiZ0/edit)
   - Behavioral Economics: Instructor: Simon Halliday, [syllabus/course outline](http://simondhalliday.com/behavioral)
-  - Business Analytics: Instructor: Tomas Dvorak, [syllabus]()
-  - Environmental Economics (Elective): Instructor: Aaron Swoboda: [syllabus](https://muse.union.edu/dvorakt/business-analytics/) 
+  - Business Analytics: Instructor: Tomas Dvorak, [syllabus](https://muse.union.edu/dvorakt/business-analytics/)
   - Topics in Environmental Economics (Seminar): Instructor: Michael O'Hara: [Syllabus](https://github.com/michaeleohara/Econ510_Sp2017_Hamilton/blob/master/Econ510syllabus_Sp2017.pdf) and updated here: [syllabus](https://www.dropbox.com/s/kjxlmtiwl3xpdhk/Econ510syllabus_Sp2017.pdf?dl=0).
-  - Seminar: Advanced Topics in Housing Economics: Instructor: Aaron Swoboda [syllabus](https://docs.google.com/document/d/1ZdO6Iu1ky0O4i-IQDePlKUNSlbpzrAASiK7_plHfSz8/edit)
+  - Advanced Topics in Housing Economics (Seminar): Instructor: Aaron Swoboda [syllabus](https://docs.google.com/document/d/1ZdO6Iu1ky0O4i-IQDePlKUNSlbpzrAASiK7_plHfSz8/edit)
 
 ## B. Examples of Labs and Exercises 
 
@@ -51,6 +50,7 @@ These exercises spanned macroeconomic data such as labor force participation rat
 - Project description: [pdf](https://www.dropbox.com/s/trxuu538j0nhg0y/instructions_Sp17.pdf?dl=0)
 
 ### Econometrics (Swoboda)
+
 [To be completed - instructor is facilitating study abroad and will provide details in January]
 
 
