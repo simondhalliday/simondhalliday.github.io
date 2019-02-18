@@ -96,6 +96,9 @@ img {
 button.code-folding-btn:focus {
   outline: none;
 }
+summary {
+  display: list-item;
+}
 </style>
 
 
@@ -103,14 +106,74 @@ button.code-folding-btn:focus {
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "";
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
 });
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
 </script>
 
 <!-- code folding -->
-
 
 
 
@@ -129,17 +192,19 @@ $(document).ready(function () {
 <p>On this appendix page you will find resources and links based on my article for the Journal of Economic Education:</p>
 <ul>
 <li>Citation: [INSERT CITATION HERE UPON RECEIVING IT].</li>
-<li>Authors: Tomas Dvorak (Union College), Simon Halliday (Smith College), Michael O’Hara (St. Lawrence Univeristy) and Aaron Swoboba (Carleton College)</li>
-<li>Contact: <a href="shalliday@smith.edu" class="uri">shalliday@smith.edu</a></li>
+<li>Authors: Tomas Dvorak (Union College), Simon D. Halliday (Smith College), Michael O’Hara (St. Lawrence University) and Aaron Swoboba (Carleton College)</li>
+<li>Corresponding Author: <a href="shalliday@smith.edu" class="uri">shalliday@smith.edu</a></li>
 </ul>
 <div id="a.-class-syllabi" class="section level2">
 <h2>A. Class Syllabi</h2>
 <ul>
-<li>Econometrics: Instructor: Michael O’Hara, Syllabus: <a href="https://www.dropbox.com/s/37c4q4v6uhcf1zf/Econ342syllabus_F2018.pdf?dl=0">syllabus</a> (TBC</li>
+<li>Econometrics: Instructor: Michael O’Hara, Syllabus: <a href="https://www.dropbox.com/s/37c4q4v6uhcf1zf/Econ342syllabus_F2018.pdf?dl=0">syllabus</a> (TBC)</li>
+<li>Basic Econometric: Instructor: Aaron Swoboda,<a href="https://docs.google.com/document/d/1LmFiWNWvSj93r_o3z5tlOrtvgnAM10Mtcy-eRCaaiZ0/edit">syllabus</a></li>
 <li>Behavioral Economics: Instructor: Simon Halliday, <a href="http://simondhalliday.com/behavioral">syllabus/course outline</a></li>
 <li>Business Analytics: Instructor: Tomas Dvorak, <a href>syllabus</a></li>
-<li>Environmental Economics (Elective): Instructor: Aaron Swoboda: <a href>syllabus</a></li>
+<li>Environmental Economics (Elective): Instructor: Aaron Swoboda: <a href="https://muse.union.edu/dvorakt/business-analytics/">syllabus</a></li>
 <li>Topics in Environmental Economics (Seminar): Instructor: Michael O’Hara: <a href="https://github.com/michaeleohara/Econ510_Sp2017_Hamilton/blob/master/Econ510syllabus_Sp2017.pdf">Syllabus</a> and updated here: <a href="https://www.dropbox.com/s/kjxlmtiwl3xpdhk/Econ510syllabus_Sp2017.pdf?dl=0">syllabus</a>.</li>
+<li>Seminar: Advanced Topics in Housing Economics: Instructor: Aaron Swoboda <a href="https://docs.google.com/document/d/1ZdO6Iu1ky0O4i-IQDePlKUNSlbpzrAASiK7_plHfSz8/edit">syllabus</a></li>
 </ul>
 </div>
 <div id="b.-examples-of-labs-and-exercises" class="section level2">
@@ -158,8 +223,10 @@ $(document).ready(function () {
 <li><a href="http://simondhalliday.com/behavioral/Lab1.html">Lab 1</a></li>
 <li><a href="http://simondhalliday.com/behavioral/Lab2.html">Lab 2</a></li>
 <li><a href="http://simondhalliday.com/behavioral/Lab3.html">Lab 3</a></li>
-<li><a href="http://simondhalliday.com/behavioral/Lab4">Lab 4</a></li>
-<li><a href="http://simondhalliday.com/behavioral/Lab5">Lab 5</a></li>
+<li><a href="http://simondhalliday.com/behavioral/Lab4.html">Lab 4</a></li>
+<li><a href="http://simondhalliday.com/behavioral/Lab5.html">Lab 5</a></li>
+<li><a href="http://simondhalliday.com/behavioral/Lab6.html">Lab 6</a></li>
+<li><a href="http://simondhalliday.com/behavioral/TidyGapMinder.html">Gapminder Exercise</a></li>
 </ul>
 </div>
 <div id="business-analytics-dvorak" class="section level3">

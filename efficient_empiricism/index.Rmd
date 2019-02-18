@@ -1,6 +1,6 @@
-
 ---
 output: html_document
+#output: word_document
     #css: ../stylesheets/styles.css
 ---
 
@@ -8,15 +8,17 @@ output: html_document
 On this appendix page you will find resources and links based on my article for the Journal of Economic Education: 
 
 - Citation: [INSERT CITATION HERE UPON RECEIVING IT]. 
-- Authors: Tomas Dvorak (Union College), Simon Halliday (Smith College), Michael O'Hara (St. Lawrence Univeristy) and Aaron Swoboba (Carleton College)
-- Contact: [shalliday@smith.edu](shalliday@smith.edu)
+- Authors: Tomas Dvorak (Union College), Simon D. Halliday (Smith College), Michael O'Hara (St. Lawrence University) and Aaron Swoboba (Carleton College)
+- Corresponding Author: [shalliday@smith.edu](shalliday@smith.edu)
 
 ## A. Class Syllabi
-  - Econometrics: Instructor: Michael O'Hara, Syllabus: [syllabus](https://www.dropbox.com/s/37c4q4v6uhcf1zf/Econ342syllabus_F2018.pdf?dl=0)  (TBC
+  - Econometrics: Instructor: Michael O'Hara, Syllabus: [syllabus](https://www.dropbox.com/s/37c4q4v6uhcf1zf/Econ342syllabus_F2018.pdf?dl=0)  (TBC) 
+  - Basic Econometric: Instructor: Aaron Swoboda,[syllabus](https://docs.google.com/document/d/1LmFiWNWvSj93r_o3z5tlOrtvgnAM10Mtcy-eRCaaiZ0/edit)
   - Behavioral Economics: Instructor: Simon Halliday, [syllabus/course outline](http://simondhalliday.com/behavioral)
   - Business Analytics: Instructor: Tomas Dvorak, [syllabus]()
-  - Environmental Economics (Elective): Instructor: Aaron Swoboda: [syllabus]() 
+  - Environmental Economics (Elective): Instructor: Aaron Swoboda: [syllabus](https://muse.union.edu/dvorakt/business-analytics/) 
   - Topics in Environmental Economics (Seminar): Instructor: Michael O'Hara: [Syllabus](https://github.com/michaeleohara/Econ510_Sp2017_Hamilton/blob/master/Econ510syllabus_Sp2017.pdf) and updated here: [syllabus](https://www.dropbox.com/s/kjxlmtiwl3xpdhk/Econ510syllabus_Sp2017.pdf?dl=0).
+  - Seminar: Advanced Topics in Housing Economics: Instructor: Aaron Swoboda [syllabus](https://docs.google.com/document/d/1ZdO6Iu1ky0O4i-IQDePlKUNSlbpzrAASiK7_plHfSz8/edit)
 
 ## B. Examples of Labs and Exercises 
 
@@ -26,13 +28,16 @@ On this appendix page you will find resources and links based on my article for 
 - Project description [pdf](https://www.dropbox.com/s/krjj0totwmbenna/project_instructions_F2018.pdf?dl=0)
 
 ### Behavioral Economics (Halliday)
+
 These exercises spanned macroeconomic data such as labor force participation rates from FRED, micro data from particular markets such as the Saumaty fish market in Marseille, survey data, such as the World Values Survey, and laboratory data, such as the data from decision experiments over risky choices and public goods games with individuals or teams. 
 
   - [Lab 1](http://simondhalliday.com/behavioral/Lab1.html)
   - [Lab 2](http://simondhalliday.com/behavioral/Lab2.html)
   - [Lab 3](http://simondhalliday.com/behavioral/Lab3.html)
-  - [Lab 4](http://simondhalliday.com/behavioral/Lab4)
-  - [Lab 5](http://simondhalliday.com/behavioral/Lab5)
+  - [Lab 4](http://simondhalliday.com/behavioral/Lab4.html)
+  - [Lab 5](http://simondhalliday.com/behavioral/Lab5.html)
+  - [Lab 6](http://simondhalliday.com/behavioral/Lab6.html)
+  - [Gapminder Exercise](http://simondhalliday.com/behavioral/TidyGapMinder.html)
 
 ### Business Analytics (Dvorak)
 
