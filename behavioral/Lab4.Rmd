@@ -1,7 +1,7 @@
 ---
 title: 'Lab 4: Reproducing Sutter, 2009'
 author: "Simon Halliday"
-date: "Fall 2017"
+date: "Spring 2019"
 output:
   html_document:
     css: ../stylesheets/lab.css
@@ -12,13 +12,14 @@ output:
 ## Loading required packages
 
 Be sure to load the packages you require.
-We use Hadley Wickham's "Tidyverse" of packages. 
+We use the "Tidyverse" of packages. 
 
 - We need `dplyr` to use `summarise` and `group_by`
 - We need `tidyr` for `gather`. 
 - We also need `ggplot2` for `ggplot`.
-- All of these three are included in the call `library(tidyverse)`
-- We use panel models, for which we require `plm`.
+- All of these three are included in the call to `library(tidyverse)`
+- We use panel models, for which we require the package `plm` (remember you can install the package `plm` by running `install.packages("plm")`)
+- We shall also use the package `stargazer` which we'll discuss later in the lab. 
 
 ```{r requirements, message = FALSE, warning=FALSE}
 library(tidyverse)
@@ -35,7 +36,7 @@ The .csv is a version of the supplementary data provided by Sutter at the AER he
 
 Download the original paper here to make sense of the exercises below: [https://drive.google.com/file/d/0B9jjwkjdUJU7eE5MVWRBZktlTm8/view?usp=sharing](https://drive.google.com/file/d/0B9jjwkjdUJU7eE5MVWRBZktlTm8/view?usp=sharing).
 
-When you call on `read.csv()` or `read_csv()` be sure to include the file extension  -- .csv -- at the end. Notice we use uppercase letters to name the data table we've prepared. 
+When you call on `read.csv()` or `read_csv()` be sure to include the file extension  -- .csv -- at the end. Notice we use uppercase letters to name the data table we've prepared. The command as written uses your "more" folder.
 ```{r read.csv}
 SutExp <- read.csv("../more/sutterexperiment.csv")
 ```
@@ -55,7 +56,7 @@ There are a couple of ways to do it, the shortes and easiest is as follows using
 names(SutExp) <- tolower(names(SutExp))
 ```
 
-Alterantively, but more verbosely, we could use the `rename()` command for each variable: 
+Alternatively, but more verbosely, we could use the `rename()` command for each variable: 
 
 ```{r renaming, eval = FALSE}
 SutExp <- 

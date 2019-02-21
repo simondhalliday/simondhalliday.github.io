@@ -30,6 +30,7 @@ Call on the following packages, using the `install.packages("")` command if nece
 ```{r requirements, message = FALSE, warning=FALSE}
 library(mosaic)
 library(tidyverse)
+library(plotly)
 ```
 
 
@@ -184,6 +185,11 @@ Participation %>%
   theme_bw() #this is a "theme" for the ggplot from the ggthemes package
 ```
 
+```{r}
+head(Participation)
+```
+
+
 -   Now it's your turn. Use the commands you've learned so far to create a graph for the labor force participation rate of **men**. Your graph should look like the one below. 
 
 -   You only need to change two parts of the code above. 
@@ -247,6 +253,13 @@ Participation2 <- #notice the name of this new object
  gather(sex, rate, male, female)
 ```
 
+We can do this in a similar, but slightly different, way as follows: 
+```{r}
+PartGatherType2 <- #name the new object
+  Participation %>% #pipe in the data
+  gather(sex, rate, -date) #use the variables that AREN'T the date
+```
+
 ## Superimposing Lines and Faceting Graphs
 
 With our new data we shall superimpose the male and female participation rates on the same graph and give each its own color. 
@@ -280,7 +293,7 @@ the option `facet_grid()`. In the ggplot below, we add the option
 we created with `gather`. 
 
 ```{r faceting participation_facet}
- Participation2 %>%
+ faceted_fig <- Participation2 %>%
    ggplot(aes(x = date, y = rate)) +
    geom_line(size = 0.8) +
    facet_grid(. ~sex) +
@@ -288,6 +301,7 @@ we created with `gather`.
  ylab("Labor Force Participation Rate") +
  xlab("Date") +
  theme_bw()
+ggplotly(faceted_fig)
 ```
 
 ## R can make a dygraph like FRED
