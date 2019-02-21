@@ -1,0 +1,420 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <title>Fig 4.5</title>
+    <link href="https://www.econgraphs.org/static/css/kg.0.1.4.css" rel="stylesheet">
+    <script src="https://www.econgraphs.org/static/js/kg.0.1.4.js"></script>
+    <!-- the above two lines allows you to share this as just an HTML file.
+    The below two lines allows you to work locally. -->
+    <!--<link href="code/kg.0.1.4.css" rel="stylesheet">
+    <script src="code/kg.0.1.4.js"></script>-->
+</head>
+<body>
+
+<div id="diagram" class="kg-container" src="playground"
+     style="width: 80%;margin-right: auto;margin-left: auto;margin-top: 2em;margin-bottom: 2em;">
+
+</div>
+<script>
+    KG.addView("playground", {
+        "schema": "EconSchema",
+        "version": 1,
+        "aspectRatio": 2,
+        "colors": {
+            "pareto": "colors.green",              //Econgraphs default colors
+            "endowment": "d3.color('steelblue')",   //use D3 colors - see https://github.com/d3/d3-color
+            "agentA": "d3.rgb(255,0,255)",          //use D3 to parse an RGB color
+            "agentB": "'#CC0000'"                   //use a CSS color directly - note you need the interior single quotes
+        },
+        "params": [
+            {
+                "name": "totalX",
+                "value": 10,
+                "min": 1,
+                "max": 200
+            },
+            {
+                "name": "totalY",
+                "value": 15,
+                "min": 1,
+                "max": 200
+            },
+            {
+                "name": "xA",
+                "value": 9,
+                "min": 0,
+                "max": 10,
+                "round": 0.1
+            },
+            {
+                "name": "yA",
+                "value": 1,
+                "min": 0,
+                "max": 15,
+                "round": 0.1
+            },
+            {
+                "name": "a1",
+                "value": "0.5",
+                "min": 0.01,
+                "max": 1,
+                "round": 0.01
+            },
+            {
+                "name": "a2",
+                "value": 0.5,
+                "min": 0.01,
+                "max": 1,
+                "round": 0.01
+            },
+            {
+                "name": "showPreferred",
+                "value": true
+            },
+            {
+                "name": "showIndifferenceCurves",
+                "value": true
+            },
+            {
+                "name": "showParetoEfficientCurve",
+                "value": true
+            }
+        ],
+        "calcs": {
+            "xB": "(10-params.xA)",
+            "yB": "(15-params.yA)"
+        },
+        "layout": {
+            "type": "EdgeworthBoxPlusTwoGraphsPlusSidebar", // change to 'EdgeworthBoxPlusSidebar' to remove lower graphs
+            "def": {
+                "totalGood1": 10,
+                "totalGood2": 15,
+                "agentA": {
+                    "xAxis": {
+                        "title": "A's coffee (kilograms), $x^A$ $\\rightarrow$",
+                        "ticks": 10
+                    },
+                    "yAxis": {
+                        "title": "A's data (gigabytes), $y^A$ $\\rightarrow$",
+                        "ticks": 15
+                    },
+                    "objects": [
+                        {
+                            "type": "EconContractCurve",
+                            "def": {
+                                "totalGood1": 10,
+                                "totalGood2": 15,
+                                "a": "params.a1",
+                                "b": "params.a2",
+                                "show": "params.showParetoEfficientCurve",
+                                "label": {
+                                    "text": "\\text{Pareto-efficient curve}",
+                                    "x": 9
+                                },
+                                "color": "colors.pareto"
+                            }
+                        },
+                        {
+                            "type": "EconBundle",
+                            "def": {
+                                "name": "bundleA",
+                                "coordinates": [
+                                    "params.xA",
+                                    "params.yA"
+                                ],
+                                "label": {},
+                                "r": 0,
+                                "droplines": {
+                                    "vertical": "params.xA.toFixed(1)",
+                                    "horizontal": "params.yA.toFixed(1)"
+                                },
+                                "utilityFunction": {
+                                    "type": "CobbDouglas",
+                                    "def": {
+                                        "alpha": "params.a1"
+                                    }
+                                },
+                                "indifferenceCurve": {
+                                    "show": "params.showIndifferenceCurves",
+                                    "showPreferred": "params.showPreferred",
+                                    "label": {
+                                        "text": "u^A",
+                                        "x": 6
+                                    },
+                                    "color": "colors.agentA"
+                                },
+                                "color": "colors.agentA"
+                            }
+                        },
+                        {
+                            "type": "Label",
+                            "def": {
+                                "coordinates": ['AXIS','AXIS'],
+                                "text": "A",
+                                "color": "colors.agentA"
+                            }
+                        }
+                    ]
+                },
+                "agentB": {
+                    "xAxis": {
+                        "title": " $\\leftarrow$ B's coffee (kilograms), $x^B$",
+                        "ticks": 10
+                    },
+                    "yAxis": {
+                        "title": "B's data (gigabytes), $y^B$ $\\rightarrow$",
+                        "ticks": 15
+                    },
+                    "objects": [
+                        {
+                            "type": "EconBundle",
+                            "def": {
+                                "name": "bundleB",
+                                "coordinates": [
+                                    "calcs.xB",
+                                    "calcs.yB"
+                                ],
+                                "label": {},
+                                "r": 0,
+                                "droplines": {
+                                    "vertical": "calcs.xB.toFixed(1)",
+                                    "horizontal": "calcs.yB.toFixed(1)"
+                                },
+                                "utilityFunction": {
+                                    "type": "CobbDouglas",
+                                    "def": {
+                                        "alpha": "params.a2"
+                                    }
+                                },
+                                "indifferenceCurve": {
+                                    "show": "params.showIndifferenceCurves",
+                                    "showPreferred": "params.showPreferred",
+                                    "label": {
+                                        "text": "u^B",
+                                        "x": 2,
+                                        "position": "tr"
+                                    },
+                                    "color": "colors.agentB"
+                                },
+                                "color": "colors.agentB"
+                            }
+                        },
+                        {
+                            "type": "EconBundle",
+                            "def": {
+                                "coordinates": [
+                                    "calcs.xB",
+                                    "calcs.yB"
+                                ],
+                                "label": {
+                                    "text": "z"
+                                },
+                                "droplines": {},
+                                "drag": [
+                                    {
+                                        "directions": "x",
+                                        "param": "xA",
+                                        "expression": "params.xA - drag.dx"
+                                    },
+                                    {
+                                        "directions": "y",
+                                        "param": "yA",
+                                        "expression": "params.yA - drag.dy"
+                                    }
+                                ],
+                                "color": "colors.endowment"
+                            }
+                        },
+                        {
+                            "type": "Label",
+                            "def": {
+                                "coordinates": ['AXIS','AXIS'],
+                                "text": "B",
+                                "color": "colors.agentB"
+                            }
+                        }
+                    ]
+                },
+                "graph1": {
+                    "xAxis": {
+                        "title": "A's coffee (kilograms), $x^A$ $\\rightarrow$",
+                        "max": 10,
+                        "ticks": 10
+                    },
+                    "yAxis": {
+                        "title": "A's data (gigabytes), $y^A$ $\\rightarrow$",
+                        "max": 15,
+                        "ticks": 15
+                    },
+                    "objects": [
+                        {
+                            "type": "EconBundle",
+                            "def": {
+                                "coordinates": [
+                                    "params.xA",
+                                    "params.yA"
+                                ],
+                                "label": {
+                                    "text": "z"
+                                },
+                                "droplines": {
+                                    "vertical": "params.xA.toFixed(1)",
+                                    "horizontal": "params.yA.toFixed(1)"
+                                },
+                                "utilityFunction": {
+                                    "type": "CobbDouglas",
+                                    "def": {
+                                        "alpha": "params.a1"
+                                    }
+                                },
+                                "indifferenceCurve": {
+                                    "show": "params.showIndifferenceCurves",
+                                    "showPreferred": "params.showPreferred",
+                                    "label": {
+                                        "text": null
+                                    },
+                                    "color": "colors.agentA"
+                                },
+                                "color": "colors.agentA",
+                                "drag": [
+                                    {
+                                        "directions": "x",
+                                        "param": "xA",
+                                        "expression": "params.xA + drag.dx"
+                                    },
+                                    {
+                                        "directions": "y",
+                                        "param": "yA",
+                                        "expression": "params.yA + drag.dy"
+                                    }
+                                ],
+
+                            }
+                        }
+                    ]
+                },
+                "graph2": {
+                    "xAxis": {
+                        "title": "B's coffee (kilograms), $x^B$ $\\rightarrow$",
+                        "max": 10,
+                        "ticks": 10
+                    },
+                    "yAxis": {
+                        "title": "B's data (gigabytes), $y^B$ $\\rightarrow$",
+                        "max": 15,
+                        "ticks": 15
+                    },
+                    "objects": [
+                        {
+                            "type": "EconBundle",
+                            "def": {
+                                "coordinates": [
+                                    "calcs.xB",
+                                    "calcs.yB"
+                                ],
+                                "label": {
+                                    "text": "z"
+                                },
+                                "droplines": {
+                                    "vertical": "calcs.xB.toFixed(1)",
+                                    "horizontal": "calcs.yB.toFixed(1)"
+                                },
+                                "utilityFunction": {
+                                    "type": "CobbDouglas",
+                                    "def": {
+                                        "alpha": "params.a2"
+                                    }
+                                },
+                                "indifferenceCurve": {
+                                    "show": "params.showIndifferenceCurves",
+                                    "showPreferred": "params.showPreferred",
+                                    "label": {
+                                        "text": null
+                                    },
+                                    "color": "colors.agentB"
+                                },
+                                "color": "colors.agentB",
+                                "drag": [
+                                    {
+                                        "directions": "x",
+                                        "param": "xA",
+                                        "expression": "params.xA - drag.dx"
+                                    },
+                                    {
+                                        "directions": "y",
+                                        "param": "yA",
+                                        "expression": "params.yA - drag.dy"
+                                    }
+                                ],
+
+                            }
+                        }
+                    ]
+                },
+                "sidebar": {
+                    "controls": [
+                        {
+                            "title": "Fig. 4.5: The Pareto-Efficient Set of Feasible Allocations",
+                            "sliders": [
+                                {
+                                    "param": "xA",
+                                    "label": "x^A"
+                                },
+                                {
+                                    "param": "yA",
+                                    "label": "y^A"
+                                }
+                            ],
+                            "divs": [
+                                {
+                                    "html": "`At point $z$, Ayanda (origin bottom-left) has ${params.xA.toFixed(1)} units of good 1 and ${params.yA.toFixed(1)} units of good 2, and Bongani (origin top-right) has ${calcs.xB.toFixed(1)} units of good 1 and ${calcs.xB.toFixed(1)} units of good 2.`"
+                                },
+                                {
+                                    "html": "Indifference curve $u^A$ shows Ayanda's indifference curve; the purple region shows the set of points she prefers to point $z$."
+                                },
+                                {
+                                    "html": "Indifference curve $u^B$ shows Bongani's indifference curve; the orange region shows the set of points she prefers to point $z$."
+                                },
+                                {
+                                    "html": "You can drag point $z$ to different locations in the Edgeworth box. What do you notice about allocations along the Pareto-efficient curve?"
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Utility Functions",
+                            "sliders": [
+                                {
+                                    "param": "a1",
+                                    "label": "\\alpha^A"
+                                },
+                                {
+                                    "param": "a2",
+                                    "label": "\\alpha^B"
+                                }
+                            ],
+                            "divs": [
+                                {
+                                    "html": "`$$\\\\begin{aligned}u^A(x^A,y^A) &= ${params.xA.toFixed(1)}^{${params.a1.toFixed(2)}} \\\\times ${params.yA.toFixed(1)}^{${(1-params.a1).toFixed(2)}} = ${calcs.bundleA.level.toFixed(2)}\\\\\\\\u^B(x^B,y^B) &=  ${calcs.xB.toFixed(1)}^{${params.a2.toFixed(2)}} \\\\times ${calcs.yB.toFixed(1)}^{${(1-params.a2).toFixed(2)}} = ${calcs.bundleB.level.toFixed(2)}\\\\end{aligned}$$`",
+                                },
+                                {
+                                    "html": "Since $\\alpha^A = \\alpha^B$, the Pareto-efficient curve is $$y^A = \\frac{3}{2}x^A$$",
+                                    "show": "(params.a1 == params.a2)"
+                                },
+                                {
+                                    "html": "Since $\\alpha^A > \\alpha^B$, so Ayanda likes coffee relatively more than Bongani, the Pareto-efficient curve bends down and to the right.",
+                                    "show": "(params.a1 > params.a2)"
+                                },
+                                {
+                                    "html": "Since $\\alpha^B > \\alpha^A$, so Bongani likes coffee relatively more than Ayanda, the Pareto-efficient curve bends up and to the left.",
+                                    "show": "(params.a1 < params.a2)"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        }
+    })
+</script>
+</body>
+</html>
