@@ -42,12 +42,6 @@ Though written for undergraduates,  in content CCC has a strong flavor of Sam's 
 knitr::include_graphics('logo-red-black.png')
 ```
 
-<!---
-```{r production intro, fig.margin = TRUE, fig.cap = "Example page: Introductory page to Chapter 8: Production: Technology, Costs and Supply", echo = FALSE}
-knitr::include_graphics('BFHMicro_production_intro.jpg')
-```
----> 
-
 ```{r eos ppf, fig.margin = TRUE, fig.cap = "Example page: figure in chapter 7 on Economies of Scale and the Production Possibilities Frontier", echo = FALSE}
 knitr::include_graphics('BFHMicro_eos_ppf.jpg')
 ```
