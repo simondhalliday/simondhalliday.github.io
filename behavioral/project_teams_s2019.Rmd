@@ -1,0 +1,44 @@
+---
+title: "Project Teams"
+author: "Simon Halliday"
+date: "Spring 2019"
+output: html_document
+---
+
+The following are the teams that I have allocated from the information you provided. I did my best to allocate people to topics in which I think they're interested from what was reported (going on ratings of 6 or 5 when I could). The teams are arbitrarily numbered. 
+
+## Team 1: Risk
+
+- Udeesha
+- Jocelyn
+- Eudora
+- Abby 
+
+## Team 2: Time 
+
+- Zoya
+- Emeline
+- Yejin
+- Kelly
+
+# Team 3: Group Interactions 1
+
+- Aimee
+- Kaylie
+-	Claire
+
+## Team 4: Social Preferences
+
+- Anuska
+- Juliana
+- Starry
+- Xinyu
+
+## Team 5: Group Interactions 2
+
+- Sieun
+- Harriet
+- Morgan
+
+
+
