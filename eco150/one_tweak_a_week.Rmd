@@ -3,7 +3,7 @@ title: "Journal: One Tweak a Week"
 subtitle: "Understanding Your Financial Journey: An Extra Credit Opportunity"
 author: "Simon Halliday"
 date: "Spring 2019"
-output: tint::tintPdf
+output: tint::tintHtml
 bibliography: skeleton.bib
 link-citations: yes
 ---
@@ -121,7 +121,7 @@ Consider some of the items you considered throwing away last week.
 - What happened? How did it work? Write a brief reflection on the process of selling the good. 
 
 ```{marginfigure}
-**A note on safety** Please be aware that you should be careful if you're meeting a total stranger. If you're meeting a fellow Smithie through local networks, that's great. But if you're meeting someone you don't know, then maybe take a friend or be sure to meet in a public place. While most people on the planet are kind and caring, that doesn't mean we shouldn’t remain aware and conscious of our context. With that in mind, please be careful if you're meeting a total
+**A note on safety** Please be aware that you should be careful if you're meeting a total stranger. If you're meeting a fellow Smithie through local networks, that's great. But if you're meeting someone you don't know, then maybe take a friend or be sure to meet in a public place. While most people on the planet are kind and caring, that doesn't mean we shouldn’t remain aware and conscious of our context. With that in mind, please be careful if you're meeting a total stranger. 
 ```
 If you don't like selling an item, feel free to offer something for free to your neighbors. 
 - Northampton has a [Buy Nothing Group](https://buynothingproject.org/find-a-group/comment-page-1/) that is governed by generosity, appreciation and gift exchange (you can find the group on Facebook). 
@@ -226,3 +226,7 @@ If you feel you have the opportunity, or even just for yourself (and not for me 
 - Did you feel the process was valuable? What did you value and why? 
 - What are you going to continue or develop further? 
 - What are three things you learned about financial independence?
+
+
+## License 
+<a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
