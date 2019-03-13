@@ -4,7 +4,7 @@ subtitle: Ongoing and published
 layout: page
 ---
 ## Books
-- *Microeonomics: Competition, Conflict and Coordination* with Samuel Bowles. See the website for the book here: [simondhalliday.com/microeconomics](http://simondhalliday.com/microeconomics). The book is forthcoming (2019) with Oxford University Press.
+- *Microeonomics: Competition, Conflict and Coordination* with Samuel Bowles. See the website for the book here: [simondhalliday.com/microeconomics](http://simondhalliday.com/microeconomics). The book is forthcoming (2020) with Oxford University Press.
 
 ## Peer Reviewed Publications 
 
