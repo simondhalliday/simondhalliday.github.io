@@ -1,7 +1,7 @@
 ---
 title: "Citations"
 author: "Simon Halliday"
-date: "10/31/2017"
+date: "Spring 2019"
 output:
   html_document:
     df_print: paged
@@ -30,7 +30,7 @@ Here are a couple of examples.
 - Citations in parenthesis: "We also used the package Stargazer [@stargazer]." 
 Here are some more examples: 
 - The @tidyverse
-- Niderle's article [@niederle17]
+- Malmendier and Schmidt's article [@malmendier17]
 
 
 These will automatically then populate the paper at the *end* of the R Markdown exported file. So I have a section `## References` as my last section and it'll auto-populate with those references I've cited in my bibliography file. 
