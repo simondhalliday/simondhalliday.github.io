@@ -1,0 +1,114 @@
+---
+title: 'Lab Extras: Ifelse (Using Sutter, 2009)'
+author: "Simon Halliday"
+date: "Spring 2019"
+output:
+  html_document:
+    css: ../stylesheets/lab.css
+    highlight: pygments
+    theme: cerulean
+#bibliography: skeleton.bib
+link-citations: yes
+---
+
+
+## Loading required packages
+
+Be sure to load the packages you require.
+We use the "Tidyverse" of packages. 
+
+```{r requirements, message = FALSE, warning=FALSE}
+library(tidyverse)
+```
+
+
+
+## Data 
+I'm going to re-import the Sutter dataset we used in Lab 4. 
+```{r read_csv, message=FALSE, warning = FALSE}
+SutExp <- read_csv("../more/sutterexperiment.csv")
+```
+If you don't have the data accessible, you can download it here: [https://drive.google.com/file/d/0B9jjwkjdUJU7cElvcVI5U3hhdEU/view?usp=sharing](https://drive.google.com/file/d/0B9jjwkjdUJU7cElvcVI5U3hhdEU/view?usp=sharing). 
+
+
+## Using rename to have consistent variable names
+I'm also going to re-run the code `tolower` for consistency. 
+```{r}
+names(SutExp) <- tolower(names(SutExp))
+```
+
+## Narrow the data 
+We're now going to narrow the data to get a long/narrow dataset with rounds and values in columns. 
+```{r narrowing}
+NarSut <- 
+  SutExp %>% 
+  gather(round, value, -treatment, -team, -subject, -session) %>% 
+  arrange(session, treatment, subject)
+```
+
+
+## Using `ifelse`
+Imagine you wanted to aggregate (`group_by`) on a variable that indicated "before" and "after" the first five rounds. 
+If we wanted to do this, one of the easiest ways to do so would be first to create an indicator variabe that takes the value 1 for rounds 1 to 5 and 0 otherwise. 
+To do so, we're going to use `mutate()` to create a new variable and `ifelse()` to make the creation of that variable conditional on the values of other variables. 
+How does `ifsels()` work? It is like a question that asks "If a condition is true, then report a value I tell you to, if false report another value I tell you to."
+So here, we want to say the following 
+
+- If the round is round 1, round 2, round 3, round 4, or round 5 
+- THEN the value if the condition is TRUE is 1
+- OR the value if the condition is FALSE is 0
+
+```{r ifelse1}
+NarSut <- 
+  NarSut %>% 
+  mutate(early = ifelse(round %in% c("r1", "r2", "r3", "r4", "r5"), 1, 0)
+         )
+```
+
+You can also embed `ifelse()` functions in each other. For example, imagine I wanted a variable with three values, "beginning", "middle", and "end", then I could do the following. 
+```{r ifelse2}
+NarSut <- 
+  NarSut %>% 
+  mutate(stage = ifelse(round %in% c("r1", "r2", "r3"), "beginning",
+                        ifelse(round %in% c("r4", "r5", "r6"), "middle", "end"
+                               ) #Notice this line break
+                        ) #And this one. 
+         )
+```
+What function is played by the line breaks in the code? 
+
+You can also use `ifelse()` with other variables as the outcomes rather than values or characters as I've done above. Before showing you that I'm going to manipulate the data a bit. 
+
+First generate a unique ID: 
+```{r uniques}
+NarSut <- 
+  NarSut %>%
+  mutate(uniqid = paste(session, treatment, subject, sep = "_"))
+```
+
+Second, create a variable that is the maximum reported value someone gives and I'm creating a variable that is the median of the sample for all values. (Note: why is it important for me to use the function `ungroup()` in the code chunk?) 
+```{r personalmax}
+NarSut <- 
+  NarSut %>%
+  group_by(uniqid) %>% 
+  mutate(maxval = max(value)) %>% 
+  ungroup() %>% 
+  mutate(medval = median(value))
+```
+
+Third, I'm going to create a new variable which reports the `maxval` if `maxval > medval` and  reports `medval` otherwise. 
+```{r ifelse3}
+NarSut <- 
+  NarSut %>%
+  mutate(maxormed = ifelse(maxval > medval, maxval, medval
+                           )
+         )
+```
+I could now use the variable `maxormed` in calculations if we wanted to. Because reasons. 
+
+To review, what have we done with ifelse? 
+
+- We've created variables that met a condition, and reported a number 1 or 0 
+- We've created variables that met a conditoin, and reported "beginning", "middle", or "end" (characters or factors if we made them such)
+- We've created  variables that met a condition and reported  other variables as results. 
+
