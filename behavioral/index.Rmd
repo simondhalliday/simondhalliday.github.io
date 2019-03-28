@@ -18,101 +18,20 @@ output: html_document
 - Experiment report [guidelines](exp_reports)
 - This class is supported by [DataCamp](https://www.datacamp.com/)
 
+## Week 9: Fairness and Social Preferences (contd.)
 
+### Tuesday 26 March
+See readings for Week 9. We focused on the slides. I'll look at readings a bit next week if we have time. 
 
+### Thursday 28 March
+We're going to spend some time learning about `ifelse()` today to make sure everyone is comfortable with how it can be used to create new and useful variables. 
 
+- Go to this new lab: [lab_extras](lab_extras)
+- We will also look at how to do citations in R Markdown at the [citations](citations) page.
 
-## Week 7: Learning & Information
-
-
-### Tuesday 5 March
-
-Reading
-
-- Textbook & Lab notes
-- Cartwright, Chapter 5 up to the end of Section 5.4 (feel free to exclude Section 5.3.4. if you're struggling to understand it as it may employ game theory you have not done)
-
-
-### Thursday 7 March
-
-- Gary Charness and Matthias Sutter, 2012, "[Groups make better self-interested decisions](https://moodle.smith.edu/mod/resource/view.php?id=233863)," *Journal of Economic Perspectives*, 26 (3): 157-176 (18 pages)
-Cases
-
-- People don't want equality, they want fairness: [http://www.theatlantic.com/science/archive/2015/10/people-dont-actually-want-equality/411784/](http://www.theatlantic.com/science/archive/2015/10/people-dont-actually-want-equality/411784/)
-- Cass Sunstein reviews Akerlof and Shiller's *Phishing for Phools*: [http://www.nybooks.com/articles/archives/2015/oct/22/why-free-markets-make-fools-us/](http://www.nybooks.com/articles/archives/2015/oct/22/why-free-markets-make-fools-us/)
 
 <!--
-## Week 8: Fairness and Social Preferences 
-Do people only worry about their own consumption or their own money, or are they concerned (in prosocial or antisocial ways) about what others get? If they do care, what do their preferences look like? Are they altruistic? Are the reciprocal? What experiments do we use to check this and how can we understand the breadth of these preferences? 
- 
-### Tuesday 24 October
-
-Catch-up on groups & on learning articles: 
-- Sundali and Croson, 2006, "[Biases in casino betting: The hot hand and the gambler’s fallacy](https://moodle.smith.edu/mod/resource/view.php?id=233746)," *Judgment and Decision Making*, Vol 1 (1): 1-12 (11 pages)
-
-Reading 
-
-- Cartwright, Chapter 7 up to Section 7.4. 
-- Daniel Kahneman, Jack Knetsch, and Richard Thaler, 1986, "[Fairness as a Constraint on Profit Seeking: Entitlements in the Market](https://moodle.smith.edu/mod/resource/view.php?id=233839)," *American Economic Review*, Vol. 76 (4): 728-741, (13 pages).
-- Alexander Cappelen et al, 2007, "[The Pluralism of Fairness Ideals: An Experimental Approach](https://moodle.smith.edu/mod/resource/view.php?id=233841)," *American Economic Review*, Vol. 97 (3) 818-827, (9 pages).
-
-Cases
-
-- Kusum Ailawadi and Paul Farris, "How Companies Can Get Smart About Raising Prices," Wall Street Journal, 2013. See also: Four Barrel.
-- "[The rise of the sharing economy](http://www.economist.com/news/leaders/21573104-internet-everything-hire-rise-sharing-economy)," Economist, 2013.
-
-Recommended
-
-- Stefano DellaVigna, 2009, "[Psychology and Economics: Evidence from the Field](https://moodle.smith.edu/mod/resource/view.php?id=233705)," Journal of Economic Literature,  47 (2): 315–372. 
-
-Revision 
-
-- BFH Chapter 2
-
-
-### Thursday 26 October
-
-- We shall do an experiment, then continue lab work (from Lab 4)
-<!--
-- You can look at all the steps we'll take with the Sutter data here: 
-[http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis_2](http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis_2)
- - We will look at the Wilcoxon test on Thursday as well as the a first attempt at a multiple regression model (my notes may change between now and then)
--->
- 
-<!-- 
-### Experiment 3
- 
-- Go to VEconLab here: http://veconlab.econ.virginia.edu/login.htm
-
-<!--
-- Be sure to have gone through the ggplot exercise that we started on last week Thursday. 
-- You can see my 'readme.txt' file here: [http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/readme.txt](http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/readme.txt)
-- You can see a step-by-step completion of the first part of the exercise in R here: [http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis](http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis)
-- Once we've completed this exercise, I'll get started on Ch. 5 of Cartwright. 
-- Then we'll spend a bit of time on group-work too. 
---> 
-<!--
-`ggplot` exercise continued (depending on where we get to): 
-
-- you're first going to need to make the data narrow using a key-value pair
-- you'll then need to filter out data that you don't need for the first graph in the paper (i.e. you only want "teamtreat" and "individuals")
-    - to do this, you'll need to use "logical operators". 
-    - A logical operator is like an "and" sign "&"" or an "or" sign "|"
-    - you'll need to use or "|" because you'll want to *keep* those observations in "teamtreat" or "individual"
-- once you've filtered out the treatments you don't need, you can construct the ggplot code
-
-
-### Tuesday 31 October 
-See readings for Week 8. We focus on Kahneman et al and Cappelen et al today. 
-We will also look at how to do citations in R Markdown at the [citations](citations) page.
-
-And you can download the project template file [here](https://moodle.smith.edu/mod/resource/view.php?id=261455). You will need to download and use the `rticles()` package. 
-
-### Thursday 2 November
-
-## Week 9: Fairness and Social Preferences
-
-## Week 10: Fairness & Social Preferences
+## Week 10: TBD
 
 
 ### Tuesday 7 November
@@ -502,6 +421,89 @@ Notes & Lab:
 - We will use the data in working data and document what we do in a readme.txt file. 
 
 -->
+
+
+
+## Week 7: Learning & Information
+
+
+### Tuesday 5 March
+
+Reading
+
+- Textbook & Lab notes
+- Cartwright, Chapter 5 up to the end of Section 5.4 (feel free to exclude Section 5.3.4. if you're struggling to understand it as it may employ game theory you have not done)
+
+
+Catch-up on groups & on learning articles: 
+- Sundali and Croson, 2006, "[Biases in casino betting: The hot hand and the gambler’s fallacy](https://moodle.smith.edu/mod/resource/view.php?id=233746)," *Judgment and Decision Making*, Vol 1 (1): 1-12 (11 pages)
+
+### Thursday 7 March
+
+- Gary Charness and Matthias Sutter, 2012, "[Groups make better self-interested decisions](https://moodle.smith.edu/mod/resource/view.php?id=233863)," *Journal of Economic Perspectives*, 26 (3): 157-176 (18 pages)
+Cases
+
+- People don't want equality, they want fairness: [http://www.theatlantic.com/science/archive/2015/10/people-dont-actually-want-equality/411784/](http://www.theatlantic.com/science/archive/2015/10/people-dont-actually-want-equality/411784/)
+- Cass Sunstein reviews Akerlof and Shiller's *Phishing for Phools*: [http://www.nybooks.com/articles/archives/2015/oct/22/why-free-markets-make-fools-us/](http://www.nybooks.com/articles/archives/2015/oct/22/why-free-markets-make-fools-us/)
+
+## Week 8: Fairness and Social Preferences 
+Do people only worry about their own consumption or their own money, or are they concerned (in prosocial or antisocial ways) about what others get? If they do care, what do their preferences look like? Are they altruistic? Are the reciprocal? What experiments do we use to check this and how can we understand the breadth of these preferences? 
+
+### Tuesday 19 March
+
+Reading 
+
+- Cartwright, Chapter 7 up to Section 7.4. 
+- Daniel Kahneman, Jack Knetsch, and Richard Thaler, 1986, "[Fairness as a Constraint on Profit Seeking: Entitlements in the Market](https://moodle.smith.edu/mod/resource/view.php?id=233839)," *American Economic Review*, Vol. 76 (4): 728-741, (13 pages).
+- Alexander Cappelen et al, 2007, "[The Pluralism of Fairness Ideals: An Experimental Approach](https://moodle.smith.edu/mod/resource/view.php?id=233841)," *American Economic Review*, Vol. 97 (3) 818-827, (9 pages).
+
+Cases
+
+- Kusum Ailawadi and Paul Farris, "How Companies Can Get Smart About Raising Prices," Wall Street Journal, 2013. See also: Four Barrel.
+- "[The rise of the sharing economy](http://www.economist.com/news/leaders/21573104-internet-everything-hire-rise-sharing-economy)," Economist, 2013.
+
+Recommended
+
+- Stefano DellaVigna, 2009, "[Psychology and Economics: Evidence from the Field](https://moodle.smith.edu/mod/resource/view.php?id=233705)," Journal of Economic Literature,  47 (2): 315–372. 
+
+Revision 
+
+- BFH Chapter 2
+
+
+### Thursday 21 March
+
+- Presentations
+<!--
+- You can look at all the steps we'll take with the Sutter data here: 
+[http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis_2](http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis_2)
+ - We will look at the Wilcoxon test on Thursday as well as the a first attempt at a multiple regression model (my notes may change between now and then)
+-->
+ 
+<!-- 
+### Experiment 3
+ 
+- Go to VEconLab here: http://veconlab.econ.virginia.edu/login.htm
+
+<!--
+- Be sure to have gone through the ggplot exercise that we started on last week Thursday. 
+- You can see my 'readme.txt' file here: [http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/readme.txt](http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/readme.txt)
+- You can see a step-by-step completion of the first part of the exercise in R here: [http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis](http://simondhalliday.github.io/eco254/fall_2015/activities/sutter/sutter_analysis)
+- Once we've completed this exercise, I'll get started on Ch. 5 of Cartwright. 
+- Then we'll spend a bit of time on group-work too. 
+--> 
+<!--
+`ggplot` exercise continued (depending on where we get to): 
+
+- you're first going to need to make the data narrow using a key-value pair
+- you'll then need to filter out data that you don't need for the first graph in the paper (i.e. you only want "teamtreat" and "individuals")
+    - to do this, you'll need to use "logical operators". 
+    - A logical operator is like an "and" sign "&"" or an "or" sign "|"
+    - you'll need to use or "|" because you'll want to *keep* those observations in "teamtreat" or "individual"
+- once you've filtered out the treatments you don't need, you can construct the ggplot code
+
+
+
 
 ## A note on Datacamp
 DataCamp is the most intuitive learning platform for data science. Learn R, Python and SQL the way you learn best through a combination of short expert videos and hands-on-the-keyboard exercises. Take over 100+ courses by expert instructors on topics such as importing data, data visualization or machine learning and learn faster through immediate and personalised feedback on every exercise.
