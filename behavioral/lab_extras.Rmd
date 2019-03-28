@@ -112,3 +112,17 @@ To review, what have we done with ifelse?
 - We've created variables that met a conditoin, and reported "beginning", "middle", or "end" (characters or factors if we made them such)
 - We've created  variables that met a condition and reported  other variables as results. 
 
+##Eudora's question about frequencies 
+We need to  use `n()` within different categories and then make sure we `group_by()` appropriately with different levels of variables. So we first  create a "sample size" variable for the whole dataframe, then we `group_by()` with both the treatment and the new sample size variable, then we summarise on those groups, followed by `mutate()` to create a new variable that is the proportion of the total or the frequency. 
+```{r grouping}
+NarSut <- 
+  NarSut %>% 
+  mutate(sample = n())
+SutSum <- 
+  NarSut %>% 
+  group_by(treatment, sample) %>% 
+  summarise(count = n()) %>% 
+  mutate(prop = count/sample)
+SutSum
+```
+

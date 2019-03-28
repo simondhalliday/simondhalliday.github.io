@@ -311,6 +311,28 @@ $(document).ready(function () {
 <li>We’ve created variables that met a condition and reported other variables as results.</li>
 </ul>
 </div>
+<div id="eudoras-question-about-frequencies" class="section level2">
+<h2>Eudora’s question about frequencies</h2>
+<p>We need to use <code>n()</code> within different categories and then make sure we <code>group_by()</code> appropriately with different levels of variables. So we first create a “sample size” variable for the whole dataframe, then we <code>group_by()</code> with both the treatment and the new sample size variable, then we summarise on those groups, followed by <code>mutate()</code> to create a new variable that is the proportion of the total or the frequency.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">NarSut &lt;-<span class="st"> </span>
+<span class="st">  </span>NarSut <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">sample =</span> <span class="kw">n</span>())
+SutSum &lt;-<span class="st"> </span>
+<span class="st">  </span>NarSut <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">group_by</span>(treatment, sample) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">summarise</span>(<span class="dt">count =</span> <span class="kw">n</span>()) <span class="op">%&gt;%</span><span class="st"> </span>
+<span class="st">  </span><span class="kw">mutate</span>(<span class="dt">prop =</span> count<span class="op">/</span>sample)
+SutSum</code></pre></div>
+<pre><code>## # A tibble: 5 x 4
+## # Groups:   treatment [5]
+##   treatment  sample count   prop
+##   &lt;chr&gt;       &lt;int&gt; &lt;int&gt;  &lt;dbl&gt;
+## 1 individual   2718   576 0.212 
+## 2 message      2718   648 0.238 
+## 3 mixed        2718   756 0.278 
+## 4 paycomm      2718   486 0.179 
+## 5 teamtreat    2718   252 0.0927</code></pre>
+</div>
 
 
 
