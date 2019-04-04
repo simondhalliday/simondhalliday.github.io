@@ -18,35 +18,24 @@ output: html_document
 - Experiment report [guidelines](exp_reports)
 - This class is supported by [DataCamp](https://www.datacamp.com/)
 
-## Week 9: Fairness and Social Preferences (contd.)
 
-### Tuesday 26 March
-See readings for Week 9. We focused on the slides. I'll look at readings a bit next week if we have time. 
 
-### Thursday 28 March
-We're going to spend some time learning about `ifelse()` today to make sure everyone is comfortable with how it can be used to create new and useful variables. 
+## Week 10: Gender and Preferences
 
-- Go to this new lab: [lab_extras](lab_extras)
-- We will also look at how to do citations in R Markdown at the [citations](citations) page.
+
+### Tuesday 2 April
+
+- Gender -- See readings on Moodle
+
+### Thursday 4 April
+
+- Go here for [Lab5](Lab5)
+- Go here on Moodle to download the data: [https://moodle.smith.edu/mod/resource/view.php?id=405319](https://moodle.smith.edu/mod/resource/view.php?id=405319)
+- The codebook or data description to understand what the data means is available on Moodle here: [https://moodle.smith.edu/mod/resource/view.php?id=405318](https://moodle.smith.edu/mod/resource/view.php?id=405318) 
 
 
 <!--
-## Week 10: TBD
-
-
-### Tuesday 7 November
-
-- Conclude discussion of Social preferences with inequality aversion, intentions, and reciprocity. 
-
-### Thursday 9 November
-
-- Discuss Cappelen et al. 
-- See slides [here](social_prefs_addendum.html)
-- Time for the midterm in class
-
-
-
-## Week 11: Gender and Preferences
+## Week 11: 
 
 We consider the evidence for *average* differences using gender as a category. We consider whether statistically significant differences on average imply *substantive* differences in practice or policy. 
 
@@ -64,9 +53,7 @@ Taking](https://moodle.smith.edu/mod/resource/view.php?id=233978)", *Feminist Ec
 Wrap up Gender, some R, and project work
 
 - Nelson (2016) slides [here](nelson)
-- Go here for the [Lab5](Lab5)
-- Go here on Moodle to download the data: [moodle.smith.edu/mod/resource/view.php?id=233898](https://moodle.smith.edu/mod/resource/view.php?id=233898)
-- The codebook or data description to understand what the data means is available on Moodle here: [moodle.smith.edu/mod/resource/view.php?id=233897](https://moodle.smith.edu/mod/resource/view.php?id=233897) 
+
 
 
 ## Week 12: Happiness and Utility
@@ -502,7 +489,18 @@ Revision
     - you'll need to use or "|" because you'll want to *keep* those observations in "teamtreat" or "individual"
 - once you've filtered out the treatments you don't need, you can construct the ggplot code
 
+--->
 
+## Week 9: Fairness and Social Preferences (contd.)
+
+### Tuesday 26 March
+See readings for Week 9. We focused on the slides. I'll look at readings a bit next week if we have time. 
+
+### Thursday 28 March
+We're going to spend some time learning about `ifelse()` today to make sure everyone is comfortable with how it can be used to create new and useful variables. 
+
+- Go to this new lab: [lab_extras](lab_extras)
+- We will also look at how to do citations in R Markdown at the [citations](citations) page.
 
 
 ## A note on Datacamp
