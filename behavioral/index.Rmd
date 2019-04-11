@@ -20,45 +20,9 @@ output: html_document
 
 
 
-## Week 10: Gender and Preferences
+## Week 11:  Happiness and Utility
 
-
-### Tuesday 2 April
-
-- Gender -- See readings on Moodle
-
-### Thursday 4 April
-
-- Go here for [Lab5](Lab5)
-- Go here on Moodle to download the data: [https://moodle.smith.edu/mod/resource/view.php?id=405319](https://moodle.smith.edu/mod/resource/view.php?id=405319)
-- The codebook or data description to understand what the data means is available on Moodle here: [https://moodle.smith.edu/mod/resource/view.php?id=405318](https://moodle.smith.edu/mod/resource/view.php?id=405318) 
-
-
-<!--
-## Week 11: 
-
-We consider the evidence for *average* differences using gender as a category. We consider whether statistically significant differences on average imply *substantive* differences in practice or policy. 
-
-### Tuesday 14 November
-Reading 
-
-- Rachel Croson and Uri Gneezy, 2009, "[Gender Differences in Preferences](https://moodle.smith.edu/mod/resource/view.php?id=233976)," *Journal of Economic Literature*, 47 (2): 1–27  (22 pages)
-- Julie A. Nelson, 2016, "[Not-So-Strong Evidence for Gender Differences in Risk
-Taking](https://moodle.smith.edu/mod/resource/view.php?id=233978)", *Feminist Economics*, 22 (2): 114-142. (26 pages)
-- Slides for Croson & Gneezy are [here](https://moodle.smith.edu/mod/resource/view.php?id=264612)
-
-
-### Thursday 16 November 
-
-Wrap up Gender, some R, and project work
-
-- Nelson (2016) slides [here](nelson)
-
-
-
-## Week 12: Happiness and Utility
-
-### Tuesday 21 November
+### Tuesday 9 April
 
 Reading 
 
@@ -70,25 +34,22 @@ Watch
 
 - Daniel Kahneman, "[The riddle of experience vs. memory](http://www.ted.com/talks/daniel_kahneman_the_riddle_of_experience_vs_memory.html)," TED, 2010. (Video, 20 minutes)
 
-Homework
+### Thursday 4 April 
+- Experiment 3, go here: [http://veconlab.econ.virginia.edu](http://veconlab.econ.virginia.edu)
 
 
+## Week 2: Policy and Manipulation
 
-### Thanksgiving break
-Have a splendid time while you're away for 11/22 to 11/26. 
-
-## Week 13: Policy and Manipulation
-
-### Tuesday 28 November 
+### Tuesday 16 April 
 - Cartwright Chapter 11. 
-- Chetty, Raj, 2015, "[Behavioral Economics and Public Policy: A Pragmatic Perspective](https://moodle.smith.edu/mod/resource/view.php?id=233704)," *American Economic Review: Papers & Proceedings*, 105 (5): 1-33, (30 pages)
-- Bhargava and Loewenstein, 2015, "[Behavioral Economics and Public Policy 102: Beyond Nudging](https://moodle.smith.edu/mod/resource/view.php?id=233862)", *American Economic Review: Papers & Proceedings*, 105 (5): 396–401
+- Chetty, Raj, 2015, "[Behavioral Economics and Public Policy: A Pragmatic Perspective](https://moodle.smith.edu/mod/resource/view.php?id=405274)," *American Economic Review: Papers & Proceedings*, 105 (5): 1-33, (30 pages)
+- Bhargava and Loewenstein, 2015, "[Behavioral Economics and Public Policy 102: Beyond Nudging](https://moodle.smith.edu/mod/resource/view.php?id=405275)", *American Economic Review: Papers & Proceedings*, 105 (5): 396–401
 
-### Thursday 30 November 
+### Thursday 18 April
 
-- We are going to to do an exercise with the World Values survey here for [Lab6](Lab6)
+- I  hope we can do an exercise with the World Values survey here for [Lab6](Lab6), but I may defer that if I think you need more time for your team projects. 
 
-
+<!--
 ## Week 14
 ### Tuesday 5 December
 
@@ -503,5 +464,43 @@ We're going to spend some time learning about `ifelse()` today to make sure ever
 - We will also look at how to do citations in R Markdown at the [citations](citations) page.
 
 
+
+## Week 10: Gender and Preferences
+
+
+### Tuesday 2 April
+
+- Gender -- See readings on Moodle
+
+### Thursday 4 April
+
+- Go here for [Lab5](Lab5)
+- Go here on Moodle to download the data: [https://moodle.smith.edu/mod/resource/view.php?id=405319](https://moodle.smith.edu/mod/resource/view.php?id=405319)
+- The codebook or data description to understand what the data means is available on Moodle here: [https://moodle.smith.edu/mod/resource/view.php?id=405318](https://moodle.smith.edu/mod/resource/view.php?id=405318) 
+
+
+
+
 ## A note on Datacamp
-DataCamp is the most intuitive learning platform for data science. Learn R, Python and SQL the way you learn best through a combination of short expert videos and hands-on-the-keyboard exercises. Take over 100+ courses by expert instructors on topics such as importing data, data visualization or machine learning and learn faster through immediate and personalised feedback on every exercise.
+DataCamp is an intuitive learning platform for data science. Learn R, Python and SQL the way you learn best through a combination of short expert videos and hands-on-the-keyboard exercises. Take over 100+ courses by expert instructors on topics such as importing data, data visualization or machine learning and learn faster through immediate and personalised feedback on every exercise.
+
+
+
+<!-- 
+We consider the evidence for *average* differences using gender as a category. We consider whether statistically significant differences on average imply *substantive* differences in practice or policy. 
+
+### Tuesday 14 November
+Reading 
+
+- Rachel Croson and Uri Gneezy, 2009, "[Gender Differences in Preferences](https://moodle.smith.edu/mod/resource/view.php?id=233976)," *Journal of Economic Literature*, 47 (2): 1–27  (22 pages)
+- Julie A. Nelson, 2016, "[Not-So-Strong Evidence for Gender Differences in Risk
+Taking](https://moodle.smith.edu/mod/resource/view.php?id=233978)", *Feminist Economics*, 22 (2): 114-142. (26 pages)
+- Slides for Croson & Gneezy are [here](https://moodle.smith.edu/mod/resource/view.php?id=264612)
+
+
+### Thursday 16 November 
+
+Wrap up Gender, some R, and project work
+
+- Nelson (2016) slides [here](nelson)
+--> 

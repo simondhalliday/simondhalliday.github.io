@@ -1,7 +1,7 @@
 ---
 title: "Lab 6: Happiness in the World Values Survey"
 author: "Simon Halliday"
-date: "ECO254, Fall 2017"
+date: "ECO254, Spring 2019"
 output:
   html_document:
     css: ../stylesheets/lab.css
