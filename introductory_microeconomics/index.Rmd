@@ -1,0 +1,59 @@
+---
+output: html_document
+    #css: ../stylesheets/styles.css
+---
+
+# Introductory Microeconomics 
+
+- Instructor: Simon Halliday, PhD. 
+- Time: Tues & Thurs 1:00 to 2:20pm
+- Venue: Seelye 208
+- Semester: Spring 2019
+- Course code: ECO150
+- Email/hangouts: [shalliday@smith.edu](shalliday@smith.edu)
+- [Syllabus](https://www.dropbox.com/s/0iahr1jl2rr4wy3/eco150_halliday_syllabus.pdf?dl=0)
+
+# Basics
+I use **The Economy** by the CORE Team: [core-econ.org](https://www.core-econ.org/).
+
+# Worksheets
+I used worksheets for in-class exercises for a variety of units in the book, mainly Units 2 through 9. You can download a zipped file of all of the below [here](https://www.dropbox.com/s/m8jltecudemr8bx/Worksheets.zip?dl=0). 
+
+## Unit 2
+
+- [Worksheet 1](https://www.dropbox.com/s/n0jcu4yd62yzb8k/unit2.pdf?dl=0)
+- [Worksheet 2](https://www.dropbox.com/s/bg1mfxewhxncs38/unit2_part2.pdf?dl=0)
+
+## Unit 3
+
+- [Worksheet 1](https://www.dropbox.com/s/5uexnagwrxkbtgd/unit3.pdf?dl=0)
+- [Worksheet 2](https://www.dropbox.com/s/u0cgnrvzxa2z3j1/unit3_part2.pdf?dl=0)
+
+## Unit 4
+
+- [Worksheet 1](https://www.dropbox.com/s/zvw0whvojglldck/unit4.pdf?dl=0)
+- [Worksheet 2](https://www.dropbox.com/s/xlxeewfn6hvoogh/unit4_part2.pdf?dl=0)
+- [Dictator Game Worksheet](https://www.dropbox.com/s/jt8uviyec5r9mck/dictator_game.pdf?dl=0)
+
+## Unit 5 
+
+- [Worksheet](https://www.dropbox.com/s/pxtr4ci0e2g13kv/unit5_part1.pdf?dl=0)
+
+## Unit 6 
+
+- [Worksheet 1](https://www.dropbox.com/s/e6lfka53lese2pj/unit6_part1.pdf?dl=0)
+- [Worksheet 2](https://www.dropbox.com/s/splegdx9duqzwtw/unit6_part2.pdf?dl=0)
+
+## Unit 7 
+
+- [Worksheet 1](https://www.dropbox.com/s/4yvrgk8iubw78fv/unit7_part1.pdf?dl=0)
+- [Worksheet 2](https://www.dropbox.com/s/c1qwhgvnud5ebko/unit7_part2.pdf?dl=0)
+- [Review](https://www.dropbox.com/s/y9jl2t6xbdiaokn/unit5_7_review.pdf?dl=0)
+
+
+# Quizzes
+You can access the quizzes we made for the course here. They are flawed and we haven't had a chance to correct them all, so please do go over them before posting them for your students. You can download them [here](https://www.dropbox.com/s/62u6h2fwziwpo2n/Quizzes.zip?dl=0). 
+
+
+
+
