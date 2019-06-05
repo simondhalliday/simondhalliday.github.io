@@ -10,7 +10,7 @@ My name is Simon D. Halliday.
 - I teach intermediate microeconomics, behavioral economics, development economics, the political economy of African development, introductory statistics and econometrics, and introductory microeconomics. 
 - I do reseach in behavioral and experimental economics, with a focus on social preferences (reciprocity and social norms) and institutions (ratings, punishment, communication). 
 - I also have a strong interest in research in economics education, particularly with respect to data literacy, data analysis, R and more. 
-- I am the co-author (with Sam Bowles and Duncan Foley) of a forthcoming intermediate microeconomics textbook [*Microeconomics: Competition, Conflict and Coordination*](/bfh-textbook). 
+- I am the co-author (with Sam Bowles) of a forthcoming intermediate microeconomics textbook [*Microeconomics: Competition, Conflict and Coordination*](/microeconomics). 
 - You can find a copy of my resume here. 
 
 ## My educational background 
