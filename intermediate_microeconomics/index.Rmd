@@ -1,0 +1,39 @@
+---
+output: html_document
+    #css: ../stylesheets/styles.css
+---
+
+# Intermediate Microeconomics 
+
+- Instructor: Simon Halliday, PhD. 
+- Time: MWF 10:00 to 10:50
+- Venue: Seelye 311
+- Semester: Fall 2018
+- Course code: ECO250
+- Email/hangouts: [shalliday@smith.edu](shalliday@smith.edu)
+- [Syllabus](https://www.dropbox.com/s/mj1568mis9q9zha/Syllabus_ECO250_F2018_updated.pdf?dl=0)
+
+# Basics
+
+- I use [*Microeconomics: Competition, Confliction and Coordination*](http://simondhalliday.com/microeconomics) by the Samuel Bowles and Simon Halliday (yes, that's me). Please email me for full details on the course (if you're an instructor) for solutions and so on, otherwise basics are provided here. 
+
+# Worksheets
+I used worksheets for in-class exercises for a variety of units in the book, mainly Units 2 through 9. You can download a zipped file of all of the below [here](https://drive.google.com/open?id=1urlQl9gjEcig58TERQabNAIHsJUeCsSK). 
+
+# Slides 
+These slides are quite large, so I recommend downloading them one by one. I have not provided a full zipped files. 
+
+- [Preface](https://drive.google.com/open?id=1evGH8BA9OXia8FY273hivoyLCC1AQNEV)
+- [Chapter 1](https://drive.google.com/open?id=1k7_r4hxNJRADJPuSoFlzqFq5DX5S7eMg)
+- [Chapter 2](https://drive.google.com/open?id=1lw5hZx5wQpIcdRWuoWPAsceE9hLqGGKx) 
+- [Chapter 3](https://drive.google.com/open?id=1k2YTv9QehU9YSoRw5V2wz7HQV1D3pOzH) 
+- Chapter 4: [Part 1](https://drive.google.com/open?id=1z8X-iscH0GiBRBn5XFbkYxqzAQ3HBSmM) and [Part 2](https://drive.google.com/open?id=1eVOsxMSJz5SMzkjBbjSciVP-mmfFIvf2)
+- Chapter 5: [Part 1](https://drive.google.com/open?id=1T9NwIw5_bySpixymSAJcXa0bEmH6Slg9), [Part 2](https://drive.google.com/open?id=1v9TnErLXnLPdv_TYDJu_qZXKPnUPGF-H), and [Part 3](https://drive.google.com/open?id=1Naeeef_rtNQpGYwrWbKTBYnVZL8CDWU-)
+- [Chapter 9](https://drive.google.com/open?id=1kjMZoswpsnIu8E-PoiGckLtb6fcjsSon)
+- Chapter 10: [Part 1](https://drive.google.com/open?id=1FKwY5B7ZKd8NH5Ab7wssiVBXuGrw0TEc) and [Part 2](https://drive.google.com/open?id=1lNHF8IGIx6DFRX3fOLFfR_hxlRTHVtX5)  
+- [Chapter 11](https://drive.google.com/open?id=1X7knsd9gMDR0jlezIGiazCwt0u9XBELx) 
+- [Chapter 13](https://drive.google.com/open?id=1GZk_e19846JjTo2Zw1MCrhXUJnU5S0Np)
+
+
+
+
