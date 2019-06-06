@@ -3,11 +3,11 @@ layout: post
 title: "CTREE and TIER Meetings"
 author: "Simon Halliday"
 output: github_document
-tags: [CTREE, TIER, Behavioral Economics, Reproducibility, Replicability]
+tags: [Economics, Behavioral Economics, Social Preferences, Self-interest, Reproducibility, TIER, CTREE]
 ---
 
-I have been fortunate to attend a couple of great conferences and meetings
-recently to present work in progress as well as to meet with people
+I have been fortunate to attend a couple of conferences and meetings
+recently and to present work in progress as well as to meet with people
 in diverse fields – outside of economics – to hear about what other
 folks are doing in teaching quantitative courses, data analysis, and
 research reproducibility.
@@ -120,12 +120,9 @@ first).
     board member and former fellow. You can see my slides
     [here](https://drive.google.com/open?id=1wsBLBPHP3opM9C8XQKru60FICk6h4X9g).
     I highlighted work I did that involved TIER such as Dvorak et al.
-    (2019),
-    (<span class="citeproc-not-found" data-reference-id="halliday2019ethics">**???**</span>),
-    and
-    (<span class="citeproc-not-found" data-reference-id="halliday2019data">**???**</span>),
-    while speaking about the ways I’ve tried to implement TIER in these
-    class and hope to change my practice in the future.  
+    (2019), Halliday (2019b), and Halliday (2019a), while speaking about
+    the ways I’ve tried to implement TIER in these class and hope to
+    change my practice in the future.  
 
   - [Morton Ann Gernsbacher](http://www.gernsbacherlab.org/) (U
     Wisconsin, Madison) - Morton is a professor of psychology and
@@ -221,7 +218,7 @@ first).
     was a thing?). He has done some pretty phenomenal work on authoring
     his own work in R Markdown, writing packages for papers he’s
     written, and collaborating with folks to put together the
-    `[rrtools](https://github.com/benmarwick/rrtools)` package that
+    [`rrtools`](https://github.com/benmarwick/rrtools) package that
     helps to make research reproducible (see Marwick (2019), Marwick,
     Boettiger, and Mullen (2018)). I would advise you to read a piece he
     wrote for [The Conversation](https://theconversation.com) a few
@@ -284,6 +281,21 @@ CA: 403–14.
 Gleditsch, Nils Petter, and Nicole Janz. 2016. “Replication in
 International Relations.” *International Studies Perspectives* 17 (4):
 361–66. <https://doi.org/10.1093/isp/ekv003>.
+
+</div>
+
+<div id="ref-halliday2019data">
+
+Halliday, Simon D. 2019a. “Data Literacy for Economic Development.” *The
+Journal of Economic Education* 0 (0). Routledge: forthcoming.
+
+</div>
+
+<div id="ref-halliday2019ethics">
+
+———. 2019b. “Promoting an Ethical Economics Classroom Through
+Partnership.” *International Journal for Students as Partners* 3 (1):
+182–89. <https://doi.org/10.15173/ijsap.v3i1.3623>.
 
 </div>
 
