@@ -20,8 +20,8 @@ layout: page
 
 ## Under Review 
 
-
 - "The Effects of Major-Job Mismatch on Early Career Earnings and Job Satisfaction," with Roger Kaufman and Louise Yu. We use the U.S. Department of Education's Baccalaureate and Beyond restricted survey data to estimate the determinants of major-job mismatch and its effects on post-graduate earnings and job satisfaction. After controlling for ability, we find that graduates who chose undergraduate majors that provided substantial occupational and job-specific training are more likely to work in jobs that are closely related to their majors one and four years after graduation and have higher earnings and greater job satisfaction. *Under Review*. 
+- "What do we think an economics student should know? A machine learning investigation of research and intermediate-level texts" with Samuel Bowles, Wendy Carlin and Sahana Subramanyam. We explore what machine learning textual analysis can tell us about how the content of the texts for intermediate microeconomics and macroeconomics courses has reflected changes in economic research and in the economy. Topic modeling applied to the corpus of 27 thousand papers in top research journals in the past century allows us to map the content of the textbooks against the evolution of published research. *Under Review*.
 
 ## Being Edited or Revised for Submission
 - "Teaching Social Preferences", Despite advances in evidence and theory, few examples exist for teaching social preferences in undergraduate microeconomics courses. In this paper I address the gap in the literature by proposing four models in which such preferences can be taught in an undergraduate microeconomics course that use graphical analysis and algebra to teach constrained optimization, externalities, and exchange. Presented at CTREE, 2019. 
@@ -34,7 +34,6 @@ layout: page
 
 ## Work in Progress
 - "Does Economics Make you Selfish?" with Sai Mamunuru, Daniele Girardi, and Samuel Bowles. We explore the effect of economics courses on students’ preferences and economic policy opinions. Presented by co-author at CTREE 2019. To be presented at SEA 2019. 
-- "What do we think an economics student should know? A machine learning investigation of research and intermediate-level texts" with Samuel Bowles, Wendy Carlin and Sahana Subramanyam. We explore what machine learning textual analysis can tell us about how the content of the texts for intermediate microeconomics and macroeconomics courses has reflected changes in economic research and in the economy. Topic modeling applied to the corpus of 27 thousand papers in top research journals in the past century allows us to map the content of the textbooks against the evolution of published research. 
 
 ## Chapters 
 - "Global Public Goods" published in [Running the Economy](http://www.amazon.co.uk/Running-Economy-Open-University-Team/dp/1780079540), Santos et al (eds). Open University Press. My chapter covers game theory, global commons, and collective action.
