@@ -5,7 +5,7 @@ output: html_document
 ---
 
 # Simon D. Halliday, Tenure, Smith College, Fall 2019
-Note: this page and all contennts will be removed after my tenure case has been concluded. 
+Note: this page and all contents will be removed after my tenure case has been concluded. 
 
 ## Table of Contents
 
@@ -22,11 +22,11 @@ D.	Published materials
         i.	S. D. Halliday, “[Global public goods](Halliday_2014_global_public_goods.pdf),” in Managing the Economy, C. Santos and M. Higginson, Eds., Open University Press, 2014, ch. 18. 
 E.	Forthcoming 
     I.	Bowles & Halliday textbook
-        i.	Note on Reading Bowles and Halliday with comments from reviewers 
-        ii.	Submitted Manuscript for Bowles & Halliday, Microeconomics: Competition, Coordination, & Conflict, Oxford University Press, Forthcoming, 2020. 
-        iii.	Bowles & Halliday Provisional Cover
-        iv.	Bowles & Halliday OUP Textbook Mock-up Pages
-        v.	Bowles & Halliday Signed Contract Cover page with Jonathan Crowe (OUP Editor)
+        i.	[Note on Reading Bowles and Halliday](https://www.dropbox.com/s/9uhppfqjjfahmt9/Note%20on%20Bowles%20and%20Halliday.docx?dl=0) with comments from reviewers 
+        ii.	Submitted Manuscript for Bowles & Halliday, [*Microeconomics: Competition, Coordination, & Conflict*](https://www.dropbox.com/s/q2j9dq3d0m3jqhf/BHMicro_submitted_ms_tenure.pdf?dl=0), Oxford University Press, Forthcoming, 2020. 
+        iii.	Bowles & Halliday [Provisional Cover](https://www.dropbox.com/s/4h5gg0v3f6i05fr/BHMicro_provisional_cover.pdf?dl=0)
+        iv.	Bowles & Halliday OUP [Textbook Mock-up Pages](https://www.dropbox.com/s/42f71wdyfjkcarj/Bowles_Samples_Marginalia%2BFootnotes.pdf?dl=0)
+        v.	Bowles & Halliday [Signed Contract Cover page](https://www.dropbox.com/s/mytk9aujvq1tolo/BHMicro_contract_coverpage.pdf?dl=0) with Jonathan Crowe (OUP Editor)
 F.	Revisions Requested 
     I.	Peer-reviewed articles
         i.	S. D. Halliday and J. Lafky, “[Reciprocity through ratings: An experimental study of bias in evaluations](Hallidy-Lafky-2019-Reciprocity_through_Ratings-JBEE_2019.pdf),” Journal of Behavioral and Experimental Economics, 2019, Revise and Re-Submit, Revisions Submitted. 
@@ -37,18 +37,18 @@ G.	Under Review
         iii.	**Louise Yu**, S. D. Halliday, and R. Kaufman, “[The effects of major-job mismatch on early career earnings and job satisfaction](Yu_Halliday_Kaufman-2019-Major-Job Match-RIHE.pdf),” Research in Higher Education, 2019, Under Review. 
 H.	Work in Progress
     I.	Articles to be submitted for peer review
-        i.	J. Burns, S. D. Halliday, and M. Keswell, “Gender and Risk-taking in the classroom,” SALDRU Working Paper 87 (earlier version 2013), 2019, Preparing for submission. [Online]. Available: http://hdl.handle.net/ 11090/178. Preparing for Submission to J. Behavioral and Experimental Economics. 
+        i.	J. Burns, S. D. Halliday, and M. Keswell, “[Gender and Risk-taking in the classroom](bhk_Risk_classroom.pdf),” SALDRU Working Paper 87 (earlier version 2013), 2019, Preparing for submission. [Online]. Available: http://hdl.handle.net/ 11090/178. Preparing for Submission to J. Behavioral and Experimental Economics. 
         ii.	D. Girardi, S. D. Halliday, S. Mamunuru, and S. Bowles, “[Does economics make you selfish?](Girardi_Halliday_Madhurika_Bowles-2019-DoesEconMakeYouSelfish-EJ.pdf)” 2019, Submitting for review at The Economic Journal. 
         iii.	S. D. Halliday, “[Teaching social preferences](Working-Halliday-2019-TeachingSocialPreferences-JEE),” 2019, Preparing for submission to the Journal of Economic Education. 
-        iv.	S. D. Halliday, “Don’t take what isn’t yours,” ERSA Working Paper 211 (earlier version), 2019 [2013], [Online]. Available: https://ideas.repec.org/p/rza/wpaper/211.html. Preparing for Submission. 
+        iv.	S. D. Halliday, “[Don’t take what isn’t yours](halliday_dont_take.pdf),” ERSA Working Paper 211 (earlier version), 2019 [2013], [Online]. Available: https://ideas.repec.org/p/rza/wpaper/211.html. Preparing for Submission. 
 I.	Teaching
     I.	Syllabi: 
-        i.	ECO250 – Intermediate Microeconomics – F2019
-        ii.	ECO150 – Introduction to Microeconomics – S2019
-        iii.	ECO254 – Behavioral Economics – S2019
-        iv.	ECO220 – Introduction to Statistics and Econometrics – S2018
-        v.	ECO311 – Political Economy of Development in Africa (Seminar) – F2016
-        vi.	ECO211 – Economic Development – F2016 
+        i.	ECO250 – [Intermediate Microeconomics](Syllabi/Syllabus_ECO250_F2019_updated.pdf) – F2019
+        ii.	ECO150 – [Introduction to Microeconomics](Syllabi/eco150_halliday_syllabus.pdf) – S2019
+        iii.	ECO254 – [Behavioral Economics](Syllabi/eco254_syllabus_s2019.pdf) – S2019
+        iv.	ECO220 – [Introduction to Statistics and Econometrics](Syllabi/eco220-s2018.pdf) – S2018
+        v.	ECO311 – [Political Economy of Development in Africa](Syllabi/eco311_f2016_syllabus.pdf) (Seminar) – F2016
+        vi.	ECO211 – [Economic Development](Syllabi/syllabus_F2016.pdf) – F2016 
     II.	Website link: 
         i.	Teaching: Please go to [simondhalliday.com/teaching](http://simondhalliday.com/teaching) for links to teaching materials for each of my courses. 
 J.	Other Materials
