@@ -1,0 +1,19 @@
+---
+output: html_document
+#output: word_document
+    #css: ../stylesheets/styles.css
+---
+
+# Proposals
+On this page you will find resources for grants I applied for at Smith College.
+
+## Grants applied for and awarded 
+- Picker Fellowship 2019-20.
+- Picker Fellowship 2017; Report here. 
+
+## Grants applied for and not awarded
+- NSF IUSE 2018 - 
+- INET - 
+- IFREE 2014 - 
+- IFREE 2015 - 
+
