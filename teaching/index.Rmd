@@ -1,0 +1,36 @@
+---
+output: html_document
+#output: word_document
+    #css: ../stylesheets/styles.css
+---
+
+# Teaching
+On this appendix page you will find resources for my teaching at Smith College with a variety of other pages and resources linked to and downloadable.  
+
+## ECO150 - Introduction to Microeconomics
+
+
+## ECO220 - Introduction to Statistics and Econometrics 
+
+
+## ECO250 - Intermediate Microeconomics 
+
+## ECO254 - Behavioral Economics
+  - Syllabus: [syllabus/course outline](http://simondhalliday.com/behavioral)
+
+These exercises spanned macroeconomic data such as labor force participation rates from FRED, micro data from particular markets such as the Saumaty fish market in Marseille, survey data, such as the World Values Survey, and laboratory data, such as the data from decision experiments over risky choices and public goods games with individuals or teams. 
+
+  - [Lab 1](http://simondhalliday.com/behavioral/Lab1.html)
+  - [Lab 2](http://simondhalliday.com/behavioral/Lab2.html)
+  - [Lab 3](http://simondhalliday.com/behavioral/Lab3.html)
+  - [Lab 4](http://simondhalliday.com/behavioral/Lab4.html)
+  - [Lab 5](http://simondhalliday.com/behavioral/Lab5.html)
+  - [Lab 6](http://simondhalliday.com/behavioral/Lab6.html)
+  - [Gapminder Exercise](http://simondhalliday.com/behavioral/TidyGapMinder.html)
+
+
+## ECO311 - Political Economy of Development in Africa 
+
+
+
+
