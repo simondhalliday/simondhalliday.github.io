@@ -29,9 +29,15 @@ On this appendix page you will find resources for my teaching at Smith College w
 
 ## ECO220 - Introduction to Statistics and Econometrics 
 
+- [Syllabus](../tenure/Syllabi/eco220-s2018.pdf)
+- Alcohol Exercise 
+- Project guidelines 
+- Lab 1
+- Lab 2
 
 ## ECO250 - Intermediate Microeconomics 
 
+- [Syllabus](../tenure/Syllabi/Syllabus_ECO250_F2019_updated.pdf)
 - London Craftsmen's wages: [interactive](https://shalliday.shinyapps.io/london_wages/)
 - Youtube video: [Edgworth Box Introduction](https://youtu.be/WHUYzEJoAUk)
 - Youtube video: [Edgworth box with price-setting power](https://youtu.be/YAHgEkNVil0)
@@ -46,7 +52,7 @@ On this appendix page you will find resources for my teaching at Smith College w
   - Schedule with topics for recent course: [course outline](http://simondhalliday.com/behavioral)
   - [Syllabus](http://simondhalliday.com/behavioral/syllabus_2019.pdf)
 
-These exercises spanned macroeconomic data such as labor force participation rates from FRED, micro data from particular markets such as the Saumaty fish market in Marseille, survey data, such as the World Values Survey, and laboratory data, such as the data from decision experiments over risky choices and public goods games with individuals or teams. 
+These lab exercises spanned macroeconomic data such as labor force participation rates from FRED, micro data from particular markets such as the Saumaty fish market in Marseille, survey data, such as the World Values Survey, and laboratory data, such as the data from decision experiments over risky choices and public goods games with individuals or teams. 
 
   - [Lab 1](http://simondhalliday.com/behavioral/Lab1.html)
   - [Lab 2](http://simondhalliday.com/behavioral/Lab2.html)
@@ -70,6 +76,7 @@ These exercises spanned macroeconomic data such as labor force participation rat
 - [Syllabus](../tenure/Syllabi/syllabus_F2016.pdf)
 
 I produced Stata Labs for the seminar to ease students transition to a research project: 
+
 - [Lab 1](Lab1.pdf)
 - [Lab 2](Lab2.pdf)
 - [Lab 3](Lab3.pdf)
