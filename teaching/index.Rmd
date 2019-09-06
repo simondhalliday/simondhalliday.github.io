@@ -5,7 +5,7 @@ output: html_document
 ---
 
 # Teaching
-On this appendix page you will find resources for my teaching at Smith College with a variety of other pages and resources linked to and downloadable.  
+On this appendix page you will find resources for my teaching at Smith College with a variety of other pages and resources downloadable or linked to.  
 
 ## ECO150 - Introduction to Microeconomics
 
@@ -59,10 +59,22 @@ These exercises spanned macroeconomic data such as labor force participation rat
 
 ## ECO211 - Economic Development 
 
-- 
+- [Syllabus](https://drive.google.com/file/d/19LTRxGW6fYIELHWc9tzKhKDsAuzO0y9F/view)
 - Solow Growth Model [interactive](https://shalliday.shinyapps.io/solow_growth/)
+- Take-home Midterm []()
+- Please see [Data Literacy for Economic Development Companion Site](http://simondhalliday.com/data_literacy_for_development/) for many other resources. 
 
 ## ECO311 - Political Economy of Development in Africa 
+
+- Final paper [guidelines](paper_guidelines.pdf)
+- [Syllabus]()
+
+I produced Stata Labs for the seminar to ease students transition to a research project: 
+- [Lab 1](Lab1.pdf)
+- [Lab 2](Lab2.pdf)
+- [Lab 3](Lab3.pdf)
+- [Lab 4](Lab4.pdf)
+- [Lab 5](Lab5.pdf)
 
 
 
