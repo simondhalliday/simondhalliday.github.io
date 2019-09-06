@@ -67,7 +67,7 @@ These exercises spanned macroeconomic data such as labor force participation rat
 ## ECO311 - Political Economy of Development in Africa 
 
 - Final paper [guidelines](paper_guidelines.pdf)
-- [Syllabus]()
+- [Syllabus](../tenure/Syllabi/syllabus_F2016.pdf)
 
 I produced Stata Labs for the seminar to ease students transition to a research project: 
 - [Lab 1](Lab1.pdf)
