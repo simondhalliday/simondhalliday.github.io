@@ -8,12 +8,12 @@ output: html_document
 On this page you will find resources for grants I applied for at Smith College.
 
 ## Grants applied for and awarded 
-- Picker Fellowship 2019-20 for experiments [pdf](Halliday_Picker_AY2019-20.pdf).
+- Picker Fellowship 2019-20 for experiments with Burdin and Landini [pdf](Halliday_Picker_AY2019-20.pdf).
 - Picker Fellowship 2017 [pdf](Halliday_Picker_2017.pdf); Report [pdf](picker_report). 
 - Lecture Fund Application - for Guest Lecture and Lunch with Nina Munk - [pdf](lecture_fund_nina_munk.pdf). 
 
 ## Grants applied for and not awarded
-- NSF IUSE 2018 - [pdf](halliday_nsf_final.pdf)
+- NSF IUSE 2018 with the Executive Board at [Project TIER](https://www.projecttier.org/) - [pdf](halliday_nsf_final.pdf)
 - INET Grant with Andrew Bray 2014 - [summary](INET Summary - Halliday and Bray.pdf) and [proposal](INET 4-page Proposal - Halliday and Bray.pdf)
 - IFREE 2014 with Bjoern Hartig - [pdf](ifree_2014.pdf)
 - IFREE 2015 with Jonathan Lafky and Alistair Wilson - [pdf](IFREE 2015 rating systems proposal final.pdf)
