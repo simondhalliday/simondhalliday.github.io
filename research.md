@@ -14,9 +14,13 @@ layout: page
 - "[Efficient Empiricism: R Markdown in Economics Education](https://www.tandfonline.com/doi/full/10.1080/00220485.2019.1618765)", 2019, *Journal of Economic Education*.  A joint project with Tomas Dvorak (Union), Michael O'Hara (Hamilton) and Aaron Swoboda (Carleton College). Each of us were TIER fellow: Dvorak and O'Hara were 2015-16 fellows and Swoboda was a 2016-17 fellow (see [here](http://www.projecttier.org/about/people/#fellows)). See the companion site here: [simondhalliday.com/efficient_empiricism](simondhalliday.com/efficient_empiricism).
 
 
+##  Accepted and Forthcoming 
+
+- "Reciprocity via Ratings: An experimental study of bias in evaluations:" With Jonathan Lafky (Carleton College). Our study examines how evaluations of objective ability can be influenced by generous or selfish behavior on the part of the person being evaluated. We allow subjects in a laboratory setting to rate (costly or free) a seller of a good and send the rating to a potential buyer. We find that seller quality is not significant and the main driver of rating behavior is the side payment sellers can make to raters. *Accepted  at The Journal of Behavioral and Experimental Economics*. 
+
 ## Revisions Requested
 
-- "Reciprocity via Ratings: An experimental study of bias in evaluations:" With Jonathan Lafky (Carleton College). Our study examines how evaluations of objective ability can be influenced by generous or selfish behavior on the part of the person being evaluated. We allow subjects in a laboratory setting to rate (costly or free) a seller of a good and send the rating to a potential buyer. We find that seller quality is not significant and the main driver of rating behavior is the side payment sellers can make to raters. *Being revised after revise and re-submit received.*
+- NA at the moment. 
 
 ## Under Review 
 
@@ -25,6 +29,7 @@ layout: page
 - "Lies, Labor and Luck" with Oumayma Koulouh '19. We study the differences in lying behavior between real-effort and luck tasks. We conduct an experiment with a 2 by 2 factorial design in which we observe lying behavior at the individual level. To be submitted Summer 2019. Presented at LACBEE 2019. *Under Review*. Paper draft available [here](http://simondhalliday.com/papers/halliday_koulouh_2019.pdf). 
 
 ## Being Edited or Revised for Submission
+
 - "Teaching Social Preferences", Despite advances in evidence and theory, few examples exist for teaching social preferences in undergraduate microeconomics courses. In this paper I address the gap in the literature by proposing four models in which such preferences can be taught in an undergraduate microeconomics course that use graphical analysis and algebra to teach constrained optimization, externalities, and exchange. Presented at CTREE, 2019. 
 - "Risk-Taking in the Classroom:" Co-authored with Justine Burns and Malcolm Keswell ( University of Cape Town), this paper is based on an experiment with intermediate microeconomics students at the University of Cape Town where we varied the number of negative points a student could receive for an incorrect answer to assess attitudes to risk. Available as SALDRU [Working Paper 87](http://www.saldru.uct.ac.za/home/index.php?/component/option,com_docman/Itemid,32/gid,437/task,doc_download/). *Being revised*.
 - "Don't Take What Isn't Yours: Giving, Taking and Punishment:" The paper is based on experiments I did at the University of Cape Town. An early version of the paper is in the Economic Research South Africa working paper series as [Working Paper 211](http://ideas.repec.org/p/rza/wpaper/211.html). *Editing for submission*. People punish taking more than they do non-generosity.
