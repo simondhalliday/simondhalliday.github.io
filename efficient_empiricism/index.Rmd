@@ -7,8 +7,10 @@ output: html_document
 # Efficient Empiricism: Online Appendix
 On this appendix page you will find resources and links based on my article for the Journal of Economic Education: 
 
-- Citation: [INSERT CITATION HERE UPON RECEIVING IT]. 
-- Authors: Tomas Dvorak (Union College), Simon D. Halliday (Smith College), Michael O'Hara (St. Lawrence University) and Aaron Swoboba (Carleton College)
+- Citation: T. Dvorak, S. D. Halliday, M. O’Hara, and A. Swoboda, “Efficient empiricism: Streamlining teaching, research, and learning in empirical courses,” The Journal of Economic Education, vol. 50, no. 3, pp. 242– 257, 2019. doi: 10.1080/00220485.2019.1618765. Available: [https://doi.org/10.1080/00220485.2019.1618765](https://doi.org/10.1080/00220485.2019.1618765). 
+
+
+- Affiliations: Tomas Dvorak (Union College), Simon D. Halliday (Smith College), Michael O'Hara (St. Lawrence University) and Aaron Swoboba (Carleton College)
 - Corresponding Author: [shalliday@smith.edu](shalliday@smith.edu)
 
 ## A. Class Syllabi
@@ -41,6 +43,7 @@ These exercises spanned macroeconomic data such as labor force participation rat
 ### Business Analytics (Dvorak)
 
 - All of Tomas Dvorak's Labs are avilable in his: [Business Analytics Site](https://muse.union.edu/dvorakt/business-analytics/)
+- Tomas has prepare a set of guidelines for making papers reproducible in R Markdow, ["Coding Empirical Analysis from Beginning to End"](https://dvorakt.github.io/TIER_exercises/rmarkdown_debt_growth/debt_and_growth_R_Markdown.html)
 
 ### Topics in Environmental Economics (O'Hara) 
 
@@ -59,9 +62,11 @@ These exercises spanned macroeconomic data such as labor force participation rat
 These links will be provided upon acceptance. 
 
 - Dvorak: 
-- Halliday: 
-- O'Hara: 
-- Swoboda: 
+    - Greene, Victoria ["U.S. Food Aid and Infant Mortality Rates: An Instrumental Variables Approach"](https://dataverse.harvard.edu/dataset.xhtml?persistentId=doi:10.7910/DVN/N0AJNF)
+- Halliday
+    - Koulouh et al, [""]()
+- O'Hara: See a list of work by Michael O'Hara's students available here:
+
 
 ## D. Packages Recommended for Teaching R and R Markdown
 In recent years, the learning curve for instructors and students has been flattened by the release of R Studio and a variety of packages that facilitate teaching and learning R. We recommend the following packages. 
@@ -95,7 +100,7 @@ In recent years, the learning curve for instructors and students has been flatte
   - [Computer Exercise 1](http://rpubs.com/dvorakt/216157): An introduction to R, R Studio, and R Markdown
   - [Computer Exercise 2](http://rpubs.com/dvorakt/216160) - Computer Exercise 2: Loading in data, computing descriptive statistics and estimating regressions
   - [Computer Exercise 3](http://rpubs.com/dvorakt/219848) -  Multiple regression and omitted variable bias.
-  - A variety of Tomas's other R-related documents are available on his rpubs site: [rpubs.com/dvorakt](http://rpubs.com/dvorakt). 
+
 
 ### O'Hara:
 
