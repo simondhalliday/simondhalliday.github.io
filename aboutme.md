@@ -11,7 +11,7 @@ My name is Simon D. Halliday.
 - I do reseach in behavioral and experimental economics, with a focus on social preferences (reciprocity and social norms) and institutions (ratings, punishment, communication). 
 - I also have a strong interest in research in economics education, particularly with respect to data literacy, data analysis, R and more. 
 - I am the co-author (with Sam Bowles) of a forthcoming intermediate microeconomics textbook [*Microeconomics: Competition, Conflict and Coordination*](/microeconomics). 
-- You can find a copy of my resume here. 
+- You can find a copy of my resume [here](halliday_cv_2019.11.pdf). 
 
 ## My educational background 
 - PhD: University of Siena, Italy, 2007-12
