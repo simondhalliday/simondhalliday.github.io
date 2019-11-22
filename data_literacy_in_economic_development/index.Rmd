@@ -4,10 +4,10 @@ output: html_document
 ---
 
 # Data Literacy for Economic Development: Online Appendix
-On this appendix page you will find resources and links based on my article for the Journal of Economic Education: 
+On this appendix page you will find resources and links for "Data Literacy for Econmic Development."
 
-- Citation: [INSERT CITATION HERE UPON RECEIVING IT]. 
-- Author: Simon Halliday, PhD. 
+- Citation: S. D. Halliday, "Data literacy in economic development," The Journal of Economic Education, vol. 50, no. 3, pp. 284–298, 2019. doi: 10.1080/00220485.2019.1618762. Available: [https://doi.org/10.1080/00220485.2019.1618762](https://doi.org/10.1080/00220485.2019.1618762) 
+- Affiliation: Simon Halliday, Smith College. 
 - Contact: [shalliday@smith.edu](shalliday@smith.edu)
 
 ## A. Class Context and Syllabus
