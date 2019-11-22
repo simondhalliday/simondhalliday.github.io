@@ -1,0 +1,30 @@
+---
+output: html_document
+    #css: ../stylesheets/styles.css
+---
+
+# Political Economy of Development in Africa
+Here I include some of the documents from my course for those who wish to peruse them. This is *not* an official course teaching site. 
+
+- Instructor: Simon Halliday, PhD. 
+- Course code: ECO311
+- Email/hangouts: [shalliday@smith.edu](shalliday@smith.edu)
+- [Syllabus](eco311_f2016_syllabus.pdf)
+
+## Labs 
+- [Lab 1](Lab1.pdf)
+- [Lab 2](Lab2.pdf)
+- [Lab 3](Lab3.pdf)
+- [Lab 4](Lab4.pdf)
+- [Lab 5](Lab5.pdf)
+
+## Other documents 
+
+- [Comprehensive reading list (2015 class)](ECO311-ComprehensiveReadingList.pdf) (Do note, this list gets revised every iteration of the course)
+- [Introductory slides](Intro_compressed.pdf) 
+- [Final paper Guidelines](paper_guidelines.pdf)
+
+
+
+
+
