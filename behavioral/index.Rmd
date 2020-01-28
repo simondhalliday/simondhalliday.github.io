@@ -6,89 +6,26 @@ output: html_document
 # Behavioral Economics Schedule
 
 - Instructor: Simon Halliday, PhD. 
-- Time: Tues & Thurs 10:30 to 11:50pm
+- Time: Tues & Thurs 1:20 to 2:35pm
 - Venue: Seelye 211
-- Semester: Spring 2019
+- Semester: Spring 2020
 - Course code: ECO254
-- Email/hangouts: [shalliday+eco254@smith.edu](shalliday+eco254@smith.edu) Why is this my email address? Check [here](https://support.google.com/mail/answer/12096?hl=en)
-- [Syllabus](syllabus_2019.pdf)
+- Email/hangouts: [shalliday@smith.edu](shalliday@smith.edu) 
+- [Syllabus](syllabus_2020.pdf)
 - [Project Guidelines](team_guidelines)
 - [FAQ](FAQ)
-- Sign up for topics, share notes, and look at questions [here](topics_notes_questions). 
 - Experiment report [guidelines](exp_reports)
-- This class is supported by [DataCamp](https://www.datacamp.com/)
 
 
 
-## Week 11:  Happiness and Utility
 
-### Tuesday 9 April
-
-Reading 
-
-- Cartwright, Chapter 10, up to the end of section 10.4. 
-- Daniel Kahneman and Alan Krueger, "[Developments in the Measurement of Subjective Well-Being](https://moodle.smith.edu/mod/resource/view.php?id=233860)," Journal of Economic Perspectives, 2006, Vol. 20 (1) 3-24, (20 pages).
-- Betsey Stevenson and Justin Wolfers, 2013. "[Subjective Well-Being and Income: Is There Any Evidence of Satiation?](https://moodle.smith.edu/mod/resource/view.php?id=233969)," American Economic Review, American Economic Association, vol. 103(3), pages 598-604, May (5 pages)
-
-Watch
-
-- Daniel Kahneman, "[The riddle of experience vs. memory](http://www.ted.com/talks/daniel_kahneman_the_riddle_of_experience_vs_memory.html)," TED, 2010. (Video, 20 minutes)
-
-### Thursday 4 April 
-- Experiment 3, go here: [http://veconlab.econ.virginia.edu](http://veconlab.econ.virginia.edu)
-
-
-## Week 2: Policy and Manipulation
-
-### Tuesday 16 April 
-- Cartwright Chapter 11. 
-- Chetty, Raj, 2015, "[Behavioral Economics and Public Policy: A Pragmatic Perspective](https://moodle.smith.edu/mod/resource/view.php?id=405274)," *American Economic Review: Papers & Proceedings*, 105 (5): 1-33, (30 pages)
-- Bhargava and Loewenstein, 2015, "[Behavioral Economics and Public Policy 102: Beyond Nudging](https://moodle.smith.edu/mod/resource/view.php?id=405275)", *American Economic Review: Papers & Proceedings*, 105 (5): 396–401
-
-### Thursday 18 April
-
-- I  hope we can do an exercise with the World Values survey here for [Lab6](Lab6), but I may defer that if I think you need more time for your team projects. 
-
-<!--
-## Week 14
-### Tuesday 5 December
-
-Read 
-
-- Tanjim Hossain and John List, 2012, "[The Behavioralist Visits the Factory: Increasing Productivity Using Simple Framing Manipulations](https://moodle.smith.edu/mod/resource/view.php?id=243595)," *Management Science* 58 (12): 2151 - 2167 (X pages). Note: We will use the [NBER version](https://moodle.smith.edu/mod/resource/view.php?id=243595) of this paper because the Management Science version isn't available to us yet through our online resources. 
-- Slide are [here](factory.html)
-
-### Thursday 7 December
-
-- Bring your laptops. It's team project time!
-- We'll also do the final experiment (other things equal)
-
-- Go here: [https://shalliday.shinyapps.io/sutter_shiny](https://shalliday.shinyapps.io/sutter_shiny)
-- Import the data from your midterm and see whether you can create an interactive version of Figure 4 using the template provided. 
-
-## Week 15: Final Presentations
-
-### Tuesday 12 December 
-
-- Group 1
-- Group 2
-- Group 3
-
-
-### Thursday 14 December 
-
-- Group 4
-- Group 5
-- Group 6
-
---->
 
 
 
 
 ## Week 1: Introduction 
 
-### Thursday 24 January 
+### Tuesday 28 January 
 
 - What is *Economics* about? How does it inform policy?
 - What is *Behavioral* Economics about? How might *it* inform policy?
@@ -129,7 +66,7 @@ Complete these surveys:
 
 - Your individual background and preferences: [goo.gl/forms/M9DaKh366j](https://goo.gl/forms/M9DaKh366j)
 - Questions about your thinking and preferences: [goo.gl/forms/MKPML7aMny](https://goo.gl/forms/MKPML7aMny)
-- Moodle statistical knowledge survey: [https://moodle.smith.edu/mod/questionnaire/view.php?id=233865](https://moodle.smith.edu/mod/questionnaire/view.php?id=233865)
+- Moodle statistical knowledge survey: [https://moodle.smith.edu/mod/questionnaire/view.php?id=518703](https://moodle.smith.edu/mod/questionnaire/view.php?id=518703)
 
 
 Music Videos from Today: 
@@ -138,6 +75,8 @@ Music Videos from Today:
 
 
 
+
+<!--
 ## Week 2: Heuristics & Biases
 
 ### Tuesday 29 January
@@ -504,3 +443,66 @@ Wrap up Gender, some R, and project work
 
 - Nelson (2016) slides [here](nelson)
 --> 
+
+## Week 14
+### Tuesday 5 December
+
+Read 
+
+- Tanjim Hossain and John List, 2012, "[The Behavioralist Visits the Factory: Increasing Productivity Using Simple Framing Manipulations](https://moodle.smith.edu/mod/resource/view.php?id=243595)," *Management Science* 58 (12): 2151 - 2167 (X pages). Note: We will use the [NBER version](https://moodle.smith.edu/mod/resource/view.php?id=243595) of this paper because the Management Science version isn't available to us yet through our online resources. 
+- Slide are [here](factory.html)
+
+### Thursday 7 December
+
+- Bring your laptops. It's team project time!
+- We'll also do the final experiment (other things equal)
+
+- Go here: [https://shalliday.shinyapps.io/sutter_shiny](https://shalliday.shinyapps.io/sutter_shiny)
+- Import the data from your midterm and see whether you can create an interactive version of Figure 4 using the template provided. 
+
+## Week 15: Final Presentations
+
+### Tuesday 12 December 
+
+- Group 1
+- Group 2
+- Group 3
+
+
+### Thursday 14 December 
+
+- Group 4
+- Group 5
+- Group 6
+
+## Week 11:  Happiness and Utility
+
+### Tuesday 9 April
+
+Reading 
+
+- Cartwright, Chapter 10, up to the end of section 10.4. 
+- Daniel Kahneman and Alan Krueger, "[Developments in the Measurement of Subjective Well-Being](https://moodle.smith.edu/mod/resource/view.php?id=233860)," Journal of Economic Perspectives, 2006, Vol. 20 (1) 3-24, (20 pages).
+- Betsey Stevenson and Justin Wolfers, 2013. "[Subjective Well-Being and Income: Is There Any Evidence of Satiation?](https://moodle.smith.edu/mod/resource/view.php?id=233969)," American Economic Review, American Economic Association, vol. 103(3), pages 598-604, May (5 pages)
+
+Watch
+
+- Daniel Kahneman, "[The riddle of experience vs. memory](http://www.ted.com/talks/daniel_kahneman_the_riddle_of_experience_vs_memory.html)," TED, 2010. (Video, 20 minutes)
+
+### Thursday 4 April 
+- Experiment 3, go here: [http://veconlab.econ.virginia.edu](http://veconlab.econ.virginia.edu)
+
+## Week 2: Policy and Manipulation
+
+### Tuesday 16 April 
+- Cartwright Chapter 11. 
+- Chetty, Raj, 2015, "[Behavioral Economics and Public Policy: A Pragmatic Perspective](https://moodle.smith.edu/mod/resource/view.php?id=405274)," *American Economic Review: Papers & Proceedings*, 105 (5): 1-33, (30 pages)
+- Bhargava and Loewenstein, 2015, "[Behavioral Economics and Public Policy 102: Beyond Nudging](https://moodle.smith.edu/mod/resource/view.php?id=405275)", *American Economic Review: Papers & Proceedings*, 105 (5): 396–401
+
+### Thursday 18 April
+
+- I  hope we can do an exercise with the World Values survey here for [Lab6](Lab6), but I may defer that if I think you need more time for your team projects. 
+
+--->
+
+
