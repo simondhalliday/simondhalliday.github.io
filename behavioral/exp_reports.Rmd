@@ -1,7 +1,7 @@
 ---
 title: "Experiment Report Guidelines"
 author: "Simon Halliday"
-date: "Spring 2019"
+date: "Spring 2020"
 output: html_document
 ---
 
@@ -9,18 +9,19 @@ Here are some pointers on writing your experimental reports.
 
 ## Length
 
-- about 2 typed pages, i.e. about 500 words
+- about 2 typed pages, i.e. about 500-600 words
 
 ## Contents
 
-- *construct* and argument through your report based on whether you think the model(s) succeed or fail to explain your behavior or the behavior of the class in aggregate. That is, use the *Theory* from class/textbook/papers to discuss your behavior and others' behavior; does your behavior fit with "standard" theory, or do some of the "behavioral" interpretations seem to apply instead? (this is a bit of a false dichotomy as many so-called behavioral explanations are standard, but you get the idea)
-- *describe* what you thought about the experiment 
-- *discuss* why you made the choices you did after completing the instructions, during the actual rounds of the experiments and then after the experiment was completed and you have had some time to think about it
-- *reflect* on the results of the experiment (the aggregated results from the experiment)
-- *consider* whether the standard behavior the experiments looks rational or consistent with the prediction you anticipate you would see in the model
-- *explain* whether you think the model is missing something if it fails to match the behavior in the experiment  
-- *think* critically about your own behavior and decide whether you think you could have done better had you altered your strategy
-- *recruit* evidence in your explanation (see the spreadsheets and graphics from the experiment on Moodle)
+- *Explain* the design of the experiment. What happened in the Experiment? What were the payoffs? How did you get paid (hypothetically)? 
+- *Construct* an argument through your report based on whether you think the model(s) succeed or fail to explain your behavior or the behavior of the class in aggregate. That is, use the *Theory* from class/textbook/papers to discuss your behavior and others' behavior; does your behavior fit with "standard" theory, or do some of the "behavioral" interpretations seem to apply instead? (this is a bit of a false dichotomy as many so-called "behavioral" explanations are standard, but you get the idea)
+- *Describe* what you thought about the experiment 
+- *Discuss* why you made the choices you did after completing the instructions, during the actual rounds of the experiments and then after the experiment was completed and you have had some time to think about it
+- *Reflect* on the results of the experiment (the aggregated results from the experiment)
+- *Consider* whether the standard behavior the experiments looks rational or consistent with the prediction you anticipate you would see in the model
+- *Explain* whether you think the model (or more than one) is missing something if it fails to match the behavior in the experiment  
+- *Think* critically about your own behavior and decide whether you think you could have done better had you altered your strategy (in an interactive experiment)
+- *Recruit* evidence in your explanation (see the spreadsheets and graphics from the experiment on Slack)
 
 
 Keeping track of your experience and understanding will help us to discuss why the results from experimental sessions differ from what we might predict from theory. 
