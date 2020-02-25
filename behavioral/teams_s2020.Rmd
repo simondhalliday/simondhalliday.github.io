@@ -1,0 +1,37 @@
+---
+title: "Project Teams"
+author: "Simon Halliday"
+date: "Spring 2020"
+output: html_document
+---
+  
+The following are the teams that I have allocated from the information you provided. I did my best to allocate people to topics in which I think they're interested from what was reported. The teams are arbitrarily numbered. 
+
+## Team 1: Heuristics & Biases
+
+- Hana Hirano	
+- Sarah Gillespie	
+- Minji Cho	
+- Joy Wohlrab	
+
+## Team 2: Risk 
+
+- Andie Rawson	
+- Lanee Jung	
+- Katherine Ginder	
+- Sophia Tannir	
+
+## Team 3: Social Preferences
+
+- Falguni Basnet	
+- Emma Tanur	
+- Deniz Keles	
+- Maddie Wettach	
+
+## Team 4: Time
+
+- Ahana Raina	
+- Avery Hammond	
+- Ramlah Ahmad	
+- Misa Tetsuka	
+
