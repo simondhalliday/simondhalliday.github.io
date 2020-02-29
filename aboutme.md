@@ -9,9 +9,10 @@ My name is Simon D. Halliday.
 - I am an assistant professor of economics at Smith College, MA, USA. 
 - I teach intermediate microeconomics, behavioral economics, development economics, the political economy of African development, introductory statistics and econometrics, and introductory microeconomics. 
 - I do reseach in behavioral and experimental economics, with a focus on social preferences (reciprocity and social norms) and institutions (ratings, punishment, communication). 
+- I also conduct work in applied microeconomics and data science in economcs, such as a recent paper applyng machine learning to a corpus of economics texts. 
 - I also have a strong interest in research in economics education, particularly with respect to data literacy, data analysis, R and more. 
 - I am the co-author (with Sam Bowles) of a forthcoming intermediate microeconomics textbook [*Microeconomics: Competition, Conflict and Coordination*](/microeconomics). 
-- You can find a copy of my resume [here](halliday_cv_2019.11.pdf). 
+- You can find a copy of my curriculum vitae [here](more/halliday_cv_2020.02.28.pdf). 
 
 ## My educational background 
 - PhD: University of Siena, Italy, 2007-12
