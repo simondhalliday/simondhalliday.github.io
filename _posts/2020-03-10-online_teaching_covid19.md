@@ -149,6 +149,7 @@ What will I do with Zoom?
   - Do encourage your students to download the Slack app to their
     laptops and their phones given how important communication will be
     when classes go online.
+  - [Piazza](https://piazza.com/) is an alternative to Slack. I've used Piazza a lot in the past few years. It's an online forum where instructors and students can post questions/information. Crucially, students have three modes in which they can post: 1) anonymous to everyone; 2) anonymous to fellow students, but their name revealed to the professor; and 3) public to everyone. I found Piazza really useful when I used it, but ultimately wanted something more dynamic and chatty and so I switched to Slack. Each has it's benefits and costs \(I wish there were a way my students could post anonymously to Slack, for example\). 
 
 ### Social Annotation
 
@@ -232,4 +233,6 @@ My classes this semester are relatively small. Behavioral Economics is an upper-
 
 I'm fortunate because I do not have in-class exams for my classes this semester and I would recommend that folks try to think through a class without exams. What are alternative assessment methods that might work? I don't mean "work the best ever", I mean "work well enough." Think *very* short writing assignments. Think about asking your students to create MCQs that you can ask the rest of the class with extra credit given to the "best" MCQ. Err on the side of generosity rather than worrying about cheating. Will cheating happen? Almost certainly? But, if you want to base your policy on an expectation that all students are knaves \(thanks Hume; thanks Machiavelli\), you're going to have an awful rest of your semester. Rather, plan for your students to be pro-social and intrinsically motivated and you might just [nudge them to be more so](https://www.amazon.com/dp/B01EUYN5GM/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1). 
 
-
+### Edit log
+- 2020.03.11 08:00: Add link to Marty Olney; Correct typos; add paragraph on class context.  
+- 2020.03.11 11:24: Add links to Piazza. 
