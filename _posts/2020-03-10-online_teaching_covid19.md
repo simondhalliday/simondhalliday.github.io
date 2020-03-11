@@ -17,7 +17,7 @@ in the [Chronicle of Higher
 Ed](https://www.chronicle.com/article/Going-Online-in-a-Hurry-What/248207?fbclid=IwAR1mi2nz38sjoG_Y7-be49a3p-CfZ5dV54qON8YP5irLIGXZ7nColWECwPI),
 and [for K-12 teaching
 online](https://larryferlazzo.edublogs.org/2020/02/29/the-best-advice-on-teaching-k-12-online-if-we-have-to-because-of-the-coronavirus-please-make-more-suggestions/).
-What is my expertise with this stuff? Mostly, I’m an tech-engaged
+What is my expertise with this stuff? Mostly, I’m a tech-engaged
 faculty member and I’ve been elected to Smith’s Committee on Educational
 Technology and I was appointed to the Ad Hoc Working Group on Learning
 and Technology (which I’ve served on for three years). So what tools am
@@ -93,7 +93,7 @@ What will I do with Zoom?
     to work on their team projects. I will use Zoom’s “breakout rooms”
     feature to facilitate discussion of papers and I will assign
     students to breakout rooms for them to discuss their team projects
-    as they need to. I also use Marty Olney’s “[reading
+    as they need to. I also use [Marty Olney](https://eml.berkeley.edu//~olney/)’s “[reading
     guide](http://simondhalliday.com/more/reading-guide.doc)” as a way
     to facilitate discussing papers in these classes and students will
     share their guides with each other in Slack.
@@ -101,7 +101,7 @@ What will I do with Zoom?
 ### Polling Software and Quizzes
 
   - I want to be able to see whether my students understand what we’re
-    covergin, so I shall use chatting & Slack (below) to answer
+    covering, so I shall use chatting & Slack (below) to answer
     questions, but I also want to see whether students grasp basic ideas
     we cover in class. An excellent way to do that is with in-class
     polling for MCQs, True/False questions, and more (also, the evidnece
@@ -224,3 +224,12 @@ software (and, importantly, to mute themselves\!). They’ll have learned
 how useful collaborative software of various types can be and how they
 can become more productive as free-lancers or people who have to work
 remotely in the future.
+
+
+### My class context? 
+
+My classes this semester are relatively small. Behavioral Economics is an upper-level elective that involves a lot of reading and programming work in R \(n = 16\). Development economics is a lower-level elective with a textbook, readings, and a team project \(n = 20\). All of which said, I've used some of the techniques outlined above for classes of \>50 at Smith College and for classes of a few hundred at institutions I taught at before Smith College. 
+
+I'm fortunate because I do not have in-class exams for my classes this semester and I would recommend that folks try to think through a class without exams. What are alternative assessment methods that might work? I don't mean "work the best ever", I mean "work well enough." Think *very* short writing assignments. Think about asking your students to create MCQs that you can ask the rest of the class with extra credit given to the "best" MCQ. Err on the side of generosity rather than worrying about cheating. Will cheating happen? Almost certainly? But, if you want to base your policy on an expectation that all students are knaves \(thanks Hume; thanks Machiavelli\), you're going to have an awful rest of your semester. Rather, plan for your students to be pro-social and intrinsically motivated and you might just [nudge them to be more so](https://www.amazon.com/dp/B01EUYN5GM/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1). 
+
+
