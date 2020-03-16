@@ -1,0 +1,129 @@
+// question: 0  name: Switch category to $module$/Default for Math Quiz
+$CATEGORY: $module$/Default for Math Quiz
+
+
+// question: 119776  name: Math Q 9
+::Math Q 9::[html]<p>If $$y \= 5\\ln x$$, then $$\\frac\{dy\}\{dx\}?$$</p>{
+	~<p>$$\\frac\{dy\}\{dx\}\=\{5x\}$$</p>
+	=<p>$$\\frac\{dy\}\{dx\}\=\\frac\{5\}\{x\}$$</p>
+	~<p>$$\\frac\{dy\}\{dx\}\=\\frac\{1\}\{5x\}$$</p>
+	~<p>$$\\frac\{dy\}\{dx\}\=\\frac\{5\}\{x^\{-1\}\}$$</p>
+	~<p>None of the other answers listed is correct. </p>
+}
+
+
+// question: 119767  name: Math Q1
+::Math Q1::[html]<p>If  $$u\=x^2$$  and  $$v\=x^3$$  then  $$uv \= ?$$</p>{
+	~<p>$$x^2$$</p>
+	~<p>$$x^3$$</p>
+	=<p>$$x^5$$</p>
+	~<p>$$x^6$$</p>
+	~<p>$$x^9$$</p>
+}
+
+
+// question: 119777  name: Math Q11
+::Math Q11::[html]<p>If $$y \= \\ln(2x^3 + 3x^2)$$, then $$\\frac\{dy\}\{dx\}\=?$$ (in its most simplified form)</p>{
+	~<p>$$\\frac\{dy\}\{dx\}\=\\frac\{1\}\{(2x^3 + 3x^2)\}$$</p>
+	=<p>$$\\frac\{dy\}\{dx\}\=\\frac\{6x + 6\}\{2x^2 + 3x\}$$</p>
+	~<p>$$\\frac\{dy\}\{dx\}\=6x + 6$$</p>
+	~<p>$$\\frac\{dy\}\{dx\}\=\\frac\{6x^2 + 6x\}\{(2x^3 + 3x^2)\}$$</p>
+	~<p>None of the other answers provided. </p>
+}
+
+
+// question: 119778  name: Math Q12
+::Math Q12::[html]<p>If $$y \= \\frac\{4x^2 - 3\}\{3x^3\}$$, then&nbsp;$$\\frac\{dy\}\{dx\}\=?$$ (in its most simplified form).&nbsp;</p>{
+	~<p>$$\\frac\{dy\}\{dx\}\=\\frac\{24x^4 - 36x^3 +27x^2\}\{(9x^6)\}$$</p>
+	~<p>$$\\frac\{dy\}\{dx\}\=\\frac\{4x^2 +9\}\{(3x^4)\}$$</p>
+	~<p>$$\\frac\{dy\}\{dx\}\=\\frac\{36x^3 -27x^2 -24x^4\}\{(9x^6)\}$$</p>
+	=<p>$$\\frac\{dy\}\{dx\}\=\\frac\{9 - 4x^2\}\{(3x^4)\}$$</p>
+	~<p>None of the other answers provided is correct.&nbsp;</p>
+}
+
+
+// question: 119768  name: Math Q2
+::Math Q2::[html]<p>Given $$u \= 9+7x - 7x^2$$ and  $$v \= -2 - x - 6x^2$$, then $$uv\=?$$</p>{
+	~<p>$$18 + 23x +47x^2 +35x^3 - 42x^4$$</p>
+	=<p>$$-18 -23x -47x^2 -35x^3 + 42x^4$$</p>
+	~<p>$$-18+5x-61x^2+35x^3-42x^4$$</p>
+	~<p>$$-18-23x-65x^2+35x^3-42x^4$$</p>
+	~<p>None of the answers provided. </p>
+}
+
+
+// question: 119769  name: Math Q3
+::Math Q3::[html]<p>Given  $$u\=x^7$$  and $$v\=x^\{-3\}$$, then $$uv\=?$$</p>{
+	~<p>$$x^\{10\}$$</p>
+	=<p>$$x^4$$</p>
+	~<p>$$x^\{-21\}$$</p>
+	~<p>$$x^\{21\}$$</p>
+	~<p>$$x^\{-12\}$$</p>
+}
+
+
+// question: 119770  name: Math Q4
+::Math Q4::[html]<p>Solve the following expression for x (i.e. generate an expression for x in terms of y, such that x \= ?). </p>\n<p>$$7x + 3y \= 9y - 5x + 12$$. So, $$x\=?$$</p>{
+	~<p>$$x \= 3y + 6$$</p>
+	~<p>$$x \= 12y + 24$$</p>
+	=<p>$$x \= \\frac\{1\}\{2\}y + 1$$</p>
+	~<p>$$x \= y + 1$$</p>
+	~<p>None of the mathematical answers provided is correct. </p>
+}
+
+
+// question: 119771  name: Math Q5
+::Math Q5::[html]<p>Solve the following expression for y (generate an expression for y as a function of x). </p>\n<p>$$\\frac\{1\}\{4\}x^\{-\\frac\{3\}\{4\}\}y \= \\frac\{3\}\{4\}x^\{\\frac\{1\}\{4\}\}$$.</p>{
+	=<p>$$y \= 3x$$</p>
+	~<p>$$y \= \\frac\{3\}\{4\}x$$</p>
+	~<p>$$y \= \\frac\{3\}\{16\}x$$</p>
+	~<p>$$y \= 3x^\{\\frac\{3\}\{16\}\}$$</p>
+	~<p>$$y \= 3x^\{-\\frac\{1\}\{2\}\}$$</p>
+}
+
+
+// question: 119774  name: Math Q7
+::Math Q7::[html]<p>If $$y \= 7x^2 - 3x$$, then $$\\frac\{dy\}\{dx\} \= ?$$</p>{
+	=<p>$$14x - 3$$</p>
+	~<p>$$7x - 3$$</p>
+	~<p>$$14x - 6$$</p>
+	~<p>14</p>
+	~<p>-3</p>
+}
+
+
+// question: 119775  name: Math Q8
+::Math Q8::[html]<p>If $$y\=4e^\{5x\}$$, then $$\\frac\{dy\}\{dx\}\=?$$</p>{
+	=<p>$$\\frac\{dy\}\{dx\}\=20e^\{5x\}$$</p>
+	~<p>$$\\frac\{dy\}\{dx\}\=20xe^\{5x\}$$</p>
+	~<p>$$\\frac\{dy\}\{dx\}\=20e^\{5x-1\}$$</p>
+	~<p>$$\\frac\{dy\}\{dx\}\=20e^\{4x\}$$</p>
+	~<p>$$\\frac\{dy\}\{dx\}\=4e^\{5x\}$$</p>
+}
+
+
+// question: 119779  name: Math Q13
+::Math Q13::[html]<p>For what value of x is the expression $$4x + 7 - x^2$$ maximized?</p>{#
+	=%100%2:0#
+}
+
+
+// question: 119780  name: Math Q14
+::Math Q14::[html]<p>For what value of x is the expression $$x^2 + 6x +1$$ minimized?</p>{#
+	=%100%-3:0#
+	=%100%-3:0#
+}
+
+
+// question: 119772  name: Math Q6 a
+::Math Q6 a::[html]<p>Given the system of equations\: </p>\n<p>$$-4x + 8y \= 16$$</p>\n<p>$$5x - y \= 7$$</p>\n<p>Solve for x and y. Provide your answer for x below. (you will provide your answer for y in the next question).</p>\n<p>$$x \= ?$$</p>{#
+	=%100%2:0#<p>Make sure that you have your signs correct when you substitute. </p>
+}
+
+
+// question: 119773  name: Math Q6 b
+::Math Q6 b::[html]<p>Given the system of equations\:&nbsp;</p>\n<p>$$-4x + 8y \= 16$$</p>\n<p>$$5x - y \= 7$$</p>\n<p>Solve for x and y. You should have provide your answer for x in the previous question. Here you provide your answer for y.&nbsp;</p>\n<p>$$y \= ?$$</p>{#
+	=%100%3:0#
+}
+
+
