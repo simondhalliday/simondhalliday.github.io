@@ -1,7 +1,7 @@
 ---
 title: 'Lab 4: Reproducing Sutter, 2009'
 author: "Simon Halliday"
-date: "Spring 2019"
+date: "Spring 2020"
 output:
   html_document:
     css: ../stylesheets/lab.css
@@ -189,12 +189,26 @@ SutExpUniq <-
 head(SutExpUniq)
 ```
 
+
+```{r ggplotuniq, eval = FALSE}
+NarUniq <- 
+  SutExpUniq %>%
+  #select()
+  filter(treatment == "individual") %>% 
+  gather(round, value, -treatment, -uniqid, -session)
+
+  ggplot(aes(x = ))
+
+
+```
+
+
 We need individual averages for round, so we need to `group_by()` with uniqid:
 ```{r indiv_ave}
 SutUniqAves <-
   SutExpUniq %>% 
   group_by(uniqid, treatment) %>%
-  summarise(meanval = mean(r1:r9))
+  summarise(meanval = mean(c(r1:r9)))
 ```
 
 * * * 
