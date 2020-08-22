@@ -24,7 +24,7 @@ knitr::include_graphics("micro_cover.png")
 > `r tufte::quote_footer('--- T. W. Schultz, 1980 [1979], Nobel Address: The Economics of Being Poor, p. 639')`
 
 ## Introduction
-[Samuel Bowles](http://tuvalu.santafe.edu/~bowles/) and I (Simon Halliday) have an ongoing project writing an intermediate microeconomics textbook: *Microeconomics: Competition, Conflict and Coordination* (henceforth CCC). On this site, you will find preliminary content that we are providing to test-teachers who are planning to use draft chapters of the book as well as tips and pointers to do with teaching the book. The book is forthcoming with Oxford University Press and will be published in 2020.  
+[Samuel Bowles](http://tuvalu.santafe.edu/~bowles/) and I (Simon Halliday) have an ongoing project writing an intermediate microeconomics textbook: *Microeconomics: Competition, Conflict and Coordination* (henceforth CCC). On this site, you will find preliminary content that we are providing to test-teachers who are planning to use draft chapters of the book as well as tips and pointers to do with teaching the book. The book is forthcoming with Oxford University Press and will be published in 2021  
 
 If you wish to sign up to be a test-teacher of the book (or even just a test-reader), then please provide your details in the following Google form so that we can gather your details. (If you're unable to see the embedded form below, then please click [here](https://docs.google.com/forms/d/1MX3F0zZ41SGY5s3z2qrnmt9BEZa-x2x2yp9JlcdAH-w/viewform)). 
 
@@ -32,7 +32,7 @@ If you wish to sign up to be a test-teacher of the book (or even just a test-rea
 
 We believe the book is now ready to be taught by other professors, especially those interested in how economics has changed over the past thirty years. Once you have reviewed chapters of the book we'll ask you to provide feedback to us in another Google Form (to be provided later). 
 
-##What are the flavors CCC?
+## What are the flavors CCC?
 ```{r fig-margin2, fig.margin = TRUE, fig.cap = "MBIE, 2006, PUP", fig.width=1, fig.height=1, cache=TRUE, echo = FALSE}
 knitr::include_graphics('mbie.jpg')
 ```
@@ -50,7 +50,7 @@ knitr::include_graphics('BFHMicro_eos_ppf.jpg')
 CCC would also be an excellent follow-up text for introductory economics courses that use the *The Economy* produced by the Curriculum Open Access Resource in Economics ([CORE Project](http://www.core-econ.org/)) directed by [Wendy Carlin](http://www.core-econ.org/contributors/) and of which Sam is a co-author. 
 CORE's *The Economy* is based on many similar themes to CCC.  
 
-##What are the themes of CCC?
+## What are the themes of CCC?
 
 We cover many of the standard economic concepts taught to second-year or intermediate-level economics students including constrained optimization, opportunity costs, trade-offs, complements and substitutes, Nash equilibrium, Pareto efficiency and risk. 
 
@@ -68,7 +68,7 @@ But many of the themes of the book are unlikely to be encountered in most interm
 - *Increasing returns*: along with other sources of positive feedbacks, result in multiple equilibria in many situations, so that history matters because history may determine which equilibrium prevails. 
 - *External effects*: positive and negative external effects ("externalities") pervade social interactions and people and firms routinely make decisions that affect how well or how poorly their counterparts will do.
 
-##Provenance
+## Provenance
 It’s hard to know exactly where your own ideas come from, but for us, those implicated certainly include:
 
 - *Adam Smith*  taught us that people are both selfish and other-regarding and that  markets are  coordination devices that under some conditions  allow socially desirable decentralized solutions to the question of how society's resources should be used. 
@@ -81,7 +81,7 @@ It’s hard to know exactly where your own ideas come from, but for us, those im
 
 We incubated many of these ideas at the Santa Fe Institute (where Sam serves on the faculty), a center of interdisciplinary and dynamic problem-centered modeling. 
 
-##Contents
+## Contents
 Below is an abridged table of contents for the book. Currently the first ten chapters are available for distribution with chapters 11 and 12 under active revision over the summer. We plan to have a final part, Part 3, which will go into greater depth on advanced topics, such as the fundamental welfare theorems (and criticisms thereof) and a final reflection on the institutions of capitalism. You can access a more comprehensive draft table of contents [here](https://drive.google.com/file/d/0B9jjwkjdUJU7R1hnZ25UWTJTYWc/view?usp=sharing) and a copy of the preface [here](https://drive.google.com/file/d/0B9jjwkjdUJU7dGViNm1MNm15NXc/view?usp=sharing). 
 
 | Chapter  | Title   |
@@ -89,7 +89,7 @@ Below is an abridged table of contents for the book. Currently the first ten cha
 | Preface | - |
 | Part I | People, Economy & Society |
 | 1 | Society: Coordination Problems & Economic Institutions |
-| 2 | People & Preferences |
+| 2 | People: Preferences, Beliefs & Constraints |
 | 3 | Constrained optimization: Doing the Best You Can | 
 | 4 | Property & Exchange: Mutual Gains & Conflicts | 
 | 5 | Coordination Failures & Institutional Responses| 
@@ -108,8 +108,8 @@ Below is an abridged table of contents for the book. Currently the first ten cha
 | 15 | Capitalism: Innovation & Inequality | 
 | 16 | Public Policy & Mechanism Design | 
 
-##Calculus and Graphics
-We use calculus in the book, but almost all of the calculus is contained in boxes. 
+## Calculus and Graphics
+We use calculus in the book, but almost all of the calculus is contained in boxes (M-Notes). 
 We try to follow Alfred Marshall's maxims with the mathematics:  
 
 ```{marginfigure}
@@ -135,14 +135,15 @@ Later we shall provide interactive graphics based on these figures and produced 
 
 Note, too, that although we do not use Lagrangians in the book to teach constrained optimization, we do cover them in an appendix and provide examples and worksheets using Lagrangians for those instructors who chose to teach them in their courses.
 
-##Course Materials
-Once we have provided you with draft chapters of the book, Simon will share a Google drive folder with you that contains slide decks, problem sets, quizzes, worksheets, etc. Simon has test-taught the book at Smith College and much of this content is based on the course he taught. Similar content has been used by Duncan Foley when teaching at [Eugene Lang College](http://www.newschool.edu/lang/) (the undergraduate liberal arts college attached to the New School for Social Research). In the fall of 2016, the book was used by [Stephen Kinsella](http://www.stephenkinsella.net/) at the University of Limerick, Ireland and [Arjun Jayadev](http://azimpremjiuniversity.edu.in/SitePages/arjun-jayadev.aspx) of Azim Premji University, India. In the spring of 2017, the book was taught in large intermediate micro classes at the University of Massachusetts at Amherst, USA by [Daniele Girardi](https://www.umass.edu/economics/girardi) and Sai Madhurika Mamunuru, Azim Premji by [Anand Shrivastava](https://sites.google.com/site/anandshrivastava1984/), and the University of Cape Town, South Africa by [Justine Burns](https://sites.google.com/site/justinecburns/). 
-This classroom experience is the basis of a rapidly expanding set of problems, quizzes, lecture slides and other teaching aids.
+## Course Materials
+Once we have provided you with draft chapters of the book, Simon will share a Google drive folder with you that contains slide decks, problem sets, quizzes, worksheets, etc. 
+Simon has test-taught the book at Smith College and much of this content is based on the course he taught. 
+Draft chapters of the book have been taught in a variety of universities and colleges in China, India, Ireland, Germany, Japan, South Africa, the US, the UK, and elsewhere. 
 
-##Quizzes
+## Quizzes
 We will be providing access to multiple choice and checkbox quizzes for each chapter which we hope to have for each chapter after the summer. 
 
-##Pedagogical Approach
+## Pedagogical Approach
 
 Our objective is not simply to teach students "how economists think" by algorithmic training using toy models, but to to teach economics as a social science: an inquiry into the main challenges our society faces and the policy options available to us to confront the challenges.
 
