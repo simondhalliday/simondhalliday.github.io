@@ -43,7 +43,7 @@ Though written for undergraduates,  in content CCC has a strong flavor of Sam's 
 knitr::include_graphics('logo-red-black.png')
 ```
 
-```{r eos ppf, fig.margin = TRUE, fig.cap = "Example page: figure in chapter 7 on Economies of Scale and the Production Possibilities Frontier", echo = FALSE}
+```{r eos ppf, fig.margin = TRUE, fig.cap = "Example page: figure in Chapter 6 on Economies of Scale and the Production Possibilities Frontier", echo = FALSE}
 knitr::include_graphics('BFHMicro_eos_ppf.jpg')
 ```
 
@@ -82,7 +82,8 @@ It’s hard to know exactly where your own ideas come from, but for us, those im
 We incubated many of these ideas at the Santa Fe Institute (where Sam serves on the faculty), a center of interdisciplinary and dynamic problem-centered modeling. 
 
 ## Contents
-Below is an abridged table of contents for the book. Currently the first ten chapters are available for distribution with chapters 11 and 12 under active revision over the summer. We plan to have a final part, Part 3, which will go into greater depth on advanced topics, such as the fundamental welfare theorems (and criticisms thereof) and a final reflection on the institutions of capitalism. You can access a more comprehensive draft table of contents [here](https://drive.google.com/file/d/0B9jjwkjdUJU7R1hnZ25UWTJTYWc/view?usp=sharing) and a copy of the preface [here](https://drive.google.com/file/d/0B9jjwkjdUJU7dGViNm1MNm15NXc/view?usp=sharing). 
+Below is an abridged table of contents for the book. Currently the first ten chapters are available for distribution with chapters 11 and 12 under active revision over the summer. We plan to have a final part, Part 3, which will go into greater depth on advanced topics, such as the fundamental welfare theorems (and criticisms thereof) and a final reflection on the institutions of capitalism. 
+You can access a more comprehensive draft table of contents [here](https://www.dropbox.com/s/rgua2sfzpocg12d/BHMicro_ToC.pdf?dl=0). 
 
 | Chapter  | Title   |
 |---|---|---|
