@@ -5,7 +5,11 @@ date: "8/25/2020"
 output: html_document
 ---
 
-```{r setup}
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r packages}
 library(DiagrammeR)
 ```
 
