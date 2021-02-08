@@ -5,14 +5,14 @@ subtitle: Bio and basic facts
 ---
 
 My name is Simon D. Halliday. 
-
-- I am an assistant professor of economics at Smith College, MA, USA. 
+- I am an associate professor of Economics Education in the School of Economics at the University of Bristol, UK. 
+- I was previously an assistant professor of economics at Smith College, MA, USA; a lecturer at Royal Holloway, University of London, and lecturer at the University of Cape Town.   
 - I teach intermediate microeconomics, behavioral economics, development economics, the political economy of African development, introductory statistics and econometrics, and introductory microeconomics. 
-- I do reseach in behavioral and experimental economics, with a focus on social preferences (reciprocity and social norms) and institutions (ratings, punishment, communication). 
+- I do research in behavioral and experimental economics, with a focus on social preferences (reciprocity and social norms) and institutions (ratings, punishment, communication). 
 - I also conduct work in applied microeconomics and data science in economcs, such as a recent paper applyng machine learning to a corpus of economics texts. 
 - I also have a strong interest in research in economics education, particularly with respect to data literacy, data analysis, R and more. 
 - I am the co-author (with Sam Bowles) of a forthcoming intermediate microeconomics textbook [*Microeconomics: Competition, Conflict and Coordination*](/microeconomics). 
-- You can find a copy of my curriculum vitae [here](more/halliday_cv_2020.02.28.pdf). 
+
 
 ## My educational background 
 - PhD: University of Siena, Italy, 2007-12
