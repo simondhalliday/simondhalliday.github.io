@@ -5,7 +5,7 @@ subtitle: Bio and basic facts
 ---
 
 My name is Simon D. Halliday. 
-- I am an associate professor of Economics Education in the School of Economics at the University of Bristol, UK. You can contact me at [simon.halliday@bristol.ac.uk](mailto:simon.halliday@bristol.ac.uk). You can find my cv [here](more/halliday_cv). 
+- I am an associate professor of Economics Education in the School of Economics at the University of Bristol, UK. You can contact me at [simon.halliday@bristol.ac.uk](mailto:simon.halliday@bristol.ac.uk). You can find my cv [here](../more/halliday_cv). 
 - I was previously an assistant professor of economics at Smith College, MA, USA; a lecturer at Royal Holloway, University of London, and lecturer at the University of Cape Town.   
 - I teach intermediate microeconomics, behavioral economics, development economics, the political economy of African development, introductory statistics and econometrics, and introductory microeconomics. 
 - I do research in behavioral and experimental economics, with a focus on social preferences (reciprocity and social norms) and institutions (ratings, punishment, communication). 
