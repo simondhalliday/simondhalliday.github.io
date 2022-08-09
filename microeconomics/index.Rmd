@@ -24,13 +24,20 @@ knitr::include_graphics("micro_cover.png")
 > `r tufte::quote_footer('--- T. W. Schultz, 1980 [1979], Nobel Address: The Economics of Being Poor, p. 639')`
 
 ## Introduction
-[Samuel Bowles](http://tuvalu.santafe.edu/~bowles/) and I (Simon Halliday) have an ongoing project writing an intermediate microeconomics textbook: *Microeconomics: Competition, Conflict and Coordination* (henceforth CCC). On this site, you will find preliminary content that we are providing to test-teachers who are planning to use draft chapters of the book as well as tips and pointers to do with teaching the book. The book is forthcoming with Oxford University Press and will be published in 2021  
+[Samuel Bowles](http://tuvalu.santafe.edu/~bowles/) and I (Simon Halliday) have recently published our intermediate microeconomics textbook: *Microeconomics: Competition, Conflict and Coordination* (henceforth CCC). 
 
-If you wish to sign up to be a test-teacher of the book (or even just a test-reader), then please provide your details in the following Google form so that we can gather your details. (If you're unable to see the embedded form below, then please click [here](https://docs.google.com/forms/d/1MX3F0zZ41SGY5s3z2qrnmt9BEZa-x2x2yp9JlcdAH-w/viewform)). 
+1. *Interactive ebook*: If you would like to, you can register for an inspection copy of the interactive e-book here: [global.oup.com/academic/product/microeconomics-9780198843207](https://global.oup.com/academic/product/microeconomics-9780198843207) You can see the button for "Request inspection copy" on the right-hand side of the page. 
+2. *Open PDF*: You can see a PDF of the final publication version of the PDF of the book here: [simondhalliday.com/microeconomics/bowleshalliday_final_2022.pdf](http://simondhalliday.com/microeconomics/bowleshalliday_final_2022.pdf). 
+For legal reasons, I must include the following statement about the open PDF. "This PDF version of the book lacks the interactive features of the e-book available at [www.vitalsource.com/en-uk/products/microeconomics-samuel-bowles-simon-d-v9780192581297?term=9780198843207](https://www.vitalsource.com/en-uk/products/microeconomics-samuel-bowles-simon-d-v9780192581297?term=9780198843207) and is made available free of charge for individual use under a CC BY-NC-ND license." 
+3. You can buy a copy of the book at a reputable retailer near you, or online through a variety of retailers, including modern monopolies like Amazon, e.g., [www.amazon.com/Microeconomics-Competition-Coordination-Samuel-Bowles/dp/0198843208](https://www.amazon.com/Microeconomics-Competition-Coordination-Samuel-Bowles/dp/0198843208). 
 
-<iframe src="https://docs.google.com/forms/d/1MX3F0zZ41SGY5s3z2qrnmt9BEZa-x2x2yp9JlcdAH-w/viewform?embedded=true" width="760" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+## Supplementary content for CCC 
+- If you are an instructor, please register as an instructor for an inspection copy above and OUP will provide access to a variety of additional supplementary content independent of that which I provide below. 
+- You can access interactive graphs for CCC here: [https://bowles-halliday.github.io/bh-textbook/](https://bowles-halliday.github.io/bh-textbook/)
+- You can access discussion questions [here](https://www.dropbox.com/s/ih7dnjx1gtob1zn/DiscussionQuestions_2022.06.20.docx?dl=0) (This is a Dropbox link)
+- You can access further readings [here](https://www.dropbox.com/s/y3aor5g3eflfm3c/FutherReading_2022.06.20.docx?dl=0). (This is a Dropbox link)
 
-We believe the book is now ready to be taught by other professors, especially those interested in how economics has changed over the past thirty years. Once you have reviewed chapters of the book we'll ask you to provide feedback to us in another Google Form (to be provided later). 
+
 
 ## What are the flavors CCC?
 ```{r fig-margin2, fig.margin = TRUE, fig.cap = "MBIE, 2006, PUP", fig.width=1, fig.height=1, cache=TRUE, echo = FALSE}
