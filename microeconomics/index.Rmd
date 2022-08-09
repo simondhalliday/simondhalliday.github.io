@@ -14,7 +14,7 @@ library(tufte)
 library(knitr)
 ```
 
-```{r cccbook, fig.margin = TRUE, fig.cap = "Provisional Cover", fig.width=3.5, fig.height=3.5, cache=TRUE, echo = FALSE}
+```{r cccbook, fig.margin = TRUE, fig.cap = "Book Cover", fig.width=3.5, fig.height=3.5, cache=TRUE, echo = FALSE}
 knitr::include_graphics("micro_cover.png")
 ```
 
@@ -139,17 +139,18 @@ Alfred Marshall, 1906, Letter to Arthur Lyon Bowley. Collected in A. C. Pigou, 1
 We may not have burned as much of the mathematics as we ought to have done, but we try to restrain the mathematics to when it is most necessary. 
 For the most part, the economics is conveyed through *graphical* intuition accompanied by algebra. 
 All of the graphics are also available on github (see Simon Halliday's github repo [bfh-textbook](https://github.com/simondhalliday/bfh-textbook/)). 
-Later we shall provide interactive graphics based on these figures and produced by a collaborator. 
+As you can see in the supplementary materials above, we have provided interactive graphics based on these figures produced by Bridget Diana and based on work by Chris Makler, whose work at [econgraphs.org](https://www.econgraphs.org/) we recommend both for us with our book and for use in other courses using other books. 
 
-Note, too, that although we do not use Lagrangians in the book to teach constrained optimization, we do cover them in an appendix and provide examples and worksheets using Lagrangians for those instructors who chose to teach them in their courses.
+We cover Lagrangians in a set of mathematics notes and in the mathematical appendix. 
 
 ## Course Materials
 Once we have provided you with draft chapters of the book, Simon will share a Google drive folder with you that contains slide decks, problem sets, quizzes, worksheets, etc. 
 Simon has test-taught the book at Smith College and much of this content is based on the course he taught. 
 Draft chapters of the book have been taught in a variety of universities and colleges in China, India, Ireland, Germany, Japan, South Africa, the US, the UK, and elsewhere. 
 
-## Quizzes
-We will be providing access to multiple choice and checkbox quizzes for each chapter which we hope to have for each chapter after the summer. 
+## Multiple-choice questions and mathematical questions
+The interactive e-book contains embedded multiple-choice questions so students can test their understanding while they read as well as mathematical questions to test understanding of some of the mathematical and modeling concepts in the book. These are also available as PDFs with solutions (for the math questions) and MSWord documents and PDFs (for the MCQs). There are additional resources available for instructors once an instructor creates a login through the OUP website. 
+
 
 ## Pedagogical Approach
 
