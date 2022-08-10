@@ -24,14 +24,17 @@ knitr::include_graphics("micro_cover.png")
 > `r tufte::quote_footer('--- T. W. Schultz, 1980 [1979], Nobel Address: The Economics of Being Poor, p. 639')`
 
 ## Introduction
-[Samuel Bowles](http://tuvalu.santafe.edu/~bowles/) and I (Simon Halliday) have recently published our intermediate microeconomics textbook: *Microeconomics: Competition, Conflict and Coordination* (henceforth CCC). 
+[Samuel Bowles](http://tuvalu.santafe.edu/~bowles/) and I (Simon Halliday) published our intermediate microeconomics textbook: *Microeconomics: Competition, Conflict and Coordination* (henceforth CCC) with Oxford University Press in July 2022. You can access it in a variety of ways.  
 
-1. *Interactive ebook*: If you would like to, you can register for an inspection copy of the interactive e-book here: [global.oup.com/academic/product/microeconomics-9780198843207](https://global.oup.com/academic/product/microeconomics-9780198843207) You can see the button for "Request inspection copy" on the right-hand side of the page. 
-2. *Open PDF*: You can see a PDF of the final publication version of the PDF of the book here: [simondhalliday.com/microeconomics/bowleshalliday_final_2022.pdf](http://simondhalliday.com/microeconomics/bowleshalliday_final_2022.pdf). 
-For legal reasons, I must include the following statement about the open PDF. "This PDF version of the book lacks the interactive features of the e-book available at [www.vitalsource.com/en-uk/products/microeconomics-samuel-bowles-simon-d-v9780192581297?term=9780198843207](https://www.vitalsource.com/en-uk/products/microeconomics-samuel-bowles-simon-d-v9780192581297?term=9780198843207) and is made available free of charge for individual use under a CC BY-NC-ND license." 
-3. You can buy a copy of the book at a reputable retailer near you, or online through a variety of retailers, including modern monopolies like Amazon, e.g., [www.amazon.com/Microeconomics-Competition-Coordination-Samuel-Bowles/dp/0198843208](https://www.amazon.com/Microeconomics-Competition-Coordination-Samuel-Bowles/dp/0198843208). 
+1. *Interactive ebook*: As an instructor, you can register for an inspection copy of the interactive e-book here: [global.oup.com/academic/product/microeconomics-9780198843207](https://global.oup.com/academic/product/microeconomics-9780198843207) You can see the button for "Request inspection copy" on the right-hand side of the page. 
+2. *Open PDF*: As a student or instructor, you can read a PDF of the final publication version of the PDF of the book here: [simondhalliday.com/microeconomics/bowleshalliday_final_2022.pdf](http://simondhalliday.com/microeconomics/bowleshalliday_final_2022.pdf). 
+This PDF version of the book lacks the interactive features of the e-book available at [www.vitalsource.com/en-uk/products/microeconomics-samuel-bowles-simon-d-v9780192581297?term=9780198843207](https://www.vitalsource.com/en-uk/products/microeconomics-samuel-bowles-simon-d-v9780192581297?term=9780198843207) and is made available free of charge for individual use under a CC BY-NC-ND license. 
+3.  *Buying a hard copy or an e-book:* You can buy a copy of the book at a reputable retailer near you, or online through a variety of retailers, including modern monopolies like Amazon, e.g., [www.amazon.com/Microeconomics-Competition-Coordination-Samuel-Bowles/dp/0198843208](https://www.amazon.com/Microeconomics-Competition-Coordination-Samuel-Bowles/dp/0198843208). You can also purchase a copy of the e-book through [Vitalsource](https://www.vitalsource.com/en-uk/products/microeconomics-samuel-bowles-simon-d-v9780192581297?term=9780198843207), [Kortext](https://store.kortext.com/microeconomics-1985699), or your preferred e-book retailer. 
 
 ## Supplementary content for CCC 
+```{r endorsements, fig.margin = TRUE, fig.cap = "Endorsements: Akerlof, Bandiera, Maskin, Tirole, Mukherjee, Leroch, Galanis, and Patel", fig.width=3.5, fig.height=3.5, cache=TRUE, echo = FALSE}
+knitr::include_graphics("endorsements.png")
+```
 - If you are an instructor, please register as an instructor for an inspection copy above and OUP will provide access to a variety of additional supplementary content independent of that which I provide below. 
 - You can access interactive graphs for CCC here: [https://bowles-halliday.github.io/bh-textbook/](https://bowles-halliday.github.io/bh-textbook/)
 - You can access discussion questions [here](https://www.dropbox.com/s/ih7dnjx1gtob1zn/DiscussionQuestions_2022.06.20.docx?dl=0) (This is a Dropbox link)
@@ -44,7 +47,7 @@ For legal reasons, I must include the following statement about the open PDF. "T
 knitr::include_graphics('mbie.jpg')
 ```
 
-Though written for undergraduates,  in content CCC has a strong flavor of Sam's graduate-level textbook, [*Microeconomics: Behavior, Institutions, and Evolution*](http://press.princeton.edu/titles/7610.html) published by Princeton University Press in 2006. As an advanced text, though, it is not suitable for many undergraduate classes because of the high level of the math and certain other aspects of its theoretical rigor. 
+Though written for undergraduates,  in content CCC has a strong flavor of Sam's graduate-level textbook, [*Microeconomics: Behavior, Institutions, and Evolution*](http://press.princeton.edu/titles/7610.html) published by Princeton University Press in 2006. As an advanced text, though, it is not suitable for many undergraduate classes because of the high level of the math.
 
 ```{r fig-margin3, fig.margin = TRUE, fig.width=3.5, fig.height=3.5, cache=TRUE, echo = FALSE}
 knitr::include_graphics('logo-red-black.png')
@@ -59,7 +62,7 @@ CORE's *The Economy* is based on many similar themes to CCC.
 
 ## What are the themes of CCC?
 
-We cover many of the standard economic concepts taught to second-year or intermediate-level economics students including constrained optimization, opportunity costs, trade-offs, complements and substitutes, Nash equilibrium, Pareto efficiency and risk. 
+We cover many of the standard economic concepts taught to second-year or intermediate-level economics students including constrained optimization, opportunity costs, trade-offs, complements and substitutes, Nash equilibrium, Pareto efficiency, and risk. 
 
 But many of the themes of the book are unlikely to be encountered in most intermediate microeconomics texts. 
 
@@ -89,8 +92,7 @@ It’s hard to know exactly where your own ideas come from, but for us, those im
 We incubated many of these ideas at the Santa Fe Institute (where Sam serves on the faculty), a center of interdisciplinary and dynamic problem-centered modeling. 
 
 ## Contents
-Below is an abridged table of contents for the book. Currently the first ten chapters are available for distribution with chapters 11 and 12 under active revision over the summer. We plan to have a final part, Part 3, which will go into greater depth on advanced topics, such as the fundamental welfare theorems (and criticisms thereof) and a final reflection on the institutions of capitalism. 
-You can access a more comprehensive draft table of contents [here](https://www.dropbox.com/s/rgua2sfzpocg12d/BHMicro_ToC.pdf?dl=0). 
+Below is an abridged table of contents for the book.  
 
 | Chapter  | Title   |
 |---|---|---|
@@ -98,17 +100,17 @@ You can access a more comprehensive draft table of contents [here](https://www.d
 | Part I | People, Economy & Society |
 | 1 | Society: Coordination Problems & Economic Institutions |
 | 2 | People: Preferences, Beliefs & Constraints |
-| 3 | Constrained optimization: Doing the Best You Can | 
-| 4 | Property & Exchange: Mutual Gains & Conflicts | 
+| 3 | Doing the Best You Can: Constrained optimization | 
+| 4 | Property, Power & Exchange: Mutual Gains & Conflicts | 
 | 5 | Coordination Failures & Institutional Responses| 
 | Part II | Markets for Goods and Services | 
-| 6 | Specialization, Production & Exchange | 
-| 7 | Market Demand | 
-| 8 | Minimizing Cost & Maximizing Profit with Imperfect Competition | 
-| 9 | Competition, Rent-Seeking & Market Equilibrium |
+| 6 | Production: Technology & Specialization | 
+| 7 | Demand: Willingness to Pay & Prices | 
+| 8 | Supply: Firms' Costs, Output & Profit | 
+| 9 | Competition, Rent-Seeking & Market Equilibriation |
 | Part III | Markets with Incomplete Contracting |
 | 10 | Information: Contracts, Norms & Power |
-| 11 | Jobs, Unemployment, & Wages |
+| 11 | Work, Wages, & Unemployment |
 | 12 | Interest, Credit & Wealth Constraints |
 | Part III | Economic Systems: Ideal & Imperfect | 
 | 13 | A Risky & Unequal World | 
@@ -144,8 +146,7 @@ As you can see in the supplementary materials above, we have provided interactiv
 We cover Lagrangians in a set of mathematics notes and in the mathematical appendix. 
 
 ## Course Materials
-Once we have provided you with draft chapters of the book, Simon will share a Google drive folder with you that contains slide decks, problem sets, quizzes, worksheets, etc. 
-Simon has test-taught the book at Smith College and much of this content is based on the course he taught. 
+A variety of supplementary materials exist from slide decks, problem sets, quizzes, worksheets, and so on 
 Draft chapters of the book have been taught in a variety of universities and colleges in China, India, Ireland, Germany, Japan, South Africa, the US, the UK, and elsewhere. 
 
 ## Multiple-choice questions and mathematical questions
