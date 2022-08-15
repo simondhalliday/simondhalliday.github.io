@@ -21,33 +21,83 @@ knitr::include_graphics("micro_cover.png")
 > "Most of the people in the world are poor, so if we knew the economics of being 
 > poor, we would know much of the economics that really matters ..."
 >
-> `r tufte::quote_footer('--- T. W. Schultz, 1980 [1979], Nobel Address: The Economics of Being Poor, p. 639')`
+> `r tufte::quote_footer('--- T. W. Schultz, 1980, Nobel Address: The Economics of Being Poor, p. 639')`
 
 ## Introduction
-[Samuel Bowles](http://tuvalu.santafe.edu/~bowles/) and I (Simon Halliday) published our intermediate microeconomics textbook: *Microeconomics: Competition, Conflict and Coordination* (henceforth CCC) with Oxford University Press in July 2022. You can access it in a variety of ways.  
+[Samuel Bowles](http://tuvalu.santafe.edu/~bowles/) and I (Simon Halliday) published our intermediate microeconomics textbook: *Microeconomics: Competition, Conflict and Coordination* (henceforth M:CCC) with Oxford University Press in July 2022. The book has been taught in a variety of universities and colleges in China, India, Ireland, Germany, Japan, South Africa, the US, the UK, and elsewhere. You can access it in a variety of ways.  
 
 1. *Interactive ebook*: As an instructor, you can register for an inspection copy of the interactive e-book here: [global.oup.com/academic/product/microeconomics-9780198843207](https://global.oup.com/academic/product/microeconomics-9780198843207) You can see the button for "Request inspection copy" on the right-hand side of the page. 
-2. *Open PDF*: As a student or instructor, you can read a PDF of the final publication version of the PDF of the book here: [simondhalliday.com/microeconomics/bowleshalliday_final_2022.pdf](http://simondhalliday.com/microeconomics/bowleshalliday_final_2022.pdf). 
+2. *Free PDF*: As a student or instructor, you can read and download a free PDF of the book here: [simondhalliday.com/microeconomics/bowleshalliday_final_2022.pdf](http://simondhalliday.com/microeconomics/bowleshalliday_final_2022.pdf). 
 This PDF version of the book lacks the interactive features of the e-book available at [www.vitalsource.com/en-uk/products/microeconomics-samuel-bowles-simon-d-v9780192581297?term=9780198843207](https://www.vitalsource.com/en-uk/products/microeconomics-samuel-bowles-simon-d-v9780192581297?term=9780198843207) and is made available free of charge for individual use under a CC BY-NC-ND license. 
 3.  *Buying a hard copy or an e-book:* You can buy a copy of the book at a reputable retailer near you, or online through a variety of retailers, including modern monopolies like Amazon, e.g., [www.amazon.com/Microeconomics-Competition-Coordination-Samuel-Bowles/dp/0198843208](https://www.amazon.com/Microeconomics-Competition-Coordination-Samuel-Bowles/dp/0198843208). You can also purchase a copy of the e-book through [Vitalsource](https://www.vitalsource.com/en-uk/products/microeconomics-samuel-bowles-simon-d-v9780192581297?term=9780198843207), [Kortext](https://store.kortext.com/microeconomics-1985699), or your preferred e-book retailer. 
 
-## Supplementary content for CCC 
+### Endorsements 
+Here are some endorsements of the book by prominent economists: 
+
+> "I envy the student who will have the opportunity to take a microeconomics course
+> based on this brilliant textbook. Not only will they find it fascinating, it will 
+> change their lives, in every way, for the better."
+>
+> `r tufte::quote_footer('--- George Akerlof, Georgetown University, Nobel Laureate in Economics')`
+
+> "In a thick wall of textbooks about rational agents trading in perfect markets, 
+> Bowles and Halliday open up a window through which students can see 
+> economists at work as they seek answers to market failures, behavioral 
+> biases, and all the obstacles that must be overcome to build
+> a society that is fair and efficiency. This book can change how economics 
+> is understood by students who will go on to help us find the answers."
+>
+> `r tufte::quote_footer('--- Oriana Bandiera, London School of Economics, winner of the Yrjo Jahnsson Award')`
+
+> "This text will make for an exciting course--and one especially relevant to contemporary
+> problems like inequality and climate change. Normally, students don't see recent economics
+> ideas until they reach the end of the book. Here such ideas are introduced starting 
+> in the first chapter."
+>
+> `r tufte::quote_footer('--- Eric Maskin, Harvard University, Nobel Laureate in Economics')`
+
+> "Bowles and Halliday's textbook unusually puts at its core the key concepts of social 
+> sciences: the interactions (competition, conflict, and coordination) among individuals, 
+> groups, and firms. You will come away from this riveting reading understanding how 
+> economists deploy theory to help design impactful public policies, and why 
+> economics is essential to making this world a better place."
+>
+> `r tufte::quote_footer('--- Jean Tirole, Toulouse School of Economics, Nobel Laureate in Economics')`
+
+
+## Supplementary content for M:CCC 
 ```{r endorsements, fig.margin = TRUE, fig.cap = "Endorsements: Akerlof, Bandiera, Maskin, Tirole, Mukherjee, Leroch, Galanis, and Patel", fig.width=3.5, fig.height=3.5, cache=TRUE, echo = FALSE}
 knitr::include_graphics("endorsements.png")
 ```
+
+### Accessing Supplementary Content
 - If you are an instructor, please register as an instructor for an inspection copy above and OUP will provide access to a variety of additional supplementary content independent of that which I provide below. 
-- You can access interactive graphs for CCC here: [https://bowles-halliday.github.io/bh-textbook/](https://bowles-halliday.github.io/bh-textbook/)
+- You can access interactive graphs for M:CCC here: [https://bowles-halliday.github.io/bh-textbook/](https://bowles-halliday.github.io/bh-textbook/)
 - You can access discussion questions [here](https://www.dropbox.com/s/ih7dnjx1gtob1zn/DiscussionQuestions_2022.06.20.docx?dl=0) (This is a Dropbox link)
 - You can access further readings [here](https://www.dropbox.com/s/y3aor5g3eflfm3c/FutherReading_2022.06.20.docx?dl=0). (This is a Dropbox link)
 
+## Additional Instructor Materials
+A variety of supplementary materials exist for instructors on the OUP website:  
+- slide decks
+- problem sets
+- quizzes
+
+These resources are *not* made available on my private website so that they cannot be downloaded by students whose instructors are using them. 
+
+## Multiple-choice questions and mathematical questions
+The interactive e-book contains the following support for students: 
+- embedded multiple-choice questions so students can test their understanding while they read - mathematical questions to test understanding of some of the mathematical and modeling concepts in the book. 
+- checkpoint questions (with solutions available on the website's book online)
+
+These are also available as PDFs with solutions (for the math questions and checkpoint questions) and MSWord documents and PDFs (for the MCQs). 
 
 
-## What are the flavors CCC?
+## What are the flavors M:CCC?
 ```{r fig-margin2, fig.margin = TRUE, fig.cap = "MBIE, 2006, PUP", fig.width=1, fig.height=1, cache=TRUE, echo = FALSE}
 knitr::include_graphics('mbie.jpg')
 ```
 
-Though written for undergraduates,  in content CCC has a strong flavor of Sam's graduate-level textbook, [*Microeconomics: Behavior, Institutions, and Evolution*](http://press.princeton.edu/titles/7610.html) published by Princeton University Press in 2006. As an advanced text, though, it is not suitable for many undergraduate classes because of the high level of the math.
+Though written for undergraduates,  in content M:CCC has a strong flavor of Sam's graduate-level textbook, [*Microeconomics: Behavior, Institutions, and Evolution*](http://press.princeton.edu/titles/7610.html) published by Princeton University Press in 2006. As an advanced text, though, it is not suitable for many undergraduate classes because of the high level of the math.
 
 ```{r fig-margin3, fig.margin = TRUE, fig.width=3.5, fig.height=3.5, cache=TRUE, echo = FALSE}
 knitr::include_graphics('logo-red-black.png')
@@ -57,12 +107,12 @@ knitr::include_graphics('logo-red-black.png')
 knitr::include_graphics('BFHMicro_eos_ppf.jpg')
 ```
 
-CCC would also be an excellent follow-up text for introductory economics courses that use the *The Economy* produced by the Curriculum Open Access Resource in Economics ([CORE Project](http://www.core-econ.org/)) directed by [Wendy Carlin](http://www.core-econ.org/contributors/) and of which Sam is a co-author. 
-CORE's *The Economy* is based on many similar themes to CCC.  
+While our text does not presume or require as a prerequisite any particular introduction to economics, M:CCC would be an excellent follow-up text for introductory economics courses that use the *The Economy* produced by the Curriculum Open Access Resource in Economics ([CORE Project](http://www.core-econ.org/)) directed by [Wendy Carlin](http://www.core-econ.org/contributors/) and of which Sam is a co-author. 
+CORE's *The Economy* is based on many similar themes to M:CCC.  
 
-## What are the themes of CCC?
+## What are the themes of M:CCC?
 
-We cover many of the standard economic concepts taught to second-year or intermediate-level economics students including constrained optimization, opportunity costs, trade-offs, complements and substitutes, Nash equilibrium, Pareto efficiency, and risk. 
+We cover the standard economic concepts taught to second-year or intermediate-level economics students including constrained optimization, opportunity costs, trade-offs, complements and substitutes, Nash equilibrium, Pareto efficiency, and risk. 
 
 But many of the themes of the book are unlikely to be encountered in most intermediate microeconomics texts. 
 
@@ -143,15 +193,7 @@ For the most part, the economics is conveyed through *graphical* intuition accom
 All of the graphics are also available on github (see Simon Halliday's github repo [bfh-textbook](https://github.com/simondhalliday/bfh-textbook/)). 
 As you can see in the supplementary materials above, we have provided interactive graphics based on these figures produced by Bridget Diana and based on work by Chris Makler, whose work at [econgraphs.org](https://www.econgraphs.org/) we recommend both for us with our book and for use in other courses using other books. 
 
-We cover Lagrangians in a set of mathematics notes and in the mathematical appendix. 
-
-## Course Materials
-A variety of supplementary materials exist from slide decks, problem sets, quizzes, worksheets, and so on 
-Draft chapters of the book have been taught in a variety of universities and colleges in China, India, Ireland, Germany, Japan, South Africa, the US, the UK, and elsewhere. 
-
-## Multiple-choice questions and mathematical questions
-The interactive e-book contains embedded multiple-choice questions so students can test their understanding while they read as well as mathematical questions to test understanding of some of the mathematical and modeling concepts in the book. These are also available as PDFs with solutions (for the math questions) and MSWord documents and PDFs (for the MCQs). There are additional resources available for instructors once an instructor creates a login through the OUP website. 
-
+We cover Lagrangians in a set of mathematics notes and in the mathematical appendix.
 
 ## Pedagogical Approach
 
