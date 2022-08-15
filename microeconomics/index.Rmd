@@ -78,16 +78,20 @@ knitr::include_graphics("endorsements.png")
 
 ## Additional Instructor Materials
 A variety of supplementary materials exist for instructors on the OUP website:  
+
 - slide decks
-- problem sets
-- quizzes
+- problem sets and select solutions
+- quizzes and solutions
 
 These resources are *not* made available on my private website so that they cannot be downloaded by students whose instructors are using them. 
 
-## Multiple-choice questions and mathematical questions
+## Multiple-choice questions,  mathematical questions, checkpoints, and videos
 The interactive e-book contains the following support for students: 
-- embedded multiple-choice questions so students can test their understanding while they read - mathematical questions to test understanding of some of the mathematical and modeling concepts in the book. 
-- checkpoint questions (with solutions available on the website's book online)
+
+- embedded multiple-choice questions so students can test their understanding while they read 
+- mathematical questions to test understanding of some of the mathematical and modeling concepts in the book. 
+- checkpoint questions (with solutions available on the book's website) and to be made available here in October 2022
+- videos with explanations by me (Simon Halliday) of related ideas in the textbook; these will also be available on my YouTube channel in October 2022
 
 These are also available as PDFs with solutions (for the math questions and checkpoint questions) and MSWord documents and PDFs (for the MCQs). 
 
