@@ -1,11 +1,3 @@
----
-layout: post
-title: "Some thoughts on interviewing for a teaching-focused or LAC position"
-author: "Simon Halliday"
-output: github_document
-tags: [Economics, Economics Education, Liberal Arts Colleges, Interview, Job market]
----
-
 Some thoughts on interviewing for a teaching-focused or LAC position
 ================
 Simon D. Halliday
