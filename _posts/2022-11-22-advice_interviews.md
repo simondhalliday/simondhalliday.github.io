@@ -1,6 +1,11 @@
-Some thoughts on interviewing for a teaching-focused or LAC position
-================
-Simon D. Halliday
+---
+layout: post
+title: "Some thoughts on interviewing for a teaching-focused or LAC position"
+author: "Simon D. Halliday"
+output: github_document
+tags: [Economics, Economics Education, Online Teaching, Polling Software]
+---
+
 
 ## Introduction
 
