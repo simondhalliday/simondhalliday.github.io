@@ -36,10 +36,7 @@ Preprint available [here](https://scholarworks.smith.edu/eco_facpubs/11/).
 - NA at the moment. 
 
 ## Under Review 
-
-
-## Editing for review
-
+S. D. Halliday, C. Makler, D. McKee, and A. Papadopoulou, "Improving student comprehension through interactive model visualization," 2023, Under Review at the International Review of Economics Education.
 
 ## Chapters in Books
 - S. D. Halliday and E. C. Marshall, "Where is the "behavioral"" in introductory microeconomics?"" In Teaching Principles of Microeconomics, M. Maier and P. Ruder, Eds., Edward Elgar, 2023, ch. 7.
