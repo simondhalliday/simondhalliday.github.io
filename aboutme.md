@@ -11,7 +11,7 @@ My name is Simon D. Halliday.
 - I do research in behavioral and experimental economics, with a focus on social preferences (reciprocity and social norms) and institutions (ratings, punishment, communication). 
 - I also conduct work in applied microeconomics and data science in economcs, such as a recent paper applyng machine learning to a corpus of economics texts. 
 - I also have a strong interest in research in economics education, particularly with respect to data literacy, data analysis, R and more. 
-- I am the co-author (with Sam Bowles) of a forthcoming intermediate microeconomics textbook [*Microeconomics: Competition, Conflict and Coordination*](/microeconomics). 
+- I am the co-author (with Sam Bowles) of an intermediate microeconomics textbook [*Microeconomics: Competition, Conflict and Coordination*](/microeconomics) published with [Oxford University Press](https://global.oup.com/academic/product/microeconomics-9780198843207) (2022)
 
 
 ## My educational background 
