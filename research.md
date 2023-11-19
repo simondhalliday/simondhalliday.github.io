@@ -16,14 +16,14 @@ layout: page
     - [Experiment Instructions and additional materials](CombinedExpMat.pdf)
 
 ### Development and Environmental 
-Harriet Brookes-Gray, Vis Taraz, and Simon D. Halliday, 2022, "[The impact of weather shocks on employment outcomes: evidence from South Africa](https://www.cambridge.org/core/journals/environment-and-development-economics/article/abs/impact-of-weather-shocks-on-employment-outcomes-evidence-from-south-africa/3BCEB56BECF654E947D5DC4B1A13DAE2)", *Environment and Development Economics*, 28(3), 285-305. doi:10.1017/S1355770X22000237. Available in pre-print at: [https://scholarworks.smith.edu/env_facpubs/22/](https://scholarworks.smith.edu/env_facpubs/22/). 
+
+- Harriet Brookes-Gray, Vis Taraz, and Simon D. Halliday, 2022, "[The impact of weather shocks on employment outcomes: evidence from South Africa](https://www.cambridge.org/core/journals/environment-and-development-economics/article/abs/impact-of-weather-shocks-on-employment-outcomes-evidence-from-south-africa/3BCEB56BECF654E947D5DC4B1A13DAE2)", *Environment and Development Economics*, 28(3), 285-305. doi:10.1017/S1355770X22000237. Available in pre-print at: [https://scholarworks.smith.edu/env_facpubs/22/](https://scholarworks.smith.edu/env_facpubs/22/). 
 
 
 
 ### Economics Education
 
 - Simon D. Halliday, 2019, "Data Literacy in Economic Development," *The Journal of Economic Education*, 50:3, 284-298, DOI: [10.1080/00220485.2019.1618762](10.1080/00220485.2019.1618762). Based on teaching Economic Development (ECO211) at Smith College, I have developed a series of exercises to model the data analysis that a student would use in analyzing a household survey (the South African National Income Dynamics Study) with either MS Excel or Google Spreadsheets. I report on these in the paper and presented the draft at the CTREE 2016 and LAC-DEV 2016 conferences. See the companion site to the article here: [http://simondhalliday.com/data_literacy_in_economic_development/](http://simondhalliday.com/data_literacy_in_economic_development/). Preprint available [here](https://scholarworks.smith.edu/eco_facpubs/12/).
-
 - Simon D. Halliday, 2019, "[Promoting an Ethical Economics Classroom Through Partnership](https://mulpress.mcmaster.ca/ijsap/article/view/3623)", 2019, *International Journal for Students as Partners*, Vol 3 (1), 182-189. I reflect on having a student as a partner in teaching and learning in an introductory statistics and econometrics class at Smith College. I argue that instructors enter their classes with an ethical vision and that partnership, independent of improving pedagogy, can ensure that instructors are better able to adhere to and maintain the practices required to uphold their ethical vision. I explain how my partner and I used guiding principles informed by my ethical vision to refine my pedagogical practice. 
 - Thomas Dvorak, Simon D. Halliday, Michael O'Hara, and Aaron Swoboda, 2019, "[Efficient Empiricism: Streamlining teaching, research, and learning in empirical courses](https://www.tandfonline.com/doi/full/10.1080/00220485.2019.1618765)", *The Journal of Economic Education*, 50:3, 242-257, DOI: [10.1080/00220485.2019.1618765](10.1080/00220485.2019.1618765)  Each of the authors were TIER faculty fellows: Dvorak and O'Hara were 2015-16 fellows and Swoboda was a 2016-17 fellow (see [here](http://www.projecttier.org/about/people/#fellows)). See the companion site here: [simondhalliday.com/efficient_empiricism](simondhalliday.com/efficient_empiricism).
 Preprint available [here](https://scholarworks.smith.edu/eco_facpubs/11/).
@@ -36,7 +36,8 @@ Preprint available [here](https://scholarworks.smith.edu/eco_facpubs/11/).
 - NA at the moment. 
 
 ## Under Review 
-S. D. Halliday, C. Makler, D. McKee, and A. Papadopoulou, "Improving student comprehension through interactive model visualization," 2023, Under Review at the International Review of Economics Education.
+
+- S. D. Halliday, C. Makler, D. McKee, and A. Papadopoulou, "Improving student comprehension through interactive model visualization," 2023, Under Review at the International Review of Economics Education.
 
 ## Chapters in Books
 - S. D. Halliday and E. C. Marshall, "Where is the "behavioral"" in introductory microeconomics?"" In Teaching Principles of Microeconomics, M. Maier and P. Ruder, Eds., Edward Elgar, 2023, ch. 7.
