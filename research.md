@@ -41,6 +41,12 @@ Preprint available [here](https://scholarworks.smith.edu/eco_facpubs/11/).
 ## Editing for review
 
 
+## Chapters in Books
+- S. D. Halliday and E. C. Marshall, "Where is the "behavioral"" in introductory microeconomics?"" In Teaching Principles of Microeconomics, M. Maier and P. Ruder, Eds., Edward Elgar, 2023, ch. 7.
+- Simon D. Halliday, 2015, "Global Public Goods" published in [Running the Economy](http://www.amazon.co.uk/Running-Economy-Open-University-Team/dp/1780079540), Santos et al (eds). Open University Press. My chapter covers game theory, global commons, and collective action.
+
+### Forthcoming 
+- S. D. Halliday and J. E. Tierney, "Revolutionizing teaching economics online with artificial intelligence,"" in Teaching Economics Online, A. al Bahrani and P. Chaudhury, Eds., Edward Elgar, forthcoming (2024), ch. 3.
 
 
 
@@ -56,14 +62,8 @@ Preprint available [here](https://scholarworks.smith.edu/eco_facpubs/11/).
 
 
 ## Work in Progress
-- Gabriel Burdin, Fabio Landini and I are developing experiments on delegation and power related to our previous paper. We will be running experiments in Spring 2020. 
+- Gabriel Burdin, Fabio Landini and I are developing experiments on delegation and power related to our previous paper.
 
-## Chapters in Books
-- 
-- Simon D. Halliday, 2015, "Global Public Goods" published in [Running the Economy](http://www.amazon.co.uk/Running-Economy-Open-University-Team/dp/1780079540), Santos et al (eds). Open University Press. My chapter covers game theory, global commons, and collective action.
-
-### Forthcoming 
-- S. D. Halliday and J. E. Tierney, "Revolutionizing teaching economics online with artificial intelligence,"" in Teaching Economics Online, A. al Bahrani and P. Chaudhury, Eds., Edward Elgar, forthcom- ing (2024), ch. 3.
 
 ## Policy 
 - *Report to the Department of Land Affairs, South Africa*: With Malcolm Keswell, Susan Godlonton, and Tim Brophy. The report summarized our work and preliminary results from the Quality of Life Survey.
