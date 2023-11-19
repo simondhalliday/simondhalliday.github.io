@@ -4,7 +4,7 @@ subtitle: Ongoing and published
 layout: page
 ---
 ## Books
-- *Microeonomics: Competition, Conflict and Coordination* with Samuel Bowles. See the website for the book here: [simondhalliday.com/microeconomics](http://simondhalliday.com/microeconomics). The book was publishedin July 2022 with Oxford University Press. The book is available throug OUP here: [global.oup.com/academic/product/microeconomics-9780198843207](https://global.oup.com/academic/product/microeconomics-9780198843207). 
+- *Microeonomics: Competition, Conflict and Coordination* with Samuel Bowles. See the website for the book here: [simondhalliday.com/microeconomics](http://simondhalliday.com/microeconomics). The book was published in July 2022 with Oxford University Press. The book is available through OUP here: [global.oup.com/academic/product/microeconomics-9780198843207](https://global.oup.com/academic/product/microeconomics-9780198843207). 
 
 ## Peer-Reviewed Publications 
 
@@ -15,6 +15,11 @@ layout: page
     - [Article Appendix](research/halliday-lafky/JBEE_appendix.pdf)
     - [Experiment Instructions and additional materials](CombinedExpMat.pdf)
 
+### Development and Environmental 
+Harriet Brookes-Gray, Vis Taraz, and Simon D. Halliday, 2022, "[The impact of weather shocks on employment outcomes: evidence from South Africa](https://www.cambridge.org/core/journals/environment-and-development-economics/article/abs/impact-of-weather-shocks-on-employment-outcomes-evidence-from-south-africa/3BCEB56BECF654E947D5DC4B1A13DAE2)", *Environment and Development Economics*, 28(3), 285-305. doi:10.1017/S1355770X22000237. Available in pre-print at: [https://scholarworks.smith.edu/env_facpubs/22/](https://scholarworks.smith.edu/env_facpubs/22/). 
+
+
+
 ### Economics Education
 
 - Simon D. Halliday, 2019, "Data Literacy in Economic Development," *The Journal of Economic Education*, 50:3, 284-298, DOI: [10.1080/00220485.2019.1618762](10.1080/00220485.2019.1618762). Based on teaching Economic Development (ECO211) at Smith College, I have developed a series of exercises to model the data analysis that a student would use in analyzing a household survey (the South African National Income Dynamics Study) with either MS Excel or Google Spreadsheets. I report on these in the paper and presented the draft at the CTREE 2016 and LAC-DEV 2016 conferences. See the companion site to the article here: [http://simondhalliday.com/data_literacy_in_economic_development/](http://simondhalliday.com/data_literacy_in_economic_development/). Preprint available [here](https://scholarworks.smith.edu/eco_facpubs/12/).
@@ -24,7 +29,7 @@ layout: page
 Preprint available [here](https://scholarworks.smith.edu/eco_facpubs/11/).
 
 ##  Accepted and Forthcoming 
-- NA at the moment. 
+- D. Girardi, S. Mamunuru, S. D. Halliday, and S. Bowles, "Does studying economics make you selfish?,"" 2021, Forthcoming, *Southern Economic Journal*, UMass Amherst Economics Department Working Paper 2021-07. Available as a pre-print at:  [https://scholarworks.umass.edu/econ_workingpaper/304/](https://scholarworks.umass.edu/econ_workingpaper/304/). 
 
 ## Revisions Requested
 
@@ -32,16 +37,19 @@ Preprint available [here](https://scholarworks.smith.edu/eco_facpubs/11/).
 
 ## Under Review 
 
-- "The Effects of Major-Job Mismatch on Early Career Earnings and Job Satisfaction," with Roger Kaufman and Louise Yu. We use the U.S. Department of Education's Baccalaureate and Beyond restricted survey data to estimate the determinants of major-job mismatch and its effects on post-graduate earnings and job satisfaction. After controlling for ability, we find that graduates who chose undergraduate majors that provided substantial occupational and job-specific training are more likely to work in jobs that are closely related to their majors one and four years after graduation and have higher earnings and greater job satisfaction. *Under Review*. Draft available [here](http://simondhalliday.com/papers/RIHE-D-19-00324_submitted.pdf).
-- "What do we think an economics student should know? A machine learning investigation of research and intermediate-level texts" with Samuel Bowles, Wendy Carlin and Sahana Subramanyam. We explore what machine learning textual analysis can tell us about how the content of the texts for intermediate microeconomics and macroeconomics courses has reflected changes in economic research and in the economy. Topic modeling applied to the corpus of 27 thousand papers in top research journals in the past century allows us to map the content of the textbooks against the evolution of published research. *Under Review*. Draft available [here](http://simondhalliday.com/papers/bchs_2019_whatdowethink.pdf).
-- "Lies, Labor and Luck" with Oumayma Koulouh '19. We study the differences in lying behavior between real-effort and luck tasks. We conduct an experiment with a 2 by 2 factorial design in which we observe lying behavior at the individual level. To be submitted Summer 2019. Presented at LACBEE 2019. *Under Review*. Paper draft available [here](http://simondhalliday.com/papers/halliday_koulouh_2019.pdf). 
-- "Does Economics Make you Selfish?" with Sai Mamunuru, Daniele Girardi, and Samuel Bowles. We explore the effect of economics courses on students’ preferences and economic policy opinions. Presented by co-author at CTREE 2019. Presented by me at SEA 2019. *Under review*. Draft available [here](http://simondhalliday.com/papers/Does_economics_make_you_selfish.pdf).
+
+## Editing for review
+
+
+
+
+
 
 ## Being Edited or Revised for Submission
-
+- "What do we think an economics student should know? A machine learning investigation of research and intermediate-level texts" with Samuel Bowles, Wendy Carlin and Sahana Subramanyam. We explore what machine learning textual analysis can tell us about how the content of the texts for intermediate microeconomics and macroeconomics courses has reflected changes in economic research and in the economy. Topic modeling applied to the corpus of 27 thousand papers in top research journals in the past century allows us to map the content of the textbooks against the evolution of published research. *Under Review*. Draft available [here](http://simondhalliday.com/papers/bchs_2019_whatdowethink.pdf).
+- "Lies, Labor and Luck" with Oumayma Koulouh '19. We study the differences in lying behavior between real-effort and luck tasks. We conduct an experiment with a 2 by 2 factorial design in which we observe lying behavior at the individual level.  Presented at LACBEE 2019. *Editing for Review*. Paper draft available [here](http://simondhalliday.com/papers/halliday_koulouh_2019.pdf). 
 - "Teaching Social Preferences", Despite advances in evidence and theory, few examples exist for teaching social preferences in undergraduate microeconomics courses. In this paper I address the gap in the literature by proposing four models in which such preferences can be taught in an undergraduate microeconomics course that use graphical analysis and algebra to teach constrained optimization, externalities, and exchange. Presented at CTREE, 2019. 
-- "Risk-Taking in the Classroom:" Co-authored with Justine Burns and Malcolm Keswell ( University of Cape Town), this paper is based on an experiment with intermediate microeconomics students at the University of Cape Town where we varied the number of negative points a student could receive for an incorrect answer to assess attitudes to risk. Available as SALDRU [Working Paper 87](http://www.saldru.uct.ac.za/home/index.php?/component/option,com_docman/Itemid,32/gid,437/task,doc_download/). *Being revised*.
-- "Don't Take What Isn't Yours: Giving, Taking and Punishment:" The paper is based on experiments I did at the University of Cape Town. An early version of the paper is in the Economic Research South Africa working paper series as [Working Paper 211](http://ideas.repec.org/p/rza/wpaper/211.html). *Editing for submission*. People punish taking more than they do non-generosity.
+
 
 ## Working Papers 
 - "Honesty at the Margin:  Experiments on the Dynamics of Deception" joint with Jonathan Lafky and Alistair Wilson. Our paper examines the evolution of dishonesty over time. In particular, we focus on the following question: In market activities where dishonesty is rewarded, does others’ dishonesty crowd out honest participants, or instead do initially honest types evolve to become more dishonest? Our paper responds to a large experimental literature rooted in the Fischbacher and Föllmi-Heusi (2013) framework, which has shown a robust preference for honest dealings. However, this research is focused on static settings, examining short-run behavior. Our project instead uses the same die-rolling paradigm to examine questions about long-run behavior. In an environment with both an extensive-margin decision on whether to engage, and an intensive-margin decision over whether to act dishonestly, our project measures which margin is most important for selection, and whether preferences for honesty are robust to long-run forces. 
@@ -50,10 +58,19 @@ Preprint available [here](https://scholarworks.smith.edu/eco_facpubs/11/).
 ## Work in Progress
 - Gabriel Burdin, Fabio Landini and I are developing experiments on delegation and power related to our previous paper. We will be running experiments in Spring 2020. 
 
-## Chapters 
-- "Global Public Goods" published in [Running the Economy](http://www.amazon.co.uk/Running-Economy-Open-University-Team/dp/1780079540), Santos et al (eds). Open University Press. My chapter covers game theory, global commons, and collective action.
+## Chapters in Books
+- 
+- Simon D. Halliday, 2015, "Global Public Goods" published in [Running the Economy](http://www.amazon.co.uk/Running-Economy-Open-University-Team/dp/1780079540), Santos et al (eds). Open University Press. My chapter covers game theory, global commons, and collective action.
+
+### Forthcoming 
+- S. D. Halliday and J. E. Tierney, "Revolutionizing teaching economics online with artificial intelligence,"" in Teaching Economics Online, A. al Bahrani and P. Chaudhury, Eds., Edward Elgar, forthcom- ing (2024), ch. 3.
 
 ## Policy 
 - *Report to the Department of Land Affairs, South Africa*: With Malcolm Keswell, Susan Godlonton, and Tim Brophy. The report summarized our work and preliminary results from the Quality of Life Survey.
 
+
+## Orphaned Working Papers 
+- "The Effects of Major-Job Mismatch on Early Career Earnings and Job Satisfaction," with Roger Kaufman and Louise Yu. We use the U.S. Department of Education's Baccalaureate and Beyond restricted survey data to estimate the determinants of major-job mismatch and its effects on post-graduate earnings and job satisfaction. After controlling for ability, we find that graduates who chose undergraduate majors that provided substantial occupational and job-specific training are more likely to work in jobs that are closely related to their majors one and four years after graduation and have higher earnings and greater job satisfaction. *Orphaned for now*. Draft available [here](http://simondhalliday.com/papers/RIHE-D-19-00324_submitted.pdf).
+- "Risk-Taking in the Classroom:" Co-authored with Justine Burns and Malcolm Keswell ( University of Cape Town), this paper is based on an experiment with intermediate microeconomics students at the University of Cape Town where we varied the number of negative points a student could receive for an incorrect answer to assess attitudes to risk. Available as SALDRU [Working Paper 87](http://www.saldru.uct.ac.za/home/index.php?/component/option,com_docman/Itemid,32/gid,437/task,doc_download/). *Orphaned for now*.
+- "Don't Take What Isn't Yours: Giving, Taking and Punishment:" The paper is based on experiments I did at the University of Cape Town. An early version of the paper is in the Economic Research South Africa working paper series as [Working Paper 211](http://ideas.repec.org/p/rza/wpaper/211.html). *Orphaned for now*. People punish taking more than they do non-generosity.
 
