@@ -1,7 +1,7 @@
 ---
 title: "Microeconomics: Competition, Conflict and Coordination"
 #subtitle: "A Text in Microeconomics"
-author: "Samuel Bowles and Simon Halliday"
+author: "Samuel Bowles and Simon D. Halliday"
 date: "`r Sys.Date()`"
 output: tint::tintHtml
     #tufte::tufte_html 
@@ -95,6 +95,8 @@ The interactive e-book contains the following support for students:
 
 These are also available as PDFs with solutions (for the math questions and checkpoint questions) and MSWord documents and PDFs (for the MCQs). 
 
+## Errata or issues 
+As with any first edition of a book (especially a book of this length) errors will arise in the writing, the supplementary materials, and so on. If you find any errors, please add them to the [linked Google sheet](https://docs.google.com/spreadsheets/d/1tXSyyj3bhfizq3nUAzlr5VxOSoGc4XvhP4_lfc4If2g/edit?gid=0#gid=0). We will be consulting the Google sheet when we edit the book for the next edition and potentially earlier if we are able to compile versions of the flat PDF of the book in the interim. 
 
 ## What are the flavors M:CCC?
 ```{r fig-margin2, fig.margin = TRUE, fig.cap = "MBIE, 2006, PUP", fig.width=1, fig.height=1, cache=TRUE, echo = FALSE}
