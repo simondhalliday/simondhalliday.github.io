@@ -91,7 +91,7 @@ Papers](https://docs.iza.org/dp15057.pdf)" is a helpful guide for writing econom
 
 ## Using R, Data Analysis, and Causal Inference 
 
-- Healy, Kieran, [Data Visualization:  A practical introduction](https://kieranhealy.org/publications/dataviz/)
+- Healy, Kieran, [Data Visualization:  A practical introduction](https://socviz.co/)
 - Grolemund, Garrett and Hadley Wickham, [R 4 Data Science](https://r4ds.hadley.nz/)
 - Huntington-Klein, Nick, [The Effect](https://theeffectbook.net/)
 - Cunningham, Scott, [Causal Inference: The Mixtape](https://mixtape.scunning.com/)
