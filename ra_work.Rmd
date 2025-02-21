@@ -89,6 +89,20 @@ Papers](https://docs.iza.org/dp15057.pdf)" is a helpful guide for writing econom
 - @knopf2006literature provides a useful guide about how to write a literature review in political science. The insights transfer to the other social sciences. 
 - Another guide on how to write literature reviews in economics specifically can be found in the [slides](https://eml.berkeley.edu/~webfac/eichengreen/e191_sp12/romem_econ191_2-7-12.pdf) provided by @romem2012literature for Barry Eichengreen's course at Berkeley.  
 
+## Using R, Data Analysis, and Causal Inference 
+
+- Healy, Kieran, [Data Visualization:  A practical introduction](https://kieranhealy.org/publications/dataviz/)
+- Grolemund, Garrett and Hadley Wickham, [R 4 Data Science](https://r4ds.hadley.nz/)
+- Huntington-Klein, Nick, [The Effect](https://theeffectbook.net/)
+- Cunningham, Scott, [Causal Inference: The Mixtape](https://mixtape.scunning.com/)
+
+
+Advanced work: 
+
+- "Advanced R" (Hadley Wickham)
+- "Geocomputation with R" (Robin Lovelace, Jakub Nowosad and Jannes Muenchow)
+- "Spatial Data Science" (Edzer Pebesma and Roger Bivand)
+
 ## Writing and Research Books/Articles
 
 - Orwell, George, 1946, 'Politics and the English Language': [http://www.orwell.ru/library/essays/politics/english/e_polit/](http://www.orwell.ru/library/essays/politics/english/e_polit/) (accessed 12 July 2017)
