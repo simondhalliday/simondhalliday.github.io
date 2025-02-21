@@ -1,5 +1,9 @@
 ---
-title: "Research Assistant (RA) Work"
+title: |
+  | Research Assistant (RA) Work
+subtitle: "Center for Economy and Society, SNF Agora Institute, JHU"
+author: "Simon D. Halliday, PhD"
+date: "Spring 2025"
 output: html_document
 bibliography: rawork.bib
 link-citations: yes
