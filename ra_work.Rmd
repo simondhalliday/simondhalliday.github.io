@@ -1,6 +1,8 @@
 ---
 title: "Research Assistant (RA) Work"
 output: html_document
+bibliography: rawork.bib
+link-citations: yes
 ---
 
 ```{r setup, include=FALSE}
@@ -77,6 +79,15 @@ Before reading anything I say below, read or watch the following. These are almo
 - If you haven't taken economics: Dasgupta, Partha, 2007, [*Economics, A Very Short Introduction*](http://amzn.to/2wZCNGE), Oxford University Press. 
 - If you've taken introductory economics, but no behavioral economics: Baddeley, Michelle, 2017, [*Behavioural Economics: A Very Short Introduction*](http://amzn.to/2y9GDeg), Oxford University Press. 
 
+## Conducting work in empirical economics 
+
+
+- @gitter2021guide, "[A Guide for Student-Led Undergraduate Research in Empirical Micro-Economics.](https://journalofeconomicsteaching.org/a-guide-for-student-led-undergraduate-research-in-empirical-micro-economics-gitter/)" is a guide for how to conduct a research project in empirical microeconomics. 
+- @bellemare2022doing, "[Doing Economics](https://mitpress.mit.edu/9780262543552/doing-economics/)" is a short book that covers a variety of things one should know about graduate school in economics. The first chapter is pertinent to what we are trying to achieve in our course. 
+- @nikolov2022writing, "[Writing Tips for Economics Research
+Papers](https://docs.iza.org/dp15057.pdf)" is a helpful guide for writing economics research articles. Some of what Nikolov mentions will be helpful for us. 
+- @knopf2006literature provides a useful guide about how to write a literature review in political science. The insights transfer to the other social sciences. 
+- Another guide on how to write literature reviews in economics specifically can be found in the [slides](https://eml.berkeley.edu/~webfac/eichengreen/e191_sp12/romem_econ191_2-7-12.pdf) provided by @romem2012literature for Barry Eichengreen's course at Berkeley.  
 
 ## Writing and Research Books/Articles
 
@@ -114,3 +125,6 @@ Note, I haven't had the chance to create links to all of these yet.
 - Lewis, Michael, 2017, [*The Undoing Project*](https://www.amazon.com/gp/product/0393254593/ref=as_li_tl?ie=UTF8&tag=amanuensis-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0393254593&linkId=d4fe77e5756723e42c16f58af2f3fdcc), WW Norton and Co. *A biography of the relationship between Kahneman and Tversky and the work they created.*
 
 - I used to recommend this book, until the author became involved in a variety of controversies around fake data and fraud. I no longer use the author's work and don't recommend anyone trust it.  ~~Dan Ariely, *Predictably Irrational*, one of the first books to popularize behavioral economics. The one problem I have with it is he presume the reader knows what "rationality" is and never adequately defines the thing he's arguing us humans don't adhere to.~~
+
+
+## References
