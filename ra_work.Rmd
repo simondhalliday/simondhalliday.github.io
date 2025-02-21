@@ -1,5 +1,5 @@
 ---
-title: "RA Work"
+title: "Research Assistant (RA) Work"
 output: html_document
 ---
 
@@ -10,10 +10,10 @@ knitr::opts_chunk$set(echo = TRUE)
 Working as a research assistant (RA) means having to learn a variety of skills in a short time, leveraging what you know to become a productive team member, enabling your team to become more productive by finding ways to make the team do more and better research. 
 Being an RA also involves providing good, kind feedback to your team members and to your professor. 
 
-Research in economics involves a lot of the following: 
+Research in economics and political economy involves a lot of the following: 
 
 - developing a research question 
-- designing experiments & choosing research methods
+- designing & choosing research methods
 - writing 
 - data analysis
     * data management 
@@ -36,13 +36,14 @@ In working with me, you'll need to create logins to a variety of websites and ma
 - Create an account at [Overleaf.com](https://www.overleaf.com/) with your university email address. I will invite you to projects I am working on in Overleaf. 
 - Create an account at [github.com](https://github.com) using your university email address. Be sure to use a professional-sounding ID for github, preferably "firstnamelastname" or something similar using initials. You will be able to use your github account later when you apply for jobs and people can see what work you've been involved in. 
 - Get an account as a student at [core-econ.org](http://www.core-econ.org/). *The Economy* (2.0) is a great free textbook resource we'll use to introduce or revise economic content. 
+- Get an account at Open AI's [ChatGPT](https://chatgpt.com/). I would recommend getting a paid account if you can afford it. 
 
-##Download
+## Downloads
 
 - Download [Slack](https://slack.com/) on your devices. Depending on what you're doing, we may use it to communicate as a team and it's better than email for team communication. I will send you invites to an 'RA' Slack channel. 
 - Download and install R: [https://www.r-project.org](https://www.r-project.org) (which version you download will depend on your operating system - it's almost always easier on a Mac, sometimes tougher on a Windows machine)
-- Install LaTeX for Mac/Windows: [https://www.latex-project.org/get/](https://www.latex-project.org/get/) (I'll explain what it is later and why we'll use it)
-- Download and install [RStudio](https://www.rstudio.com/)
+- Install LaTeX for Mac/Windows: [https://www.latex-project.org/get/](https://www.latex-project.org/get/) (I'll explain what it is later and why we need it)
+- Download and install [RStudio](https://www.rstudio.com/). 
 - Download and install [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) (choose whichever suits your operating system)
 - Accept the invite and create a login for overleaf.com (I'll be sending you an invite shortly)
 - If you haven't done it yet, make sure you've created an account with your university email on Zotero. 
@@ -50,24 +51,25 @@ In working with me, you'll need to create logins to a variety of websites and ma
 ## Preliminaries 
 
 - Do the "Introduction to R" course on datacamp.com. Once you've done that, let me know and I'll outline the rest of the syllabus that I'll have you cover. 
-- Do the "trygit" course on codeschool: https://www.codeschool.com/learn/git to learn the basics of git (we'll mostly use git and github through R Studio, but it's still useful for you to get a sense of what git is and why it's useful).
+- Do the "trygit" course on codeschool: https://www.codecademy.com/learn/learn-git to learn the basics of git (we'll mostly use git and github through R Studio, but it's still useful for you to get a sense of what git is and why it's useful).
+- If you don't have much experience with R, I'd recommend looking at some basic: [R Recipes](https://posit.cloud/learn/recipes). 
 
 
-# Reading 
+## Reading 
 As you get started on working with me, I'll have you read several books and articles.
 At first, the [reading](#writing-and-research-books) will cover ideas for undertaking research, writing, editing papers, and more. 
 I shall also recommend books in economics that I hope are tailored to your interests, some of which I mention [below](#economics-books). 
 
 ## Preliminaries
-Before reading anything I say below, read or watch the following: 
+Before reading anything I say below, read or watch the following. These are almost all pitched in terms of "economics majors" because my background is in economics and I teach economics-related courses in Moral and Political Economy. 
 
 - Chris Blattman at Vox ["10 things not enough kids know before going to college"](https://www.vox.com/2015/1/7/7500705/college-advice). 
 - Adam Ozimek at Forbes ["Advice For A Career In Economics"](https://www.forbes.com/sites/modeledbehavior/2014/10/18/advice-for-a-career-in-economics/#54b9b5d0494b) 
 - U. Houston ["Advice to Start a Successful Career with an Economics Major"](http://www.uh.edu/class/economics/undergraduate/internship/general-advice/)
-- Watch this short video: ["Nobel laureates given advice to young economists"](https://www.youtube.com/watch?v=k9X0ogs0Ihc). 
+- Watch this short video: ["Nobel laureates give advice to young economists"](https://www.youtube.com/watch?v=k9X0ogs0Ihc). 
 - The American Economic Association's video on ["A career in Economics... it's much more than you think"](https://vimeo.com/135871291)
 
-## First few books: 
+## First few books 
 
 - Booth, Colomb, Williams, Bizup and Fitzgerald, 2016, [*The Craft of Research*](https://www.amazon.com/gp/product/022623973X?ie=UTF8&tag=amanuensis-20&camp=1789&linkCode=xm2&creativeASIN=022623973X), 4th edition, U. Chicago Press. **I know the third edition better than the fourth edition, but apparently it is improved and updated (and really helpful!)**. 
 - Schwabish, Jonathan, 2017, [Better Presentations]("http://amzn.to/2urG3JL"), Columbia University Press. **An excellent book to learn how to present well, which you'll have to do often during your college experience if you expect to do well.** (Want more? Look at Tim Harford's post ["Books that will help you give a superb talk"](http://timharford.com/2017/05/books-that-will-help-you-give-a-superb-talk/))
@@ -105,8 +107,10 @@ Note, I haven't had the chance to create links to all of these yet.
 
 ## Behavioral Economics
 
-- Dan Ariely, *Predictably Irrational*, one of the first books to popularize behavioral economics. The one problem I have with it is he presume the reader knows what "rationality" is and never adequately defines the thing he's arguing us humans don't adhere to. 
+
 - Daniel Kahneman, *Thinking Fast and Slow*, Kahneman's commentary on the dual-processing system of our minds and how each has benefits and costs and influences how many humans respond in different contexts. 
 - Richard Thaler, *Misbehaving*, *This is Thaler's memoir as an introduction to work he's done in behavioral economics. Fun, especially as an audiobook, although occasionally a bit too overgeneral*
 - Richard Thaler & Cass Sunstein, *Nudge*. One of the "original" behavioral economics books, with an emphasis on public policy and libertarian paternalism. 
 - Lewis, Michael, 2017, [*The Undoing Project*](https://www.amazon.com/gp/product/0393254593/ref=as_li_tl?ie=UTF8&tag=amanuensis-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0393254593&linkId=d4fe77e5756723e42c16f58af2f3fdcc), WW Norton and Co. *A biography of the relationship between Kahneman and Tversky and the work they created.*
+
+- I used to recommend this book, until the author became involved in a variety of controversies around fake data and fraud. I no longer use the author's work and don't recommend anyone trust it.  ~~Dan Ariely, *Predictably Irrational*, one of the first books to popularize behavioral economics. The one problem I have with it is he presume the reader knows what "rationality" is and never adequately defines the thing he's arguing us humans don't adhere to.~~
