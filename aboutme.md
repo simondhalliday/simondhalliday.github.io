@@ -5,9 +5,9 @@ subtitle: Bio and basic facts
 ---
 
 My name is Simon D. Halliday. 
-- I am an associate professor of Economics Education in the School of Economics at the University of Bristol, UK. You can contact me at [simon.halliday@bristol.ac.uk](mailto:simon.halliday@bristol.ac.uk). You can find my cv [here](../more/halliday_cv.pdf). 
-- I was previously an assistant professor of economics at Smith College, MA, USA; a lecturer at Royal Holloway, University of London, and lecturer at the University of Cape Town.   
-- I teach intermediate microeconomics, behavioral economics, development economics, the political economy of African development, introductory statistics and econometrics, and introductory microeconomics. 
+- I am an [associate research professor](https://snfagora.jhu.edu/person/simon-halliday/) and associate director in the [Center for Economy and Society](https://snfagora.jhu.edu/project/center-for-economy-and-society/) and Johns Hopkins University. You can contact me at [simon.halliday@jhu.edu](mailto:simon.halliday@jhu.edu). You can find my cv [here](../more/halliday_cv.pdf).
+- I was previously an associate professor of Economics Education in the School of Economics at the University of Bristol, UK; an assistant professor of economics at Smith College, MA, USA; a lecturer at Royal Holloway, University of London, and lecturer at the University of Cape Town.   
+- I teach courses like People, Power, and Power: The Economics of the Workplace; Conflict, Coordination, and Competition: Microeconomics and Political Economy, intermediate microeconomics, behavioral economics, development economics, the political economy of African development, introductory statistics and econometrics, and introductory microeconomics. 
 - I do research in behavioral and experimental economics, with a focus on social preferences (reciprocity and social norms) and institutions (ratings, punishment, communication). 
 - I also conduct work in applied microeconomics and data science in economcs, such as a recent paper applyng machine learning to a corpus of economics texts. 
 - I also have a strong interest in research in economics education, particularly with respect to data literacy, data analysis, R and more. 
