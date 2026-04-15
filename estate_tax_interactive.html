@@ -1475,16 +1475,40 @@
                 `<div class="meta">${escapeHtml(category)}</div>`
               ];
 
+              function pushLabeledValue(label, value) {
+                if (value) {
+                  lines.push(`<div class="value">${escapeHtml(label)}: ${escapeHtml(value)}</div>`);
+                }
+              }
+
               if (exemption && rate) {
-                lines.push(`<div class="value">Exemption: ${escapeHtml(exemption)}</div>`);
-                lines.push(`<div class="value">Rate: ${escapeHtml(rate)}</div>`);
+                pushLabeledValue("Exemption", exemption);
+                pushLabeledValue("Rate", rate);
               } else if (rate) {
-                lines.push(`<div class="value">Rate: ${escapeHtml(rate)}</div>`);
+                pushLabeledValue("Rate", rate);
               } else if (details.includes(";")) {
                 details.split(";").forEach((part) => {
                   const trimmed = part.trim();
                   if (trimmed) {
-                    lines.push(`<div class="value">${escapeHtml(trimmed)}</div>`);
+                    const [labelPrefix, rawValue] = trimmed.includes(":")
+                      ? trimmed.split(/:(.+)/).slice(0, 2)
+                      : ["Tax", trimmed];
+                    const value = (rawValue || "").trim();
+                    if (value.includes("%")) {
+                      const rateMatch = value.match(/([^\s]+%)$/);
+                      const detailRate = rateMatch ? rateMatch[1] : "";
+                      const detailExemption = rateMatch
+                        ? value.slice(0, value.length - detailRate.length).trim()
+                        : value;
+                      if (detailExemption) {
+                        pushLabeledValue(`${labelPrefix} exemption`, detailExemption);
+                      }
+                      if (detailRate) {
+                        pushLabeledValue(`${labelPrefix} rate`, detailRate);
+                      }
+                    } else {
+                      pushLabeledValue(labelPrefix, value);
+                    }
                   }
                 });
               } else if (details) {
