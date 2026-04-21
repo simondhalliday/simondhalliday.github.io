@@ -212,10 +212,139 @@
       padding-top: 6px;
     }
 
+    /* ─── Mobile: floating toggle button ─── */
+    #sites-toggle {
+      display: none;
+      position: fixed;
+      bottom: 24px;
+      right: 20px;
+      z-index: 1000;
+      background: #1a1a1a;
+      color: #f5f2ec;
+      border: none;
+      border-radius: 28px;
+      padding: 11px 20px 11px 16px;
+      font-family: 'Georgia', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.35);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #sites-toggle .toggle-icon {
+      font-size: 1.05rem;
+      line-height: 1;
+    }
+
+    /* ─── Mobile: bottom drawer ─── */
+    #drawer {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: #f5f2ec;
+      border-top: 2px solid #1a1a1a;
+      border-radius: 14px 14px 0 0;
+      max-height: 70vh;
+      overflow-y: auto;
+      transform: translateY(100%);
+      transition: transform 0.28s ease;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.18);
+    }
+
+    #drawer.open {
+      transform: translateY(0);
+    }
+
+    .drawer-handle-row {
+      position: sticky;
+      top: 0;
+      background: #f5f2ec;
+      z-index: 2;
+      padding: 10px 16px 8px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .drawer-handle {
+      width: 36px;
+      height: 4px;
+      background: #ccc;
+      border-radius: 2px;
+      margin: 0 auto 8px;
+    }
+
+    .drawer-title {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    .drawer-close {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      line-height: 1;
+      color: #555;
+      cursor: pointer;
+      padding: 0 2px;
+    }
+
+    /* ─── Backdrop (tapping outside closes drawer) ─── */
+    #drawer-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 998;
+      background: transparent;
+    }
+
+    /* ─── Responsive breakpoint ─── */
+    @media (max-width: 700px) {
+      header {
+        padding: 10px 14px 8px;
+      }
+      header h1 { font-size: 0.95rem; }
+      header p  { font-size: 0.68rem; }
+
+      .container {
+        height: calc(100vh - 50px);
+      }
+
+      /* Hide desktop sidebar */
+      #sidebar {
+        display: none !important;
+      }
+
+      /* Map full width */
+      #map {
+        width: 100%;
+      }
+
+      /* Show floating button and drawer */
+      #sites-toggle {
+        display: flex;
+      }
+
+      #drawer {
+        display: block;
+      }
+    }
+
     /* ─── Print styles ─── */
     @media print {
       .container { height: auto; }
       #sidebar { display: none; }
+      #sites-toggle { display: none; }
+      #drawer { display: none; }
       #map { height: 90vh; filter: grayscale(100%) contrast(1.15); }
     }
   </style>
@@ -233,6 +362,24 @@
     <div class="sidebar-header">12 Sites — click to zoom</div>
     <div id="site-list"></div>
   </div>
+</div>
+
+<!-- Mobile floating button -->
+<button id="sites-toggle" aria-label="Show site list">
+  <span class="toggle-icon">☰</span> Sites
+</button>
+
+<!-- Mobile bottom drawer -->
+<div id="drawer-backdrop"></div>
+<div id="drawer" role="dialog" aria-label="Site list">
+  <div class="drawer-handle-row">
+    <div>
+      <div class="drawer-handle"></div>
+      <span class="drawer-title">12 Sites — tap to zoom</span>
+    </div>
+    <button class="drawer-close" id="drawer-close-btn" aria-label="Close">✕</button>
+  </div>
+  <div id="drawer-list"></div>
 </div>
 
 <script>
@@ -362,12 +509,66 @@
     maxZoom: 19
   }).addTo(map);
 
-  // ── Markers and sidebar ───────────────────────────────────────────────────────
-  const markers = [];
-  const sidebarEl = document.getElementById('site-list');
-  let activeEntry = null;
+  // ── Drawer toggle logic ──────────────────────────────────────────────────────
+  const drawer        = document.getElementById('drawer');
+  const drawerBackdrop= document.getElementById('drawer-backdrop');
+  const toggleBtn     = document.getElementById('sites-toggle');
+  const closeBtn      = document.getElementById('drawer-close-btn');
 
-  sites.forEach((site, i) => {
+  function openDrawer() {
+    drawer.classList.add('open');
+    drawerBackdrop.style.display = 'block';
+    toggleBtn.innerHTML = '<span class="toggle-icon">✕</span> Close';
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    drawerBackdrop.style.display = 'none';
+    toggleBtn.innerHTML = '<span class="toggle-icon">☰</span> Sites';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+  });
+  closeBtn.addEventListener('click', closeDrawer);
+  drawerBackdrop.addEventListener('click', closeDrawer);
+
+  // ── Markers, sidebar, and drawer ─────────────────────────────────────────────
+  const markers    = [];
+  const sidebarEl  = document.getElementById('site-list');
+  const drawerList = document.getElementById('drawer-list');
+  let activeDesktop = null;
+  let activeMobile  = null;
+
+  function makeEntry(site, marker, isMobile) {
+    const entry = document.createElement('div');
+    entry.className = 'site-entry';
+    entry.innerHTML = `
+      <div class="site-number">${site.num}</div>
+      <div class="site-text">
+        <div class="site-name">${site.name}</div>
+        <div class="site-neighborhood">${site.neighborhood}</div>
+        <div class="site-theme">${site.theme}</div>
+      </div>
+    `;
+
+    entry.addEventListener('click', () => {
+      // Zoom map
+      map.setView([site.lat, site.lng], 15, { animate: true });
+      marker.openPopup();
+
+      // Highlight in this list
+      const prev = isMobile ? activeMobile : activeDesktop;
+      if (prev) prev.classList.remove('active');
+      entry.classList.add('active');
+      if (isMobile) { activeMobile = entry; closeDrawer(); }
+      else           { activeDesktop = entry; }
+    });
+
+    return entry;
+  }
+
+  sites.forEach((site) => {
     // Custom div icon (diamond pin shape)
     const icon = L.divIcon({
       className: '',
@@ -388,34 +589,26 @@
 
     markers.push(marker);
 
-    // Sidebar entry
-    const entry = document.createElement('div');
-    entry.className = 'site-entry';
-    entry.innerHTML = `
-      <div class="site-number">${site.num}</div>
-      <div class="site-text">
-        <div class="site-name">${site.name}</div>
-        <div class="site-neighborhood">${site.neighborhood}</div>
-        <div class="site-theme">${site.theme}</div>
-      </div>
-    `;
+    // Desktop sidebar entry
+    const desktopEntry = makeEntry(site, marker, false);
+    sidebarEl.appendChild(desktopEntry);
 
-    entry.addEventListener('click', () => {
-      map.setView([site.lat, site.lng], 15, { animate: true });
-      marker.openPopup();
-      if (activeEntry) activeEntry.classList.remove('active');
-      entry.classList.add('active');
-      activeEntry = entry;
-    });
+    // Mobile drawer entry (separate DOM node)
+    const mobileEntry = makeEntry(site, marker, true);
+    drawerList.appendChild(mobileEntry);
 
+    // Clicking a map pin highlights in whichever list is active
     marker.on('click', () => {
-      if (activeEntry) activeEntry.classList.remove('active');
-      entry.classList.add('active');
-      activeEntry = entry;
-      entry.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      // desktop
+      if (activeDesktop) activeDesktop.classList.remove('active');
+      desktopEntry.classList.add('active');
+      activeDesktop = desktopEntry;
+      desktopEntry.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      // mobile
+      if (activeMobile) activeMobile.classList.remove('active');
+      mobileEntry.classList.add('active');
+      activeMobile = mobileEntry;
     });
-
-    sidebarEl.appendChild(entry);
   });
 
   // Fit all markers on load
