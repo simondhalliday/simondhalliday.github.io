@@ -5,17 +5,10 @@ description: "Books, publications, working papers, and current projects."
 
 ## Books
 
+- Simon D. Halliday and the CORE Econ team, *Understanding Our Economy*. CORE Econ, forthcoming 2026. [Book site](http://books.core-econ.org/understanding-our-economy/).
 - Samuel Bowles and Simon D. Halliday, *Microeconomics: Competition, Conflict, and Coordination*. Oxford University Press, 2022. [Book site](microeconomics/) and [OUP page](https://global.oup.com/academic/product/microeconomics-9780198843207).
 
 ## Peer-Reviewed Publications
-
-### Economics Education
-
-- Simon D. Halliday and S. M. Mamunuru, "Updating our approach to intermediate microeconomics," *The American Economist*, 70(2), 2025.
-- Simon D. Halliday, C. Makler, D. McKee, and A. Papadopoulou, "Improving student comprehension through interactive model visualization," *International Review of Economics Education*, 47, 100296, 2024.
-- Simon D. Halliday, "Data literacy in economic development," *The Journal of Economic Education*, 50(3), 284-298, 2019. [DOI](https://doi.org/10.1080/00220485.2019.1618762).
-- Simon D. Halliday, "Promoting an ethical economics classroom through partnership," *International Journal for Students as Partners*, 3(1), 182-189, 2019. [Article](https://mulpress.mcmaster.ca/ijsap/article/view/3623).
-- Thomas Dvorak, Simon D. Halliday, Michael O'Hara, and Aaron Swoboda, "Efficient empiricism: Streamlining teaching, research, and learning in empirical courses," *The Journal of Economic Education*, 50(3), 242-257, 2019. [DOI](https://doi.org/10.1080/00220485.2019.1618765).
 
 ### Behavioral and Experimental Economics
 
@@ -27,6 +20,14 @@ description: "Books, publications, working papers, and current projects."
 
 - Harriet Brookes-Gray, Vis Taraz, and Simon D. Halliday, "The impact of weather shocks on employment outcomes: evidence from South Africa," *Environment and Development Economics*, 28(3), 285-305, 2022. [DOI](https://doi.org/10.1017/S1355770X22000237).
 
+### Economics Education
+
+- Simon D. Halliday and S. M. Mamunuru, "Updating our approach to intermediate microeconomics," *The American Economist*, 70(2), 2025.
+- Simon D. Halliday, C. Makler, D. McKee, and A. Papadopoulou, "Improving student comprehension through interactive model visualization," *International Review of Economics Education*, 47, 100296, 2024.
+- Simon D. Halliday, "Data literacy in economic development," *The Journal of Economic Education*, 50(3), 284-298, 2019. [DOI](https://doi.org/10.1080/00220485.2019.1618762).
+- Simon D. Halliday, "Promoting an ethical economics classroom through partnership," *International Journal for Students as Partners*, 3(1), 182-189, 2019. [Article](https://mulpress.mcmaster.ca/ijsap/article/view/3623).
+- Thomas Dvorak, Simon D. Halliday, Michael O'Hara, and Aaron Swoboda, "Efficient empiricism: Streamlining teaching, research, and learning in empirical courses," *The Journal of Economic Education*, 50(3), 242-257, 2019. [DOI](https://doi.org/10.1080/00220485.2019.1618765).
+
 ## Chapters in Books
 
 - Simon D. Halliday, E. Bottorff, M. Lopez, A. Johnson, and A. Papadopoulou, "Taking an economic literacy approach in understanding our economy," in *Teaching Literacy-Targeted Principles of Economics*, A. Cohen and S. Wolla, eds., Edward Elgar, forthcoming 2026.
@@ -36,14 +37,14 @@ description: "Books, publications, working papers, and current projects."
 
 ## Under Review
 
-- Samuel Bowles, Wendy Carlin, Simon D. Halliday, and Sahana Subramanyam, "What do we think an economist should know? A machine learning investigation of research and intermediate-level texts," 2025, revise and resubmit at *History of Political Economy*.
+- Samuel Bowles, Wendy Carlin, Simon D. Halliday, and Sahana Subramanyam, "What do we think an economist should know? A machine learning investigation of research and intermediate-level texts," 2025, withdrawn revise and resubmit at *History of Political Economy*.
 - Simon D. Halliday, Jonathan Lafky, and Alistair Wilson, "Honesty at the margin and in the limit," 2025, revise and resubmit at *AEJ: Microeconomics*.
 
 ## Works in Progress
 
 - M. Bechdolf, Simon D. Halliday, E. Malthouse, and A. Papadopoulou, "Beyond the contract: Fairness, observability, and discretionary effort."
 - Simon D. Halliday and G. Liu, "Civic thought and economic education."
-- Simon D. Halliday, G. Liu, E. Marshall, and A. Underwood, project collecting data during 2025-2026.
+- Simon D. Halliday, Emily Marshall, Glory Liu, Anthony Underwood, and Doug Norton, "PPE and Civic Thought Programs." [Dashboard](https://ppe-civicthought-requirements.simondhalliday.com/).
 - Simon D. Halliday, V. Jayaraman, and P. Tripathi, "Teaching an economic model of segregation: Evidence, best responses, an in-class activity, and a critical reflection."
 - Simon D. Halliday, "Reflective writing and course stories in economics teaching."
 - Simon D. Halliday, "Teaching social preferences."
