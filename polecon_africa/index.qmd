@@ -1,0 +1,20 @@
+---
+title: "Political Economy of Development in Africa"
+description: "Archived seminar materials."
+---
+
+<div class="archive-note">
+<p>This is an archived resource page for a seminar on the political economy of development in Africa.</p>
+</div>
+
+## Materials
+
+- [Syllabus](eco311_f2016_syllabus.pdf)
+- [Lab 1](Lab1.pdf)
+- [Lab 2](Lab2.pdf)
+- [Lab 3](Lab3.pdf)
+- [Lab 4](Lab4.pdf)
+- [Lab 5](Lab5.pdf)
+- [Comprehensive reading list](ECO311-ComprehensiveReadingList.pdf)
+- [Introductory slides](Intro_compressed.pdf)
+- [Final paper guidelines](paper_guidelines.pdf)

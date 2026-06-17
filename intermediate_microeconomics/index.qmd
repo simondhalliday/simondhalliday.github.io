@@ -1,0 +1,35 @@
+---
+title: "Intermediate Microeconomics"
+description: "Archived materials for intermediate microeconomics."
+---
+
+<div class="archive-note">
+<p>This page preserves materials from earlier versions of my intermediate microeconomics teaching.</p>
+</div>
+
+## Course Context
+
+- Instructor: Simon D. Halliday.
+- Course code: ECO250.
+- Main text: [*Microeconomics: Competition, Conflict, and Coordination*](../microeconomics/) by Samuel Bowles and Simon D. Halliday.
+
+## Worksheets
+
+I used worksheets for in-class exercises for a variety of units in the book,
+mainly Units 2 through 9. You can download the original zipped collection
+[here](https://drive.google.com/open?id=1urlQl9gjEcig58TERQabNAIHsJUeCsSK).
+
+## Slides
+
+These slide decks are large, so I recommend downloading them one by one.
+
+- [Preface](https://drive.google.com/open?id=1evGH8BA9OXia8FY273hivoyLCC1AQNEV)
+- [Chapter 1](https://drive.google.com/open?id=1k7_r4hxNJRADJPuSoFlzqFq5DX5S7eMg)
+- [Chapter 2](https://drive.google.com/open?id=1lw5hZx5wQpIcdRWuoWPAsceE9hLqGGKx)
+- [Chapter 3](https://drive.google.com/open?id=1k2YTv9QehU9YSoRw5V2wz7HQV1D3pOzH)
+- Chapter 4: [Part 1](https://drive.google.com/open?id=1z8X-iscH0GiBRBn5XFbkYxqzAQ3HBSmM) and [Part 2](https://drive.google.com/open?id=1eVOsxMSJz5SMzkjBbjSciVP-mmfFIvf2)
+- Chapter 5: [Part 1](https://drive.google.com/open?id=1T9NwIw5_bySpixymSAJcXa0bEmH6Slg9), [Part 2](https://drive.google.com/open?id=1v9TnErLXnLPdv_TYDJu_qZXKPnUPGF-H), and [Part 3](https://drive.google.com/open?id=1Naeeef_rtNQpGYwrWbKTBYnVZL8CDWU-)
+- [Chapter 9](https://drive.google.com/open?id=1kjMZoswpsnIu8E-PoiGckLtb6fcjsSon)
+- Chapter 10: [Part 1](https://drive.google.com/open?id=1FKwY5B7ZKd8NH5Ab7wssiVBXuGrw0TEc) and [Part 2](https://drive.google.com/open?id=1lNHF8IGIx6DFRX3fOLFfR_hxlRTHVtX5)
+- [Chapter 11](https://drive.google.com/open?id=1X7knsd9gMDR0jlezIGiazCwt0u9XBELx)
+- [Chapter 13](https://drive.google.com/open?id=1GZk_e19846JjTo2Zw1MCrhXUJnU5S0Np)
