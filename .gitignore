@@ -1,9 +1,21 @@
-# project
-_site
-.sass-cache
-.vagrant
+# Jekyll / legacy build output
+_site/
+.sass-cache/
+.vagrant/
 
-# general
+# Quarto build state
+.quarto/
+*_cache/
+**/*.quarto_ipynb
+
+# R / RStudio local state
+.Rproj.user/
+.RData
+.Rhistory
+
+# OS/editor cruft
 .DS_Store
 Thumbs.db
 ehthumbs.db
+
+# Keep docs/ tracked for GitHub Pages deploy-from-branch.
