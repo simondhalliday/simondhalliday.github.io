@@ -1,0 +1,9 @@
+---
+title: "People, Power, and Pay Reading List"
+description: "AS.197.327, Fall 2025."
+---
+
+<iframe src="reading-list-2025.pdf" width="100%" height="850" style="border: 1px solid var(--rule);"></iframe>
+
+[Download the reading list](reading-list-2025.pdf)
+

@@ -10,7 +10,7 @@ Moral and Political Economy major in the Center for Economy and Society.
 
 ## Johns Hopkins
 
-- **People, Power, and Pay: The Economics of the Workplace**. AS.197.327, Fall 2024 and Fall 2025.
+- **[People, Power, and Pay: The Economics of the Workplace](people-power-pay/)**. AS.197.327, Fall 2024 and Fall 2025.
 - **Competition, Conflict, and Coordination: Microeconomics and Political Economy**. AS.197.250, Spring 2025.
 - **[Progress](https://progress.simondhalliday.com/)**. First-Year Seminar, Fall 2026.
 
