@@ -29,7 +29,7 @@ library(tidyverse)
   ###   and plot our data
 
 ###   load in data
-quant.dat <- read_csv("http://simondhalliday.github.io/ctree17/data/quantity.csv")
+quant.dat <- read_csv("https://simondhalliday.com/ctree17/data/quantity.csv")
 ```
 
 Now, we need to do some data manipulation to get the data into a form that Hadley calls "tidy data". We will do this using a tool called the "pipe" (%>%) to connect a string of operations that are all being performed on the same dataframe. This is part of the tidyverse package. 

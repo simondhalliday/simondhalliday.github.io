@@ -8,7 +8,7 @@ On this appendix page you will find resources and links based on my article for 
 
 - Citation: [INSERT CITATION HERE UPON RECEIVING IT]. 
 - Author: Simon Halliday, PhD. 
-- Contact: [shalliday@smith.edu](shalliday@smith.edu)
+- Contact: [simon.halliday@jhu.edu](mailto:simon.halliday@jhu.edu)
 
 ## A. Class Context and Syllabus
 1. Syllabus for my class Economic Development (ECO211) in the Economics Department at Smith College  [pdf](https://drive.google.com/open?id=19LTRxGW6fYIELHWc9tzKhKDsAuzO0y9F). 

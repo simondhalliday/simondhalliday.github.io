@@ -21,7 +21,7 @@ options(htmltools.dir.version = FALSE)
 
 | Instructor: Simon Halliday | Office: Wright Hall 234 |
 |---|---|
-| Email: [shalliday@smith.edu](mailto:shalliday@smith.edu) | Office Hours: Tues TBD & Weds: 2-3:30pm |
+| Email: [simon.halliday@jhu.edu](mailto:simon.halliday@jhu.edu) | Office Hours: Tues TBD & Weds: 2-3:30pm |
 | Twitter: [\@simondhalliday](https://twitter.com/simondhalliday) | Schedule: T Th, 1-2:20pm |
 | Skype: sihalliday | Class Venue: Seelye 208 | 
 

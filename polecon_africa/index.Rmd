@@ -8,7 +8,7 @@ Here I include some of the documents from my course for those who wish to peruse
 
 - Instructor: Simon Halliday, PhD. 
 - Course code: ECO311
-- Email/hangouts: [shalliday@smith.edu](shalliday@smith.edu)
+- Email/hangouts: [simon.halliday@jhu.edu](mailto:simon.halliday@jhu.edu)
 - [Syllabus](eco311_f2016_syllabus.pdf)
 
 ## Labs 

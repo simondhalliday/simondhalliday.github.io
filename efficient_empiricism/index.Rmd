@@ -11,7 +11,7 @@ On this appendix page you will find resources and links based on my article for 
 
 
 - Affiliations: Tomas Dvorak (Union College), Simon D. Halliday (Smith College), Michael O'Hara (St. Lawrence University) and Aaron Swoboba (Carleton College)
-- Corresponding Author: [shalliday@smith.edu](shalliday@smith.edu)
+- Corresponding Author: [simon.halliday@jhu.edu](mailto:simon.halliday@jhu.edu)
 
 ## A. Class Syllabi
   - Econometrics: Instructor: Michael O'Hara, Syllabus: [syllabus](https://www.dropbox.com/s/37c4q4v6uhcf1zf/Econ342syllabus_F2018.pdf?dl=0)  (TBC) 
