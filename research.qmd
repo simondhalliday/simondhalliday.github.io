@@ -44,7 +44,7 @@ description: "Books, publications, working papers, and current projects."
 
 - M. Bechdolf, Simon D. Halliday, E. Malthouse, and A. Papadopoulou, "Beyond the contract: Fairness, observability, and discretionary effort."
 - Simon D. Halliday and G. Liu, "Civic thought and economic education."
-- Simon D. Halliday, Emily Marshall, Glory Liu, Anthony Underwood, and Doug Norton, "PPE and Civic Thought Programs." [Dashboard](https://ppe-civicthought-requirements.simondhalliday.com/).
+- Simon D. Halliday, Emily Marshall, Glory Liu, Anthony Underwood, and Doug Norton, "PPE and Civic Thought Programs in American Higher Education." [Dashboard](https://ppe-civicthought-requirements.simondhalliday.com/).
 - Simon D. Halliday, V. Jayaraman, and P. Tripathi, "Teaching an economic model of segregation: Evidence, best responses, an in-class activity, and a critical reflection."
 - Simon D. Halliday, "Reflective writing and course stories in economics teaching."
 - Simon D. Halliday, "Teaching social preferences."
