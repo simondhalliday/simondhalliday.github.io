@@ -1,0 +1,16 @@
+---
+title: "Revolutionizing Teaching Economics Online with Artificial Intelligence: Appendix"
+#subtitle: "A Text in Microeconomics"
+author: "Simon D. Halliday and James Tierney"
+date: "`r Sys.Date()`"
+output: tufte::tufte_html 
+    #tufte::tufte_handout
+    #toc: TRUE
+---
+
+```{r setup, include=FALSE}
+library(tufte)
+library(knitr)
+```
+
+To be hosted here. Content to come when the book is published. 

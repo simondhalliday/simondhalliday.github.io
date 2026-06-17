@@ -1,0 +1,63 @@
+---
+title: "Efficient Empiricism: Streamlining teaching, research and learning in empirical courses"
+author: "Simon Halliday, Michael O'Hara and Aaron Swoboda"
+date: "1 June 2017"
+output: 
+  html_document:
+    css: ./stylesheets/styles.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Here you'll find  the content [Simon Halliday](https://simondhalliday.github.io), [Michael O'Hara](https://github.com/michaeleohara/) and [Aaron Swoboda](https://aswoboda.github.io/) covered during the "Efficient Empiricism" workshop, 1 June 2017. 
+
+#Outline
+
+- Start with a presentation by the presenters on R Markdown and some of the uses of R broadly. 
+- Progress to collaborative lab exercises and activities that employ R Notebooks (.Rmd). 
+- We conclude with a reflection & FAQ
+
+#How do I access RStudio? 
+
+- Connect to the WestinMeetingRooms wireless using password ctree2017
+- Go to the following url: [104.236.95.197/rstudio](http://104.236.95.197/rstudio)
+- Use the login credentials that we have provided for you to log in. 
+- If we need more logins... we'll sort you out. 
+
+#Slides and Activities
+
+- Slides for the presentation [R Markdown](rmarkdown_reproducibility.html), [Shiny](https://shalliday.shinyapps.io/rmarkdown_reproducibility) (includes the Allen animation) and [Rmd](rmarkdown_reproducibility.Rmd) (no animation)
+- Aaron Swoboda's Activity: [html](BostonActivity.html) and [rmd](BostonActivity.Rmd) 
+- Michael O'Hara's plotting activity [html](SimplePlot.html) and [Rmd](SimplePlot.Rmd)
+
+#Related Documents
+
+##Simon Halliday
+
+- Lab 1: A lab to introduce R Studio and R Markdown [html](Lab1.html) and [Rmd](Lab1.Rmd)
+- Lab 2: A lab to introduce the tidyverse [html](Lab2.html) and [Rmd](Lab2.Rmd)
+- Lab 3: A lab to introduce the plotting [html](Lab3.html) and [Rmd](Lab3.Rmd)
+- Lab 4: A lab to reproduce the output of a paper in the AER (Sutter, 2009) [html](Lab4.html) and [Rmd](Lab4.Rmd)
+- Name Activity [html](activity2.html) and [Rmd](activity2.Rmd)
+- Solow Growth (simplified) [shiny](https://shalliday.shinyapps.io/solow_growth/)
+
+##Aaron Swoboda 
+
+- Taxes and externalities [shiny](https://aswoboda.shinyapps.io/InteractiveTaxGraph/)
+- Hypothesis testing [shiny](https://aswoboda.shinyapps.io/BasketSimulator/)
+- Variance [shiny](https://aswoboda.shinyapps.io/VarianceOfBetaHat/VarianceDemo.Rmd)
+
+##Tomas Dvorak (could not attend, but docs here)
+
+- [Computer Exercise 1](http://rpubs.com/dvorakt/216157): An introduction to R, R Studio, and R Markdown
+- [Computer Exercise 2](http://rpubs.com/dvorakt/216160) - Computer Exercise 2: Loading in data, computing descriptive statistics and estimating regressions
+- [Computer Exercise 3](http://rpubs.com/dvorakt/219848) -  Multiple regression and omitted variable bias.
+- A variety of Tomas's other R-related documents are available on his rpubs site: [rpubs.com/dvorakt](http://rpubs.com/dvorakt). 
+
+##Michael O'Hara 
+
+- Michael's Senior Seminar [repository](https://github.com/michaeleohara/Econ510_Sp2017_Hamilton)
+- Additional activity on data manipulation [html](gender_code.html) and [Rmd](gender_code.Rmd)
+

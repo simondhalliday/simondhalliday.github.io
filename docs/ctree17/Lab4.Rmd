@@ -1,0 +1,257 @@
+---
+title: 'Lab 4: Reproducing Sutter, 2009'
+author: "Simon Halliday"
+date: "2017 - March - 17"
+output:
+  html_document: default
+  html_notebook: default
+---
+
+##Loading required packages
+Be sure to load the packages you require.
+We use Hadley Wickham's "Tidyverse" of packages. 
+
+- We need `dplyr` to use `summarise` and `group_by`
+- We need `tidyr` for `gather`. 
+- We also need `ggplot2` for `ggplot`.
+- We use panel models, for which we require `plm`.
+
+```{r requirements, message = FALSE}
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(plm)
+```
+
+
+
+##Data Import
+We now need to import the data. You can download the csv of the file from Google drive here: [https://drive.google.com/file/d/0B9jjwkjdUJU7cElvcVI5U3hhdEU/view?usp=sharing](https://drive.google.com/file/d/0B9jjwkjdUJU7cElvcVI5U3hhdEU/view?usp=sharing). 
+
+This .csv is a cleaned up version of the supplementary data provided by Sutter at the AER here: [https://www.aeaweb.org/articles?id=10.1257/aer.99.5.2247](https://www.aeaweb.org/articles?id=10.1257/aer.99.5.2247)).
+
+Download the original paper here to make sense of the exercises below: [https://drive.google.com/file/d/0B9jjwkjdUJU7eE5MVWRBZktlTm8/view?usp=sharing](https://drive.google.com/file/d/0B9jjwkjdUJU7eE5MVWRBZktlTm8/view?usp=sharing).
+
+When you call on `read.csv()` or `read_csv()` be sure to include the file extension  -- .csv -- at the end. Notice we use uppercase letters to name the data table we've prepared. 
+```{r import data}
+SutExp <- read.csv("more/sutterexperiment.csv")
+```
+
+Or alternatively, using `readr()`:
+```{r}
+library(readr)
+SutExp <- read_csv("~/Google Drive/simondhalliday.github.io/uct/more/sutterexperiment.csv")
+```
+
+
+##Using rename to have consistent variable names
+We want to have consistent naming protocols. 
+So we shall quickly clean the data to make sure that all the variables are consistently labeled with lower case first letters to ensure we don't confuse them with data tables. 
+To do this, we use the `rename()` command: 
+
+```{r renaming}
+SutExp <- 
+  SutExp %>% 
+  rename(session = Session, subject = Subject, r1 = R1, r2 = R2, r3 = R3, r4 = R4, r5 = R5, r6 = R6, r7 = R7, r8 = R8, r9 = R9, treatment = Treatment)
+```
+
+##summarise and group_by
+Now that we have an object with the data in it called `SutExp`, we want a data table that contains the averages for each treatment for each round. 
+
+- To find the averages we need to use `group_by` and `summarise`. 
+- As you can see below, we want to `group_by()` with our Treatment variable (from Sutter's paper)
+- We then need to use `summarise()` to create the *means* of the variable in which we're interested: R1 through R9 (corresponding to rounds 1 through 9) respectively. 
+- Notice that I create variables with lower case names to be consistent with our practice of naming variables in lowercase when we can. 
+
+```{r summary data}
+groupAves <- 
+  SutExp %>% 
+  group_by(treatment) %>%
+  summarise(r1 = mean(r1), r2 = mean(r2), r3 = mean(r3), r4 = mean(r4), r5 = mean(r5), r6 = mean(r6), r7 = mean(r7), r8 = mean(r8), r9 = mean(r9))
+```
+
+- This is the point at which you will need to make this *wide* data *narrow* before you can turn it into a plot. 
+- To make the data narrow you will need to use the `gather` command. 
+
+Once you have narrowed your data you will then be able to call on `ggplot` to plot the data in a sensible way. 
+
+##Narrowing the data: 
+
+Now we need narrow data to plot
+```{r narrow data}
+narrowAve <- 
+  groupAves %>%
+  gather(round, average, r1:r9)
+```
+
+This would be equivalent to: 
+```{r}
+narrowAve <- gather(groupAves, round, average, r1:r9)
+```
+
+
+And now we can filter this data and put it into a plot. 
+
+##Plot 1
+We need to filter for individuals and teams, then construct the ggplot. 
+
+```{r plot1}
+Plot1 <- 
+  narrowAve %>%
+  filter(treatment == "individual" | treatment == "teamtreat" ) %>%
+  group_by(treatment) %>%
+  arrange(treatment)
+Plot1 %>%
+  ggplot(aes(x = round, y = average, color = treatment)) + 
+  geom_point(aes(shape = treatment)) +
+  geom_line(aes(group = treatment)) + 
+  ylim(20, 80) +
+  xlab("Round") +
+  ylab("Average amount allocated") + 
+  scale_x_discrete(labels = seq(1, 9, by = 1)) +  
+  scale_colour_discrete(name = "Treatment",
+                         breaks = c("individual", "teamtreat"),
+                         labels = c("Indidividuals", "Teams")) +
+  scale_shape_discrete(name = "Treatment",
+                         breaks = c("individual", "teamtreat"),
+                         labels = c("Indidividuals", "Teams"))
+```
+
+###The second plot
+We need to filter for individuals, paycomm and message, then construct the ggplot. 
+
+```{r plot2}
+Plot2 <- 
+  narrowAve %>%
+  filter(treatment == "individual" | treatment == "paycomm" |  treatment == "message") %>%
+  group_by(treatment) %>%
+  arrange(treatment)
+Plot2 %>%
+  ggplot(aes(x = round, y = average, color = treatment)) + 
+  geom_point(aes(shape = treatment)) +
+  geom_line(aes(group = treatment)) + 
+  ylim(20, 90) +
+  xlab("Round") +
+  ylab("Average amount allocated") + 
+  scale_x_discrete(labels = seq(1, 9, by = 1)) +  
+  scale_colour_discrete(name = "Treatment",
+                         breaks = c("individual", "paycomm", "message"),
+                         labels = c("Indidividuals", "Pay-Comm", "Message")) +
+  scale_shape_discrete(name = "Treatment",
+                         breaks = c("individual", "paycomm", "message"),
+                         labels = c("Indidividuals", "Pay-Comm", "Message"))
+```
+
+###The third plot 
+We need to filter for individuals and mixed, then construct the ggplot. 
+```{r plot3}
+Plot3 <- 
+  narrowAve %>%
+  filter(treatment == "individual" | treatment == "mixed" ) %>%
+  group_by(treatment) %>%
+  arrange(treatment)
+Plot3 %>%
+  ggplot(aes(x = round, y = average, color = treatment)) + 
+  geom_point(aes(shape = treatment)) +
+  geom_line(aes(group = treatment)) + 
+  ylim(20, 80) +
+  xlab("Round") +
+  ylab("Average amount allocated") + 
+  scale_x_discrete(labels = seq(1, 9, by = 1)) +  
+  scale_colour_discrete(name = "Treatment",
+                         breaks = c("individual", "mixed"),
+                         labels = c("Indidividuals", "Mixed")) +
+  scale_shape_discrete(name = "Treatment",
+                         breaks = c("individual", "mixed"),
+                         labels = c("Indidividuals", "Mixed"))
+```
+
+
+##Reproducing Average Results
+We're now going to go about re-creating the averages that he tests against each other in the paper. To do this, we're first going to need unique identifiers for each subject. We'll then look at different methods to find the average and diagnose why one doesn't work. 
+
+We first need to create unique identifiers for each subject so that we don't get confused. 
+```{r create uniqid}
+SutExpUniq <- 
+  SutExp %>% 
+  mutate(uniqid = paste(session, treatment, subject, sep = "_"))
+head(SutExpUniq)
+```
+
+We need individual averages for round, so we need to `group_by()` with uniqid:
+```{r indiv_ave}
+SutUniqAves <-
+  SutExpUniq %>% 
+  group_by(uniqid, treatment) %>%
+  summarise(meanval = mean(r1:r9))
+```
+
+##Wilcoxon Tests 
+
+In the paper, there's a statistical test that may be unfamiliar to many of you: the Mann-Whitney U-Test. Look up what the Mann-Whitney test is on Google. It is also known as the Wilcoxon Rank Sum test. 
+
+ * * * 
+  - What does the Mann-Whitney test check? 
+  - Why do you think we use it rather than a student's t-test?
+
+ * * * 
+Wilcoxon tests check the differences of samples across a factor variable, such as an experimental treatment. 
+The problem is it only wants *two* levels of that treatment, so we have to filter out the treatments we don't want to use. 
+We only want "teamtreat" and "individuals" for now.  
+
+We could run a Wilcoxon test for the entire sample of the data for subjects for plot 1 and treat the rounds *for each individual* as if they are independent. 
+
+First, narrow data from our original SutExp data table: 
+```{r}
+SutNarrow <- 
+  SutExpUniq %>%
+  gather(round, value, r1:r9) %>%
+  arrange(session, subject, treatment, team)
+Plot1data <- 
+  SutNarrow %>%
+  filter(treatment == "individual" | treatment == "teamtreat" )
+wilcox.test(value ~ treatment, data = Plot1data)
+```
+
+An alternative might be to find an average for each subject. We've already done this with creating the data table `SutUniqAves`. We now filter out the rows we don't need and run a Wilcoxon (Mann-Whitney) test.
+```{r}
+Plot1AveData <- 
+  SutUniqAves %>% 
+  filter(treatment == "individual" | treatment == "teamtreat" )
+wilcox.test(meanval ~ treatment, data = Plot1AveData)
+```
+
+
+
+```{r}
+Plot1Aves <- 
+  Plot1data %>% 
+  group_by(uniqid, round) %>% 
+  summarise(aveval = mean(value))
+```
+
+
+We now want to run a regression using value as the dependent variable (LHS) and each of the treatments as a dummy variable. 
+```{r}
+m1 <- lm(value ~ treatment, data = SutNarrow)
+summary(m1)
+```
+The first command assigns to "m1" a linear model (using the `lm()` function) where value is a function of treatment. Treatment is a "factor", so R automatically converts the different components of the factor into dummy variables in a linear regression. 
+
+Another way of doing this is as a "panel regression." For a panel regresion, you treat each variable as if it comes from the same  
+
+We need to do this as a panel regression. Here's one way of doing it using the `plm` package. 
+```{r}
+m2 <- plm(value ~ treatment, data = SutNarrow, index = c("uniqid"), model = "pooling")
+summary(m2)
+```
+
+And another similar way of doing it with the same package: 
+```{r}
+m3 <- plm(value ~ treatment, data = SutNarrow, index = c("uniqid"), model = "random", effect = "time")
+summary(m3)
+```
+
+
+
+

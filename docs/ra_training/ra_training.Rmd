@@ -1,0 +1,22 @@
+---
+title: "RA Training"
+author: "Simon Halliday"
+date: "2025-02-21"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+
+
+
+## Books and Exercises 
+
++ [R 4 Data Science](https://r4ds.hadley.nz/) by
+Hadley Wickham
++ 
+

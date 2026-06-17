@@ -1,0 +1,29 @@
+---
+title: 'TIER: Activity 1'
+author: "Simon Halliday"
+date: "9 January 2017"
+output: 
+  html_document:
+    css: ./stylesheets/styles.css
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Practice what you've learned by creating a brief CV of your **fictional alter ego**. 
+The title should be your name, and you should include headings for (at least) education or employment. 
+Each of the sections should include a bulleted list of jobs/degrees. 
+Highlight the year in **bold**.
+
+Using the R Markdown quick reference, figure out how to:
+
+- Include an image of yourself (either a local file or url).
+- Add a horizontal rule.
+- Add a block quote.
+
+Once you've done this, upload the `html` file to the R Markdown workshop folder on OSF that you got access to.
+
+* * * 
+
+[Back to Simon's TIER Occidental Workshop page](./index.html). 

@@ -1,0 +1,477 @@
+---
+title: "Lab 2: Basics of the Tidyverse"
+output:
+  html_document:
+    css: ./stylesheets/lab.css
+    highlight: pygments
+    theme: cerulean
+  pdf_document: default
+---
+
+Before you start, be sure to load these packages, you could also use the function `library()` instead of the function `require()`:
+```{r requirements, message = FALSE, warning = FALSE}
+require(mosaic)
+require(tidyverse)
+require(dplyr)
+```
+
+##Learning Outcomes
+
+At the end of this lab you should be able to do the following: 
+
+- *Identify* the basic strutures of a data frame: the number and names of *variables* and *cases* 
+
+- *Create* a new variable from existing variables in a data frame.
+
+- *Filter* information out of a data frame/table and compare summary statistics across filtered observations.
+
+- *Select* out one or more variables from all of the variables in a data frame. 
+
+
+##Loading Data
+We now want to start to work with some data. 
+We shall first download a dataset that I have already accessed from the Federal Reserve Bank of St. Louis using the FRED database. 
+You can access the `.csv` (comma separated value) file here:
+[https://drive.google.com/file/d/0B17bVUW1HMv-SGNheF9haXJ0bVk/view?usp=sharing](https://drive.google.com/file/d/0B17bVUW1HMv-SGNheF9haXJ0bVk/view?usp=sharing). 
+The file is called `labor_force_levels.csv`. 
+
+Download the file and save it in a logical place. I would recommend that you 
+save it in your Workshop folder under a folder called `more` and then
+create a backup of the file in that folder too. Open the file in MSExcel if
+you want to see what a `csv` looks like in Excel. 
+Do not save any changes you make to it. 
+
+Now, we are going to open the file in R using RStudio. Use the command below, but be sure to change the filepath to the one where you have put the `labor_force_levels.csv` file. 
+
+```{r}
+ParticipationLevels <- read.csv("more/labor_force_levels.csv")
+```
+
+`read.csv` instructs R to access the csv file and assign it to an object called `ParticipationLevels`. 
+
+Alternative, you can use the command `read_csv()` from the `readr` package. 
+```{r, warning = FALSE, warning = FALSE}
+library(readr)
+ParticipationLevelsRr <- read_csv("more/labor_force_levels.csv")
+```
+
+`ParticipationLevels` is a data table that we shall use to practise some basic analysis. 
+
+The data table contains the Bureau of Labor Statistics' counts for men and
+women participating in the labor force each period. You should see that the
+workspace area in the upper righthand corner of the RStudio window (in the *Environment* tab) now
+lists a data set called `ParticipationLevels` that has 810 observations of
+3 variables. As you interact with R, you will create a series of
+__objects__. Sometimes you load an object as we have done here, and
+sometimes you create an object yourself as the result of a computation or
+some analysis you have performed. Because you access the data from the web,
+this command (and the entire assignment) will work in a computer lab, in
+the library, or in your dorm room; anywhere you have access to the internet.
+
+
+## The Data: Bureau of Labor Statistics (BLS) counts of participants in the labor force
+
+The Bureau of Labor Statistics has collected data regularly since 1948 on the 
+numbers of men and women who participate in the labor force. These days, the counts are published monthly. 
+The BLS needs to understand whether someone 
+participates in the labor force to come to judge employment in the US. 
+You might remember that the government measures employment only for those people *participating* in the labor force, that is, 
+either working or looking for work. Someone who does not have 
+a job and is not actively searching for work is not unemployed. Rather, they 
+are a **discouraged worker**. Discouraged workers do not participate in the 
+labor force. 
+
+We and the government are interested in understanding what percentages of men 
+and women are working at a given point in time. To calculate those proportions
+we need the counts. We shall use the percentages in a later lab. For now, we
+want to understand the counts to get a sense of the how the data works. 
+
+Type the following into the console: 
+```{r view data, eval = FALSE}
+ParticipationLevels
+```
+
+R will automatically curtail the command. It's trying to show you the majority of the datatable (which is what you requested by naming it). 
+You should see four columns of numbers, each row representing a 
+different date. 
+The first entry in each row is simply the row number -- note, this number is *not* in the data table itself, its given that row number by R to tell you where in the table that row is. The second column is the date which follows
+international conventions and is written as YYYY-MM-DD (note this is different
+to how many people write dates in the USA, where most people write dates as 
+MM-DD-YYYY. R is used internationally and so adheres to the international 
+scientific dating conventions. This system is often called 'unambiguous' 
+because of the order. The fully specified date and time, called a POSIX time 
+would be YYYY-MM-DD HH:MM:SS with a 24-hour clock, e.g. 2015-07-18 14:17:32). 
+
+The third and fourth columns are the numbers of men and women who participated
+in the labor force at the given date. Use the scrollbar on the right side of the console 
+window to examine the complete data set.
+
+Note that the row numbers in the first column are not part of the BLS data. 
+R adds them as part of its printout to help you make visual comparisons. You can
+think of them as the index that you see on the left side of a spreadsheet. In 
+fact, the comparison to a spreadsheet will generally be helpful. R has stored 
+the BLS data in a kind of spreadsheet or table called a __data frame__ or __data table__. 
+
+You would have seen that looking at the data frame in its entirety is quite
+cumbersome. We would probably rather just take a look at some portion of our
+data, such as the top or the bottom of the data. We can do this with the
+`head` and `tail` commands. Run them now to check out the first few rows 
+of the data. 
+
+By default, head and tail show you 6 rows. You can change that by
+adding a command and a number after the the name of the data frame. 
+
+```{r}
+head(ParticipationLevels)
+head(ParticipationLevels, 8)
+tail(ParticipationLevels)
+tail(ParticipationLevels, 12)
+```
+
+You can see the dimensions (`dim`) of this data frame by typing:
+
+```{r dim-data, eval = TRUE}
+dim(ParticipationLevels)
+```
+
+This command should output `[1] 810 3`, indicating that there are 810 rows and 3 
+columns (we'll get to what the `[1]` means in a bit), just as it says next to 
+the object in your workspace. 
+
+You can see the names of these columns (or 
+variables) by typing:
+
+```{r names-data, eval=TRUE}
+names(ParticipationLevels)
+```
+
+You should see that the data frame contains the columns `date`,  `male`, and 
+`female`. 
+
+Another way to obtain similar information is to ask for the structure of the data using the command `str()`:
+```{r str-data}
+str(ParticipationLevels)
+```
+As we saw with the `dim` command, the `str` command tells us that the data has
+810 observations and 3 variables. As with the `names` command, `str` also tells
+us the names of the three variables (`date`, `male` and `female`) and the 
+format of these variables. It tells us that `date` has the format of a "factor" (categorical variable), this is obviously not what we want to have a date be categorized as, so we'll change that later. 
+`str()` also tells us that male and female have the format of "int", which is short for
+"integer", which makes sense given that they're the numbers of men and women participating in the labor force.
+
+At this point, you might notice that many of the commands in R look a 
+lot like functions from mathematics. So, invoking R commands means supplying
+a *function* with some number of *arguments* that appear in parentheses. 
+For
+example, when you say that a variable $y$ is a function of another variable 
+$x$ you write: $y = f(x)$. The `dim`, `names` and `str` commands
+each took a single argument, the name of a data frame `ParticipationLevels`. The idea
+of an R command working like a function will remain helpful in the future. 
+
+One advantage of RStudio is that it comes with a built-in data viewer. Click on
+the name `ParticipationLevels` in the *Environment* pane (upper right window) that lists 
+the objects in your workspace. This will bring up an alternative display of the 
+data set in the *Data Viewer* (upper left window). You can close the data viewer
+by clicking on the *x* in the upper lefthand corner.
+
+<!--Notice that the way R has printed these data is different. When we looked at the
+complete data frame, we saw 810 rows, one on each line of the display. These data
+are no longer structured in a table with other variables, so they are displayed 
+one right after another. Objects that print out in this way are called *vectors*;
+they represent a set of numbers. 
+
+R has added numbers in [brackets] along the 
+left side of the printout to indicate locations within the vector. For example,
+`16810` follows `[1]`, indicating that `16810` is the first entry in the vector. 
+And if `[33]` starts a line, then that would mean the first number on that line
+would represent the 33<sup>rd</sup> entry in the vector.-->
+
+##Summary Statistics
+We are often interested in knowing basic summary statistics of 
+variables and also in generating new variables that contain new information. 
+One very useful command in R, using the `mosaic` package, is the `favstats`
+command (read as "fave stats""). What, you might ask, are a social scientist'sfavorite statistics? How about the following? 
+
+- mean
+
+- median
+
+- standard deviation
+
+- minimum
+
+- maximum
+
+Let's try the `favstats` command with the ParticipationLevels data frame. 
+Make sure that you use the `library()` command to load the `mosaic` package before trying to run `favstats`. 
+
+```{r calc_total_participation, eval=FALSE}
+favstats(~female, data = ParticipationLevels)
+```
+
+As you can see we have information about the mean number of females who 
+participated in the labor force over the period (in thousands). Each month, 
+approximately 45,567,830 women participated in the labor force, or about 46 
+million. That should sound about right. 
+
+* * * 
+Try the `favstats` command with the male variable in ParticipationLevels
+
+-   What was the mean number of mean employed each month over the period 1948 to 2015? 
+
+-   What was the standard deviation of the number of males employed each month? 
+
+-   What were the minimum and maximum numbers of males employed each month? 
+
+```{r include = FALSE}
+favstats(~male, data = ParticipationLevels)
+```
+
+When you ran the `favstats` command, the final column was labeled as 'missing'. 
+Missing data exist when there are no observations of that variable for a 
+particular case. For both males and females in the US, we have no missing data.
+This makes sense for aggregate employment data, but if you were asking each 
+person individually what their income was, people would be less likey to 
+report that, and data would likely be missing. One of the jobs of the 
+statistician or econometrician is to work out what missing data look like. 
+Dealing with that is beyond the scope of what we do here. We will mainly deal
+with 'non-missing' data. 
+
+##Data Verbs
+We shall use a variety of data verbs, commands that "do" things(hence "verb") to data (the objects to which things are done). The list of data verbs includes: 
+
+- `mutate()`: change the date, thus 'mutate' it in some way
+- `filter()`: filter some subset of cases out from the total list of variables
+- `select()`: select some subset of variables out from the total list of variables
+- `join()`: join two different data tables together
+- `group_by()`: group a data table using a variable (e.g. gender) to understand some patterns in the data
+- `summarise()`: summarise the data to find some useful statistic; often combined with `group_by` to contrast differences across groups
+- `gather()` and `spread()`: gather and spread re-shape the data by making the data narrower (for gather) or wider (for spread) depending on what we need. Normally, we need to re-shape data when we want to change the particular cases that we have so that we can draw insights based on alternative cases to those we already have. For example, to draw a graph, we might need to change the case into a summary statistic, such as the average number of people engaged in an activity, rather than having the case be each unique individual in a dataset.  
+
+##Piping
+Before we do much else, we want to think about how to write good code. 
+One way of doing that is by using "pipes". 
+In R, the `%>%` symbol is called a __pipe__. You should read the pipe as saying "Then" or "And then". 
+A pipe "pipes in" an argument so that you are able to use it in a function. 
+What this means is that an object is `piped' into a position that it would normally have filled, typically the firs position in a function (as we shall see numerous times later).
+
+I like the to think of my programs that include the pipe as stories told by a 6-year-old:
+
+<img src="more/and_then_kid.png" height="400px" width="300px" align="middle"/>
+
+That way, I don't get confused about what it means because I always get the functions in the right sequence. 
+
+So the command we will use to tell R what data to use is the following: 
+```{r data_pipe, eval = FALSE}
+Participation %>%
+```
+*Don't leave this command by itself - R will look for what you're trying to "pipe" the data into.*
+
+
+##Filtering and Mutating
+
+We might be interested in seeing the total number of participants in the labor 
+force each year. 
+
+First, though, we have to tell R that the variable we have called `date` is, in fact, a date. 
+```{r}
+ParticipationLevels <- 
+  ParticipationLevels %>% 
+  mutate(date = as.Date(date))
+```
+
+Let's intpret what happened above in English:
+
+- we tell R the *name* we want to assign our data frame. We're going to stick with old name of `ParticipationLevels`. 
+- we tell R we want to *pipe in* the data from the existing data frame `ParticipationLevels` to tell it we're using that data in our function. 
+-  we employ the function `mutate()` from the `dplyr` package to mutate (change) or data. 
+-  we tell `mutate()` that we want to change the variable 'date' so that it is treated like a date using the function `as.Date()`. The thing we're changing is the variable `date`, so that's what `as.Date()` takes as an argument to its function. 
+
+We could also have written this as: 
+```{r}
+ParticipationLevels <- mutate(ParticipationLevels, date = as.Date(date))
+```
+Notice the position of ParticipationLevels and the lack of a pipe. As it stands, this is legible code. But, if we were to mutate many variables and change many things, it would be much more legible if we wrote the code on several lines with pipes. 
+
+Now, to undertand a subset of the cases, we could do one of two operations. We will do a 
+simple one first. Let's say we're interested in finding out what the total 
+number of labor force participants was in January of 1948. We shall use the 
+command `filter` to do this. 
+
+```{r}
+Jan1948 <- 
+  ParticipationLevels %>%
+  filter(date == "1948-01-01") 
+Jan1948
+```
+Let's go through a step-by-step interpretation of the string of code: 
+
+- First, we tell R we want to assign the name `Jan1948` to our new object 
+- Second, we tell R to pipe in (to use) the `ParticipationLevels` data. 
+- Third, we then (%>%) tell R to use the `filter()` command where it takes the variable `date` and only selects the case(s) for which date is equal to
+"1948-01-01" (the use of two equals signs `==` is very important here! You will
+get an error if you only use one equals sign)
+- Fourth, we tell R to display our new dataframe `Jan1948`. (notice, there's no pipe %>% at the end of the line before `Jan1948`)
+
+We can see that there were 43,214 male labor force participants (in thousands) 
+and 16,881 female (also in thousands). Now, we can treat R like a calculator 
+and add these together
+
+```{r}
+43214 + 16881
+```
+We can see that there are 60,095 total participants in the labor force (in
+thousands). 
+
+With R, as with your calculator, you need to be conscious of the order 
+of operations.  Here, we want to divide the number of boys by the total number 
+of newborns, so we have to use parentheses.  Without them, R will first do the 
+division, then the addition, giving you something that is not a proportion.
+
+How else could we do this? We could add the male and female totals together 
+to create a new variable. To create a new variable we use the `mutate` command.
+
+```{r}
+ParticipationLevels <- 
+  ParticipationLevels %>% 
+  mutate(total = male + female)
+```
+What does this string of code mean? Let's go through it step-by-step: 
+
+- Go back to the previous use of mutate and consider steps 1 and 2 yourself. 
+- Third, we then (`%>%`) call the mutate function and tell it that we're creating a new variable called `total` which is `male + female`. 
+- We can now `head(ParticipationLevels)` to check what our new variable looks like. Go ahead and do that on your own (it's not included in the code above)
+
+We didn't create the total variable just because. Rather, we want to identify the proportions of men and women who are in the labor 
+force. Let's attempt that now using the `mutate` command again and generate 
+a new data frame that  has the variable `femprop` for the proportion of the
+labor force that is made up of females. 
+
+```{r female_proportion}
+ParticipationLevels <-
+  ParticipationLevels %>%
+  mutate(femprop = female / total) 
+head(ParticipationLevels)
+```
+
+* * * 
+-   Write out a point by point interpretation of the command like we did for the commands to generate `total`. 
+
+-   Now you generate a new variable called `maleprop` which is the proportion
+of male participants as a total of all the labor force participants. 
+
+-   Look at the head and the tail of the data frame (you can look at more than
+6 rows if you want). What has happened to the proportion of males and females
+as a total of the labor force participants in the United States?
+
+-   Create two new data frames Jan1960 and Jan2000 which `filter` out all other
+months except those ones in each frame. Display them and comment. 
+
+```{r male_prop_part, echo = FALSE}
+ParticipationLevels <-
+  ParticipationLevels %>%
+  mutate(maleprop = male / total) 
+head(ParticipationLevels, 6)
+tail(ParticipationLevels, 6)
+Jan1960 <- 
+  ParticipationLevels %>%
+  filter(date == "1960-01-01")
+Jan2000 <- 
+  ParticipationLevels %>%
+  filter(date == "2000-01-01")
+Jan1960
+Jan2000
+```
+
+You can also use the command `filter` to create a new dataframe where the
+dates are in a particular range or only after a given date. For example, 
+let's say that we were only interested in looking at dates since January 2000.
+We could easily tell R this by using the greater than sign, `>=` or the `>`  
+therefore and doing the following: 
+
+```{r}
+RecentParticipation <- 
+  ParticipationLevels %>%
+  filter(date >= "2000-01-01")
+```
+Check that you ran the code correctly by checking the `head` of the data
+frame.  We could have looked at all dates _prior_ to the 2000s by using the 
+less than sign `<`. 
+
+How about checking dates in a given 10 year period? Let's
+say we were only interested in the 1960s and we want to check ou that ten-year 
+period. 
+
+```{r head_fem_prop}
+The1960s <- 
+  ParticipationLevels %>%
+  filter(date >= "1960-01-01" & date < "1970-01-01")
+  head(The1960s)
+```
+
+Again, we're not just filtering data because we think filtering is cool, we
+might be interested in what the mean proportions and variance were across
+decades because we have some hypothesis about different decades. Or we could lookat 5-year periods, or the periods before and after financial crises. 
+
+Complete the following exercise using `filter` and `favstats`: 
+
+-   What was the mean proportion of women in the labor force for the 1960s? 
+
+-   What was the mean proportion of women in the labor force in the 2000s? 
+
+__TIP__: Make sure that you have an 'n' of 120 when you run the favstats command. Why should it be 120? 
+
+```{r filter_favstats_60s_00s, echo = FALSE}
+The2000s <- 
+  ParticipationLevels %>%
+  filter(date >= "2000-01-01" & date < "2010-01-01")
+  favstats(~femprop, data = The1960s)
+  favstats(~femprop, data = The2000s)
+```
+
+
+
+##Selecting variables
+Let's start to examine the data a little more closely. We can access the data
+in a single column of a data frame separately using a command called `select`:
+
+```{r view-female, eval=FALSE}
+ParticipationFemale <- 
+  ParticipationLevels %>%
+  select(female)
+head(ParticipationFemale)
+```
+
+This command will only show the number of females in the labor force during each period. 
+
+[exercise number] What command would you use to extract just the counts of __males__ in the 
+labor force? Try it! 
+
+__Tip__: If you use the up and down arrow keys, you can scroll through your previous 
+commands, your so-called command history. You can also access it by clicking on 
+the history tab in the upper right panel.  This will save you a lot of typing in
+the future.
+
+This seems like a fair bit for your [nth] lab, so let's stop here. To exit 
+RStudio you can click the *x* in the upper right corner of the whole window.  
+You will be prompted to save your workspace. If you click *save*, RStudio will 
+save the history of your commands and all the objects in your workspace so that 
+the next time you launch RStudio, you will see `ParticipationLevels` and you will have 
+access to the commands you typed in your previous session. For now, click *save*,
+then re-start RStudio.
+
+* * *
+
+## Conclusion
+That was an introduction to R and RStudio, but we will provide you with more
+functions and a more complete sense of the language as you progress. 
+Feel free to browse around the websites for [R](http://www.r-project.org) and 
+[RStudio](http://rstudio.org) if you're interested in learning more, or find 
+more labs for practice at http://openintro.org. I also recommend [DataCamp](datacamp.com)
+
+<div id="license">
+This is a product of OpenIntro that is released under a 
+[Creative Commons Attribution-ShareAlike 3.0 Unported](http://creativecommons.org/licenses/by-sa/3.0). 
+This lab was adapted by Simon Halliday. From a lab written by Andrew Bray and Mine &Ccedil;etinkaya-Rundel
+from a lab written by Mark Hansen of UCLA Statistics.
+</div>

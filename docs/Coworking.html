@@ -1,0 +1,1691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coworking with Claude — CORE Editorial Board</title>
+
+  <!-- === FONTS: Cormorant Garamond (display) + IBM Plex Sans (body) + JetBrains Mono === -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=IBM+Plex+Sans:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================================
+       THEME: INK & PRESS
+       Dark academic editorial. Cormorant Garamond for display,
+       IBM Plex Sans for body. Deep crimson accent on near-black.
+       Inspired by OUP, Penguin Classics, academic press design.
+       ============================================================ */
+    :root {
+      /* Colors */
+      --bg:            #11100d;
+      --bg-lift:       #1a1814;
+      --bg-workshop:   #161210;
+      --ink:           #ebe6dc;
+      --ink-dim:       #9a9288;
+      --ink-ghost:     #3d3830;
+      --crimson:       #be3a4c;
+      --crimson-glow:  rgba(190, 58, 76, 0.18);
+      --crimson-line:  rgba(190, 58, 76, 0.6);
+      --gold:          #c4a562;
+      --gold-dim:      rgba(196, 165, 98, 0.14);
+      --mint:          #6db89a;
+      --rule:          rgba(235, 230, 220, 0.08);
+      --rule-bright:   rgba(235, 230, 220, 0.18);
+
+      /* Fonts */
+      --font-display:  'Cormorant Garamond', Georgia, serif;
+      --font-body:     'IBM Plex Sans', system-ui, sans-serif;
+      --font-mono:     'JetBrains Mono', 'Courier New', monospace;
+
+      /* Type sizes — ALL clamp() — tuned for Zoom screen-share */
+      --sz-title:      clamp(3rem, 6.5vw, 6rem);
+      --sz-h2:         clamp(2rem, 3.5vw, 3.2rem);
+      --sz-h3:         clamp(1rem, 1.5vw, 1.25rem);
+      --sz-body:       clamp(1.05rem, 1.6vw, 1.35rem);
+      --sz-small:      clamp(0.9rem, 1.3vw, 1.1rem);
+      --sz-label:      clamp(0.72rem, 0.95vw, 0.85rem);
+      --sz-quote:      clamp(1.6rem, 3vw, 2.8rem);
+      --sz-mono:       clamp(0.82rem, 1.2vw, 1rem);
+
+      /* Spacing */
+      --slide-padding: clamp(1.5rem, 4vw, 4.5rem);
+      --pad-sm:        clamp(0.8rem, 2vw, 2rem);
+      --gap:           clamp(0.7rem, 1.6vw, 1.6rem);
+      --gap-sm:        clamp(0.4rem, 0.9vw, 0.8rem);
+
+      /* Animation */
+      --ease:          cubic-bezier(0.16, 1, 0.3, 1);
+      --dur:           0.65s;
+    }
+
+    /* ============================================================
+       VIEWPORT BASE (mandatory — from viewport-base.css)
+       ============================================================ */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html, body { height: 100%; overflow-x: hidden; background: var(--bg); }
+
+    html {
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+
+    .slide {
+      width: 100vw;
+      height: 100vh;
+      height: 100dvh;
+      overflow: hidden;
+      scroll-snap-align: start;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      background: var(--bg);
+      /* Left-edge crimson rule — the "binding" */
+      border-left: 2px solid var(--crimson-line);
+    }
+
+    .slide-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-height: 100%;
+      overflow: hidden;
+      padding: 0 var(--slide-padding) var(--slide-padding);
+    }
+
+    /* Responsive breakpoints */
+    @media (max-height: 700px) {
+      :root {
+        --slide-padding: clamp(1rem, 3vw, 2.5rem);
+        --gap: clamp(0.5rem, 1.2vw, 1rem);
+        --sz-h2: clamp(1.6rem, 3vw, 2.4rem);
+        --sz-body: clamp(0.9rem, 1.4vw, 1.1rem);
+        --sz-small: clamp(0.8rem, 1.1vw, 0.95rem);
+      }
+    }
+    @media (max-height: 600px) {
+      :root {
+        --slide-padding: clamp(0.8rem, 2.5vw, 1.8rem);
+        --sz-h2: clamp(1.4rem, 2.5vw, 2rem);
+        --sz-body: clamp(0.82rem, 1.2vw, 1rem);
+        --sz-small: clamp(0.72rem, 1vw, 0.88rem);
+      }
+      .nav-dots, .keyboard-hint { display: none; }
+    }
+    @media (max-height: 500px) {
+      :root {
+        --sz-h2: clamp(1.2rem, 2vw, 1.7rem);
+        --sz-body: clamp(0.75rem, 1.1vw, 0.9rem);
+      }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.2s !important;
+      }
+      html { scroll-behavior: auto; }
+    }
+
+    /* ============================================================
+       CHROME: slide counter, section tag, progress bar
+       ============================================================ */
+    .slide-chrome {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: clamp(0.8rem, 2vw, 1.5rem) var(--slide-padding) 0;
+      flex-shrink: 0;
+    }
+    .section-tag {
+      font-family: var(--font-body);
+      font-size: var(--sz-label);
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.85;
+    }
+    .slide-num {
+      font-family: var(--font-display);
+      font-size: var(--sz-label);
+      color: var(--ink-dim);
+      letter-spacing: 0.08em;
+    }
+
+    /* Progress bar */
+    #progress-bar {
+      position: fixed;
+      bottom: 0;
+      left: 2px; /* offset for the binding rule */
+      height: 2px;
+      background: var(--crimson);
+      width: 0%;
+      transition: width 0.3s var(--ease);
+      z-index: 100;
+    }
+
+    /* Navigation dots */
+    #nav-dots {
+      position: fixed;
+      right: clamp(0.5rem, 1.5vw, 1.2rem);
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      z-index: 100;
+    }
+    .dot {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--ink-ghost);
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .dot.active {
+      background: var(--crimson);
+      transform: scale(1.4);
+    }
+
+    /* ============================================================
+       ANIMATION: reveal on .visible
+       ============================================================ */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
+    }
+    .slide.visible .reveal { opacity: 1; transform: translateY(0); }
+
+    /* Stagger delays */
+    .slide.visible .reveal:nth-child(1) { transition-delay: 0.05s; }
+    .slide.visible .reveal:nth-child(2) { transition-delay: 0.12s; }
+    .slide.visible .reveal:nth-child(3) { transition-delay: 0.19s; }
+    .slide.visible .reveal:nth-child(4) { transition-delay: 0.26s; }
+    .slide.visible .reveal:nth-child(5) { transition-delay: 0.33s; }
+    .slide.visible .reveal:nth-child(6) { transition-delay: 0.40s; }
+    .slide.visible .reveal:nth-child(7) { transition-delay: 0.47s; }
+    .slide.visible .reveal:nth-child(8) { transition-delay: 0.54s; }
+
+    .reveal-left {
+      opacity: 0;
+      transform: translateX(-28px);
+      transition: opacity var(--dur) var(--ease), transform var(--dur) var(--ease);
+    }
+    .slide.visible .reveal-left { opacity: 1; transform: translateX(0); }
+
+    /* ============================================================
+       TYPOGRAPHY SYSTEM
+       ============================================================ */
+    h1 {
+      font-family: var(--font-display);
+      font-size: var(--sz-title);
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+    }
+    h2 {
+      font-family: var(--font-display);
+      font-size: var(--sz-h2);
+      font-weight: 600;
+      color: var(--ink);
+      line-height: 1.2;
+      margin-bottom: var(--gap);
+    }
+    h2::after {
+      content: '';
+      display: block;
+      width: clamp(2rem, 5vw, 4rem);
+      height: 1.5px;
+      background: var(--crimson);
+      margin-top: clamp(0.3rem, 0.6vw, 0.5rem);
+    }
+    h3 {
+      font-family: var(--font-body);
+      font-size: var(--sz-label);
+      font-weight: 500;
+      color: var(--gold);
+      letter-spacing: 0.14em;
+      margin-bottom: var(--gap-sm);
+      text-transform: uppercase;
+    }
+    p, li {
+      font-family: var(--font-body);
+      font-size: var(--sz-body);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    .dim { color: var(--ink-dim); }
+    .crimson { color: var(--crimson); }
+    .gold { color: var(--gold); }
+
+    /* ============================================================
+       CONTENT COMPONENTS
+       ============================================================ */
+
+    /* Bullet list */
+    .blist {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap-sm);
+    }
+    .blist li {
+      padding-left: 1.2em;
+      position: relative;
+      font-size: var(--sz-body);
+    }
+    .blist li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--crimson);
+      font-weight: 400;
+    }
+
+    /* Two-column layout */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--gap);
+      align-items: start;
+    }
+
+    /* Callout boxes */
+    .box {
+      padding: clamp(0.5rem, 1.2vw, 1rem) clamp(0.6rem, 1.4vw, 1.2rem);
+      font-size: var(--sz-body);
+      line-height: 1.5;
+      border-radius: 1px;
+      font-family: var(--font-body);
+      color: var(--ink);
+    }
+    .box-crimson { background: var(--crimson-glow); border-left: 2px solid var(--crimson); }
+    .box-gold    { background: var(--gold-dim);     border-left: 2px solid var(--gold); }
+    .box-dim     { background: rgba(255,255,255,0.03); border-left: 2px solid var(--rule-bright); }
+
+    /* Pull quote */
+    .pull-quote {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: var(--sz-quote);
+      color: var(--ink);
+      line-height: 1.35;
+      padding-left: clamp(0.8rem, 2vw, 1.8rem);
+      border-left: 2px solid var(--crimson);
+      margin: var(--gap) 0;
+    }
+
+    /* Skill cards */
+    .skill-grid {
+      display: grid;
+      gap: var(--gap-sm);
+    }
+    .skill-grid-2 { grid-template-columns: 1fr 1fr; }
+    .skill-grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+
+    .skill-card {
+      background: var(--bg-lift);
+      border: 1px solid var(--rule);
+      padding: clamp(0.5rem, 1vw, 0.85rem) clamp(0.6rem, 1.2vw, 1rem);
+      border-radius: 1px;
+    }
+    .skill-card.new-skill {
+      border-color: var(--gold);
+      background: var(--gold-dim);
+    }
+    .skill-card .sc-name {
+      font-family: var(--font-mono);
+      font-size: var(--sz-small);
+      color: var(--mint);
+      display: block;
+      margin-bottom: 3px;
+    }
+    .skill-card.new-skill .sc-name { color: var(--gold); }
+    .skill-card .sc-desc {
+      font-family: var(--font-body);
+      font-size: var(--sz-small);
+      color: var(--ink-dim);
+      line-height: 1.45;
+    }
+    .new-badge {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: clamp(0.45rem, 0.65vw, 0.55rem);
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--gold);
+      color: #1a1400;
+      padding: 1px 5px;
+      border-radius: 8px;
+      margin-left: 4px;
+      vertical-align: middle;
+    }
+
+    /* Flow steps */
+    .flow-list { display: flex; flex-direction: column; gap: 3px; }
+    .flow-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7em;
+      padding: clamp(0.35rem, 0.7vw, 0.6rem) clamp(0.5rem, 1vw, 0.9rem);
+      background: var(--bg-lift);
+      border-left: 2px solid var(--ink-ghost);
+    }
+    .flow-step.done { border-left-color: var(--mint); }
+    .flow-step .fs-num {
+      font-family: var(--font-display);
+      font-size: var(--sz-small);
+      color: var(--crimson);
+      flex-shrink: 0;
+      min-width: 1.4em;
+    }
+    .flow-step .fs-body {
+      font-family: var(--font-body);
+      font-size: var(--sz-small);
+      color: var(--ink-dim);
+      line-height: 1.45;
+    }
+    .flow-step .fs-body strong { color: var(--ink); font-weight: 500; }
+    .flow-arrow {
+      text-align: center;
+      color: var(--ink-ghost);
+      font-size: var(--sz-small);
+      line-height: 1;
+      padding: 1px 0;
+    }
+
+    /* Stats */
+    .stats-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--gap-sm);
+      margin-top: var(--gap-sm);
+    }
+    .stat-box {
+      background: var(--bg-lift);
+      border-top: 2px solid var(--crimson);
+      padding: clamp(0.5rem, 1vw, 0.9rem);
+      text-align: center;
+    }
+    .stat-n {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 3vw, 2.4rem);
+      color: var(--ink);
+      display: block;
+      line-height: 1;
+    }
+    .stat-l {
+      font-family: var(--font-body);
+      font-size: var(--sz-small);
+      color: var(--ink-dim);
+      margin-top: 3px;
+      line-height: 1.3;
+      display: block;
+    }
+
+    /* Code block */
+    .code-block {
+      background: #0d0c0a;
+      border: 1px solid var(--rule);
+      border-radius: 1px;
+      padding: clamp(0.6rem, 1.2vw, 1rem) clamp(0.8rem, 1.5vw, 1.4rem);
+      font-family: var(--font-mono);
+      font-size: var(--sz-mono);
+      line-height: 1.7;
+      overflow: hidden;
+    }
+    .code-block .ck  { color: #6b7280; }
+    .code-block .cy  { color: #c4a562; }
+    .code-block .cv  { color: #6db89a; }
+    .code-block .cn  { color: #ebe6dc; }
+
+    /* Terminal */
+    #terminal {
+      background: #0d0b09;
+      border: 1px solid var(--rule);
+      border-radius: 2px;
+      padding: clamp(0.8rem, 1.5vw, 1.3rem) clamp(1rem, 2vw, 1.8rem);
+      font-family: var(--font-mono);
+      font-size: var(--sz-mono);
+      color: #c0b8ad;
+      max-height: min(55vh, 400px);
+      overflow: hidden;
+      margin-top: var(--gap-sm);
+    }
+    #terminal .t-prompt { color: var(--crimson); }
+    #terminal .t-cmd    { color: var(--gold); }
+    #terminal .t-dim    { color: #4a453e; }
+    #terminal .t-ok     { color: #6db89a; }
+    #terminal .t-warn   { color: #d4885a; }
+    #terminal .t-hdr    { color: #89a8c4; font-weight: 500; }
+    #terminal .t-cursor {
+      display: inline-block; width: 7px; height: 0.9em;
+      background: var(--crimson); margin-left: 2px;
+      animation: blink 1s step-end infinite;
+      vertical-align: text-bottom;
+    }
+    @keyframes blink { 50% { opacity: 0; } }
+
+    /* Update banner */
+    .update-banner {
+      font-family: var(--font-body);
+      font-size: var(--sz-small);
+      color: var(--mint);
+      background: rgba(109, 184, 154, 0.1);
+      border-left: 2px solid var(--mint);
+      padding: clamp(0.35rem, 0.7vw, 0.6rem) clamp(0.5rem, 1vw, 0.9rem);
+      margin-bottom: var(--gap-sm);
+    }
+
+    /* === TITLE SLIDE special styles === */
+    .slide-title {
+      background: var(--bg);
+      justify-content: flex-end;
+    }
+    .slide-title .slide-content {
+      justify-content: flex-end;
+      padding-bottom: clamp(2rem, 5vw, 5rem);
+    }
+    .title-eyebrow {
+      font-family: var(--font-body);
+      font-size: var(--sz-label);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--crimson);
+      margin-bottom: clamp(0.5rem, 1.5vw, 1.2rem);
+    }
+    .title-subtitle {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: clamp(1rem, 2vw, 1.6rem);
+      color: var(--ink-dim);
+      margin-top: 0.4em;
+    }
+    .title-rule {
+      width: clamp(2rem, 8vw, 7rem);
+      height: 1.5px;
+      background: var(--crimson);
+      margin: clamp(0.8rem, 2vw, 1.8rem) 0;
+    }
+    .title-meta {
+      font-family: var(--font-body);
+      font-size: var(--sz-small);
+      color: var(--ink-dim);
+      line-height: 1.8;
+    }
+    /* Decorative background element — animated ink bleed */
+    .title-bg-circle {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .tbc-1 {
+      width: min(55vh, 480px); height: min(55vh, 480px);
+      top: calc(-1 * min(20vh, 160px));
+      right: calc(-1 * min(15vw, 140px));
+      background: radial-gradient(ellipse, rgba(190,58,76,0.08) 0%, transparent 70%);
+      animation: drift 12s ease-in-out infinite alternate;
+    }
+    .tbc-2 {
+      width: min(35vh, 280px); height: min(35vh, 280px);
+      bottom: min(8vh, 60px);
+      right: min(15vw, 200px);
+      background: radial-gradient(ellipse, rgba(196,165,98,0.06) 0%, transparent 70%);
+      animation: drift 17s ease-in-out infinite alternate-reverse;
+    }
+    @keyframes drift {
+      from { transform: translate(0, 0) scale(1); }
+      to   { transform: translate(20px, -20px) scale(1.07); }
+    }
+
+    /* === WORKSHOP DIVIDER === */
+    .slide-workshop-div {
+      background: var(--bg-workshop);
+      justify-content: center;
+      align-items: center;
+    }
+    .wd-inner {
+      text-align: center;
+      padding: var(--slide-padding);
+    }
+    .wd-label {
+      font-family: var(--font-body);
+      font-size: var(--sz-label);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--crimson);
+      margin-bottom: clamp(0.8rem, 2vw, 1.6rem);
+    }
+    .wd-rule {
+      width: clamp(3rem, 10vw, 8rem);
+      height: 1px;
+      background: var(--crimson);
+      margin: clamp(0.8rem, 2vw, 1.6rem) auto;
+    }
+    .wd-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4.5vw, 4rem);
+      color: var(--ink);
+      font-weight: 600;
+      line-height: 1.1;
+    }
+    .wd-subtitle {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: clamp(0.9rem, 1.8vw, 1.4rem);
+      color: var(--ink-dim);
+      margin-top: 0.5em;
+    }
+    .wd-note {
+      font-family: var(--font-body);
+      font-size: var(--sz-small);
+      color: var(--ink-ghost);
+      margin-top: clamp(1.5rem, 3vw, 3rem);
+      letter-spacing: 0.06em;
+    }
+
+    /* Workshop slides — slightly lighter bg */
+    .slide-workshop { background: var(--bg-workshop); }
+
+    /* Numbered activity items */
+    .act-num {
+      font-family: var(--font-display);
+      font-size: clamp(1.4rem, 3vw, 2.5rem);
+      color: var(--crimson);
+      font-weight: 600;
+      flex-shrink: 0;
+      width: 1.5em;
+      line-height: 1;
+    }
+    .act-row {
+      display: flex;
+      gap: var(--gap);
+      align-items: flex-start;
+      margin-bottom: var(--gap-sm);
+    }
+    .act-body strong {
+      font-family: var(--font-body);
+      font-weight: 500;
+      font-size: var(--sz-body);
+      color: var(--ink);
+      display: block;
+      margin-bottom: 3px;
+    }
+    .act-body p {
+      font-size: var(--sz-small);
+      color: var(--ink-dim);
+      line-height: 1.5;
+    }
+
+    /* Takeaway rows */
+    .ta-row {
+      display: flex;
+      gap: var(--gap);
+      align-items: flex-start;
+      padding: clamp(0.5rem, 1vw, 0.9rem) 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .ta-row:last-child { border-bottom: none; }
+    .ta-num {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 3.5rem);
+      color: var(--crimson);
+      font-weight: 600;
+      flex-shrink: 0;
+      width: 1.5em;
+      line-height: 1;
+    }
+    .ta-body strong { font-weight: 500; font-size: var(--sz-body); color: var(--ink); display: block; margin-bottom: 3px; }
+    .ta-body p { font-size: var(--sz-small); color: var(--ink-dim); line-height: 1.5; }
+
+    /* Closing slide */
+    .slide-closing { background: var(--bg); }
+    .closing-quote {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: clamp(1rem, 2.2vw, 1.7rem);
+      color: var(--ink);
+      line-height: 1.4;
+      border-left: 2px solid var(--crimson);
+      padding-left: clamp(0.8rem, 2vw, 1.6rem);
+      max-width: 72ch;
+    }
+    .closing-rule { width: clamp(2rem, 6vw, 5rem); height: 1px; background: var(--gold); margin: var(--gap) 0; }
+    .closing-meta { font-family: var(--font-body); font-size: var(--sz-small); color: var(--ink-dim); line-height: 2; }
+
+  </style>
+</head>
+<body>
+
+<!-- Progress bar -->
+<div id="progress-bar"></div>
+
+<!-- Navigation dots -->
+<nav id="nav-dots" aria-label="Slide navigation"></nav>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE 1 — TITLE
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide slide-title" data-section="">
+  <div class="title-bg-circle tbc-1"></div>
+  <div class="title-bg-circle tbc-2"></div>
+
+  <div class="slide-chrome">
+    <span class="section-tag"></span>
+    <span class="slide-num">1 / 30</span>
+  </div>
+
+  <div class="slide-content">
+    <p class="title-eyebrow reveal">CORE Editorial Board · April 2026</p>
+    <h1 class="reveal">Coworking<br>with Claude</h1>
+    <p class="title-subtitle reveal">Skills in Practice: Textbook · Course Design · Research</p>
+    <div class="title-rule reveal"></div>
+    <p class="title-meta reveal">
+      Simon D. Halliday<br>
+      Johns Hopkins University / CORE Econ<br>
+      Updated from Loughborough, March 2026
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE 2 — WHAT IS COWORK?
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Overview</span>
+    <span class="slide-num">2 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">What is Claude Cowork?</h2>
+    <ul class="blist reveal" style="margin-bottom: var(--gap);">
+      <li>A <strong>persistent workspace</strong>: reads and writes files on your computer, executes code, maintains context across sessions</li>
+      <li><strong>Programmable skills</strong>: reusable, versioned workflows — built once, invoked by name</li>
+      <li><strong>Installable plugins</strong>: a skill bundle packaged and shared — any co-author installs the same library</li>
+    </ul>
+    <div class="box box-crimson reveal">
+      <strong>Not a chatbot.</strong> A co-authoring environment that executes work on your behalf — and that you can program.
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE 3 — THE CORE INSIGHT
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Principle</span>
+    <span class="slide-num">3 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">The core insight</h2>
+    <div class="pull-quote reveal">"Any prompt you will run more than twice<br>is worth turning into a skill."</div>
+    <ul class="blist reveal" style="margin-bottom: var(--gap);">
+      <li>A skill is a <strong>reusable, versioned, programmable workflow</strong></li>
+      <li>Skills <strong>compose</strong>: the output of one becomes the input of the next</li>
+      <li>Skills are <strong>shareable</strong>: a co-author runs the same workflow on their chapter</li>
+    </ul>
+    <div class="box box-gold reveal">
+      Infrastructure compounds. A prompt is a question. A skill is a procedure.
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE 4 — CASE 1: UOE CHALLENGE
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Case 1 · UOE</span>
+    <span class="slide-num">4 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">Auditing a textbook</h2>
+    <div class="box box-crimson reveal" style="margin-bottom: var(--gap);">
+      <em>Understanding Our Economy</em> — CORE's forthcoming introductory text for the North American market. 15+ chapters, 6 co-authors, multiple draft rounds.
+    </div>
+    <p class="dim reveal" style="font-size: var(--sz-small); margin-bottom: var(--gap-sm);">This is exactly the kind of work that is:</p>
+    <ul class="blist reveal">
+      <li>Too detailed for unaided human review at scale</li>
+      <li>Too nuanced for a simple script — requires reading comprehension and judgment</li>
+      <li>Highly repetitive across 15+ chapters and multiple draft rounds</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE 5 — CASE 1: ORIGINAL SKILLS
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Case 1 · UOE</span>
+    <span class="slide-num">5 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">The skill library — foundation</h2>
+    <div class="skill-grid skill-grid-2 reveal">
+      <div class="skill-card">
+        <span class="sc-name">mcq-generator</span>
+        <span class="sc-desc">Drafts questions aligned with chapter learning goals and Bloom's taxonomy; interleaved CSV output</span>
+      </div>
+      <div class="skill-card">
+        <span class="sc-name">mcq-reviewer</span>
+        <span class="sc-desc">Cross-references MCQs against chapter content; flags errors, weak distractors, and coverage gaps</span>
+      </div>
+      <div class="skill-card">
+        <span class="sc-name">chapter-figure-extractor</span>
+        <span class="sc-desc">Extracts figure data from embedded images; distinguishes labeled (precise) vs. unlabeled (estimated) values</span>
+      </div>
+      <div class="skill-card">
+        <span class="sc-name">mcq-word-converter</span>
+        <span class="sc-desc">Converts co-author MCQ Word drafts (from Google Docs) into the project's standardised CSV format</span>
+      </div>
+      <div class="skill-card">
+        <span class="sc-name">uoe-chapter-additions</span>
+        <span class="sc-desc">Generates learning objectives, key concepts lists, and "Seeing the Principles in Action" tables</span>
+      </div>
+      <div class="skill-card" style="background: transparent; border: none;"></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE 6 — CASE 1: NEW SKILLS SINCE MARCH
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Case 1 · UOE</span>
+    <span class="slide-num">6 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">The skill library — since Loughborough</h2>
+    <div class="update-banner reveal">✦ Three new skills added since March 2026</div>
+    <div class="skill-grid skill-grid-3 reveal">
+      <div class="skill-card new-skill">
+        <span class="sc-name">exercise-reviewer <span class="new-badge">new</span></span>
+        <span class="sc-desc">Reviews open-ended exercises for scaffolding quality, solution completeness, and Bloom's coverage; produces a structured editorial memo</span>
+      </div>
+      <div class="skill-card new-skill">
+        <span class="sc-name">mcq-exporter <span class="new-badge">new</span></span>
+        <span class="sc-desc">Converts approved MCQ CSV files to LMS import formats: Moodle XML, Canvas QTI 1.2, IMS Common Cartridge</span>
+      </div>
+      <div class="skill-card new-skill">
+        <span class="sc-name">mcq-skill-improver <span class="new-badge">new</span></span>
+        <span class="sc-desc">Scores MCQ batches against a 10-criterion rubric, identifies persistent failure modes, proposes targeted skill revisions — the self-improvement loop, now running</span>
+      </div>
+    </div>
+    <div class="box box-gold reveal" style="margin-top: var(--gap);">
+      The eight-skill library is packaged as an installable Cowork plugin. Any co-author can run the same workflows on their chapter.
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE 7 — CASE 1: TERMINAL DEMO
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide" id="slide-demo" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Case 1 · UOE</span>
+    <span class="slide-num">7 / 30</span>
+  </div>
+  <div class="slide-content" style="justify-content: flex-start; padding-top: var(--gap);">
+    <h2 class="reveal">A skill in action: mcq-reviewer</h2>
+    <p class="dim reveal" style="font-size: var(--sz-small); margin-bottom: var(--gap-sm);">Running on Chapter 5 — simulated at presentation speed. One sentence invokes the skill; it handles the rest.</p>
+    <div id="terminal" class="reveal">
+      <span class="t-prompt">simon@cowork:~$</span>&nbsp;<span id="term-content"></span><span class="t-cursor" id="cursor"></span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE 8 — CASE 2: PROGRESS FYS INTRO
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Case 2 · Progress FYS</span>
+    <span class="slide-num">8 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">Course design from scratch</h2>
+    <div class="box box-crimson reveal" style="margin-bottom: var(--gap);">
+      <em>Progress: Why Now Is the Best Time to Be Alive</em> — 12-student first-year seminar at Johns Hopkins (Fall 2026). Economics, history, philosophy, sociology. Baltimore as classroom.
+    </div>
+    <p class="dim reveal" style="font-size: var(--sz-small); margin-bottom: var(--gap-sm);">The design challenge:</p>
+    <ul class="blist reveal">
+      <li>Building a full course from scratch: syllabus, 20+ session notes, assignments, course website, rubrics — before the semester begins</li>
+      <li>Session notes must embed retrieval practice (MCQs), hover glossary definitions, and spaced-repetition prompts (Orbit)</li>
+      <li>Materials must align with a bespoke editorial design system matching the course's intellectual community</li>
+      <li>Readings span economics, history, philosophy, and data science — interdisciplinary synthesis at first-year level</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE 9 — CASE 2: SESSION-NOTE-WRITER SKILL
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Case 2 · Progress FYS</span>
+    <span class="slide-num">9 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">The session-note-writer skill</h2>
+    <p class="dim reveal" style="margin-bottom: var(--gap);">Input: reading list, session agenda, key terms. Output: a fully formatted Quarto session note.</p>
+    <ul class="blist reveal">
+      <li>Embedded MCQs at section ends — retrieval practice at point of learning</li>
+      <li>Hover-definition glossary terms — elaborative encoding in context</li>
+      <li>Orbit spaced-repetition cards — 3–5 per session, scheduled across the semester</li>
+      <li>Instructor notes in terracotta, matching the course design system</li>
+    </ul>
+    <div class="box box-gold reveal" style="margin-top: var(--gap);">
+      "run session-note-writer on Session 6" → same format, same design system, glossary already populated.
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE 9b — CASE 2: OTHER DELIVERABLES
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Case 2 · Progress FYS</span>
+    <span class="slide-num">10 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">Other deliverables from a semester's work</h2>
+    <ul class="blist reveal">
+      <li>Course website: <strong>progress.simondhalliday.com</strong> — Quarto + custom CSS; interactive map of 12 Baltimore progress sites</li>
+      <li>Design system memo — color tokens, typography, build instructions for the course aesthetic</li>
+      <li>Mnemonic learning plan — Matuschak spaced-repetition research → Orbit implementation</li>
+      <li>Assignment briefs, rubrics, workshop agenda, funding proposal</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE 10 — CASE 2: SESSION NOTE STRUCTURE
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Case 2 · Progress FYS</span>
+    <span class="slide-num">11 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">Anatomy of a session note</h2>
+    <div class="flow-list reveal">
+      <div class="flow-step"><span class="fs-num">§</span><span class="fs-body"><strong>Reading précis</strong> — 200–300 words contextualizing the week's reading</span></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="fs-num">§</span><span class="fs-body"><strong>Key concepts</strong> — 4–6 terms with hover-definition glossary entries</span></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="fs-num">§</span><span class="fs-body"><strong>Discussion prompts</strong> — 2–3 questions for in-class use</span></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="fs-num">§</span><span class="fs-body"><strong>MCQ check</strong> — 3 retrieval practice questions</span></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step done"><span class="fs-num">§</span><span class="fs-body"><strong>Orbit review block</strong> — 3–5 spaced-repetition cards, resurface at 4, 12, 30 days</span></div>
+    </div>
+    <div class="box box-dim reveal" style="margin-top: var(--gap);">
+      The Orbit cards from Session 1 resurface 4, 12, and 30 days later — turning a 75-minute class into a semester-long learning arc.
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE 11 — CASE 3: THESIS SUPERVISION
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Case 3 · Research</span>
+    <span class="slide-num">12 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">Thesis supervision</h2>
+    <div class="box box-crimson reveal" style="margin-bottom: var(--gap);">
+      A student replicating a published QUAIDS demand-system analysis of fossil fuel subsidy reform in Nigeria and extending it to 2023/24 post-reform survey data. Survey-weighted estimation, multiple fuel categories, compensating variation calculations.
+    </div>
+    <div class="stats-row reveal" style="grid-template-columns: 1fr 1fr; margin-bottom: var(--gap);">
+      <div class="stat-box"><span class="stat-n">4–6</span><span class="stat-l">hours across two days</span></div>
+      <div class="stat-box"><span class="stat-n">0.00 pp</span><span class="stat-l">error on key replication target</span></div>
+    </div>
+    <ul class="blist reveal" style="margin-bottom: var(--gap);">
+      <li>Confirmed sub-basis-point accuracy: energy budget share 5.49% — exact match to 2 d.p.</li>
+      <li>Identified a proxy denominator problem in Wave 5 data; articulated consequences for CV estimates</li>
+      <li>Generated distributional figures in second-authored paper style</li>
+    </ul>
+    <div class="box box-dim reveal">
+      <em>"This has fundamentally changed how I will supervise theses going forward."</em><br>
+      <span class="dim">The student did the work. But I could verify things I could not have verified in a meeting.</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE 12 — SELF-IMPROVING SKILLS
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Frontier</span>
+    <span class="slide-num">13 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">Self-improving skills <span style="font-family: var(--font-body); font-size: var(--sz-label); letter-spacing: 0.12em; text-transform: uppercase; color: var(--mint); vertical-align: middle; margin-left: 0.5em;">now live</span></h2>
+    <div class="update-banner reveal">✦ At Loughborough (March 2026) this was a vision. By April it is running on the UOE MCQ generator.</div>
+    <div class="box box-crimson reveal" style="margin-bottom: var(--gap);">
+      The <code style="font-family: var(--font-mono); font-size: var(--sz-small); color: var(--mint);">mcq-skill-improver</code> skill scores a batch of generated MCQs against a 10-criterion rubric, identifies the failure modes that appear most consistently, and proposes targeted revisions to the <code style="font-family: var(--font-mono); font-size: var(--sz-small); color: var(--mint);">mcq-generator</code> skill itself.
+    </div>
+    <ul class="blist reveal">
+      <li>Each skill run is a draw from a distribution — we want to shift the mean and reduce variance</li>
+      <li>Rubric-based evaluation gives a loss function; iterating on the skill is gradient descent on quality</li>
+      <li>Distractors plausible but unambiguously wrong; reading level appropriate for first-year students</li>
+      <li>Correct answer not conspicuously longer; aligned with a stated learning objective</li>
+    </ul>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE 13 — THE IMPROVEMENT LOOP
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Frontier</span>
+    <span class="slide-num">14 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">The self-improvement loop</h2>
+    <div class="flow-list reveal" style="margin-bottom: var(--gap);">
+      <div class="flow-step"><span class="fs-num">①</span><span class="fs-body"><strong>Run mcq-generator</strong> on a chapter → produce a batch of questions</span></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="fs-num">②</span><span class="fs-body"><strong>mcq-skill-improver</strong> scores each question against a 10-criterion rubric</span></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="fs-num">③</span><span class="fs-body"><strong>Identify failure modes:</strong> which rubric criteria fail most consistently?</span></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="fs-num">④</span><span class="fs-body"><strong>Revise mcq-generator</strong> to address those failure modes → new skill version</span></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step done"><span class="fs-num">⑤</span><span class="fs-body"><strong>Re-run · re-evaluate · track improvement</strong> across versions · repeat</span></div>
+    </div>
+    <div class="box box-gold reveal">
+      The same loop applies to any structured output with a rubric: exercise quality, Insights editorial standards, translated chapter accuracy, empirical activity completeness.
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE 14 — WHAT CORE COULD BUILD (pt 1)
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">For CORE</span>
+    <span class="slide-num">15 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">What CORE could build — books</h2>
+    <ul class="blist reveal" style="margin-bottom: var(--gap);">
+      <li><code style="font-family: var(--font-mono); font-size: var(--sz-small); color: var(--mint);">te2-chapter-consistency</code> — flag cross-chapter contradictions and broken cross-references across 22 units</li>
+      <li><code style="font-family: var(--font-mono); font-size: var(--sz-small); color: var(--mint);">te2-terminology-enforcer</code> — checks "best-response equilibrium" and other CORE conventions across all chapters and translations</li>
+      <li><code style="font-family: var(--font-mono); font-size: var(--sz-small); color: var(--mint);">te2-exercise-reviewer</code> — evaluates "Einstein" boxes and "When economists disagree" sections against editorial rubric</li>
+      <li><code style="font-family: var(--font-mono); font-size: var(--sz-small); color: var(--mint);">doing-econ-activity-reviewer</code> — checks empirical activities have complete walk-throughs and working data links</li>
+    </ul>
+    <div class="box box-dim reveal">
+      The UOE skill library took one person ~two months to build. A shared CORE library, built once, deploys across all books and co-authors worldwide.
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE 15 — WHAT CORE COULD BUILD (pt 2)
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">For CORE</span>
+    <span class="slide-num">16 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">What CORE could build — infrastructure</h2>
+    <ul class="blist reveal" style="margin-bottom: var(--gap);">
+      <li><code style="font-family: var(--font-mono); font-size: var(--sz-small); color: var(--mint);">insight-editor</code> — enforce word-count, reading-level, and citation-format standards across all Insights pieces</li>
+      <li><code style="font-family: var(--font-mono); font-size: var(--sz-small); color: var(--mint);">translation-qa</code> — compare translated chapters against English originals for terminology drift</li>
+      <li><code style="font-family: var(--font-mono); font-size: var(--sz-small); color: var(--mint);">lms-exporter</code> — convert any CORE MCQ bank to Moodle XML, Canvas QTI, or IMS Common Cartridge</li>
+    </ul>
+    <div class="code-block reveal" style="margin-bottom: var(--gap);">
+      <span class="ck"># Sam Bowles in Santa Fe:</span><br>
+      <span class="cy">sam@cowork</span><span class="cn">:~$</span> run te2-mcq-generator on Unit 4<br><br>
+      <span class="ck"># Wendy Carlin in London:</span><br>
+      <span class="cy">wendy@cowork</span><span class="cn">:~$</span> run te2-chapter-consistency on Unit 7<br><br>
+      <span class="cv"># Same skill · same output format · same terminology enforcement</span>
+    </div>
+    <div class="box box-gold reveal">Marginal cost of the second user: near zero.</div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     WORKSHOP DIVIDER
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide slide-workshop-div" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag"></span>
+    <span class="slide-num">17 / 30</span>
+  </div>
+  <div class="wd-inner">
+    <p class="wd-label reveal">Workshop</p>
+    <h1 class="wd-title reveal">Building Skills<br>That Work</h1>
+    <div class="wd-rule reveal"></div>
+    <p class="wd-subtitle reveal">How to design, write, test, and improve a skill from scratch</p>
+    <p class="wd-note reveal">~ 35 minutes · hands-on · bring a task you do repeatedly</p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE W1 — WHAT A SKILL IS
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide slide-workshop" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Workshop · Anatomy</span>
+    <span class="slide-num">18 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">What a skill actually is</h2>
+    <p class="dim reveal" style="font-size: var(--sz-small); margin-bottom: var(--gap-sm);">A skill is a Markdown file with two parts: a YAML header and a prompt body. That's it.</p>
+    <div class="code-block reveal" style="margin-bottom: var(--gap);">
+      <span class="ck">---</span><br>
+      <span class="cy">name</span><span class="cn">: my-skill-name</span><br>
+      <span class="cy">description</span><span class="cn">: </span><span class="cv">Use this skill when the user wants to review exercises for a chapter. Triggers: "check the exercises", "audit the problem sets".</span><br>
+      <span class="ck">---</span><br><br>
+      <span class="cn"># Your instructions go here.</span><br>
+      <span class="ck"># State the goal · list inputs · specify output format</span><br>
+      <span class="ck"># Give one example of good output</span>
+    </div>
+    <div class="box box-crimson reveal">
+      <strong>Description field = the trigger.</strong> Claude reads it to decide whether to invoke the skill. Write it as a list of natural-language phrases a user might say.
+    </div>
+    <div class="box box-gold reveal" style="margin-top: var(--gap-sm);">
+      <strong>Body = the instruction set.</strong> A standing memo to Claude: "whenever this skill is called, here is your job."
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE W2 — THREE DESIGN QUESTIONS
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide slide-workshop" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Workshop · Design</span>
+    <span class="slide-num">19 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">Before you write a word: three questions</h2>
+    <div class="act-row reveal">
+      <div class="act-num">1</div>
+      <div class="act-body">
+        <strong>What triggers this skill?</strong>
+        <p>Write three sentences a user might actually say to invoke it. If you can't write three, the skill is under-specified. If you can write thirty, it's too broad. Your description field should list these trigger phrases directly.</p>
+      </div>
+    </div>
+    <div class="act-row reveal">
+      <div class="act-num">2</div>
+      <div class="act-body">
+        <strong>What goes in?</strong>
+        <p>List every file, piece of text, or parameter the skill needs. If something is missing, the skill should know to ask rather than guess. Be specific: "the chapter .docx and the exercise .docx" — not "the chapter."</p>
+      </div>
+    </div>
+    <div class="act-row reveal">
+      <div class="act-num">3</div>
+      <div class="act-body">
+        <strong>What comes out?</strong>
+        <p>Describe the output format precisely: a Word memo, a CSV, a list of bullet points. If you can't describe the output in two sentences, you're not ready to write the skill yet.</p>
+      </div>
+    </div>
+    <div class="box box-gold reveal">
+      Answer all three before opening a text editor. A skill built without these answers will need to be rewritten from scratch.
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE W3 — RUBRIC-FIRST PRINCIPLE
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide slide-workshop" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Workshop · Rubric</span>
+    <span class="slide-num">20 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">The rubric-first principle</h2>
+    <div class="pull-quote reveal">"Write the rubric before you write the skill."</div>
+    <p class="dim reveal" style="margin-bottom: var(--gap);">If you don't know what good output looks like, you can't tell whether the skill is working. You'll iterate on vibes — and stop too early.</p>
+    <ul class="blist reveal" style="margin-bottom: var(--gap);">
+      <li>Each criterion must be answerable <strong>yes/no</strong> from a single output</li>
+      <li>Flags coverage gaps and missing scaffolding; assesses Bloom's level per sub-part</li>
+      <li>Produces a memo a co-author can act on without re-reading the chapter</li>
+    </ul>
+    <div class="box box-crimson reveal">
+      4–8 rubric criteria is usually right. Fewer: not measuring enough. More: you'll never finish evaluating.
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE W4 — WRITING THE FIRST DRAFT
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide slide-workshop" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Workshop · Drafting</span>
+    <span class="slide-num">21 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">Writing the first draft</h2>
+    <p class="dim reveal" style="margin-bottom: var(--gap);">Aim for 200–350 words. You will add detail through iteration — not upfront.</p>
+    <ul class="blist reveal" style="margin-bottom: var(--gap);">
+      <li><strong>Goal statement</strong> — one sentence: "Your job is to review the exercises in [chapter] against the chapter content."</li>
+      <li><strong>Inputs</strong> — explicit list of what you need; what to ask for if missing</li>
+      <li><strong>Output specification</strong> — format, length, where to save</li>
+      <li><strong>One example</strong> — a concrete example of a finding at the depth you want</li>
+    </ul>
+    <div class="box box-gold reveal">
+      First draft of <code style="font-family: var(--font-mono); font-size: var(--sz-small);">mcq-reviewer</code> was 180 words. Current version: 640 words. Every word added addressed a specific failure in a real run.
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE W5 — BUILD-RUN-REVISE CYCLE
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide slide-workshop" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Workshop · Iteration</span>
+    <span class="slide-num">22 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">The build-run-revise cycle</h2>
+    <p class="dim reveal" style="font-size: var(--sz-small); margin-bottom: var(--gap-sm);">Three to five iterations produces a reliable v1. Each iteration is one run + one targeted edit.</p>
+    <div class="flow-list reveal" style="margin-bottom: var(--gap);">
+      <div class="flow-step"><span class="fs-num">①</span><span class="fs-body"><strong>Run on real content</strong> — not a toy example. Synthetic inputs produce misleadingly good results.</span></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="fs-num">②</span><span class="fs-body"><strong>Read against the rubric</strong> — systematically, criterion by criterion. Which did it meet? Which did it miss?</span></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="fs-num">③</span><span class="fs-body"><strong>Identify the single most important failure</strong> — resist fixing everything at once. One edit per iteration keeps causality clear.</span></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="fs-num">④</span><span class="fs-body"><strong>Edit the skill to address that failure</strong> — add a specific instruction, a clarifying example, or a tighter output constraint.</span></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step done"><span class="fs-num">⑤</span><span class="fs-body"><strong>Run again — compare across iterations.</strong> Did the failure resolve? Did a new one appear?</span></div>
+    </div>
+    <div class="box box-dim reveal">"One edit per iteration" is the discipline that makes iteration informative. Change five things at once and you learn nothing about what drove the improvement.</div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE W6 — FIVE FAILURE MODES
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide slide-workshop" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Workshop · Failure modes</span>
+    <span class="slide-num">23 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">Five failure modes to watch for</h2>
+    <div class="skill-grid skill-grid-2 reveal" style="margin-bottom: var(--gap-sm);">
+      <div class="skill-card" style="border-left-color: var(--crimson);">
+        <span class="sc-name" style="color: var(--crimson);">The vague skill</span>
+        <span class="sc-desc">Output is plausible-sounding but not useful — right register, wrong depth. <strong style="color: var(--ink);">Fix:</strong> add one concrete example of a finding at the depth you want.</span>
+      </div>
+      <div class="skill-card" style="border-left-color: var(--crimson);">
+        <span class="sc-name" style="color: var(--crimson);">The format floater</span>
+        <span class="sc-desc">Output format varies run to run. <strong style="color: var(--ink);">Fix:</strong> specify format explicitly, including section headings: "always follow this structure."</span>
+      </div>
+      <div class="skill-card" style="border-left-color: var(--crimson);">
+        <span class="sc-name" style="color: var(--crimson);">The over-reacher</span>
+        <span class="sc-desc">Skill tries to do too much and does all of it poorly. <strong style="color: var(--ink);">Fix:</strong> split into two skills with a clear handoff. Output of A becomes input of B.</span>
+      </div>
+      <div class="skill-card" style="border-left-color: var(--crimson);">
+        <span class="sc-name" style="color: var(--crimson);">The silent assumption</span>
+        <span class="sc-desc">Assumes inputs the user often won't provide. <strong style="color: var(--ink);">Fix:</strong> add: "if [X] is not provided, ask the user for it before proceeding."</span>
+      </div>
+      <div class="skill-card" style="border-left-color: var(--crimson);">
+        <span class="sc-name" style="color: var(--crimson);">The hallucinated figure</span>
+        <span class="sc-desc">Reports values from figures it cannot read accurately. <strong style="color: var(--ink);">Fix:</strong> run <code style="font-family: var(--font-mono);">figure-extractor</code> first; instruct the skill to flag rather than estimate.</span>
+      </div>
+      <div class="skill-card" style="border-left-color: var(--mint); background: rgba(109,184,154,0.08);">
+        <span class="sc-name" style="color: var(--mint);">How to spot them early</span>
+        <span class="sc-desc">Run the skill twice on the same input. Outputs differ significantly → format floater. Thin output → vague. Misses half the rubric → over-reacher.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE W7 — COMPOSING SKILLS INTO PIPELINES
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide slide-workshop" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Workshop · Pipelines</span>
+    <span class="slide-num">24 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">Composing skills into pipelines</h2>
+    <div class="flow-list reveal" style="margin-bottom: var(--gap);">
+      <div class="flow-step done"><span class="fs-num">①</span><span class="fs-body"><strong>chapter-figure-extractor</strong> → verified figure data (human-reviewed)</span></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step done"><span class="fs-num">②</span><span class="fs-body"><strong>mcq-reviewer</strong> → cross-references MCQs + figure data → Word memo</span></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step done"><span class="fs-num">③</span><span class="fs-body"><strong>exercise-reviewer</strong> → open-ended exercises → second Word memo</span></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step done"><span class="fs-num">④</span><span class="fs-body"><strong>uoe-chapter-additions</strong> → learning objectives + principles table</span></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step"><span class="fs-num">⑤</span><span class="fs-body"><strong>mcq-exporter</strong> → Moodle XML / Canvas QTI</span></div>
+    </div>
+    <div class="box box-dim reveal">Build one skill. Use it. Add the next when the first is reliable.</div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE W8 — FROM RUBRIC TO AUTOMATION
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide slide-workshop" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Workshop · Automation</span>
+    <span class="slide-num">25 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">From rubric to automation</h2>
+    <div class="flow-list reveal" style="margin-bottom: var(--gap);">
+      <div class="flow-step"><span class="fs-num">→</span><span class="fs-body">Score a batch of generated outputs against all rubric criteria — pass/fail with brief justification</span></div>
+      <div class="flow-step"><span class="fs-num">→</span><span class="fs-body">Aggregate across the batch: which criteria fail most consistently? (This is the signal.)</span></div>
+      <div class="flow-step done"><span class="fs-num">→</span><span class="fs-body">Propose specific changes to the skill prompt to address those failures</span></div>
+    </div>
+    <p class="dim reveal" style="font-style: italic; margin-bottom: var(--gap);">Result so far: distractor plausibility is the most persistent failure. Version 2 will address documented student misconceptions per section.</p>
+    <div class="box box-crimson reveal">
+      <strong>Not magic.</strong> The skill-improver diagnoses; you decide what to change. A systematic diagnosis is far more actionable than reading 20 outputs and forming an impression.
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE W9 — PERSISTENT CONTEXT (CLAUDE.MD)
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide slide-workshop" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Workshop · Context</span>
+    <span class="slide-num">26 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">Giving your skills persistent context</h2>
+    <p class="dim reveal" style="margin-bottom: var(--gap);"><code style="font-family: var(--font-mono);">CLAUDE.md</code> lives in your workspace and loads automatically at the start of every session. Put here:</p>
+    <ul class="blist reveal" style="margin-bottom: var(--gap);">
+      <li>Project terminology conventions — "best-response equilibrium," US spelling, reading level</li>
+      <li>Co-author names and chapter assignments</li>
+      <li>Which skills exist and what they produce</li>
+      <li>File naming conventions the pipeline expects</li>
+    </ul>
+    <div class="box box-crimson reveal">
+      Skills inherit CLAUDE.md — they don't need to repeat it. Write shared conventions once; every skill uses them automatically.
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE W10 — PLUGIN MODEL
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide slide-workshop" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Workshop · Sharing</span>
+    <span class="slide-num">27 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">Sharing skills: the plugin model</h2>
+    <ul class="blist reveal" style="margin-bottom: var(--gap);">
+      <li>A skill bundle: all skills + CLAUDE.md + optional tool integrations (Slack, Drive, Notion)</li>
+      <li>Install once from the Cowork marketplace — all skills immediately available</li>
+      <li>Versioned: update once, all co-authors get the new version</li>
+    </ul>
+    <div class="code-block reveal" style="margin-bottom: var(--gap);">
+      <span class="ck"># Install once:</span><br>
+      <span class="cn">CORE Editorial Plugin v1.2</span><br><br>
+      <span class="cy">  te2-*</span><span class="cn">           (The Economy 2.0)</span><br>
+      <span class="cy">  uoe-*</span><span class="cn">           (Understanding Our Econ)</span><br>
+      <span class="cy">  lms-exporter</span><span class="cn">    (all books → LMS)</span><br>
+      <span class="cy">  translation-qa</span><span class="cn">  (cross-language)</span>
+    </div>
+    <div class="box box-gold reveal">Build once. Marginal cost of the second co-author: near zero.</div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE W11 — WORKSHOP ACTIVITY
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide slide-workshop" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Workshop · Activity</span>
+    <span class="slide-num">28 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">Design your skill — 10 minutes</h2>
+    <p class="dim reveal" style="font-size: var(--sz-small); margin-bottom: var(--gap);">Work individually or in pairs. Pick one task you do repeatedly in your editorial or research workflow.</p>
+    <div class="act-row reveal">
+      <div class="act-num">①</div>
+      <div class="act-body">
+        <strong>Name the task</strong>
+        <p>"I repeatedly have to __________ and it takes me __________ each time." Be specific. "Review a chapter" is too broad. "Check that all cross-references in a chapter point to sections that actually exist" is a skill.</p>
+      </div>
+    </div>
+    <div class="act-row reveal">
+      <div class="act-num">②</div>
+      <div class="act-body">
+        <strong>Answer the three questions</strong>
+        <p>(a) Three trigger phrases; (b) exact inputs needed; (c) what the output looks like — format, length, where it's saved.</p>
+      </div>
+    </div>
+    <div class="act-row reveal">
+      <div class="act-num">③</div>
+      <div class="act-body">
+        <strong>Write the rubric — 4–6 criteria</strong>
+        <p>Each criterion must be answerable yes/no from a single output. Avoid vague criteria like "is it high quality."</p>
+      </div>
+    </div>
+    <div class="box box-gold reveal">Share back: one person per group, 90 seconds — what's your skill, and what's your hardest rubric criterion to operationalize?</div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE 28 — THREE TAKEAWAYS
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag">Takeaways</span>
+    <span class="slide-num">29 / 30</span>
+  </div>
+  <div class="slide-content">
+    <h2 class="reveal">Three things to take away</h2>
+    <div class="ta-row reveal">
+      <div class="ta-num">1</div>
+      <div class="ta-body">
+        <strong>Claude finds what you can't see at scale.</strong>
+        <p>Inconsistencies, gaps, errors — across chapters, datasets, versions. The gap between what the author intended and what the text actually says. This applies to The Economy just as it applies to UOE.</p>
+      </div>
+    </div>
+    <div class="ta-row reveal">
+      <div class="ta-num">2</div>
+      <div class="ta-body">
+        <strong>Skills turn prompts into infrastructure that transfers.</strong>
+        <p>Any workflow you repeat is worth systematising. Skills built for a textbook inform skills for a course. A CORE skill library deployed to co-authors worldwide compounds across every subsequent chapter, book, and course that uses CORE materials.</p>
+      </div>
+    </div>
+    <div class="ta-row reveal">
+      <div class="ta-num">3</div>
+      <div class="ta-body">
+        <strong>The system can improve itself — and it already is.</strong>
+        <p>Rubric-based evaluation and iterative skill revision are running now on UOE. The same approach applies to any structured output: exercises, Insights pieces, translated chapters, empirical activities.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SLIDE 29 — CLOSING
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="slide slide-closing" data-section="">
+  <div class="slide-chrome">
+    <span class="section-tag"></span>
+    <span class="slide-num">30 / 30</span>
+  </div>
+  <div class="slide-content" style="justify-content: center;">
+    <p class="reveal" style="font-family: var(--font-body); font-size: var(--sz-label); letter-spacing: 0.2em; text-transform: uppercase; color: var(--crimson); margin-bottom: var(--gap);">The invitation</p>
+    <div class="closing-quote reveal">
+      "What repeated task in CORE's editorial workflow would most benefit from a skill?<br>What rubric would you use to evaluate its output?"
+    </div>
+    <div class="closing-rule reveal"></div>
+    <p class="closing-meta reveal">
+      Simon D. Halliday &nbsp;·&nbsp; simon.d.halliday@gmail.com<br>
+      Johns Hopkins University &nbsp;/&nbsp; CORE Econ<br>
+      <em>Understanding Our Economy</em> — forthcoming<br>
+      <em>FYS: Progress</em> — Fall 2026 &nbsp;·&nbsp; progress.simondhalliday.com
+    </p>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
+     JAVASCRIPT
+     ═══════════════════════════════════════════════════════════════ -->
+<script>
+/* ============================================================
+   SLIDE CONTROLLER
+   Handles: keyboard nav, touch/swipe, mouse wheel,
+            scroll snap, Intersection Observer for animations,
+            progress bar, nav dots
+   ============================================================ */
+class SlidePresentation {
+  constructor() {
+    this.slides      = Array.from(document.querySelectorAll('.slide'));
+    this.totalSlides = this.slides.length;
+    this.current     = 0;
+    this.isScrolling = false;
+
+    this.progressBar = document.getElementById('progress-bar');
+    this.navDots     = document.getElementById('nav-dots');
+
+    this.setupObserver();
+    this.setupKeyboard();
+    this.setupWheel();
+    this.setupTouch();
+    this.buildNavDots();
+    this.updateProgress(0);
+  }
+
+  /* --- Intersection Observer: add .visible for CSS animations --- */
+  setupObserver() {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          this.current = this.slides.indexOf(entry.target);
+          this.updateProgress(this.current);
+          this.updateDots(this.current);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    this.slides.forEach(s => obs.observe(s));
+  }
+
+  /* --- Navigate to a slide index --- */
+  goTo(idx) {
+    idx = Math.max(0, Math.min(idx, this.totalSlides - 1));
+    this.slides[idx].scrollIntoView({ behavior: 'smooth' });
+  }
+
+  /* --- Keyboard navigation --- */
+  setupKeyboard() {
+    document.addEventListener('keydown', e => {
+      switch (e.key) {
+        case 'ArrowDown': case 'ArrowRight': case ' ':
+          e.preventDefault(); this.goTo(this.current + 1); break;
+        case 'ArrowUp': case 'ArrowLeft':
+          e.preventDefault(); this.goTo(this.current - 1); break;
+        case 'Home': e.preventDefault(); this.goTo(0); break;
+        case 'End':  e.preventDefault(); this.goTo(this.totalSlides - 1); break;
+      }
+    });
+  }
+
+  /* --- Mouse wheel navigation (debounced) --- */
+  setupWheel() {
+    let lastWheel = 0;
+    document.addEventListener('wheel', e => {
+      e.preventDefault();
+      const now = Date.now();
+      if (now - lastWheel < 700) return;
+      lastWheel = now;
+      this.goTo(e.deltaY > 0 ? this.current + 1 : this.current - 1);
+    }, { passive: false });
+  }
+
+  /* --- Touch / swipe --- */
+  setupTouch() {
+    let startY = 0;
+    document.addEventListener('touchstart', e => { startY = e.touches[0].clientY; }, { passive: true });
+    document.addEventListener('touchend', e => {
+      const diff = startY - e.changedTouches[0].clientY;
+      if (Math.abs(diff) > 50) this.goTo(diff > 0 ? this.current + 1 : this.current - 1);
+    }, { passive: true });
+  }
+
+  /* --- Progress bar --- */
+  updateProgress(idx) {
+    const pct = this.totalSlides > 1 ? (idx / (this.totalSlides - 1)) * 100 : 0;
+    if (this.progressBar) this.progressBar.style.width = pct + '%';
+  }
+
+  /* --- Navigation dots --- */
+  buildNavDots() {
+    if (!this.navDots) return;
+    this.navDots.innerHTML = '';
+    this.slides.forEach((_, i) => {
+      const dot = document.createElement('button');
+      dot.className = 'dot' + (i === 0 ? ' active' : '');
+      dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+      dot.addEventListener('click', () => this.goTo(i));
+      this.navDots.appendChild(dot);
+    });
+  }
+
+  updateDots(idx) {
+    if (!this.navDots) return;
+    this.navDots.querySelectorAll('.dot').forEach((d, i) => {
+      d.classList.toggle('active', i === idx);
+    });
+  }
+}
+
+/* ============================================================
+   TERMINAL ANIMATION
+   Runs when the demo slide enters viewport
+   ============================================================ */
+const DEMO_SLIDE_ID = 'slide-demo';
+
+const termLines = [
+  { type: 'cmd',  text: 'run mcq-reviewer on Chapter 5' },
+  { type: 'dim',  text: '' },
+  { type: 'dim',  text: '→ Reading UTE1.0_Ch05.docx …' },
+  { type: 'dim',  text: '→ Loading MCQ bank: UoE_Ch05_MCQs_Solutions_updated.docx …' },
+  { type: 'dim',  text: '→ Running chapter-figure-extractor (prerequisite check) …' },
+  { type: 'dim',  text: '' },
+  { type: 'hdr',  text: '── MCQ REVIEW: Chapter 5 ──────────────────────────────' },
+  { type: 'dim',  text: '  Section 5.1–5.2: Questions 1–6 …' },
+  { type: 'ok',   text: '  Q1 ✓  Correct answer unambiguous; distractor C plausible' },
+  { type: 'warn', text: '  Q2 ⚠  Distractor B too close to correct answer (Sec 5.2 nuance)' },
+  { type: 'ok',   text: '  Q3 ✓  Good Bloom L3 application question' },
+  { type: 'warn', text: '  Q4 ⚠  Reading level high for first-year; simplify phrasing' },
+  { type: 'warn', text: '  Q6 ⚠  Correct answer conspicuously longer than distractors' },
+  { type: 'dim',  text: '' },
+  { type: 'dim',  text: '  Section 5.4–5.6: Ultimatum game questions …' },
+  { type: 'ok',   text: '  Q9  ✓  Correctly targets understanding over recall' },
+  { type: 'warn', text: '  Q11 ⚠  Missing Kenya cross-cultural experiment (Sec 5.6)' },
+  { type: 'dim',  text: '' },
+  { type: 'hdr',  text: '── COVERAGE GAPS ───────────────────────────────────────' },
+  { type: 'warn', text: '  Section 5.7 (fairness & efficiency): 0 questions — add 2' },
+  { type: 'warn', text: '  Section 5.8 (persistence mechanisms): 1 question — add 1' },
+  { type: 'dim',  text: '' },
+  { type: 'hdr',  text: '── OUTPUT ──────────────────────────────────────────────' },
+  { type: 'ok',   text: '  ✓ Memo saved: Chapter5_MCQ_Suggestions.docx' },
+  { type: 'dim',  text: '    · 5 flagged questions with revision guidance' },
+  { type: 'dim',  text: '    · 3 coverage gaps with suggestions' },
+  { type: 'dim',  text: "    · Bloom's distribution: L1 27% · L2 45% · L3 27%" },
+  { type: 'dim',  text: '' },
+  { type: 'ok',   text: '  Completed in 52 seconds.' },
+];
+
+let termTimer = null;
+let termHasRun = false;
+
+function runTerminal() {
+  if (termHasRun) return;
+  termHasRun = true;
+
+  const content = document.getElementById('term-content');
+  const cursor  = document.getElementById('cursor');
+  if (!content || !cursor) return;
+
+  content.innerHTML = '';
+  cursor.style.display = 'inline-block';
+
+  let lineIdx = 0, charIdx = 0, cmdSpan = null;
+
+  function tick() {
+    if (lineIdx >= termLines.length) { cursor.style.display = 'none'; return; }
+    const line = termLines[lineIdx];
+
+    if (line.type === 'cmd') {
+      if (charIdx === 0) { cmdSpan = document.createElement('span'); cmdSpan.className = 't-cmd'; content.appendChild(cmdSpan); }
+      if (charIdx < line.text.length) {
+        cmdSpan.textContent += line.text[charIdx++];
+        termTimer = setTimeout(tick, 38);
+      } else {
+        content.appendChild(document.createElement('br'));
+        lineIdx++; charIdx = 0;
+        termTimer = setTimeout(tick, 130);
+      }
+    } else {
+      if (line.text) {
+        const span = document.createElement('span');
+        span.className = 't-' + line.type;
+        span.textContent = line.text;
+        content.appendChild(span);
+      }
+      content.appendChild(document.createElement('br'));
+      lineIdx++;
+      const delay = (!line.text) ? 20 : (line.type === 'hdr') ? 55 : 75;
+      termTimer = setTimeout(tick, delay);
+    }
+  }
+  tick();
+}
+
+/* Watch for demo slide to enter view */
+const demoSlide = document.getElementById(DEMO_SLIDE_ID);
+if (demoSlide) {
+  const demoObs = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) { setTimeout(runTerminal, 400); }
+  }, { threshold: 0.5 });
+  demoObs.observe(demoSlide);
+}
+
+/* Boot the controller */
+const presentation = new SlidePresentation();
+</script>
+</body>
+</html>

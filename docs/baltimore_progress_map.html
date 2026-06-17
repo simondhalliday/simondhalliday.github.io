@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Baltimore Progress Map — FYS: Progress, JHU Fall 2026</title>
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+  <!-- Leaflet JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+
+  <style>
+    /* ─── Page layout ─── */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: #f5f2ec;
+      color: #1a1a1a;
+    }
+
+    header {
+      padding: 18px 28px 12px;
+      border-bottom: 2px solid #1a1a1a;
+      background: #f5f2ec;
+    }
+
+    header h1 {
+      font-size: 1.15rem;
+      font-weight: normal;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    header p {
+      font-size: 0.78rem;
+      color: #555;
+      margin-top: 3px;
+      letter-spacing: 0.03em;
+    }
+
+    .container {
+      display: flex;
+      height: calc(100vh - 68px);
+    }
+
+    /* ─── Map ─── */
+    #map {
+      flex: 1 1 auto;
+      /* CSS filter to push the tile layer toward B&W engraving */
+      filter: grayscale(100%) contrast(1.08) brightness(1.04);
+    }
+
+    /* ─── Sidebar ─── */
+    #sidebar {
+      width: 310px;
+      flex: 0 0 310px;
+      overflow-y: auto;
+      border-left: 2px solid #1a1a1a;
+      background: #f5f2ec;
+      padding: 0;
+    }
+
+    .sidebar-header {
+      padding: 14px 16px 10px;
+      border-bottom: 1px solid #ccc;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.72rem;
+      color: #555;
+    }
+
+    .site-entry {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 11px 14px;
+      border-bottom: 1px solid #ddd;
+      cursor: pointer;
+      transition: background 0.15s;
+    }
+
+    .site-entry:hover {
+      background: #e8e4da;
+    }
+
+    .site-entry.active {
+      background: #1a1a1a;
+      color: #f5f2ec;
+    }
+
+    .site-entry.active .site-theme {
+      color: #aaa;
+    }
+
+    .site-number {
+      flex: 0 0 22px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: #1a1a1a;
+      color: #f5f2ec;
+      font-size: 0.68rem;
+      font-family: 'Georgia', serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+      flex-shrink: 0;
+    }
+
+    .site-entry.active .site-number {
+      background: #f5f2ec;
+      color: #1a1a1a;
+    }
+
+    .site-text { flex: 1; }
+
+    .site-name {
+      font-size: 0.82rem;
+      font-weight: bold;
+      line-height: 1.3;
+    }
+
+    .site-neighborhood {
+      font-size: 0.70rem;
+      color: #777;
+      margin-top: 1px;
+    }
+
+    .site-entry.active .site-neighborhood {
+      color: #bbb;
+    }
+
+    .site-theme {
+      font-size: 0.70rem;
+      color: #555;
+      margin-top: 3px;
+      font-style: italic;
+      line-height: 1.35;
+    }
+
+    /* ─── Custom Leaflet markers ─── */
+    .custom-pin {
+      width: 26px;
+      height: 26px;
+      border-radius: 50% 50% 50% 0;
+      background: #1a1a1a;
+      border: 2px solid #f5f2ec;
+      transform: rotate(-45deg);
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .custom-pin span {
+      transform: rotate(45deg);
+      color: #f5f2ec;
+      font-size: 0.60rem;
+      font-family: 'Georgia', serif;
+      font-weight: bold;
+      line-height: 1;
+      margin-top: -3px;
+      margin-left: -1px;
+    }
+
+    /* ─── Popup styling ─── */
+    .leaflet-popup-content-wrapper {
+      background: #f5f2ec;
+      border: 1.5px solid #1a1a1a;
+      border-radius: 0;
+      box-shadow: 3px 3px 0 rgba(0,0,0,0.25);
+      font-family: 'Georgia', serif;
+    }
+
+    .leaflet-popup-tip-container { display: none; }
+
+    .leaflet-popup-content {
+      margin: 12px 14px;
+      min-width: 220px;
+      max-width: 260px;
+    }
+
+    .popup-number {
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #888;
+    }
+
+    .popup-title {
+      font-size: 0.92rem;
+      font-weight: bold;
+      margin: 2px 0 5px;
+      line-height: 1.3;
+    }
+
+    .popup-location {
+      font-size: 0.70rem;
+      color: #666;
+      margin-bottom: 6px;
+    }
+
+    .popup-theme {
+      font-size: 0.72rem;
+      font-style: italic;
+      color: #444;
+      line-height: 1.4;
+      border-top: 1px solid #ccc;
+      padding-top: 6px;
+    }
+
+    /* ─── Mobile: floating toggle button ─── */
+    #sites-toggle {
+      display: none;
+      position: fixed;
+      bottom: 24px;
+      right: 20px;
+      z-index: 1000;
+      background: #1a1a1a;
+      color: #f5f2ec;
+      border: none;
+      border-radius: 28px;
+      padding: 11px 20px 11px 16px;
+      font-family: 'Georgia', serif;
+      font-size: 0.85rem;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.35);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    #sites-toggle .toggle-icon {
+      font-size: 1.05rem;
+      line-height: 1;
+    }
+
+    /* ─── Mobile: bottom drawer ─── */
+    #drawer {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 999;
+      background: #f5f2ec;
+      border-top: 2px solid #1a1a1a;
+      border-radius: 14px 14px 0 0;
+      max-height: 70vh;
+      overflow-y: auto;
+      transform: translateY(100%);
+      transition: transform 0.28s ease;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.18);
+    }
+
+    #drawer.open {
+      transform: translateY(0);
+    }
+
+    .drawer-handle-row {
+      position: sticky;
+      top: 0;
+      background: #f5f2ec;
+      z-index: 2;
+      padding: 10px 16px 8px;
+      border-bottom: 1px solid #ddd;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .drawer-handle {
+      width: 36px;
+      height: 4px;
+      background: #ccc;
+      border-radius: 2px;
+      margin: 0 auto 8px;
+    }
+
+    .drawer-title {
+      font-size: 0.72rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #555;
+    }
+
+    .drawer-close {
+      background: none;
+      border: none;
+      font-size: 1.3rem;
+      line-height: 1;
+      color: #555;
+      cursor: pointer;
+      padding: 0 2px;
+    }
+
+    /* ─── Backdrop (tapping outside closes drawer) ─── */
+    #drawer-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 998;
+      background: transparent;
+    }
+
+    /* ─── Responsive breakpoint ─── */
+    @media (max-width: 700px) {
+      header {
+        padding: 10px 14px 8px;
+      }
+      header h1 { font-size: 0.95rem; }
+      header p  { font-size: 0.68rem; }
+
+      .container {
+        height: calc(100vh - 50px);
+      }
+
+      /* Hide desktop sidebar */
+      #sidebar {
+        display: none !important;
+      }
+
+      /* Map full width */
+      #map {
+        width: 100%;
+      }
+
+      /* Show floating button and drawer */
+      #sites-toggle {
+        display: flex;
+      }
+
+      #drawer {
+        display: block;
+      }
+    }
+
+    /* ─── Print styles ─── */
+    @media print {
+      .container { height: auto; }
+      #sidebar { display: none; }
+      #sites-toggle { display: none; }
+      #drawer { display: none; }
+      #map { height: 90vh; filter: grayscale(100%) contrast(1.15); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Baltimore Progress Map</h1>
+  <p>FYS: Progress — AS.001.219 &nbsp;|&nbsp; Johns Hopkins University &nbsp;|&nbsp; Fall 2026 &nbsp;|&nbsp; Simon Halliday</p>
+</header>
+
+<div class="container">
+  <div id="map"></div>
+  <div id="sidebar">
+    <div class="sidebar-header">12 Sites — click to zoom</div>
+    <div id="site-list"></div>
+  </div>
+</div>
+
+<!-- Mobile floating button -->
+<button id="sites-toggle" aria-label="Show site list">
+  <span class="toggle-icon">☰</span> Sites
+</button>
+
+<!-- Mobile bottom drawer -->
+<div id="drawer-backdrop"></div>
+<div id="drawer" role="dialog" aria-label="Site list">
+  <div class="drawer-handle-row">
+    <div>
+      <div class="drawer-handle"></div>
+      <span class="drawer-title">12 Sites — tap to zoom</span>
+    </div>
+    <button class="drawer-close" id="drawer-close-btn" aria-label="Close">✕</button>
+  </div>
+  <div id="drawer-list"></div>
+</div>
+
+<script>
+  // ── Site data ────────────────────────────────────────────────────────────────
+  const sites = [
+    {
+      num: 1,
+      name: "Baltimore Museum of Industry",
+      neighborhood: "Riverside / Inner Harbor South",
+      address: "1415 Key Highway",
+      theme: "Industrial revolution; labor history; manufacturing and the Great Enrichment",
+      lat: 39.2737,
+      lng: -76.6022
+    },
+    {
+      num: 2,
+      name: "Frederick Douglass–Isaac Myers Maritime Park",
+      neighborhood: "Fells Point",
+      address: "1417 Thames Street",
+      theme: "Abolition; Black entrepreneurship; labor rights; progress and exclusion",
+      lat: 39.2794,
+      lng: -76.5960
+    },
+    {
+      num: 3,
+      name: "Johns Hopkins Hospital & East Baltimore Medical Campus",
+      neighborhood: "East Baltimore",
+      address: "600 N. Wolfe Street",
+      theme: "Medical science; public health; research university as engine of innovation",
+      lat: 39.2969,
+      lng: -76.5924
+    },
+    {
+      num: 4,
+      name: "Science + Technology Park at Hopkins",
+      neighborhood: "Middle East / East Baltimore",
+      address: "855 N. Wolfe Street area",
+      theme: "Biotech cluster; knowledge economy; urban renewal and displacement",
+      lat: 39.3001,
+      lng: -76.5906
+    },
+    {
+      num: 5,
+      name: "Port of Baltimore — Dundalk Marine Terminal",
+      neighborhood: "Dundalk / Southeast",
+      address: "2700 Broening Highway",
+      theme: "Global trade; logistics; deindustrialization and labor transformation",
+      lat: 39.2576,
+      lng: -76.5345
+    },
+    {
+      num: 6,
+      name: "Enoch Pratt Free Library — Central Branch",
+      neighborhood: "Downtown / Chinatown",
+      address: "400 Cathedral Street",
+      theme: "Public knowledge infrastructure; literacy; information access as freedom",
+      lat: 39.2945,
+      lng: -76.6174
+    },
+    {
+      num: 7,
+      name: "Lexington Market",
+      neighborhood: "Downtown West",
+      address: "400 W. Lexington Street",
+      theme: "Urban markets; entrepreneurship; food systems; one of America's oldest public markets",
+      lat: 39.2919,
+      lng: -76.6218
+    },
+    {
+      num: 8,
+      name: "Maryland Institute College of Art (MICA)",
+      neighborhood: "Bolton Hill",
+      address: "1300 W. Mount Royal Avenue",
+      theme: "Creative economy; design and innovation; arts as a driver of urban progress",
+      lat: 39.3076,
+      lng: -76.6213
+    },
+    {
+      num: 9,
+      name: "Inner Harbor / Harborplace",
+      neighborhood: "Downtown / Inner Harbor",
+      address: "200 E. Pratt Street",
+      theme: "Deindustrialization; urban renewal; tourism economy and its limits",
+      lat: 39.2874,
+      lng: -76.6114
+    },
+    {
+      num: 10,
+      name: "Sandtown-Winchester",
+      neighborhood: "West Baltimore",
+      address: "N. Gilmor Street area",
+      theme: "Urban disinvestment; structural inequality; progress and its absence",
+      lat: 39.3032,
+      lng: -76.6432
+    },
+    {
+      num: 11,
+      name: "Sagamore / Port Covington Redevelopment",
+      neighborhood: "South Baltimore",
+      address: "Port Covington peninsula",
+      theme: "Private investment in cities; urban futures; placemaking and economic development",
+      lat: 39.2598,
+      lng: -76.6093
+    },
+    {
+      num: 12,
+      name: "Bioreliance / Emergent BioSolutions / Baltimore Biotech Corridor",
+      neighborhood: "Bayview / East Baltimore",
+      address: "5901 E. Lombard Street",
+      theme: "Pharmaceutical manufacturing; vaccine production; industrial biotech",
+      lat: 39.2949,
+      lng: -76.5481
+    }
+  ];
+
+  // ── Map init ─────────────────────────────────────────────────────────────────
+  const map = L.map('map', {
+    center: [39.285, -76.595],
+    zoom: 13,
+    zoomControl: true,
+  });
+
+  // CartoDB Positron — cleanest near-monochrome tile layer
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+
+  // ── Drawer toggle logic ──────────────────────────────────────────────────────
+  const drawer        = document.getElementById('drawer');
+  const drawerBackdrop= document.getElementById('drawer-backdrop');
+  const toggleBtn     = document.getElementById('sites-toggle');
+  const closeBtn      = document.getElementById('drawer-close-btn');
+
+  function openDrawer() {
+    drawer.classList.add('open');
+    drawerBackdrop.style.display = 'block';
+    toggleBtn.innerHTML = '<span class="toggle-icon">✕</span> Close';
+  }
+
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    drawerBackdrop.style.display = 'none';
+    toggleBtn.innerHTML = '<span class="toggle-icon">☰</span> Sites';
+  }
+
+  toggleBtn.addEventListener('click', () => {
+    drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+  });
+  closeBtn.addEventListener('click', closeDrawer);
+  drawerBackdrop.addEventListener('click', closeDrawer);
+
+  // ── Markers, sidebar, and drawer ─────────────────────────────────────────────
+  const markers    = [];
+  const sidebarEl  = document.getElementById('site-list');
+  const drawerList = document.getElementById('drawer-list');
+  let activeDesktop = null;
+  let activeMobile  = null;
+
+  function makeEntry(site, marker, isMobile) {
+    const entry = document.createElement('div');
+    entry.className = 'site-entry';
+    entry.innerHTML = `
+      <div class="site-number">${site.num}</div>
+      <div class="site-text">
+        <div class="site-name">${site.name}</div>
+        <div class="site-neighborhood">${site.neighborhood}</div>
+        <div class="site-theme">${site.theme}</div>
+      </div>
+    `;
+
+    entry.addEventListener('click', () => {
+      // Zoom map
+      map.setView([site.lat, site.lng], 15, { animate: true });
+      marker.openPopup();
+
+      // Highlight in this list
+      const prev = isMobile ? activeMobile : activeDesktop;
+      if (prev) prev.classList.remove('active');
+      entry.classList.add('active');
+      if (isMobile) { activeMobile = entry; closeDrawer(); }
+      else           { activeDesktop = entry; }
+    });
+
+    return entry;
+  }
+
+  sites.forEach((site) => {
+    // Custom div icon (diamond pin shape)
+    const icon = L.divIcon({
+      className: '',
+      html: `<div class="custom-pin"><span>${site.num}</span></div>`,
+      iconSize: [26, 26],
+      iconAnchor: [7, 26],
+      popupAnchor: [6, -24]
+    });
+
+    const marker = L.marker([site.lat, site.lng], { icon })
+      .addTo(map)
+      .bindPopup(`
+        <div class="popup-number">Site ${site.num}</div>
+        <div class="popup-title">${site.name}</div>
+        <div class="popup-location">${site.address} &mdash; ${site.neighborhood}</div>
+        <div class="popup-theme">${site.theme}</div>
+      `, { maxWidth: 280 });
+
+    markers.push(marker);
+
+    // Desktop sidebar entry
+    const desktopEntry = makeEntry(site, marker, false);
+    sidebarEl.appendChild(desktopEntry);
+
+    // Mobile drawer entry (separate DOM node)
+    const mobileEntry = makeEntry(site, marker, true);
+    drawerList.appendChild(mobileEntry);
+
+    // Clicking a map pin highlights in whichever list is active
+    marker.on('click', () => {
+      // desktop
+      if (activeDesktop) activeDesktop.classList.remove('active');
+      desktopEntry.classList.add('active');
+      activeDesktop = desktopEntry;
+      desktopEntry.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      // mobile
+      if (activeMobile) activeMobile.classList.remove('active');
+      mobileEntry.classList.add('active');
+      activeMobile = mobileEntry;
+    });
+  });
+
+  // Fit all markers on load
+  const group = L.featureGroup(markers);
+  map.fitBounds(group.getBounds().pad(0.12));
+</script>
+
+</body>
+</html>
