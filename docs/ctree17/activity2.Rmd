@@ -1,0 +1,132 @@
+---
+title: "TIER: Activity 2"
+author: "Simon Halliday"
+date: "9 January 2017"
+output: 
+  html_document:
+    css: ./stylesheets/styles.css
+---
+
+* * * 
+
+Exercise
+
+1. What was the mean number of people named Carmel in the sample? Use the function `favstats()` with the variable name "yearlytotal" and the data table "Carmel" to find out. Round to the nearest unit. 
+2. In what year was the name Carmel first used for females? In what year was the name Carmel first used for males? 
+3. What are the dimensions of the object (data table/data frame) `FemCarmel`?
+4. How many women named Carmel were born in 1980?
+5. What happens when you substitute in your name for the name Lesley in the plot? 
+
+* * * 
+
+
+Install the packages we require: `devtools`, `mosaic`, and `DataComputing`. You'll need to *uncomment* the lines below by deleting the hashtag `#`. 
+```{r requirements, include = TRUE, message = FALSE, warning = FALSE}
+#install.packages("mosaic")
+#install.packages("devtools")
+#devtools::install_github("DataComputing/DataComputing")
+library(DataComputing)
+library(mosaicData)
+library(mosaic)
+```
+
+
+I picked a name (somewhat) randomly from the workshop and got "Carmel". 
+We shall investigate a little bit about that name using the `BabyNames` datatable provided in `DataComputing`. 
+
+I ran the following command to create a data table called `Carmel` to provide a table with the total of all people called Carmel in the `BabyNames` data table.
+
+Copy and paste this command into your console or R markdown in a data chunk and run it. 
+```{r Carmel}
+Carmel <- 
+  BabyNames %>% #This is a "pipe" from the dplyr package
+  filter(name == "Carmel") %>% #We want to filter out non Carmels
+  group_by(year, sex) %>% #We want to group by year and by sex
+  summarise(yearlytotal = sum(count)) #We want a count by year-sex pair
+```
+
+You should now have an object in your "Environment" tab called "Carmel". 
+
+###head()
+You need to use the function `head()` to find out how many people are called Carmel at the top of the data table Carmel.
+```{r headCarmel, echo = TRUE}
+head(Carmel)
+```
+
+###favstats()
+Run the `favstats()` function to find your *favorite* summary statistics of the variable `yearlytotal` with the data table `Carmel`.
+```{r, include = FALSE}
+favstats(~yearlytotal, data = Carmel)
+```
+What is the mean value of `yearlytotal` rounded to the closest unit? What was the maximum number of people called Carmel in one year? Do you think you could work out what year that was in? (perhaps not, but think about that again after the next sub-section.)
+
+###filter() and FemCarmel
+We need to `filter()` this table to create a new data table (I called mine `FemCarmel`) to get a data table that includes only the female cases called Carmel. (Don't forget to use two `=` signs for your condition, e.g. `==`):
+```{r FemCarmel, include = FALSE}
+FemCarmel <- 
+  Carmel %>% 
+  filter(sex == "F")
+FemCarmel
+```
+Now, for the activity, we need to find out what the first year was in which a female was called Carmel in the data. 
+We can do this by using the `head()` function on our `FemCarmel` data table. 
+
+###dim() of FemCarmel
+For the next part of the activity you need to find out the dimensions of your DataTable. 
+To find out the dimensions of a data table we use the function `dim()`:
+```{r dimFemCarmel, results = "hide"}
+dim(FemCarmel)
+```
+
+###FemCarmel1980
+For the next question in the activity, you need to calculate the number of
+females called Carmel in the year 1980 (I don't know what year Carmel was born, but I took an educated guess; Carmel, apologies if I got it incorrect.) Once more, use `filter` to create an object called FemCarmel1995 with only those people called Carmel and born in 1995 in  the object FemCarmel1995. 
+You will need to use your insight from the workshop to do this. 
+
+```{r, include = FALSE, results = "hide"}
+FemCarmel1980 <- 
+  FemCarmel %>% 
+  filter(year == 1980)
+```
+
+Display your total in the console (or in your knitted R markdown) calling on the data table's name:
+```{r, results = "hide"}
+FemCarmel1980
+```
+
+###Final Aside
+Note, you could also have just typed `View(FemCarmel)` in the console and scrolled until you got to 1980 to check how many women named Carmel were born in that year, rather than creating a new object. 
+But creating a new object is good practise for things yet to come. 
+
+
+###Bonus Graphic: Lesley over time
+Let's move away from Carmel and pick another person's name from the workshop, "Lesley". 
+We can see how the totals of males and females named Lesley has
+changed over time. 
+
+The code below shows what we'd need to do to get the data for the name
+Lesley and then put it into a `ggplot` (grammar of graphics plot). 
+Also, if you want to, you can substitute each instance of the name "Lesley" in the code chunk for a name that you
+want to investigate to see what has happened to that name over time (e.g. your own). 
+You'll notice that some names are *never* used for males and some names 
+are *never* used for females try names from people in the workshop to see what I mean.  
+
+```{r}
+Lesley <- 
+  BabyNames %>%
+  filter(name == "Lesley") %>%
+  group_by(year, sex) %>%
+  summarise(yearlytotal = sum(count))
+Lesley %>%
+  ggplot(aes(x = year, y = yearlytotal, color = sex)) +
+  geom_line(size = 0.8) +
+  ylim(0, NA) +
+  ylab("Yearly Totals of the Name Lesley") +
+  xlab("Year") +
+  scale_color_discrete(name="Sex",
+                         breaks=c("F", "M"),
+                         labels=c("Female", "Male")) +
+  theme_bw()
+```
+
+[Back to Simon's TIER Occidental Workshop page](./index.html). 

@@ -1,0 +1,20 @@
+---
+title: "Introduction to Statistics and Econometrics"
+description: "Archived ECO220 course resources."
+---
+
+<div class="archive-note">
+<p>This page preserves selected materials from an earlier introductory statistics and econometrics course.</p>
+</div>
+
+## Course Materials
+
+- [Syllabus](syllabus.html)
+- [Groups](groups.html)
+- [Report guidelines](report_guidelines.html)
+- [Report data](reportdata.html)
+
+## Course Focus
+
+The course introduced statistical reasoning, regression, empirical writing, and
+reproducible data analysis for economics students.

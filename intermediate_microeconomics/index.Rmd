@@ -10,7 +10,7 @@ output: html_document
 - Venue: Seelye 311
 - Semester: Fall 2018
 - Course code: ECO250
-- Email/hangouts: [shalliday@smith.edu](shalliday@smith.edu)
+- Email/hangouts: [simon.halliday@jhu.edu](mailto:simon.halliday@jhu.edu)
 - [Syllabus](https://www.dropbox.com/s/mj1568mis9q9zha/Syllabus_ECO250_F2018_updated.pdf?dl=0)
 
 # Basics

@@ -1,0 +1,38 @@
+---
+title: "Teaching"
+description: "Current teaching and archived course resources."
+---
+
+I teach courses in moral and political economy, microeconomics, behavioral
+economics, economic development, statistics and econometrics, and economics
+education. At Johns Hopkins I serve as director of undergraduate studies for the
+Moral and Political Economy major in the Center for Economy and Society.
+
+## Johns Hopkins
+
+- **People, Power, and Pay: The Economics of the Workplace**. AS.197.327, Fall 2024 and Fall 2025.
+- **Competition, Conflict, and Coordination: Microeconomics and Political Economy**. AS.197.250, Spring 2025.
+- **Progress**. First-Year Seminar, Fall 2026.
+
+## Archived Teaching Resources
+
+These pages collect older syllabi, lab materials, slides, worksheets, and
+companion resources. Some links point to archived course tools or institutional
+resources from earlier appointments.
+
+- [Introductory Microeconomics](../introductory_microeconomics/)
+- [Intermediate Microeconomics](../intermediate_microeconomics/)
+- [Behavioral Economics](../behavioral/)
+- [Introduction to Statistics and Econometrics](../eco220/)
+- [Economic Development](../economic_development/)
+- [Political Economy of Development in Africa](../polecon_africa/)
+- [Data Literacy in Economic Development](../data_literacy_in_economic_development/)
+- [Efficient Empiricism](../efficient_empiricism/)
+
+## Teaching Interests
+
+- Economics education and economic literacy.
+- Civic thought and economics.
+- Behavioral economics and social preferences.
+- Intermediate microeconomics and political economy.
+- Data literacy, reproducibility, and transparent empirical work.

@@ -4,7 +4,7 @@
 # baseurl is the website's URL without the hostname
 
 # If you are building a simple GitHub user page (http://username.github.io) then use these settings:
-url: "http://simondhalliday.github.io"
+url: "https://simondhalliday.com"
 baseurl: ""
 
 # If you are building a GitHub project page then use these settings:
@@ -26,18 +26,18 @@ navbar-links:
   About Me: "aboutme"
   Research: "research"
   Resources:
-    - Microeconomics - Competition, Conflict and Coordination: "http://simondhalliday.github.io/microeconomics"
+    - Microeconomics - Competition, Conflict and Coordination: "https://simondhalliday.com/microeconomics"
     - Beautiful Jekyll: "http://deanattali.com/beautiful-jekyll/"
     - Learn markdown: "http://www.markdowntutorial.com/"
     - GitHub Pages: "https://pages.github.com/"
     - Project Tier: "http://www.projecttier.org/"
   Teaching:
-    - Introductory Microeconomics: "http://simondhalliday.github.io/introductory_microeconomics"
-    - Intermediate Microeconomics: "http://simondhalliday.github.io/intermediate_microeconomics"
-    - Behavioral Economics: "http://simondhalliday.github.io/behavioral"
-    - Introduction to Statistics and Econometrics: "http://simondhalliday.github.io/eco220"
-    - Economic Development: "http://simondhalliday.github.io/economic_development"
-    - Political Economy of Development in Africa: "http://simondhalliday.github.io/polecon_africa"
+    - Introductory Microeconomics: "https://simondhalliday.com/introductory_microeconomics"
+    - Intermediate Microeconomics: "https://simondhalliday.com/intermediate_microeconomics"
+    - Behavioral Economics: "https://simondhalliday.com/behavioral"
+    - Introduction to Statistics and Econometrics: "https://simondhalliday.com/eco220"
+    - Economic Development: "https://simondhalliday.com/economic_development"
+    - Political Economy of Development in Africa: "https://simondhalliday.com/polecon_africa"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
@@ -53,7 +53,7 @@ avatar: "/img/avatar-icon.png"
 # Important: you must keep the "name" parameter, everything else you can remove
 author:
   name: Simon D. Halliday
-  email: "shalliday@smith.edu"
+  email: "simon.halliday@jhu.edu"
   facebook: simondhalliday  # eg. daattali
   github: simondhalliday    # eg. daattali
   twitter: simondhalliday   # eg. daattali

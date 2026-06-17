@@ -10,7 +10,7 @@ output: html_document
 - Venue: Seelye 208
 - Semester: Spring 2019
 - Course code: ECO150
-- Email/hangouts: [shalliday@smith.edu](shalliday@smith.edu)
+- Email/hangouts: [simon.halliday@jhu.edu](mailto:simon.halliday@jhu.edu)
 - [Syllabus](https://www.dropbox.com/s/0iahr1jl2rr4wy3/eco150_halliday_syllabus.pdf?dl=0)
 
 # Basics

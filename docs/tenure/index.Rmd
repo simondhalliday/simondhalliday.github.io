@@ -1,0 +1,67 @@
+---
+output: html_document
+#output: word_document
+    #css: ../stylesheets/styles.css
+---
+
+# Simon D. Halliday, Tenure, Smith College, Fall 2019
+Note: this page and all contents will be removed after my tenure case has been concluded. 
+
+## Table of Contents
+
+A.	[Curriculum Vitae](halliday_cv.pdf)
+B.	[Personal Statement of Scholarship, Teaching, and Service](tenure_statement_v1.pdf)
+C.	[Record of Teaching Form](RecordofTeachingForm.pdf)
+D.	Published materials 
+    I.	Peer-reviewed articles 
+        i.	T. Dvorak, S. D. Halliday, M. O’Hara, and A. Swoboda, “[Efficient empiricism: Streamlining teaching, research, and learning in empirical courses](DvorakHallidayOHaraSwoboda-2019-EfficientEmpiricism.pdf),” The Journal of Economic Education, vol. 50, no. 3, pp. 242– 257, 2019. 
+        ii.	S. D. Halliday, “[Data literacy in economic development](Halliday-2019-DataLiteracyInEconomicDevelopment.pdf),” The Journal of Economic Education, vol. 50, no. 3, pp. 284–298, 2019. 
+        iii.	S. D. Halliday, “[Promoting an ethical economics classroom through partnership](Halliday-2019-IJSAP-Ethics.pdf),” International Journal for Students as Partners, vol. 3, no. 1, pp. 182–189, May 2019 
+        iv.	G. Burdin, S. D. Halliday, and F. Landini, “[The hidden benefits of abstaining from control](burdinhallidaylandini_2018.pdf),” Journal of Economic Behavior & Organization, vol. 147, pp. 1–12, 2018. 
+    II.	Book Chapter: 
+        i.	S. D. Halliday, “[Global public goods](Halliday_2014_global_public_goods.pdf),” in Managing the Economy, C. Santos and M. Higginson, Eds., Open University Press, 2014, ch. 18. 
+E.	Forthcoming 
+    I.	Bowles & Halliday textbook
+        i.	[Note on Reading Bowles and Halliday](https://www.dropbox.com/s/9uhppfqjjfahmt9/Note%20on%20Bowles%20and%20Halliday.docx?dl=0) with comments from reviewers 
+        ii.	Submitted Manuscript for Bowles & Halliday, [*Microeconomics: Competition, Coordination, & Conflict*](https://www.dropbox.com/s/q2j9dq3d0m3jqhf/BHMicro_submitted_ms_tenure.pdf?dl=0), Oxford University Press, Forthcoming, 2020. 
+        iii.	Bowles & Halliday [Provisional Cover](https://www.dropbox.com/s/4h5gg0v3f6i05fr/BHMicro_provisional_cover.pdf?dl=0)
+        iv.	Bowles & Halliday OUP [Textbook Mock-up Pages](https://www.dropbox.com/s/42f71wdyfjkcarj/Bowles_Samples_Marginalia%2BFootnotes.pdf?dl=0)
+        v.	Bowles & Halliday [Signed Contract Cover page](https://www.dropbox.com/s/mytk9aujvq1tolo/BHMicro_contract_coverpage.pdf?dl=0) with Jonathan Crowe (OUP Editor)
+F.	Revisions Requested 
+    I.	Peer-reviewed articles
+        i.	S. D. Halliday and J. Lafky, “[Reciprocity through ratings: An experimental study of bias in evaluations](Hallidy-Lafky-2019-Reciprocity_through_Ratings-JBEE_2019.pdf),” Journal of Behavioral and Experimental Economics, 2019, Revise and Re-Submit, Revisions Submitted. 
+G.	Under Review
+    I.	Peer-reviewed articles under review (student co-authors in bold)
+        i.	S. Bowles, W. Carlin, S. D. Halliday, and S. Subramanyam, “[What do we think an economist should know? a machine learning investigation of research and intermediate-level texts](Bowles_Carlin_Halliday_and_Subramanyam-AER-2019.pdf),” 2019, Under review at the *American Economic Review*. 
+        ii.	S. D. Halliday and **Oumayma Koulouh**, “[Lies, labor and luck: Comparing lying in real-effort and luck tasks](Halliday-Koulouh-2019-Lies_ Labor_and_Luck-JESA.pdf),” *Journal of the Economic Science Association*, 2019, Under Review. 
+        iii.	**Louise Yu**, S. D. Halliday, and R. Kaufman, “[The effects of major-job mismatch on early career earnings and job satisfaction](Yu_Halliday_Kaufman-2019-Major-Job Match-RIHE.pdf),” Research in Higher Education, 2019, Under Review. 
+H.	Work in Progress
+    I.	Articles to be submitted for peer review
+        i.	J. Burns, S. D. Halliday, and M. Keswell, “[Gender and Risk-taking in the classroom](bhk_Risk_classroom.pdf),” SALDRU Working Paper 87 (earlier version 2013), 2019, Preparing for submission. [Online]. Available: http://hdl.handle.net/ 11090/178. Preparing for Submission to J. Behavioral and Experimental Economics. 
+        ii.	D. Girardi, S. D. Halliday, S. Mamunuru, and S. Bowles, “[Does economics make you selfish?](Girardi_Halliday_Madhurika_Bowles-2019-DoesEconMakeYouSelfish-EJ.pdf)” 2019, Submitting for review at The Economic Journal. 
+        iii.	S. D. Halliday, “[Teaching social preferences](Working-Halliday-2019-TeachingSocialPreferences-JEE),” 2019, Preparing for submission to the Journal of Economic Education. 
+        iv.	S. D. Halliday, “[Don’t take what isn’t yours](halliday_dont_take.pdf),” ERSA Working Paper 211 (earlier version), 2019 [2013], [Online]. Available: https://ideas.repec.org/p/rza/wpaper/211.html. Preparing for Submission. 
+I.	Teaching
+    I.	Syllabi: 
+        i.	ECO250 – [Intermediate Microeconomics](Syllabi/Syllabus_ECO250_F2019_updated.pdf) – F2019
+        ii.	ECO150 – [Introduction to Microeconomics](Syllabi/eco150_halliday_syllabus.pdf) – S2019
+        iii.	ECO254 – [Behavioral Economics](Syllabi/eco254_syllabus_s2019.pdf) – S2019
+        iv.	ECO220 – [Introduction to Statistics and Econometrics](Syllabi/eco220-s2018.pdf) – S2018
+        v.	ECO311 – [Political Economy of Development in Africa](Syllabi/eco311_f2016_syllabus.pdf) (Seminar) – F2016
+        vi.	ECO211 – [Economic Development](Syllabi/syllabus_F2016.pdf) – F2016 
+    II.	Website link: 
+        i.	Teaching: Please go to [simondhalliday.com/teaching](http://simondhalliday.com/teaching) for links to teaching materials for each of my courses. 
+J.	Other Materials
+    I.	Published Poetry. Note: Carapace was a South African poetry journal that shut down in 2015 when its founder retired. 
+        i.	S. D. Halliday, “[Wake](Poetry/Wake.pdf),” Carapace, vol. 100, 2014, Commemorative Re-print. 
+        ii.	–  “[The importance of ice cream lids](Poetry/Importance.pdf),” Carapace, vol. 64, 2007. 
+        iii.	– “[The ritual of care](Poetry/Ritual.pdf),” Carapace, vol. 64, 2007. 
+    II.	Website links: 
+        i.	Overall: I have provided a mirror of all the links above at [http://simondhalliday.com/tenure](http://simondhalliday.com/tenure). 
+        ii.	Grants: Please go to [http://simondhalliday.com/proposals](http://simondhalliday.com/proposals) for links to grant proposals I have submitted (awarded and not). 
+        iii.	Service: Please go to [http://simondhalliday.com/laptoptime/](http://simondhalliday.com/laptoptime/) for an example of the resources I provided for a Liberal Arts Luncheon I co-facilitated. 
+        iv.	Service: You can see notes I made for my liberal arts advisees here: [http://simondhalliday.com/liberal/](http://simondhalliday.com/liberal/)
+        v.	Service: Presentation on Poll Everywhere on behalf of the Ad Hoc Working Group in Learning and technology: [https://docs.google.com/presentation/d/1mB0-RPzeB0guW6OTax_ac2_YIvLS0R7VL9hU2iwVn9Y/edit?usp=sharing](https://docs.google.com/presentation/d/1mB0-RPzeB0guW6OTax_ac2_YIvLS0R7VL9hU2iwVn9Y/edit?usp=sharing)
+
+
+

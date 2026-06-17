@@ -1,0 +1,263 @@
+/* Site-specific Quarto layer for simondhalliday.com.
+   The shared design system lives in progress.css. */
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-serif);
+}
+
+#quarto-content {
+  background: var(--bg);
+}
+
+.page-columns,
+.page-rows-contents,
+.page-layout-article {
+  display: block !important;
+}
+
+main.content {
+  width: min(100%, var(--col-text));
+  max-width: var(--col-text);
+  margin-inline: auto;
+  padding: var(--sp-2xl) var(--sp-lg);
+}
+
+main.content a,
+main.content p,
+main.content li {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.page-layout-full main.content {
+  max-width: var(--col-wide);
+}
+
+.navbar {
+  background: var(--bg);
+  border-bottom: 1px solid var(--rule);
+  box-shadow: none;
+}
+
+.navbar-title {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand,
+.navbar #quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon {
+  color: var(--ink-mid);
+}
+
+.navbar .nav-link {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.navbar .nav-link.active,
+.navbar .nav-link:hover,
+.navbar .navbar-brand:hover {
+  color: var(--accent);
+}
+
+.quarto-title-block.default .quarto-title .title {
+  font-size: clamp(2.1rem, 5vw, 3.2rem);
+  font-weight: 400;
+  line-height: 1.08;
+  margin-bottom: var(--sp-sm);
+}
+
+.quarto-title-block .description,
+.subtitle,
+.description {
+  font-family: var(--font-sans);
+  color: var(--ink-mid);
+  font-weight: 300;
+  line-height: 1.7;
+}
+
+h2 {
+  margin-top: var(--sp-xl);
+  padding-top: var(--sp-lg);
+  border-top: 1px solid var(--rule);
+}
+
+h2:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: 0;
+}
+
+h3 {
+  margin-top: var(--sp-lg);
+}
+
+.callout-note,
+.callout-tip,
+.callout-important,
+.callout-warning,
+.callout-caution {
+  background: var(--bg-alt);
+  border-color: var(--rule);
+}
+
+.profile-hero {
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: var(--sp-xl);
+  padding-bottom: var(--sp-xl);
+}
+
+.profile-hero .kicker,
+.section-kicker,
+.listing-date,
+.quarto-title-meta-heading {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.profile-hero h1 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-weight: 400;
+  margin-bottom: var(--sp-md);
+}
+
+.profile-hero p {
+  font-size: 1.12rem;
+  color: var(--ink-mid);
+  max-width: 720px;
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-sm) var(--sp-md);
+  margin-top: var(--sp-lg);
+}
+
+.link-row a {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.item-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.item-list li {
+  border-top: 1px solid var(--rule);
+  padding-block: var(--sp-md);
+}
+
+.item-list li:first-child {
+  border-top: 0;
+}
+
+.item-list .item-title {
+  display: block;
+  font-weight: 600;
+}
+
+.item-list .item-meta {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--ink-light);
+  margin-top: 0.15rem;
+}
+
+.archive-note {
+  background: var(--bg-quote);
+  border-left: 4px solid var(--bg-quote-border);
+  padding: var(--sp-md) var(--sp-lg);
+  margin-block: var(--sp-lg);
+}
+
+.archive-note p {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--ink-mid);
+}
+
+.quarto-listing .listing-title {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+}
+
+.quarto-listing .listing-description,
+.quarto-listing .listing-author,
+.quarto-listing .listing-date {
+  font-family: var(--font-sans);
+  color: var(--ink-mid);
+}
+
+.nav-footer {
+  background: var(--bg-alt);
+  border-top: 1px solid var(--rule);
+  color: var(--ink-mid);
+}
+
+.nav-footer a {
+  color: var(--accent);
+}
+
+code,
+pre {
+  background: var(--bg-alt);
+}
+
+pre {
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+table {
+  display: block;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.cell-output,
+.cell-output pre,
+.sourceCode,
+.sourceCode pre {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+@media (max-width: 480px) {
+  main.content {
+    width: 100%;
+    max-width: 100%;
+    padding-inline: var(--sp-md);
+  }
+
+  .column-margin,
+  .margin-sidebar,
+  #quarto-margin-sidebar {
+    display: none !important;
+  }
+
+  .navbar .nav-link {
+    font-size: 0.85rem;
+  }
+
+  .profile-hero p {
+    font-size: 1rem;
+  }
+}

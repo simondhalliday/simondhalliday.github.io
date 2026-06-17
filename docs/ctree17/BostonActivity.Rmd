@@ -1,0 +1,197 @@
+---
+title: "CTREE Workshop Activity: Replicating (some of) the Harrison and Rubinfeld results"
+author: Aaron Swoboda
+output: html_notebook
+bibliography: ReplicationBib.bib
+---
+
+This activity is based on a series of labs I developed for an undergraduate research seminar on topics in housing economics at Carleton College. After reading "Hedonic housing prices and the demand for clean air" [@Harrison1978], students are asked to replicate some of the main results from the paper as well as two subsequent corrections applied by @Gilley1996.
+
+In this activity we will see how R Markdown can be used to:
+
+1. manage references (inline citations and references cited list creation)
+2. include external images
+6. create hyperlinks
+3. produce nicely formatted tables from R output
+5. generate hyperlinked footnotes
+4. include inline R code
+5. produce both .html and .pdf output documents
+
+## Some Basic Results from @Harrison1978
+
+Below are images of two tables of results from the @Harrison1978 paper:
+
+* The summary statistics from Table V, and 
+* The "basic equation" OLS regression results from Table VII:
+
+![](figs/HarrisonRubinfeldTableV.png) ![](figs/HarrisonRubinfeldTableVIIcolumn1.png)
+
+## Accessing the Data
+
+The dataset consisting of 14 variables across 506 census tracts is available in at least three different ways. 
+
+1. @Belsley1980 (a book)
+2. The [UCI Machine Learning Repository](http://archive.ics.uci.edu/ml/datasets/Housing)
+3. Within the Statistical Software R
+
+For this exercise we will access the `Boston` dataset in the [`MASS` package](https://cran.r-project.org/web/packages/MASS/MASS.pdf). 
+
+```{r, warning=FALSE, message=FALSE}
+library(MASS)
+data("Boston")
+str(Boston)
+```
+
+## Replicating the @Harrison1978 Results
+
+Let's use the `stargazer` command from the `stargazer` package to calculate and present the summary statistics for the dataset.
+```{r, message=FALSE, warning=FALSE}
+library(stargazer)
+stargazer(Boston, type = "text")
+```
+
+A comparison of Table V and the results above shows that some of the variables are not in the approporiate units to replicate the summary statistics. Let's use the `dplyr` package to create a modified dataset with renamed and appropriately rescaled values.
+
+```{r, warning=FALSE, message=FALSE}
+library(dplyr)
+# copy the data frame
+boston.df.1978 = Boston
+# change the names to uppercase for consistency with H&R (1978)
+names(boston.df.1978) = toupper(names(boston.df.1978))
+
+# now rescale and reorder for consistency
+boston.df.1978 = boston.df.1978 %>% 
+  # rescale 
+  mutate(MV = MEDV*1000,
+         Btransformed = BLACK/1000,
+         LSTAT = LSTAT/100,
+         NOX = NOX*10) %>% 
+  # and reorder
+  select(MV, RM, AGE, Btransformed, LSTAT, CRIM, ZN, 
+         INDUS, TAX, PTRATIO, DIS, RAD, NOX, CHAS)
+
+stargazer(boston.df.1978, 
+          type = "text", 
+          digits = 2)
+```
+
+That's better.[^1] Now let's estimate the OLS equation shown above. The `stargazer` command can also be used to produce a table of regression output.
+
+[^1]: The original "Black" variable cannot be recovered from the these data, which have been transformed using the equation $(Black - 0.63)^2$.
+
+```{r}
+HR.lm = lm(log(MV) ~ I(RM^2) + AGE + log(DIS) + 
+                      log(RAD) + TAX + PTRATIO + Btransformed +
+                      log(LSTAT) + CRIM + ZN + INDUS + CHAS + 
+                      I(NOX^2), 
+                    data = boston.df.1978)
+stargazer(HR.lm, type = "text")
+```
+
+Tweaking a few settings[^2] to customize our table shows just how similar our results are to the reported values.
+
+[^2]: Check out this cheatsheet for the `stargazer` package: <http://jakeruss.com/cheatsheets/stargazer.html>
+```{r}
+stargazer(HR.lm, type = "text", 
+          intercept.bottom = FALSE,
+          keep.stat = "rsq",
+          omit.table.layout = "n",
+          report = "vct",
+          digits = 5,
+          no.space = TRUE)
+```
+
+
+## Data Problems
+
+Nearly 20 years after the @Harrison1978 article, @Gilley1996 revealed that the underlying data used in the original analysis had two significant problems.
+
+* There were data entry mistakes (eight dependent values appeared to have been entered incorrectly)
+* Some dependent variable values were censored (census tracts with median home values above $50,000 were simply recorded as $50,000)
+
+Two tables from  @Gilley1996 are shown below. TABLE I shows the data entry errors[^3], while Table III  presents three sets of regression results: the uncorrected OLS results, the Corrected OLS results, and a Tobit model.
+
+[^3]: One of my students pointed out that there is a typo in the @Gilley1996 TABLE I. They believe observation 191 (rather than 119) should have a corrected median value of 33.0 (from an incorrect value of 37.0). The results shown in @Gilley1996 can be replicated when observation 191 is corrected but not when observation 119 is "corrected." 
+
+![](figs/GilleyPace1996Table1.png) ![](figs/GilleyPace1996Table3.png) 
+
+
+### Replicating the @Gilley1996 Uncorrected OLS Results
+Inspection of the first column of results shows nearly identical values from our earlier regression. However, @Gilley1996 reports a constant term of 2.84853, whereas @Harrison1978 report a constant of `r coef(HR.lm)[1]`. Why the difference?
+
+The answer is scaling (again!). Notably, @Gilley1996 present the median house value variable in $1,000s (i.e. 27.1 instead of $27,100). Let's rescale the dependent variable (and two others) and rerun the regression.
+
+```{r}
+GP.lm.Uncorrected = lm(log(MV/1000) ~  CRIM + ZN + INDUS + CHAS + 
+                     I(NOX^2/100) + I(RM^2) + AGE + 
+                     log(DIS) + log(RAD) + TAX + PTRATIO + 
+                     I(Btransformed*1000) + log(LSTAT), 
+                     data = boston.df.1978)
+```
+
+```{r, include = FALSE}
+stargazer(GP.lm.Uncorrected, type = "text",
+          intercept.bottom = FALSE,
+          keep.stat = "rsq",
+          omit.table.layout = "n",
+          report = "vct",
+          no.space = TRUE)
+```
+
+### Replicating the @Gilley1996 Corrected OLS Results
+
+Let's create a new variable, `CMV` for the corrected median values and see if we can replicate the other two columns from Table 3.
+
+```{r}
+obs.incorrect = c(8, 39, 191, 241, 438, 443, 455, 506) # note 191 instead of 119
+correct.values = c(22.1, 24.2, 33, 27, 8.2, 14.8, 14.4, 19)
+
+boston.df.1978 = boston.df.1978 %>% 
+  mutate(CMV = MV/1000)
+boston.df.1978$CMV[obs.incorrect] = correct.values
+```
+
+We now should be able to replicate the results from Column 2 in Table III simply by re-estimating the regression from column 1 but using `CMV` as the dependent variable.
+
+```{r}
+GP.lm.Corrected = lm(log(CMV) ~ CRIM + ZN + INDUS + 
+                       CHAS + I(NOX^2/100) + I(RM^2) + AGE + 
+                       log(DIS) + log(RAD) + TAX + PTRATIO + 
+                       I(Btransformed*1000) + log(LSTAT), 
+                     data = boston.df.1978)
+```
+
+### Replicating the @Gilley1996 Corrected Tobit Results
+
+Let's just go ahead and estimate the Tobit model as well and present all three regressions in one table using `stargazer`.
+
+```{r, warning=FALSE, message=FALSE}
+library(AER)
+GP.lm.Tobit = tobit(log(CMV) ~  CRIM + ZN + INDUS +
+                      CHAS + I(NOX^2/100) + I(RM^2) + 
+                      AGE + log(DIS) + log(RAD) + TAX + PTRATIO +
+                      I(Btransformed*1000) + log(LSTAT),
+                    right = log(50),
+                    data = boston.df.1978)
+```
+
+```{r, results = 'markdown', warning=FALSE, messages = FALSE}
+stargazer(GP.lm.Uncorrected, GP.lm.Corrected, GP.lm.Tobit,
+          type = "text", digits = 5,
+          intercept.bottom = FALSE,
+          keep.stat = "rsq",
+          omit.table.layout = "n",
+          report = "vct",
+          no.space = TRUE)
+```
+
+### Now you try
+
+1. Add another image of the @Gilley1996 regression output table near our final replication table to make regression output easier to compare.
+2. Change the necessary code to "correct" the observation presented in @Gilley1996 (observation 119 rather than observation 191). Observe that we now obtain different results in our final table of regression output.
+3. Use inline code to show the reader the median house value for observation 119. 
+4. Add the `stargazer` package to our references (you will need to look up the citation key in the `ReplicationBib.bib` file).
+5. Change the output produced by this document from `html_notebook` to `pdf_document`
+6. Produce a fancy `Latex` final table of regression results (now that you are generating a .pdf file). You will need to change the `type = "text"` option in the `stargazer` command to `type = "latex"` and also update `results = "markdown"` in the chunk option to be `results = "asis"`.
+
+### References

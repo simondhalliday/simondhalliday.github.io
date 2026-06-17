@@ -1,0 +1,456 @@
+---
+title: "Efficient Empiricism"
+author: "Halliday, O'Hara and Swoboda"
+date: "CTREE, 1 June 2017"
+output: ioslides_presentation
+#runtime: shiny
+self_contained: no
+mathjax: local
+---
+
+<style>
+  .col2 {
+    columns: 2 200px;         /* number of columns and width in pixels*/
+    -webkit-columns: 2 200px; /* chrome, safari */
+    -moz-columns: 2 200px;    /* firefox */
+  }
+  .col3 {
+    columns: 3 100px;
+    -webkit-columns: 3 100px;
+    -moz-columns: 3 100px;
+  }
+</style>
+
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(plm)
+library(dygraphs)
+library(xts)
+library(plotly)
+library(shiny)
+library(ggvis)
+library(stargazer)
+```
+
+## Acknowledgments 
+We stole a lot of this work wholesale from people who know more than we do. We thank them and ask their forgiveness.  
+
+- Andrew Bray -- [Reproducibility 2.0](https://prezi.com/rtmytpb6iwsw/reproducible-20/)
+- Nick Horton -- [Getting Started with R and R Md](https://www.amherst.edu/people/facstaff/nhorton/node/567498)
+- Mine &Ccedil;etinkaya-Rundel -- [website](http://www2.stat.duke.edu/~mc301/)
+- Hadley Wickham & Garrett Grolemund --  [r4ds](r4ds.had.co.nz)
+- Danny Kaplan --  [DataComputing](http://data-computing.org/author/dtkaplan/)
+- Amelia McNamara -- [website](http://www.science.smith.edu/~amcnamara/)
+- Ben Baumer -- [website](http://www.science.smith.edu/~bbaumer/w/)
+- Cosma Shalizi -- [R Markdown for Class Reports](http://www.stat.cmu.edu/~cshalizi/rmarkdown/)
+- Randy Prium -- [website](https://www.calvin.edu/~rpruim/)
+
+## What will we talk about? 
+>- How we have used R Markdown in our empirical courses  
+
+>- Reproducibility with R Markdown
+
+>- And some things that we think are just cool in Rmd. 
+
+>- BIG Thank you to Project TIER and the Alfred P. Sloan Foundation
+
+## How we have used R Markdown
+
+Michael: 
+
+Senior thesis seminar with 9 students
+
+* Very little background
+* All stages in R Markdown
+    + Data manipulation, visualization, analysis
+    + Presentations 
+    + Final paper
+
+## How we have used R Markdown: Michael
+
+Advantages: 
+
+* To students
+    + One environment for everything
+    
+* To me
+    + Full reproducibility of all 9 papers (one award)
+    + Much easier to reproduce in one document
+    + Very professional appearance (with template)
+
+Cost
+
+* Somewhat higher startup cost in teaching them R and R Studio
+
+## How we have used R Markdown: Aaron
+
+* Create slides in an Econometrics course
+* Final project in senior research seminar 
+* Create custom progress reports for students
+* Interactive shiny apps for micro students
+
+## How we have used R Markdown: Simon
+
+* A course in Behavioral Economics
+* Slides, notes and assignments 
+* Students do a reproducible research project
+* They reproduce the results of a published paper and propose a new experimental design to test a new hypothesis
+
+
+
+## R Markdown & Reproducibility 
+
+- What happens in a traditional research report? 
+- Are traditional research reports easily reproducible? 
+- What gives us *soup to nuts* reproducibility? 
+  - Answer: R Markdown or Scripted LaTeX + STATA (StatTag?)
+- Works within the TIER framework
+- I've implemented a variation of this in an upper-level economics elective
+
+
+## Traditional Reports
+
+<div class="col2">
+```{r, out.width = "400px", fig.cap = "Courtesy of Bray, 2016"}
+knitr::include_graphics("figures/tradreport.png")
+```
+
+The Good 
+
+- familiar format, e.g. Word 
+- easy learning curve
+
+The Bad
+
+- tough for reproducibility
+- difficult to update
+- mistakes crop up
+- teams can't collaborate easily
+
+The Ugly? 
+
+- Word/GDocs = Ugly?
+
+</div>
+
+## R Markdown Report/Notebook? 
+<div class="col2"> 
+```{r, out.width = "400px", fig.cap = "Courtesy of Bray, 2016"}
+knitr::include_graphics("figures/rmd_struct.png")
+```
+
+
+The good
+
+- easy to reproduce
+- easy to edit/update 
+- easy to collaborate
+- standardized & fast
+
+The bad
+
+- students must learn syntax
+- error-free to compile
+
+The ugly? 
+
+- inequality in student backgrounds
+
+</div>
+
+
+##Text Formatting
+
+    
+    # Header 1
+
+    ## Header 2
+
+    ### Header 3
+
+    This is normal sized text used in the body of our work. 
+
+    For bullet points, we use dashes, e.g. 
+
+    - Intro to RStudio
+    - More content
+      - a sub-point
+    - Back to the original level
+    
+
+## Document Types
+
+R Markdown can produce a variety of document types (other than the default `html` page):
+
+*   `pdf_document` makes a PDF with LaTeX (`.pdf`)
+  
+*   `word_document` for Microsoft Word documents (`.docx`).
+  
+*   `odt_document` for OpenDocument Text documents (`.odt`).
+  
+*   `rtf_document` for Rich Text Format documents (`.rtf`) 
+  
+And others. 
+
+## Presentation Types
+
+R Markdown can also be re-purposed to produce a presentation file (as with this presentation):
+
+*   `io_slides` opens in your browser and interactive (`.html`)
+  
+*   `slidy` another browser based presentation format (`.html`)
+  
+*   `beamer` makes a PDF with LaTeX (`.pdf`)
+  
+
+## Data work
+Think about data analysis as falling into three loose categories: 
+
+- management & wrangling
+- visualization & summary statistics
+- modeling & inference
+
+All of this occurs in the code "chunk"
+
+##Code chunks
+
+- To open a code chunk hit CMD + OPTION + I on a Mac  
+
+- Or type out three backticks ``` folowed by {r} 
+
+- And then three more back ticks ``` on another line. 
+
+- Within the {r} you can specify options, like {eval = FALSE} if you don't want it to evaluate the code
+
+- Or you can label the code chunk, e.g. {r cars} labels the chunk "cars" in your ToC
+
+## Code Chunk: Example 
+<pre class="markdown"><code>&#96;&#96;&#96;{r cars, echo = TRUE}
+summary(cars)
+&#96;&#96;&#96;
+</code></pre>
+
+The option `echo = TRUE` means that the code gets included in the rendered html. 
+
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+
+
+## Slide with Plot (Reproduction of Sutter, 2009)
+
+```{r Sutter Data, echo = FALSE}
+SutExp <- read.csv("sutterexperiment.csv")
+SutExp <- 
+  SutExp %>% 
+  rename(session = Session, subject = Subject, r1 = R1, r2 = R2, r3 = R3, r4 = R4, r5 = R5, r6 = R6, r7 = R7, r8 = R8, r9 = R9, treatment = Treatment)
+
+```
+
+```{r summary data, echo = FALSE}
+groupAves <- 
+  SutExp %>% 
+  group_by(treatment) %>%
+  summarise(r1 = mean(r1), r2 = mean(r2), r3 = mean(r3), r4 = mean(r4), r5 = mean(r5), r6 = mean(r6), r7 = mean(r7), r8 = mean(r8), r9 = mean(r9))
+```
+
+```{r narrow data}
+narrowAve <- 
+  groupAves %>%
+  gather(round, average, r1:r9)
+```
+
+
+```{r plot1}
+Plot1 <- 
+  narrowAve %>%
+  filter(treatment == "individual" | treatment == "teamtreat" ) %>%
+  group_by(treatment) %>%
+  arrange(treatment)
+Plot1 %>%
+  ggplot(aes(x = round, y = average, color = treatment)) + 
+  geom_point(aes(shape = treatment)) +
+  geom_line(aes(group = treatment)) + 
+  ylim(20, 80) +
+  xlab("Round") +
+  ylab("Average amount allocated") + 
+  scale_x_discrete(labels = seq(1, 9, by = 1)) +  
+  scale_colour_discrete(name = "Treatment",
+                         breaks = c("individual", "teamtreat"),
+                         labels = c("Indidividuals", "Teams")) +
+  scale_shape_discrete(name = "Treatment",
+                         breaks = c("individual", "teamtreat"),
+                         labels = c("Indidividuals", "Teams"))
+```
+
+##Dynamic Graphs 
+
+```{r dygraph, message = FALSE, echo = FALSE}
+Participation <- read.csv("Data/labor_force_participation.csv")
+Partdate <- as.Date(Participation$date)
+MaleP <- xts(Participation$male, Partdate)
+FemaleP <- xts(Participation$female, Partdate)
+LFPR <- cbind(MaleP, FemaleP)
+colnames(LFPR) <- c("Male", "Female")
+dygraph(LFPR, main = "Labor Participation Rate Over Time") %>%
+       dySeries("Male", label="Male")%>%
+       dySeries("Female", label="Female")%>%
+       dyAxis("x", label="Date")%>%
+       dyAxis("y", label="Labor Force Participation")%>%
+       dyHighlight(highlightSeriesOpts = list(strokeWidth = 3), 
+                   highlightCircleSize = 4)%>%
+       dyRangeSelector()
+       #dyOptions(drawGrid = input$showgrid, 
+                 #colors = RColorBrewer::brewer.pal(5, "Set2"))
+```
+
+
+##Plotly Graphs
+
+```{r ancona, echo = FALSE}
+AnconaBase <- read.csv("Data/ancona.csv")
+Ancona <- 
+  AnconaBase %>%
+  rename(date = dTransDataVendita, 
+         productid = iProdID, 
+         productdescription = vchClasseProdottoDescrizione, 
+         speciesname = vchSpecieDescrizione, 
+         quantity = nTransQuantita, 
+         unitprice = nTransPrezzoUnitario, 
+         saleprice = nTransPrezzoVendita, 
+         finalprice = nTransPrezzoFinale, 
+         producerid = iProduttoreID, 
+         qualityid = iQualitaID, 
+         qualitydescription = vchQualitaDescrizione,
+         caseid = nNumCasse)
+AnconaAve <- 
+  Ancona %>% 
+  group_by(date) %>%
+  summarise(price = round(mean(unitprice), 2), 
+            meanquantity = mean(quantity), 
+            quantity = round(sum(quantity), 2))
+```
+
+```{r plotly Ancona}
+AnconaPlot <- 
+  AnconaAve %>% 
+  ggplot(aes(x = price, y = quantity)) +
+  geom_point() +
+  geom_smooth(formula = y ~ x, se = FALSE, method = "lm") +
+  xlab("Daily average price per kilogram (Euros)") +
+  ylab("Daily quantity (kilograms)") +
+  coord_flip() +  
+  theme_bw()
+  #theme(axis.title = element_text(size = 10), 
+        #plot.margin=unit(c(2,1,1.5,2),"cm")
+#)
+ggplotly(AnconaPlot, width = "640", height =  "480")
+```
+
+##Alter and check some data
+```{r create uniqid}
+SutExpUniq <- 
+  SutExp %>% 
+  mutate(uniqid = paste(session, treatment, subject, sep = "_"))
+head(SutExpUniq)
+```
+
+## Statistical Tests
+
+```{r}
+SutNarrow <- 
+  SutExpUniq %>%
+  gather(round, value, r1:r9) %>%
+  arrange(session, subject, treatment, team)
+Plot1data <- 
+  SutNarrow %>%
+  filter(treatment == "individual" | treatment == "teamtreat" )
+wilcox.test(value ~ treatment, data = Plot1data)
+```
+
+
+
+
+## Regression output 
+
+```{r}
+m1 <- lm(value ~ treatment, data = SutNarrow)
+summary(m1)
+```
+
+##Or a Panel Regression
+```{r}
+m3 <- plm(value ~ treatment, data = SutNarrow, index = c("uniqid"), model = "random", effect = "time")
+summary(m3)
+```
+
+## Even Fancy Regression Output 
+```{r, results = "asis"}
+stargazer(m1, type = "html", 
+          no.space = TRUE,
+          keep.stat = c("n", "rsq"),
+          omit.table.layout = "n")
+```
+
+
+##Math? 
+How about Bayes' Rule? 
+
+$$Pr(\mbox{Outcome} | \mbox{signal}) = \frac{\theta p}{\theta p - (1 - \theta)(1 - p)}$$
+
+R Markdown uses $\LaTeX$ for math and it immediately gets displayed in R Studio.  
+
+That is, $\LaTeX$ without the challenges of learning the packages, tables, etc that makes learning $\LaTeX$ so hard.
+
+In-line equations are bracketed by single dollar signs `$`. 
+
+Off-set equations are bracketed by double dollar signs `$$`. 
+##What else? 
+R Markdown and R Studio together have excellent capabilities. 
+
+- R Studio can show you the output of the commands *within* the R Markdown file
+- R Studio has *error-detection* and *debugging* assistance for your code (unlike, e.g. STATA or aspects of Excel)
+- R Studio server can be hosted online and your students work with logins there
+
+## Lessons from experience
+
+Michael:
+
+Students will only learn commands through graded assignments 
+
+Aaron:
+
+Students can struggle with basic computing (working directory, etc.)
+
+## Lessons from Simon
+Students have to adjust to getting the Basics Right
+
+- File paths - many students haven’t had to specify a file path before (``drag-and-dropitis'') (initial inequality in baselines can be tough)
+- Difference between a script (.R file - like a .do file) and a markdown document/notebook (.Rmd) (medium adjustment)
+- Difference between the .Rmd and the exported file: pdf, html, etc (quick adjustment)
+
+Students like (or are used to) WYSIWYG, which Rmd is not
+ - Students are accustomed to MS Word & G docs which are WYSIWYG, but RMD is not. 
+
+Installing packages
+
+- analogy: you have to install apps (packages) to do different things on your (RStudio & R)
+- Chrome extensions
+
+Server = GOOD
+
+
+
+##R Link Love? 
+New to R? 
+
+- Check out the Computation and Visualization Consortium's week-long [workshop](https://www.macalester.edu/hhmi/curricularinnovation/cvc/) over the summer (dates June 12-16, Macalaster College - Kaplan, Prium & Horton)
+- Consider subscribing to classes at [Datacamp.com](www.datacamp.com) (take the intro free of charge)
+- Grolemund & Wickham, 2016, *R for Data Science*, [r4ds](r4ds.had.co.nz)
+- Baumer, Horton & Kaplan, forthcoming, [*Modern Data Science with R*](https://www.crcpress.com/Modern-Data-Science-with-R/Baumer-Kaplan-Horton/p/book/9781498724487). 
+

@@ -1,0 +1,32 @@
+---
+title: "Economic Development"
+description: "Data literacy and economic development teaching resources."
+---
+
+<div class="archive-note">
+<p>This page gathers resources connected to my economic development teaching and the paper "Data literacy in economic development."</p>
+</div>
+
+## Context
+
+Many of these materials relate to Simon D. Halliday, "Data literacy in economic
+development," *The Journal of Economic Education*, 50(3), 284-298, 2019.
+[DOI](https://doi.org/10.1080/00220485.2019.1618762).
+
+## Class Context and Syllabus
+
+- Syllabus for Economic Development: [PDF](https://drive.google.com/file/d/19LTRxGW6fYIELHWc9tzKhKDsAuzO0y9F/view).
+- Solow Growth Model: [interactive](https://shalliday.shinyapps.io/solow_growth/).
+
+## Example Economy Exercises
+
+- Printout for students with example economies: [PDF](https://drive.google.com/open?id=1uRtUrlHkp2UcWuUI7bgvSzrHAbT2UF1u) and [DOCX](https://drive.google.com/open?id=0B9jjwkjdUJU7T1JWYzNnOXkyZVk).
+- Income and poverty instructions for students: [PDF](https://drive.google.com/open?id=12INhXjbdCvHrW5K9F89UPsJcGTmcJb9-) and [DOCX](https://drive.google.com/open?id=12sSyru5o1h3drgvlImr6-vrr_9y4pV4Z).
+- Inequality instructions for students: [PDF](https://drive.google.com/open?id=1kW-qVRmDicvrBRyfdJnwnAJNXvRQE-W4) and [DOCX](https://drive.google.com/open?id=1MXDfV6_5uzh-eu247PcR5f2FV7Xo8KUS).
+- Guidelines for instructors: [PDF](https://drive.google.com/open?id=1k8A9JSOEyPAb1Fnh7Uq8vb2VZK0hI4FJ) and [DOCX](https://drive.google.com/open?id=1y_0389KxNGOd_7_Dj4cZ5YX5VQp9vA8E).
+- Solutions for instructors: [XLSX](https://drive.google.com/open?id=0B9jjwkjdUJU7Y1N5aFVLeG51eHc).
+
+## Companion Resources
+
+- [Data Literacy in Economic Development companion site](../data_literacy_in_economic_development/)
+- [Older data literacy resource directory](../data_literacy_for_development/)

@@ -15,7 +15,7 @@ author:
     email: youremail@smith.edu
     affiliation: Smith College
   - name: Simon Halliday
-    email: shalliday@smith.edu
+    email: simon.halliday@jhu.edu
     affiliation: Smith College
 address:
   - code: Smith College

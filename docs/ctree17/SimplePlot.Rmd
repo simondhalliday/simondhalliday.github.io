@@ -1,0 +1,105 @@
+---
+title: "Simple plotting exercise"
+output:
+  html_document: default
+  html_notebook: default
+---
+
+Here is some code to make some basic plots and differentiate them up by a categorical variable (also called a **factor** variable in R).
+
+First, we will clear the memory and load in the `tidyverse` package, which we will need for plotting. The `tidyverse` is a covenient collection of the packages we will need to tidy and plot our data. We read in a data file, in this case a comma separate value file (`csv`).
+
+```{r echo = FALSE, message = FALSE}
+rm(list = ls())
+library(tidyverse)
+```
+
+Now, we will load in a dataset. 
+
+The data used are from Hart, O'Hara, and Sirianni (2017)
+"The Effect of Sustainability Commitments on College Admissions: Evidence from the Presidents’ Climate Commitment"
+A brilliant paper that is currently being drooled over by referees at *JEEM*.
+```{r echo = FALSE, message = FALSE}
+sat.by.type <- read_csv("GroupedbyType.csv")
+```
+
+
+This data has two time series in it, showing the average 75th percentile SAT score for each year for each type of school, public vs private. We use `ggplot()`, a package developed by Hadley Wickham, to plot our data. The `gg` in `ggplot` stands for Grammar of Graphics, which we employ to specify the different characteristics of our graphs. 
+
+We start by making a simple scatterplot of the points in the data. 
+```{r echo = FALSE}
+ggplot(sat.by.type, aes(x = year, y = avg.sat)) + 
+   geom_point() + 
+  labs(title = "SAT scores (75th percentile) by school type", y = "SAT")
+```
+
+The first line in the code performs a variety of functions. It starts by calling on `ggplot()` and tells it that we are going to use the dataframe (an object we have called `sat.by.type`). 
+
+The dataframe is the first argument of the `ggplot()` command. 
+
+The second argument is an argument `aes()` for *aesthetics*. What are aesthetics? The aesthetics of the graph:
+
+- Specify the variables on the $x$ and $y$ axes
+- Specify whether to attribute *colors* to different characteristics, e.g. later saying `color = SchoolType`
+- Specify whether to attribute different *fills* (e.g. filling different columns/bars with different colors) to different categories, e.g. `fill = SchoolType` (if we had bars or other types of plots)
+- Specify whether to attribite different *shapes* to different categories, e.g. public schools given stars and private schools triangles
+- Notice that editing the `aes()` function in the original `ggplot()` call results in changes to *all* subsequent graph properties. This is *good* because it can make change a lot of properties quick, but *bad* if we only want to edit the properties of one layer of the graph. 
+
+But just calling on `ggplot()` doesn't result in an actual graph we can interpret until we tell it what *kind* of plot we want. In the case above, we wanted a scatterplot. 
+
+`ggplot()` operates by using *layers* to add different aspects to graphs (similar to what you do if you edit a photo in PhotoShop).
+Layers incorporate the following ideas: 
+
+- a layer of dots, lines, bars to produce graphs 
+- a layer for a graph title, axis labels 
+- annotations to the different points on the graphs, e.g. adding $R^2 = 0.92$ to a particular coordinate in a figure 
+- editing the legend for the graph 
+
+To add a layer to our plots, we need to end the *preceding* line with a `+` sign to tell `ggplot()` that it's job isn't done yet. So our code will look like the following: `ggplot(sat.by.type, aes(x = year, y = avg.sat)) + ` (the plus sign indicating something is about to come up). If you end a line of code with a plus sign, then R (and `ggplot()`) expect you to put something there, so if you put that into your *console* it'll just sit there waiting for you to add something or to hit [esc] to break the process. 
+
+The different kinds of graphs are called `geom_`s in ggplot parlance. A scatterplot requires us to use `geom_point()`. Notice that because we have *already* specified what the x and y variables are, we do *not* need to do so again in the `geom_point()` function Later, though, we will add attributes in the `geom_point()` function to specify particular attributes of the scatter plot that we want to define. 
+
+We can give the points different colors by school type. We need to edit the 
+```{r echo = FALSE}
+###  Make a simple scatterplot of average SAT scores
+###  and color points by variable SchoolType
+ggplot(sat.by.type, aes(x = year, y = avg.sat)) + 
+   geom_point(aes(color = SchoolType)) + 
+  labs(title = "SAT scores (75th percentile) by school type", y = "SAT")
+```
+
+Suppose we want to make a simple line graph to compare the trends of SAT scores over time in the different types of schools. 
+
+```{r echo = FALSE}
+###  Make a line plot of average SAT scores by school type
+ggplot(sat.by.type, aes(x = year, y = avg.sat, group = SchoolType)) + 
+   geom_point(aes(color = SchoolType)) + 
+   geom_line() +
+  labs(title = "SAT scores (75th percentile) by school type", y = "SAT")
+```
+But what's happening above?
+
+- We've added `geom_line()` to add lines to our time series. 
+- But the lines are black because we didn't specify a color aesthetic in the `geom_line()` function. 
+- There are two ways to get around this
+  - add `aes(color = SchoolType)` to the `geom_line()` function (OK if we only want color to apply to the lines)
+  - add `color = SchoolType` to the `aes()` call in the original `ggplot()` call (if we want the color grouping to apply to *all* subsequent geoms - so often more efficient if we want to change an aspect of all aesthetics of our graph)
+
+```{r}
+###  Make a line plot of average SAT scores by school type
+ggplot(sat.by.type, aes(x = year, y = avg.sat, group = SchoolType, color = SchoolType)) + 
+   geom_point() + 
+   geom_line() +
+  labs(title = "SAT scores (75th percentile) by school type", y = "SAT") + 
+  scale_color_discrete(name = "Type of School", 
+                       breaks = c("private", "public"), 
+                       labels = c("Private institution", "Public Institution"))
+```
+
+
+
+
+
+
+
+

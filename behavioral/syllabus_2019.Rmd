@@ -24,7 +24,7 @@ link-citations: yes
 
 | Instructor: Simon Halliday | Office: Wright Hall 234 |
 |---|---|
-| Email: [shalliday@smith.edu](mailto:shalliday@smith.edu) | Office Hrs: T 2:30-3:30pm; W: 1:30-3:30pm |
+| Email: [simon.halliday@jhu.edu](mailto:simon.halliday@jhu.edu) | Office Hrs: T 2:30-3:30pm; W: 1:30-3:30pm |
 | Twitter: [\@simondhalliday](https://twitter.com/simondhalliday) | Schedule: T Th, 10:30-11:50am |
 | Skype: sihalliday | Class Venue: Seelye 211 | 
 | Site: [simondhalliday.com/behavioral](simondhalliday.com/behavioral) |  |

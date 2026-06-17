@@ -1,0 +1,52 @@
+---
+title: "Research"
+description: "Books, publications, working papers, and current projects."
+---
+
+## Books
+
+- Samuel Bowles and Simon D. Halliday, *Microeconomics: Competition, Conflict, and Coordination*. Oxford University Press, 2022. [Book site](microeconomics/) and [OUP page](https://global.oup.com/academic/product/microeconomics-9780198843207).
+
+## Peer-Reviewed Publications
+
+### Economics Education
+
+- Simon D. Halliday and S. M. Mamunuru, "Updating our approach to intermediate microeconomics," *The American Economist*, 70(2), 2025.
+- Simon D. Halliday, C. Makler, D. McKee, and A. Papadopoulou, "Improving student comprehension through interactive model visualization," *International Review of Economics Education*, 47, 100296, 2024.
+- D. Girardi, S. Mamunuru, Simon D. Halliday, and Samuel Bowles, "Does studying economics make you selfish?" *Southern Economic Journal*, 2023. [DOI](https://doi.org/10.1002/soej.12672).
+- Simon D. Halliday, "Data literacy in economic development," *The Journal of Economic Education*, 50(3), 284-298, 2019. [DOI](https://doi.org/10.1080/00220485.2019.1618762).
+- Simon D. Halliday, "Promoting an ethical economics classroom through partnership," *International Journal for Students as Partners*, 3(1), 182-189, 2019. [Article](https://mulpress.mcmaster.ca/ijsap/article/view/3623).
+- Thomas Dvorak, Simon D. Halliday, Michael O'Hara, and Aaron Swoboda, "Efficient empiricism: Streamlining teaching, research, and learning in empirical courses," *The Journal of Economic Education*, 50(3), 242-257, 2019. [DOI](https://doi.org/10.1080/00220485.2019.1618765).
+
+### Behavioral, Experimental, Applied, and Development Economics
+
+- Harriet Brookes-Gray, Vis Taraz, and Simon D. Halliday, "The impact of weather shocks on employment outcomes: evidence from South Africa," *Environment and Development Economics*, 28(3), 285-305, 2022. [DOI](https://doi.org/10.1017/S1355770X22000237).
+- Simon D. Halliday and Jonathan Lafky, "Reciprocity through ratings: An experimental study of bias in evaluations," *Journal of Behavioral and Experimental Economics*, 83, 101480, 2019. [DOI](https://doi.org/10.1016/j.socec.2019.101480).
+- Gabriel Burdin, Simon D. Halliday, and Fabio Landini, "The hidden benefits of abstaining from control," *Journal of Economic Behavior & Organization*, 147, 1-12, 2018.
+
+## Chapters in Books
+
+- Simon D. Halliday, E. Bottorff, M. Lopez, A. Johnson, and A. Papadopoulou, "Taking an economic literacy approach in understanding our economy," in *Teaching Literacy-Targeted Principles of Economics*, A. Cohen and S. Wolla, eds., Edward Elgar, forthcoming 2026.
+- Simon D. Halliday and J. E. Tierney, "Revolutionizing teaching economics online with artificial intelligence," in *Teaching Economics Online*, A. al Bahrani and P. Chaudhury, eds., Edward Elgar, 2024.
+- Simon D. Halliday and E. C. Marshall, "Where is the 'behavioral' in introductory microeconomics?" in *Teaching Principles of Microeconomics*, M. Maier and P. Ruder, eds., Edward Elgar, 2023.
+- Simon D. Halliday, "Global public goods," in *Managing the Economy*, C. Santos and M. Higginson, eds., Open University Press, 2014.
+
+## Under Review
+
+- Samuel Bowles, Wendy Carlin, Simon D. Halliday, and Sahana Subramanyam, "What do we think an economist should know? A machine learning investigation of research and intermediate-level texts," 2025, revise and resubmit at *History of Political Economy*.
+- Simon D. Halliday, Jonathan Lafky, and Alistair Wilson, "Honesty at the margin and in the limit," 2025, revise and resubmit at *AEJ: Microeconomics*.
+
+## Works in Progress
+
+- M. Bechdolf, Simon D. Halliday, E. Malthouse, and A. Papadopoulou, "Beyond the contract: Fairness, observability, and discretionary effort."
+- Simon D. Halliday and G. Liu, "Civic thought and economic education."
+- Simon D. Halliday, G. Liu, E. Marshall, and A. Underwood, project collecting data during 2025-2026.
+- Simon D. Halliday, V. Jayaraman, and P. Tripathi, "Teaching an economic model of segregation: Evidence, best responses, an in-class activity, and a critical reflection."
+- Simon D. Halliday, "Reflective writing and course stories in economics teaching."
+- Simon D. Halliday, "Teaching social preferences."
+- Simon D. Halliday and Oumayma Koulouh, "Lies, labor and luck: Comparing lying in real-effort and luck tasks."
+
+## Policy and Commentary
+
+- Malcolm Keswell, Tim Brophy, Simon D. Halliday, and Susan Godlonton, *Report to the Department of Land Affairs on the Quality of Life Survey, South Africa*, 2008.
+- Gabriel Burdin, Simon Halliday, and Fabio Landini, "Why using technology to spy on home-working employees may be a bad idea," *LSE Business Review*, 2020. [Article](https://blogs.lse.ac.uk/businessreview/2020/06/17/why-using-technology-to-spy-on-home-working-employees-may-be-a-bad-idea/).

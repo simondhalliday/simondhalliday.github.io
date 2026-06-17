@@ -1,0 +1,36 @@
+---
+title: "Behavioral Economics"
+description: "Archived behavioral economics schedule, labs, and project materials."
+---
+
+<div class="archive-note">
+<p>This is an archived course resource page. Some readings were linked through earlier institutional systems and may no longer be available.</p>
+</div>
+
+## Course Context
+
+- Instructor: Simon D. Halliday.
+- Course code: ECO254.
+- [Syllabus](syllabus_2020.pdf)
+- [Project Guidelines](team_guidelines.html)
+- [FAQ](FAQ.html)
+- [Experiment report guidelines](exp_reports.html)
+
+## Labs and Exercises
+
+These lab exercises span macroeconomic data from FRED, micro data from specific
+markets, survey data, and laboratory data from decision experiments.
+
+- [Lab 1](Lab1.html)
+- [Lab 2](Lab2.html)
+- [Lab 3](Lab3.html)
+- [Lab 4](Lab4.html)
+- [Lab 5](Lab5.html)
+- [Lab 6](Lab6.html)
+- [Gapminder Exercise](TidyGapMinder.html)
+
+## Topics
+
+The course included heuristics and biases, risk, social preferences,
+intertemporal choice, public goods, experiments, field evidence, and student
+research projects.
