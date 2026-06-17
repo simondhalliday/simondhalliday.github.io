@@ -1,0 +1,39 @@
+---
+title: "About"
+description: "Biography and background."
+---
+
+My name is Simon D. Halliday. I am an associate research professor and associate
+director in the [Center for Economy and Society](https://snfagora.jhu.edu/project/center-for-economy-and-society/)
+at the [SNF Agora Institute](https://snfagora.jhu.edu/) and Johns Hopkins
+University. You can contact me at
+[simon.halliday@jhu.edu](mailto:simon.halliday@jhu.edu).
+
+I was previously an associate professor of economics education in the School of
+Economics at the University of Bristol, a fellow at the Center for Advanced
+Study in the Behavioral Sciences at Stanford, an assistant professor of
+economics at Smith College, a lecturer at Royal Holloway, University of London,
+and a lecturer at the University of Cape Town.
+
+My research interests include behavioral and experimental economics, applied
+microeconomics, economics education, economic development, and data science in
+economics. I am especially interested in social preferences, institutions,
+economic literacy, civic thought, and how we teach economics.
+
+I am the co-author, with Samuel Bowles, of
+[*Microeconomics: Competition, Conflict, and Coordination*](microeconomics/),
+published by Oxford University Press in 2022. We will be rebuilding the book as
+an open web project.
+
+## Education
+
+- Ph.D. Economics, University of Siena, 2012.
+- M.A. Creative Writing, University of Cape Town, 2008.
+- M.Comm. Economics, University of Cape Town, 2007.
+- B.Com. Honours, Economics, University of Cape Town, 2004.
+- B.Soc.Sci. Economics and English Literature, University of Cape Town, 2003.
+
+## Naming
+
+I use my middle initial because there is a former rugby player named Simon
+Halliday, and you probably do not want to confuse us.

@@ -1,0 +1,21 @@
+---
+title: "Microeconomics: Competition, Conflict, and Coordination"
+description: "Textbook by Samuel Bowles and Simon D. Halliday."
+---
+
+[*Microeconomics: Competition, Conflict, and Coordination*](https://global.oup.com/academic/product/microeconomics-9780198843207)
+was published by Oxford University Press in 2022. It was written by Samuel
+Bowles and Simon D. Halliday.
+
+The book develops microeconomics around competition, conflict, coordination,
+institutions, power, and social preferences. It reflects the way many students
+now encounter economic life: not only through markets, but also through firms,
+families, politics, norms, and collective action.
+
+We will rebuild the textbook as an open web project. This page will link to the
+open site once that work is ready.
+
+## Current Links
+
+- [Oxford University Press page](https://global.oup.com/academic/product/microeconomics-9780198843207)
+- [Existing book materials](index.html)

@@ -1,0 +1,50 @@
+---
+title: "Simon D. Halliday"
+description: "Research, teaching, and writing in behavioral economics, economics education, and civic thought."
+page-layout: full
+toc: false
+---
+
+<div class="profile-hero">
+  <p class="kicker">Johns Hopkins University</p>
+  <h1>Simon D. Halliday</h1>
+  <p>
+    I am an associate research professor and associate director in the Center for
+    Economy and Society at the SNF Agora Institute, Johns Hopkins University. My
+    work sits across behavioral and experimental economics, economics education,
+    applied microeconomics, economic development, and data science in economics.
+  </p>
+  <div class="link-row">
+<a href="about.qmd">About</a>
+<a href="research.qmd">Research</a>
+<a href="teaching/index.qmd">Teaching</a>
+<a href="writing/index.qmd">Writing</a>
+<a href="mailto:simon.halliday@jhu.edu">Email</a>
+  </div>
+</div>
+
+## Current Work
+
+I teach and build programs in moral and political economy, civic thought, and
+economics education. At Johns Hopkins I serve as director of undergraduate
+studies for the Moral and Political Economy major in the Center for Economy and
+Society.
+
+My recent and current projects include work on fairness, observability, and
+discretionary effort; civic thought and economics education; interactive model
+visualization; and what machine learning can tell us about the knowledge
+embedded in economics research and textbooks.
+
+## Books and Projects
+
+- [*Microeconomics: Competition, Conflict, and Coordination*](microeconomics/) with Samuel Bowles was published by Oxford University Press in 2022. We will rebuild the book as an open site and link it here as that work comes online.
+- I am lead author with the enCOREage team on *Understanding the Economy*, a CORE Econ project.
+- I am developing teaching and public-facing materials around progress, civic thought, and economics education.
+
+## Selected Links
+
+- [Google Scholar](https://scholar.google.com/citations?user=t_gEvDgAAAAJ&hl=en)
+- [ORCID](https://orcid.org/0000-0002-0297-6088)
+- [GitHub](https://github.com/simondhalliday)
+- [Center for Economy and Society](https://snfagora.jhu.edu/project/center-for-economy-and-society/)
+- [SNF Agora Institute](https://snfagora.jhu.edu/)

@@ -1,0 +1,89 @@
+project:
+  type: website
+  output-dir: docs
+  render:
+    - "*.qmd"
+    - "writing/*.qmd"
+    - "introductory_microeconomics/*.qmd"
+    - "intermediate_microeconomics/*.qmd"
+    - "behavioral/*.qmd"
+    - "eco220/*.qmd"
+    - "economic_development/*.qmd"
+    - "polecon_africa/*.qmd"
+    - "microeconomics/*.qmd"
+    - "20*/index.qmd"
+  resources:
+    - "CNAME"
+    - "img/**"
+    - "more/**"
+    - "papers/**"
+    - "research/**"
+    - "tenure/**"
+    - "behavioral/*.html"
+    - "behavioral/*.pdf"
+    - "behavioral/*.png"
+    - "eco220/*.html"
+    - "eco220/*.pdf"
+    - "ctree17/**"
+    - "sea2018/**"
+    - "data_literacy_for_development/**"
+    - "data_literacy_in_economic_development/**"
+    - "efficient_empiricism/**"
+    - "bfh-textbook/**"
+    - "teachingecononline_ai/**"
+
+website:
+  title: "Simon D. Halliday"
+  site-url: "https://simondhalliday.com"
+  description: "Research, teaching, and writing by Simon D. Halliday."
+  favicon: img/avatar-icon.png
+  navbar:
+    pinned: true
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: research.qmd
+        text: Research
+      - href: teaching/index.qmd
+        text: Teaching
+      - href: writing/index.qmd
+        text: Writing
+    right:
+      - icon: github
+        href: https://github.com/simondhalliday
+        aria-label: GitHub
+      - icon: envelope
+        href: mailto:simon.halliday@jhu.edu
+        aria-label: Email
+  page-footer:
+    left: |
+      **Simon D. Halliday**<br>
+      Associate Research Professor and Associate Director, Center for Economy and Society, SNF Agora Institute, Johns Hopkins University<br>
+      [simon.halliday@jhu.edu](mailto:simon.halliday@jhu.edu)
+    right:
+      - text: Google Scholar
+        href: https://scholar.google.com/citations?user=t_gEvDgAAAAJ&hl=en
+      - text: ORCID
+        href: https://orcid.org/0000-0002-0297-6088
+      - text: GitHub
+        href: https://github.com/simondhalliday
+
+format:
+  html:
+    theme: default
+    css:
+      - progress.css
+      - styles/site.css
+    toc: true
+    link-external-newwindow: true
+    include-in-header:
+      text: |
+        <meta property="og:site_name" content="Simon D. Halliday">
+        <meta property="og:url" content="https://simondhalliday.com">
+        <meta name="twitter:card" content="summary">
+    smooth-scroll: true
+
+execute:
+  freeze: auto
