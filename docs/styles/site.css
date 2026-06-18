@@ -499,7 +499,8 @@ body:has(.home-institution-band) .navbar {
 
 .home-landscape-feature strong {
   color: #fff;
-  font-size: clamp(1.65rem, 3.5vw, 2.9rem);
+  font-size: clamp(1.45rem, 2.55vw, 2.25rem);
+  line-height: 1.02;
 }
 
 .home-landscape-feature span:last-child {
