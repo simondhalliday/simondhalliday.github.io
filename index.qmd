@@ -9,11 +9,11 @@ body-class: home-page
 ```{=html}
 <section class="home-institution-band" aria-label="Institutional affiliation">
   <div>
-    <span class="home-label">Johns Hopkins / SNF Agora / CES</span>
+    <span class="home-label">Johns Hopkins / <a href="https://snfagora.jhu.edu/">SNF Agora</a> / <a href="https://snfagora.jhu.edu/our-work/labs/center-for-economy-society/">CES</a></span>
     <strong>Associate Research Professor and Associate Director</strong>
   </div>
   <p>
-    At the Center for Economy and Society, I work across teaching, research, and
+    At the <a href="https://snfagora.jhu.edu/our-work/labs/center-for-economy-society/">Center for Economy and Society</a>, I work across teaching, research, and
     institution-building in moral and political economy.
   </p>
 </section>

@@ -256,6 +256,18 @@ body:has(.home-institution-band) .navbar {
   color: rgba(255, 255, 255, 0.74);
 }
 
+.home-institution-band a {
+  color: inherit;
+  text-decoration-color: rgba(255, 255, 255, 0.45);
+  text-underline-offset: 0.18em;
+}
+
+.home-institution-band a:hover,
+.home-institution-band a:focus {
+  color: #fff;
+  text-decoration-color: #fff;
+}
+
 .home-institution-band p {
   margin: 0;
   color: rgba(255, 255, 255, 0.82);
