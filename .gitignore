@@ -19,3 +19,7 @@ Thumbs.db
 ehthumbs.db
 
 # Keep docs/ tracked for GitHub Pages deploy-from-branch.
+
+# Local review/source folders that should not be deployed wholesale.
+Photos/
+design/
