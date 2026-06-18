@@ -7,7 +7,18 @@ body-class: home-page
 ---
 
 ```{=html}
-<section class="home-hero" aria-labelledby="home-title">
+<section class="home-institution-band" aria-label="Institutional affiliation">
+  <div>
+    <span class="home-label">Johns Hopkins / SNF Agora / CES</span>
+    <strong>Associate Research Professor and Associate Director</strong>
+  </div>
+  <p>
+    At the Center for Economy and Society, I work across teaching, research, and
+    institution-building in moral and political economy.
+  </p>
+</section>
+
+<section class="home-hero home-hero--feature-wall" aria-labelledby="home-title">
   <div class="home-hero__text">
     <p class="home-eyebrow">Economics as a way to understand civic life</p>
     <h1 id="home-title">Teaching, research, and open textbooks for <span>power, progress, and public purpose.</span></h1>
@@ -22,40 +33,48 @@ body-class: home-page
     </div>
   </div>
 
-  <div class="home-feature-grid" aria-label="Featured work">
-    <a class="home-book-card home-book-card--micro" href="microeconomics/">
-      <span class="home-book-cover">
+  <div class="home-showcase-panel" aria-label="Featured work">
+    <div class="home-showcase-title">
+      <strong>Featured work</strong>
+      <span>Books, teaching resources, and research projects</span>
+    </div>
+
+    <a class="home-book-feature" href="microeconomics/">
+      <span class="home-book-feature__cover">
         <img src="img/home-micro-cover.png" alt="Microeconomics: Competition, Conflict, and Coordination book cover">
       </span>
-      <span class="home-card-copy">
+      <span class="home-book-feature__copy">
         <span class="home-label">Textbook</span>
         <strong>Microeconomics</strong>
-        <span>Competition, Conflict, and Coordination, with Samuel Bowles.</span>
+        <span><em>Competition, Conflict, and Coordination</em>, with Samuel Bowles. A textbook about how markets, institutions, power, and cooperation shape economic life.</span>
       </span>
     </a>
 
-    <div class="home-side-stack">
-      <a class="home-image-card home-image-card--uoe" href="https://books.core-econ.org/understanding-our-economy/">
+    <div class="home-showcase-secondary">
+      <a class="home-landscape-feature" href="https://books.core-econ.org/understanding-our-economy/">
         <img src="img/home-uoe-solar.jpg" alt="Solar panels in a desert landscape">
         <span>
           <span class="home-label">Open textbook</span>
           <strong>Understanding Our Economy</strong>
+          <span>Open economics for everyday life, useful skills, and modern principles.</span>
         </span>
       </a>
 
-      <a class="home-research-card" href="research.html#works-in-progress">
-        <span class="home-label">Research</span>
-        <strong>PPE and Civic Thought Programs</strong>
-        <span>A dashboard and paper on programs in American higher education.</span>
-      </a>
+      <div class="home-mini-stack">
+        <a class="home-mini-feature" href="research.html#works-in-progress">
+          <span class="home-label">Research</span>
+          <strong>PPE and Civic Thought Programs</strong>
+          <span>A dashboard and paper on programs in American higher education.</span>
+        </a>
 
-      <a class="home-video-card" href="https://youtube.com/@simondhalliday3919?si=hkWUr5FZl4NIeGhg">
-        <span class="home-video-thumb" aria-hidden="true"><span>▶</span></span>
-        <span>
-          <strong>Teaching videos</strong>
-          <span>Short economics explanations and course material.</span>
-        </span>
-      </a>
+        <a class="home-mini-feature home-mini-feature--dark" href="https://youtube.com/@simondhalliday3919?si=hkWUr5FZl4NIeGhg">
+          <span class="home-video-thumb" aria-hidden="true"><span>▶</span></span>
+          <span>
+            <strong>Teaching videos</strong>
+            <span>Short economics explanations and course material.</span>
+          </span>
+        </a>
+      </div>
     </div>
   </div>
 </section>
