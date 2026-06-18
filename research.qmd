@@ -30,7 +30,7 @@ description: "Books, publications, working papers, and current projects."
 
 ## Chapters in Books
 
-- Simon D. Halliday, E. Bottorff, M. Lopez, A. Johnson, and A. Papadopoulou, "Taking an economic literacy approach in understanding our economy," in *Teaching Literacy-Targeted Principles of Economics*, A. Cohen and S. Wolla, eds., Edward Elgar, forthcoming 2026.
+- Simon D. Halliday, E. Bottorff, M. Lopez, A. Johnson, and A. Papadopoulou, "Taking an economic literacy approach in understanding our economy," in *Teaching Literacy-Targeted Principles of Economics*, A. Cohen and S. Wolla, eds., Edward Elgar, forthcoming 2026. [Dashboard](https://simondhalliday.com/uoe_economic_literacy/).
 - Simon D. Halliday and J. E. Tierney, "Revolutionizing teaching economics online with artificial intelligence," in *Teaching Economics Online*, A. al Bahrani and P. Chaudhury, eds., Edward Elgar, 2024.
 - Simon D. Halliday and E. C. Marshall, "Where is the 'behavioral' in introductory microeconomics?" in *Teaching Principles of Microeconomics*, M. Maier and P. Ruder, eds., Edward Elgar, 2023.
 - Simon D. Halliday, "Global public goods," in *Managing the Economy*, C. Santos and M. Higginson, eds., Open University Press, 2014.
