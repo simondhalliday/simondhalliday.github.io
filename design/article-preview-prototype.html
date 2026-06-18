@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article Preview Prototype - Simon D. Halliday</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #17212b;
+      --muted: #5a6673;
+      --paper: #fbfaf7;
+      --surface: #f2f5f3;
+      --line: #d9dedc;
+      --blue: #174c63;
+      --coral: #d85c43;
+      --soft-blue: #e4eef2;
+      --font: "Source Sans 3", Inter, system-ui, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--font);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-color: rgba(23, 76, 99, 0.35);
+      text-underline-offset: 0.16em;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1rem clamp(1.25rem, 4vw, 4rem);
+      background: rgba(251, 250, 247, 0.96);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(10px);
+    }
+
+    .brand {
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+    }
+
+    .topbar nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .topbar nav a {
+      color: var(--muted);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 0.72fr) minmax(280px, 0.28fr);
+      gap: clamp(2rem, 5vw, 5rem);
+      max-width: 1380px;
+      margin-inline: auto;
+      padding: clamp(3.5rem, 7vw, 6rem) clamp(1.25rem, 5vw, 5rem) clamp(2.5rem, 5vw, 4rem);
+    }
+
+    .label {
+      display: block;
+      color: var(--coral);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      line-height: 1.2;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1 {
+      max-width: 900px;
+      margin-bottom: 1.2rem;
+      color: var(--ink);
+      font-size: clamp(3.2rem, 6.6vw, 6rem);
+      font-weight: 800;
+      letter-spacing: -0.045em;
+      line-height: 0.95;
+    }
+
+    h1 span {
+      color: var(--coral);
+    }
+
+    .lede {
+      max-width: 760px;
+      color: #3c4b55;
+      font-size: clamp(1.1rem, 1.55vw, 1.38rem);
+      line-height: 1.55;
+    }
+
+    .side-note {
+      align-self: start;
+      padding: 1rem;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--muted);
+      line-height: 1.45;
+    }
+
+    .section {
+      max-width: 1380px;
+      margin: 0 auto;
+      padding: clamp(2rem, 5vw, 4rem) clamp(1.25rem, 5vw, 5rem);
+      border-top: 1px solid var(--line);
+    }
+
+    .article-feature {
+      scroll-margin-top: 92px;
+      display: grid;
+      grid-template-columns: minmax(260px, 0.42fr) minmax(0, 0.58fr);
+      gap: clamp(1.25rem, 3.5vw, 3rem);
+      align-items: start;
+      padding: clamp(1rem, 2vw, 1.4rem);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+
+    .article-browser {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .article-rail {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    .article-tab {
+      display: grid;
+      gap: 0.25rem;
+      min-height: 104px;
+      padding: 0.9rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      color: var(--ink);
+      cursor: pointer;
+      font: inherit;
+      text-align: left;
+    }
+
+    .article-tab span {
+      color: var(--coral);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .article-tab strong {
+      color: var(--blue);
+      font-size: 1.05rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.05;
+    }
+
+    .article-tab[aria-selected="true"] {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: #fff;
+    }
+
+    .article-tab[aria-selected="true"] span,
+    .article-tab[aria-selected="true"] strong {
+      color: #fff;
+    }
+
+    .reader-nav {
+      position: sticky;
+      bottom: 0;
+      z-index: 8;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.85rem 1rem;
+      background: rgba(251, 250, 247, 0.94);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      box-shadow: 0 16px 36px rgba(23, 33, 43, 0.12);
+      backdrop-filter: blur(10px);
+    }
+
+    .reader-nav__buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem;
+    }
+
+    .reader-nav button {
+      min-height: 34px;
+      padding: 0.38rem 0.72rem;
+      border: 1px solid var(--blue);
+      border-radius: 999px;
+      background: #fff;
+      color: var(--blue);
+      cursor: pointer;
+      font: inherit;
+      font-size: 0.86rem;
+      font-weight: 800;
+    }
+
+    .reader-nav button.next {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    .reader-status {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 800;
+    }
+
+    .page-preview {
+      display: block;
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 18px 36px rgba(23, 33, 43, 0.14);
+    }
+
+    .page-preview img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+
+    .article-copy {
+      display: grid;
+      gap: 0.9rem;
+      align-content: start;
+      padding: clamp(0.4rem, 1vw, 0.8rem) 0;
+    }
+
+    .article-copy h2 {
+      margin: 0;
+      color: var(--blue);
+      font-size: clamp(2.1rem, 4vw, 3.8rem);
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      line-height: 0.98;
+    }
+
+    .citation {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+      line-height: 1.45;
+    }
+
+    .summary {
+      display: grid;
+      gap: 0.75rem;
+      padding-top: 0.5rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .summary p {
+      margin: 0;
+      color: #33434e;
+      font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+      line-height: 1.55;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      padding-top: 0.4rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 0.42rem 0.72rem;
+      border: 1px solid currentColor;
+      border-radius: 999px;
+      color: var(--blue);
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .button.primary {
+      background: var(--blue);
+      border-color: var(--blue);
+      color: white;
+    }
+
+    .embed {
+      scroll-margin-top: 92px;
+      margin-top: 1rem;
+      overflow: hidden;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+
+    .embed-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.8rem 1rem;
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-weight: 700;
+    }
+
+    iframe {
+      display: block;
+      width: 100%;
+      height: min(72vh, 760px);
+      border: 0;
+      background: white;
+    }
+
+    .alternates {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .article-card {
+      display: grid;
+      grid-template-columns: 130px minmax(0, 1fr);
+      gap: 1rem;
+      padding: 1rem;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    .article-card img {
+      width: 100%;
+      height: 168px;
+      object-fit: cover;
+      object-position: top center;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+    }
+
+    .article-card strong {
+      display: block;
+      color: var(--blue);
+      font-size: 1.3rem;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+      line-height: 1.05;
+    }
+
+    .article-card p {
+      margin: 0.45rem 0 0;
+      color: var(--muted);
+      line-height: 1.4;
+    }
+
+    .traditional-list {
+      display: grid;
+      gap: 1.5rem;
+      max-width: 1020px;
+      margin-top: 1.25rem;
+    }
+
+    .list-group {
+      padding-top: 1.1rem;
+      border-top: 1px solid var(--line);
+    }
+
+    .list-group h3 {
+      margin-bottom: 0.75rem;
+      color: var(--blue);
+      font-size: clamp(1.55rem, 2.6vw, 2.25rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1.05;
+    }
+
+    .publication-list {
+      display: grid;
+      gap: 0.85rem;
+      margin: 0;
+      padding-left: 1.1rem;
+    }
+
+    .publication-list li {
+      padding-left: 0.2rem;
+      color: #2f3f49;
+      font-size: clamp(1rem, 1.2vw, 1.12rem);
+      line-height: 1.5;
+    }
+
+    .publication-list a {
+      color: var(--coral);
+      font-weight: 800;
+      text-decoration-thickness: 1px;
+    }
+
+    .list-tools {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-left: 0.15rem;
+      white-space: nowrap;
+    }
+
+    .layout-note {
+      margin-top: 1rem;
+      padding: 1rem;
+      background: var(--soft-blue);
+      border: 1px solid #c9dbe4;
+      border-radius: 8px;
+      color: #254453;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .article-feature {
+        grid-template-columns: 1fr;
+      }
+
+      .article-rail {
+        grid-template-columns: 1fr;
+      }
+
+      .alternates {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .topbar {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      h1 {
+        font-size: clamp(2.6rem, 13vw, 4rem);
+      }
+
+      .article-card {
+        grid-template-columns: 92px minmax(0, 1fr);
+      }
+
+      .article-card img {
+        height: 130px;
+      }
+
+      iframe {
+        height: 62vh;
+      }
+
+      .reader-nav {
+        align-items: stretch;
+        border-radius: 18px;
+      }
+
+      .reader-nav,
+      .reader-nav__buttons {
+        display: grid;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">Simon D. Halliday</a>
+    <nav aria-label="Prototype navigation">
+      <a href="#expanded">Expanded</a>
+      <a href="#cards">Cards</a>
+      <a href="#traditional">List</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <span class="label">Research prototype</span>
+      <h1>Article previews with <span>first-page context.</span></h1>
+      <p class="lede">
+        This tests a more journal-like research page: each paper gets a visual first-page preview,
+        a short summary, and direct paths to read the embedded PDF or open the journal page.
+      </p>
+    </div>
+    <aside class="side-note">
+      This is intentionally more visual and heavier than a simple publication list. It may work best for selected papers, not necessarily every entry on the page.
+    </aside>
+  </section>
+
+  <main>
+    <section class="section" id="expanded">
+      <div class="article-browser">
+        <div class="article-rail" role="tablist" aria-label="Featured articles">
+          <button class="article-tab" type="button" role="tab" aria-selected="true" data-article="0">
+            <span>Behavioral</span>
+            <strong>Does studying economics make you selfish?</strong>
+          </button>
+          <button class="article-tab" type="button" role="tab" aria-selected="false" data-article="1">
+            <span>Education</span>
+            <strong>Interactive model visualization</strong>
+          </button>
+          <button class="article-tab" type="button" role="tab" aria-selected="false" data-article="2">
+            <span>Development</span>
+            <strong>Weather shocks and employment</strong>
+          </button>
+        </div>
+
+        <article class="article-feature">
+          <a class="page-preview" id="preview-link" href="../papers/publications/girardi-mamunuru-halliday-bowles-2023-selfish.pdf">
+            <img id="preview-image" src="article-previews/selfish.jpg" alt="First page preview of Does studying economics make you selfish?">
+          </a>
+          <div class="article-copy">
+            <span class="label" id="article-category">Behavioral and experimental economics</span>
+            <h2 id="article-title">Does studying economics make you selfish?</h2>
+            <p class="citation" id="article-citation">
+              D. Girardi, S. Mamunuru, Simon D. Halliday, and Samuel Bowles.
+              <em>Southern Economic Journal</em>, 2023.
+            </p>
+            <div class="summary">
+              <p id="article-summary-1">
+                A study of whether economics education changes students' social preferences and political beliefs. The paper uses variation across intermediate microeconomics courses to examine whether exposure to economics makes students more self-interested.
+              </p>
+              <p id="article-summary-2">
+                In this design, the preview image gives visitors a sense of the article as a published object, while the summary explains why someone might want to read it.
+              </p>
+            </div>
+            <div class="actions">
+              <a class="button primary" href="#embedded-pdf">Read embedded PDF</a>
+              <a class="button" id="pdf-link" href="../papers/publications/girardi-mamunuru-halliday-bowles-2023-selfish.pdf">PDF</a>
+              <a class="button" id="journal-link" href="https://doi.org/10.1002/soej.12672">Journal</a>
+            </div>
+          </div>
+        </article>
+
+        <div class="reader-nav" aria-label="Article navigation">
+          <span class="reader-status" id="reader-status">Article 1 of 3</span>
+          <div class="reader-nav__buttons">
+            <button type="button" id="prev-article">Previous article</button>
+            <button class="next" type="button" id="next-article">Next article</button>
+          </div>
+        </div>
+
+        <div class="embed" id="embedded-pdf">
+          <div class="embed-header">
+            <span id="embed-title">Embedded PDF preview</span>
+            <a id="open-pdf-link" href="../papers/publications/girardi-mamunuru-halliday-bowles-2023-selfish.pdf">Open full PDF</a>
+          </div>
+          <iframe id="pdf-frame" src="../papers/publications/girardi-mamunuru-halliday-bowles-2023-selfish.pdf" title="Embedded PDF: Does studying economics make you selfish?"></iframe>
+        </div>
+      </div>
+
+      <p class="layout-note">
+        Navigation idea: visitors can skim by article tabs, move sequentially with previous/next, or jump directly into the embedded PDF. If we use this for the real Research page, I would probably make one expandable reader and keep the full publication list lighter below it.
+      </p>
+    </section>
+
+    <section class="section" id="cards">
+      <span class="label">Alternative compact treatment</span>
+      <h2>Preview cards for the publication list</h2>
+      <div class="alternates">
+        <a class="article-card" href="../papers/publications/halliday-makler-mckee-papadopoulou-2024-model-visualization.pdf">
+          <img src="article-previews/model-visualization.jpg" alt="First page preview of model visualization article">
+          <span>
+            <strong>Improving student comprehension through interactive model visualization</strong>
+            <p>Economics education, interactive tools, and student understanding.</p>
+          </span>
+        </a>
+        <a class="article-card" href="../papers/publications/brookes-gray-taraz-halliday-2023-weather-shocks.pdf">
+          <img src="article-previews/weather-shocks.jpg" alt="First page preview of weather shocks article">
+          <span>
+            <strong>The impact of weather shocks on employment outcomes</strong>
+            <p>Applied and development economics using evidence from South Africa.</p>
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section" id="traditional">
+      <span class="label">Traditional backup</span>
+      <h2>Publication list with direct links</h2>
+      <p class="lede">
+        This gives visitors a familiar, fast-scanning version of the research page. The visual reader can sit above it, while the list remains the reliable path for citation copying, PDF downloads, and journal pages.
+      </p>
+
+      <div class="traditional-list">
+        <div class="list-group">
+          <h3>Behavioral and Experimental Economics</h3>
+          <ul class="publication-list">
+            <li>
+              D. Girardi, S. Mamunuru, Simon D. Halliday, and Samuel Bowles, "Does studying economics make you selfish?" <em>Southern Economic Journal</em>, 2023.
+              <span class="list-tools"><a href="../papers/publications/girardi-mamunuru-halliday-bowles-2023-selfish.pdf">PDF</a> <a href="https://doi.org/10.1002/soej.12672">Journal</a></span>
+            </li>
+            <li>
+              Simon D. Halliday and Jonathan Lafky, "Reciprocity through ratings: An experimental study of bias in evaluations," <em>Journal of Behavioral and Experimental Economics</em>, 83, 101480, 2019.
+              <span class="list-tools"><a href="../papers/publications/halliday-lafky-2019-reciprocity-ratings.pdf">PDF</a> <a href="https://doi.org/10.1016/j.socec.2019.101480">Journal</a></span>
+            </li>
+            <li>
+              Gabriel Burdin, Simon D. Halliday, and Fabio Landini, "The hidden benefits of abstaining from control," <em>Journal of Economic Behavior & Organization</em>, 147, 1-12, 2018.
+              <span class="list-tools"><a href="../papers/publications/burdin-halliday-landini-2018-hidden-benefits-control.pdf">PDF</a> <a href="https://doi.org/10.1016/j.jebo.2017.12.018">Journal</a></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="list-group">
+          <h3>Applied and Development Economics</h3>
+          <ul class="publication-list">
+            <li>
+              Harriet Brookes-Gray, Vis Taraz, and Simon D. Halliday, "The impact of weather shocks on employment outcomes: evidence from South Africa," <em>Environment and Development Economics</em>, 28(3), 285-305, 2022.
+              <span class="list-tools"><a href="../papers/publications/brookes-gray-taraz-halliday-2023-weather-shocks.pdf">PDF</a> <a href="https://doi.org/10.1017/S1355770X22000237">Journal</a></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="list-group">
+          <h3>Economics Education</h3>
+          <ul class="publication-list">
+            <li>
+              Simon D. Halliday and S. M. Mamunuru, "Updating our approach to intermediate microeconomics," <em>The American Economist</em>, 70(2), 2025.
+              <span class="list-tools"><a href="../papers/publications/halliday-mamunuru-2025-intermediate-microeconomics.pdf">PDF</a> <a href="https://doi.org/10.1177/05694345251353131">Journal</a></span>
+            </li>
+            <li>
+              Simon D. Halliday, C. Makler, D. McKee, and A. Papadopoulou, "Improving student comprehension through interactive model visualization," <em>International Review of Economics Education</em>, 47, 100296, 2024.
+              <span class="list-tools"><a href="../papers/publications/halliday-makler-mckee-papadopoulou-2024-model-visualization.pdf">PDF</a> <a href="https://doi.org/10.1016/j.iree.2024.100296">Journal</a></span>
+            </li>
+            <li>
+              Simon D. Halliday, "Data literacy in economic development," <em>The Journal of Economic Education</em>, 50(3), 284-298, 2019.
+              <span class="list-tools"><a href="../papers/publications/halliday-2019-data-literacy-economic-development.pdf">PDF</a> <a href="https://doi.org/10.1080/00220485.2019.1618762">Journal</a></span>
+            </li>
+            <li>
+              Simon D. Halliday, "Promoting an ethical economics classroom through partnership," <em>International Journal for Students as Partners</em>, 3(1), 182-189, 2019.
+              <span class="list-tools"><a href="../papers/publications/halliday-2019-ethical-economics-classroom.pdf">PDF</a> <a href="https://doi.org/10.15173/ijsap.v3i1.3623">Journal</a></span>
+            </li>
+            <li>
+              Thomas Dvorak, Simon D. Halliday, Michael O'Hara, and Aaron Swoboda, "Efficient empiricism: Streamlining teaching, research, and learning in empirical courses," <em>The Journal of Economic Education</em>, 50(3), 242-257, 2019.
+              <span class="list-tools"><a href="../papers/publications/dvorak-halliday-ohara-swoboda-2019-efficient-empiricism.pdf">PDF</a> <a href="https://doi.org/10.1080/00220485.2019.1618765">Journal</a></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="list-group">
+          <h3>Chapters, Current Projects, and Commentary</h3>
+          <ul class="publication-list">
+            <li>
+              Simon D. Halliday, E. Bottorff, M. Lopez, A. Johnson, and A. Papadopoulou, "Taking an economic literacy approach in understanding our economy," in <em>Teaching Literacy-Targeted Principles of Economics</em>, forthcoming 2026.
+              <span class="list-tools"><a href="https://simondhalliday.com/uoe_economic_literacy/">Dashboard</a></span>
+            </li>
+            <li>
+              Simon D. Halliday, Emily Marshall, Glory Liu, Anthony Underwood, and Doug Norton, "PPE and Civic Thought Programs in American Higher Education."
+              <span class="list-tools"><a href="https://ppe-civicthought-requirements.simondhalliday.com/">Dashboard</a></span>
+            </li>
+            <li>
+              Gabriel Burdin, Simon Halliday, and Fabio Landini, "Why using technology to spy on home-working employees may be a bad idea," <em>LSE Business Review</em>, 2020.
+              <span class="list-tools"><a href="https://blogs.lse.ac.uk/businessreview/2020/06/17/why-using-technology-to-spy-on-home-working-employees-may-be-a-bad-idea/">Article</a></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const articles = [
+      {
+        tabLabel: "Behavioral",
+        category: "Behavioral and experimental economics",
+        title: "Does studying economics make you selfish?",
+        citation: 'D. Girardi, S. Mamunuru, Simon D. Halliday, and Samuel Bowles. <em>Southern Economic Journal</em>, 2023.',
+        summary1: "A study of whether economics education changes students' social preferences and political beliefs. The paper uses variation across intermediate microeconomics courses to examine whether exposure to economics makes students more self-interested.",
+        summary2: "In this design, the preview image gives visitors a sense of the article as a published object, while the summary explains why someone might want to read it.",
+        preview: "article-previews/selfish.jpg",
+        pdf: "../papers/publications/girardi-mamunuru-halliday-bowles-2023-selfish.pdf",
+        journal: "https://doi.org/10.1002/soej.12672"
+      },
+      {
+        tabLabel: "Education",
+        category: "Economics education",
+        title: "Improving student comprehension through interactive model visualization",
+        citation: 'Simon D. Halliday, C. Makler, D. McKee, and A. Papadopoulou. <em>International Review of Economics Education</em>, 2024.',
+        summary1: "A paper on how interactive visualizations can help students reason through economic models. The emphasis is on comprehension: whether students can connect model structure, movement, and interpretation.",
+        summary2: "This format could make especially good sense for selected education papers because the visitor can see the artifact, read a short explanation, and immediately open the published version.",
+        preview: "article-previews/model-visualization.jpg",
+        pdf: "../papers/publications/halliday-makler-mckee-papadopoulou-2024-model-visualization.pdf",
+        journal: "https://doi.org/10.1016/j.iree.2024.100296"
+      },
+      {
+        tabLabel: "Development",
+        category: "Applied and development economics",
+        title: "The impact of weather shocks on employment outcomes",
+        citation: 'Harriet Brookes-Gray, Vis Taraz, and Simon D. Halliday. <em>Environment and Development Economics</em>, 2023.',
+        summary1: "An applied paper on weather shocks and employment outcomes in South Africa. It connects climate variation to labor-market effects in a setting where adaptation and vulnerability matter.",
+        summary2: "The first-page preview works here because it signals that this is a published research article while the summary keeps the page readable for visitors who are not specialists.",
+        preview: "article-previews/weather-shocks.jpg",
+        pdf: "../papers/publications/brookes-gray-taraz-halliday-2023-weather-shocks.pdf",
+        journal: "https://doi.org/10.1017/S1355770X22000237"
+      }
+    ];
+
+    const tabs = Array.from(document.querySelectorAll(".article-tab"));
+    const articleFeature = document.querySelector(".article-feature");
+    const fields = {
+      previewLink: document.getElementById("preview-link"),
+      previewImage: document.getElementById("preview-image"),
+      category: document.getElementById("article-category"),
+      title: document.getElementById("article-title"),
+      citation: document.getElementById("article-citation"),
+      summary1: document.getElementById("article-summary-1"),
+      summary2: document.getElementById("article-summary-2"),
+      pdfLink: document.getElementById("pdf-link"),
+      journalLink: document.getElementById("journal-link"),
+      embedTitle: document.getElementById("embed-title"),
+      openPdfLink: document.getElementById("open-pdf-link"),
+      pdfFrame: document.getElementById("pdf-frame"),
+      status: document.getElementById("reader-status")
+    };
+
+    let currentArticle = 0;
+
+    function showArticle(index, shouldScroll = false) {
+      currentArticle = (index + articles.length) % articles.length;
+      const article = articles[currentArticle];
+
+      fields.previewLink.href = article.pdf;
+      fields.previewImage.src = article.preview;
+      fields.previewImage.alt = `First page preview of ${article.title}`;
+      fields.category.textContent = article.category;
+      fields.title.textContent = article.title;
+      fields.citation.innerHTML = article.citation;
+      fields.summary1.textContent = article.summary1;
+      fields.summary2.textContent = article.summary2;
+      fields.pdfLink.href = article.pdf;
+      fields.journalLink.href = article.journal;
+      fields.embedTitle.textContent = `Embedded PDF preview: ${article.title}`;
+      fields.openPdfLink.href = article.pdf;
+      fields.pdfFrame.src = article.pdf;
+      fields.pdfFrame.title = `Embedded PDF: ${article.title}`;
+      fields.status.textContent = `Article ${currentArticle + 1} of ${articles.length}: ${article.tabLabel}`;
+
+      tabs.forEach((tab, tabIndex) => {
+        tab.setAttribute("aria-selected", String(tabIndex === currentArticle));
+      });
+
+      if (shouldScroll) {
+        articleFeature.scrollIntoView({ block: "start", behavior: "smooth" });
+      }
+    }
+
+    tabs.forEach((tab) => {
+      tab.addEventListener("click", () => {
+        showArticle(Number(tab.dataset.article), true);
+      });
+    });
+
+    document.getElementById("prev-article").addEventListener("click", () => {
+      showArticle(currentArticle - 1, true);
+    });
+
+    document.getElementById("next-article").addEventListener("click", () => {
+      showArticle(currentArticle + 1, true);
+    });
+  </script>
+</body>
+</html>
