@@ -1396,3 +1396,531 @@ main.content:has(.research-page) {
     width: 100%;
   }
 }
+
+body:has(.modern-page) {
+  --modern-ink: #17212b;
+  --modern-muted: #5a6673;
+  --modern-paper: #fbfaf7;
+  --modern-surface: #f2f5f3;
+  --modern-line: #d9dedc;
+  --modern-blue: #174c63;
+  --modern-coral: #d85c43;
+  --modern-soft-blue: #e4eef2;
+  --modern-font: "Source Sans 3", Inter, system-ui, sans-serif;
+  background: var(--modern-paper);
+  color: var(--modern-ink);
+  font-family: var(--modern-font);
+}
+
+body:has(.modern-page) #quarto-content,
+body:has(.modern-page) .page-layout-full main.content {
+  background: var(--modern-paper);
+}
+
+body:has(.modern-page) .quarto-title-block {
+  display: none;
+}
+
+main.content:has(.modern-page) {
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  font-family: var(--modern-font);
+}
+
+.modern-page {
+  background: var(--modern-paper);
+  color: var(--modern-ink);
+  font-family: var(--modern-font);
+  overflow-x: hidden;
+}
+
+.modern-page * {
+  min-width: 0;
+}
+
+.modern-page a {
+  color: inherit;
+  text-decoration-color: rgba(23, 76, 99, 0.35);
+  text-underline-offset: 0.16em;
+}
+
+.modern-page a:hover,
+.modern-page a:focus {
+  color: var(--modern-coral);
+  text-decoration-color: currentColor;
+}
+
+.modern-page h1,
+.modern-page h2,
+.modern-page h3,
+.modern-page p {
+  margin-top: 0;
+  font-family: var(--modern-font);
+  overflow-wrap: break-word;
+}
+
+.modern-hero,
+.modern-section {
+  width: min(100%, 1380px);
+  margin-inline: auto;
+  padding: clamp(2.5rem, 5vw, 5rem) clamp(1.25rem, 5vw, 5rem);
+}
+
+.modern-hero {
+  display: flex !important;
+  gap: clamp(2rem, 5vw, 5rem);
+  align-items: flex-start;
+  border-bottom: 1px solid var(--modern-line);
+}
+
+.modern-hero > div:first-child {
+  flex: 1 1 720px;
+}
+
+.modern-hero > .modern-side-panel {
+  flex: 0 1 430px;
+}
+
+.modern-hero > *,
+.modern-section-head > *,
+.modern-split > *,
+.modern-card-grid > *,
+.modern-video-strip > *,
+.modern-post-row > * {
+  grid-column: auto !important;
+}
+
+.modern-label {
+  display: block;
+  color: var(--modern-coral);
+  font-family: var(--modern-font);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.modern-hero h1 {
+  max-width: 920px;
+  margin-bottom: 1.2rem;
+  color: var(--modern-ink);
+  font-size: clamp(3rem, 6vw, 5.7rem);
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+}
+
+.modern-hero h1 span {
+  color: var(--modern-coral);
+}
+
+.modern-lede {
+  max-width: 780px;
+  color: #3c4b55;
+  font-size: clamp(1.1rem, 1.55vw, 1.38rem);
+  line-height: 1.55;
+}
+
+.modern-side-panel {
+  align-self: start;
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  background: var(--modern-surface);
+  border: 1px solid var(--modern-line);
+  border-radius: 8px;
+  color: var(--modern-muted);
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.modern-side-panel strong {
+  color: var(--modern-blue);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+
+.modern-pill-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.modern-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0.35rem 0.7rem;
+  background: #fffdfa;
+  border: 1px solid var(--modern-line);
+  border-radius: 999px;
+  color: var(--modern-blue);
+  font-size: 0.83rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.modern-section {
+  border-bottom: 1px solid var(--modern-line);
+}
+
+.modern-section-head {
+  display: grid !important;
+  grid-template-columns: minmax(220px, 0.34fr) minmax(0, 1fr) !important;
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: baseline;
+  margin-bottom: 1.5rem;
+}
+
+.modern-section-head h2 {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--modern-ink);
+  font-size: clamp(2.05rem, 4vw, 3.75rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.98;
+}
+
+.modern-section-head p {
+  margin: 0;
+  color: var(--modern-muted);
+  font-size: clamp(1.02rem, 1.35vw, 1.18rem);
+  line-height: 1.5;
+}
+
+.modern-split {
+  display: grid !important;
+  grid-template-columns: minmax(0, 0.66fr) minmax(280px, 0.34fr) !important;
+  gap: clamp(2rem, 5vw, 4rem);
+}
+
+.modern-body-copy {
+  max-width: 820px;
+  color: #31404a;
+  font-size: clamp(1.05rem, 1.35vw, 1.22rem);
+  line-height: 1.65;
+}
+
+.modern-body-copy p {
+  margin-bottom: 1.1rem;
+}
+
+.modern-timeline {
+  display: grid;
+  border-top: 1px solid var(--modern-line);
+}
+
+.modern-timeline div {
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--modern-line);
+}
+
+.modern-timeline span:first-child {
+  color: var(--modern-coral);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.modern-timeline span:last-child {
+  color: var(--modern-ink);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.modern-card-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 1rem;
+}
+
+.modern-card,
+.modern-course-card,
+.modern-post-card {
+  display: grid;
+  align-content: start;
+  gap: 0.7rem;
+  min-height: 180px;
+  padding: 1.1rem;
+  background: #fffdfa;
+  border: 1px solid var(--modern-line);
+  border-radius: 8px;
+  color: var(--modern-ink);
+  text-decoration: none;
+}
+
+a.modern-card:hover,
+a.modern-course-card:hover,
+a.modern-post-card:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.modern-card strong,
+.modern-course-card strong,
+.modern-post-card strong {
+  color: var(--modern-blue);
+  font-size: clamp(1.3rem, 2.1vw, 1.95rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+}
+
+.modern-card p,
+.modern-course-card p,
+.modern-post-card p {
+  margin: 0;
+  color: var(--modern-muted);
+  line-height: 1.45;
+}
+
+.modern-course-card-feature {
+  grid-column: span 2;
+  min-height: 280px;
+  background: var(--modern-blue);
+  color: #fff;
+}
+
+.modern-course-card-feature .modern-label,
+.modern-course-card-feature strong,
+.modern-course-card-feature p {
+  color: #fff;
+}
+
+.modern-course-card-feature p {
+  opacity: 0.84;
+}
+
+.modern-feature-band {
+  background: var(--modern-blue);
+  color: #fff;
+}
+
+.modern-feature-band .modern-section-head h2,
+.modern-feature-band .modern-section-head p,
+.modern-feature-band .modern-label {
+  color: #fff;
+}
+
+.modern-feature-band .modern-section-head p {
+  opacity: 0.84;
+}
+
+.modern-feature-band .modern-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: #fff;
+}
+
+.modern-feature-band .modern-card strong,
+.modern-feature-band .modern-card p {
+  color: #fff;
+}
+
+.modern-archive-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--modern-line);
+  border-left: 1px solid var(--modern-line);
+}
+
+.modern-archive-grid a {
+  min-height: 116px;
+  padding: 1rem;
+  background: #fffdfa;
+  border-right: 1px solid var(--modern-line);
+  border-bottom: 1px solid var(--modern-line);
+  color: var(--modern-blue);
+  font-weight: 800;
+  line-height: 1.15;
+  text-decoration: none;
+}
+
+.modern-archive-grid a:hover,
+.modern-archive-grid a:focus {
+  background: var(--modern-soft-blue);
+  color: var(--modern-blue);
+}
+
+.modern-video-strip {
+  display: grid !important;
+  grid-template-columns: minmax(240px, 0.34fr) minmax(0, 0.66fr) !important;
+  gap: 1rem;
+  align-items: stretch;
+  overflow: hidden;
+  background: #13222d;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.modern-video-strip:hover,
+.modern-video-strip:focus {
+  color: #fff;
+  text-decoration: none;
+}
+
+.modern-video-mark {
+  display: grid;
+  place-items: center;
+  min-height: 220px;
+  background:
+    linear-gradient(135deg, rgba(216, 92, 67, 0.86), rgba(23, 126, 128, 0.72)),
+    url("../img/home-uoe-solar.jpg") center / cover;
+}
+
+.modern-play {
+  display: grid;
+  place-items: center;
+  width: 5rem;
+  height: 5rem;
+  background: rgba(255, 255, 255, 0.94);
+  border-radius: 999px;
+  color: var(--modern-coral);
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.modern-video-copy {
+  display: grid;
+  align-content: center;
+  gap: 0.75rem;
+  padding: clamp(1.2rem, 3vw, 2rem);
+}
+
+.modern-video-copy strong {
+  color: #fff;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 0.95;
+}
+
+.modern-video-copy p {
+  max-width: 42rem;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1.12rem;
+  line-height: 1.45;
+}
+
+.modern-post-list {
+  display: grid;
+  background: #fffdfa;
+  border: 1px solid var(--modern-line);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.modern-post-row {
+  display: grid !important;
+  grid-template-columns: minmax(120px, 0.2fr) minmax(0, 1fr) auto !important;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 1px solid var(--modern-line);
+  text-decoration: none;
+}
+
+.modern-post-row:last-child {
+  border-bottom: 0;
+}
+
+.modern-post-row strong {
+  color: var(--modern-ink);
+  font-size: 1.18rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.1;
+}
+
+.modern-post-row p {
+  margin: 0.25rem 0 0;
+  color: var(--modern-muted);
+  line-height: 1.35;
+}
+
+.modern-arrow {
+  display: grid;
+  place-items: center;
+  width: 2.1rem;
+  height: 2.1rem;
+  border: 1px solid var(--modern-line);
+  border-radius: 999px;
+  color: var(--modern-blue);
+  font-weight: 800;
+}
+
+@media (max-width: 920px) {
+  .modern-hero,
+  .modern-section-head,
+  .modern-split,
+  .modern-video-strip,
+  .modern-post-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  .modern-hero {
+    flex-direction: column;
+  }
+
+  .modern-hero > div:first-child,
+  .modern-hero > .modern-side-panel {
+    flex-basis: auto;
+    width: 100%;
+  }
+
+  .modern-card-grid,
+  .modern-archive-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .modern-course-card-feature {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .modern-hero,
+  .modern-section {
+    padding-inline: var(--sp-lg);
+  }
+
+  .modern-hero h1 {
+    font-size: clamp(2.35rem, 11vw, 3.25rem);
+    letter-spacing: -0.035em;
+  }
+
+  .modern-section-head h2,
+  .modern-video-copy strong {
+    font-size: clamp(1.85rem, 9.5vw, 2.75rem);
+    letter-spacing: -0.035em;
+  }
+
+  .modern-card-grid,
+  .modern-archive-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .modern-timeline div {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .modern-post-row {
+    align-items: start;
+  }
+
+  .modern-arrow {
+    display: none;
+  }
+}

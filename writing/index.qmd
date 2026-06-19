@@ -2,18 +2,84 @@
 title: "Writing"
 description: "Blog posts and occasional notes."
 toc: false
-listing:
-  contents:
-    - "../2022-11-22-advice_interviews/index.qmd"
-    - "../2020-03-10-online_teaching_covid19/index.qmd"
-    - "../2019-06-06-ctree_tier/index.qmd"
-    - "../2018-12-31-books_in_2018/index.qmd"
-    - "../2017-07-08-employment-report/index.qmd"
-    - "../2017-07-06-race-wealth/index.qmd"
-    - "../2017-07-05-site-how-to/index.qmd"
-    - "../2017-07-04-sairr-check/index.qmd"
-  sort: "date desc"
-  type: default
 ---
 
-Posts from the older site, migrated into the Quarto rebuild.
+```{=html}
+<div class="modern-page">
+  <section class="modern-hero">
+    <div>
+      <span class="modern-label">Writing</span>
+      <h1>Occasional notes, migrated posts, and <span>public-facing essays.</span></h1>
+      <p class="modern-lede">
+        This page keeps the old blog archive while giving the writing section a clearer editorial frame and more modern visual rhythm.
+      </p>
+    </div>
+    <aside class="modern-side-panel">
+      <span class="modern-label">Direction</span>
+      <strong>Lightweight archive, stronger entry points</strong>
+      <p>Feature a small number of useful posts, then keep the full migrated list below.</p>
+    </aside>
+  </section>
+
+  <section class="modern-section">
+    <div class="modern-section-head">
+      <h2>Featured notes</h2>
+      <p>Selected posts that are most useful to visitors, without making the whole blog feel overdesigned.</p>
+    </div>
+    <div class="modern-card-grid">
+      <a class="modern-post-card" href="../2022-11-22-advice_interviews/"><span class="modern-label">Careers</span><strong>Some thoughts on interviewing</strong><p>Advice for teaching-focused or liberal arts college positions.</p></a>
+      <a class="modern-post-card" href="../2020-03-10-online_teaching_covid19/"><span class="modern-label">Teaching online</span><strong>Online teaching in COVID19</strong><p>Reflections on course design under disruption.</p></a>
+      <a class="modern-post-card" href="../2019-06-06-ctree_tier/"><span class="modern-label">Teaching research</span><strong>CTREE and TIER meetings</strong><p>Notes on transparency, teaching, and empirical economics.</p></a>
+    </div>
+  </section>
+
+  <section class="modern-section">
+    <div class="modern-section-head">
+      <h2>Archive</h2>
+      <p>A traditional list remains the easiest path for people who want the old posts.</p>
+    </div>
+    <div class="modern-post-list">
+      <a class="modern-post-row" href="../2022-11-22-advice_interviews/">
+        <span class="modern-label">Nov 2022</span>
+        <span><strong>Some thoughts on interviewing for a teaching-focused or LAC position</strong><p>Advice and reflections from the older site.</p></span>
+        <span class="modern-arrow">→</span>
+      </a>
+      <a class="modern-post-row" href="../2020-03-10-online_teaching_covid19/">
+        <span class="modern-label">Mar 2020</span>
+        <span><strong>Online Teaching - In the context of COVID19</strong><p>Course design and online teaching notes.</p></span>
+        <span class="modern-arrow">→</span>
+      </a>
+      <a class="modern-post-row" href="../2019-06-06-ctree_tier/">
+        <span class="modern-label">Jun 2019</span>
+        <span><strong>CTREE and TIER Meetings</strong><p>Notes on transparency, teaching, and empirical economics.</p></span>
+        <span class="modern-arrow">→</span>
+      </a>
+      <a class="modern-post-row" href="../2018-12-31-books_in_2018/">
+        <span class="modern-label">Dec 2018</span>
+        <span><strong>Books in 2018</strong><p>Reading notes from the older blog.</p></span>
+        <span class="modern-arrow">→</span>
+      </a>
+      <a class="modern-post-row" href="../2017-07-08-employment-report/">
+        <span class="modern-label">Jul 2017</span>
+        <span><strong>The July 2017 Jobs Report and Race</strong><p>Scraping the BLS site to plot unemployment.</p></span>
+        <span class="modern-arrow">→</span>
+      </a>
+      <a class="modern-post-row" href="../2017-07-06-race-wealth/">
+        <span class="modern-label">Jul 2017</span>
+        <span><strong>Race and Wealth Inequality in the USA</strong><p>Plotting data from the Survey of Income and Program Participation.</p></span>
+        <span class="modern-arrow">→</span>
+      </a>
+      <a class="modern-post-row" href="../2017-07-05-site-how-to/">
+        <span class="modern-label">Jul 2017</span>
+        <span><strong>How to set up a site like mine</strong><p>Even when you are a dilettante.</p></span>
+        <span class="modern-arrow">→</span>
+      </a>
+      <a class="modern-post-row" href="../2017-07-04-sairr-check/">
+        <span class="modern-label">Jul 2017</span>
+        <span><strong>SAIRR Check</strong><p>Some basic fact-checking.</p></span>
+        <span class="modern-arrow">→</span>
+      </a>
+    </div>
+  </section>
+</div>
+```

@@ -34,8 +34,6 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
 <link href="../img/avatar-icon.png" rel="icon" type="image/png">
-<script src="../site_libs/quarto-listing/list.min.js"></script>
-<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
@@ -73,69 +71,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <style>html{ scroll-behavior: smooth; }</style>
 <meta property="og:site_name" content="Simon D. Halliday">
 <meta property="og:url" content="https://simondhalliday.com">
 <meta name="twitter:card" content="summary">
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../progress.css">
 <link rel="stylesheet" href="../styles/site.css">
@@ -203,7 +143,7 @@ window.Quarto = {
 <!-- margin-sidebar -->
     
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -229,216 +169,87 @@ window.Quarto = {
 </header>
 
 
-<p>Posts from the older site, migrated into the Quarto rebuild.</p>
+<div class="modern-page page-columns page-full">
+  <section class="modern-hero page-columns page-full">
+    <div>
+      <span class="modern-label">Writing</span>
+      <h1>Occasional notes, migrated posts, and <span>public-facing essays.</span></h1>
+      <p class="modern-lede">
+        This page keeps the old blog archive while giving the writing section a clearer editorial frame and more modern visual rhythm.
+      </p>
+    </div>
+    <aside class="modern-side-panel">
+      <span class="modern-label">Direction</span>
+      <strong>Lightweight archive, stronger entry points</strong>
+      <p>Feature a small number of useful posts, then keep the full migrated list below.</p>
+    </aside>
+  </section>
+
+  <section class="modern-section">
+    <div class="modern-section-head">
+      <h2 class="anchored">Featured notes</h2>
+      <p>Selected posts that are most useful to visitors, without making the whole blog feel overdesigned.</p>
+    </div>
+    <div class="modern-card-grid">
+      <a class="modern-post-card" href="../2022-11-22-advice_interviews/"><span class="modern-label">Careers</span><strong>Some thoughts on interviewing</strong><p>Advice for teaching-focused or liberal arts college positions.</p></a>
+      <a class="modern-post-card" href="../2020-03-10-online_teaching_covid19/"><span class="modern-label">Teaching online</span><strong>Online teaching in COVID19</strong><p>Reflections on course design under disruption.</p></a>
+      <a class="modern-post-card" href="../2019-06-06-ctree_tier/"><span class="modern-label">Teaching research</span><strong>CTREE and TIER meetings</strong><p>Notes on transparency, teaching, and empirical economics.</p></a>
+    </div>
+  </section>
+
+  <section class="modern-section">
+    <div class="modern-section-head">
+      <h2 class="anchored">Archive</h2>
+      <p>A traditional list remains the easiest path for people who want the old posts.</p>
+    </div>
+    <div class="modern-post-list">
+      <a class="modern-post-row" href="../2022-11-22-advice_interviews/">
+        <span class="modern-label">Nov 2022</span>
+        <span><strong>Some thoughts on interviewing for a teaching-focused or LAC position</strong><p>Advice and reflections from the older site.</p></span>
+        <span class="modern-arrow">→</span>
+      </a>
+      <a class="modern-post-row" href="../2020-03-10-online_teaching_covid19/">
+        <span class="modern-label">Mar 2020</span>
+        <span><strong>Online Teaching - In the context of COVID19</strong><p>Course design and online teaching notes.</p></span>
+        <span class="modern-arrow">→</span>
+      </a>
+      <a class="modern-post-row" href="../2019-06-06-ctree_tier/">
+        <span class="modern-label">Jun 2019</span>
+        <span><strong>CTREE and TIER Meetings</strong><p>Notes on transparency, teaching, and empirical economics.</p></span>
+        <span class="modern-arrow">→</span>
+      </a>
+      <a class="modern-post-row" href="../2018-12-31-books_in_2018/">
+        <span class="modern-label">Dec 2018</span>
+        <span><strong>Books in 2018</strong><p>Reading notes from the older blog.</p></span>
+        <span class="modern-arrow">→</span>
+      </a>
+      <a class="modern-post-row" href="../2017-07-08-employment-report/">
+        <span class="modern-label">Jul 2017</span>
+        <span><strong>The July 2017 Jobs Report and Race</strong><p>Scraping the BLS site to plot unemployment.</p></span>
+        <span class="modern-arrow">→</span>
+      </a>
+      <a class="modern-post-row" href="../2017-07-06-race-wealth/">
+        <span class="modern-label">Jul 2017</span>
+        <span><strong>Race and Wealth Inequality in the USA</strong><p>Plotting data from the Survey of Income and Program Participation.</p></span>
+        <span class="modern-arrow">→</span>
+      </a>
+      <a class="modern-post-row" href="../2017-07-05-site-how-to/">
+        <span class="modern-label">Jul 2017</span>
+        <span><strong>How to set up a site like mine</strong><p>Even when you are a dilettante.</p></span>
+        <span class="modern-arrow">→</span>
+      </a>
+      <a class="modern-post-row" href="../2017-07-04-sairr-check/">
+        <span class="modern-label">Jul 2017</span>
+        <span><strong>SAIRR Check</strong><p>Some basic fact-checking.</p></span>
+        <span class="modern-arrow">→</span>
+      </a>
+    </div>
+  </section>
+</div>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="RWNvbm9taWNzJTJDRWNvbm9taWNzJTIwRWR1Y2F0aW9uJTJDT25saW5lJTIwVGVhY2hpbmclMkNQb2xsaW5nJTIwU29mdHdhcmU=" data-listing-date-sort="1669068000000" data-listing-file-modified-sort="1781710610528" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="17" data-listing-word-count-sort="3220">
-<div class="thumbnail"><a href="../2022-11-22-advice_interviews/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../2022-11-22-advice_interviews/index.html" class="no-external">Some thoughts on interviewing for a teaching-focused or LAC position</a>
-</h3>
-<div class="delink listing-description"><a href="../2022-11-22-advice_interviews/index.html" class="no-external">
-With the economics job market applications drawing to a close and interviews drawing nearer, I want to highlight some aspects of interviews that it appears to me may <em>not</em> be…
-</a></div>
-</div>
-<div class="metadata">
-<a href="../2022-11-22-advice_interviews/index.html" class="no-external">
-<div class="listing-date">
-Nov 22, 2022
-</div>
-<div class="listing-author">
-Simon D. Halliday
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="RWNvbm9taWNzJTJDRWNvbm9taWNzJTIwRWR1Y2F0aW9uJTJDT25saW5lJTIwVGVhY2hpbmclMkNQb2xsaW5nJTIwU29mdHdhcmU=" data-listing-date-sort="1583791200000" data-listing-file-modified-sort="1781710610527" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2344">
-<div class="thumbnail"><a href="../2020-03-10-online_teaching_covid19/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../2020-03-10-online_teaching_covid19/index.html" class="no-external">Online Teaching - In the context of COVID19</a>
-</h3>
-<div class="delink listing-description"><a href="../2020-03-10-online_teaching_covid19/index.html" class="no-external">
-In the context of my college’s closure for in-person classes, I’m working on adapting my teaching to an online structure. A variety of people have already linked to some…
-</a></div>
-</div>
-<div class="metadata">
-<a href="../2020-03-10-online_teaching_covid19/index.html" class="no-external">
-<div class="listing-date">
-Mar 10, 2020
-</div>
-<div class="listing-author">
-Simon Halliday
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="RWNvbm9taWNzJTJDQmVoYXZpb3JhbCUyMEVjb25vbWljcyUyQ1NvY2lhbCUyMFByZWZlcmVuY2VzJTJDU2VsZi1pbnRlcmVzdCUyQ1JlcHJvZHVjaWJpbGl0eSUyQ1RJRVIlMkNDVFJFRQ==" data-listing-date-sort="1559772000000" data-listing-file-modified-sort="1781710610527" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="12" data-listing-word-count-sort="2330">
-<div class="thumbnail"><a href="../2019-06-06-ctree_tier/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../2019-06-06-ctree_tier/index.html" class="no-external">CTREE and TIER Meetings</a>
-</h3>
-<div class="delink listing-description"><a href="../2019-06-06-ctree_tier/index.html" class="no-external">
-I have been fortunate to attend a couple of conferences and meetings recently and to present work in progress as well as to meet with people in diverse fields – outside of…
-</a></div>
-</div>
-<div class="metadata">
-<a href="../2019-06-06-ctree_tier/index.html" class="no-external">
-<div class="listing-date">
-Jun 6, 2019
-</div>
-<div class="listing-author">
-Simon Halliday
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="RWNvbm9taWNzJTJDYm9va3MlMkNncmFwaGljJTIwbm92ZWxzJTJDMjAxOA==" data-listing-date-sort="1546207200000" data-listing-file-modified-sort="1781710610527" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-word-count-sort="2552">
-<div class="thumbnail"><a href="../2018-12-31-books_in_2018/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../2018-12-31-books_in_2018/index.html" class="no-external">Books in 2018</a>
-</h3>
-<div class="delink listing-description"><a href="../2018-12-31-books_in_2018/index.html" class="no-external">
-A brief comment to myself about the books I’ve read in 2018. My top three books were:
-</a></div>
-</div>
-<div class="metadata">
-<a href="../2018-12-31-books_in_2018/index.html" class="no-external">
-<div class="listing-date">
-Dec 31, 2018
-</div>
-<div class="listing-author">
-Simon Halliday
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="dW5lbXBsb3ltZW50JTJDcmFjZSUyQ0NQUyUyQ0JMUyUyQ2luZXF1YWxpdHklMkNVU0E=" data-listing-date-sort="1499464800000" data-listing-file-modified-sort="1781710610527" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="10" data-listing-word-count-sort="1866">
-<div class="thumbnail"><a href="../2017-07-08-employment-report/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="../img/blog_images/employment-report_files/figure-markdown_github-ascii_identifiers/hook-figure-1.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../2017-07-08-employment-report/index.html" class="no-external">The July 2017 Jobs Report and Race</a>
-</h3>
-<div class="delink listing-description"><a href="../2017-07-08-employment-report/index.html" class="no-external">
-<p>Scraping the BLS site to plot unemployment</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../2017-07-08-employment-report/index.html" class="no-external">
-<div class="listing-date">
-Jul 8, 2017
-</div>
-<div class="listing-author">
-Simon D. Halliday
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="aW5lcXVhbGl0eSUyQ3JhY2UlMkNVU0ElMkN3ZWFsdGglMkNzdXJ2ZXklMjBkYXRhJTJDdGlkeXZlcnNlJTJDcmVhZHhsJTJDZm9yY2F0cyUyQ2dncGxvdDI=" data-listing-date-sort="1499292000000" data-listing-file-modified-sort="1781710610527" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2803">
-<div class="thumbnail"><a href="../2017-07-06-race-wealth/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="../img/blog_images/race-wealth_files/figure-markdown_github-ascii_identifiers/netwealth-plot-1.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../2017-07-06-race-wealth/index.html" class="no-external">Race and Wealth Inequality in the USA</a>
-</h3>
-<div class="delink listing-description"><a href="../2017-07-06-race-wealth/index.html" class="no-external">
-<p>Plotting data from the Survey of Income and Program Participation (2013)</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../2017-07-06-race-wealth/index.html" class="no-external">
-<div class="listing-date">
-Jul 6, 2017
-</div>
-<div class="listing-author">
-Simon D. Halliday
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="UiUyQ1JTdHVkaW8lMkNnaXRodWIlMkNSTWFya2Rvd24lMkNqZWt5bGw=" data-listing-date-sort="1499205600000" data-listing-file-modified-sort="1781710610527" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="3" data-listing-word-count-sort="469">
-<div class="thumbnail"><a href="../2017-07-05-site-how-to/index.html" class="no-external">
-
-<div class="listing-item-img-placeholder card-img-top" >&nbsp;</div>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../2017-07-05-site-how-to/index.html" class="no-external">How to set up a site like mine</a>
-</h3>
-<div class="delink listing-description"><a href="../2017-07-05-site-how-to/index.html" class="no-external">
-<p>Even when you’re a dilettante</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../2017-07-05-site-how-to/index.html" class="no-external">
-<div class="listing-date">
-Jul 5, 2017
-</div>
-<div class="listing-author">
-Simon D. Halliday
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="UiUyQ1NvdXRoJTIwQWZyaWNhJTJDaW5lcXVhbGl0eSUyQ3JhY2U=" data-listing-date-sort="1499119200000" data-listing-file-modified-sort="1781710610526" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="15" data-listing-word-count-sort="2955">
-<div class="thumbnail"><a href="../2017-07-04-sairr-check/index.html" class="no-external">
-
-<p class="card-img-top"><img loading='lazy' src="../img/blog_images/sairr-check_files/figure-markdown_github-ascii_identifiers/hhvalplot-1.png"  class="thumbnail-image card-img"/></p>
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="../2017-07-04-sairr-check/index.html" class="no-external">SAIRR Check</a>
-</h3>
-<div class="delink listing-description"><a href="../2017-07-04-sairr-check/index.html" class="no-external">
-<p>Some basic fact-checking</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="../2017-07-04-sairr-check/index.html" class="no-external">
-<div class="listing-date">
-Jul 4, 2017
-</div>
-<div class="listing-author">
-Simon D. Halliday
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">No matching items</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
