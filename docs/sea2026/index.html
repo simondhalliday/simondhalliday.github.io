@@ -99,6 +99,12 @@ hr.gold { border:0; border-top:1px solid var(--gold); width:110px; margin:28px 0
 .demo-caption a { padding:11px 17px; background:var(--green); border-radius:5px; color:white; font-size:17px; white-space:nowrap; }
 button:focus-visible,a:focus-visible { outline:3px solid var(--gold); outline-offset:3px; }
 @media print { .site-stage iframe,.site-bar button { display:none!important; } .site-stage img { display:block!important; } .site-preview { box-shadow:none; } }
+.reveal .slides section.closing-slide { padding:54px 65px 40px; }
+.reveal .slides section.closing-slide::before { margin-bottom:22px; }
+.closing-slide .guide-link { font-size:27px; line-height:1.45; margin:0 0 26px; padding-bottom:22px; border-bottom:1px solid #d9dcd4; }
+.resource-links { display:grid; grid-template-columns:1fr 1fr; gap:18px 35px; }
+.resource-links p { font-size:23px; line-height:1.5; margin:0; }
+.resource-links a { font-size:21px; }
 </style>
 </head>
 <body>
@@ -223,7 +229,7 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--gold); outline-of
     <li>Never invent a fact, citation, quotation, data value, or permission</li>
     <li>Reused CORE/UOE passages carry a visible provenance ID until editors decide</li>
     <li>Ordinary builds use pinned data; no live API calls</li>
-    <li>Instructor solutions never reach the public repo</li>
+    <li>Keep private records and instructor solutions out of public outputs</li>
   </ul>
   <div class="box box-gold">
     AGENTS.md and CLAUDE.md carry the rules between sessions.
@@ -261,24 +267,27 @@ button:focus-visible,a:focus-visible { outline:3px solid var(--gold); outline-of
 
 
 <section>
-  <h2>Three lessons</h2>
-  <div class="ta-row"><div class="ta-num">1</div><p><strong>Spend tokens on planning.</strong> Use the strongest model your token budget allows; implement bounded tasks with cheaper models and revise the plan.</p></div>
-  <div class="ta-row"><div class="ta-num">2</div><p><strong>Expand the question, audit the data.</strong> Build evidence you did not have, then check coverage, extraction, and what the labels mean.</p></div>
-  <div class="ta-row"><div class="ta-num">3</div><p><strong>Maintain the method in files and authority with people.</strong> Save plans and checks; humans (i.e., you and me) approve coding choices, interpretation, and publication.</p></div>
-
+  <h2>Three lessons from experience</h2>
+  <div class="ta-row"><div class="ta-num">1</div><p><strong>Find the method through trial and error.</strong> Try a small task, inspect what failed, and revise the instructions before scaling up.</p></div>
+  <div class="ta-row"><div class="ta-num">2</div><p><strong>Budget for the whole project.</strong> Hitting spend limits taught me to economize on tokens and leave room for checking and revision.</p></div>
+  <div class="ta-row"><div class="ta-num">3</div><p><strong>Keep learning as the models change.</strong> Revisit how you plan, delegate, and check the work; yesterday’s workaround may no longer help.</p></div>
 
 </section>
 
 
-<section class="center-slide">
+<section class="center-slide closing-slide">
   <h1 style="font-size:1.6em;">Thank you</h1>
-  <hr class="gold">
-  <div class="links">
-    <p><strong>UOE:</strong> <a href="https://books.core-econ.org/understanding-our-economy/" target="_blank" rel="noopener">books.core-econ.org/understanding-our-economy</a></p>
-    <p><strong>UOE Macro (work in progress):</strong> <a href="https://uoe-macro.simondhalliday.com/" target="_blank" rel="noopener">uoe-macro.simondhalliday.com</a></p>
-    <p><strong>Skills:</strong> <a href="https://github.com/simondhalliday/uoe-skills" target="_blank" rel="noopener">github.com/simondhalliday/uoe-skills</a></p>
-  </div>
-  <p class="meta" style="margin-top:18px;">Simon D. Halliday · <a href="mailto:simon.halliday@jhu.edu">simon.halliday@jhu.edu</a></p>
+  <p class="guide-link"><strong>Slides, guide, and project links</strong><br><a href="https://simondhalliday.com/sea2026/guide/" target="_blank" rel="noopener">simondhalliday.com/sea2026/guide/</a></p>
+  <div class="resource-links">
+<p><strong>UOE</strong><br><a href="https://books.core-econ.org/understanding-our-economy/" target="_blank" rel="noopener">Understanding Our Economy</a></p>
+<p><strong>UOE Macro</strong><br><a href="https://uoe-macro.simondhalliday.com/" target="_blank" rel="noopener">Working textbook drafts</a></p>
+<p><strong>Skills</strong><br><a href="https://github.com/simondhalliday/uoe-skills" target="_blank" rel="noopener">Shared UOE skills</a></p>
+<p><strong>Progress</strong><br><a href="https://progress.simondhalliday.com/" target="_blank" rel="noopener">progress.simondhalliday.com</a></p>
+<p><strong>People, Power, and Pay</strong><br><a href="https://peoplepowerpay.simondhalliday.com/" target="_blank" rel="noopener">peoplepowerpay.simondhalliday.com</a></p>
+<p><strong>PPE &amp; Civic Thought</strong><br><a href="https://ppe-civicthought-requirements.simondhalliday.com/" target="_blank" rel="noopener">Program requirements explorer</a></p>
+</div>
+  <p class="meta" style="margin-top:22px;">Simon D. Halliday · <a href="mailto:simon.halliday@jhu.edu">simon.halliday@jhu.edu</a></p>
+
 </section>
 
 </div>
