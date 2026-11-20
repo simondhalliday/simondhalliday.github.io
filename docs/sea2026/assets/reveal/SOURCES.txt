@@ -1,0 +1,6 @@
+Existing reveal.js 4.6.0 runtime, vendored November 19, 2026.
+Source: https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.0/
+Files: reveal.min.css, reveal.min.js, plugin/notes/notes.min.js, theme/white.min.css.
+White theme: unused Source Sans Pro font-face declarations removed; the deck uses system fonts.
+Project: https://github.com/hakimel/reveal.js (MIT license).
+No new runtime library was introduced.

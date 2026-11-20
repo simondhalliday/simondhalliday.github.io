@@ -53,6 +53,7 @@ project:
     - "microeconomics/*.png"
     - "ctree17/**"
     - "sea2018/**"
+    - "sea2026/**"
     - "data_literacy_for_development/**"
     - "data_literacy_in_economic_development/**"
     - "efficient_empiricism/**"

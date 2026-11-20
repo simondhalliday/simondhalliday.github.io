@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--
+  Labor Market Matching — UOE Ch. 10 (rebuilt Nov 2026 for SEA)
+  NO API KEY IS STORED IN THIS FILE. Questions are answered by, in order:
+    1. Built-in pattern matching (works offline, no AI).
+    2. Claude via the claude.ai artifact "sample" capability, when this page runs as a published artifact
+       (uses the viewer's Claude plan; no key, no API credits).
+    3. The Anthropic API, ONLY if a key has been pasted in via the 🔑 button. The key is kept in this
+       browser's localStorage, never in the file. Use a fresh key with a low spend limit.
+-->
+<title>Labor Market Matching — UOE Ch. 10</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal:#167772; --teal-mid:#5CA09C; --teal-pale:#E8F4F3; --teal-light:#B9D6D5;
+  --red:#E40132; --blue:#3B54A4; --gray:#666; --text:#1A1A1A;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{
+  font-family:'Lexend',sans-serif;
+  background:#fff;
+  width:762px;height:426px;
+  overflow:hidden;
+  display:flex;flex-direction:column;
+}
+
+/* ── Scenario bar ── */
+#scenario-bar{
+  height:46px;flex-shrink:0;
+  background:var(--teal-pale);
+  border-bottom:2px solid var(--teal-light);
+  display:flex;align-items:center;
+  padding:0 14px;gap:10px;
+}
+#scenario-icon{font-size:17px;line-height:1;flex-shrink:0;}
+#scenario-text{
+  font-size:13.5px;font-weight:500;color:var(--teal);
+  transition:opacity 0.3s;flex:1;
+}
+#pause-btn, #key-btn{
+  flex-shrink:0;
+  background:var(--teal);color:#fff;
+  border:none;border-radius:6px;
+  font-family:'Lexend',sans-serif;font-size:12px;font-weight:500;
+  padding:5px 12px;cursor:pointer;
+  transition:background 0.15s;
+}
+#pause-btn:hover{background:#0f5450;}
+#key-btn{background:transparent;color:var(--teal-mid);padding:5px 6px;font-size:13px;}
+#key-btn:hover{color:var(--teal);}
+#key-btn.on{color:var(--teal);}
+#key-btn[hidden]{display:none;}
+
+/* ── Diagram ── */
+#diagram{
+  flex:1;position:relative;width:762px;
+  overflow:hidden;
+}
+
+/* ── Flow boxes ──
+   Box N: left=68  width=195 x:[68,263]  centre:165
+   Box V: left=288 width=145 x:[288,433] centre:360
+   Box U: left=458 width=195 x:[458,653] centre:555
+*/
+.flow-box{
+  position:absolute;border-radius:9px;
+  display:flex;flex-direction:column;align-items:center;
+  padding-top:9px;
+}
+.box-title{
+  font-size:11.5px;font-weight:600;text-align:center;line-height:1.4;
+  pointer-events:none;
+}
+#box-n{left:68px;top:45px;width:195px;height:175px;background:#EBF0FA;border:2px solid var(--blue);}
+#box-n .box-title{color:var(--blue);}
+#box-v{left:288px;top:45px;width:145px;height:175px;background:#fff;border:2px solid var(--teal);}
+#box-v .box-title{color:var(--teal);}
+#box-u{left:458px;top:45px;width:195px;height:175px;background:#f8f8f8;border:2px solid var(--gray);}
+#box-u .box-title{color:var(--gray);}
+
+/* ── Counters ── */
+.counter{
+  position:absolute;top:5px;right:7px;
+  font-size:11px;font-weight:700;
+  padding:1px 6px;border-radius:4px;
+  background:rgba(255,255,255,0.85);
+  transition:background 0.35s,color 0.35s;
+}
+#cnt-n{color:var(--blue);}
+#cnt-v{color:var(--teal);}
+#cnt-u{color:var(--gray);}
+.counter.flash{background:#FFD700;color:#1A1A1A;}
+
+/* ── Tokens ── */
+.token{
+  position:absolute;
+  width:30px;height:30px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  transition:left 0.75s ease-in-out,top 0.75s ease-in-out,opacity 0.55s ease-in-out;
+  z-index:20;
+  box-shadow:0 1px 5px rgba(0,0,0,0.18);
+  pointer-events:none;
+}
+.token::after{content:'';display:block;width:12px;height:12px;border-radius:50%;background:rgba(255,255,255,0.35);}
+.token-emp{background:var(--blue);}
+.token-unemp{background:var(--gray);}
+.token-vac{background:#fff;border:2.5px solid var(--teal);}
+.token-vac::after{background:rgba(22,119,114,0.12);}
+.token-highlight{box-shadow:0 0 0 4px rgba(255,215,0,0.7),0 1px 5px rgba(0,0,0,0.2);}
+
+/* ── Bottom bar: input row + response row ── */
+#input-bar{
+  height:84px;flex-shrink:0;
+  border-top:1px solid var(--teal-light);
+  display:flex;flex-direction:column;
+  background:#fafafa;
+}
+#input-row{
+  height:40px;flex-shrink:0;
+  display:flex;align-items:center;
+  padding:0 12px;gap:8px;
+  border-bottom:1px solid #eee;
+}
+#input-label{
+  font-size:11px;font-weight:500;color:var(--teal);
+  white-space:nowrap;flex-shrink:0;
+}
+#student-q{
+  flex:1;height:28px;
+  font-family:'Lexend',sans-serif;font-size:12px;
+  border:1.5px solid var(--teal-light);border-radius:6px;
+  padding:0 10px;outline:none;
+  background:#fff;color:var(--text);
+}
+#student-q:focus{border-color:var(--teal);}
+#student-q::placeholder{color:#bbb;}
+#ask-btn{
+  flex-shrink:0;
+  background:var(--teal);color:#fff;
+  border:none;border-radius:6px;
+  font-family:'Lexend',sans-serif;font-size:12px;font-weight:500;
+  padding:4px 14px;cursor:pointer;
+  transition:background 0.15s;
+  white-space:nowrap;
+}
+#ask-btn:hover:not(:disabled){background:#0f5450;}
+#ask-btn:disabled{background:var(--teal-mid);cursor:default;}
+#response-bar{
+  flex:1;
+  padding:5px 14px;
+  display:flex;flex-direction:column;justify-content:center;
+  gap:2px;
+  background:var(--teal-pale);
+  overflow:hidden;
+}
+#response-q-echo{
+  font-size:10px;color:var(--gray);font-style:italic;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+  opacity:0;transition:opacity 0.3s;
+}
+#response-bar.visible #response-q-echo{opacity:1;}
+#response-text-main{
+  font-size:12px;font-weight:300;color:var(--gray);
+  line-height:1.4;font-style:italic;
+}
+#response-bar.visible #response-text-main{
+  font-size:12.5px;font-weight:500;color:var(--teal);
+  font-style:normal;line-height:1.4;
+}
+</style>
+</head>
+<body>
+
+<div id="scenario-bar">
+  <span id="scenario-icon">⏳</span>
+  <span id="scenario-text">Labor market flows — workers, vacancies, and job matches</span>
+  <button id="key-btn" title="Connect Claude with an API key (stored only in this browser)" aria-label="Connect Claude">🔑</button>
+  <button id="pause-btn">⏸ Pause</button>
+</div>
+
+<div id="diagram">
+
+  <svg style="position:absolute;top:0;left:0;width:762px;height:296px;pointer-events:none"
+       viewBox="0 0 762 296" aria-hidden="true">
+    <defs>
+      <marker id="aT" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#167772"/></marker>
+      <marker id="aR" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#E40132"/></marker>
+      <marker id="aG" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto"><polygon points="0 0,7 2.5,0 5" fill="#666"/></marker>
+    </defs>
+
+    <!-- Recruitment arc: U-top → N-top -->
+    <path d="M 530 45 Q 360 4 168 45" fill="none" stroke="#167772" stroke-width="1.8" marker-end="url(#aT)"/>
+    <text x="360" y="17" text-anchor="middle" font-size="12" fill="#167772" font-family="Lexend,sans-serif" font-weight="500">Recruitment</text>
+
+    <!-- Quits/layoffs arc: N-bottom → U-bottom -->
+    <path d="M 168 220 Q 360 256 530 220" fill="none" stroke="#E40132" stroke-width="1.8" marker-end="url(#aR)"/>
+    <text x="360" y="263" text-anchor="middle" font-size="12" fill="#E40132" font-family="Lexend,sans-serif" font-weight="500">Quits and layoffs</text>
+
+    <!-- Workers leave -->
+    <path d="M 68 162 L 30 162" fill="none" stroke="#666" stroke-width="1.5" marker-end="url(#aG)"/>
+    <text x="46" y="184" text-anchor="middle" font-size="10" fill="#666" font-family="Lexend,sans-serif">Workers</text>
+    <text x="46" y="196" text-anchor="middle" font-size="10" fill="#666" font-family="Lexend,sans-serif">leave</text>
+
+    <!-- Jobs destroyed -->
+    <path d="M 308 222 L 274 275" fill="none" stroke="#E40132" stroke-width="1.5" marker-end="url(#aR)"/>
+    <text x="256" y="288" text-anchor="middle" font-size="10" fill="#E40132" font-family="Lexend,sans-serif">Jobs destroyed</text>
+
+    <!-- New jobs -->
+    <path d="M 446 275 L 426 222" fill="none" stroke="#167772" stroke-width="1.5" marker-end="url(#aT)"/>
+    <text x="462" y="288" text-anchor="middle" font-size="10" fill="#167772" font-family="Lexend,sans-serif">New jobs</text>
+
+    <!-- New workers -->
+    <path d="M 757 157 L 656 157" fill="none" stroke="#167772" stroke-width="1.5" marker-end="url(#aT)"/>
+    <text x="710" y="193" text-anchor="middle" font-size="10" fill="#167772" font-family="Lexend,sans-serif">New</text>
+    <text x="710" y="206" text-anchor="middle" font-size="10" fill="#167772" font-family="Lexend,sans-serif">workers</text>
+  </svg>
+
+  <div class="flow-box" id="box-n">
+    <div class="box-title">N &nbsp; Employed workers<br>N Filled jobs</div>
+    <span class="counter" id="cnt-n">N = 5</span>
+  </div>
+  <div class="flow-box" id="box-v">
+    <div class="box-title">V<br>Vacant jobs</div>
+    <span class="counter" id="cnt-v">V = 2</span>
+  </div>
+  <div class="flow-box" id="box-u">
+    <div class="box-title">U<br>Unemployed workers</div>
+    <span class="counter" id="cnt-u">U = 3</span>
+  </div>
+
+</div>
+
+<div id="input-bar">
+  <div id="input-row">
+    <span id="input-label">Ask a question:</span>
+    <input type="text" id="student-q"
+           placeholder="e.g. What happens if there's a recession?"
+           maxlength="200" autocomplete="off" spellcheck="false" />
+    <button id="ask-btn">Ask</button>
+  </div>
+  <div id="response-bar" aria-live="polite">
+    <span id="response-q-echo"></span>
+    <span id="response-text-main">Responses to your questions will appear here</span>
+  </div>
+</div>
+
+<script>
+// ─── Slot centres [x,y] relative to #diagram ─────────────────────────────────
+const SL = {
+  N: [[108,108],[165,108],[223,108],[108,163],[165,163],[223,163]],
+  V: [[320,108],[400,108],[320,163],[400,163]],
+  U: [[498,108],[555,108],[613,108],[498,163],[555,163]],
+  GONE_L:  [-42, 162],
+  GONE_R:  [804, 162],
+  BIRTH_B: [360, 390],
+  BIRTH_R: [804, 157],
+};
+
+// ─── State ────────────────────────────────────────────────────────────────────
+let N=5, V=2, U=3;
+let paused = false;
+let loopGen = 0;
+let questionActive = false;
+let loopPromise = null;
+let runGen = 0;           // generation of whoever is animating now (loop or a question)   // the running loop, so a question can wait for it to stop
+
+// ─── AI back ends (no key in this file) ──────────────────────────────────────
+const KEY_STORE = 'uoe_labor_matching_anthropic_key';
+const API_MODEL = 'claude-haiku-4-5-20251001';
+let sampleFn = null;            // set when running as a claude.ai artifact
+let keyMode = false;            // true while the input row is collecting a key
+
+function storedKey() {
+  try { return (localStorage.getItem(KEY_STORE) || '').trim(); } catch (e) { return ''; }
+}
+function saveKey(k) {
+  try { if (k) localStorage.setItem(KEY_STORE, k); else localStorage.removeItem(KEY_STORE); } catch (e) {}
+}
+function refreshKeyBtn() {
+  const b = document.getElementById('key-btn');
+  b.hidden = !!sampleFn;                          // not needed inside claude.ai
+  b.classList.toggle('on', !!storedKey());
+  b.title = storedKey() ? 'Claude connected with an API key (click to remove)'
+                        : 'Connect Claude with an API key (stored only in this browser)';
+}
+
+// Inside a published claude.ai artifact, use the platform's Claude access.
+(async () => {
+  try {
+    if (window.claude && typeof window.claude.use === 'function') {
+      const s = await window.claude.use('sample');
+      if (s) sampleFn = s;
+    }
+  } catch (e) { /* not in an artifact */ }
+  refreshKeyBtn();
+})();
+
+// ─── Pause / resume ───────────────────────────────────────────────────────────
+document.getElementById('pause-btn').addEventListener('click', () => {
+  paused = !paused;
+  document.getElementById('pause-btn').textContent = paused ? '▶ Resume' : '⏸ Pause';
+});
+
+function wait(ms) {
+  return new Promise(resolve => {
+    const step = 100;
+    let elapsed = 0;
+    const myGen = runGen;     // a cancelled run's waits all resolve at once
+    const tick = () => {
+      if (loopGen !== myGen) { resolve(); return; }
+      if (!paused) elapsed += step;
+      if (elapsed >= ms) { resolve(); return; }
+      setTimeout(tick, step);
+    };
+    setTimeout(tick, step);
+  });
+}
+
+// ─── DOM helpers ──────────────────────────────────────────────────────────────
+const DIAG = document.getElementById('diagram');
+const tok  = id => document.getElementById('tok-'+id);
+
+function mkTok(id, cls, x, y, op=1) {
+  const el = document.createElement('div');
+  el.id = 'tok-'+id;
+  el.className = 'token '+cls;
+  el.style.cssText = `left:${x-15}px;top:${y-15}px;opacity:${op}`;
+  DIAG.appendChild(el);
+  return el;
+}
+const mv   = (id,x,y) => { const e=tok(id); if(e){e.style.left=(x-15)+'px';e.style.top=(y-15)+'px';} };
+const fade = (id,op)  => { const e=tok(id); if(e) e.style.opacity=op; };
+const rm   = id       => { const e=tok(id); if(e) e.remove(); };
+const cls  = (id,c)   => { const e=tok(id); if(e) e.className='token '+c; };
+const hl   = (id,on)  => { const e=tok(id); if(!e) return; e.classList.toggle('token-highlight',on); };
+
+function flashCnt(id) {
+  const e = document.getElementById(id);
+  e.classList.add('flash');
+  setTimeout(() => e.classList.remove('flash'), 650);
+}
+function setCounts(n,v,u) {
+  N=n; V=v; U=u;
+  document.getElementById('cnt-n').textContent = 'N = '+n;
+  document.getElementById('cnt-v').textContent = 'V = '+v;
+  document.getElementById('cnt-u').textContent = 'U = '+u;
+}
+function setScene(icon, text) {
+  document.getElementById('scenario-icon').textContent = icon;
+  const el = document.getElementById('scenario-text');
+  el.style.opacity = 0;
+  setTimeout(() => { el.textContent = text; el.style.opacity = 1; }, 280);
+}
+
+// ─── Render initial state ─────────────────────────────────────────────────────
+function renderInitial() {
+  document.querySelectorAll('.token').forEach(t => t.remove());
+  for (let i=0; i<5; i++) mkTok('w'+i, 'token-emp', ...SL.N[i]);
+  mkTok('v0', 'token-vac', ...SL.V[0]);
+  mkTok('v1', 'token-vac', ...SL.V[1]);
+  for (let i=0; i<3; i++) mkTok('u'+i, 'token-unemp', ...SL.U[i]);
+  setCounts(5,2,3);
+}
+
+// ─── Scenarios ────────────────────────────────────────────────────────────────
+async function s1_newVacancy() {
+  setScene('🏭', 'A firm opens a new position — a vacancy appears in the market');
+  mkTok('v2', 'token-vac', ...SL.BIRTH_B, 0);
+  await wait(200);
+  fade('v2', 1); mv('v2', ...SL.V[2]);
+  await wait(900);
+  setCounts(N, V+1, U); flashCnt('cnt-v');
+}
+
+async function s2_match() {
+  setScene('🤝', 'Avery is recruited — moving from job search into employment');
+  hl('u2', true);
+  mv('u2', SL.U[2][0], 22); await wait(420);
+  mv('u2', SL.N[5][0], 22); await wait(420);
+  mv('u2', ...SL.N[5]);
+  cls('u2', 'token-emp token-highlight');
+  await wait(700);
+  hl('u2', false);
+  fade('v2', 0); await wait(500); rm('v2');
+  setCounts(N+1, V-1, U-1);
+  flashCnt('cnt-n'); flashCnt('cnt-v'); flashCnt('cnt-u');
+}
+
+async function s3_layoff() {
+  setScene('📉', 'A layoff — Carlos moves from employment to job search');
+  hl('w4', true);
+  mv('w4', SL.N[4][0], 258); await wait(420);
+  mv('w4', SL.U[3][0], 258); await wait(420);
+  mv('w4', ...SL.U[3]);
+  cls('w4', 'token-unemp token-highlight');
+  await wait(700);
+  hl('w4', false);
+  setCounts(N-1, V, U+1); flashCnt('cnt-n'); flashCnt('cnt-u');
+}
+
+async function s4_exit() {
+  setScene('📚', 'Maya leaves to start a family — she exits the labor market');
+  hl('w3', true); await wait(300);
+  mv('w3', ...SL.GONE_L); fade('w3', 0);
+  await wait(950);
+  rm('w3');
+  setCounts(N-1, V, U); flashCnt('cnt-n');
+}
+
+async function s5_newFirm() {
+  setScene('🏗️', 'A new firm starts up — it posts two job vacancies');
+  mkTok('v3', 'token-vac', ...SL.BIRTH_B, 0);
+  await wait(180); fade('v3', 1); mv('v3', ...SL.V[2]); await wait(500);
+  mkTok('v4', 'token-vac', ...SL.BIRTH_B, 0);
+  await wait(180); fade('v4', 1); mv('v4', ...SL.V[3]); await wait(900);
+  setCounts(N, V+2, U); flashCnt('cnt-v');
+}
+
+async function s6_entrant() {
+  setScene('🎓', 'A recent graduate enters job search — joining the unemployed');
+  mkTok('u3', 'token-unemp', ...SL.BIRTH_R, 0);
+  await wait(200); fade('u3', 1); mv('u3', ...SL.U[4]);
+  await wait(900);
+  setCounts(N, V, U+1); flashCnt('cnt-u');
+}
+
+async function s_reentry(narration) {
+  narration = narration ||
+    'Maya changes her mind — she re-enters the labor market and joins job search';
+  setScene('👋', narration);
+  mkTok('w_re', 'token-unemp', ...SL.GONE_L, 0);
+  await wait(200);
+  fade('w_re', 1);
+  mv('w_re', ...SL.U[3]);
+  hl('w_re', true);
+  await wait(950);
+  hl('w_re', false);
+  setCounts(N, V, U+1); flashCnt('cnt-u');
+  await wait(1300);
+  if (V > 0) {
+    setScene('🤝', 'Maya finds a match — watch her arc up into employment!');
+    hl('w_re', true);
+    mv('w_re', SL.U[3][0], 22); await wait(420);
+    mv('w_re', SL.N[5][0], 22); await wait(420);
+    mv('w_re', ...SL.N[5]);
+    cls('w_re', 'token-emp token-highlight');
+    await wait(700);
+    hl('w_re', false);
+    const vTok = ['v0','v1','v2','v3','v4'].find(id => tok(id));
+    if (vTok) { fade(vTok, 0); await wait(500); rm(vTok); }
+    setCounts(N+1, V-1, U-1);
+    flashCnt('cnt-n'); flashCnt('cnt-v'); flashCnt('cnt-u');
+  }
+}
+
+// ─── Main loop ────────────────────────────────────────────────────────────────
+async function loop() {
+  const myGen = loopGen;
+  runGen = myGen;
+  while (loopGen === myGen) {
+    setScene('⏳', 'Labor market flows — workers, vacancies, and job matches');
+    renderInitial();
+    await wait(2200); if (loopGen !== myGen) break;
+    await s1_newVacancy(); await wait(1900); if (loopGen !== myGen) break;
+    await s2_match();      await wait(1900); if (loopGen !== myGen) break;
+    await s3_layoff();     await wait(1900); if (loopGen !== myGen) break;
+    await s4_exit();       await wait(1900); if (loopGen !== myGen) break;
+    await s5_newFirm();    await wait(1900); if (loopGen !== myGen) break;
+    await s6_entrant();    await wait(2600); if (loopGen !== myGen) break;
+    document.querySelectorAll('.token').forEach(t => t.style.opacity = 0);
+    await wait(700);
+  }
+}
+
+// ─── Response helpers ────────────────────────────────────────────────────────
+function showResponse(question, text) {
+  document.getElementById('response-q-echo').textContent = '“' + question + '”';
+  document.getElementById('response-text-main').textContent = text;
+  document.getElementById('response-bar').classList.add('visible');
+}
+function hideResponse() {
+  document.getElementById('response-bar').classList.remove('visible');
+  document.getElementById('response-q-echo').textContent = '';
+  document.getElementById('response-text-main').textContent = 'Responses to your questions will appear here';
+}
+
+// ─── Pattern matching (works with no AI) ─────────────────────────────────────
+function matchPattern(q) {
+  const s = q.toLowerCase().trim();
+
+  if (/maya.*(back|return|re.?ent|job|work)|re.?ent.*labor|comes?\s+back|want.*job|get\s+a\s+job/.test(s))
+    return { action: 'reentry',
+      response: "Watch as Maya slides back into the labor market — she re-enters job search, and if there's a vacancy, she'll get recruited!" };
+
+  if (/recession|more layoffs?|lots of layoffs?|mass layoffs?|economic.*down|downturn|crisis|laid off|job losses/.test(s))
+    return { action: 'layoff',
+      response: 'In a recession, layoffs spike — notice how U grows as workers flow out of N. When many firms do this at once, unemployment climbs fast.' };
+
+  if (/new firms?|firms?\s+(open|start|creat)|open.*(firm|business)|more vacanc|new vacanc/.test(s))
+    return { action: 'new_firm',
+      response: 'When new firms start up, they post vacancies — watch V grow as fresh job openings appear in the market.' };
+
+  if (/unemploy.*rate|rate.*unemploy|how.*calculat|calculat.*u|u\s*[=÷\/]\s*[nu\(]/.test(s))
+    return { action: 'rate', response: null };
+
+  if (/vacanc.*still|still.*vacanc|why.*vacanc|friction|search.*friction|why not match|why.*both|both.*vacanc.*unemploy|v\s+and\s+u/.test(s))
+    return { action: 'friction',
+      response: "Great question! Even with vacancies and unemployed workers, matching takes time — workers and firms have to search for the right fit. This delay is called search friction, which is why V and U can coexist in the diagram." };
+
+  return null;
+}
+
+function getLiveRate() {
+  const pct = (U / (N + U) * 100).toFixed(1);
+  return `Unemployment rate = U ÷ (N + U) = ${U} ÷ ${N + U} = ${pct}%. Notice vacancies (V) don't appear here — the rate counts workers, not jobs.`;
+}
+
+// ─── Claude fallback ─────────────────────────────────────────────────────────
+const SYSTEM_PROMPT =
+  `You are a friendly teaching assistant for an introductory economics course (the textbook Understanding Our Economy). ` +
+  `The student is watching a labor market animation with three boxes: ` +
+  `N (employed workers / filled jobs), V (vacant jobs), and U (unemployed workers searching). ` +
+  `Workers flow via recruitment (U→N) and layoffs/quits (N→U); workers can also exit or enter the market, and firms create and destroy jobs. ` +
+  `Respond in 1–2 sentences, plain language, warm tone, no jargon. Describe people in terms of their goals and constraints; do not call anyone "rational". ` +
+  `Reference the animation where fitting ("watch what happens…", "notice how…"). ` +
+  `Reply ONLY with valid JSON — no markdown, no extra text:\n` +
+  `{"scenario":"none","response":"your text here"}\n` +
+  `Valid scenario values: none, new_vacancy, match, layoff, exit, new_firm, entrant, reentry. ` +
+  `Use "reentry" if the question involves someone returning to the labor force. ` +
+  `Use "none" if no animation fits the question.`;
+
+function parseReply(text) {
+  const m = (text || '').match(/\{[\s\S]*\}/);
+  if (!m) return null;
+  try {
+    const o = JSON.parse(m[0]);
+    return (o && typeof o.response === 'string') ? o : null;
+  } catch (e) { return null; }
+}
+
+async function askClaude(question) {
+  // 1. Inside claude.ai: no key needed.
+  if (sampleFn) {
+    try {
+      const r = await sampleFn(
+        [{ role: 'user', content: SYSTEM_PROMPT + '\n\nStudent question: ' + question }],
+        { modelTier: 'quick', cache: false });
+      const parsed = parseReply(r && r.text);
+      if (parsed) return parsed;
+    } catch (e) {
+      console.warn('Claude (artifact) unavailable:', e && e.code);
+    }
+  }
+  // 2. Anywhere else: only if the presenter pasted a key into this browser.
+  const apiKey = storedKey();
+  if (!apiKey) return null;
+  try {
+    const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-api-key': apiKey,
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true',
+      },
+      body: JSON.stringify({
+        model: API_MODEL,
+        max_tokens: 200,
+        system: SYSTEM_PROMPT,
+        messages: [{ role: 'user', content: question }]
+      })
+    });
+    if (!resp.ok) { console.warn('Claude API status', resp.status); return null; }
+    const data = await resp.json();
+    return parseReply(data.content?.[0]?.text);
+  } catch (e) {
+    console.warn('Claude API error:', e);
+    return null;
+  }
+}
+
+// ─── Key entry (presenter only; never stored in the file) ────────────────────
+const qInputEl = document.getElementById('student-q');
+const qLabelEl = document.getElementById('input-label');
+const askBtnEl = document.getElementById('ask-btn');
+
+function enterKeyMode() {
+  keyMode = true;
+  qLabelEl.textContent = 'API key:';
+  qInputEl.type = 'password';
+  qInputEl.value = '';
+  qInputEl.placeholder = 'Paste an Anthropic API key — saved only in this browser (Esc to cancel)';
+  qInputEl.maxLength = 300;
+  askBtnEl.textContent = 'Save';
+  qInputEl.focus();
+}
+function exitKeyMode() {
+  keyMode = false;
+  qLabelEl.textContent = 'Ask a question:';
+  qInputEl.type = 'text';
+  qInputEl.value = '';
+  qInputEl.placeholder = "e.g. What happens if there's a recession?";
+  qInputEl.maxLength = 200;
+  askBtnEl.textContent = 'Ask';
+  refreshKeyBtn();
+}
+document.getElementById('key-btn').addEventListener('click', () => {
+  if (questionActive) return;
+  if (storedKey()) {
+    saveKey('');
+    refreshKeyBtn();
+    showResponse('🔑', 'API key removed from this browser. Questions now use built-in answers only.');
+    setTimeout(hideResponse, 3500);
+    return;
+  }
+  if (keyMode) exitKeyMode(); else enterKeyMode();
+});
+
+// ─── Question handler ─────────────────────────────────────────────────────────
+async function handleQuestion(question) {
+  if (keyMode) {
+    const k = question.trim();
+    if (k) saveKey(k);
+    exitKeyMode();
+    if (k) { showResponse('🔑', 'Key saved in this browser. Unmatched questions will now go to Claude.'); setTimeout(hideResponse, 3500); }
+    return;
+  }
+  if (!question.trim() || questionActive) return;
+  questionActive = true;
+
+  askBtnEl.disabled = true;
+  askBtnEl.textContent = '…';
+  qInputEl.disabled = true;
+
+  loopGen++;
+  if (loopPromise) await loopPromise;   // let the current scene finish unwinding
+  runGen = loopGen;
+  renderInitial();
+  await new Promise(r => setTimeout(r, 380));
+
+  const matched = matchPattern(question);
+
+  if (matched) {
+    if (matched.action === 'rate') {
+      showResponse(question, getLiveRate());
+      setScene('📊', 'Here\'s the live calculation:');
+      await new Promise(r => setTimeout(r, 5500));
+    } else if (matched.action === 'friction') {
+      showResponse(question, matched.response);
+      setScene('🔍', 'About search frictions…');
+      await new Promise(r => setTimeout(r, 5500));
+    } else {
+      showResponse(question, matched.response);
+      setScene('💡', matched.response);
+      await new Promise(r => setTimeout(r, 1100));
+      if      (matched.action === 'reentry')  await s_reentry();
+      else if (matched.action === 'new_firm') await s5_newFirm();
+      else if (matched.action === 'layoff')   await s3_layoff();
+      await new Promise(r => setTimeout(r, 3200));
+    }
+  } else {
+    setScene('🤔', 'Looking that up…');
+    const result = await askClaude(question);
+    if (result) {
+      showResponse(question, result.response);
+      setScene('💬', result.response);
+      await new Promise(r => setTimeout(r, 900));
+      const sc = result.scenario;
+      if      (sc === 'reentry')     await s_reentry(result.response);
+      else if (sc === 'new_firm')    await s5_newFirm();
+      else if (sc === 'layoff')      await s3_layoff();
+      else if (sc === 'match')       { await s1_newVacancy(); await wait(600); await s2_match(); }
+      else if (sc === 'entrant')     await s6_entrant();
+      else if (sc === 'new_vacancy') await s1_newVacancy();
+      else if (sc === 'exit')        await s4_exit();
+      await new Promise(r => setTimeout(r, 3200));
+    } else {
+      showResponse(question, "I don't know — ask your instructor!");
+      setScene('🙋', "I don't know — ask your instructor!");
+      await new Promise(r => setTimeout(r, 3500));
+    }
+  }
+
+  hideResponse();
+  qInputEl.value = '';
+  askBtnEl.disabled = false;
+  askBtnEl.textContent = 'Ask';
+  qInputEl.disabled = false;
+  questionActive = false;
+  loopPromise = loop();
+}
+
+askBtnEl.addEventListener('click', () => handleQuestion(qInputEl.value));
+qInputEl.addEventListener('keydown', e => {
+  if (e.key === 'Enter') handleQuestion(e.target.value);
+  if (e.key === 'Escape' && keyMode) exitKeyMode();
+});
+
+loopPromise = loop();
+</script>
+</body>
+</html>
